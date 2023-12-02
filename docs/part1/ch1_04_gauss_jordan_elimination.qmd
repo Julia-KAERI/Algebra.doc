@@ -1,0 +1,250 @@
+---
+title: "가우스 조단 소거법"
+number-sections: true
+number-depth : 2
+crossref:
+  chapters: true
+---
+
+이제 가우스 조단 소거법에 대해 알아보자. 가우스 조단 소거법을 통해 행 간소 사다리꼴을 구하는 것은 선형방정식을 푸는 것 뿐만 아니라 행렬의 여러가지 성질에 대한 통찰을 줄 수 있다.
+
+</br>
+
+## 기본 행 연산 {#sec-elementary_row_operation}
+
+### 기본 행 연산의 정의와 행렬표현
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-elementary_row_operation}
+
+#### 기본 행 연산
+
+행렬에 대한 다음 세 연산을 **기본 행 연산 (elementary row operation)** 이라 한다.
+
+&emsp; ($1$) $E^{(1)}(i,j)$ : $i$ 행과 $j$ 행의 위치를 바꾼다.
+
+&emsp; ($2$) $E^{(2)}(i, t)$ : $i$ 행에 $0$ 이 아닌 스칼라 $t \in \mathbb{F}$ 를 곱한다.
+
+&emsp; ($3$) $E^{(3)}(i, j, r)$ : $i$ 행에 $j$ 번째 행의 $r\in \mathbb{F}$ 배를 더한다. 
+:::
+:::
+
+</br>
+
+행렬 $\boldsymbol{A}$ 의 $i$ 번째 행을 $\boldsymbol{A}_{i:}$ 라고 하자. 3번째 연산의 결과로 변환된 행렬을 $\boldsymbol{A}'$ 이라 하면,
+
+$$
+\boldsymbol{A}'_{i:} = \boldsymbol{A}_{i:} + r \boldsymbol{A}_{j:},\qquad \boldsymbol{A}'_{j:} = \boldsymbol{A}_{j:}
+$$
+
+이다.
+
+
+</br>
+
+::: {#prp-elementary_row_operation}
+
+기본행 연산은 행렬에 대한 선형 연산이며, 가역연산이다.
+
+:::
+
+</br>
+
+### 기본 행 연산의 행렬 표현
+
+기본 행 연산은 선형 연산이기 때문에 행렬로 표현 할 수 있다. 행 연산에 대한 표기로 $E^{(i)}$ 를 사용했는데 이와 유사하게 이의 행렬 표기를 $\boldsymbol{E}^{(i)}$ 로 한다. 또한 $\boldsymbol{I}_{k:}$ 는 단위행렬의 $k$ 번째 행벡터를 의미한다.
+
+&emsp; ($1$) $\boldsymbol{E}^{(1)}(i, j)$ 의 $k$ 번째 행은 다음 식으로 결정된다. 
+
+$$
+\boldsymbol{E}^{(1)}(i, j)_{k:} = (1-\delta_{ik})(1-\delta_{jk})\boldsymbol{I}_{k:} + \delta_{ik}\boldsymbol{I}_{j:} + \delta_{jk}\boldsymbol{I}_{i:}
+$$
+
+$i$ 행과 $j$ 행, $i$ 열과 $j$ 열을 제외한 모든 성분은 항등행렬의 성분과 같기 때문에 이 두 행과 열만을 표현하면 다음과 같다.
+
+$$
+\boldsymbol{E}^{(1)} (i, j) = \begin{bmatrix} 0 & & 1  \\ & \ddots & \\ 1 & & 0  \end{bmatrix} 
+$$
+
+&emsp; ($2$) $\boldsymbol{E}^{(2)}(i, t)$ 의 $k$ 번째 행은 다음 식으로 결정된다.
+
+$$
+\boldsymbol{E}^{(2)}(i, t)_{k:} = (1-\delta_{ik})\boldsymbol{I}_{k:} + t\delta_{ik} \boldsymbol{I}_{k:}
+$$
+
+즉 $\boldsymbol{E}_{ii}=t$ 이고 나머지 성분은 항등행렬과 같다.
+
+($3$). $\boldsymbol{E}^{(3)}(i, j, r)$ 의 $k$ 번째 행은 다음 식으로 결정된다.
+
+$$
+\boldsymbol{E}^{(3)}(i, j, r)_{k:} = \boldsymbol{I}_{k:} + r\delta_{ik} \boldsymbol{I}_{j:}
+$$
+
+$i$ 행과 $j$ 행, $i$ 열과 $j$ 열을 제외한 모든 성분은 항등행렬의 성분과 같기 때문에 이 두 행과 열만을 표현하면 다음과 같다.
+
+$$
+\begin{aligned}
+\boldsymbol{E}^{(3)} (i, j, r) &= \begin{bmatrix} 1 & & r\\ & \ddots & \\  & & 1 \end{bmatrix} & i<j \\
+\boldsymbol{E}^{(3)} (i, j, r) &= \begin{bmatrix} 1 & & \\ & \ddots & \\ r & & 1 \end{bmatrix}  & i>j
+\end{aligned}
+$$
+
+</br>
+
+
+기본행 연산은 가역연산 이므로 이에 대한 행렬은 가역행렬이다. $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $\boldsymbol{B}\in \mathcal{M}_{m \times m}(\mathbb{F})$, $\boldsymbol{u}\in \mathcal{M}_n(\mathbb{F})$, $\boldsymbol{v}\in \mathcal{M}_m(\mathbb{F})$ 에 대해 $\boldsymbol{B}$ 가 가역이면 다음이 성립하는 것을 안다. 
+
+$$
+\boldsymbol{BAu}=\boldsymbol{Bv} \iff \boldsymbol{Au}=\boldsymbol{v}.
+$$
+
+따라서 $\boldsymbol{Au}=\boldsymbol{v}$ 의 양쪽에 유한번의 기본행연산 $\boldsymbol{E}_1,\ldots,\boldsymbol{E}_N$ 을 수행했을 때도 다음이 성립함을 알 수 있다.
+
+$$
+(\boldsymbol{E}_N \cdots \boldsymbol{E}_1)\boldsymbol{Au} = (\boldsymbol{E}_N \cdots \boldsymbol{E}_1) \boldsymbol{v} \iff \boldsymbol{Au} =\boldsymbol{v}
+$$
+
+</br>
+
+## 행 사다리꼴 행렬과 행 간소 사다리꼴 행렬
+
+
+
+### 행 사다리꼴 행렬 {#sec-row_echelon_matrix}
+
+::: {.callout-note appearance="simple" icon='false'}
+
+::: {#def-echelon_matrix}
+
+#### 행 사다리꼴 행렬
+
+
+행 사다리꼴 행렬(row echelon form matrix)은 다음의 조건을 만족하는 행렬이다.
+
+1. 행벡터 가운데 영벡터가 존재할 경우 이 영벡터는 영벡터가 아닌 행벡터의 아래에 위치한다. 
+
+2. 행렬의 행벡터가 영벡터가 아닐 때, 처음으로 나타나는 0 이 아닌 성분을 **선행 성분**이라 한다. 윗 행의 선행 성분은 아래 행 전체의 각각의 선행성분보다 앞서 존재한다.
+
+:::
+
+:::
+
+</br>
+
+::: {#exm-non-echelon_matrix}
+아래의 행렬 $\boldsymbol{A}_1,\,\boldsymbol{A}_2$ 는 각각 1, 2 번 조건을 거스르는 행렬이므로 행사다리꼴이 아니다. (선행 성분을 밑줄로 표시하였다.)
+
+$$
+\boldsymbol{A}_1 = \begin{bmatrix} \underline{2} & 2 & 0 \\0 & 0 & 0 \\ 0 & \underline{1} & 0\end{bmatrix} , \qquad\boldsymbol{A}_2 = \begin{bmatrix} 0 & 0 & \underline{3} \\ \underline{2} & 0 & 2\end{bmatrix}. 
+$$
+
+:::
+
+
+::: {#exm-echelon_matrix}
+다음 행렬은 사다리꼴 행렬이다.
+
+$$
+\begin{bmatrix} 1 & 0 & 2 & -1 \\ 0 & 2 & 0 & 0 \\ 0 & 0 & 3 & 1\end{bmatrix} ,\qquad \begin{bmatrix}0 & 1 & 2  \\ 0 & 0 & 3  \\ 0 & 0 & 0 \\ 0 & 0 & 0\end{bmatrix}.
+$$ 
+:::
+
+</br>
+
+
+행렬 $\boldsymbol{A}$ 의 $i$ 행 $j$ 열 성분을 $A_{ij}$ 라고 쓴다. 이 때 $i$ 를 *행 인덱스*, $j$ 를 *열 인덱스*라 하자. 이제 모든 행렬은 기본 행 연산을 통해 행 사다리꼴 행렬로 변형될 수 있다는 것을 보이고자 한다. 우선 $l(\boldsymbol{A}, j)$ 는 $\boldsymbol{A}_{:j}$ 의 선행성분의 열인덱스라고 정의하고 $k$ 행에 대해 다음 두 과정을 생각하자.
+
+
+::: {.callout-tip appearance="minimal"}
+
+#### 피보팅과 열소거
+
+**[피보팅]** $m \times n$ 행렬 $\boldsymbol{A}$ 를 생각하자. $\boldsymbol{A}$ 에서 $l(\boldsymbol{A}, k),\, l(\boldsymbol{A}, k+1), \ldots, l(\boldsymbol{A}, m)$ 중 가장 작은 값(즉 열 인덱스)을 찾아 그 행과 $k$ 행을 교환하는 것을 $k$ 행에 대한 **피보팅 (pivoting)** 이라 한다. 피보팅은 특정 조건에서의 $E^{(1)}$ 기본 행 연산이다. <u> $k$ 행에 대해 피보팅을 하는 것은 $k$ 행 보다 위의 행들은 고려하지 않는다는 것을 유의하라.</u>
+
+
+**[열소거]** $k$ 행에 대한 피보팅을 수행한 행렬을 $\boldsymbol{A}'$ 이라 하면 $l(\boldsymbol{A}', j>k) \ge l(\boldsymbol{A}', k)$ 가 된다. $l_k = l(\boldsymbol{A}', k)$ 라고 할 때 기본 행 연산을 통해 $k$ 행 아래의 행들의 $l_k$ 열의 값을 $0$ 으로 만들고자 한다. 즉, $E_3 \left(j, k, - \dfrac{(A')_{j, l_k}}{(A')_{k, l_k}}\right)$ 연산을 $j=k+1, \ldots, m$ 에 대해 수행하면 그 결과로 계산되는 행렬 $\boldsymbol{A}''$ 에서 $k$ 행 아래의 행들의 $l_k$ 번째 열들은 $0$ 이다. 행렬 $\boldsymbol{A}$ 의 $k$ 번째 행에 피보팅을 포함한 위의 연산을 수행하는 것은 기본 행 연산의 반복이므로(정확히는 $E^{(1)}$ 연산과 $E^{(3)}$ 연산의 반복) 가역행렬로 표현 할 수 있다. <u> $k$ 행에 대해 열소거를 하는 것 역시 $k$ 행 보다 위의 행들은 고려하지 않는다는 것을 유의하라.</u>
+
+:::
+
+</br>
+
+차례로 $1,\,2,\ldots,\, k-1$ 행에 대해 각각의 행에서의 피보팅과 열소거를 수행한 결과의 행렬을 $\boldsymbol{A}_{k-1}$ 라고 하자. $k$ 행부터 마지막 $m$ 행까지가 모두 영벡터가 아니라면 피보팅이 가능하며, 피보팅 이후에는 $k$ 행이 영벡터가 아니게 된다. 열소거 까지 수행하면 $p>k$ 행에 대해 $l(\boldsymbol{A}_k, k) < l (\boldsymbol{A}_{k}, p)$ 이다. 즉 $1$ 행부터 $j$ 행 까지는 사다리꼴 행렬이다. 이것은 $m-1$ 행까지 피보팅과 열소거를 수행하거나, 나머지 행벡터가 모두 영벡터가 될 때 까지 계속하면 전체 행렬이 사다리꼴 행렬이 된다. 모든 과정은 유한번의 기본 행 연산으로 이루어지므로 우리는 다음을 알 수 있다.
+
+
+::: {#prp-echolon_matrix}
+행렬은 유한번의 기본행연산을 통해 행 사다리꼴 행렬이 될 수 있다.
+:::
+
+
+
+::: {#exr-echelon_form1}
+$m \times n$ 인 사다리꼴 행렬 $\boldsymbol{A}$ 를 생각하자. $m>n$ 일 때 $n$ 보다 큰 행의 성분은 모두 $0$ 이다.
+:::
+
+::: {.proof}
+행렬 $\boldsymbol{A}$ 가 사다리꼴 행렬이면 $l(\boldsymbol{A}, i) \ge i$ 인데 $i>n$ 이면 $n$ 보다 큰 열은 존재하지 않는다. 따라서 이 열의 성분은 모두 $0$ 이다.
+:::
+
+</br>
+
+### 행 간소 사다리꼴 행렬 {#sec-reduced_raw_echelon_matrix}
+
+
+
+행 간소 사다리꼴 행렬(row-reduced echelon form matrix)은 행 사다리꼴 행렬의 조건에 더해진다.
+
+::: {.callout-note appearance="simple" icon="false"}
+
+::: {#def-rref}
+#### 행 간소 사다리꼴 행렬
+
+행렬이 다음의 조건을 만족하면 **행 간소 사다리꼴 행렬** 이라고 한다.
+
+1. 행벡터 가운데 영벡터가 존재할 경우 이 영벡터는 영벡터가 아닌 행벡터의 아래에 위치한다. 
+
+2. 행렬의 행벡터가 영벡터가 아닐 때, 처음으로 나타나는 성분은 $1$ 이며 이를 **선행 1 성분** 이라 한다. 어떤 행의 선행 1 성분은 아래 모든 행들의 선행 1성분보다 앞서 존재한다.
+
+3. 선행 1 성분이 존재하는 열은 선행 1 성분을 제외한 모든 성분이 $0$ 이다.
+
+:::
+:::
+
+
+</br>
+
+
+행 간소 사다리꼴 행렬을 만드는 방법은 사다리꼴 행렬을 만드는 방법과 유사하다. $j=1,\,2,\ldots,$ 행에 대해 다음을 수행한다.
+
+::: {.callout-tip appearance="minimal"}
+
+**[피보팅]** 행 사다리꼴 행렬의 피보팅과 같다.
+
+**[선행 1]** 피보팅을 수행한 $j$ 행에 선행 성분의 역수를 곱해서 선행 1 성분으로 만들어준다. 이것은 $E^{(2)}$ 과정이다.
+
+**[열소거]** 행 사다리꼴 행렬에서는 $j$ 행보다 아래 행에 대해서만 열 소거 과정을 수행하지만 <u>행 간소 사다리꼴 행렬에 대해서는 $j$ 행을 제외한 나머지 행에 모두에 대해 열소거 과정을 수행한다. </u>
+
+:::
+
+</br>
+
+행 사다리꼴 행렬에 대해서와 같이 1행부터 차례로 수행하며, 마지막 행까지 수행하거나(마지막 행에서는 피보팅을 할 필요가 없다), 어떤 행에 대해 수행했을 때, 그 행의 아래의 행이 모두 영벡터이면 이 과정이 종료된다. 행 사다리꼴 행렬에 비하면 [선행 1] 과정이 추가되었고, [열소거] 과정이 변경되었다. 행 사다리꼴 행렬에서 $k$ 행에 대한 열소거는 $k$ 행보다 아래 행에 대해 수행하지만, 행 간소 사다리꼴 행렬에서는 $k$ 행을 제외한 전체 행에 대해 수행한다. 이 결과로 나오는 행렬은 행 간소 사다리꼴 행렬의 정의를 만족한다.
+
+위의 모든 과정이 행 기본 연산에 의해 수행되기 때문에 우리는 다음을 증명하였다.
+
+::: {#thm-reduced_echelon_matrix}
+모든 행렬은 유한번의 행 기본 연산에 의해 행 간소 사다리꼴 행렬이 된다. 
+:::
+
+</br>
+
+::: {.callout-warning appearance="simple" icon="false"}
+#### 행 간소 사다리꼴의 유일성
+
+우리는 어떤 과정에 의해 행렬의 행 간소 사다리꼴을 구할 수 있다는 것을 보았다. 그러나 다른 과정을 통해 구한 행 간소 사다리꼴도 있을 수 있으며, 다른 방법으로 구한 행 간소 사다리꼴이 항상 같은지 아닌지가 문제가 된다. 결론적으로 행렬의 행 간소 사다리꼴은 유일한데 그것은 다음 장에서 보일 것이다.
+
+:::
+
+</br>
+
+
+

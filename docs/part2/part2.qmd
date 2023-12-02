@@ -1,0 +1,9 @@
+---
+title: "II. 군 (Groups)"
+number-sections: true
+number-depth : 2
+crossref:
+  chapters: true
+---
+
+2부에서는 군(Groups) 에 대해 다루도록 한다.

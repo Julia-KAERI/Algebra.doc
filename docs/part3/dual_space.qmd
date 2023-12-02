@@ -1,0 +1,383 @@
+---
+title: "쌍대공간과 쌍대 사상"
+number-sections: true
+number-depth : 2
+crossref:
+  chapters: true
+---
+
+
+## 선형 범함수와 쌍대공간
+
+우리는 앞서 벡터공간 $U,\,V$ 에 대한 선형사상의 집합 $\mathcal{L}(U,\, V)$ 가 벡터공간이라는 것을 알았다. 또한 $\mathbb{F}$ 도 벡터공간이다. 따라서 $\mathbb{F}$-벡터 공간 $V$ 에 대해 $\mathcal{L}(V,\,\mathbb{F})$ 는 $V\mapsto \mathbb{F}$ 인 선형사상의 집합이다. 이 집합은 벡터공간을 이해하는데 매우 중요하다.
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-functional_dualspace}
+#### 선형 범함수와 쌍대공간
+
+$\mathbb{F}$-벡터공간 $V$ 에 대해 $\mathcal{L}(V,\,\mathbb{F})$ 에 속하는 함수를 **선형 범함수(linear functional)** 라 한다. $\mathcal{L}(V,\,\mathbb{F})$ 는 벡터공간이며 이를 $V$ 에 대한 **쌍대공간(dual space)** 이라 하고 $V^\ast$ 이라 쓴다.
+:::
+:::
+
+</br>
+
+::: {#exm-linear_functional_1}
+$\varphi : \mathbb{R}^3 \to  \mathbb{R}$ 을 임의의 $a,\,b,\,c\in \mathbb{R}$ 에 대해 $\varphi (x, y, z) = ax + by + cz$ 라 하면 $\varphi \in (\mathbb{R}^3)^\ast$ 이다.
+
+::: 
+
+
+</br>
+
+::: {#exm-linear_functional_2}
+
+$n$ 차 다항식 이하의 다항식의 집합 $P_n(\mathbb{F})$ 는 $\mathbb{F}$ 벡터공간이다. $f\in P_n(\mathbb{F})$ 와 $c \in \mathbb{F}$ 에 대해 $\varphi (f)=f(c)$ 는 $P_n^\ast$ 에 속하는 선형 범함수이다.
+
+:::
+
+</br>
+
+::: {#exm-linear_functional_3}
+
+$[a,\,b]$ 구간에서 연속인 실함수의 집합 $C_{[a,\,b]}$ 는 $\mathbb{R}$-벡터공간이다. 이 때 $\psi : C_{[a,\,b]} \to \mathbb{R}$ 을 다음과 같이 정의한다.
+
+$$
+\psi (f) = \int_{a}^b f(t)\, dt.
+$$
+
+그렇다면 $\psi \in (C_{[a,\,b]})^\ast$ 이다.
+
+:::
+
+
+
+</br>
+
+$V^\ast$ 이 벡터공간이므로 차원을 갖는다.
+
+::: {#prp-dim_of_dual_space}
+$\dim (V^\ast) = \dim (V)$ 이다.
+:::
+
+::: {.proof}
+@cor-dimension_of_LUV 에 의해, 
+
+$$
+\dim (V^\ast) = \dim (\mathcal{L}(V,\,\mathbb{F})) = (\dim (V)) \times (\dim (\mathbb{F})) = \dim (V)\;\square
+$$
+
+:::
+
+</br>
+
+
+::: {#prp-dual_basis}
+
+유한차원 $\mathbb{F}$-벡터공간 $V$ 의 기저 $\{v_1,\ldots,\,v_n\}$ 에 대해 범함수 $\varphi_1,\ldots,\,\varphi_n \in V^\ast$ 를 다음과 같이 정의하자.
+
+$$
+\varphi_i (v_j) = \delta_{ij}
+$$
+
+이 때 $\{\varphi_1,\ldots,\,\varphi_n\}$ 은 $V^\ast$ 의 기저이다.
+:::
+
+::: {.proof}
+
+우선 $\varphi(v_i) \in V^\ast$ 이라는 것은 쉽게 알 수 있다. 이제 $\dim V^\ast = \dim V = n$ 이므로 $\{\varphi_1,\ldots,\varphi_n\}$ 이 선형독립임을 보이면 된다.
+
+$$
+\begin{aligned}
+& c_1 \varphi_1 + \cdots + c_n \varphi_n = 0 \\
+\implies & (c_1\varphi_1 + \cdots + c_n \varphi_n)(v_j) = 0, \qquad \text{for }j=1,\ldots,\,n \\
+\implies &c_1 = \cdots = c_n = 0
+\end{aligned}
+$$
+$\square$
+:::
+
+
+즉 $n$ 차원 $\mathbb{F}$-벡터공간 $V$ 의 모든 범함수는 $\{\varphi_i,\ldots,\,\varphi_n\}$ 의 선형결합으로 표현할 수 있다는 뜻이다. 
+
+</br>
+
+## 쌍대 기저와 쌍대 사상
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-dual_basis}
+
+#### 쌍대 기저 (Dual basis)
+
+@prp-dual_basis 의 $\{\varphi_1,\ldots,\,\varphi_n\}$ 을 $V$ 의 기저 $\{v_1,\ldots,\,v_n\}$ 에 대한 **쌍대 기저(dual basis)** 라 한다.
+ 
+:::
+:::
+
+
+</br>
+
+벡터공간 $V$ 와 그 기저에 대응하는 쌍대공간, 쌍대기저가 잘 정의된다. 이제 벡터공간에서의 선형사상에 대응하는 쌍대사상에 대해 알하보자.
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-dual_map}
+#### 쌍대 사상(Dual map)
+
+$T\in \mathcal{L}(V,\, W)$ 와 $\varphi \in W^\ast$ 에 대해 아래와 같이 정의된 $T^\ast \in \mathcal{L}(W^\ast,\, V^\ast)$ 를 $T$ 의 **쌍대 사상(dual map)** 이라 한다.
+
+$$
+T^\ast(\varphi) = \varphi \circ T
+$$
+:::
+::: 
+
+</br>
+
+::: {#prp-dual_map}
+$T^\ast$ 은 선형사상이다.
+:::
+
+::: {.proof}
+$\varphi,\,\psi \in W^\ast,\, \lambda \in \mathbb{F}$ 일 때,
+
+$$
+T^\ast (\varphi + \lambda \psi)  = (\varphi + \lambda \psi )\circ T = \varphi \circ T  + \lambda (\psi \circ T) = T^\ast (\varphi) + \lambda T^\ast (\psi) 
+$$
+
+이므로 $T^\ast$ 은 선형사상이다. $\square$
+:::
+
+</br>
+
+이제 쌍대 사상의 중요한 성질을 알아보자.
+
+::: {#thm-dual-map}
+
+$S,\,T \in \mathcal{L}(V,\,W)$ 일 때 쌍대사상 $S^\ast ,\,T^\ast$ 은 다음 성질을 만족한다.
+
+1. $(S+T)^\ast = S^\ast + T^\ast$,
+
+2. $(\lambda S)^\ast = \lambda S^\ast$
+
+또한 $T \in \mathcal{L}(U,\,V),\, S \in \mathcal{L}(V,\,W)$ 일 때 다음 성질을 만족한다.
+
+3. $(S\circ T)^\ast = T^\ast \circ S^\ast$
+:::
+
+::: {.proof}
+
+1, 2 는 아래와 같이 증명한다.
+
+$$
+\begin{aligned}
+(S+T)^\ast(\varphi)  &=\varphi \circ (S+T) = \varphi \circ S + \varphi \circ T = S^\ast + T^\ast,\\
+(\lambda S)^/ast (\varphi) &= \varphi \circ (\lambda S) = \lambda (\varphi \circ S) = \lambda S^\ast
+\end{aligned}
+$$
+
+이제 3을 증명하자.
+
+$$
+(S\circ T)^\ast(\varphi) = \varphi \circ (S \circ T) = (\varphi \circ S)\circ T = T^\ast (\varphi \circ S) = T^\ast (S^\ast(\varphi)) = (T^\ast \circ S^\ast) (\varphi)
+$$
+$\square$
+:::
+
+</br>
+
+## Annihilator
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-annihilator}
+#### Annihilator
+
+$U$ 가 벡터공간 $V$ 의 부분집합 일 때, 아래와 같이 정의되는 집합을 **annihilator** of $U$ 라 하고 $U^0$ 라 쓴다.
+
+$$
+U^0 =\{ \varphi \in V^\ast : \varphi (u) = 0 \text{  for all }u\in U\}
+$$
+:::
+:::
+
+</br>
+
+::: {#prp-annihilator}
+이 때, $U^0$ 는 $V^\ast$ 의 부분공간이다.
+:::
+
+::: {.proof}
+영함수 $0\in V^\ast$ 은 $U^0$ 에 속함은 자명하다. $\varphi,\,\psi \in U^0$ 이고 $u\in U,\,\lambda \in \mathbb{F}$ 일 때,
+
+$$
+\begin{aligned}
+(\varphi + \psi)(u) &= \varphi(u) + \psi (u) = 0,\\
+(\lambda \varphi)(u) &= \lambda (\varphi (u)) = 0
+\end{aligned}
+$$
+이므로 $U^0$ 는 $V^\ast$ 의 부분공간이다. $\square$
+:::
+
+</br>
+
+::: {#thm-dim_of_annihilator}
+
+$V$ 가 유한차원 벡터공간이고 $U$ 가 $V$ 의 부분공간일 때
+
+$$
+\dim (U) + \dim (U^0) = \dim (V)
+$$
+
+이다.
+:::
+
+::: {.proof}
+$U$ 가 $V$ 의 부분공간이므로 $i\in \mathcal{L}(U,\,V)$ 를
+
+$$
+i(u) = u
+$$
+
+로 정의하면, $i^\ast \in \mathcal{L}(V^\ast,\, U^\ast)$ 을 생각 할 수 있다. 임의의 $\varphi \in V^\ast$ 에 대해 $i^\ast (\varphi) = \varphi  \circ i$ 이며,
+
+$$
+\psi \in \ker (i^\ast) \iff \psi \circ i = 0 \iff \psi (u) = 0,\;\forall u \in U \iff \psi \in U^0
+$$
+
+이므로 $\ker (i^\ast) = U^0$ 이다. Rank-nullity theorem (@thm-rank_nullity)에 의해,
+
+$$
+\text{rank} (i^\ast) + \text{nullity} (i^\ast) = \dim (V^\ast)
+$$
+
+이며 $\text{nullity} (i^\ast) = \dim (U^0),\, \dim (V^\ast) = \dim (V)$ 이므로,
+
+$$
+\text{rank}(i^\ast) + \dim (U^0) = \dim (V)
+$$
+
+임을 안다. $U$ 의 기저 $u_1,\ldots,\,u_m$ 을 확장하여 $V$ 의 기저를 구성 할 수 있다. 여기에 추가된 기저가 $v_1,\ldots,\,v_n$ 이라 하자. $u_j$ 의 쌍대기저를 $\varphi_j$, 추가된 $v_k$ 에 대한 쌍대기저를 $\psi_k$ 라 하자.
+
+$$
+\begin{aligned}
+i^\ast(\varphi_k)(u_j) &= (\varphi_k \circ i)(v_j) = \delta_{jk}\\
+i^\ast(\psi_k) (u_j) &= (\psi_k \circ i)(u_j) = \psi_k (u_j) = 0
+\end{aligned}
+$$
+
+이므로 $\text{im}\, i^\ast = U^\ast$ 이다. 즉 $\text{rank} (i^\ast) = \dim (U^\ast) = \dim (U)$ 이므로 주어진 식이 성립한다. $\square$
+:::
+
+</br>
+
+::: {#thm-ker_Tprime}
+$V,\, W$ 가 유한차원 벡터공간이고 $T\in \mathcal{L}(V,\,W)$ 일 때, 다음이 성립한다.
+
+1. $\ker (T^\ast) = (\text{im}\, T)^0$
+
+2. $\text{nullity} (T^\ast) = \text{nullity} (T) + \dim (W) - \dim (V)$
+
+:::
+
+
+::: {.proof}
+
+우선 1. 을 증명한다.
+
+$$
+\begin{aligned}
+\varphi \in \ker (T^\ast) &\iff \varphi \circ T = 0  \\ 
+& \iff \forall v\in V,\;(\varphi \circ T)(v) = 0 \\ 
+& \iff \varphi(T(v)) = 0 \\ 
+& \iff \varphi \in (\text{im} T)^0
+\end{aligned}
+$$
+
+이제 2. 를 증명하자.
+
+$$
+\begin{aligned}
+\text{nullity} (T^\ast) &= \dim ((\text{im} T)^0) \\ 
+& = \dim (W) - \dim (\text{im}(T)) \\ 
+&= \dim (W) - (\dim (V) - \text{nullity} (T))
+\end{aligned}
+$$
+$\square$
+
+:::
+</br>
+
+::: {#lem-injective_dual_map}
+
+유한차원 벡터공간 $V,\,W$ 에 대해 $T\in \mathcal{L}(V,\,W)$ 가 전사인 것의 필요충분조건은 $T^\ast$ 이 단사인 것이다.
+
+:::
+
+::: {.proof}
+
+$$
+\begin{aligned}
+T \text{ 가 전사} & \iff \text{im} (T) = W  \\ 
+& \iff (\text{im} (T))^0 = \{0 \}  \\ 
+& \iff \ker (T^\ast) = 0  \\ 
+& \iff T^\ast \text{ 이 단사}. \square
+\end{aligned}
+$$
+:::
+</br>
+
+::: {#lem-rank_Tast}
+
+$V,\,W$ 가 유한차원 벡터공간이고 $T\in \mathcal{L}(V,\,W)$ 일 때 다음이 성립한다.
+
+1. $\text{rank} (T^\ast) = \text{rank} (T)$
+
+2. $\text{im} (T^\ast) = (\ker (T))^0$
+:::
+
+::: {.proof}
+우선 1. 은 다음과 같이 보일 수 있다. 
+
+$$
+\begin{aligned}
+\text{rank} (\text{im} (T^\ast)) & = \dim (W^\ast) - \text{nullity} (T^\ast) = \dim (W) - \dim (\text{im} (T))^0 \\ 
+&= \text{rank} (T).
+\end{aligned}
+$$
+
+이제 2. 를 보이자. $\varphi \in \text{im} (T^\ast)$ 이면 어떤 $\psi \in W^\ast$ 에 대해 $\psi \circ T = \varphi$ 이다. $v \in \ker (T)$ 이면,
+
+$$
+\varphi (v) = \psi \circ T (v ) = \psi (0) =0
+$$
+
+이므로 $\varphi \in (\ker (T))^0$ 이다. 즉 $\text{im}(T^\ast) \subset  (\ker (T))^0$ 이다.
+
+또한,
+
+$$
+\text{rank} (T^\ast) = \text{rank} (T) = \dim (V) - \text{nullity} (T) = \dim ((\ker (T))^0)
+$$
+
+이므로 $\text{im} (T^\ast) = (\ker (T))^0$ 이다. $\square$
+:::
+
+</br>
+
+::: {#lem-tprime_surjective}
+$V,\,W$ 가 유한차원 벡터공간이고 $T\in \mathcal{L}(V,\,W)$ 일 때 $T$ 가 단사일 필요충분조건은 $T^\ast$ 이 전사이다.
+:::
+
+::: {.proof}
+$$
+\begin{aligned}
+T \text{ 가 단사} &\iff \text{nullity} (T) = 0  \\ 
+& \iff (\ker T)^0 = V^\ast  \\ 
+& \iff \text{im} (T^\ast) = V^\ast  \\ 
+& \iff T^\ast \text{ 은 전사} \;\square
+\end{aligned}
+$$
+:::

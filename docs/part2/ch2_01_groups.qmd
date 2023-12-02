@@ -1,0 +1,986 @@
+---
+title: "군의 기초"
+number-sections: true
+number-depth : 2
+crossref:
+  chapters: true
+---
+
+## 정수의 성질 {#sec-integers}
+
+### 약수와 최대공약수 {#sec-divisor_and_gcd}
+
+
+[대수를 다루는데 앞으로 아래에 기술할 정수의 성질이 많이 사용된다. ]{.aside}
+
+정수 $a$ 와 0이 아닌 정수 $b$ 가 주어졌다고 하자. $a$ 를 $b$ 로 나누었을 때 어떤 정수 $m$ 과 $|b|$ 보다 작은 $0$ 혹은 양의 정수 $r$ 에 대해 
+
+
+$$
+a=mb + r,\qquad (0 \le r < |b| )
+$$
+
+임이며 $m$ 과 $r$ 이 유일하게 정해짐을 안다. 이 때 $m$ 을 몫, $r$ 을 나머지라 한다.
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-divisor_gcd}
+#### 약수와 최대공약수
+
+정수 $a$ 와 $0$ 이 아닌 정수 $b$ 가 주어졌을 때 어떤 정수 $m$ 에 대해 $a=mb$ 일 때 $b$ 를 $a$ 의 **약수 (devisor)**라고 하고 $b \mid a$ 라고 쓴다. $b$ 가 $a$ 의 약수가 아닐 때는 $b \nmid a$ 라고 쓴다. 
+
+주어진 정수 $a,\,b$ 에 대해 어떤 양의 정수 $c$ 가 
+
+1. $c\mid a,\, c\mid b$,
+
+2. $\forall d\in \mathbb{Z},\, (d \mid a) \land (d \mid b) \implies d \mid c$ 
+
+일 때 $c$ 를 $a$ 와 $b$ 의 **최대공약수(greatest common devisor)** 라고 한다. $a$ 와 $b$ 의 최대공약수는 $\gcd (a,\,b)$ 로 표기한다.
+
+:::
+:::
+
+</br>
+
+::: {#prp-divisor}
+
+$0$ 이 아닌 $a,\,b\in \mathbb{Z}$ 에 대해 $\gcd (a,\,b)$ 는 존재하며, 어떤 정수 $m_0,\, n_0$ 에 대해 
+
+$$
+\gcd (a,\,b) = m_0a + n_0b
+$$
+
+이다.
+
+:::
+
+
+::: {.proof}
+
+$M = \{ma+nb : m,\,n \in \mathbb{Z}\}$ 이라 하자. $a\ne 0,\, b\ne 0$ 이므로 $M$ 은 $0$ 이 아닌 원소를 갖는다. $x=ma+nb<0$, $x \in M$ 이라면 $-x=(-m)x + (-n)b \in M$, $x>0$ 이다. 따라서 $M$ 은 양수인 원소를 포함한다. $M$ 의 양의 원소의 집합은 항상 최소값을 포함하므로 이를 $c$ 라 하자. 이제 $c=\gcd(a,\,b)$ 임을 보이자. $c=m_0a + n_0 b$ 라 하자.
+
+$d\mid a,\, d \mid b$ 이면 $d \mid (m_0 a + n_0 b)$ 이므로 $d\mid c$ 이다. $x\in M$ 에 대해 $x=tc + r,\, 0\le r <|c|$ 라 하자. $x\in M$ 이므로 어떤 $m,\,n\in \mathbb{Z}$ 에 대해 $x=ma+nb$ 이다. 
+
+$$
+(ma+nb)= (m_0a+n_0b) t + r
+$$
+
+이며 $r=(m-m_0)a+ (n-n_0)b$ 이므로 $r\in M$ 이다. 그런데 $0\le r <c$ 이며 $c$ 는 $M$ 에서의 가장 작은 양의 정수이므로 $r=0$ 이어야 한다. 즉 $x=tc$ 이며 $c$ 는 모든 $M$ 의 원소의 약수이다. $a\in M,\,b\in M$ 이므로 $c\mid a,\, c\mid b$ 이다. 즉 $c=\gcd (a,\,b)$ 이다. $\square$
+
+:::
+
+</br>
+
+### 소수와 소인수 분해 {#sec-prime_number_factorization}
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-relatively_prime}
+#### 서로소
+
+$a,\,b\in\mathbb{Z}$ 에 대해 $\gcd (a,\,b)=1$ 일 때 $a,\,b$ 는 **서로소(relatively prime)** 이라 한다.
+
+:::
+:::
+
+</br>
+
+::: {#cor-relatively_prime}
+
+$a,\,b\in \mathbb{Z}$ 가 서로소이면 $ma+nb=1$ 을 만족하는 $m,\,n\in \mathbb{Z}$ 가 존재한다.
+:::
+
+</br>
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-prime}
+#### 소수
+
+어떤 $1$ 보다 큰 양의 정수 $p$ 가 $\pm 1$ 과 $\pm p$ 이외의 약수가 존재하지 않을 때 $p$ 를 **소수(prime number)** 라고 한다.
+
+:::
+:::
+
+</br>
+
+::: {#prp-relatively_prime}
+
+$a$ 와 $b$ 가 서로소이고 $a\mid bc$ 이면 $a\mid c$ 이다.
+
+:::
+
+::: {.proof}
+
+@cor-relatively_prime 에 의해 $ma+nb=1$ 을 만족하는 $m,\,n\in \mathbb{Z}$ 가 존재한다. $mac+nbc=c$ 이며 $a\mid mac$ 이고 가정에 의해 $a\mid mbc$ 이므로 $a \mid c$ 이다. $\square$
+
+:::
+
+</br>
+
+::: {#cor-relatively_prime}
+
+소수 $p$ 가 어떤 정수의 곱 $a,\,b$ 를 나눈다면 $p \mid a$ 이거나 $p \mid b$ 이다.
+
+:::
+
+::: {.proof}
+
+$p \nmid a$ 라면 $\gcd (p,\,a)=1$ 이므로 $mp+na=1$ 을 만족하는 $m,\,n\in \mathbb{Z}$ 가 존재한다. $mpb + nab = b$ 이며 $p \mid nab$ 이므로 $p\mid b$ 이다. $\square$ 
+
+:::
+
+
+</br>
+
+::: {#thm-prime_number_factorization}
+
+$1$ 보다 큰 양의 정수 $a$ 는 소수의 곱으로 유일하게 표현된다. 즉 $a\in \mathbb{Z}_+$ 은 어떤 소수 $p_1,\ldots,\,p_m$, ($p_1< \cdots <p_m$) 에 대해 $a=p_1^{n_1} \cdots p_m^{n_m}$ 이며 $p_1,\ldots,\,p_m$ 과 $n_1,\ldots,\,n_m$ 은 유일하게 정해진다.
+
+:::
+
+::: {.proof}
+우선 $a$ 가 소수의 곱으로 표현된다는 것을 induction 을 통해 증명한다. $a=2$ 는 소수이므로 자명하다. $a<n$ 에 대해 가정하자. $a=n$ 일 때 $a$ 가 소수이면 더 이상 증명할 거이 없다. $a$ 가 소수가 아니라면 어떤 $a$ 보다 작은 두 양수의 곱으로 표현될 수 있으며 가정에 의해 두 양수는 소수의 곱으로 표현되므로 $a$ 도 소수의 곱으로 표현된다. 
+
+이제 소수 $p_1< \cdots <p_m$ 에 대해 $a=p_1^{n_1}\cdots p_m^{n_m}$ 이며, 역시 소수 $q_1< \cdots <q_k$ 에 대해 $a=q_1^{s_1} \cdots q_k ^{s_k}$ 라고 하자. $p_1 \mid a$ 이므로 어떤 $q_i=p_1$ 이어야 한다. 같은 이유로 어떤 $p_j=q_1$ 이어야 한다. $p_1$ 과 $q_1$ 각각 $\{p_i\},\, \{q_j\}$ 중에 가장 작은 수이므로 $p_1=q_1$ 이어야 한다. $p_1^{n_1}\mid a,\, p_1^{s_1}\mid a$ 이므로 $n_1 = s_1$ 이어야 한다. 이것을 계속 반복하면 $m=k$, $p_i = q_i$, $n_j = s_j$ 임을 알 수 있다. $\square$
+
+:::
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-prime}
+#### 소인수 분해
+
+@thm-prime_number_factorization 에서와 같이 $1$ 보다 큰 양의 정수를 소수의 곱으로 표현하는 것을 **소인수 분해 (prime factorization/integer factorization)** 라고 한다.
+:::
+:::
+
+</br>
+
+### 모듈라 산술 {#sec-modula_arithmetic}
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-modula}
+#### mod
+
+양의 정수 $n$ 에 대해 $n\mid (a-b)$ 이면 $a \equiv b \;(\text{mod}\;n)$ 이라 한다. 정해진 양의 정수 $n$ 에 대해 $a\equiv b \;(\text{mod})\;n$ 일 때 관계(relation) $a\sim b$ 를 정의 할 수 있다. 이 관계를 **congruence modulo $n$** 이라 한다.
+
+:::
+:::
+
+</br>
+
+
+
+
+::: {#prp-modula}
+
+위에 정의된 congruence modulo $n$ 관계에 대해 다음이 성립한다.
+
+&emsp; ($1$) congruence modulo $n$ 관계는 동치관계를 정의한다.
+  
+&emsp; ($2$) 이 동치관계는 $n$ 개의 equivalence classes 를 갖는다.
+
+&emsp; ($3$) $a \equiv b \;(\text{mod}\;n)$ 이며 $c \equiv d \; (\text{mod}\; n)$ 이면 $a+c \equiv b+d \;(\text{mod}\;n)$ 이고 $ac \equiv bd \;(\text{mod}\; n)$ 이다.
+
+&emsp; ($4$) $ab \equiv ac \;(\text{mod}\; n)$ 이고 $a$ 와 $n$ 이 서로소이면 $b \equiv c \;(\text{mod}\;n)$ 이다.
+
+
+:::
+
+
+::: {.proof}
+($1$) $n \mid (a-a)$ 와 $n \mid (a-b) \implies n \mid (b-a)$ 임은 자명하다. $n\mid (a-b)$ 이고 $n \mid (b-c)$ 라 하자. $a-b=k_1n,\, b-c = k_2n$ 이라 하면 $a-c = (k_1 + k_2)n$ 이므로 $n \mid (a-c)$ 이다. 따라서 congruence modulo $n$ 관계는 동치관계이다.
+
+($2$) $[a]=\{m\in \mathbb{Z} : n \mid (a-m)\}$ 라 하자. $x \in [a]$ 일 필요충분조건은 $x$ 와 $a$ 를 $n$ 으로 나누었을 때의 나머지가 같다는 것은 쉽게 보일 수 있다. 또한 나머지는 $0,\ldots,\,n-1$ 중의 하나이며 각각의 나머지를 갖는 수가 존재하므로 congruence modulo $n$ 관계의 equivalence classes 의 갯수는 $n$ 개이다.
+
+($3$) $n \mid (a-b),\, n \mid (c-d)$ 이면 $n \mid ((a-b)+ (c-d))$ 이므로 $n \mid ((a+c)- (b+d))$ 이다. 즉 $a+c \equiv b+d \; (\text{mod}\; n)$ 이다. 또한 $n \mid ((a-b)c + (c-d)b)$ 이므로 $n \mid (ac-bd)$ 이다. 
+
+($4$) $n \mid a(b-c)$ 이고 $n$ 과 $a$ 가 서로소 이므로 @prp-relatively_prime 에 의해 $n \mid (b-c)$ 이다. 
+
+
+:::
+
+
+</br>
+
+정수 $n$ 에 대해 congruence moduluo $n$ 에 의해 정해지는 equivalence class 의 집합을 $J_n$ 이라 하자. $J_n = \{[0],\ldots,\,[n-1]\}$ 로 쓸 수 있다. 이 때, 
+
+$$
+\begin{aligned}
+& & [i]+ [j] &= [i+j],\\
+& & [i][j] &= [ij]
+\end{aligned}
+$$
+
+로 정의한다. 
+
+</br>
+
+::: {#prp-operation_of_congruence_class_1}
+
+위의 덧셈과 곱셈 연산은 잘 정의된다.
+
+:::
+
+::: {.proof}
+
+$a,\,b\in [i],\, c,\,d\in [j]$ 라 하자. @prp-modula 에서 보인 대로 $a+c \equiv b+d \;(\text{mod}\; n)$ 이며 $ac \equiv bd \;(\text{mod}\;n)$ 이므로 잘 정의된다. $\square$
+
+:::
+
+
+::: {#prp-operation_of_congruence_class_2}
+
+위의 congruence class 의 연산에서 다음이 성립한다.
+
+&emsp; ($1$) $[i] + [j] = [j]+[i]$,
+
+&emsp; ($2$) $[ij]=[ji]$,
+
+&emsp; ($3$) $([i]+[j])+[k] = [i] + ([j]+[k])$, 
+
+&emsp; ($4$) $([i][j])[k] = [i] ([j][k])$,
+
+&emsp; ($5$) $[i] ([j]+[k]) = [i][j] + [i][k]$, 
+
+&emsp; ($6$) $[0] + [i] = [i]$, 
+
+&emsp; ($7$) $[1][i]=[i]$.
+
+:::
+
+::: {.proof}
+
+($1$) $[i] + [j] = [i+j]=[j+i]=[j]+[i]$.
+
+($2$) $[i][j] = [ij]=[ji]=[j][i]$.
+
+($3$) $([i] + [j])+[k] = [i + j + k] = [i + (j + k)] = [i]+ ([j] + [k])$.
+
+($4$) $[i]([j][k]) = [ijk] = [(ij)k] = ([i][j])[k])$.
+
+($5$) $[i]([j] + [k]) = [ij + ik] = [i][j]+ [i][k]$.
+
+($6$) $[0] + [i] = [0+i] = [i]$.
+
+($7$) $[1][i] = [1i]=[i]$. $\square$
+
+:::
+
+
+</br>
+
+### 연습문제
+
+::: {#exr-herstein_1_3_3}
+
+#### Herstein 1.3.3
+
+$a,\,b\in \mathbb{Z}$ 일 때 어떤 정수 $d$ 가 (1) $a\mid d,\, b\mid d$ 이며 $\forall x\in \mathbb{Z},\, (a \mid x)\land (b \mid y)\implies (d \mid x)$ 이면 $d$ 를 $a$ 와 $b$ 의 **최소공배수 (least common multiplier)** 라 하고 $\text{lcm}(a,\,b)$ 라 쓴다. 최소공배수가 존재하며 $a$ 와 $b$ 가 양의 정수일 때 $\text{lcm}(a,\,b) = ab/\gcd(a,\,b)$ 임을 보이시오.
+
+
+:::
+
+::: {.solution}
+
+$A = \{x \in \mathbb{Z}_+ : (a\mid x) \land (b \mid x) \}$ 라 하자. $|ab|\in A$ 이므로 $A \ne \varnothing$ 이다. $A$ 가 공집합이 아닌 양수의 집합이므로 최소값 $d$ 가 존재한다. $x\in A$ 에 대해 $x=tm + r,\, 0 \le r < d$ 이라 하자. $a \mid x,\, a \mid m$ 이므로 $a \mid r$ 이어야 한다. 같은 이유로 $r \mid b$ 이어야 한다. 그런데 $d$ 이 $a$ 와 $b$ 에 의해 나누어지는 양의 정수 가운데 최소값이므로 $r=0$ 이어야 한다. 즉 $x=td$ 이므로 $(a\mid x)\land (b \mid x) \implies d \mid x$ 이다. 
+
+$g=\gcd(a,\,b),\, l= \text{lcm}(a,\,b)$ 라 하자. $g\mid a,\, g\mid b$ 이므로 $a \mid (ab/g),\, b\mid (ab/g)$ 이다. 즉 $ab/g = tl$ 을 만족하는 양의 정수 $t$ 가 존재한다. 즉 $ab \ge gl$ 이다.
+
+또한 $\dfrac{ab}{l}$ 는 양의 정수이며 $\dfrac{ab}{l}= \dfrac{a}{l/b} = \dfrac{b}{l/a}$ 이다. 즉 $(ab/l) \mid a,\, (ab/l)\mid b$ 이다. 따라서 $(ab/l) \mid g$ 이므로 $ab/l \le g$ 이다. 즉 $ab\le gl$ 이다. 위의 결과와 같이 하면 $ab=gl$ 이다.
+
+:::
+
+</br>
+
+::: {#exr-herstein_1_3_4}
+
+#### Herstein 1.3.4
+
+$a\mid x,\, b\mid x$ 이고 $\gcd (a,\,b)=1$ 이면 $(ab)\mid x$ 임을 보이시오.
+
+:::
+
+::: {.solution}
+
+$\gcd (a,\,b)=1$ 이므로 $ma+nb=1$ 인 정수 $m,\,n$ 이 존재한다. 따라서 $max + nbx = x$ 이다. $b \mid x$ 이므로 $(ab)\mid max$ 이며 $a\mid x$ 이므로 $(ab) \mid nbx$ 이다. 따라서 $(ab)\mid x$ 이다. 
+
+:::
+
+</br>
+
+::: {#exr-Herstein_1_3_9}
+
+#### Herstein 1.3.9
+
+$n>1$ 이 소수인 것의 필요충분조건은 임의의 정수 $a$ 에 대해 $\gcd (a,n)=1$ 이거나 $n \mid a$ 인 것임을 보여라.
+
+:::
+
+
+::: {.solution}
+
+$\gcd(a,\,n) = m > 1$ 이라면 $m \mid n$ 이어야 하므로 $m = n$ 이다. 
+
+:::
+
+</br>
+
+::: {#exr-herstein_1_3_13}
+
+#### Herstein 1.3.13
+
+@def-modula 와 @prp-modula 에서 정의된 equvalence class 의 집합을 $J_n$ 이라 하자. 즉 $J_n = \{[0],\ldots,\,[n-1]\}$ 이다. $\gcd (a,\,n)=1$ 이라면 $[a][b]=1$ 를 만족하는 $[b]\in J_n$ 이 존재함을 보여라.
+
+:::
+
+::: {.solution}
+
+$\gcd(a, n)=1$ 이므로 $pa+qn=1$ 을 만족하는 $p,\,q\in \mathbb{Z}$ 가 존재한다. 이 $p,\,q$ 에 대해 $pa \equiv 1 \;(\text{mod}\; n)$ 이므로 $[p]$ 가 찾는 값이다.
+
+:::
+
+</br>
+
+## 군의 정의와 기본 성질
+
+### 이항연산 {#sec-binary_operations}
+
+군에 들어가기에 앞서 이미 알고 있겠지만 이항연산을 정의한다.
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-binary_operation}
+#### 이항연산 (binary operation)
+
+집합 $S$ 에 대해 $S\times S \mapsto S$ 함수를 **이항연산** 이라고 한다. 관습적으로 이항연산을 $a\cdot b$, $ab$, $a\ast b$, $a \circ b$ 등으로 쓴다. 임의의 $a,\,b,\,c\in S$ 에 대해 
+
+1. $(ab)c=a(bc)$ 일 때 결합법칙을 만족한다고 한다.
+
+2. $ab=ba$ 일 때 교환법칙을 만족한다고 한다.
+
+:::
+:::
+
+
+일반적으로 이항연산은 결합법칙을 만족하도록 정의된다. 
+
+</br>
+
+### 군과 부분군 {#sec-groups_subgroups}
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-groups}
+#### 군 (Groups)
+
+집합 $G$ 에 이항연산 $\cdot$ 이 정의되어 있으며, 
+
+1. $\forall a,\,b,\,c\in G,\, a\cdot (b \cdot c)=(a\cdot b)\cdot c$, 
+
+2. $\exists e\in G,\, \forall a\in G,\, a\cdot e=e\cdot a$, 
+
+3. $\forall a\in G,\, \exists a'\in G,\, a\cdot a' = a'\cdot a = e$
+
+일 때 집합 $G$ 를 **군** 이라 하고 $(G,\cdot)$ 이라고 쓴다. 이 때 2. 의 $e$ 를 $G$ 의 항등원 이라고 한다. 항등원의 표기는 $e$ 혹은 연산이 곱셈이면 $1$ 이라고 쓰거나, 소속된 군을 표현하기 위해 $1_G$ 와 같이 쓰기도 한다. 연산이 덧셈이라면 $0$ 혹은 $0_G$ 로 쓰기도 한다. $a\cdot a'=a'\cdot a=e$ 인 $a'$ 을 $a$ 의 역원 이라고 한다. $a$ 의 역원은 $a^{-1}$ 이라 쓴다.
+:::
+:::
+
+</br>
+
+군의 연산이 특별히 덧셈의 성질을 갖지 않을 때는 $ab$ 와 같이 쓰기로 하자. 또한 $(G,\, \cdot)$ 의 이항연산도 $ab$ 와 같이 쓰기로 하자.
+</br>
+
+::: {#prp-uniqueness_of_identity_and_inverse}
+
+$G$ 가 군 일 때 
+
+&emsp; ($1$) $G$ 의 항등원은 유일하다.
+
+&emsp; ($2$) $a\in G$ 에 대한 역원은 유일하다.
+
+&emsp; ($3$) $G$ 의 항등원의 역원은 자기 자신이다.
+
+:::
+
+::: {.proof}
+
+($1$) $G$ 의 두 항등원을 $e,\, e'$ 이라 할 때 $e=ee' = e'$ 이다. 
+
+($2$) $a$ 의 두 역원을 $x,\,y$ 라 하자. $x=x(ay)=(xa)y = y$ 이다.
+
+($3$) $ee=e$. $\square$
+
+:::
+
+</br>
+
+$g$ 가 군 $G$ 의 원소일 때 $g$ 를 $n$ 번 연산한 것을 $g^n$ 이라고 쓴다. 즉 $gggg = g^4$ 이다. $g^0 =1_G$ 이다.
+
+</br>
+
+::: {#prp-cancelation_law}
+
+#### 제거 규칙
+
+$a,\,b,\,c\in G$ 일 때 $ac=bc$ 이면 $a=b$ 이다.
+
+:::
+
+::: {.proof}
+$a=acc^{-1}=bcc^{-1}=b$ 이다.
+:::
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-abelian_finite_group}
+#### 가환군, 유한군
+
+$\forall a,\,b\in G$ 에 대해 $ab=ba$ 일 때 $G$ 를 **가환군** 혹은 **아벨군** 이라 한다. $G$ 가 유한집합일 때 $G$ 를 **유한군** 이라 한다. $G$ 가 유한군일 때 $G$ 의 원소의 갯수를 $G$ 의 **order** 라고 하며 $|G|$ 라고 쓴다.
+
+:::
+:::
+
+</br>
+
+군의 일반적인 특징가운데 몇몇을 보였다. 이제 앞으로 자주 사용할 군의 종류가운데 몇개를 알아보도록 하자.
+
+</br>
+
+#### 대칭군과 교대군
+
+우리는 앞서 [대칭군](../part1/ch1_03_determinant.qmd#def-symmetric_group) $S_n$ 에 대해 알아보았다. 대칭군은 아주 중요한 군이기 때문에 다시 언급할 가치가 있다. $S_n$ 은 유한군이며 가환군이 아니라는 것을 알 수 있을 것이다.
+
+::: {#exm-S3}
+앞으로 자주 사용될 군중의 하나는 $S_3$ 이다. $S_3 = \{e, (1, 2), (1, 3), (2, 3), (1,2, 3), (1, 3, 2) \}$ 이며 이 때 $x=(1, 2, 3)$, $y=(1,2)$ 으로 정하자. $x^2 = (1, 3, 2),\, x^3 = e$ 이며, $xy=(1, 3)$, $x^2y=(2, 3)$ 이므로 $S_3 = \{e, x, x^2, y, xy, x^2y\}$ 로 쓸 수 있으며 $x^2y=yx$ 의 관계를 만족한다. 항등원을 $1$ 이라 표기하면 $S_3 = \{1, x, x^2, y, xy, x^2y\}$ 이다.
+:::
+
+</br>
+
+우리는 @prp-permutation_even_odd 에서 대칭군이 호환(transposition) 의 합성으로 표현될 때 그 갯수는 변하더라도 갯수가 짝수인지 홀수인지는 변하지 않는다는 것을 보였으며 그것이 짝수일 때 **짝순열**, 홀수일 때 **홀순열** 이라고 부른다는 것을 안다. 특히 짝순열의 집합은 군을 이루며 그것을 **교대군 (Alternating group)** 이라고 하고 $A_n$ 이라고 쓴다. 
+
+</br>
+
+#### 일반선형군과 특수선형군
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-linear_group}
+#### 일반선형군, 특수선형군
+$\mathbb{F}^{n\times n}$ 가역행렬의 집합 행렬의 곱셈 연산에 대해 군이며 이를 **일반선형군 (general linear group)** 이라고 하고 $GL_n(\mathbb{F})$ 라고 표기한다. 이 가운데 행렬식이 $1$ 인 행렬의 집합도 군이며 이를 **특수선형군 (special linear group)** 이라고 하며 $SL_n(\mathbb{F})$ 라고 표기한다.
+
+:::
+:::
+
+일반선형군과 특수선형군이 행렬의 곱 연산에 대해 군이라는 것은 쉽게 보일 수 있다.
+
+</br>
+
+
+#### 부분군
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-subgroups}
+
+#### 부분군
+
+$H$ 가 $G$ 의 부분집합이며 $H$ 스스로 군일 때 $H$ 를 $G$ 의 **부분군(subgroup)** 이라고 하며 $H \le G$ 라고 쓴다. $G$ 의 부분군 가운데 항등원 하나만을 포함하는 부분군과 $G$ 자신을 제외한 부분군을 **진부분군(proper subgroup)** 이라고 한다.
+:::
+:::
+
+</br>
+
+
+::: {#prp-subgroup}
+
+$H$ 가 군 $G$ 의 부분집합이며 다음을 만족하면 $H$ 는 $G$ 의 부분군이다.
+
+&emsp; ($1$) $\forall a,\,b\in H,\,  ab\in H$, ($H$ 는 연산에 닫혀 있다.) 
+
+&emsp; ($2$) $1_G \in H$, ($H$ 는 항등원을 포함한다.)
+
+&emsp; ($3$) $\forall a\in H,\, a^{-1}\in H$. ($H$ 는 자신에 포함되는 원소의 역원을 포함한다.)
+
+:::
+
+::: {.proof}
+
+@def-groups 를 생각해보라..
+
+:::
+
+</br>
+
+::: {#prp-intersection_of_subgroups}
+
+$H$ 와 $K$ 가 $G$ 의 부분군일 때 $H \cap K$ 역시 $G$ 의 부분군이다.
+
+:::
+
+::: {.proof}
+
+$x,\,y \in H \cap K$ 라면 $xy\in H \cap K$ 이다. $1\in H\cap K$ 이다. $x\in H\cap K$ 라면 $x^{-1}\in H\cap K$ 이다. $\square$
+
+
+:::
+
+
+</br>
+
+### 정수의 덧셈군 {#sec_additive_groups_of_integers}
+
+여기서는 @sec-integers 에서 다뤘던 정수에 대한 내용을 군의 입장에서 다시 다뤄보기로 한다. 우선 정수 $a$ 의 배수의 집합을 $\mathbb{Z}a$ 라고 쓴다. 즉, $a\in \mathbb{Z}$ 에 대해 
+
+$$
+\mathbb{Z}a=\{na: n \in \mathbb{Z}\}
+$$
+
+이다. 
+
+::: {#exm-Za}
+
+$\mathbb{Z}a$ 가 덧셈에 대해 $\mathbb{Z}^+$ 의 부분군이다.
+
+:::
+
+</br>
+
+::: {#prp-subgroup_of_Zplus}
+
+$S$ 가 $\mathbb{Z}^{+}$ 의 부분군이려면 $S=\{0\}$ 이거나 $\mathbb{Z}a$ 형태이며 이 때 $a$ 는 $S$ 에 포함된 가장 작은 양의 정수이다.
+
+:::
+
+::: {.proof}
+
+$\{0\}\le \mathbb{Z}^+$ 임은 자명하다. $S$ 가 $0$ 이외의 $x$ 를 포함한다고 하자. $S$ 가 군이므로 $|x|\in S$ 이며 $S$ 는 양의 정수를 포함한다. 따라서 $S$ 에 포함된 가장 작은 양의정수 $a$ 가 존재한다. 군의 연산이 덧셈이므로 $\mathbb{Z}a\subset S$ 이다. 만약 $b>0,\, b\not\in \mathbb{Z}a$ 라고 하자. $b=ma+r$ 인 양의 정수 $m$ 과 $0\le r < a$ 인 양의정수 $r$ 이 존재하며 당연히 $r\in S$ 인데 $a$ 가 $S$ 에 포함된 가장 작은 양의정수라는 가정에 모순된다. 따라서 $S=\mathbb{Z}a$ 이다. $\square$
+
+:::
+
+</br>
+
+::: {#prp-additive_groups_generated_by_two_integers}
+
+두 정수 $a,\,b$ 에 대해 다음 집합 $S$ 를 생각하자.
+
+$$
+S = \mathbb{Z}a + \mathbb{Z}b = \{ma+nb : m,\,n \in \mathbb{Z}\}.
+$$
+
+$S$ 는 덧셈 연산에 대해 $\mathbb{Z}^+$ 의 부분군이다.
+
+:::
+
+::: {.proof}
+
+$(m_1 a+ n_1 b) + (m_2 a + n_2 b) = (m_1+m_2)a+ (n_1 +n_2)b\in S$ 이므로 $S$ 는 덧셈에 대해 닫혀 있다. $0a + 0b = 0 \in S$ 이므로 $S$ 는 덧셈에 대한 항등원을 포함한다. $(ma + nb) + ((-m)a+(-n)b)=0$ 이므로 $S$ 는 모든 원소의 역원을 포함한다. 따라서 $S \le \mathbb{Z}^+$ 이다. $\square$
+
+:::
+
+
+</br>
+
+::: {#cor-additive_groups_generated_by_two_integers}
+$\mathbb{Z}a+ \mathbb{Z}b$ 가 $\mathbb{Z}^+$ 의 부분군이며 nontrivial 하므로 @prp-subgroup_of_Zplus 에 의해 어떤 양의 정수 $c$ 에 대해 $\mathbb{Z}a+\mathbb{Z}b = \mathbb{Z}c$ 이다.
+:::
+
+
+</br>
+
+::: {#prp-gcd_in_groups}
+
+$\mathbb{Z}a + \mathbb{Z}b = \mathbb{Z}c$ 일 때 $c=\gcd (a,\,b)$ 이다.
+
+:::
+
+::: {.proof}
+@prp-divisor 를 보라.
+:::
+
+
+</br>
+
+::: {#prp-common_multiplier}
+
+$0$ 이 아닌 정수 $a,\,b$ 에 대해 $\mathbb{Z}a \cap \mathbb{Z}b$ 는 어떤 양의 정수 $m$ 에 대해 $\mathbb{Z}a \cap \mathbb{Z}b = \mathbb{Z}m$ 이며 $m = \text{lcm}(a, b)$ 이다.
+
+:::
+
+::: {.proof}
+
+@prp-intersection_of_subgroups 에 의해 $\mathbb{Z}a \cap \mathbb{Z}b$ 는 $\mathbb{Z}^+$ 의 부분군이며 $ab \in \mathbb{Z}a \cap \mathbb{Z}b$ 에 포함되므로 어떤 $m\in \mathbb{Z}_+$ 에 대해 $\mathbb{Z}m$ 이다. $\mathbb{Z}m \le \mathbb{Z}a$ 이므로 $a \mid m$ 이며, 같은 이유로 $b\mid m$ 이다. $a \mid n,\, b \mid n$ 인 양의 정수 $n$ 을 생각하면 $n \in \mathbb{Z}m$ 이므로 $m \mid n$ 이다. 따라서 $m=\text{lcm}(a,\,b)$ 이다. $\square$
+
+:::
+
+</br>
+
+### 순환군
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-cyclic_group}
+
+#### 순환 부분군과 차수
+
+군 $G$ 의 원소 $g$ 에 대해 $\{g^n: n\in \mathbb{Z}\}$ 는 $G$ 의 부분군이며 $g$ 에 의해 생성되는  **순환 부분군 (cyclic subgroup)** 이라 하고 $\langle g \rangle$ 로 쓴다. $g^n = 1$ 을 만족하는 자연수 $n$ 이 존재한다면 가장 작은 값을 $g$ 의 **차수(order)** 라 하며, $o(g)$ 라 쓴다. 존재하지 않는다면 $o(g)=\infty$ 이다.
+:::
+:::
+
+</br>
+
+::: {#prp-order_of_finite_cyclic_group}
+
+$G=\langle g \rangle$ 일 때 $|G|= o(g)$ 이다.
+
+:::
+
+::: {.proof}
+$G=\langle g\rangle = \{g^0=1_G,\ldots,\,g^{n-1}\}$. $\square$ 
+:::
+
+
+</br>
+
+### 연습문제
+
+::: {#exr-artin_2_2_3}
+
+#### Artin 2.2.3
+
+$x,\,y,\,z,\,w$ 가 군 $G$ 의 원소일 때 다음을 보이시오.
+
+&emsp; ($1$) $xyz^{-1}w=1$ 일 때 $y$ 를 구하라.
+
+&emsp; ($2$) $xyz=1$ 일 때 $yzx=1$ 인가? 그렇다면 $yxz=1$ 인가?
+
+:::
+
+::: {.solution}
+
+($1$) $y=x^{-1}w^{-1}z$.
+
+($2$) $(xyz)=1 \implies yz=x^{-1}\implies yzx=1$.  $S_3$ 에서 $z=xy$ 라고 하면 $yxz=yxxy=yx^2y=y^2x=x \ne 1$ 이다.
+
+:::
+
+</br>
+
+::: {#exr-herstein_2_3_4}
+#### Herstein 2.3.4
+
+$G$ 가 군이며 모든 $a,\,b\in G$ 에 대해 연속적인 세 정수 $i$ 에 대해 $(ab)^i = a^ib^i$ 이면 $G$ 가 아벨군임을 보여라
+:::
+
+::: {.solution}
+
+$(ab)^i = a^ib^i$, $(ab)^{i+1} = a^{i+1}b^{i+1}$, $(ab)^{i+2}= a^{i+2}b^{i+2}$ 라 하자.
+
+$$
+\begin{aligned}
+(ab)^{i+1} = a^{i+1}b^{i+1} & \implies ba^i = a^ib,\\
+(ab)^{i+2} = a^{i+2}b^{i+2} & \implies ba^{i+1}= a^{i+1}b.
+\end{aligned}
+$$
+
+이며,
+
+$$
+a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
+$$
+
+이다. 
+
+:::
+
+</br>
+
+::: {#exr-herstein_2_3_14}
+
+#### Herstein 2.3.14
+
+곱연산이 정의되었고 이 연산에 대해 닫혀있는 유한집합 $G$ 에서 곱연산의 결합법칙과 제거규칙이 성립할 때 $G$ 가 군임을 보이시오. 
+
+:::
+
+::: {.solution}
+
+제거규칙, 즉 $ac=bc\implies a=b$ 가 성립하면 $a\ne b \implies ac \ne bc$ 이다. $G$ 가 유한집합이므로 임의의 정해진 $a\in G$ 에 대해 $aG=\{ay: y\in G\}=G$ 이어야 하며, 따라서 어떤 $x\in G$ 에 대해 $ax=a$ 이다. $axa=a^2$ 이므로 $xa=a$ 이다. 임의의 $b\in G$ 에 대해 $axb=ab$ 이므로 $xb=b$ 이며 $bxb=b^2$ 이므로 $bx=b$ 이다. 즉 이 $x$ 가 $G$ 에서의 항등원이다. 이제 항등원을 $1$ 로 표기하자. $aG=G$ 이므로 $az=1$ 인 $z$ 가 존재하며 $zaz=z$ 이므로 $za=1$ 이다. 즉 $a$ 에 대한 역원이 존재한다. 따라서 $G$ 는 군이다. 
+
+:::
+
+</br>
+
+::: {#exr-herstein_2_3_15}
+
+### Herstein 2.3.15
+
+다음을 보이시오.
+
+&emsp; ($1$) @exr-herstein_2_3_14 를 이용하여 소수 $p$ 에 대해 congruence modulo $p$ 에 의해 정해지는 equivalence class 의 집합 $J_p$ 가 곱셈에 대한 군임을 보이시오
+ 
+&emsp; ($2$) 정수 $n$ 에 대해 $\{[m]: \gcd(n, m)=1\}$ 이 역시 곱셈에 대한 군임을 보이시오.
+
+:::
+
+::: {.solution}
+
+($1$) $J_p$ 는 유한집함이다. $[a][c] = [b][c]$ 라 하자. $p \mid (a-b)c$ 인데 $p \nmid c$ 이므로 $p \mid ab$ 이다. 즉 $[a][c]=[b][c] \implies [a]=[b]$ 이므로 $J_p$ 는 군이다. 
+
+($2$) $K_n = \{[m]: \gcd(n,\,m)=1\}$ 이라 하자. $\gcd(n, 1)=1$ 이므로 $[1]\in K_n$ 이다. $[a],\, [b]\in K_n$ 일 때 $\gcd(ab,n)=1$ 이며 $[a][b]=[ab]$ 이므로 $[a][b]\in K_n$ 이다. 곱연산의 결합법칙이 성립함은 자명하메 $[a][c]=[b][c]$ 이면 $n \mid (a-b)c$ 인데 $n \nmid c$ 이므로 $n mid (a-b)$ 이다. 따라서 $[a]=[b]$ 이므로 제거규칙이 성립한다. 따라서 @exr-herstein_2_3_14 에 따라 $K_n$ 은 곱셈에 대한 군이다. 
+
+
+:::
+
+</br>
+
+::: {#exr-artin_2_2_5}
+#### Artin 2.2.5
+
+$H \le G$ 일 때 $H$ 의 항등원은 $G$ 의 항등원과 같아야 한다. 누군가는 $H$ 의 항등원이 $G$ 의 항등원과 다를 것을 원할 수도 있다. 어쨌든 $H$ 가 항등원을 갖는다면 $G$ 와 같아야 함을 보여라. 이것이 역원에 대해서도 성립함을 보여라.
+
+:::
+
+::: {.solution}
+
+$H \le G$ 이며 $1_H,\, 1_G$ 를 각각 $H,\,G$ 의 항등원이라고 하자. $1_H = 1_H 1_H$ 이다. 또한 $1_H\in G$ 이므로 $1_H 1_G=1_H$ 이다. 따라서 $1_H 1_H = 1_H 1_G$ 이며 제거규칙에 의해 $1_H=1_G$ 이다.
+
+$a\in H,\, a \ne 1_H$ 라 하자. $G$ 에서 $a^{-1}=x$ 라 하고 $H$ 에서 $a^{-1}=y$ 라 하자. $ax=1_G$ 이며 $ay=1_H$ 인데 $1_G = 1_H$ 이므로 $x=y$ 이다. 
+
+:::
+
+</br>
+
+::: {#exr-artin_2_2_6}
+
+#### Artin 2.2.6
+
+$G$ 가 군일 때 $G$ 에서의 연산 $ab$ 에 대해 $G$ 와 같은 원소를 가지며 연산 $\ast$ 가 $a\ast b = ba$ 로 정의된 집합을 **opposite group** 이라고 하고 $G^\circ$ 라 쓴다. $G^\circ$ 가 군임을 보이시오.
+
+:::
+
+::: {.solution}
+
+$(a \ast b) \ast c = (ba)\ast c = cba = a \ast (cb) = a \ast (b \ast c)$ 이다. 따라서 연산의 결합법칙이 성립한다. 연산의 닫힘음 쉽게 보일 수 있으며 $1_G$ 가 $G^\circ$ 의 항등원이며, $G$ 에서의 역원이 $G^\circ$ 에서의 역원가 같음은 쉽게 보일 수 있다.
+
+:::
+
+
+</br>
+
+::: {#exr-artin_2_3_2}
+#### Artin 2.3.2
+
+$a,\,b$ 가 양의 정수이며 그 합이 소수 $p$ 일 때 $a,\,b$ 는 서로소임을 보이시오.
+
+:::
+
+::: {.solution}
+
+어떤 양의 정수 $m$ 이 $m \mid a,\, m \mid b$ 이면 $m \mid (a+b)$ 이다. 
+
+:::
+
+</br>
+
+::: {#exr-artin_2_3_3}
+
+#### Artin 2.3.3
+최대 공약수와 최소공배수를 임의의 갯수의 정수에 대해 확장 할 수 있음을 보이자.
+
+&emsp; ($1$) $\{a_1,\ldots,\,a_n\}$ 에 대한 최대공약수를 정의하라. 그것이 존재함을 보이고 그것이 $a_1,\ldots,\,a_n$ 의 선형결합임을 보여라.
+
+&emsp; ($2$) $\{a_1,\ldots,\,a_n\}$ 의 최대공약수가 $d$ 일 때 $\{a_1/d,\ldots,\,a_n/d\}$ 의 최대공약수가 $1$ 임을 보여라.
+
+:::
+
+::: {.solution}
+
+($1$) $d \mid a_i,\, i=1,\ldots,\,n$ 이며 $\forall m\in \mathbb{Z},\, m\mid a_i,\, i=1,\ldots,\,m$ 에 대해 $m \mid d$ 인 수를 $\{a_1,\ldots,\,a_n\}$ 의 최대공약수라 하고 $\gcd (a_1,\ldots,\,a_n)$ 이라 쓰기로 하자.
+
+$G= \mathbb{Z}a_1 + \cdots + \mathbb{Z} a_n$ 를 생각 할 수 있다. Induction 을 통해 어떤 양의 정수 $d$ 에 대해 $G=\mathbb{Z}d$ 임을 보일 수 있다. $a_1,\ldots,\,a_n\in G$ 이므로 $d \mid a_1,\ldots, d \mid a_n$ 이다.  또한 어떤 $x\in \mathbb{Z}$ 에 대해 $x \mid a_1,\ldots,\,x \mid a_n$ 이라면 임의의 정수 $m_1,\ldots,\,m_n$ 에 대해 $x\mid (a_1m_1 + \cdots = a_n m_n)$ 이므로 $x \mid d$ 이다. $n=2$ 인 경우를 생각하여 $d=\gcd (a_1,\ldots,\,a_n)$ 이라고 놓을 수 있으며 앞서 보았듯이 $d$ 는 $a_1,\ldots,\,a_n$ 의 선형결합이다.
+
+($2$) $G_d = \mathbb{Z}(a_1/d) + \cdots + \mathbb{Z}(a_n/d) = \mathbb{Z}$ 이다. 
+
+
+
+:::
+
+</br>
+
+::: {#exr-artin_2_4_1}
+
+#### Artin 2.4.2
+
+$a,\,b$ 가 군 $G$ 의 원소이며 $o(a)=7$ 이고 $a^3b=ba^3$ 이라면 $ab=ba$ 임을 보이시오.
+
+:::
+
+::: {.solution}
+
+$b^{-1}a^3b = a^3$ 이다. $(b^{-1}a^3b)^5 = b^{-1}a^{15}b = b^{-1}ab$ 이며, $(a^3)^5 = a$ 이므로 $b^{-1}ab=a$ 이다.
+:::  
+
+</br>
+
+::: {#exr-artin_2_4_3}
+
+#### Artin 2.4.3
+
+$a,\,b$ 가 군 $G$ 의 원소라면 $o(ab)=o(ba)$ 임을 보이시오.
+
+:::
+
+
+::: {.solution}
+
+$(ab)^n =1\iff (ba)^n=1$ 임을 보이면 된다.
+$$
+\begin{aligned}
+(ab)^n = 1 &\iff a(ba)^{n-1}b=1\\
+&\iff a(ba)^{n-1}(ba)= a \\
+&\iff a(ba)^n =a \\
+&\iff (ba)^n = 1
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+::: {#exr-artin_2_4_4}
+
+#### Artin 2.4.4
+
+진 부분군이 존재하지 않는 군 $G$ 를 기술하시오.
+
+:::
+
+::: {.solution}
+
+$a,\,b\in G$, $a\ne 1,\, b \ne 1$ 에 대해 $b\notin \langle a\rangle$ 이면 $\langle a\rangle$ 은 $G$ 의 진부분군이다. 마찬가지로 $a \notin \langle b \rangle$ 이면 $\langle b \rangle$ 은 $G$ 의 진 부분군이다. 따라서 어떤 $g\in G$ 에 대해 $G=\langle g \rangle$ 이 아니면 $G$ 의 진부분군이 존재한다.
+
+$o(g)=\infty$ 이면 임의의 1보다 큰 양의 정수 $n$ 에 대해 $\langle g^n \rangle$ 은 $G$ 의 진 부분군이다. 따라서 $o(g)<\infty$ 이어야 한다. $o(g) = n$ 이며 $n$ 이 소수가 아닐 때 $m\mid p,\, m \ne 1$ 이면 $\langle g^m \rangle$ 은 $G$ 의 진부분군이다. 
+
+이제 남은 가능성은 차수가 소수 $p$ 인 $g$ 에 대해 $G=\langle g \rangle$ 인 경우 뿐이다. $p \not\mid m$ 에 대해 $1m,\,2m, \cdots,\, (p-1)m$ 모두 $p$ 로 나누어 떨어지지 않으므로 $\langle g^m \rangle = G$ 이다. 즉 차수가 소수인 $g$ 에 의해 생성되는 순환군 만이 진부분군이 존재하지 않는 군이다. $\square$
+
+:::
+
+</br>
+
+::: {#exr-artin_2_4_5}
+
+#### Artin 2.4.5
+
+순환군의 부분군은 순환군임을 보여라. 
+:::
+
+::: {.solution}
+
+$G=\langle g \rangle$ 이라 하자. $g^m,\, g^n\in H \le G$ 이면 임의의 정수 $\alpha,\, \beta$ 에 대해 $g^{\alpha m +\beta n}\in H$ 이며 @prp-gcd_in_groups 에서 보았듯이 $d=\gcd (m,\,n)$ 에 대해 $\langle g^d \rangle \le H$ 이므로 순환군의 부분군은 순환군이다.
+
+:::
+
+
+</br>
+
+::: {#exr-artin_2_4_7}
+
+#### Artin 2.4.7
+
+$x,\,y$ 는 군 $G$ 의 원소이며 $o(x)=o(y)=o(xy)=2$ 이다. 이 때 $H=\{1,\,x,\,y,\,xy\}$ 는 $G$ 의 부분군임을 보여라
+
+:::
+
+::: {.solution}
+
+차수가 $2$ 인 군의 원소는 스스로의 역원이다. $xy=(xy)^{-1}=y^{-1}x^{-1}=yx$ 이므로, $x(xy)=y$, $(xy)x=y$, $y(xy)=x$, $(xy)y = x$ 이다. 따라서 $H$ 는 군이며, 추가로 아벨군이다.
+
+:::
+
+</br>
+
+::: {#exr-artin_2_4_8}
+
+#### Artin 2.4.8
+
+@sec-elementary_row_operation 의 기본 행 연산을 참고하여 다음을 보이시오
+
+&emsp; ($1$) @def-elementary_row_operation 의 $E^{(2)}$ 와 $E^{(3)}$ 가 $GL_n(\mathbb{R})$ 을 생성함을 보이시오.
+
+&emsp; ($2$) $E^{(3  )}$ 가 $SL_n(\mathbb{R})$ 을 생성함을 보이시오. $2\times 2$ 의 경우를 우선 보이시오.
+
+:::
+
+::: {.solution}
+
+($1$) @def-elementary_row_operation 를 보자. $E^{(2)}(i, t)$ 는 $i$ 번째 행에 $0$ 이 아닌 스칼라 $t$ 를 곱하는 연산이며 $E^{(3)}(i, j, r)$ 은 $i$ 번째에 $j$ 번째 행에 $r$ 을 곱하여 더하는 연산이다. @prp-reduced_echelon_form_of_invertible_matrix 에서 보였듯이 모든 가역행렬은 행 기본 연산을 통해 항등행렬이 된다. 즉 $E^{(1)}$ 이 $E^{(2)}$ 와 $E^{(3)}$ 의 곱으로 표현될 수 있다면 명제가 증명된다. $E^{(1)}(i, j)$ 는 $i$ 행과 $j$ 행을 교환하는 연산이다. $E^{(1)}(i, j)$ 의 행렬표현은 $i$ 행, $j$ 행, $i$ 열, $j$ 열 을 제외하면 trivial 하며 $i$ 행과 $j$ 행에 대한 $E^{(2)},\,E^{(3)}$ 연산만으로 표현할 수 있음을 보일것이다. 그렇다면 $i$ 행 $j$ 행, $i$ 열, $j$ 열을 제외한 다른 성분에 변화가 없으므로 표현을 단순화하기 위해 $2 \times 2$ 행렬로 나타 낼 수 있다.
+$$
+E^{(2)}\left(2, \frac{1}{2}\right) E^{(3)}(2,1, -1)E^{(2)}(1, -2)E^{(3)}\left(1, 2, -\frac{5}{2}\right)E^{(3)}(1,2, 2)E^{(3)}(2, 1, 2)\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} = \boldsymbol{I}_2
+$$
+
+이므로 $E^{(1)}$ 은 $E^{(2)}$ 와 $E^{(3)}$ 의 곱으로 표현 할 수 있다. 모든 가역행렬은 $E^{(2)}$ 행렬과 $E^{(3)}$ 행렬의 곱으로 나타 낼 수 있다.
+
+
+($2$) 우선 $\boldsymbol{A}_1=\begin{bmatrix} a & 0 \\ 0 & 1/a\end{bmatrix},\;(a\ne 0)$ 꼴의 행렬이 $E^{(3)}$ 행 기본 연산에 의해 생성됨을 보이자. $E^{(3)}$ 행렬의 역행렬도 $E^{(3)}$ 행렬이므로 $\boldsymbol{A}_1$ 행렬에 유한개의 $E^{(3)}$ 연산을 수행하여 단위행렬을 만들 수 있음을 보이면 $\boldsymbol{A}_1$ 행렬이 $E^{(3)}$ 행렬에 의해 생성된다는 것을 보인 것이다.
+
+$$
+\begin{bmatrix}1 & -\frac{2}{a} \\ 0 &1\end{bmatrix}\begin{bmatrix}1 & 0\\ a-1 &1\end{bmatrix} \begin{bmatrix}1 & 1 \\0 & 1\end{bmatrix} \begin{bmatrix}1 & 0 \\ \frac{1-a}{a} & 1\end{bmatrix}\begin{bmatrix}1 & a \\0 & 1\end{bmatrix}\begin{bmatrix} a & 0\\ 0 &\frac{1}{a}\end{bmatrix} =\boldsymbol{I}_2
+$$
+
+이므로 $\boldsymbol{A}_1$ 꼴의 행렬은 $E^{(3)}$ 행렬의 유한곱으로 표현 할 수 있다.
+
+이제 $\boldsymbol{A}=\begin{bmatrix}a & b \\ c & \frac{1+bc}{a}\end{bmatrix}$, $(a\ne 0)$ 꼴의 행렬이 유한개의 $E^{(3)}$ 행 기본 연산에 의해 $\boldsymbol{A}_1$ 꼴이 됨을 보이자.
+
+$$
+\begin{bmatrix} 1 & -ab \\ 0 & 1\end{bmatrix}\begin{bmatrix} 1 & 0 \\ -\frac{c}{a} & 1\end{bmatrix} \boldsymbol{A} = \begin{bmatrix} a & 0 \\ 0 & \frac{1}{a}\end{bmatrix}
+$$
+
+
+이제 남은 경우는 $\begin{bmatrix} 0 & b \\ -1/b & d\end{bmatrix}$, $(b \ne 0)$ 꼴의 행렬인데 $E^{(3)}$ 연산에 의해 $\boldsymbol{A}$ 꼴의 행렬로 만들 수 있다. 결론적으로 $SL_2 (\mathbb{R})$ 행렬은 $E^{(3)}$ 연산의 유한곱으로 표현할 수 있다.
+
+
+이제 $SL_n(\mathbb{R})$ 에 대해 성립함을 가정하고 $SL_{n+1}(\mathbb{R})$ 에 대해 성립함을 보이자. $\boldsymbol{B}\in SL_{n+1}(\mathbb{R})$ 이라 하자. $B_{1,1}=0$ 이면 첫번째 열이 $0$ 이 아닌 행을 찾아 $E^{(3)}$ 연산으로 첫번째 행 첫번째 열이 $0$ 이 되지 않게 만들 수 있기 때문에 $B_{1,1}\ne 0$ 임을 가정 할 수 있다. 첫번째 열에 첫번째 행을 제외하고 $0$ 이 아닌 행이 있다면 (그 행을 $j$ 행이라 하자) $E^{(3)}(1, j, -(B_{11}-1)/B_{j1})$ 연산을 통해 첫번째 행, 첫번째 열을 $1$ 로 만들 수 있다. 첫번째 열에 첫번째 행을 제외하고 $0$ 이 아닌 행이 없다면 $E^{(3)}(2, 1, 1)$ 을 통해 두번째 행의 첫번째 열 성분을 $0$ 이 아니도록 만든 후 $E^{(3)}(1, 2, -(B_{11}-1)/B_{21})$ 연산을 통해 첫번째 행, 첫번째 열 성분을 $1$ 로 만들 수 있다. 즉 우리는 일반성을 잃지 않고 $\boldsymbol{B}\in SL_{n+1}(\mathbb{R})$ 에 대해 $B_{11}=1$ 이라고 할 수 있다.
+
+
+$\boldsymbol{B}$ 의 첫번째 행에 대해 두번째 열부터 같은 열의 $0$ 이 아닌 행을 찾아(이런 행이 없다면 행렬식이 $0$ 이므로 $SL_{n+1}(\mathbb{R})$ 의 원소가 아니다.) 적절한 $E^{(3)}(1, j, r)$ 연산을 통해 $\boldsymbol{B}$ 의 첫번째 행의 두번째 열부터 $0$ 으로 만들 수 있다. 이렇게 변환된 행렬 $\boldsymbol{B}'$ 을 생각하자. $k=2,\ldots,\,n+1$ 헹에 대해 첫번째 열이 $0$ 이 아닌 경우 $$E^{(3)}(k, 1, -B'_{k,1}/B'_{0,0})$ 연산을 통해 첫번째 열을 $0$ 으로 만들수 있다. 그 결과로 계산된 행렬 $\boldsymbol{B}''$ 은 첫번째 행과 첫번째 열이 1행 1열을 제외하곤 모두 $0$ 이 된다. 지금까지의 연산은 모두 행렬식을 보존하는 변환이므로 $\boldsymbol{B}'' \in SL_{n+1}(\mathbb{R})$ 이다. 이제 $\boldsymbol{B}''$ 의 2행, 2열부터 마지막행 마지막 열까지의 $n \times n$ 행렬을 $\boldsymbol{C}$ 라고 하자. $\boldsymbol{C}\in SL_n (\mathbb{R})$ 이므로 가정에 의해 $E^{(3)}$ 연산의 곱으로 표현할 수 있다. 즉 $SL_n(\mathbb{R})$ 군은 $E^{(3)}$ 행렬들로부터 생성될 수 있다. $\square$
+
+:::
+
+</br>
+
+::: {#exr-artin_2_4_10}
+
+#### Artin 2.4.10
+
+군의 유한 차수를 갖는 원소들의 곱은 꼭 유한차수를 갖는 것은 아님을 예를 들어 보여라. 아벨군의 경우에는 어떤가?
+
+:::
+
+::: {.solution}
+
+$GR_2(\mathbb{R})$ 에서 $A=\left[\begin{array}{rr} -1 & 1 \\ 0 &1 \end{array}\right],\, B=\left[\begin{array}{rr} -1 & 0 \\ 0 & 1\end{array}\right]$ 의 경우 $A^2=B^2=I_2$ 이지만 $AB=\left[\begin{array}{rr} 1 & 1 \\ 0 & 1\end{array}\right]$ 이며 $(AB)^n = \begin{bmatrix} 1 & n \\ 0 & 1 \end{bmatrix}$ 이다. 즉 $o(A)=o(B)=2$ 이지만 $o(AB)=\infty$ 이다.
+
+:::
+
+</br>
+
+::: {#exr-artin_2_4_11}
+
+#### Artin 2.4.11
+
+다음을 보이시오.
+
+&emsp; ($1$) 호환(transpositon) 으로 대칭군 $S_n$ 을 생성할 수 있음을 보이시오.
+
+&emsp; ($2$) $n \ge 3$ 일 때 $3$-cycles 가 교대군 $A_n$ 을 생성함을 보이시오.
+
+:::
+
+::: {.solution}
+
+($1$) @prp-decomposition_to_transposition 에서 보였다.
+
+($2$) $(a,\,b)(b, c) = (a,\,b,\,c)$, $(a,\,b)(c,\,d)=(a,\,b,\,c)(b,\,c,\,d)$ 이므로 임의의 두 호환의 곱은 $3$-cycles 의 곱으로 표현 할 수 있다. $A_n$ 의 모든 원소는 은 짝수개의 호환의 곱으로 표현 할 수 있으므로 $3$-cycles 가 $A_n$ 을 생성한다.
+
+:::
+

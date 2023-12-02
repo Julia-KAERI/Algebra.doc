@@ -1,0 +1,251 @@
+---
+title: "쌍대공간과 몫공간으로 알아보는 행렬의 rank"
+number-sections: true
+number-depth : 2
+crossref:
+  chapters: true
+---
+
+
+</br>
+
+이번장에서는 행렬의 행공간의 차원과 열공간의 차원이 갖다는 것(@thm-dimension_of_matrix) 을 앞서 다룬 쌍대사상, 쌍대 공간과 여기서 배울 개념을 이용하여 다른 방법으로 증명한다.
+
+</br>
+
+## 몫공간
+
+### 아핀 부분집합과 몫공간
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-affine_subset}
+
+#### 아핀 부분집합(Affine subset) 
+
+벡터공간 $V$ 의 **아핀 부분집합(Affine subset)** $v+U$ 는 어떤 $v\in V$ 와 $V$ 의 부분공간 $U$ 에 대해,
+
+$$
+v+U = \{v+u : u\in U\}
+$$
+
+로 정의된 집합을 말한다. $v+U$ 는 $U$ 에 평행하다고 한다.
+:::
+:::
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-quotient_space}
+
+#### 몫공간 (Quotient space)
+$U$ 가 $V$ 의 부분공간일 때 **몫공간 (quotient space)** $V/U$ 는 $U$ 와 평행한 모든 아핀 부분집합의 집합이다. 즉,
+
+$$
+V/U = \{v+U: v\in V\}
+$$
+
+이다. 
+:::
+:::
+
+
+
+공간이라는 이름을 붙이는 이유는 뒤에 보이겠지만 적절하게 합과 스칼라곱을 정의하면 $V/U$ 가 벡터공간이 되기 때문이다.
+
+</br>
+
+::: {#thm-affine_subset}
+
+### 아핀 부분집합의 성질
+
+$U$ 가 $V$ 의 부분공간이고 $v,\,w\in V$ 일 때 다음 세 명제는 동치이다.
+
+1. $v-w\in U$;
+
+2. $v+U = w+U$;
+
+3. $(v+U)\cap (w+ U) \ne \varnothing$
+
+:::
+
+::: {.proof}
+($1 \implies 2$) $v - w = u_0 \in U$ 라 가정하자. 임의의 $u \in U$ 에 대해 $v + u = w + u_0 + u \in w + U$ 이므로 $v + U \subset w + U$ 이다. 같은 방법으로 $v - w\in U \implies w + U \subset v + U$ 임을 보일 수 있다. 즉 $v + U = w + U$ 이다.
+
+($2 \implies 3$) 자명하다.
+
+($3 \implies 1$) $(v + U)\cap (w + U) \ne \varnothing$ 이면 어떤 $u_1,\,u_2 \in U$ 에 대해 $v + u_1 = w + u_2$ 이며 $v-w = u_2 - u_1 \in U$ 이다. $\square$
+
+:::
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-addition_and_scalar_multiplication_in_quotient_space}
+
+#### 몫공간에서의 합과 스칼라곱
+
+$U$ 가 $\mathbb{F}$-벡터공간 $V$ 의 부분공간일 때 $V/U$ 의 원소들간의 합과 스칼라곱을 다음과 같이 정의한다.
+
+
+$$
+\begin{array}{c}
+(v + U) + (w + U) = (v + w) +U \\
+\lambda (v + U) = \lambda v + U
+\end{array}
+$$
+
+:::
+:::
+
+</br>
+
+::: {#prp-quotient_sapce}
+ $V/U$ 는 벡터공간이다.
+:::
+
+::: {.proof}
+우선 $v_1,\,v_2$ 가 $v_1-v _2 \in U$ 이면 $v_1 + U =v_2 + U$ 임은 쉽게 보일 수 있다. 또한 $U \in V/U$  이며 $(v + U) + U = v + U$ 이므로 $U$ 는 $V/U$ 의 항등원이다. 나머지 벡터공간의 성질은 쉽게 보일 수 있다. $\square$
+:::
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-quotient_map}
+
+#### 몫사상 (Quotient map)
+
+$U$ 가 $\mathbb{F}$-벡터공간인 $V$ 의 부분공간일 때 다음과 같이 정의되는 함수 $\pi_U : V \to V/U$ 를 **몫사상(quotient map)** 이라 한다.
+
+$$
+\pi_U (v) = v + U
+$$
+:::
+:::
+
+</br>
+
+
+::: {#prp-quotient_map}
+몫사상 $\pi_U$ 는 선형사상이다.
+:::
+
+::: {.proof}
+몫사상임을 보이기 위해서는 $v_1,\,v_2 \in V$, $\lambda \in \mathbb{F}$ 일 때 $\pi_U (v_1+ \lambda v_2)= \pi_U (v_1) + \lambda \pi_U (v_2)$ 임을 보이면 된다.
+$$
+\begin{aligned}
+\pi_U (v_1+\lambda v_2) &= v_1 + \lambda v_2 + U = (v_1 + U) + \lambda (v_2 + U) \\ 
+&= (v_1 + U) + (v_2 + \lambda U) \\
+&= \pi_U(v_1) + \lambda \pi_U(v_2) \\
+\end{aligned}
+$$
+$\square$
+:::
+
+</br>
+
+::: {#thm-dim_quotient_space}
+
+$V$ 가 유한차원벡터공간이고 $U$ 가 $V$ 의 부분공간일 때
+
+$$
+\dim (V/U) = \dim V - \dim U
+$$
+
+이다.
+:::
+
+
+::: {.proof}
+
+$\ker (\pi_U) = U$ 이다. $\square$
+
+:::
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-tilde_map}
+
+#### $\tilde{T}$
+
+선형사상 $T\in \mathcal{L}(V,\,W)$ 에 대해 함수 $\tilde{T} : V/\ker (T) \to \text{im}\, T$ 를 다음과 같이 정의한다.
+
+$$
+\tilde{T}(v + \ker (T)) = T(v)
+$$
+:::
+:::
+
+</br>
+
+::: {#prp-tilde_T_linear_map}
+ $\tilde{T}$ 는 선형사상이다.
+:::
+
+::: {.proof}
+우선 $\ker (T)$ 가 $V$ 의 부분공간이므로 $V/\ker (T)$ 가 정의된다. $\tilde{T}$ 가 잘 정의된 함수임을 보이려면 $v_1 +\ker (T) = v_2 + \ker (T)$ 인 $v_1,\,v_2$ 에 대해 $T(v_1) = T(v_2)$ 임을 보이면 되는데 이는 쉽게 보일 수 있다. 또한 $\tilde{T}$ 가 선형사상임을 보이는 것도 쉽다. $\square$
+:::
+
+</br>
+
+::: {#prp-properties_of_tilde_T}
+$\tilde{T}$ 에 대해 다음이 성립한다.
+
+1. $\tilde{T}$ 는 단사이다.  
+
+2. $\text{im}\, \tilde{T} = \text{im} \, T$
+
+3. $V/\ker (T)$ 는 $\text{im}\, T$ 와 동형이다.
+:::
+
+(증명은 쉽다.)
+
+</br>
+
+
+## 행렬의 전치 (Transpose) 와 선형 연산의 관계
+
+행렬 $\boldsymbol{A}$ 의 전치행렬 $\boldsymbol{A}^T$ 는 다음을 만족한다.
+
+$$
+(\boldsymbol{A}^T)_{ij} = (\boldsymbol{A})_{ji}.
+$$
+
+또한 두 행렬의 곱의 전치행렬은, 곱해지는 두 행렬의 전치행렬을 순서를 바꾸어 곱한 것과 같는 것을 안다.
+
+$$
+(\boldsymbol{AB})^T = \boldsymbol{B}^T\boldsymbol{A}^T.
+$$
+
+이제 $T\in \mathcal{L}(U,\,V)$ 를 $U,\,V$ 각각의 기저 $\mathcal{B}_U = \{u_j\},\, \mathcal{B}_V = \{v_i\}$ 에 대해 행렬로 표현한 $[T]=[T]_{\mathcal{B}_U,\mathcal{B}_V}$ 를 생각하자. $U,\,V$ 의 쌍대공간 $U^\ast,\,V^\ast$ 과 $\{u_j\},\, \{v_i\}$ 에 대한 쌍대기저 $\{\varphi_j\},\, \{\psi_i\}$ 에 대해 $\boldsymbol{C} =  [T^\ast]_{\{\varphi_j\},\, \{\psi_i\}}$ 이라 하자. 그렇다면,
+
+$$
+\begin{aligned}
+T^\ast(\psi_i) &= \sum_{j=1} C_{ji} \varphi_j \\
+T(v_i) & = \sum_{j=1} A_{ji} w_j
+\end{aligned}
+$$
+
+이다. 그런데 $T^\ast(\psi_i) = \psi_i \circ T$ 이므로,
+
+$$
+(\psi_i \circ T)(v_j) = \sum_{k=1} C_{ki} \varphi_k (v_j) = \sum_{k=1} C_{ki} \delta_{jk} = C_{ji}
+$$
+
+이다. 또한,
+
+$$
+(\psi_i \circ T)(v_j)=\psi_i (T(v_j) = \psi_i \left( \sum_k A_{kj} w_k\right) = \sum_k A_{kj} \psi_i (w_k) = A_{ij}
+$$
+
+이므로 $A_{ij}= C_{ji}$ 다. 즉 $[T^\ast] = \left([T]\right)^T$ 임을 알 수 있다.
+
+</br>
+
+## 행렬의 rank
+
+이제 행렬의 행공간의 차원과 열공간의 차원이 같다는 것은 쉽게 보일 수 있다. $[T^\ast] = [T]^T$ 이며 @lem-rank_Tast 로부터 $\text{rank}(T^\ast) = \text{rank}(T)$ 임을 알았다. $\text{rank}(T^{\ast})$ 는 $[T]$ 의 행공간의 차원이며 $\text{rank}(T)$ 는 열공간의 차원이므로 행렬의 행공간과 열공간의 차원은 같다는 것을 다시 한번 확인할 수 있었다.
+
+
+
+</br>

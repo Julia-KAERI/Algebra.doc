@@ -1,0 +1,188 @@
+---
+title: "일반화된 고유벡터와 조르당 형식"
+number-sections: true
+number-depth : 2
+crossref:
+  chapters: true
+---
+
+## 일반화된 고유벡터 와 일반화된 고유공간
+
+벡터공간 $V$ 에서의 선형 연산자 $T\in \mathcal{L}(V)$ 에 대해 다음이 성립한다는 것은 쉽게 보일 수 있다.
+
+::: {#prp-kernel_of_power_of_operator}
+
+$T\in \mathcal{L}(V)$ 에서
+
+$$
+\{0\} \subset \ker (T^0) \subset \ker (T^1)  \subset \cdots \subset \ker (T^k) \subset \ker (T^{k+1})\subset \cdots
+$$
+
+이 성립한다. 이 때 $T^0$ 는 항등연산자이다.
+
+:::
+
+</br>
+
+::: {#prp-equality_in_the_sequence_of_kernel}
+
+$T\in \mathcal{L}(V)$ 에서 어떤 자연수 $m$ 에 대해 $\ker (T^m) = \ker (T^{m+1})$ 이면 $n\ge m$ 에 대해 
+
+$$
+\ker (T^n) = \ker (T^m)
+$$
+
+이다.
+:::
+
+::: {.proof}
+
+@prp-kernel_of_power_of_operator 에 의해 $\ker (T^m)\subset \ker (T^n)$ 이다. 따라서 $\ker (T^n) \subset \ker (T^m)$ 임을 보이면 된다. 만약 우리가 임의의 양의 정수 $k$ 에 대해 $\ker (T^{m+k+1}) \subset \ker (T^{m+k})$ 임을 보인다면 연쇄적으로 $\ker (T^n) = \ker (T^m)$ 라는 것을 보이는 것이 된다. 
+$$
+\begin{aligned}
+v\in \ker (T^{m+k+1}) &\implies T^{m+1}(T^{k}v) = 0\\
+&\implies T^k v \in \ker (T^{m+1}) = \ker(T^{m})
+\end{aligned}
+$$
+
+이므로 $\ker (T^{m+k+1}) \subset \ker (T^{m})$ 이다. $\square$
+:::
+
+</br>
+
+::: {#prp-kernel_of_power_of_dimension}
+
+유한차원 벡터공간 $V$ 에서 $n=\dim (V),\, T\in \mathcal{L}(V)$ 일 때 $\ker (T^n) = \ker (T^{n+1}) = \cdots$ 이다.
+
+:::
+
+::: {.proof}
+@prp-equality_in_the_sequence_of_kernel 을 생각하면 어떤 $m<n$ 에 대해 $\ker(T^m)= \ker (T^{m+1})$ 이라면 위의 명제가 성립한다는 것을 안다. 이제 각각의 $m<n$ 에 대해 $\ker(T^m) \ne \ker (T^{m+1})$ 라면 $\dim (\ker(T^m)) < \dim (\ker (T^{m+1}))$ 이며 $\ker (T^n)=V$ 이므로 $\ker (T^n)= \ker (T^{n+1})=V$ 이다. $\square$
+:::
+
+</br>
+
+
+::: {#prp-kernel_range_of_power_of_operator}
+
+유한차원 벡터공간 $V$ 에서 $n=\dim (V)$ 일 때 
+
+$$
+V = \ker(T^n)\oplus \text{im}(T^n)
+$$
+
+이다.
+:::
+
+::: {.proof}
+
+$v\in \ker(T^n) \cap \text{im};(T^n)$ 이면 $T^nv=0$ 이며 $v=T^n u$ 인 $u\in V$ 가 존재한다. $T^n v = T^{2n}u = 0$ 이므로 $u \in \ker (T^{2n})$ 이며 @prp-kernel_of_power_of_dimension 에 의해 $u\in \ker (T^n)$ 이므로 $v=0$ 이다. 즉 $\ker(T^n) \cap \text{im}(T^n) = \{0\}$ 이다.
+
+우리는 $\text{nullity}(T^n) + \text{rank}(T^n)=n$ 임을 안다. 따라서 $V = \ker (T^n) \oplus \text{im}(T^n)$ 이다. $\square$
+:::
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-generalized_eigenvectors_eigenspaces}
+#### 일반화된 고유벡터와 일반화된 고유공간
+
+$T\in \mathcal{L}(V)$ 이고 $\lambda$ 가 $T$ 의 고유값일 때 어떤 양의 정수 $k$ 와 영벡터가 아닌 벡터 $v\in V$ 가
+
+$$
+(T-\lambda I)^k v = 0
+$$
+
+를 만족하면 벡터 $v$ 를 고유값 $\lambda$ 를 갖는 연산자 $T$ 에 대한 **일반화된 고유벡터(generalized eigenvector)** 라고 한다. 고유값 $\lambda$ 에 대한 연산자 $T$ 의 집합과 영벡터의 합집합을 고유값 $\lambda$ 를 갖는 연산자 $T$ 에 대한 **일반화된 고유공간(generalized eigenspace)** 라고 한다.
+
+:::
+:::
+
+이제 고유값 $\lambda$ 를 갖는 연산자 $T$ 에 대한 일반화된 고유공간을 $G(\lambda, T)$ 라고 쓰기로 하자. 다음 명제는 @prp-kernel_of_power_of_dimension 에 따라 자명하다.
+
+
+::: {#prp-generalized_eigenspace}
+$$
+G(\lambda, T) = \ker (T-\lambda I)^{\dim (V)}
+$$
+
+이다.
+:::
+
+
+</br>
+
+::: {#prp-linearly_independent_generalized_eigenvectors}
+
+서로 다른 고유값을 갖는 일반화된 고유벡터의 집합은 선형독립이다.
+
+:::
+
+::: {.proof}
+
+$v_1,\ldots,\,v_n$ 이 각각 $\lambda_1,\ldots,\lambda_n$ 의 고유값을 갖는 벡터공간 $V$ 에서의 일반화된 고유벡터라고 하자. 
+
+$$
+0 = c_1 v_1 + \cdots + c_n v_n
+$$
+
+라 놓자. $k_1$ 를 $(T-\lambda_1 I)^{k}v_1$ 가 $0$ 이 되지 않는 가장 큰 자연수라고 하자. 연산자 $S_1=(T-\lambda_1 I)^k (T-\lambda_2I)^{\dim (V)} \cdots (T-\lambda_mI)^{\dim (V)}$ 라고 하면
+
+$$
+0 = S_1 (c_1v_1 + \cdots + c_n v_n) = c_1 S_1(v) 
+$$
+
+이며 $S$ 의 정의에 의해 $c_1 = 0$ 이다. 같은 방법으로 $c_2=\cdots =c_m=0$ 임을 보일 수 있으며, 따라서 $\{v_1,\ldots,\,v_m\}$ 은 선형독립이다. $\square$
+
+::: 
+
+
+</br>
+
+## Nilpotent Operator
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-nilpotent}
+
+#### Nilpotent 연산자
+
+벡터공간에서 정의된 연산자 $N\in \mathcal{L}(V)$ 가 어떤 자연수에 대해 $N^n= 0$ 일 때 $T$ 를 **nilpotent 연산자**라고 한다. 
+
+:::
+:::
+
+
+</br>
+
+::: {#prp-nilpotent_operator_power_of_dimension}
+
+$V$ 가 유한차원 벡터공간이며 $N\in \mathcal{L}(V)$ 가 nilpotent 일 때 $N^{\dim (V)} = 0$ 이다.
+
+:::
+
+
+::: {.proof}
+
+$G(0,\, N) = V$ 이므로, @prp-generalized_eigenspace 에 의해 성립한다. $\square$
+:::
+
+
+</br>
+
+
+## 연산자의 분해
+
+
+::: {#prp-invariance_of_kernel_and_image_of_operator}
+
+$T\in \mathcal{L}(V)$ 일 때 $T$ 에 대한 다항식으로 정의된 연산자 $p(T)$ 의 $\ker (p(T))$ 와 $\text{im}
+(p(T))$ 는 $T$ 에 대한 불변부분공간이다.
+
+:::
+
+::: {.proof}
+
+$v\in \ker (p(T)) \implies p(T)(Tv)=T(p(T)v) = 0 \implies Tv \in \ker (p(T))$ 이므로 $\ker (p(T))$ 는 $T$ 에 대한 불변부분공간이다. 
+
+:::

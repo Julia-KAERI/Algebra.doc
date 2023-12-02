@@ -1,0 +1,49 @@
+project:
+  type: book
+
+book:
+  title: "대수학"
+  author: "Yebinpapa"
+  # language: _language-ko_custom.yml
+  date: "3/8/2023"
+  page-navigation: true
+  
+  chapters:
+    - index.qmd
+    - part: docs/part1/part1.qmd
+      chapters:
+        - docs/part1/ch1_01_vectorspace.qmd
+        - docs/part1/ch1_02_linear_map.qmd
+        - docs/part1/ch1_03_determinant.qmd
+        - docs/part1/ch1_04_gauss_jordan_elimination.qmd
+        - docs/part1/ch1_05_matrix.qmd
+        - docs/part1/ch1_06_eigenvalue.qmd
+        - docs/part1/ch1_07_innerproduct.qmd
+        - docs/part1/ch1_08_operators_on_innerproduct_space.qmd
+        - docs/part1/ch1_09_spectrum_theorem.qmd
+        - docs/part1/ch1_10_svd.qmd
+    - part: docs/part2/part2.qmd
+      chapters: 
+        - docs/part2/ch2_01_groups.qmd
+        - docs/part2/ch2_02_homomorphisms.qmd
+    - part: docs/part3/part3.qmd
+      chapters:
+        - docs/part3/dual_space.qmd
+        - docs/part3/quotient_space_rank_of_matrix.qmd
+        - docs/part3/jordan_form.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    fontsize: 0.95em
+    toc: true
+    #html-math-method: mathml #to be changed to mathjax
+  # pdf:
+  #   documentclass: scrreprt
+
+
+

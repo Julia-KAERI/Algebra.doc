@@ -1,0 +1,610 @@
+---
+title: "행렬식"
+number-sections: true
+number-depth : 2
+crossref:
+  chapters: true
+---
+
+
+
+::: {.callout-info appearance="simple" icon="false"}
+이 선형대수학 문서를 작성하면서 가장 고민이 된 것 중의 하나가 행렬식을 어디서 도입하느냐 하는 것이다. 어떤 교재는 거의 시작부분에서 소개하기도 하며, 다른 교재는 가장 뒤에 놔두기도 한다. 행렬식은 선형대수학에서 매우 중요하지만 행렬식을 유도하는 것이 좀 어렵기 때문이다. 그러나 여건이 된다면 앞부분에 도입하는 것이 이후에 내용을 설명하는데 도움이 되기 때문에 여기서는 다소 빠르게 소개하기로 하겠다.
+:::
+
+
+이번 장에서는 행렬식의 정의의 중요한 성질에 대해 알아보겠다. 행렬식을 도입하는 방법은 여러가지가 있지만 그 가운데 대칭군을 도입하여 정의 한 후 행렬식의 중요한 성질을 하나하나 증명해 나가보도록 한다.
+
+</br>
+
+## 대칭군
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-symmetric_group}
+
+#### 대칭군과 순열
+$n$ 이 1 이상의 자연수일 때 $\{1,\ldots,\,n\} \mapsto \{1, \ldots,\,n\}$ 함수 가운데 전단사 함수 전체의 집합을 **대칭군(symmetric group)** 이라 하고 $S_n$ 이라 표기한다. 대칭군의 원소를 **순열 (permutation)** 이라 한다. 
+[대칭군 (symmetric group) 이라는 이름에서 알 수 있듯이, $S_n$ 은 2부에서 다룰 군(group) 이라는 수학적 구조에 속한다. 하지만 여기서는 특별히 군에 대해 이야기 하지 않을 것이기 때문에 대칭군 이라는 이름을 가지는 집합 정도로 이해하면 되겠다.]{.aside}
+
+:::
+:::
+
+
+
+예를 들어 $n=3$ 일 때 $\sigma (1) = 1,\, \sigma(2) = 3,\, \sigma(3)=2$ 인 $\sigma$ 는 $S_3$ 의 원소이지만 $\tau(1)=2$, $\tau(2)=2$, $\tau(3)=1$ 은 전단사 함수가 아니기 때문에 $S_3$ 의 원소가 아니다. 또한 $S_n$ 은 함수의 집합이므로 그 원소들에 대한 함수의 합성과 역함수를 생각 할 수 있다. (늘 그렇듯이) $\sigma\in S_n$ 에 대한 역함수는 $\sigma^{-1}$ 로 표기하며, $\sigma_1,\,\sigma_2\in S_n$ 의 합성은 $\sigma_1 \circ \sigma_2$ 로 표기한다. 항등순열 $i_d \in S_n$ 은 $i_d(i)=i$, $i=1,\ldots, n$ 인 순열이다. 
+
+
+<br>
+
+### 순열의 표기
+
+#### 기본적인 표기법
+
+$\sigma \in S_n$ 일 때 $1,\,2,\,\ldots,\,n$ 과 $\sigma(1),\,\sigma(2),\ldots,\, \sigma(n)$ 을 두줄로 아래와 같이 표기할 수 있다.
+
+$$
+\sigma = \begin{pmatrix} 1 & 2 & \cdots & n \\ \sigma(1) & \sigma(2) & \cdots & \sigma (n)\end{pmatrix}
+$$
+
+예를 들어 $\sigma = \begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 3 & 1 & 4\end{pmatrix}$ 는 $\sigma(1)=2,\, \sigma (2)=3,\,\sigma(3)=1,\,\sigma(4)=4$ 이다. 
+
+</br>
+
+#### 순환 표기법 (cyclic notation)
+
+$\sigma = (1,\,3,\,2) \in S_5$ 의 경우 $\sigma(1) = 3$, $\sigma(3)=2$, $\sigma(2)=1$, $\sigma (4)=4$, $\sigma(5)=5$ 가 된다. 즉, $\sigma = (i_1,\,i_2,\ldots,\,i_m) \in S_n,\, m \le n$ 의 경우
+
+$$
+\left\{ \begin{array}{ll}\sigma (i_k) = i_{k+1}, \qquad & k=1,\ldots,\,m-1 \\ \sigma (i_m) = i_1, \\ \sigma(j) = j & j \not\in \{i_1,\ldots,\,i_m\}\end{array}\right. 
+$$
+
+인 순열이다. 즉 $\sigma(j)=j$ 인 경우는 굳이 순환표기법에 넣지 않는다. 일반적인 표기법의 $\sigma = \begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 3 & 1 & 4\end{pmatrix}$ 를 순환표기법으로 표현하면, $(1, 2, 3)$ 이 된다. 또한 $\sigma = (1, 4, 2, 3)\in S_4$ 을 일반표기법으로 표현하면
+
+$$
+\sigma = \begin{pmatrix} 1 & 2 & 3 & 4 \\ 4 & 3 & 1 &2\end{pmatrix}
+$$
+가 된다.
+
+$(1, 3, 2)(4, 2)$ 처럼 순열을 곱하는 것처럼 쓰면 합성함수처럼 생각한다. $\sigma_1 = (1, 3, 2),\, \sigma_2=(4, 2)$ 에 대해 $\sigma = \sigma_1 \circ \sigma_2 =  (1, 3, 2)(4, 2)$ 이다. 즉 $\sigma(2) = \sigma_1(\sigma_2(2))=\sigma_1(4) = 4$ 이다. 
+
+</br>
+
+#### $k$-cycle 과 호환
+
+이제 
+
+$$
+\sigma = \begin{pmatrix} 1 & 2 & 3 & 4 & 5  \\ 2 & 3 & 1 & 5 & 4\end{pmatrix}
+$$
+
+를 보자. $1,\,2,\,3$ 은 $1,\,2,\,3$ 내에서 $4,\,5$ 는 $4,\,5$ 내에서 순환됨을 알 수 있다. 이것은 합성순열처럼 $(1, 2, 3) (4, 5)$ 로 쓸 수 있다. 하나의 $(\cdots)$ 안에 $k$ 개의 숫자가 있을 때 $k$-**cycle** 이라고 한다. $(1, 3, 2, 4)$ 는 4-cycle 이다. $k=2$ 일 경우는 특별히 **호환 (transposition)** 이라 한다. 
+
+</br>
+
+::: {#prp-basic_properties_of_permutation}
+
+$S_n$ 에 대해 다음이 성립한다.
+
+&emsp; ($1$) $\sigma \in S_n \implies \sigma^{-1} \in S_n$,
+
+&emsp; ($2$) $\sigma,\, \tau\in S_n \implies \sigma \circ \tau \in S_n$,
+
+&emsp; ($3$) $\sigma, \tau, \theta \in S_n \implies (\sigma \circ \tau)\circ \theta = \sigma \circ (\tau \circ \theta)$,
+
+&emsp; ($4$) $\{\sigma^{-1}: \sigma\in S_n\}=S_n$,
+
+&emsp; ($5$) $\tau \in S_n \implies \{\tau \circ \sigma : \sigma \in S_n\} = S_n$
+
+&emsp; ($6$) $\sigma$ 가 호환이면 $\sigma^2 = i_d$ 이다.
+
+&emsp; ($7$) $\sigma$ 가 $k$-cycle 이면 $\sigma^k = i_d$ 이다.
+
+:::
+
+
+::: {.proof}
+($1$), ($2$), ($3$) 의 증명은 쉬우므로 생략한다.
+
+($4$) $\sigma\in S_n$ 이면 $\sigma$ 는 전단사 함수이므로 $\sigma^{-1}$ 이 존재하며 $S_n$ 의 정의에 의해 $\sigma^{-1}\in S_n$ 이다. $\sigma = (\sigma^{-1})^{-1}$ 이므로, 즉 모든 $\sigma \in S_n$ 은 어떤 $\tau\in S_n$ 에 대해 $\sigma=\tau^{-1}$ 이므로 증명된다.
+
+($5$) $\tau,\, \sigma_1,\, \sigma_2\in S_n$ 에 대해 
+$$
+\tau \circ \sigma_1 = \tau \circ \sigma_2 \implies \tau^{-1} \circ \tau \circ \sigma_1 = \tau^{-1} \circ \tau \circ \sigma_2 \implies \sigma_1= \sigma_2
+$$ 
+
+이다. 즉 $\sigma_1 \ne \sigma_2 \implies \tau \circ \sigma_1 \ne \tau \circ \sigma_2$ 이다. $\{\tau \circ \sigma : \sigma \in S_n\} \subset S_n$ 이며 두 집합의 원소의 갯수가 같으므로 두 집합은 같다.
+
+($6$) $\sigma =(i,\,j)$ 라 하자 $(\sigma\circ\sigma) (i)= \sigma(j) = i$ 이며 역시 $(\sigma\circ\sigma) (j)= \sigma(i) = j$ 이다.
+
+($7$) $\sigma = (i_1,\ldots,\,i_k)$ 라 하자. $\sigma(i_1)=(i_2),\, \sigma^2(i_1)=i_3$ 이므로 $\sigma^k(i_1) = i_1$ 이다. $\sigma = (i_2,\ldots,\, i_k,\,i_1)$ 이므로 $\sigma^k (i_2)=i_2$ 이다. 같은 방법으로 $k$-cycle $\sigma$ 에 대해 $\sigma^k=i$ 임을 보일 수 있다. $\square$
+:::
+
+<br>
+
+
+### 순열의 분해
+
+두 cycle $\sigma_1,\, \sigma_2 \in S_n$ 에 대해 $\sigma_1,\,\sigma_2$ 에 겹치는 정수가 없을 때 두 cycle 을 **disjoint** 하다고 한다. 모든 순열은 disjoint 한 cycle 의 합성으로 표현 할 수 있다는 것은 쉽게 알 수 있다. 또한 $\sigma,\, \tau$ 가 disjoint 한 두 cycle 일 때 $\sigma \circ \tau = \tau \circ \sigma$ 임을 쉽게 예상 할 수 있다. 그러나 서로 disjoint 하지 않은 두 cycle 에 대해서는 교환법칙이 성립하지 않을 수 있다.
+
+::: {#exm-non_disjoint_cycle_product}
+$\sigma = (1, 3, 2),\, \tau = (2, 4)$ 라 하자. $2$ 가 $\sigma,\,\tau$ 에 모두 포함되므로 $\sigma$ 와 $\tau$ 는 disjoint 하지 않다. $(\sigma \circ\tau) (2) = 4$ 이지만 $(\tau \circ \sigma)(2) = 1$ 이다. 즉 이 경우에는 $\sigma \circ \tau \ne \tau \circ \sigma$ 이다.
+:::
+
+순열 $\sigma \in S_n$ 은 disjoint cycles 의 곱으로 표현 할 수 있다. 그리고 이 곱은 교환법칙이 성립하므로 곱의 순서와는 무관하다. 순서를 고려하지 않을 때, 순열을 disjoint cycles 로 나누는 것을 **순열의 분해**라고 한다. 이제 순열의 분해에 대해 몇가지를 증명하자.
+
+</br>
+
+::: {#prp-uniqueness_discomposition_of_permutation}
+순열의 분해는 유일하다.
+:::
+
+
+::: {.proof}
+$\sigma \in S_n$ 이 $\sigma_1 \cdots \sigma_m$ 과 $\tau_1\cdots \tau_n$ 으로 분해된다고 하자. 즉 $\sigma_1,\ldots,\,\sigma_m$ 은 서로 disjoint 하고 $\tau_1,\ldots,\,\tau_n$ 도 서로 disjoint 하다. $i \in \sigma_1$ 이면 $i\in \tau_k$ 가 존재해야 한다. 그리고 $\sigma(i)\in \sigma_1,\, \sigma(i)\in \tau_k$ 이어야 하며 (이 논리를 계속 따라가면), 따라서 $\sigma_1 = \tau_k$ 이어야 한다. 즉 모든 $\sigma_j,\,i=1,\ldots,\,m$ 에 대해 어떤 $\tau_p,\, p=1,\ldots,\,m$ 가 존재하여 $\sigma_j = \tau_p$ 이어야 한다. 역으로 모든 $\tau_p$ 에 대해 어떤 $\sigma_j$ 가 존재하여 $\tau_p = \sigma_j$ 이어야 한다. $\square$
+:::
+
+</br>
+
+::: {#prp-decomposition_to_transposition}
+모든 순열은 호환(transposition) 의 합성으로 표현 할 수 있다. 이 호환의 합성은 유일하지 않다.
+:::
+
+::: {.proof}
+우리는 앞서 모든 순열이 disjoint cycles 의 합성으로 분해된다는 것을 보았다. 따라서 임의의 $k$-cycle 이 호환의 합성으로 표현될 수 있다는 것을 아래와 같이 보이면 된다.
+$$
+\begin{aligned}
+(i_1,\ldots,\,i_k) &= (i_1,\, i_2)(i_2,\,i_3)\cdots (i_{k-2},\, i_{k-1})(i_{k-1},\, i_k) \\ 
+&= (i_1,\, i_k) (i_1,\, i_{k-1}) \cdots (i_1,\,i_3)(i_1,\,i_2)
+\end{aligned}
+$$
+
+위 식에서 하나의 $k$-cycle 을 두 종류의 호환의 합성으로 보였다. 즉 이 호환의 합성은 유일하지 않다. $\square$
+:::
+
+
+</br>
+
+### 순열에 대한 $\text{sgn}$ 함수
+
+우리는 순열이 호환의 합성으로 표현 가능하다는 것을 알았다. 그러나 이 호환의 합성은 유일하지도 않고, 호환의 갯수도 유일하지 않다.
+
+$$
+\begin{aligned}
+\sigma ={\begin{pmatrix}1 & 2 & 3 & 4 & 5\\3 & 4 & 5 & 2 & 1\end{pmatrix}} = (1,\,3,\,5)(2,\,4) &= (1,\,3) (3,\,5) (2,\,4)\\
+ &= (1,\, 5)(3,\, 4)(2,\, 4)(1,\, 2)(2,\, 3).
+\end{aligned}
+$$
+
+그러나 순열을 호환의 합성으로 표현했을 때 호환의 갯수가 짝수개인지 홀수개인지는 불변이며 이것을 증명하고자 한다.
+
+::: {#lem-sgn_of_permutaion}
+호환 $\tau_1,\ldots,\,\tau_m \in S_n$ 이 $\tau_m \cdots \tau_1=i_d$ 이면 $m$ 은 항상 짝수이다.
+:::
+
+::: {.proof}
+$\sigma =\tau_m \cdots \tau_1$ 이라 하자. $\tau_1,\ldots,\,\tau_m$ 가운데 나타나는 자연수중 하나인 $p$ 를 선택하자 $p$ 가 나오는 $\tau$ 의 가장 작은 인덱스 $j$ 는 $m$ 이 아닌데 만약 $p$ 가 $m$ 에만 나온다면 $\sigma (p) \ne p$ 이기 때문이다. 즉 $j\le m-1$ 이다. 이 때 가능한 $\tau_{j+1}\circ \tau_j$ 는 아래의 네가지 형태중 하나이다.
+
+$$
+\begin{aligned}
+(p, x) \circ (p, x) &= i_d,\\ 
+(p, y) \circ (p, x) & = (p, x) \circ (x, y), \\ 
+(x, y) \circ (p, x) & = (p, y) \circ (x, y), \\
+(y, z) \circ (p, x) &= (p, x) \circ (y, z).
+\end{aligned}
+$$
+
+즉 전체 $\sigma$ 의 입장에서 보면, $\tau_{j+1}\circ \tau_j$ 에 의해 $p$ 가 없어지면서 $2$ 개의 호한이 사라지거나, 호환의 갯수를 유지하면서 한칸 왼쪽으로 가는 순열과 같아진다. 계속 왼쪽으로 보내는 것을 반복하면 언젠가는 가장 왼쪽의 $\tau_m$ 위치에 오게되는데 이렇게 되면 앞서의 이유로 $\sigma \ne i_d$ 이다. 즉 언젠가는 $2$ 개의 호환이 사라져야 한다. $\tau_1,\ldots,\,\tau_m$ 에 나타나는 모든 자연수가 사라져야 하므로 $\sigma = i_d$ 가 되려면 $m$ 은 짝수여야 한다. $\square$
+:::
+
+</br>
+
+::: {#prp-permutation_even_odd}
+순열을 분해했을 때의 호환의 갯수의 짝수/홀수 여부는 순열을 어떻게 분해하더라도 불변이다.
+:::
+
+::: {.proof}
+
+$\sigma\in S_n$ 이 $\sigma = \tau_m\cdots \tau_1 = \tau'_n \cdots \tau'_1$ 이라 하자. 우리가 보이고 싶은 것은 $n$ 이 짝수이면 $m$ 도 짝수, $n$ 이 홀수이면 $m$ 도 홀수라는 것이다. 이것은 $m+n$ 이 항상 짝수라는 것과 동치이다. 여기서 $\tau_i,\,\tau'_j$ 는 모두 호환이며 호환의 역원은 자기 자신이므로, 
+
+$$
+\tau'_1 \cdots \tau'_n \tau_m \cdots \tau_1 = i_d
+$$
+
+이다. 즉 이 문제는 호환 $\tau_1,\ldots,\,\tau_N$ 에 대해 $\tau_1 \cdots \tau_N = I$ 일 때 $N$ 은 항상 짝수임을 보이는 문제와 같은데 이것은 @lem-sgn_of_permutaion 에서 보였다. $\square$
+
+:::
+
+</br>
+
+따라서 우리는 어떤 순열 $\sigma$ 가 짝수개의 호환의 합성인지, 홀수개의 호환의 합성인지는 결정되어 있으며, 각각 **짝순열 (even permutaion)**, **홀순열 (odd permutation)** 이라 한다. 이제 순열에 대한 $\text{sgn}$ 함수를 정의 할 수 있다.
+
+
+::: {.callout-note appearance="simple" icon="false"}
+
+::: {#def-sign_of_permutation}
+
+#### $\text{sgn}(\sigma)$
+
+$\sigma \in S_n$ 일 때 $\text{sgn}(\sigma)$ 함수를 다음과 같이 정의한다.
+
+$$
+\text{sgn}(\sigma) = \left\{\begin{array}{ll} +1, \qquad &\sigma \text{ 는 짝수개의 호환의 합성 } \\ -1, &\sigma \text{ 는 홀수개의 호환의 합성 }  \end{array} \right.
+$$
+:::
+:::
+
+
+</br>
+
+$\text{sgn}$ 함수에 대한 몇가지 성질을 보자.
+
+
+::: {#prp-sgn_of_permutation}
+$\sigma,\, \tau \in S_n$ 에 대해 다음이 성립한다.
+
+1. $\text{sgn}(\tau \circ \sigma) = \text{sgn}(\tau) \, \text{sgn}(\sigma)$,
+2. $\text{sgn}(\sigma) = \text{sgn}(\tau)\,\text{sgn}(\sigma)\,\text{sgn}(\tau)$.
+:::
+
+증명은 쉬우므로 생략한다.
+
+</br>
+
+
+## 행렬식
+
+### 행렬식의 정의
+
+행렬에 대한 행렬식을 정의하기 전에 행벡터에 대한 함수 하나를 정의한다. 
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-determinant_1}
+
+$\{\boldsymbol{a}_i : i=1,\ldots,\,n\} \subset  V=\mathcal{M}_{1 \times n}(\mathbb{F})$ 일 때 $\boldsymbol{a}_i$ 의 $j$ 번째 성분을 $(\boldsymbol{a}_i)_j$ 혹은 $a_{ij}$ 라 하자. 이 때 $\det : V^n \to \mathbb{F}$ 를 다음과 같이 정의한다.
+
+$$
+\det (\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n) = \sum_{\sigma\in S_n} \text{sgn}(\sigma)\left( \prod_{i=1}^n a_{i\sigma(i)}\right) 
+$$
+:::
+:::
+
+
+</br>
+
+### $\det$ 함수의 기본적인 성질
+
+
+::: {#lem-determinant_of_identity}
+
+단위 벡터 $\hat{\boldsymbol{e}}_i \in \mathcal{M}_{1 \times n}(\mathbb{F}),\, i=1,\ldots,\,n$ 를 
+
+$$
+(\hat{\boldsymbol{e}}_i)_j = \delta_{ij}
+$$
+
+로 정의하자. 즉 $\boldsymbol{e}_i$ 는 $i$ 번째 성분이 $1$, 나머지 성분이 모두 $0$ 인 $1 \times n$ 행렬이다. 그렇다면,
+$$
+\det (\hat{\boldsymbol{e}}_1,\ldots,\,\hat{\boldsymbol{e}}_n) = 1
+$$
+ 
+이다.
+:::
+
+::: {.proof}
+$e_{ij} = (\hat{\boldsymbol{e}}_i)_j = \delta_{ij}$ 라 하면, 
+$$
+\sum_{\sigma\in S_n} \text{sgn}(\sigma) \prod_{i=1}^n e_{i\sigma(i)} = \sum_{\sigma\in S_n} \text{sgn}(\sigma) \prod_{i=1}^n \delta_{i\sigma(i)} = \text{sgn}(i_d)=1
+\;\square
+$$
+:::
+
+</br>
+
+::: {#lem-determinant_change_of_order}
+
+정해진 $\tau \in S_n$ 에 대해
+
+$$
+\det (\boldsymbol{a}_{\tau(1)},\ldots,\boldsymbol{a}_{\tau(n)}) = \text{sgn}(\tau)\,\det (\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n)
+$$
+
+이다.
+:::
+
+::: {.proof}
+$\text{sgn}(\tau \circ \tau^{-1})=1$ 이므로 임의의 $\sigma\in S_n$ 에 대해  $\text{sgn}(\sigma) = \text{sgn}(\tau) \,\text{sgn}(\sigma \circ \tau^{-1})$ 임을 이용한다. 우선 정의에 의해
+$$
+\begin{aligned}
+\det (\boldsymbol{a}_{\tau(1)},\ldots,\boldsymbol{a}_{\tau(n)}) &= \sum_{\sigma\in S_n} \text{sgn}(\sigma) \prod_{i=1}^n a_{\tau(i),\sigma(i)} \\
+\end{aligned}
+$$
+
+이다. $\tau(i) = j$ 라 하면  $\sigma(i) = \sigma \circ \tau^{-1}(j)$ 이다. $\tau$ 가 전단사 함수이므로 
+$$
+\prod_{i=1}^n a_{\tau (i),\sigma(i)} = \prod_{j=1}^n a_{j,(\sigma \circ \tau^{-1})(j)} 
+$$
+이다. 즉, 
+$$
+\begin{aligned}
+\det (\boldsymbol{a}_{\tau(1)},\ldots,\boldsymbol{a}_{\tau(n)}) &= \sum_{\sigma\in S_n} \text{sgn}(\sigma)\prod_{i=1}^n a_{i, (\sigma \circ \tau^{-1})(i)} \\ 
+&= \text{sgn}(\tau) \sum_{\sigma\in S_n} \text{sgn}(\sigma \circ \tau^{-1}) \prod_{i=1}^n a_{i,\, (\sigma \circ \tau^{-1})(i)}
+\end{aligned}
+$$
+
+이다. @prp-basic_properties_of_permutation 에 의해 $\{ \sigma \circ \tau^{-1} : \sigma \in S_n\} = S_n$ 이므로,
+
+$$
+\det (\boldsymbol{a}_{\tau(1)},\ldots,\boldsymbol{a}_{\tau(n)}) =\text{sgn}(\tau) \,\det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_n)
+$$
+이다. $\square$
+:::
+
+</br>
+
+::: {#cor-altermating_of_determinant}
+$i\ne j$ 에 대해 $i$ 번째 벡터와 $j$ 번째 벡터를 바꿨을 때, 다음이 성립한다.
+$$
+\det(\boldsymbol{a}_1,\ldots,\boldsymbol{a}_i,\ldots,\,\boldsymbol{a}_j,\ldots,\boldsymbol{a}_n) = - \det(\boldsymbol{a}_1,\ldots,\boldsymbol{a}_j,\ldots,\,\boldsymbol{a}_i,\ldots,\boldsymbol{a}_n)
+$$
+
+또한 $\boldsymbol{a}_i = \boldsymbol{a}_j$ 이면, 행렬식이 $0$ 이다. 즉, 
+
+$$
+\det (\ldots,\boldsymbol{a},\ldots,\boldsymbol{a},\ldots) =  0
+$$
+
+이 성립한다. 
+:::
+
+
+::: {.proof}
+호환 $\tau = (i,\,j)$ 를 생각하면 $\text{sgn}(\tau) =  -1$ 이므로 첫번째 식을 증명한다. $\boldsymbol{a}_i = \boldsymbol{a}_j$ 이면 $\det (\ldots,\boldsymbol{a},\ldots,\,\boldsymbol{a},\ldots) = - \det (\ldots,\boldsymbol{a},\ldots,\,\boldsymbol{a},\ldots)$ 이므로 행렬식이 $0$ 이다. $\square$
+:::
+
+</br>
+
+::: {#lem-bilinearity_of_determinant}
+$\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n\in \mathbb{F}^{1\times n}$, $c \in \mathbb{F}$ 와 임의의 $1\le j \le n$ 에서의 $\boldsymbol{a}'_j \in \mathbb{F}^{1\times n}$ 에 대해
+
+$$
+\begin{aligned}
+\det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_j + &c\boldsymbol{a}'_j, \ldots,\boldsymbol{a}_n) =\\ 
+& \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_j,\ldots,\boldsymbol{a}_n) + c \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}'_j,\ldots,\boldsymbol{a}_n)
+\end{aligned}
+$$
+
+이다.
+:::
+
+::: {.proof}
+$$
+\begin{aligned}
+\det (\boldsymbol{a}_1,\ldots,&\boldsymbol{a}_j + c \boldsymbol{a}'_j, \ldots,\,\boldsymbol{a}_n) \\ 
+&= \sum_{\sigma\in S_n} \text{sgn}(\sigma) a_{1\sigma(1)} \cdots [a_{j\sigma(j)}+ c a'_{j \sigma(j)}] \cdots a_{n\sigma(n)} \\
+&= \sum_{\sigma\in S_n} \text{sgn}(\sigma) a_{1\sigma(1)} \cdots a_{j\sigma(j)}\cdots a_{n \sigma(n)}   \\ 
+&\qquad \qquad + c \sum_{\sigma\in S_n} \text{sgn}(\sigma) a_{1\sigma(1)} \cdots a'_{j\sigma(j)}\cdots a_{n \sigma(n)}  \\ 
+&= \det(\boldsymbol{a}_1,\ldots,\boldsymbol{a}_j, \ldots,\boldsymbol{a}_n) + c \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}'_j, \ldots, \boldsymbol{a}_n) \qquad \square
+\end{aligned}
+$$
+:::
+
+</br>
+
+이를 이용하면 다음을 쉽게 보일 수 있다. 
+
+::: {#cor-determinant_scala_multiple}
+$$
+\det (c_1 \boldsymbol{a}_1, \ldots, c_n \boldsymbol{a}_n) = c_1 \cdots c_n \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_n)
+$$
+:::
+
+</br>
+
+이제 $\mathcal{M}_{1 \times n}(\mathbb{F})$ 에 속하는 행벡터 $n$ 개에 대한 함수를 $\mathcal{M}_{n \times n}(\mathbb{F})$ 행렬의 각 행벡터에 대한 함수로 생각하자. 행렬 $\boldsymbol{A}$ 의 $i$ 번째 행을 $\boldsymbol{A}_{i:}$ 라고 하자. 이 때 행렬 $\boldsymbol{A}$ 의 행렬식 $\det(\boldsymbol{A})$ 를 $\det (\boldsymbol{A}_{1:},\ldots,\boldsymbol{A}_{n:})$ 로 정의한다. 
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-determinant_of_matrix}
+
+#### $\det (\boldsymbol{A})$
+$$
+\det (\boldsymbol{A}) = \det(\boldsymbol{A}_{1:},\ldots,\boldsymbol{A}_{n:}) = \sum_{\sigma\in S_n} \text{sgn}(\sigma) \prod_{i=1}^n A_{i\sigma(i)}
+$$
+
+:::
+:::
+
+
+이제 앞서의 증명들로부터 $n\times n$ 행렬에 대한 행렬식 $\boldsymbol{A}$ 에 대해 다음이 성립함을 쉽게 보일 수 있다.
+
+</br>
+
+::: {#prp-properties_of_determinant}
+
+$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 의 행렬식 $\det(\boldsymbol{A})$ 에 대해 다음이 성립한다. 
+
+&emsp; ($1$) 항등행렬의 행렬식은 $1$ 이다. 즉, $\det (\boldsymbol{I}_{n}) = 1$  이다.
+
+&emsp; ($2$) 행렬 $\boldsymbol{A}$ 의 $i$ 번째 행에 $1\times n$ 벡터 $\lambda \boldsymbol{A}'_{i:}$ 를 더한 행렬의 행렬식은 행렬 $\boldsymbol{A}$ 의 행렬식과 $i$ 번째 행만 $\boldsymbol{A}'_{i:}$ 으로 바꾼 행렬의 행렬식에 $\lambda$ 를 곱한 값의 합이다. 즉, 
+
+$$
+\begin{aligned}
+\det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(i-1):} \\ \boldsymbol{A}_{i:} + \lambda \boldsymbol{A}'_{i:} \\ \boldsymbol{A}_{(i+1):} \\ \vdots \\ \boldsymbol{A}_{n:} \end{bmatrix} \right)  = \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(i-1):} \\ \boldsymbol{A}_{i:} \\ \boldsymbol{A}_{(i+1):} \\ \vdots \\ \boldsymbol{A}_{n:} \end{bmatrix} \right)  + \lambda \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(i-1):} \\ \boldsymbol{A}'_{i:} \\ \boldsymbol{A}_{(i+1):} \\ \vdots \\ \boldsymbol{A}_{n:} \end{bmatrix} \right) 
+\end{aligned}
+$$
+
+&emsp; ($3$) 행렬 $\boldsymbol{A}$ 의 $i$ 번째 행과 $j(\ne i)$ 번째 행을 바꾼 행렬을 $\boldsymbol{A}'$ 이라고 하면 $\det (\boldsymbol{A}') = -\det (\boldsymbol{A})$ 이다. 
+
+&emsp; ($4$) 행렬 $\boldsymbol{A}$ 의 한 행에 스칼라 $k$ 를 곱했을 때의 행렬식은 원래의 행렬식에 $k$ 를 곱한 값이다. 즉, 
+
+$$
+\det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(i-1):} \\ k\boldsymbol{A}_{i:}  \\ \boldsymbol{A}_{(i+1):} \\ \vdots \\ \boldsymbol{A}_{n:} \end{bmatrix} \right)  = k \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(i-1):} \\ \boldsymbol{A}_{i:} \\ \boldsymbol{A}_{(i+1):} \\ \vdots \\ \boldsymbol{A}_{n:} \end{bmatrix} \right)  .
+$$
+
+:::
+
+</br>
+
+
+
+이제 행렬식에서 중요한 결과 몇가지를 차례로 보일 것이다.
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-transposed_matrix}
+
+#### 전치 행렬
+
+$m \times n$ 정사각 행렬 $\boldsymbol{A}$ 에 대해 $\boldsymbol{A}$ 의 행과 열을 바꾼 행렬을 $\boldsymbol{A}$ 의 **전치 행렬 (transposed matrix)** 라 하며 $\boldsymbol{A}^T$ 라 쓴다. 즉, 
+
+$$
+\left(\boldsymbol{A}^T \right)_{ij} = (\boldsymbol{A})_{ji}, \qquad i=1,\ldots, n,\, j = 1,\ldots, m
+$$
+:::
+:::
+
+
+$m \times n$ 행렬 $\boldsymbol{A}$ 에 대해 $\boldsymbol{A}^T$ 는 $n \times m$ 행렬이 된다.
+
+</br>
+
+
+::: {#prp-determinant_of_transpose}
+$n\times n$ 행렬 $\boldsymbol{A}$ 에 대해 $\det (\boldsymbol{A}^T) = \det (\boldsymbol{A})$ 이다.
+
+:::
+
+::: {.proof}
+전치행렬 $\boldsymbol{A}^T$ 의 행렬식은 
+$$
+\begin{aligned}
+\det (\boldsymbol{A}^T) &= \sum_{\sigma \in S_n} \text{sgn}(\sigma) \prod_{i=1} A_{\sigma(i) i} 
+\end{aligned}
+$$
+
+이다. $j = \sigma (i)$ 라 하면, $i=\sigma^{-1}(j)$ 이고 $\text{sgn} (\sigma) = \text{sgn}(\sigma^{-1})$ 이므로, 
+$$
+\prod_{i=1}^n A_{\sigma(i)i} = \prod_{j=1}^n A_{j\sigma^{-1}(j)}
+$$
+
+이다. @prp-basic_properties_of_permutation 의 4. 에서 보였듯이 $\{\sigma^{-1} : \sigma\in S_n\} = S_n$ 이므로  
+$$
+\begin{aligned}
+\det(\boldsymbol{A}^T) &= \sum_{\sigma\in S_n} \text{sgn}(\sigma^{-1}) \prod_{j=1}^n A_{j\sigma^{-1}(j)} = \sum_{\sigma^{-1}\in S_n }\text{sgn}(\sigma^{-1}) \prod_{j=1}^n A_{j\sigma^{-1}(j)} \\ 
+&=\det(\boldsymbol{A})
+\end{aligned}
+$$
+이다.  $\square$
+:::
+
+</br>
+
+이제 행렬 $\boldsymbol{A}$ 의 행들 $\{\boldsymbol{A}_{1:},\ldots,\,\boldsymbol{A}_{n:}\}$ 에 대한 @prp-properties_of_determinant 가 열들 $\{\boldsymbol{A}_{:1},\ldots,\boldsymbol{A}_{:n}\}$ 에 대해서도 똑같이 성립한다는 것은 쉽게 보일 수 있다. 
+
+</br>
+
+::: {#prp-zero_determinant_of_linear_dependency}
+정사각행렬 $\boldsymbol{A}$ 의 행벡터가 선형 종속일 경우 그 행렬식은 $0$ 이다. $\boldsymbol{A}$ 의 열벡터가 선형 종속이어도 그 행렬식은 $0$ 이다. [이 명제의 역, 즉 행렬식이 $0$ 경우 행벡터와 열벡터가 선형독립인 것은 이후에 보이게 된다. (@prp-determinant_of_invertible_matrix)]{.aside}
+:::
+
+::: {.proof}
+$\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 이라 하자. 우선 마지막 행벡터가 다른 행벡터의 선형 결합으로 표현된다고 하자.
+
+$$
+\boldsymbol{A}_{n:} = a_1 \boldsymbol{A}_{1:} + \cdots + a_{n-1}\boldsymbol{A}_{(n-1):}
+$$
+
+이라 하면, 행렬의 두 행이 같을때 그 행렬의 행렬식이 $0$ 임을 이용하면
+
+$$
+\begin{aligned}
+\det (\boldsymbol{A}) &= \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(n-1):} \\ \boldsymbol{A}_{n:}\end{bmatrix} \right) = \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(n-1):} \\ a_1 \boldsymbol{A}_{1:}\end{bmatrix} \right)  + \cdots + \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(n-1):} \\ a_{n-1} \boldsymbol{A}_{1:}\end{bmatrix} \right) \\ 
+&= a_1 \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(n-1):} \\ \boldsymbol{A}_{1:}\end{bmatrix} \right)  + \cdots +a_{n-1} \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(n-1):} \\  \boldsymbol{A}_{(n-1):}\end{bmatrix} \right) =0
+\end{aligned}
+$$
+
+이다. $\det (\boldsymbol{A}) = \det (\boldsymbol{A}^T)$ 임을 이용하면 두 열이 선형종속일 때 행렬식이 $0$ 임을 알 수 있다. $\square$
+:::
+
+
+
+
+
+
+
+
+</br>
+
+::: {#prp-determinant_product_of_matrix}
+$n \times n$ 행렬 $\boldsymbol{A},\,\boldsymbol{B}$ 에 대해 $\det (\boldsymbol{AB})= \det(\boldsymbol{A})\det (\boldsymbol{B})$ 이다.
+:::
+
+
+::: {.proof}
+
+행렬 $\boldsymbol{AB}$ 의 $j$ 번째 행 $(\boldsymbol{AB})_{j:}$ 는 다음과 같이 표현 할 수 있다.
+$$
+\begin{aligned}
+(\boldsymbol{AB})_{j:} &= A_{j1}\boldsymbol{B}_{1:} + \cdots + A_{jn}\boldsymbol{B}_{n:} 
+\end{aligned}
+$$
+
+그렇다면, 
+
+$$
+\begin{aligned}
+\det(\boldsymbol{AB}) &= \det (A_{11}\boldsymbol{B}_{1:}+ \cdots + A_{1n}\boldsymbol{B}_{n:}, \ldots ,A_{n1}\boldsymbol{B}_{1:}+ \cdots + A_{nn}\boldsymbol{B}_{n:} ) \\
+&= \sum_{i_1=1}^n A_{1,i_1} \det (\boldsymbol{B}_{i_1:}, A_{21}\boldsymbol{B}_{1:}+ \cdots + A_{2n}\boldsymbol{B}_{n:}, \ldots ,A_{n1}\boldsymbol{B}_{1:}+ \cdots + A_{nn}\boldsymbol{B}_{n:} ) \\
+&\qquad \vdots \\
+&=\sum_{i_1=1}^n \cdots \sum_{i_n=1}^n A_{1,i_1} \cdots A_{n, {i_n}} \det(\boldsymbol{B}_{i_1:}, \ldots, \boldsymbol{B}_{i_n,n}) \\
+\end{aligned}
+$$
+
+여기서 $\sigma_{i_1,\ldots,i_n} = \begin{pmatrix} 1 & 2 & \cdots & n \\ i_1 & i_2 & \cdots & i_n\end{pmatrix}$ 라 하면,  @lem-determinant_change_of_order 에 의해
+$$
+\begin{aligned}
+\det (\boldsymbol{AB}) &= \sum_{i_1=1}^n \cdots \sum_{i_n=1}^n A_{1,i_1} \cdots A_{n, {i_n}} \text{sgn}(\sigma_{i_1,\ldots,i_n}) \det(\boldsymbol{B}_{1:}, \ldots, \boldsymbol{B}_{n:}) \\
+&= \det(\boldsymbol{B}) \left(\sum_{i_1=1}^n \cdots \sum_{i_n=1}^n \text{sgn}(\sigma_{i_1,\ldots,i_n}) A_{1,i_1} \cdots A_{n, {i_n}}\right) \\
+&= \det (\boldsymbol{B}) \det (\boldsymbol{A}) = \det (\boldsymbol{A})\det (\boldsymbol{B})
+\end{aligned}
+$$
+
+이다. $\square$
+
+:::
+
+</br>
+
+아직 우리는 가역행렬과 행렬식의 관계에 대해 알아보지 않았다. 다음 장에서 보이겠지만 어떤 정사각 행렬의 행렬식이 $0$ 이 아니라는 것과 그 행렬이 가역행렬이라는 것은 동치이다. 즉 가역행렬의 행렬식은 $0$ 이 아니라는 것을 잠시동안 우리가 알고 있다고 가정하자. 그렇다면 아래의 유용한 성질을 알게 된다.
+
+::: {#cor-derterminant_of_inverse_matrix}
+$n\times n$ 행렬 $\boldsymbol{A}$ 가 가역행렬일 때 $\det (\boldsymbol{A}^{-1}) = \dfrac{1}{\det (\boldsymbol{A})}$ 이다.
+:::
+
+::: {.proof}
+$\boldsymbol{AA}^{-1}=\boldsymbol{I}$ 이며 $\det (\boldsymbol{I})=1$ 이므로,
+
+
+$$
+\det(\boldsymbol{A})\det (\boldsymbol{A}^{-1}) = \det(\boldsymbol{AA}^{-1}) = \det (\boldsymbol{I}) =1
+$$
+
+이다. $\square$
+:::
+
+</br>
+<!-- 
+
+## 행공간과 열공간
+
+앞으로 보일 것을 미리 이야기하자면 어떤 선형 연산자에 대해 행렬식이 $0$ 이 아닌것과 행렬이 가역인 것은 동치이다. 
+
+::: {#def-column_space_row_space}
+
+#### 행공간과 열공간
+
+행렬 $\boldsymbol{A}$ 의 모든 행벡터에 의해 span 되는 벡터공간을 **행공간 (row space)** 라고 한다. 마찬가지로 모든 열벡터에 의해 span 되는 벡터공간을 **열공간 (column space)** 라고 한다. 따라서 $\boldsymbol{A}$ 의 행공간은 $\text{span}(\boldsymbol{A}_{1:},\, \boldsymbol{A}_{2:},\ldots)$ 이며 열공간은 $\text{span}(\boldsymbol{A}_{:1}, \, \boldsymbol{A}_{:2},\ldots)$ 이다.
+
+:::
+
+
+ -->
