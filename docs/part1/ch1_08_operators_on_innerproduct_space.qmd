@@ -17,13 +17,13 @@ crossref:
 
 #### Adjoint matrix
 
-행렬 $\boldsymbol{A} \in \mathbb{F}^{m \times n}$ 에 대해 
+행렬 $\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 
 
 $$
 (\boldsymbol{A}^\ast)_{ij} = \overline{A_{ji}}
 $$
 
-를 만족하는 $\boldsymbol{A}^\ast \in \mathbb{F}^{n \times m}$ 을 $\boldsymbol{A}$ 에 대한 adjoint matrix 라고 한다. [행렬 $\boldsymbol{A}$ 의 수반행렬에 대해서는 $\boldsymbol{A}^\ast$, $\boldsymbol{A}^\dagger$, $\boldsymbol{A}^H$ 등의 표기법이 사용된다. 물리학 특히 양자역학에서는 수반행렬에 대해 $\boldsymbol{A}^\ast$ 보다는 $\boldsymbol{A}^\dagger$ 의 표현을 더 많이 사용하기도 한다.]{.aside}
+를 만족하는 $\boldsymbol{A}^\ast \in  \mathcal{M}_{m \times n}(\mathbb{F})$ 을 $\boldsymbol{A}$ 에 대한 adjoint matrix 라고 한다. [행렬 $\boldsymbol{A}$ 의 수반행렬에 대해서는 $\boldsymbol{A}^\ast$, $\boldsymbol{A}^\dagger$, $\boldsymbol{A}^H$ 등의 표기법이 사용된다. 물리학 특히 양자역학에서는 수반행렬에 대해 $\boldsymbol{A}^\ast$ 보다는 $\boldsymbol{A}^\dagger$ 의 표현을 더 많이 사용하기도 한다.]{.aside}
 
 
 :::
@@ -32,12 +32,12 @@ $$
 </br>
 
 ::: {#exr-adjoint_matrix}
-정규직교기저에서 정의된 $\boldsymbol{A}\in \mathbb{F}^{m \times n}$, $\boldsymbol{v}\in \mathbb{F}^{m\times 1}$, $\boldsymbol{u}\in \mathbb{F}^{n \times 1}$ 에 대해 $\langle \boldsymbol{Au},\, \boldsymbol{v} \rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{v} \rangle$ 임을 보여라.
+정규직교기저에서 정의된 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $\boldsymbol{v}\in\mathcal{M}_{m \times 1}(\mathbb{F})$, $\boldsymbol{u}\in \mathcal{M}_{n \times 1}(\mathbb{F})$ 에 대해 $\langle \boldsymbol{Au},\, \boldsymbol{v} \rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{v} \rangle$ 임을 보여라.
 :::
 
 ::: {.proof}
 
-$\mathbb{F}^{n\times 1}$ 의 정규직교기저 $\{\boldsymbol{e}_i\}$ 와 $\mathbb{F}^{m \times 1}$ 의 정규직교기저 $\{\boldsymbol{f}_j\}$ 를 생각하자. $\boldsymbol{u}=\sum_i u_i \boldsymbol{e}_i$, $\boldsymbol{v}= \sum_j v_j \boldsymbol{f}_j$ 라고 하면,
+$\mathcal{M}_{n \times n}(\mathbb{F})$ 의 정규직교기저 $\{\boldsymbol{e}_i\}$ 와 $\mathcal{M}_{m \times 1}(\mathbb{F})$ 의 정규직교기저 $\{\boldsymbol{f}_j\}$ 를 생각하자. $\boldsymbol{u}=\sum_i u_i \boldsymbol{e}_i$, $\boldsymbol{v}= \sum_j v_j \boldsymbol{f}_j$ 라고 하면,
 $$
 \begin{aligned}
 \langle \boldsymbol{Au},\,\boldsymbol{v}\rangle &= \boldsymbol{Au}\cdot \boldsymbol{v} = \sum_i (\boldsymbol{Au})_i\overline{v_i} = \sum_{i, j} A_{ij}u_j\overline{v}_i \\
@@ -57,21 +57,21 @@ $$
 
 다음이 성립한다.
 
-1. $\boldsymbol{A},\, \boldsymbol{B}\in \mathbb{F}^{m\times n}$ 일 때 $(\boldsymbol{A}+\boldsymbol{B})^\ast = (\boldsymbol{A}^\ast + \boldsymbol{B}^\ast)$ 이다.
+&emsp; ($1$) $\boldsymbol{A},\, \boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 $(\boldsymbol{A}+\boldsymbol{B})^\ast = (\boldsymbol{A}^\ast + \boldsymbol{B}^\ast)$ 이다.
 
-2. $\boldsymbol{A} \in \mathbb{F}^{m\times n}$, $\lambda \in \mathbb{F}$ 일 때 $(\lambda \boldsymbol{A})^\ast = \overline{\lambda}\boldsymbol{A}^\ast$.
+&emsp; ($2$) $\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$, $\lambda \in \mathbb{F}$ 일 때 $(\lambda \boldsymbol{A})^\ast = \overline{\lambda}\boldsymbol{A}^\ast$.
 
-3. $(\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}$.
+&emsp; ($3$) $(\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}$.
 
-4. $\boldsymbol{I}^\ast = \boldsymbol{A}$.
+&emsp; ($4$) $\boldsymbol{I}^\ast = \boldsymbol{A}$.
 
-5. $\boldsymbol{A} \in \mathbb{F}^{m \times n},\, \boldsymbol{B}\in \mathbb{F}^{n \times l}$ 일 때 $(\boldsymbol{AB})^\ast = \boldsymbol{B}^\ast \boldsymbol{A}^\ast$ 이다.
+&emsp; ($5$) $\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F}),\, \boldsymbol{B}\in \mathcal{M}_{n \times l}(\mathbb{F})$ 일 때 $(\boldsymbol{AB})^\ast = \boldsymbol{B}^\ast \boldsymbol{A}^\ast$ 이다.
 
 :::
 
 ::: {.proof}
 
-$1$ 에서 $4$ 는 생략한다. 
+($1$) 에서 ($4$) 는 생략한다. 
 $$
 (\boldsymbol{AB}^{\ast})_{ij} =\overline{\boldsymbol{AB}_{ji}} = \sum_k \overline{A_{jk}}\overline{B_{ki}}= \sum_k (\boldsymbol{A}^\ast)_{kj}(\boldsymbol{B}^\ast)_{ik} = (\boldsymbol{B}^\ast \boldsymbol{A}^\ast)_{ij}
 $$ 
@@ -85,32 +85,32 @@ $$
 ::: {#thm-kernel_image_of_adjoint_operator}
 #### Adjoint metrix 의 kernel 과 치역
 
-$\boldsymbol{A}\in \mathbb{F}^{m \times n}$ 일 때 다음이 성립한다.
+$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
 
-1. $\ker (\boldsymbol{A}^\ast) = (\text{im} (\boldsymbol{A}))^\perp$
+&emsp; ($1$) $\ker (\boldsymbol{A}^\ast) = (\text{im} (\boldsymbol{A}))^\perp$
 
-2. $\text{im} (\boldsymbol{A}^\ast) = (\ker (\boldsymbol{A}))^\perp$,
+&emsp; ($2$) $\text{im} (\boldsymbol{A}^\ast) = (\ker (\boldsymbol{A}))^\perp$,
 
-3. $\ker (\boldsymbol{A}) = (\text{im}\, (\boldsymbol{A}^\ast))^\perp$,
+&emsp; ($3$) $\ker (\boldsymbol{A}) = (\text{im}\, (\boldsymbol{A}^\ast))^\perp$,
 
-4. $\text{im} (\boldsymbol{A}) = (\ker (\boldsymbol{A}^\ast))^\perp$.
+&emsp; ($4$) $\text{im} (\boldsymbol{A}) = (\ker (\boldsymbol{A}^\ast))^\perp$.
 :::
 
 ::: {.proof}
 
-$1$ 은 다음과 같이 보일 수 있다.
+($1$) 다음과 같이 보일 수 있다.
 $$
 \begin{aligned}
 \boldsymbol{v}\in \ker (\boldsymbol{A}^\ast) & \iff \boldsymbol{A}^\ast\boldsymbol{v}=\boldsymbol{0}  \\
-&\iff \forall\boldsymbol{u}\in \mathbb{F}^{n \times 1},\, \langle \boldsymbol{u},\boldsymbol{A}^\ast\boldsymbol{v}\rangle = 0 \\
-&\iff \forall\boldsymbol{u}\in \mathbb{F}^{n \times 1}, \langle \boldsymbol{Au},\boldsymbol{v}\rangle = 0 \\
+&\iff \forall\boldsymbol{u}\in \mathcal{M}_{n\times 1}(\mathbb{F}),\, \langle \boldsymbol{u},\boldsymbol{A}^\ast\boldsymbol{v}\rangle = 0 \\
+&\iff \forall\boldsymbol{u}\in \mathcal{M}_{n \times 1}(\mathbb{F}), \langle \boldsymbol{Au},\boldsymbol{v}\rangle = 0 \\
 &\iff \boldsymbol{v} \in \left(\text{im}(\boldsymbol{A})\right)^\perp
 \end{aligned}
 $$
 
-$2$ 를 보이자 $1$ 의 결과에 $\boldsymbol{A}$ 대신 $\boldsymbol{A}^\ast$ 를 넣으면 $\ker(\boldsymbol{A}) = (\text{im}(\boldsymbol{A}^\ast))^\perp$ 이다. @prp-properties_of_orthogonal_complement 에서 부분공간 $U$ 에 대해 $(U^\perp)^\perp = U$ 임을 이용하면 $2$ 를 얻는다. 
+($2$) ($1$) 의 결과에 $\boldsymbol{A}$ 대신 $\boldsymbol{A}^\ast$ 를 넣으면 $\ker(\boldsymbol{A}) = (\text{im}(\boldsymbol{A}^\ast))^\perp$ 이다. @prp-properties_of_orthogonal_complement 에서 부분공간 $U$ 에 대해 $(U^\perp)^\perp = U$ 임을 이용하면 $2$ 를 얻는다. 
 
-$3$, $4$ 는 $1$, $2$ 의 결과에서 $\boldsymbol{A}$ 대신에 $\boldsymbol{A}^\ast$ 를 넣으면 보일 수 있다. $\square$ 
+($3$), ($4$) 는 ($1$), ($2$) 의 결과에서 $\boldsymbol{A}$ 대신에 $\boldsymbol{A}^\ast$ 를 넣으면 보일 수 있다. $\square$ 
 
 :::
 
@@ -135,29 +135,29 @@ $3$, $4$ 는 $1$, $2$ 의 결과에서 $\boldsymbol{A}$ 대신에 $\boldsymbol{A
 
 에르미트 행렬 $\boldsymbol{A}$ 에 대해 대해 다음이 성립한다.
 
-1. $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{Au}\rangle$ 이다.
+&emsp; ($1$) $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{Au}\rangle$ 이다.
 
-2. 고유값은 항상 실수이다.
+&emsp; ($2$) 고유값은 항상 실수이다.
 
-3. 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.
+&emsp; ($3$) 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.
 
-4. 모든 $\boldsymbol{u}\in \mathbb{F}^{n \times 1}$ 에 대해 $\langle \boldsymbol{Au},\,\boldsymbol{u}\rangle =0$ 이면 $\boldsymbol{A}=0$ 이다.
+&emsp; ($4$) 모든 $\boldsymbol{u}\in \mathcal{M}_{n \times 1}(\mathbb{F})$ 에 대해 $\langle \boldsymbol{Au},\,\boldsymbol{u}\rangle =0$ 이면 $\boldsymbol{A}=0$ 이다.
 
 :::
 
 ::: {.proof}
 
-$1$. $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{Au}\rangle$.
+($1$) $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{Au}\rangle$.
 
 
-$2$. 고유벡터 $\boldsymbol{u}\in \mathbb{F}^{m\times 1}$ 에 대한 고유값을 $\lambda$ 라 하자. 
+($2$) 고유벡터 $\boldsymbol{u}\in \mathcal{M}_{m \times 1}(\mathbb{F})$ 에 대한 고유값을 $\lambda$ 라 하자. 
 
 $$
 \lambda \|\boldsymbol{u}\|^2 = \lambda \langle \boldsymbol{u},\, \boldsymbol{u}\rangle  = \langle \boldsymbol{Au},\, \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{u} \rangle = \langle \boldsymbol{u},\, \boldsymbol{Au} \rangle = \overline{\lambda}\|\boldsymbol{u}\|^2\,.
 $$
 이므로 $\lambda = \overline{\lambda}$ 이다. 즉 $\lambda$ 는 실수이다.
 
-$3$. $\lambda_1,\,\lambda_2$ 가 서로 다른 고유벡터이며 $\boldsymbol{u}_1,\,\boldsymbol{u}_2$ 를 각각에 대한 고유벡터라 하자. 에르미트 행렬의 고유값은 항상 실수이므로 $\overline{\lambda_2}=\lambda_2$ 이다.
+($3$) $\lambda_1,\,\lambda_2$ 가 서로 다른 고유벡터이며 $\boldsymbol{u}_1,\,\boldsymbol{u}_2$ 를 각각에 대한 고유벡터라 하자. 에르미트 행렬의 고유값은 항상 실수이므로 $\overline{\lambda_2}=\lambda_2$ 이다.
 
 $$
 \begin{aligned}
@@ -167,9 +167,9 @@ $$
 \end{aligned}
 $$
 
-$4$. $\mathbb{F}=\mathbb{C}$ 일 경우와 $\mathbb{R}$ 일 경우로 분리하여 증명한다. $\mathbb{C}$ 일 경우는 굳이 에르미트 연산자가 아니어도 성립한다.
+($4$) $\mathbb{F}=\mathbb{C}$ 일 경우와 $\mathbb{R}$ 일 경우로 분리하여 증명한다. $\mathbb{C}$ 일 경우는 굳이 에르미트 연산자가 아니어도 성립한다.
 
-$\boldsymbol{A}\in \mathbb{R}^{m \times n}$ 이면 임의의 $\boldsymbol{u},\,\boldsymbol{u}'\in \mathbb{R}^{n \times 1}$ 에 대해
+$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{R})$ 이면 임의의 $\boldsymbol{u},\,\boldsymbol{u}'\in \mathcal{M}_{n \times n}(\mathbb{R})$ 에 대해
 
 $$
 \begin{aligned}
@@ -180,7 +180,7 @@ $$
 \end{aligned}
 $$
 
-이다. 이제 $\boldsymbol{A}\in \mathbb{C}^{m \times n}$ 이라면,
+이다. 이제 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{C})$ 이라면,
 
 $$
 \begin{aligned}
@@ -198,11 +198,11 @@ $$
 
 ::: {#prp-hermite_tvv}
 
-복소연산자 $\boldsymbol{A}\in \mathbb{C}^{n\times n}$ 에 대해 다음 두 명제는 동치이다.
+복소연산자 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음 두 명제는 동치이다.
 
-1. 임의의 $\boldsymbol{u}\in \mathbb{C}^{n\times 1}$ 에 대해 $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle$ 은 실수이다.
+&emsp; ($1$) 임의의 $\boldsymbol{u}\in \mathcal{M}_{n \times 1}(\mathbb{C})$ 에 대해 $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle$ 은 실수이다.
 
-2. $\boldsymbol{A}$ 는 hermitian 이다.
+&emsp; ($2$) $\boldsymbol{A}$ 는 hermitian 이다.
 
 :::
 
@@ -236,7 +236,7 @@ $$
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-isometry}
-행렬 $\boldsymbol{S} \in \mathbb{F}^{n \times n}$ 이 임의의 $\boldsymbol{v} \in \mathbb{F}^{n \times 1}$ 에 대해
+행렬 $\boldsymbol{S} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 임의의 $\boldsymbol{v} \in \mathcal{M}_{n \times 1}(\mathbb{F})$ 에 대해
 
 $$
 \|\boldsymbol{Sv}\|^2 = \|\boldsymbol{v}\|^2
@@ -251,15 +251,15 @@ $$
 
 ::: {#prp-properties_of_isometry}
 
-행렬 $\boldsymbol{S}\in \mathbb{F}^{n \times n}$ 에 대해 다음은 동치이다.  
+행렬 $\boldsymbol{S}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음은 동치이다.  
 
-1. $\boldsymbol{S}$ 는 Isometry이다.
+&emsp; ($1$) $\boldsymbol{S}$ 는 Isometry이다.
 
-2. $\langle \boldsymbol{Su},\, \boldsymbol{Sv}\rangle = \langle \boldsymbol{u},\,\boldsymbol{v}\rangle$
+&emsp; ($2$) $\langle \boldsymbol{Su},\, \boldsymbol{Sv}\rangle = \langle \boldsymbol{u},\,\boldsymbol{v}\rangle$
 
-3. 정규직교벡터의 집합 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n \}$ 에 대해 $\{ \boldsymbol{Se}_1,\ldots,\,\boldsymbol{Se}_n\}$ 도 정규직교벡터의 집합이다.
+&emsp; ($3$) 정규직교벡터의 집합 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n \}$ 에 대해 $\{ \boldsymbol{Se}_1,\ldots,\,\boldsymbol{Se}_n\}$ 도 정규직교벡터의 집합이다.
 
-4. $\boldsymbol{S}^\ast = \boldsymbol{S}^{-1}$ 이다.
+&emsp; ($4$) $\boldsymbol{S}^\ast = \boldsymbol{S}^{-1}$ 이다.
 
 :::
 
@@ -313,7 +313,7 @@ $$
 
 ($2\implies 3$) $\langle \boldsymbol{e}_i, \boldsymbol{e}_i\rangle = \delta_{ij}$ 이므로 ($2$) 에 의해 $\langle \boldsymbol{Se}_i, \boldsymbol{Se}_j \rangle = \langle \boldsymbol{e}_i, \boldsymbol{e}_i\rangle = \delta_{ij}$ 이다.
 
-($3 \implies 4$) 정규직교기저 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 에 대해 $\langle \boldsymbol{S}^\ast\boldsymbol{Se}_i,\,\boldsymbol{e}_j\rangle = \langle \boldsymbol{Se}_i,\boldsymbol{Se}_j\rangle = \delta_{ij}$ 임을 가정한다. 임의의 $\boldsymbol{u}\in \mathbb{F}^{n \times 1}$ 에 대해 $\boldsymbol{u}=\sum_i u_i \boldsymbol{e}_i$ 이고 $\boldsymbol{S}^\ast\boldsymbol{Su} = \sum_i u'_i \boldsymbol{e}_i$ 라 하자.
+($3 \implies 4$) 정규직교기저 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 에 대해 $\langle \boldsymbol{S}^\ast\boldsymbol{Se}_i,\,\boldsymbol{e}_j\rangle = \langle \boldsymbol{Se}_i,\boldsymbol{Se}_j\rangle = \delta_{ij}$ 임을 가정한다. 임의의 $\boldsymbol{u}\in \mathcal{M}_{n \times 1}(\mathbb{F})$ 에 대해 $\boldsymbol{u}=\sum_i u_i \boldsymbol{e}_i$ 이고 $\boldsymbol{S}^\ast\boldsymbol{Su} = \sum_i u'_i \boldsymbol{e}_i$ 라 하자.
 
 $$
 \begin{aligned}
@@ -322,7 +322,7 @@ u'_j &= \langle \boldsymbol{S}^\ast \boldsymbol{Su}, \boldsymbol{e}_j \rangle = 
 \end{aligned}
 $$
  
-이다. 임의의 $\boldsymbol{u}\in \mathbb{F}^{n \times 1}$ 에 대해 $\boldsymbol{S}^\ast \boldsymbol{Su} =  \boldsymbol{u}$ 이므로 $\boldsymbol{S}^\ast \boldsymbol{S}=\boldsymbol{I}$ 이다. 즉 $\boldsymbol{S}^\ast = \boldsymbol{S}^{-1}$ 이다. 
+이다. 임의의 $\boldsymbol{u}\in \mathcal{M}_{n \times 1}(\mathbb{F})$ 에 대해 $\boldsymbol{S}^\ast \boldsymbol{Su} =  \boldsymbol{u}$ 이므로 $\boldsymbol{S}^\ast \boldsymbol{S}=\boldsymbol{I}$ 이다. 즉 $\boldsymbol{S}^\ast = \boldsymbol{S}^{-1}$ 이다. 
 
 
 ($4 \implies 1$) 임의의 벡터 $\boldsymbol{u}$ 에 대해 $\boldsymbol{S}^\ast =\boldsymbol{S}^{-1}$ 이라면
@@ -337,7 +337,7 @@ $$
 
 </br>
 
-::: {#exr-cojugate_of_isometry}
+::: {#exm-cojugate_of_isometry}
 $\boldsymbol{S}$ 가 isometry 이면 $\boldsymbol{S}^\ast$ 도 isometry 이다.
 :::
 
@@ -352,10 +352,11 @@ $$
 :::
 
 
+</br>
 
 
-::: {#exr-product_of_isometries}
-$\boldsymbol{S},\,\boldsymbol{T}\in \mathbb{F}^{n\times n}$ 이 isometry 이면 $\boldsymbol{ST}$ 도 isometry 이다.
+::: {#exm-product_of_isometries}
+$\boldsymbol{S},\,\boldsymbol{T}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 isometry 이면 $\boldsymbol{ST}$ 도 isometry 이다.
 :::
 
 
@@ -403,7 +404,7 @@ $\boldsymbol{S}$ 가 isometry 일 때 $\boldsymbol{S}$ 의 각 열벡터의 집�
 
 ::: {.proof}
 
-$\boldsymbol{S}\in \mathbb{F}^{n \times n}$ 이 isometry 이면 $\boldsymbol{S}^\ast\boldsymbol{S} = \boldsymbol{I}$ 임을 안다. 따라서, 
+$\boldsymbol{S}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 isometry 이면 $\boldsymbol{S}^\ast\boldsymbol{S} = \boldsymbol{I}$ 임을 안다. 따라서, 
 
 $$
 \delta_{ij} = (\boldsymbol{S}^\ast\boldsymbol{S})_{ij} = \sum_k (\boldsymbol{S}^\ast)_{ik}(\boldsymbol{S})_{kj} = \sum_k \overline{\boldsymbol{S}_{ki}}\boldsymbol{S}_{kj} = \boldsymbol{S}_{:j}\cdot \boldsymbol{S}_{:i}

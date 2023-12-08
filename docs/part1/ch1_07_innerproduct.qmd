@@ -136,9 +136,9 @@ $$
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-norm}
-#### 노름 (norm) 과 거리 공간
+#### 노름 과 거리함수
 
-$\mathbb{F}$-벡터공간 $V$ 에서 벡터의 **노름** 혹은 **거리 함수** $\|\, \| : V \to \mathbb{R}$ 는 다음을 만족하는 함수이다.
+$\mathbb{F}$-벡터공간 $V$ 에서 벡터의 **노름(norm)** 은 다음을 만족하는 함수이다.
 
 &emsp; ($1$) $\forall v\in V,\, \|v\| \ge 0$, 
 
@@ -148,14 +148,41 @@ $\mathbb{F}$-벡터공간 $V$ 에서 벡터의 **노름** 혹은 **거리 함수
 
 &emsp; ($4$) $\forall u,\,v\in V,\, \|u+v\| \le \|u\| + \|v\|$.
 
-노름이 부여된 벡터공간을 **거리 공간(normed space)** 이라고 한다.
+노름이 부여된 벡터공간을 **노름공간(normed space)** 이라고 한다. 노름공간 $V$ 에서의 **거리함수** 혹은 **metric** $d:V \times V \to [0, \infty)$ 는
+
+$$
+d(u, v) = \|u-v\|
+$$
+
+로 정의된다. 
 
 :::
 :::
 
 </br>
 
-벡터공간에서의 내적과 마찬가지로 노름 역시 특정 조건을 만족하는 함수 가운데 공간에 부여되는 성질이다. 내적벡터공간은 그 자체로 거리공간인데 이것은 내적에 의해 노름이 자연스럽게 정의 될 수 있기 때문이다. 그 전에 우선 다음을 보이자. 
+벡터공간에서의 내적과 마찬가지로 노름 역시 특정 조건을 만족하는 함수 가운데 공간에 부여되는 성질이다. 내적벡터공간은 그 자체로 거리공간인데 이것은 내적에 의해 노름과 거리함수가 자연스럽게 정의 될 수 있기 때문이다. 참고로 노름공간은 벡터공간이지만 거리공간은 벡터공간의 부분집합이 아니며 적절한 거리함수가 정의된 집합이면 거리공간이다.
+
+
+::: {#exm-norm_space_1}
+
+#### $L_p$ 노름
+
+$V=\mathbb{R}^n$ 에 대해 $v=(v_1,\ldots,\,v_n)$ 일 때 $p\in \mathbb{Z}_+$ 에 대해 
+
+$$
+\|v\|_p = \left(\sum_{i=1}^n |v_i|^p\right)^{1/p}
+$$
+
+도 노름이다. 이것을 $L_p$ 노름이라고 한다. 유클리드 노름은 $L_2$ 노름이다.
+
+$$
+\|v\|_\infty = \max\{ |v_1|, \ldots,\,|v_n|\}
+$$
+
+역시 노름이며 $L_\infty$ 노름이라고 한다. $L_p$ 노름과 $L_\infty$ 노름이 @def-norm 의 조건을 만족한다는 것을 보이는 것은 독자에게 맡긴다. $L_p$ 노름에서 $\|u+v\|_p\le \|u\|_p+\|v\|_p$ 를 [민코프스키 부등식](https://en.wikipedia.org/wiki/Minkowski_inequality) 이라고 한다.
+
+:::
 
 </br>
 
@@ -232,7 +259,7 @@ $$
 
 </br>
 
-실제로 내적벡터공간은 거리공간이지만 내적 없이 거리함수만 정의된 공간도 있다. 여기서는 주 관심사가 내적벡터공간이기 때문에 norm 혹은 거리함수를 말할 때는 내적에 의해 정의된 $\|v\| = \sqrt{\langle v, v \rangle}$ 만을 의미한다. 
+실제로 내적벡터공간은 거리공간이지만 내적 없이 거리함수만 정의된 공간도 있다. 여기서는 주 관심사가 내적벡터공간이기 때문에 노름 혹은 거리함수를 말할 때는 내적에 의해 정의된 $\|v\| = \sqrt{\langle v, v \rangle}$ 만을 의미한다. 
 
 </br>
 
@@ -427,6 +454,7 @@ $$
 $$
 
 이다. 따라서 $\{e_1,\ldots,\,e_m\}$ 은 orthonormal 하다. $\square$
+
 :::
 
 
@@ -515,7 +543,8 @@ $$
 
 </br>
 
-## 조르당-폰 노이만 정리 {#sec-jordan_von_neumann_theorem}
+## 조르당-폰 노이만 정리 
+<!-- {#sec-jordan_von_neumann_theorem} -->
 
 우리는 앞서 @prp-norm_of_innerproduct_space 에서 내적벡터공간에는 자연스러운 거리함수가 존재한다는 것을 보였다. 즉 내적공간은 거리공간이다. 그렇다면 어떤 조건에서 거리공간은 내적공간이 될 수 있을까를 말해주는 것이 조르당-폰 노이만 정리이다. 결론적으로 말하자면 거리공간에 사다리꼴 공식이 성립한다면 내적공간이 되며 이것을 조르당-폰 노이만 정리라고 한다. 우선 실벡터 공간에 대해서 보이고 이후 복소벡터 공간에서 보이도록 하자. 다만 이것의 증명을 위해서는 연속에 대한 해석학적인 지식이 필요하다.
 
@@ -628,7 +657,7 @@ $$
 
 #### 실벡터공간에서의 조르당-폰 노이만 정리
 
-$\mathbb{F}$-거리벡터공간 $V$ 에 대해 다음은 동치이다.
+$\mathbb{R}$-거리벡터공간 $V$ 에 대해 다음은 동치이다.
 
 &emsp; ($1$) $V$ 는 $\mathbb{R}$-내적벡터공간이다.
 
@@ -656,7 +685,7 @@ $\mathbb{C}$-거리공간 $V$ 에서 함수 $\psi : V \times V \to \mathbb{C}$ �
 
 $$
 \psi (u, v) = \dfrac{\|u+v\| - \|u-v\| + i\|u+iv\| -i \|u-iv\|}{4}
-$$
+$$ {#eq-innerproduct_from_norm_in_C}
 
 이 때 모든 $u,\,v\in V$ 에 대해 평행사변형 공식 $\|u+v\|^2 + \|u-v\|^2 = 2\|u\|^2+2\|v\|^2$ 를 만족한다면 $u,\,u',\,v\in V$ 에 대해 다음이 성립한다.
 
@@ -674,6 +703,63 @@ $$
 $$
 
 로 놓으면 $\psi(u, v) = \psi_R(u, v)+ i\psi_I (u, v)$ 이다. $\psi_R(u+u',v)= \psi_R(u,v) + \psi_R(u',v)$ 인것은 @lem-jordan_von_neumann_1 에서 보였다. $\psi_I(u, v) = \psi_R(u, iv)$ 이므로 $\psi_I(u+u',v)= \psi_I(u,v) + \psi_I(u',v)$ 이다. $\square$
+
+:::
+
+</br>
+
+::: {#lem-jordan_von_neumann_4}
+
+$\mathbb{C}$-거리공간 $V$ 에서 @lem-jordan_von_neumann_3 에서 정의된 함수 $\psi$ (@eq-innerproduct_from_norm_in_C) 는 $c \in \mathbb{F}$ 에 대해 다음을 만족한다.
+
+$$
+\psi (cu, v) = c\psi(u, v). 
+$$
+
+:::
+
+::: {.proof}
+@lem-jordan_von_neumann_3 의 증명과 같이 $\psi_R$ 과 $\psi_I$ 를 정의하자. $\psi_R(cu, v) = c\psi_R (u, v)$ 는 실벡터 거리공간에서의 경우와 마찬가지이다. $\psi_I (u, v) = \psi _I (u, iv)$ 이므로 $\psi_I (cu, v) = c\psi_I (u, v)$ 이다. 따라서 $\psi (cu, v) =  c\psi (u, v)$ 이다. $\square$
+
+
+:::
+
+</br>
+
+이제 우리는 다음과 같은 결론을 내릴 수 있다.
+
+
+::: {#thm-jordan_von_neumann_theorem2}
+
+#### 복소벡터공간에서의 조르당-폰 노이만 정리
+
+$\mathbb{C}$-거리벡터공간 $V$ 에 대해 다음은 동치이다.
+
+&emsp; ($1$) $V$ 는 $\mathbb{C}$-내적벡터공간이다.
+
+&emsp; ($2$) 모든 $u,\,v\in V$ 에 대해 평행사변형 공식이 성립한다.
+
+:::
+
+
+</br>
+
+이제 우리는 $\mathbb{F}$-벡터공간에서 내적과 노름의 관계에 대해 알게 되었다. 즉 내적벡터공간은 노름공간이며, 노름공간에서 정의된 거리함수가 평행사변형 공식을 만족하면 내적을 정의 할 수 있다. $\mathbb{F}^n$ 에 대해서는 다음을 보자.
+
+
+::: {#exm-L1_not_innerproduct_space}
+
+@exm-norm_space_1 에서 정의된 $L_p$ 노름은 $p\ne 2$ 일 경우를 제외하면 내적을 정의 할 수 없다. $V=\mathbb{C}^n$  에 대해 $u=(1, 0, \ldots, 0)$, $v=(0, 1, 0, \ldots,\,0)$ 이라고 하자.
+
+$$
+\begin{aligned}
+{\| u+v \|_p}^2 + {\| u-v \|_p}^2 &= 2^{1+2/p} , \\
+2({\| u \|_p}^2 + {\| v \|_p}^2) &= 4
+\end{aligned}
+$$
+
+이므로 조르당-폰 노이만 정리를 만족하기 위해서는 $p=2$ 이어야 한다.
+
 
 :::
 
@@ -986,65 +1072,60 @@ $u=(1, 0), v=(0, 1)$ 이라 하자. $\|u+v\|^2+\|u-v\|^2 = 2\|u\|^2+2\|v\|^2$ �
 
 </br>
 
-::: {#exr-axler_6_a_21}
+::: {#exr-axler_6_A_22}
+$a_1,\ldots,\,a_n\in\mathbb{R}$ 에 대해 다음이 성립함을 보이시오.
 
-#### Axler 6.A.21
-
-벡터공간에서의 노름 함수 $\|\,\| : U \to [0,\infty)$ 는 $u,\,v\in U,\,a\in \mathbb{F}$ 에 대해 다음의 성질을 만족하는 함수이다.
-
-- $\|u\| = 0 \iff u=0_U$, 
-- $\|a u\| = |a|\|u\|$, 
-- $\|u+v\| \le \|u\| + \|v\|$
-  
-만약 노름함수가 평행사변형 공식 $\|u+v\|^2+\|u-v\|^2=2\|u\|^2+2\|v\|^2$ 를 만족한다면 노름에 상응하는 내적이 존재함을 보여라. 즉 어떤 내적이 존재하여 $\langle u,\,u\rangle = \|u\|^2$ 를 만족한다.
+$$
+\left(\dfrac{\sum_{i=1}^n a_n}{n}\right)^2 \le \dfrac{\sum_{i=1}^n a_n^2}{n}
+$$
 
 :::
 
 ::: {.solution}
 
-$U$ 가 $\mathbb{R}$-벡터 공간일 때만 보이기로 한다. 함수 $\phi : U \times U \to \mathbb{F}$ 를 
+$u,\,v\in \mathbb{R}^n$ 을 $u=(a_1,\ldots,\,a_n)$, $v=(1,\ldots,\,1)$ 이라 하자. $\langle u,\,v\rangle = \sum a_n$, $\|u\|\|v\| = \sqrt{n}\left(\sum a_n^2\right)$ 이며 코시-슈바르츠 부등식에 따라 $|\langle u, v \rangle | \le \|u\|$ 이므로, 
 
 $$
-\phi (u, v)= \dfrac{\|u+v\|^2-\|u-v\|^2}{4}
+\left(\dfrac{\sum_{i=1}^n a_n}{n}\right)^2  = \dfrac{1}{n^2}|\langle u, v\rangle|^2 \le \dfrac{1}{n^2} (\|u\|\|v\|)^2=\dfrac{\sum a_n^2}{n}
 $$
 
-로 정의하고 @def-innerproduct 의 5가지 성질을 만족함을 보이자.
+이다. 
+:::
 
-($1$) $\phi (u, u)=\|u\|^2 \ge 0$ 이다.
+</br>
 
-($2$) $\phi(u, u)=\|u\|^2=0 \iff u=0_U$ 이다.
+::: {#exr-axler_6_A_27}
 
-($3$) $\phi (u+u',v)=\phi (u, v) + \phi (u', v)$ 임을 보이자. 우선 평행사변형 공식으로 부터
-
-$$
-\|u-v\|^2 = 2\|u\|^2+2\|v\|^2-\|u+v\|^2
-$$ 
-
-임을 안다. 이를 이용하면
+#### Alxer 6.A.27, 28
+벡터공간 $V$ 의 부분집합 $C$ 가 $u,\,v\in C \implies \frac{1}{2}(u+v)\in C$ 를 만족한다고 하자. 이 때 임의의 $w\in V$ 에 대해 $\|w-v\|$ 를 최소로 하는 $u\in C$ 가 많아야 하나만 존재한다는 것을 보여라. 이것을 보이기 위해 우선 $u,\,v,\,w\in V$ 에 대해
 
 $$
-\begin{aligned}
-\phi(u+u',v) &= \dfrac{1}{4} \left[\|u+u'+v\|^2 -\|u+u'-v\|^2\right]\\
-&=  \dfrac{1}{4} \left[ -\|u-u'+v\|^2+2\|u+v\|^2+2\|u'\|^2 - \|u+u'-v\|^2\right]\\
-&=  \dfrac{1}{4} \left[ -2\|u\|^2 -2\|u'-v\|^2 +2\|u+v\|^2+2\|u'\|^2 \right] \\
-&= \dfrac{1}{2} \left[ \|u+v\|^2 + \|u'+v\|^2-\|u\|^2-\|u'\|^2 -2\|v \|^2\right] \\
-\phi(u,v) + \phi(u', v) &=\dfrac{1}{4} \left[\|u+v\|^2-\|u-v\|^2+\|u'+v\|^2-\|u'-v\|^2\right] \\
-&= \dfrac{1}{4} \left[2\|u+v\|^2 - 2\|u\|^2-2\|v\|^2 + 2\|u'+v\|^2 -2\|u'\|^2-2\|v\|^2\right]\\
-&= \dfrac{1}{2} \left[ \|u+v\|^2 +\|u'+v\|^2 -\|u\|^2 -\|u'\|^2 - 2\|v\|^2\right] \\
-\end{aligned}
+\left\|w-\frac{1}{2}(u+v)\right\|^2 = \dfrac{\left(\|w-u\|^2 + \|w-v\|^2\right)}{2} - \dfrac{\|u-v\|^2}{4}
 $$
 
-이므로 $\phi (u+u',v) = \phi(u,v)+\phi(u', v)$ 이다. 
-
-
-($4$) 이제 $c\in \mathbb{R}$ 에 대해 $\phi(cu,v)= c\phi(u, v)$ 임을 보이자. 우선 $c\in \mathbb{Z}_+$ 일 때 induction 을 통해 보인다. $c=1$ 일 때는 자명하다. $c$ 일 때 성립함을 가정하면 ($3$) 의 결과를 이용해 
-
-$$
-\phi((c+1)u, v) = \phi (cu, v)+ \phi (u, v)  = c\phi (u, v)+ \phi (u, v)= (c+1)\phi(u, v)
-$$
-
-임을 안다. 즉 $c\in \mathbb{Z}_+$ 일 때 $\phi (cu, v)=c\phi (u, v)$ 이다.
+임을 보이고 필요하다면 이것을 이용하시오.
 
 :::
 
+::: {.solution} 
+
+평행사변형 공식 $\|u+v\|^2 +\|u-v\|^2 = 2\|u\|^2+2\|v\|^2$ 를 이용한다.
+
+$$
+\begin{aligned}
+\left\|w-\frac{1}{2}(u+v)\right\|^2 &= \left\|\dfrac{1}{2}(w-u) + \dfrac{1}{2}(w-v)\right\|^2 \\
+&= 2 \left\|\dfrac{1}{2} (w-u) \right\|^2 + 2\left\|  \dfrac{1}{2}(w-v)\right\|^2 - \left\|\dfrac{1}{2}(u-v)\right\|^2 \\
+&= \dfrac{\|w-u\|^2 +\|w-v\|^2}{2} - \dfrac{1}{4} \|u-v\|^2.
+\end{aligned}
+$$
+
+이므로 $u,\,v\in C$ 일 때
+
+$$
+\left\|w-\frac{1}{2}(u+v)\right\|^2  \le \dfrac{\|w-u\|^2 +\|w-v\|^2}{2}
+$$
+
+이며 등호는 $u=v$ 일 때만 성립한다는 것을 알 수 있다. $v_1,\,v_2$ 가 $\|w-v\|$ 를 최소화 하는 두 벡터이고 $u\ne v$ 라면 위 식에 위배된다. 따라서 $u=v$ 이어야 한다. 즉 $\|w-v\|$ 를 최소화 하는 $C$ 의 벡터는 많아야 하나만 존재 할 수 있다.
+
+:::
 </br>

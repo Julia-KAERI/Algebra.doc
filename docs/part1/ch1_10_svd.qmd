@@ -25,17 +25,17 @@ crossref:
 
 ::: {#prp-properties_of_posivive_definite_matrix}
 
-$\boldsymbol{A} \in \mathbb{C}^{n \times n}$ 에 대해 다음은 동치이다.
+$\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 동치이다.
 
-1. $\boldsymbol{A}$ 는 positive semidefinite 이다.
+&emsp; ($1$) $\boldsymbol{A}$ 는 positive semidefinite 이다.
 
-2. $\boldsymbol{A}$ 는 에르미트행렬이며 모든 고유값은 non-negative 하다
+&emsp; ($2$) $\boldsymbol{A}$ 는 에르미트행렬이며 모든 고유값은 non-negative 하다
 
-3. $\boldsymbol{A}$ 의 positive semidifinite 제곱근 행렬이 존재한다.
+&emsp; ($3$) $\boldsymbol{A}$ 의 positive semidifinite 제곱근 행렬이 존재한다.
 
-4. $\boldsymbol{A}$ 의 에르미트 제곱근 행렬이 존재한다.
+&emsp; ($4$) $\boldsymbol{A}$ 의 에르미트 제곱근 행렬이 존재한다.
 
-5. $\boldsymbol{A} = \boldsymbol{R}^\ast \boldsymbol{R}$ 인 행렬 $\boldsymbol{R}$ 이 존재한다.
+&emsp; ($5$) $\boldsymbol{A} = \boldsymbol{R}^\ast \boldsymbol{R}$ 인 행렬 $\boldsymbol{R}$ 이 존재한다.
 
 ::: 
 
@@ -48,7 +48,7 @@ $\boldsymbol{A} \in \mathbb{C}^{n \times n}$ 에 대해 다음은 동치이다.
 
 ($4 \implies 5$) 앞서 정의한 $\boldsymbol{R}$ 이다.
 
-($5 \implies 6$) $\boldsymbol{A}=\boldsymbol{R}^\ast \boldsymbol{R}$ 이면 $\boldsymbol{A}^\ast = (\boldsymbol{R}^\ast\boldsymbol{R})^\ast = \boldsymbol{R}^\ast \boldsymbol{R}=\boldsymbol{A}$ 이므로 $\boldsymbol{A}$ 는 에르미트 행렬이다. 또한 임의의 $\boldsymbol{v}\in \mathbb{C}^n$ 에 대해 $\langle \boldsymbol{v},\, \boldsymbol{A}\boldsymbol{v}\rangle = \langle \boldsymbol{R}^\ast \boldsymbol{R}\boldsymbol{v},\, \boldsymbol{v} \rangle = \|\boldsymbol{Rv}\|^2\ge 0$ 이므로 $\boldsymbol{A}$ 는 positive definite 이다. $\square$
+($5 \implies 6$) $\boldsymbol{A}=\boldsymbol{R}^\ast \boldsymbol{R}$ 이면 $\boldsymbol{A}^\ast = (\boldsymbol{R}^\ast\boldsymbol{R})^\ast = \boldsymbol{R}^\ast \boldsymbol{R}=\boldsymbol{A}$ 이므로 $\boldsymbol{A}$ 는 에르미트 행렬이다. 또한 임의의 $\boldsymbol{v}\in \mathcal{M}_{n \times 1}(\mathbb{C})$ 에 대해 $\langle \boldsymbol{v},\, \boldsymbol{A}\boldsymbol{v}\rangle = \langle \boldsymbol{R}^\ast \boldsymbol{R}\boldsymbol{v},\, \boldsymbol{v} \rangle = \|\boldsymbol{Rv}\|^2\ge 0$ 이므로 $\boldsymbol{A}$ 는 positive definite 이다. $\square$
 
 :::
 
@@ -86,14 +86,23 @@ $$
 
 ::: {#prp-squareroot_matrix}
 
-임의의 $\boldsymbol{B}\in \mathbb{F}^{m \times n}$ 에 대해 $\boldsymbol{B}^\ast \boldsymbol{B}$ 를 생각 할 수 있다. 이 때 $\boldsymbol{B}^\ast \in \mathbb{C}^{n \times m}$ 이다. $\boldsymbol{B}^\ast \boldsymbol{B}$ 는
+임의의 $\boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\boldsymbol{B}^\ast \boldsymbol{B}$ 를 생각 할 수 있다. 이 때 $\boldsymbol{B}^\ast \in \mathcal{M}_{n \times m}(\mathbb{F})$ 이다. $\boldsymbol{B}^\ast \boldsymbol{B}$ 는
 
-1. 에르미트이다.
+&emsp; ($1$) 에르미트이다.
 
-2. positive semidefinite 이다.
+&emsp; ($2$) positive semidefinite 이다.
 
-3. $\sqrt{\boldsymbol{B}^\ast \boldsymbol{B}}$ 를 생각 할 수 있다.
+&emsp; ($3$) $\sqrt{\boldsymbol{B}^\ast \boldsymbol{B}}$ 를 생각 할 수 있다.
 
+:::
+
+::: {.proof}
+
+($1$) $(\boldsymbol{B}^\ast\boldsymbol{B})^\ast = \boldsymbol{B}^\ast\boldsymbol{B}$ 이다.
+
+($2$) $\langle \boldsymbol{B}^\ast\boldsymbol{Bv},\,\boldsymbol{v}\rangle = \|\boldsymbol{Bv}\|^2 \ge 0$.
+
+($3$) @prp-properties_of_posivive_definite_matrix $\square$
 :::
 
 </br>
@@ -102,7 +111,7 @@ $$
 
 ::: {#prp-polar_decomposition}
 
-$\mathbb{F}^{n\times 1}$ 에서의 두 정규직교기저벡터 $\mathcal{B}_1=\{\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n\}$ 과 $\mathcal{B}_2=\{\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_n\}$ 을 생각하자. 그리고 $\mathcal{B}_1$ 과 $\mathcal{B}_2$ 의 벡터를 열벡터로 갖는 행렬 $\boldsymbol{U},\,\boldsymbol{V}$ 를 생각하자. 이 때,
+$\mathcal{M}_{n \times 1}(\mathbb{F})$ 에서의 두 정규직교기저벡터 $\mathcal{B}_1=\{\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n\}$ 과 $\mathcal{B}_2=\{\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_n\}$ 을 생각하자. 그리고 $\mathcal{B}_1$ 과 $\mathcal{B}_2$ 의 벡터를 열벡터로 갖는 행렬 $\boldsymbol{U},\,\boldsymbol{V}$ 를 생각하자. 이 때,
 $$
 \boldsymbol{VU}^\ast \boldsymbol{u}_i = \boldsymbol{v}_i
 $$
@@ -216,7 +225,7 @@ $$
 ::: {#def-singular_value}
 
 #### 특이값 (singular value)
-$\boldsymbol{A} \in \mathbb{C}^{n \times n}$ 에 대해 $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 의 고유값을 **특이값(singular value)** 라 한다. $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 가 positive semidefinite 이므로 당연히 모든 특이값은 $0$ 이 아닌 실수이다.
+$\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 의 고유값을 **특이값(singular value)** 라 한다. $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 가 positive semidefinite 이므로 당연히 모든 특이값은 $0$ 이 아닌 실수이다.
 :::
 :::
 
@@ -224,7 +233,7 @@ $\boldsymbol{A} \in \mathbb{C}^{n \times n}$ 에 대해 $\sqrt{\boldsymbol{A}^\a
 
 ::: {#thm-singular_value_decomposition}
 
-$\boldsymbol{A}\in \mathbb{F}^{n\times n}$ 가 특이값으로 $s_1,\ldots,\,s_n$ 을 가질 때 어떤 isometry $\boldsymbol{U},\,\boldsymbol{V} \in \mathbb{F}^{n\times n}$ 와 대각행렬 $\boldsymbol{D}^\mathbb{n \times n}$ 에 대해
+$\boldsymbol{A}\in \in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 특이값으로 $s_1,\ldots,\,s_n$ 을 가질 때 어떤 isometry $\boldsymbol{U},\,\boldsymbol{V} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 와 대각행렬 $\boldsymbol{D} \in\mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해
 $$
 \boldsymbol{A}=\boldsymbol{UDV}^\ast
 $$
@@ -242,5 +251,23 @@ $$
 $$
 
 이다. 두 isometry 의 곱은 isometry 이므로 $\boldsymbol{U}$ 도 isometry 이다. $\square$
+
+:::
+
+
+</br>
+
+## 연습문제
+
+::: {#exr-axler_5_A_2}
+
+#### Axler 5.A.2
+
+$\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이고 $\boldsymbol{AB}=\boldsymbol{BA}$ 이면 $\ker \boldsymbol{B}$ 는 $\boldsymbol{A}$ 의 불변부분공간이다.
+:::
+
+::: {.solution}
+
+$\boldsymbol{u}\in \ker \boldsymbol{B}$ 라 하자. $\boldsymbol{BAu} =\boldsymbol{ABu} = \boldsymbol{0}$ 이므로 $\boldsymbol{Au}\in \ker \boldsymbol{B}$ 이다.  
 
 :::
