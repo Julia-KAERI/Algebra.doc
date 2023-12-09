@@ -28,7 +28,7 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 $\boldsymbol{AA}^\a
 
 ::: {#prp-condition_of_normal_matrix}
 
-$\boldsymbol{A}$ 가 정규행렬일 필요충분인 조건은 모든 $\boldsymbol{v}\in \mathcal{M}_{n \times 1}(\mathbb{F})$ 에 대해 $\|\boldsymbol{Av}\| = \|\boldsymbol{A}^\ast \boldsymbol{v}\|$ 이다.
+$\boldsymbol{A}$ 가 정규행렬일 필요충분인 조건은 모든 $\boldsymbol{v}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\|\boldsymbol{Av}\| = \|\boldsymbol{A}^\ast \boldsymbol{v}\|$ 이다.
 :::
 
 ::: {.proof}
@@ -136,7 +136,7 @@ $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 행렬에 대해 다�
 
 &emsp; ($2$) $\boldsymbol{A}$ 는 unitary 변환에 의해 대각행렬로 표현된다.
 
-&emsp; ($3$) $\boldsymbol{A}$ 의 고유벡터로 $\mathcal{M}_{n \times 1}(\mathbb{C})$ 의 정규직교기저를 구성 할 수 있다.
+&emsp; ($3$) $\boldsymbol{A}$ 의 고유벡터로 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저를 구성 할 수 있다.
 :::
 
 
@@ -152,7 +152,7 @@ $$
 
 이므로 $\boldsymbol{Pe}_i$ 는 $\boldsymbol{A}$ 의 고유벡터이다. $\boldsymbol{P}$ 가 isometry 이므로 $\{\boldsymbol{Pe}_1,\ldots,\,\boldsymbol{Pe}_n\}$ 은 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathbb{C}^n$ 의 정규직교기저이다.
 
-($3. \implies 1.$) $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 이 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n \times 1}(\mathbb{C})$ 의 정규직교기저라 하자. 이 때 $\boldsymbol{u}_i$ 의 고유값은 $\lambda_i$ 라 하자.  
+($3. \implies 1.$) $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 이 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저라 하자. 이 때 $\boldsymbol{u}_i$ 의 고유값은 $\lambda_i$ 라 하자.  
 
 $$
 \langle \boldsymbol{A}^\ast \boldsymbol{e}_i,\,\boldsymbol{e}_j\rangle = \langle \boldsymbol{e}_i,\, \boldsymbol{Ae}_j\rangle = \overline{\lambda_j} \delta_{ij}
@@ -196,7 +196,7 @@ $$
 
 ::: {.solution}
 
-$\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 이 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n \times 1}(\mathbb{C})$ 의 정규직교기저이고 $\boldsymbol{e}_i$ 의 고유값은 $\lambda_i$ 라 하자. @prp-hermite_tvv 에서 보았듯이 임의의 $\boldsymbol{u} \in \mathcal{M}_{n \times 1}(\mathbb{C})$ 에 대해 $\langle \boldsymbol{Au},\boldsymbol{u}\rangle$ 이 실수이면 $\boldsymbol{A}$ 는 에르미트 행렬이다. $\boldsymbol{u}= \sum_i^n u_i \boldsymbol{e}_i$ 라 하면,
+$\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 이 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저이고 $\boldsymbol{e}_i$ 의 고유값은 $\lambda_i$ 라 하자. @prp-hermite_tvv 에서 보았듯이 임의의 $\boldsymbol{u} \in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \boldsymbol{Au},\boldsymbol{u}\rangle$ 이 실수이면 $\boldsymbol{A}$ 는 에르미트 행렬이다. $\boldsymbol{u}= \sum_i^n u_i \boldsymbol{e}_i$ 라 하면,
 
 $$
 \begin{aligned}
@@ -232,7 +232,7 @@ $$
 
 ::: {.proof}
 
-영벡터가 아닌 벡터 $\boldsymbol{v}\in \mathbb{R}^{n\times 1}$ 에 대해
+영벡터가 아닌 벡터 $\boldsymbol{v}\in \mathbb{R}^{n}$ 에 대해
 
 $$
 \begin{aligned}
@@ -302,7 +302,7 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬이면 
 
 ::: {.proof}
 
-영벡터가 아닌 $\boldsymbol{v} \in \mathcal{M}_{n \times 1}(\mathbb{R})$ 을 생각하자. $\{\boldsymbol{v},\, \boldsymbol{Av},\ldots,\, \boldsymbol{A}^n \boldsymbol{v}\}$ 는 포함된 벡터의 갯수가 $n$ 보다 많으므로 선형종속이며, 따라서
+영벡터가 아닌 $\boldsymbol{v} \in \mathcal{M}_{n }(\mathbb{R})$ 을 생각하자. $\{\boldsymbol{v},\, \boldsymbol{Av},\ldots,\, \boldsymbol{A}^n \boldsymbol{v}\}$ 는 포함된 벡터의 갯수가 $n$ 보다 많으므로 선형종속이며, 따라서
 
 $$
 0=c_0 v + c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n \boldsymbol{v}
@@ -325,7 +325,7 @@ $$
 
 ::: {#lem-self_adjoint_matrix_and_invariable_space}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬 이고 $U$ 가 $\boldsymbol{A}$ 에 대한 $\mathcal{M}_{n \times 1}(\mathbb{R})$ 에서의 불변부분공간일 때,
+$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬 이고 $U$ 가 $\boldsymbol{A}$ 에 대한 $\mathcal{M}_{n }(\mathbb{R})$ 에서의 불변부분공간일 때,
 
 ($1$) $U^\perp$ 도 $\boldsymbol{A}$에 대한 불변부분공간이다.
 
@@ -360,7 +360,7 @@ $$
 
 <!-- ::: {#lem-invariant_subspace_and_block_diagonal_form}
 
-유한차원 벡터공간 $U$ 가 $\mathbb{F}^{n \times 1}$ 의 $\boldsymbol{A}\in \mathbb{F}^{n \times n}$ 에 대한 불변부분공간일 때 $\boldsymbol{A}$ 는 어떤 블록대각행렬과 닮았다.
+유한차원 벡터공간 $U$ 가 $\mathbb{F}^{n }$ 의 $\boldsymbol{A}\in \mathbb{F}^{n \times n}$ 에 대한 불변부분공간일 때 $\boldsymbol{A}$ 는 어떤 블록대각행렬과 닮았다.
 
 :::
 
@@ -376,12 +376,12 @@ $U$ 에 대한 정규직교기저 $\mathcal{B}_\parallel$ 와 $U^\perp$ 에 대�
 
 ::: {#lem-matrix_under_two_invariant_subspace}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 가 대칭행렬이고 $U,\,V$ 가 $\mathcal{M}_{n \times 1}(\mathbb{R})$ 의 $\boldsymbol{A}$ 에 대한 불변부분공간이며 $\mathcal{M}_{n \times 1}(\mathbb{R})= U \oplus V$ 이면 $\boldsymbol{A}$ 는 어떤 직교변환에 의해 블럭대각행렬이 된다.
+$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 가 대칭행렬이고 $U,\,V$ 가 $\mathcal{M}_{n }(\mathbb{R})$ 의 $\boldsymbol{A}$ 에 대한 불변부분공간이며 $\mathcal{M}_{n }(\mathbb{R})= U \oplus V$ 이면 $\boldsymbol{A}$ 는 어떤 직교변환에 의해 블럭대각행렬이 된다.
 :::
 
 ::: {.proof}
 
-$\boldsymbol{u}\in U$ 이면 $\boldsymbol{Au}\in U$ 이고 $\boldsymbol{v}\in V$ 이면 $\boldsymbol{Av}\in V$ 이다. $\mathcal{M}_{n \times 1}(\mathbb{R}) = U \oplus V$ 이므로 $U$ 의 정규직교기저 $\{\boldsymbol{e}_i\}$ 와 $V$ 의 정규직교기저 $\{\boldsymbol{f}_j\}$ 에 대해 $\{\boldsymbol{e}_i\}\cup \{\boldsymbol{f}_j\}$ 는 $\mathcal{M}_{n \times 1}(\mathbb{R})$ 의 기저이며 이 기저로의 직교변환에 대해 $\boldsymbol{A}$ 는 블럭대각행렬이 된다. $\square$ 
+$\boldsymbol{u}\in U$ 이면 $\boldsymbol{Au}\in U$ 이고 $\boldsymbol{v}\in V$ 이면 $\boldsymbol{Av}\in V$ 이다. $\mathcal{M}_{n }(\mathbb{R}) = U \oplus V$ 이므로 $U$ 의 정규직교기저 $\{\boldsymbol{e}_i\}$ 와 $V$ 의 정규직교기저 $\{\boldsymbol{f}_j\}$ 에 대해 $\{\boldsymbol{e}_i\}\cup \{\boldsymbol{f}_j\}$ 는 $\mathcal{M}_{n }(\mathbb{R})$ 의 기저이며 이 기저로의 직교변환에 대해 $\boldsymbol{A}$ 는 블럭대각행렬이 된다. $\square$ 
 :::
 
 </br>
@@ -395,7 +395,7 @@ $\boldsymbol{A}$ 가 대칭행렬이면 어떤 직교 변환에 의해 대각행
 
 $n$ 에 대한 수학적 귀납법을 이용한다. $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬이라고 하자. $n=1$ 일 때는 스스로 대각행렬이다. 이제 $k<n$ 인 대칭행렬은 어떤 직교 변환에 의해 대각행렬이 된다고 가정하자.
 
-$\boldsymbol{A}$ 가 $n \times n$ 대칭 행렬일 때 고유값이 항상 존재하며 고유값에 대한 고유벡터 가운데 하나 $\boldsymbol{u}_1$ 를 이용하여 $U=\text{span}(\boldsymbol{u}_1)$ 를 만들면 $U$ 은 불변부분공간이며 @lem-self_adjoint_matrix_and_invariable_space 에서 보였듯이 $U^\perp$ 도 불변부분공간이다. $\mathcal{M}_{n \times n}(\mathbb{R}) = U \otimes U^\perp$ 이므로 @lem-matrix_under_two_invariant_subspace 에서 보였듯이 어떤 직교 변환에 의해 $1\times 1$ 행렬과 $(n-1)\times (n-1)$ 행렬로 블록대각행렬이 된다. $(n-1)\times (n-1)$ 행렬은 귀납법의 가정에 의해 대각행렬이 되므로 $\boldsymbol{A}$ 는 대각행렬이 된다. $\square$
+$\boldsymbol{A}$ 가 $n \times n$ 대칭 행렬일 때 고유값이 항상 존재하며 고유값에 대한 고유벡터 가운데 하나 $\boldsymbol{u}_1$ 를 이용하여 $U=\text{span}(\boldsymbol{u}_1)$ 를 만들면 $U$ 은 불변부분공간이며 @lem-self_adjoint_matrix_and_invariable_space 에서 보였듯이 $U^\perp$ 도 불변부분공간이다. $\mathcal{M}_{n \times n}(\mathbb{R}) = U \otimes U^\perp$ 이므로 @lem-matrix_under_two_invariant_subspace 에서 보였듯이 어떤 직교 변환에 의해 $1$ 행렬과 $(n-1)\times (n-1)$ 행렬로 블록대각행렬이 된다. $(n-1)\times (n-1)$ 행렬은 귀납법의 가정에 의해 대각행렬이 되므로 $\boldsymbol{A}$ 는 대각행렬이 된다. $\square$
 
 :::
 
@@ -411,7 +411,7 @@ $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{R})$ 행렬에 대해 다�
 
 &emsp; ($2$) $\boldsymbol{A}$ 는 직교변환에 의해 대각행렬로 표현된다.
 
-&emsp; ($3$) $\boldsymbol{A}$ 의 고유벡터로 $\mathcal{M}_{n \times 1}(\mathbb{R})$ 의 정규직교기저를 구성 할 수 있다.
+&emsp; ($3$) $\boldsymbol{A}$ 의 고유벡터로 $\mathcal{M}_{n }(\mathbb{R})$ 의 정규직교기저를 구성 할 수 있다.
 
 :::
 
@@ -425,7 +425,7 @@ $$
 \boldsymbol{APe}_i = \boldsymbol{P}\boldsymbol{P}^{-1}\boldsymbol{APe}_i= \boldsymbol{PDe}_i=\lambda_i \boldsymbol{Pe}_i
 $$
 
-이므로 $\boldsymbol{Pe}_i$ 는 $\boldsymbol{A}$ 의 고유벡터이다. $\boldsymbol{P}$ 가 isometry 이므로 $\{\boldsymbol{Pe}_1,\ldots,\,\boldsymbol{Pe}_n\}$ 은 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n \times 1}(\mathbb{R})$ 의 정규직교기저이다.
+이므로 $\boldsymbol{Pe}_i$ 는 $\boldsymbol{A}$ 의 고유벡터이다. $\boldsymbol{P}$ 가 isometry 이므로 $\{\boldsymbol{Pe}_1,\ldots,\,\boldsymbol{Pe}_n\}$ 은 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{R})$ 의 정규직교기저이다.
 
 ($3 \implies 1$) $\{\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n\}$ 이 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathbb{R}^n$ 의 정규직교기저라 하자. 이 때 $\boldsymbol{u}_i$ 의 고유값은 $\lambda_i$ 라 하자.  $\lambda_i$ 는 실수이므로,
 

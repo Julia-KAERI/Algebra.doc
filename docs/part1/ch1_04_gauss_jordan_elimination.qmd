@@ -45,7 +45,11 @@ $$
 ::: {#prp-elementary_row_operation}
 
 기본행 연산은 행렬에 대한 선형 연산이며, 가역연산이다.
+:::
 
+::: {.proof}
+
+기본행 연산은 $E:\mathcal{M}_{m \times n}(\mathbb{F}) \mapsto \mathcal{M}_{m \times n}(\mathbb{F})$ 함수로서 $\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $c\in \mathbb{F}$ 에 대해 $E(\boldsymbol{A}+c\boldsymbol{B}) = E(\boldsymbol{A}) + cE(\boldsymbol{B})$ 이다. $\left(E^{(1)}(i, j)\right)^{-1} = E^{(1)}(i, j)$ 이며, $\left(E^{(2)}(i, t)\right)^{-1} = E^{(2)}(i, 1/t)$ 이고 $\left(E^{(3)}(i, j, r)\right)^{-1} = E^{(3)}(i, j, -r)$ 이다. $\square$
 :::
 
 </br>
@@ -54,7 +58,7 @@ $$
 
 기본 행 연산은 선형 연산이기 때문에 행렬로 표현 할 수 있다. 행 연산에 대한 표기로 $E^{(i)}$ 를 사용했는데 이와 유사하게 이의 행렬 표기를 $\boldsymbol{E}^{(i)}$ 로 한다. 또한 $\boldsymbol{I}_{k:}$ 는 단위행렬의 $k$ 번째 행벡터를 의미한다.
 
-&emsp; ($1$) $\boldsymbol{E}^{(1)}(i, j)$ 의 $k$ 번째 행은 다음 식으로 결정된다. 
+($1$) $\boldsymbol{E}^{(1)}(i, j)$ 의 $k$ 번째 행은 다음 식으로 결정된다. 
 
 $$
 \boldsymbol{E}^{(1)}(i, j)_{k:} = (1-\delta_{ik})(1-\delta_{jk})\boldsymbol{I}_{k:} + \delta_{ik}\boldsymbol{I}_{j:} + \delta_{jk}\boldsymbol{I}_{i:}
@@ -66,7 +70,7 @@ $$
 \boldsymbol{E}^{(1)} (i, j) = \begin{bmatrix} 0 & & 1  \\ & \ddots & \\ 1 & & 0  \end{bmatrix} 
 $$
 
-&emsp; ($2$) $\boldsymbol{E}^{(2)}(i, t)$ 의 $k$ 번째 행은 다음 식으로 결정된다.
+($2$) $\boldsymbol{E}^{(2)}(i, t)$ 의 $k$ 번째 행은 다음 식으로 결정된다.
 
 $$
 \boldsymbol{E}^{(2)}(i, t)_{k:} = (1-\delta_{ik})\boldsymbol{I}_{k:} + t\delta_{ik} \boldsymbol{I}_{k:}
@@ -103,6 +107,23 @@ $$
 $$
 (\boldsymbol{E}_N \cdots \boldsymbol{E}_1)\boldsymbol{Au} = (\boldsymbol{E}_N \cdots \boldsymbol{E}_1) \boldsymbol{v} \iff \boldsymbol{Au} =\boldsymbol{v}
 $$
+
+
+</br>
+
+::: {#exm-infinite_number_of_operations}
+
+벡터공간 $V$ 에서의 유한개의 가역연산자 $T_1,\ldots,\,T_n \in \mathcal{L}(V)$ 와 $S\in \mathcal{L}$ 에 대해
+
+$$
+(T_1 \circ \cdots \circ T_n \circ S)(u) = (T_1 \circ \cdots \circ T)(v) \iff S(u)= v
+$$
+
+
+이다. 그러나 무한개의 가역연산자의 경우를 생각하자. 항등연산자 $I$ 에 대해 $T_i = \dfrac{1}{2}I$, $i=1,\,2,\ldots$ 라면 $(T_1 \circ \cdots)(u)=0$ 이다. 즉 유한개의 가역연산의 합성은 가역연산이지만 무한개의 가역연산은 가역연산이라는 것을 보장 할 수 없다.   
+
+:::
+
 
 </br>
 

@@ -62,6 +62,16 @@ $T\in \mathcal{L}(U,\,V)$ 에 대해 $T(u)=v$ 이면 $T(-u)=-v$ 임을 보여라
 
 </br>
 
+::: {#exm-derivative_integral_as_operator}
+
+무한번 미분 가능한 $\mathbb{R} \mapsto \mathbb{R}$ 실함수의 집합을 $C^{\infty}$ 라고 한다. $C^\infty$ 는 $\mathbb{R}$-벡터공간임을 쉽게 보일 수 있다. $f\in C^{\infty}$ 에 대한 미분연산자를 $\mathcal{D}$ 라고 하자. 즉 $(\mathcal{Df})(x)= f'(x)$ 이다. $f,\,g\in C^\infty,\, c\in \mathbb{R}$ 에 대해 $\mathcal{D}(f+cg) = f'+cg'\in C^\infty$ 이므로 $\mathcal{D} \in \mathcal{L}(C^\infty)$ 이다. 또한 $\mathcal{I}:C^\infty \to C^\infty$ 를 $(\mathcal{I}f)(x)=\int_{0}^x f(x)\,dx$ 로 정의하자. $\mathcal{I}\in \mathcal{L}(C^\infty)$ 임을 알 수 있다.
+
+:::
+
+
+
+</br>
+
 보통 두 집합 $A,\,B$ 사이의 함수 $f:A\to B$ 가 정의된다는 것은 모든 $a\in A$ 에 대해 $f(a) \in B$ 가 잘 정의된다는 것을 뜻한다. 그러나 벡터공간에서 정의된 선형 사상은 모든 벡터에 대해 알 필요 없이 기저에 대해서만 함수값을 알면 그 함수가 정의된다. 다음 명제는 그것을 증명한다.
 
 
@@ -108,7 +118,7 @@ $$
 ::: {#exm-identity_operator}
 
 #### 항등사상
-$I_U\in \mathcal{L}(U)$ 일 때 모든 $u\in u$ 에 대해 $I_U(u) = u$ 이면 $I_U$ 를 벡터공간 $U$ 에서의 **항등 사상 (identity operator)** 이라고 한다. 항등사상은 선형사상임을 보여라. 또한 $T\in \mathcal{L}(U)$ 일 때 다음 두 명제가 동치임을 보여라.
+$I_U\in \mathcal{L}(U)$ 일 때 모든 $u\in u$ 에 대해 $I_U(u) = u$ 이면 $I_U$ 를 벡터공간 $U$ 에서의 **항등 사상 (identity operator)** 이라고 한다. 항등사상은 선형사상임을 보여라. 또한 $T\in \mathcal{L}(U)$ 일 때 다음 두 명제가 동치이다.
 
 &emsp; ($1$) $T$ 는 항등사상이다.
 
@@ -121,7 +131,7 @@ $I_U\in \mathcal{L}(U)$ 일 때 모든 $u\in u$ 에 대해 $I_U(u) = u$ 이면 $
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-restriction}
 
-#### 한정 사상(restriction)
+#### 한정 사상
 
 $T\in \mathcal{L}(V,\,W)$ 이고 $U \le V$ 라 하자. 이 때 $T$ 의 정의역(domain) 을 $U$ 로 제한하는 $T|_U\in \mathcal{L}(U,\,W)$ 를 생각할 수 있다. 즉, $T|_U(u)=T(u)$ 이며 이것을 **한정 사상(restriction)** 이라 한다.
 
@@ -367,15 +377,15 @@ $$
 
 </br>
 
-### 행벡터와 열벡터
+### 행렬의 행벡터와 열벡터
 
-$\mathcal{M}_{1\times n}(\mathbb{F})$ 과 $\mathcal{M}_{n \times 1}(\mathbb{F})$ 도 벡터공간이며 각각 행벡터공간, 열벡터공간이라 한다. 특히 열벡터는 앞서 보았듯이 벡터의 행렬표현의 기본형이다. 행렬 $\boldsymbol{A}$ 의 $i,\,j$ 성분을 $A_{ij}$ 혹은 $A_{i,j}$  로 표현할 수 있듯이 $\boldsymbol{A}$ 의 $i$ 번째 행을 $\boldsymbol{A}_{i,:}$ 혹은 $\boldsymbol{A}_{i:}$ 라 쓰고 $j$ 번째 열을 $\boldsymbol{A}_{:,j}$ 혹은 $\boldsymbol{A}_{:j}$ 라 쓰기로 하자. 많은 경우 계산을 하는데 도움이 된다.
+$\mathcal{M}_{1\times n}(\mathbb{F})$ 과 $\mathcal{M}_{n \times 1}(\mathbb{F})=\mathcal{M}_n(\mathbb{F})$ 이 벡터공간임을 안다. 행렬 $\boldsymbol{A}$ 의 $i,\,j$ 성분을 $A_{ij}$ 혹은 $A_{i,j}$  로 표현할 수 있듯이 $\boldsymbol{A}$ 의 $i$ 번째 행을 $\boldsymbol{A}_{i,:}$ 혹은 $\boldsymbol{A}_{i:}$ 라 쓰고 $j$ 번째 열을 $\boldsymbol{A}_{:,j}$ 혹은 $\boldsymbol{A}_{:j}$ 라 쓰기로 하자. 각각의 $\boldsymbol{A}_{:i}$ 와 $\boldsymbol{A}_{j:}$ 를 행벡터와 열벡터로 간주한다. 즉 $m\times n$ 행렬의 경우 $\boldsymbol{A}_{:i}\in \mathcal{M}_m(\mathbb{F})$ 이며 $\boldsymbol{A}_{i:}\in \mathcal{M}_{1 \times n}(\mathbb{F})$ 이다. 많은 경우 계산을 하는데 도움이 된다.
 
 **1.** $m \times n$ 행렬 $\boldsymbol{A}$ 과 $n \times p$ 행렬 $\boldsymbol{B}$ 를 생각하자. 이 때,
 
 $$
 (\boldsymbol{AB})_{ij} = \sum_k A_{ik}B_{kj} = \boldsymbol{A}_{i:}\boldsymbol{B}_{:j}
-$$
+$$ 
 
 임을 알 수 있다. 또한, 
 
@@ -585,7 +595,7 @@ $$
 이로부터 자연스럽게 아래의 결론이 나온다.
 
 ::: {#cor-isomorphism_U_F}
-$n$ 차원 $\mathbb{F}$-벡터공간 $U$ 와 $\mathcal{M}_{n\times 1}(\mathbb{F})$ 은 동형이다.
+$n$ 차원 $\mathbb{F}$-벡터공간 $U$ 와 $\mathcal{M}_{n}(\mathbb{F})$, $\mathcal{M}_{1 \times n}(\mathbb{F})$ 은 동형이다.
 :::
 
 </br>
@@ -596,11 +606,11 @@ $T\in \mathcal{L}(U,\,V)$ 가 동형사상일 때 $T^{-1}$ 도 동형사상이�
 
 ::: {.proof}
 
-우선 $T\in \mathcal{L}(U,\,V)$ 가 동형사상이면 $T^{-1}$ 이 선형사상임을 보이자. $u_1,\,u_2 \in U$ 에 대해 $v_1 = T(u_1),\, v_2 = T(u_2)$ 이며 $\lambda \in \mathbb{F}$라 하자. $T$ 가 선형사상이므로 $T(u_1 + \lambda u_2) = v_1 + \lambda v_2$ 이다. 즉,
+우선 $T\in \mathcal{L}(U,\,V)$ 가 동형사상이면 $T^{-1}$ 이 선형사상임을 보이자. $u_1,\,u_2 \in U$ 에 대해 $v_1 = T(u_1),\, v_2 = T(u_2)$ 이며 $c \in \mathbb{F}$라 하자. $T$ 가 선형사상이므로 $T(u_1 + c u_2) = v_1 +c v_2$ 이다. 즉,
 
 $$
 \begin{aligned}
-T^{-1}(v_1+\lambda v_2) &= u_1 + \lambda u_2 = T^{-1}(u_1) + \lambda T^{-1}(u_2)
+T^{-1}(v_1 + c v_2) &= u_1 + c u_2 = T^{-1}(u_1) + c T^{-1}(u_2)
 \end{aligned}
 $$
 
@@ -624,15 +634,15 @@ $T\in \mathcal{L}(V,\,W)$ 에 대해 다음 두 조건은 동치이다.
 ::: {.proof}
 (1 $\implies$ 2) $V$ 의 기저 $\{v_1,\ldots,\,v_m\}$ 에 대해 $\text{nullity} (T) = 0$ 이므로 @cor-range_independence 에 따라 $\{T(v_1),\ldots,\, T(v_m)\}$ 은 선형독립이다. $T$ 가 전사이므로  $\{T(v_1),\ldots,\, T(v_m)\}$ 는 역시 $V$ 의 기저이다.
 
-(2 $\implies$ 1) $T$ 가 $V$ 의 기저를 $W$ 로 기저로 변환하므로 $\text{im}{T}=W$ 이다. 따라서 $T$ 는 전사이다. $V$ 의 기저 벡터중 $T$ 에 의해 영벡터가 되는 것이 없으므로 (영벡터를 포함하는 벡터의 집합은 무조건 선형종속이므로 기저가 될 수 없다) $\text{nullity}(T) = 0$ 이다. 따라서 $T$ 는 단사이다. 즉 $T$ 는 동형사상이다. $\square$
+(2 $\implies$ 1) $T$ 가 $V$ 의 기저를 $W$ 로 기저로 변환하므로 $\text{im}\, (T)=W$ 이다. 따라서 $T$ 는 전사이다. $V$ 의 기저 벡터중 $T$ 에 의해 영벡터가 되는 것이 없으므로 (영벡터를 포함하는 벡터의 집합은 무조건 선형종속이므로 기저가 될 수 없다) $\text{nullity}(T) = 0$ 이다. 따라서 $T$ 는 단사이다. 즉 $T$ 는 동형사상이다. $\square$
 :::
 
 </br>
 
-### $\mathcal{L}(U,\, V) \cong \mathbb{F}^{\dim V \times \dim U}$
+### $\mathcal{L}(U,\, V) \cong \mathcal{M}_{\dim V \times \dim U}(\mathbb{F})$
 
 
-우리는 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $\mathcal{L}(U,\,V)$ 가 벡터공간이라는 것을 안다(@prp-LUV_vector_space). 또한 $\mathbb{F}$ 의 원소를 성분으로 갖는 $m \times n$ 행렬의 집합 $\mathcal{M}_{m \times n}(\mathbb{F})$ 도 벡터공간이라는 것을 안다 (@exm-vectorspace_matrix). $n = \dim (U),\, m = \dim (V)$ 이고 $\mathcal{B}_U = (u_i)$, $\mathcal{B}_V = (v_j)$ 가 각각 $U,\,V$ 의 기저라고 하자. $T\in \mathcal{L}(U,\,V)$ 의 행렬표현 $[T]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 를 생각하면 $[-]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 는 $\mathcal{L}(U,\,V) \mapsto \mathbb{F}^{m \times n}$ 함수이다. $T,\, S\in \mathcal{L}(U,\,V)$, $c \in \mathbb{F}$ 에 대해
+우리는 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $\mathcal{L}(U,\,V)$ 가 벡터공간이라는 것을 안다(@prp-LUV_vector_space). 또한 $\mathbb{F}$ 의 원소를 성분으로 갖는 $m \times n$ 행렬의 집합 $\mathcal{M}_{m \times n}(\mathbb{F})$ 도 벡터공간이라는 것을 안다 (@exm-vectorspace_matrix). $n = \dim (U),\, m = \dim (V)$ 이고 $\mathcal{B}_U = (u_i)$, $\mathcal{B}_V = (v_j)$ 가 각각 $U,\,V$ 의 기저라고 하자. $T\in \mathcal{L}(U,\,V)$ 의 행렬표현 $[T]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 를 생각하면 $[-]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 는 $\mathcal{L}(U,\,V) \mapsto\mathcal{M}_{\dim V \times \dim U}(\mathbb{F})$ 함수이다. $T,\, S\in \mathcal{L}(U,\,V)$, $c \in \mathbb{F}$ 에 대해
 
 $$
 \left[ T + c S \right]_{\mathcal{B}_U, \mathcal{B}_V} = [T]_{\mathcal{B}_U, \mathcal{B}_V} + [c S]_{\mathcal{B}_U, \mathcal{B}_V} = [T]_{\mathcal{B}_U, \mathcal{B}_V} + c [S]_{\mathcal{B}_U, \mathcal{B}_V}
@@ -642,7 +652,7 @@ $$
 
 
 ::: {#lem-MM_linearmap}
-$\mathbb{F}$ 에서 정의된 유한차원 벡터공간 $U,\,V$ 와 그 순서기저 $\mathcal{B}_U,\, \mathcal{B}_V$ 에 대해 $[T] = [T]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 는 $\mathcal{L}(U,\,V) \to \mathbb{F}^{\dim V \times \dim U}$ 인 선형사상이다.
+$\mathbb{F}$ 에서 정의된 유한차원 벡터공간 $U,\,V$ 와 그 순서기저 $\mathcal{B}_U,\, \mathcal{B}_V$ 에 대해 $[T] = [T]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 는 $\mathcal{L}(U,\,V) \to \mathcal{M}_{\dim V \times \dim U}(\mathbb{F})$ 인 선형사상이다.
 :::
 
 </br> 
@@ -652,11 +662,11 @@ $\mathbb{F}$ 에서 정의된 유한차원 벡터공간 $U,\,V$ 와 그 순서�
 
 
 ::: {#thm-isomorphic}
-$m$ 차원 벡터공간 $U$ 와 $n$ 차원 벡터공간 $V$ 에 대해 $\mathcal{L}(U,\,V)$ 는 $\mathbb{F}^{m \times n}$ 와 동형이다.
+$n$ 차원 벡터공간 $U$ 와 $m$ 차원 벡터공간 $V$ 에 대해 $\mathcal{L}(U,\,V)$ 는 $\mathcal{M}_{m\times n}(\mathbb{F})$ 와 동형이다.
 :::
 
 ::: {.proof}
-$U,\,V$ 의 기저를 각각 $\mathcal{B}_U = (u_i),\,\mathcal{B}_V = (v_j)$ 라 할 때 $\Phi: \mathcal{L}(U,\,V) \to \mathbb{F}^{m \times n}$ 를 $\Phi(T) = [T]_{\mathcal{B}_U, \mathcal{B}_V}$ 로 정의한다. @lem-MM_linearmap 으로부터 $\Phi$ 는 선형사상임을 안다. $\ker (\Phi) = \{0_U\}$ 이므로 단사(injective)이다. 모든 $\mathbb{F}^{m\times n}$ 에 대해 상응하는 $T$ 가 존재하므로 전사(surjective)이다. 즉 $\Phi$ 는 동형사상이다. $\square$
+$U,\,V$ 의 기저를 각각 $\mathcal{B}_U = (u_i),\,\mathcal{B}_V = (v_j)$ 라 할 때 $\Phi: \mathcal{L}(U,\,V) \to \mathcal{M}_{m \times n}(\mathbb{F})$ 를 $\Phi(T) = [T]_{\mathcal{B}_U, \mathcal{B}_V}$ 로 정의한다. @lem-MM_linearmap 으로부터 $\Phi$ 는 선형사상임을 안다. $\ker (\Phi) = \{0_U\}$ 이므로 단사(injective)이다. 모든 $\mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 상응하는 $T$ 가 존재하므로 전사(surjective)이다. 즉 $\Phi$ 는 동형사상이다. $\square$
 
 :::
 
@@ -668,7 +678,7 @@ $U,\,V$ 의 기저를 각각 $\mathcal{B}_U = (u_i),\,\mathcal{B}_V = (v_j)$ 라
 유한차원 벡터공간 $U,\,V$ 에 대해 다음이 성립한다.
 
 $$
-\dim (\mathcal{L}(U, V)) = \dim (\mathbb{F}^{m \times n}) = (\dim (V)) \times (\dim (U))
+\dim (\mathcal{L}(U, V)) = \dim (\mathcal{M}_{\dim (V) \times \dim (U)}(\mathbb{F})) = \dim (V)\times \dim (U)
 $$
 
 :::
@@ -677,9 +687,9 @@ $$
 
 다시 한번 유한 차원 $\mathbb{F}$-벡터공간에 대한 선형연산자의 집합 $\mathcal{L}(U, V)$ 를 생각해보자. $n = \dim U$, $m = \dim V$ 일 때
 
-1. $U \cong \mathcal{M}_{n}(\mathbb{F})$, $V \cong \mathcal{M}_{m}(\mathbb{F})$
+&emsp; $1$. $U \cong \mathcal{M}_{n}(\mathbb{F})$, $V \cong \mathcal{M}_{m}(\mathbb{F})$
 
-2. $\mathcal{L}(U,\,V) \cong  \mathcal{M}_{m \times n}(\mathbb{F})$
+&emsp; $2$. $\mathcal{L}(U,\,V) \cong  \mathcal{M}_{m \times n}(\mathbb{F})$
 
 임을 안다. 또한 $U$ 와 $V$ 의 각각의 기저 $\mathcal{B}_U$, $\mathcal{B}_V$ 에 대해, 
 
@@ -687,7 +697,7 @@ $$
 T(u)=v \iff [T]_{\mathcal{B}_U, \mathcal{B}_V}[u]_{\mathcal{B}_U} = [v]_{\mathcal{B}_V}
 $$
 
-라는 것도 안다. 이것은 근본적으로 선형사상과 행렬이 같은것이며, 벡터와 행벡터가 같은것임을 말해준다. 
+라는 것도 안다. 이것은 근본적으로 선형사상과 행렬이 같은것이며, 벡터와 열벡터가 같은것임을 말해준다. 
 
 
 </br>
@@ -799,7 +809,7 @@ $$
 
 #### 행렬의 닮음과 닮음변환
 
-행렬 $\boldsymbol{A},\,\boldsymbol{B}\in \mathbb{F}^{n \times n}$ 에 대해 어떤 가역행렬 $\boldsymbol{P}\in \mathbb{F}^{n \times n}$ 이 존재하여 $\boldsymbol{A}=\boldsymbol{P}^{-1}\boldsymbol{BP}$ 가 성립할 때 두 행렬 $\boldsymbol{A}$ 와 $\boldsymbol{B}$ 는 닮았다고 하며 $\boldsymbol{P}^{-1}\boldsymbol{AP}$ 를 $\boldsymbol{A}$ 의 **닮음변환(similarity transformation)** 이라고 한다. 
+행렬 $\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 에 대해 어떤 가역행렬 $\boldsymbol{P}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 이 존재하여 $\boldsymbol{A}=\boldsymbol{P}^{-1}\boldsymbol{BP}$ 가 성립할 때 두 행렬 $\boldsymbol{A}$ 와 $\boldsymbol{B}$ 는 닮았다고 하며 $\boldsymbol{P}^{-1}\boldsymbol{AP}$ 를 $\boldsymbol{A}$ 의 **닮음변환(similarity transformation)** 이라고 한다. 
 
 :::
 :::
@@ -835,4 +845,59 @@ $\boldsymbol{P}$ 가 가역행렬일 때 $\boldsymbol{P}$ 의 각 열은 표준�
 
 </br>
 
+## 연습문제
 
+::: {#exr-linear_map_1}
+
+$V$ 가 유한차원 벡터공간이고 $T\in \mathcal{L}(V, W)$ 이다. $V$ 의 어떤 부분공간 $U$ 는 $U \cap \ker (T)=\{0\}$ 이며 $\text{im}\,(T)=\{T(u) : u \in U\}$ 임을 보이시오.
+:::
+
+::: {.solution}
+
+$\ker (T)$ 의 기저 $(v_1,\ldots,\,v_m)$ 을 확장하여 $V$ 의 기저 $(v_1,\ldots,\,v_m,\,u_1,\ldots,\,u_n)$ 을 구성 할 수 있다(@lem-basis_expansion). $U=\text{span}(u_1,\ldots,\,u_n)$ 이라 놓으면 된다. 
+
+:::
+
+
+</br>
+
+::: {#exr-dimension_and_injectivity_surjectivity}
+$U,\,V$ 가 유한차원 벡터공간일 때 다음을 보여라.
+
+&emsp; ($1$) $U \mapsto V$ 로의 단사인 선형사상이 존재할 필요충분조건은 $\dim(U)\le \dim(V)$ 이다.
+
+&emsp; ($2$) $U \mapsto V$ 로의 전사인 선형사상이 존재할 필요충분조건은 $\dim(U) \ge \dim (V)$ 이다.
+
+:::
+
+::: {.solution}
+($1$) $\dim(V) \ge \text{rank}\,(T) = \dim(U)-\text{nullity}\, (T)$ 임을 안다. $T$ 가 단사이면 $\text{nullity}\,(T)=0$ 이므로 $\dim(V) \ge \dim (U)$ 이다. $n=\dim (V)\ge \dim (U)=m$ 이라고 하자. $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 과 $U$ 의 기저 $(u_1,\ldots,\,u_m)$ 에 대해 $T(u_i)=v_i$, $i=1,\ldots,\,m$ 는 단사인 선형사상이다.
+
+($2$) $T$ 가 전사이면 $\dim(V) = \text{rank}\, (T) = \dim(U) - \text{nullity}\,(T)$ 에 따라 $\dim(U) \ge \dim(V)$ 이다. $m = \dim(U) \ge \dim(V) = n$ 이라 하면 $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 과 $U$ 의 기저 $(u_1,\ldots,\,u_m)$ 에 대해 
+
+$$
+T(u_i)=\left\{\begin{array}{ll} v_i \qquad &i=1,\ldots,\,n \\ 0_V & i > n\end{array}\right.
+$$
+
+는 전사인 선형사상이다. 
+:::
+
+</br>
+
+::: {#exr-inverse_image_of_linear_map}
+
+$T\in \mathcal{L}(U,\,V)$ 이며 $T(u)=v$ 일 때 다음을 보여라.
+
+&emsp; ($1$) $T^{-1}(\{v\}) = \{u+x: x\in \ker (T)\}$ 이다.
+
+&emsp; ($2$) $T^{-1}(\{v\})$ 와 $\ker (T)$ 사이에 전단사 함수가 존재한다.
+
+:::
+
+::: {.solution}
+
+($1$) $A = \{u+x: x\in \ker (T)\}$ 라 하자.  $y \in A$ 에 대해 $T(y) = v$ 이므로 $A \subset T^{-1}(\{v\})$ 이다. $y\in U - A$ 에 대해 $y-u\not\in \ker{T}$ 이므로 $T(y)\ne v$ 이다. 따라서 $T^{-1}(\{v\}) = A$ 이다.
+
+($2$) $f:A \to \ker (T)$ 를 $f(y) = y-u$ 로 정의하자. 임의의 $x\in \ker (T)$ 에 대해 $u+x\in A$ 이므로 $f$ 는 전사이다. $y_1-u=y_2-y \implies y_1 = y_2$ 이므로 $f$ 는 전사이다. 
+
+:::

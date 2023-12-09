@@ -360,9 +360,9 @@ $V_1,\,V_2,\ldots,\,V_m$ 이 모두 $V$ 의 부분공간 일 때 $V_0=V_1 + \cdo
 
 #### 직합의 조건
 
-다음 두 조건은 동치이다.  
+$V$ 의 부분공간 $V_1,\ldots,\,V_m$ 에 대해 다음은 동치이다.
 
-&emsp; ($1$) $V_1,\ldots,\,V_m$ 이 $V$ 의 부분공간이고 $V_1+ \cdots + V_m$ 이 직합이다.  
+&emsp; ($1$) $V_1+ \cdots + V_m = V_1 \oplus \cdots \oplus V_m$ 이다.
   
 &emsp; ($2$) $0_V$ 를 각각의 $v_i\in V_i$ 의 합으로 나타내는 방법은 모든 $v_1 = \cdots = v_m = 0_V$ 뿐이다.
 :::
@@ -375,10 +375,17 @@ $V_1,\,V_2,\ldots,\,V_m$ 이 모두 $V$ 의 부분공간 일 때 $V_0=V_1 + \cdo
 
 </br>
 
-::: {#cor-subspace}
-$V_1,\,V_2$ 가 $V$ 의 부분공간일 때 $V_1+ V_2 = U_1\oplus U_2$ 일 필요충분조건은 $V_1 \cap V_2 = \{0\}$ 이다.
+::: {#prp-condition_for_direct_sum}
+$V_1,\,V_2$ 가 $V$ 의 부분공간일 때 $V_1+ V_2 = V_1\oplus V_2$ 일 필요충분조건은 $V_1 \cap V_2 = \{0_V\}$ 이다.
 :::
 
+::: {.proof}
+
+$V_1+V_2 = V_1 \oplus V_2$ 임을 가정하자. $v\in V_1 \cap V_2$ 라면 $v\in V_1,\, (-v)\in V_2$ 이며 $v\ne 0$ 이면 @thm-directsum 에 위배된다. 따라서 $V_1 \cap V_2 = \{0_V\}$ 이다.
+
+$V_1 \cap V_2= \{0_V\}$ 라고 하자. 어떤 $v_1\in V_1,\, v_2\in V_2$ 에 대해 $v_1+v_2=0$ 이라고 하자. $v_2=(-v_1)\in V_1$ 이므로 $v_1=v_2=0$ 일 수 밖에 없다. 따라서 $V_1+V_2 = V_1\oplus V_2$ 이다. $\square$
+
+:::
 
 
 </br>
@@ -468,7 +475,7 @@ $$
 :::
 
 ::: {.proof}
-$U = U_1 \times \cdots \times U_m$ 에 대해 $u,\,u'\in U,\, \lambda \in \mathbb{F}$ 일 때 $\phi (u+\lambda u') = \phi(u)+\lambda \phi (u')$ 인 것을 쉽게 보일 수 있다. $\square$
+$U = U_1 \times \cdots \times U_m$ 에 대해 $u,\,u'\in U,\, c \in \mathbb{F}$ 일 때 $\phi (u+c u') = \phi(u) + c\phi (u')$ 인 것을 쉽게 보일 수 있다. $\square$
 :::
 
 </br>
@@ -838,6 +845,15 @@ $\dim (U_1) = m+k$, $\dim (U_2) = m+n$ 이며 $\dim (U_1+U_2)= m+n+k$ 이므로 
 
 :::
 
+</br> 
+
+::: {#cor-dimension_of_direct_sum}
+
+유한차원 벡터공간 $V$ 와 그 부분공간 $U_1,\,U_2$ 에 대해 $V=U_1\oplus U_2$ 이면 $\dim (V) = \dim(U_1) + \dim (U_2)$ 이다.
+
+:::
+
+
 </br>
 
 ## 벡터의 행렬표현
@@ -921,10 +937,10 @@ $\mathbb{R}^2$ 에서 $\mathcal{B}_1 = ((1, 0),\, (0, 1))$ 이 표준기저이�
 </br>
 
 ::: {#exm-sum_of_vector_in_matrix_representation}
-$n$ 차원 벡터공간 $V$ 에 대해 $u,\,v\in V,\,\lambda \in \mathbb{F}$ 라 하자. $V$ 의 한 순서기저 $\mathcal{B} = (v_1,\ldots,v_n)$ 에 대해 $v=\sum_i a_i v_i$, $u=\sum_i b_i v_i$ 일 때, 
+$n$ 차원 벡터공간 $V$ 에 대해 $u,\,v\in V,\,c \in \mathbb{F}$ 라 하자. $V$ 의 한 순서기저 $\mathcal{B} = (v_1,\ldots,v_n)$ 에 대해 $v=\sum_i a_i v_i$, $u=\sum_i b_i v_i$ 일 때, 
 
 $$
-[u+\lambda v]_{\mathcal{B}} = \left[\sum_{i} (a_i + \lambda b_i) v_i \right]_{\mathcal{B}} = \begin{bmatrix} a_1 + \lambda b_i \\ \vdots \\ a_n + \lambda b_n\end{bmatrix}
+[u+c v]_{\mathcal{B}} = \left[\sum_{i} (a_i + c b_i) v_i \right]_{\mathcal{B}} = \begin{bmatrix} a_1 + c b_i \\ \vdots \\ a_n + c b_n\end{bmatrix}
 $$
 
 이다.
@@ -938,3 +954,33 @@ $$
 :::
 
 </br>
+
+## 연습문제
+
+::: {#exr-union_of_two_subspaces}
+
+벡터공간 $V$ 의 두 부분공간 $U_1$, $U_2$ 에 대해 $(U_1 \cup U_2) \le V$ 일 필요충분조건은 $U_1 \le U_2$ 이거나 $U_2 \le U_1$ 인 것을 보여라.
+:::
+
+::: {.solution}
+
+$U_1 \le U_2$ 일 때 $(U_1 \cup U_2) \le V$ 인 것은 자명하다. $u_1 \in U_1-U_2,\, u_2\in U_2-U_1$ 이라 하자. $u_1+u_2 \not\in U_1 \cup U_2$ 이므로 $U_1 \cup U_2$ 는 부분공간이 될 수 없다.
+
+:::
+
+</br>
+
+::: {#exr-basis_or_direct_sum}
+
+$U, V$ 가 벡터공간 $W$ 의 부분공간이며 $W=U \oplus V$ 라고 하자. $(u_1,\ldots,\,u_n)$ 이 $U$ 의 기저이고 $(v_1, \ldots,\,v_m)$ 이 $V$ 의 기저이면 $(u_1,\ldots,\,u_n,\,v_1,\ldots,\,v_m)$ 은 $W$ 의 기저임을 보여라.
+:::
+
+::: {.solution}
+
+직합의 조건에 의해 $0=u+v,\,u\in U,\,v\in V$ 는 $u=v=0$ 뿐이다. 따라서 $(u_1,\ldots,\,u_n,\,v_1,\ldots,\,v_m)$ 은 선형독립이므로 $U\oplus V$ 의 기저이다.
+
+
+:::
+
+</br>
+

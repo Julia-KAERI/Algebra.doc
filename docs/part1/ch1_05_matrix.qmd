@@ -22,9 +22,9 @@ crossref:
 
 1. 행의 갯수와 열의 갯수가 같은 행렬을 **정사각 행렬(square matrix)** 라 한다.
 
-2. 행렬에서 행과 열이 같은 위치의 성분을 **대각성분 (diagonal elements)** 이라 한다.
+2. 행렬에서 행과 열이 같은 위치의 성분을 **대각성분 (diagonal elements)** 이라 한다. 즉 행렬 $\boldsymbol{A}$ 에서 $A_{ii}$ 들이 대각성분이다.
 
-3. 항등행렬 $\boldsymbol{I}$ 는 정사각행렬로 $(\boldsymbol{I})_{ij}=\delta_{ij}$ 로 정의된다. 즉 대각성분이 $1$ 이고 나머지 성분은 $0$ 인 행렬이다. $n \times n$ 행렬 $\boldsymbol{I}$ 와 $\boldsymbol{v} \in \mathbb{F}^{n}$ 에 대해, $\boldsymbol{Iv}=\boldsymbol{v}$ 이며 $n \times m$ 행렬 $\boldsymbol{A}$ 와 $m \times n$ 행렬 $\boldsymbol{B}$ 에 대해 $\boldsymbol{IA}=\boldsymbol{A},\, \boldsymbol{BI}=\boldsymbol{B}$ 이므로 항등행렬이라 불린다. 항등행렬의 크기를 고려할 때 $n\times n$ 항등행렬을 $\boldsymbol{I}_n$ 으로 표현한다.
+3. 항등행렬 $\boldsymbol{I}_n \in \mathcal{M}_{n \times n}(\mathbb{F})$ 는 정사각행렬이며 대각성분이 $1$ 이고 나머지 성분은 $0$ 인 행렬이다. 즉 $(\boldsymbol{I}_n)_{ij}=\delta_{ij}$ 로 정의된다. $\boldsymbol{v} \in \mathcal{M}_{n}(\mathbb{F})$ 에 대해, $\boldsymbol{Iv}=\boldsymbol{v}$ 이며 $n \times m$ 행렬 $\boldsymbol{A}$ 와 $m \times n$ 행렬 $\boldsymbol{B}$ 에 대해 $\boldsymbol{IA}=\boldsymbol{A},\, \boldsymbol{BI}=\boldsymbol{B}$ 이므로 항등행렬이라 불린다. 임의의 크기의 항등행렬을 $\boldsymbol{I}$ 으로 표현한다.
 
 4. $m \times n$ 행렬 $\boldsymbol{A}$ 에 대해 $(\boldsymbol{B})_{ij}= (\boldsymbol{A})_{ji}$ 인 $n \times m$ 행렬 $\boldsymbol{B}$ 를 $\boldsymbol{A}$ 의 **전치행렬 (transposed matrix)** 이라 하고 $\boldsymbol{A}^T$ 라 쓴다.  
 
@@ -186,7 +186,7 @@ $\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\ker (\bol
 $$ 
 \begin{aligned}
 \ker (\boldsymbol{A}) &= \{ \boldsymbol{x} \in \mathcal{M}_{n}(\mathbb{F}) : \boldsymbol{Ax} = \boldsymbol{0}\}, \\
-\text{im} (\boldsymbol{A}) & = \{ \boldsymbol{Ax} : \boldsymbol{x} \in \mathcal{M}_m(\mathbb{F})\}, \\
+\text{im} (\boldsymbol{A}) & = \{ \boldsymbol{Ax} : \boldsymbol{x} \in \mathcal{M}_n(\mathbb{F})\}, \\
 \text{nullity} (\boldsymbol{A}) &= \dim (\ker (\boldsymbol{A})), \\
 \text{rank} (\boldsymbol{A}) & =  \dim (\text{im} (\boldsymbol{A})).
 \end{aligned}

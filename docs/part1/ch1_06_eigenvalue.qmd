@@ -268,7 +268,7 @@ B_{1i}\boldsymbol{u}_i + \cdots + B_{mi}\boldsymbol{u}_m + \cdots + B_{ni}\bolds
 \end{array} \right.
 $$
 
-이다. 즉 $\{\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_m\}$ 를 확장하여 $\mathbb{F}^{n \times 1}$ 기저에서는 $\boldsymbol{A}$ 로 표현된 변환이 블럭 상삼각행렬이 된다. 즉 $\boldsymbol{P} = \begin{bmatrix} \boldsymbol{u}_1 & \cdots &\boldsymbol{u}_n \end{bmatrix}$ 에 대해 $\boldsymbol{P}^{-1}\boldsymbol{AP}$ 는 블록 상삼각행렬이다. $\square$
+이다. 즉 $\{\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_m\}$ 를 확장하여 $\mathbb{F}^{n }$ 기저에서는 $\boldsymbol{A}$ 로 표현된 변환이 블럭 상삼각행렬이 된다. 즉 $\boldsymbol{P} = \begin{bmatrix} \boldsymbol{u}_1 & \cdots &\boldsymbol{u}_n \end{bmatrix}$ 에 대해 $\boldsymbol{P}^{-1}\boldsymbol{AP}$ 는 블록 상삼각행렬이다. $\square$
 
 :::
 
@@ -364,3 +364,36 @@ $$
 
 </br>
  -->
+
+## 연습문제
+
+::: {#exr-invariant_subspace_1}
+
+$\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\boldsymbol{AB}=\boldsymbol{BA}$ 일 때 다음을 보여라 
+
+&emsp; ($1$) $\ker (\boldsymbol{A})$ 는 $\boldsymbol{B}$ 에 대한 불변부분공간이다.
+
+&emsp; ($2$) $\text{im}\,(\boldsymbol{A})$ 는 $\boldsymbol{B}$ 에 대한 불변부분공간이다.
+
+:::
+
+::: {.solution}
+
+($1$) $\boldsymbol{u}\in \ker (\boldsymbol{A})$ 일 때 $\boldsymbol{ABu}=\boldsymbol{BAu}= \boldsymbol{0}$ 이므로 $\boldsymbol{Bu}\in \ker (\boldsymbol{A})$ 이다. 즉 $\ker(\boldsymbol{A})$ 는 $\boldsymbol{B}$ 에 대한 불변부분공간이다.
+
+($2$) $\boldsymbol{v}\in \text{im} \,(\boldsymbol{A})$ 라고 하자. $\boldsymbol{v} = \boldsymbol{Au}$ 인 벡터 $\boldsymbol{v}$ 가 존재하며, $\boldsymbol{Bv}= \boldsymbol{BAu}= \boldsymbol{ABu} \in \text{im}\, (\boldsymbol{A})$ 이다. 따라서 $\text{im}\, (\boldsymbol{A})$ 는 $\boldsymbol{B}$ 에 대한 불변부분공간이다.
+
+:::
+
+</br>
+
+::: {#exr-invarant_subspace_2}
+
+$V=\mathcal{M}_{n }(\mathbb{F})$ 이고 $U \le V$ 이며 모든 $V$ 에 대한 연산자에 대해 불변이면 $U=\{\boldsymbol{0}\}$ 이거나 $U=V$ 임을 보이시오.
+
+:::
+
+::: {.solution}
+$U=\{\boldsymbol{0}\}$ 이면 자명하다. $\dim U < \dim V$ 일 때 $U
+
+:::

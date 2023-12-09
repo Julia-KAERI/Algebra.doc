@@ -32,12 +32,12 @@ $$
 </br>
 
 ::: {#exr-adjoint_matrix}
-정규직교기저에서 정의된 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $\boldsymbol{v}\in\mathcal{M}_{m \times 1}(\mathbb{F})$, $\boldsymbol{u}\in \mathcal{M}_{n \times 1}(\mathbb{F})$ 에 대해 $\langle \boldsymbol{Au},\, \boldsymbol{v} \rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{v} \rangle$ 임을 보여라.
+정규직교기저에서 정의된 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $\boldsymbol{v}\in\mathcal{M}_{m }(\mathbb{F})$, $\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\langle \boldsymbol{Au},\, \boldsymbol{v} \rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{v} \rangle$ 임을 보여라.
 :::
 
 ::: {.proof}
 
-$\mathcal{M}_{n \times n}(\mathbb{F})$ 의 정규직교기저 $\{\boldsymbol{e}_i\}$ 와 $\mathcal{M}_{m \times 1}(\mathbb{F})$ 의 정규직교기저 $\{\boldsymbol{f}_j\}$ 를 생각하자. $\boldsymbol{u}=\sum_i u_i \boldsymbol{e}_i$, $\boldsymbol{v}= \sum_j v_j \boldsymbol{f}_j$ 라고 하면,
+$\mathcal{M}_{n \times n}(\mathbb{F})$ 의 정규직교기저 $\{\boldsymbol{e}_i\}$ 와 $\mathcal{M}_{m }(\mathbb{F})$ 의 정규직교기저 $\{\boldsymbol{f}_j\}$ 를 생각하자. $\boldsymbol{u}=\sum_i u_i \boldsymbol{e}_i$, $\boldsymbol{v}= \sum_j v_j \boldsymbol{f}_j$ 라고 하면,
 $$
 \begin{aligned}
 \langle \boldsymbol{Au},\,\boldsymbol{v}\rangle &= \boldsymbol{Au}\cdot \boldsymbol{v} = \sum_i (\boldsymbol{Au})_i\overline{v_i} = \sum_{i, j} A_{ij}u_j\overline{v}_i \\
@@ -102,8 +102,8 @@ $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성�
 $$
 \begin{aligned}
 \boldsymbol{v}\in \ker (\boldsymbol{A}^\ast) & \iff \boldsymbol{A}^\ast\boldsymbol{v}=\boldsymbol{0}  \\
-&\iff \forall\boldsymbol{u}\in \mathcal{M}_{n\times 1}(\mathbb{F}),\, \langle \boldsymbol{u},\boldsymbol{A}^\ast\boldsymbol{v}\rangle = 0 \\
-&\iff \forall\boldsymbol{u}\in \mathcal{M}_{n \times 1}(\mathbb{F}), \langle \boldsymbol{Au},\boldsymbol{v}\rangle = 0 \\
+&\iff \forall\boldsymbol{u}\in \mathcal{M}_{n}(\mathbb{F}),\, \langle \boldsymbol{u},\boldsymbol{A}^\ast\boldsymbol{v}\rangle = 0 \\
+&\iff \forall\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{F}), \langle \boldsymbol{Au},\boldsymbol{v}\rangle = 0 \\
 &\iff \boldsymbol{v} \in \left(\text{im}(\boldsymbol{A})\right)^\perp
 \end{aligned}
 $$
@@ -141,7 +141,7 @@ $$
 
 &emsp; ($3$) 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.
 
-&emsp; ($4$) 모든 $\boldsymbol{u}\in \mathcal{M}_{n \times 1}(\mathbb{F})$ 에 대해 $\langle \boldsymbol{Au},\,\boldsymbol{u}\rangle =0$ 이면 $\boldsymbol{A}=0$ 이다.
+&emsp; ($4$) 모든 $\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\langle \boldsymbol{Au},\,\boldsymbol{u}\rangle =0$ 이면 $\boldsymbol{A}=0$ 이다.
 
 :::
 
@@ -150,7 +150,7 @@ $$
 ($1$) $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{Au}\rangle$.
 
 
-($2$) 고유벡터 $\boldsymbol{u}\in \mathcal{M}_{m \times 1}(\mathbb{F})$ 에 대한 고유값을 $\lambda$ 라 하자. 
+($2$) 고유벡터 $\boldsymbol{u}\in \mathcal{M}_{m }(\mathbb{F})$ 에 대한 고유값을 $\lambda$ 라 하자. 
 
 $$
 \lambda \|\boldsymbol{u}\|^2 = \lambda \langle \boldsymbol{u},\, \boldsymbol{u}\rangle  = \langle \boldsymbol{Au},\, \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{u} \rangle = \langle \boldsymbol{u},\, \boldsymbol{Au} \rangle = \overline{\lambda}\|\boldsymbol{u}\|^2\,.
@@ -200,7 +200,7 @@ $$
 
 복소연산자 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음 두 명제는 동치이다.
 
-&emsp; ($1$) 임의의 $\boldsymbol{u}\in \mathcal{M}_{n \times 1}(\mathbb{C})$ 에 대해 $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle$ 은 실수이다.
+&emsp; ($1$) 임의의 $\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle$ 은 실수이다.
 
 &emsp; ($2$) $\boldsymbol{A}$ 는 hermitian 이다.
 
@@ -236,7 +236,7 @@ $$
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-isometry}
-행렬 $\boldsymbol{S} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 임의의 $\boldsymbol{v} \in \mathcal{M}_{n \times 1}(\mathbb{F})$ 에 대해
+행렬 $\boldsymbol{S} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 임의의 $\boldsymbol{v} \in \mathcal{M}_{n }(\mathbb{F})$ 에 대해
 
 $$
 \|\boldsymbol{Sv}\|^2 = \|\boldsymbol{v}\|^2
@@ -313,7 +313,7 @@ $$
 
 ($2\implies 3$) $\langle \boldsymbol{e}_i, \boldsymbol{e}_i\rangle = \delta_{ij}$ 이므로 ($2$) 에 의해 $\langle \boldsymbol{Se}_i, \boldsymbol{Se}_j \rangle = \langle \boldsymbol{e}_i, \boldsymbol{e}_i\rangle = \delta_{ij}$ 이다.
 
-($3 \implies 4$) 정규직교기저 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 에 대해 $\langle \boldsymbol{S}^\ast\boldsymbol{Se}_i,\,\boldsymbol{e}_j\rangle = \langle \boldsymbol{Se}_i,\boldsymbol{Se}_j\rangle = \delta_{ij}$ 임을 가정한다. 임의의 $\boldsymbol{u}\in \mathcal{M}_{n \times 1}(\mathbb{F})$ 에 대해 $\boldsymbol{u}=\sum_i u_i \boldsymbol{e}_i$ 이고 $\boldsymbol{S}^\ast\boldsymbol{Su} = \sum_i u'_i \boldsymbol{e}_i$ 라 하자.
+($3 \implies 4$) 정규직교기저 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 에 대해 $\langle \boldsymbol{S}^\ast\boldsymbol{Se}_i,\,\boldsymbol{e}_j\rangle = \langle \boldsymbol{Se}_i,\boldsymbol{Se}_j\rangle = \delta_{ij}$ 임을 가정한다. 임의의 $\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\boldsymbol{u}=\sum_i u_i \boldsymbol{e}_i$ 이고 $\boldsymbol{S}^\ast\boldsymbol{Su} = \sum_i u'_i \boldsymbol{e}_i$ 라 하자.
 
 $$
 \begin{aligned}
@@ -322,7 +322,7 @@ u'_j &= \langle \boldsymbol{S}^\ast \boldsymbol{Su}, \boldsymbol{e}_j \rangle = 
 \end{aligned}
 $$
  
-이다. 임의의 $\boldsymbol{u}\in \mathcal{M}_{n \times 1}(\mathbb{F})$ 에 대해 $\boldsymbol{S}^\ast \boldsymbol{Su} =  \boldsymbol{u}$ 이므로 $\boldsymbol{S}^\ast \boldsymbol{S}=\boldsymbol{I}$ 이다. 즉 $\boldsymbol{S}^\ast = \boldsymbol{S}^{-1}$ 이다. 
+이다. 임의의 $\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\boldsymbol{S}^\ast \boldsymbol{Su} =  \boldsymbol{u}$ 이므로 $\boldsymbol{S}^\ast \boldsymbol{S}=\boldsymbol{I}$ 이다. 즉 $\boldsymbol{S}^\ast = \boldsymbol{S}^{-1}$ 이다. 
 
 
 ($4 \implies 1$) 임의의 벡터 $\boldsymbol{u}$ 에 대해 $\boldsymbol{S}^\ast =\boldsymbol{S}^{-1}$ 이라면

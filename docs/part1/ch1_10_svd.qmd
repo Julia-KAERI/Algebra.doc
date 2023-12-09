@@ -48,7 +48,7 @@ $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 �
 
 ($4 \implies 5$) 앞서 정의한 $\boldsymbol{R}$ 이다.
 
-($5 \implies 6$) $\boldsymbol{A}=\boldsymbol{R}^\ast \boldsymbol{R}$ 이면 $\boldsymbol{A}^\ast = (\boldsymbol{R}^\ast\boldsymbol{R})^\ast = \boldsymbol{R}^\ast \boldsymbol{R}=\boldsymbol{A}$ 이므로 $\boldsymbol{A}$ 는 에르미트 행렬이다. 또한 임의의 $\boldsymbol{v}\in \mathcal{M}_{n \times 1}(\mathbb{C})$ 에 대해 $\langle \boldsymbol{v},\, \boldsymbol{A}\boldsymbol{v}\rangle = \langle \boldsymbol{R}^\ast \boldsymbol{R}\boldsymbol{v},\, \boldsymbol{v} \rangle = \|\boldsymbol{Rv}\|^2\ge 0$ 이므로 $\boldsymbol{A}$ 는 positive definite 이다. $\square$
+($5 \implies 6$) $\boldsymbol{A}=\boldsymbol{R}^\ast \boldsymbol{R}$ 이면 $\boldsymbol{A}^\ast = (\boldsymbol{R}^\ast\boldsymbol{R})^\ast = \boldsymbol{R}^\ast \boldsymbol{R}=\boldsymbol{A}$ 이므로 $\boldsymbol{A}$ 는 에르미트 행렬이다. 또한 임의의 $\boldsymbol{v}\in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \boldsymbol{v},\, \boldsymbol{A}\boldsymbol{v}\rangle = \langle \boldsymbol{R}^\ast \boldsymbol{R}\boldsymbol{v},\, \boldsymbol{v} \rangle = \|\boldsymbol{Rv}\|^2\ge 0$ 이므로 $\boldsymbol{A}$ 는 positive definite 이다. $\square$
 
 :::
 
