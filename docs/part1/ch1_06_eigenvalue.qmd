@@ -617,8 +617,17 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때 다음이 동�
 :::
 
 ::: {.solution}
+($1 \implies 2$) $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때
 
-($1 \implies 2$) $\boldsymbol{A}$ 가 대각화 가능 행렬이라면 @prp-diagonalizability 에서 보였듯이 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_n(\mathbb{C})$ 의 기저 $\{\boldsymbol{u}_1,\ldots,\boldsymbol{u}_n\}$ 이 존재한다. $\boldsymbol{u}_i$ 의 고유값을 $\lambda_i$ 라고 하자. 
+$$
+\begin{aligned}
+\boldsymbol{Au}=\lambda_u\boldsymbol{u} \iff (\boldsymbol{A}-\lambda \boldsymbol{I}_n)\boldsymbol{u} = (\lambda_u -\lambda)\boldsymbol{u}
+\end{aligned}
+$$
+
+이므로 $\boldsymbol{u}$ 가 $\boldsymbol{A}$ 의 고유벡터인것과 $\boldsymbol{A}-\lambda\boldsymbol{I}_n$ 의 고유벡터인것은 동치임을 안다. 따라서 $\boldsymbol{A}$ 가 대각화 가능인것과 임의의 $\lambda\in \mathbb{C}$ 에 대해 $\boldsymbol{A}-\lambda \boldsymbol{I}_n$ 이 대각화 가능인것은 동치이다. $\boldsymbol{A}-\lambda\boldsymbol{I}_n$ 이 대각화 가능이므로 @exr-axler_5_c_1 에서 보였듯이 $\mathcal{M}_n(\mathbb{C}) = \ker (\boldsymbol{A}-\lambda\boldsymbol{I}_n) \oplus \text{im} (\boldsymbol{A}-\lambda\boldsymbol{I}_n)$ 이다. 
+
+($2 \implies 1$) @thm-rank_nullity 에 의해 $\ker (\boldsymbol{A}-\lambda\boldsymbol{I}_n) \cap \text{im} (\boldsymbol{A}-\lambda\boldsymbol{I}_n) = \{\boldsymbol{0}\}$ 이다. 
 
 
 :::
