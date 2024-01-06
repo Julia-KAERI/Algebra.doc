@@ -676,21 +676,63 @@ $\boldsymbol{A},\, \boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이�
 
 ::: {.solution}
 
-$(\boldsymbol{u}_1,\ldots,\boldsymbol{u}_n)$ 을 각각 $\lambda_i$ 의 고유값을 갖는 $\boldsymbol{A}$ 의 고유벡터라고 하고 $\boldsymbol{Bu}_i = \eta_i \boldsymbol{u}_i$ 라고 하자. $\boldsymbol{U}=\begin{bmatrix} \boldsymbol{u}_1 & \cdots & \boldsymbol{u}_n \end{bmatrix}$ 에 대해 $\boldsymbol{U}^{-1}\boldsymbol{AU}$ 는 대각행렬이며 이를 $\boldsymbol{D}$ 라고 하자. $\boldsymbol{U}^{-1}\boldsymbol{BU}=\boldsymbol{C}$ 라고 하자. 
+$(\boldsymbol{u}_1,\ldots,\boldsymbol{u}_n)$ 을 각각 $\lambda_i$ 의 고유값을 갖는 $\boldsymbol{A}$ 의 고유벡터라고 하면 이 벡터는 각각 다른 고유값을 가지므로 선형독립이며, 따라서 기저이다. $\boldsymbol{U} = \begin{bmatrix} \boldsymbol{u}_1 & \cdots & \boldsymbol{u}_n\end{bmatrix}$ 에 대해 $\boldsymbol{U}^{-1}\boldsymbol{AU}$ 와 $\boldsymbol{U}^{-1}\boldsymbol{BU}$ 는 각각 고유값을 대각성분으로 갖는 대각행렬이며, 두 대각행렬의 곱은 순서에 관계 없이 같으므로, 
 
 $$
-\boldsymbol{U}^{-1}\boldsymbol{ABU}= \boldsymbol{DC}, \qquad \boldsymbol{U}^{-1}\boldsymbol{BAU}= \boldsymbol{CD}
+(\boldsymbol{U}^{-1}\boldsymbol{AU}) (\boldsymbol{U}^{-1}\boldsymbol{BU})=(\boldsymbol{U}^{-1}\boldsymbol{BU}) (\boldsymbol{U}^{-1}\boldsymbol{AU})
 $$
 
-이며
-
-$$
-\begin{aligned}
-(\boldsymbol{DC})_{ij} &= \sum_k D_{ik}C_{kj} = \sum_k D_{ii}\delta{ik}c_{kj}= D_{ii}C_{ij}, \\
-(\boldsymbol{CD})_{ij} &= \sum_k C_{ik}D_{kj} = \sum_k D_{jj}\delta{ik}c_{ik}= D_{jj}C_{ij}
-\end{aligned}
-$$
-
-
+이다. 이로부터 $\boldsymbol{AB}=\boldsymbol{BA}$ 를 얻는다.
 
 :::
+
+</br>
+
+::: {#exr-axler_5_c_16}
+
+#### 피보나치 수열
+
+수열 $\langle f_n \rangle$ 이 다음과 같이 정의되었다. (이 수열을 피보나치 수열 (Fibonacci sequence) 이라고 한다.)
+
+$$
+f_1 = 1,\qquad f_2=1,\qquad f_{n+2} = f_{n+1} +f_n.
+$$
+
+$\boldsymbol{F} = \begin{bmatrix} 0 & 1 \\ 1 & 1\end{bmatrix}$ 에 대해 다음을 보여라.
+
+&emsp; ($1$) $\boldsymbol{F}^n \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} f_n \\ f_{n+1}\end{bmatrix}$ 이다.
+
+&emsp; ($2$) $\boldsymbol{F}$ 의 고유값을 구하라.
+
+&emsp; ($3$) $\boldsymbol{F}$ 의 고유벡터로 이루어진 $\mathcal{M}_{2}(\mathbb{R})$ 의 기저를 구하라.
+
+&emsp; ($4$) ($3$) 의 해를 이용하여 $\boldsymbol{F}^{n} \begin{bmatrix}0 \\ 1 \end{bmatrix}$ 를 계산하라. 
+
+&emsp; ($5$) ($4$) 를 이용하여 각각의 양의 정수 $n$ 에 대해 $f_n$ 은 $\dfrac{1}{\sqrt{5}} \left(\dfrac{1+\sqrt{5}}{2}\right)^n$ 에 가장 가까운 정수임을 보여라.
+:::
+
+::: {.solution}
+
+($1$) $n=1$ 일 경우로부터 $f_1=1,\, f_2=2$ 임을 안다. $\boldsymbol{F}^n \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} f_n \\ f_{n+1}\end{bmatrix}$ 라고 가정하자.
+
+$$
+\boldsymbol{F}^{n+1} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \boldsymbol{F}\begin{bmatrix} f_n \\ f_{n+1}\end{bmatrix} = \begin {bmatrix} f_{n+1} \\ f_{n}+f_{n+1}= f_{n+2}\end{bmatrix}
+$$
+
+이다. 
+
+($2$) $\det (\lambda \boldsymbol{I}_2-\boldsymbol{F})=0$ 를 통해 고유값 $\lambda_1 = \dfrac{1+\sqrt{5}}{2}$ 와 $\lambda_2 = \dfrac{1-\sqrt{5}}{2}$ 를 얻을 수 있다.
+
+($3$) $\boldsymbol{Fu}_i = \lambda_i \boldsymbol{u}_i$ 를 통해, $\boldsymbol{u}_1 = \begin{bmatrix}1 \\ \frac{1+\sqrt{5}}2\end{bmatrix}$, $\boldsymbol{u}_2 = \begin{bmatrix}1 \\ \frac{1-\sqrt{5}}{2}\end{bmatrix}$ 를 얻으며 둘은 선형독립이므로 $\mathcal{M}_2(\mathbb{R})$ 의 기저이다.
+
+($4$) $\begin{bmatrix} 0 \\ 1 \end{bmatrix} = \dfrac{1}{\sqrt{5}}\left(\boldsymbol{u}_1 -\boldsymbol{u}_2\right)$ 이며 $\boldsymbol{F}^{n}(\dfrac{1}{\sqrt{5}}\boldsymbol{u}_1-\dfrac{1}{\sqrt{5}}\boldsymbol{u}_2) = \dfrac{1}{\sqrt{5}} (\lambda_1)^n \boldsymbol{u}_1 - \dfrac{1}{\sqrt{5}}(\lambda_2)^n \boldsymbol{u}_2$ 이다. 즉, 
+
+$$
+\boldsymbol{F}^n\begin{bmatrix}0 \\ 1 \end{bmatrix} = \dfrac{1}{\sqrt{5}}\left[{\lambda_1}^n \boldsymbol{u}_1 - {\lambda_2}^n \boldsymbol{u}_2\right] = \dfrac{1}{\sqrt{5}} \begin{bmatrix} \left(\dfrac{1+\sqrt{5}}{2}\right)^n - \left(\dfrac{1-\sqrt{5}}{2}\right)^n  \\ \left(\dfrac{1+\sqrt{5}}{2}\right)^{n+1}  - \left(\dfrac{1-\sqrt{5}}{2}\right)^{n+1} \end{bmatrix} 
+$$
+
+이다. 따라서 $f_n =\dfrac{1}{\sqrt{5}} \left[ \left(\dfrac{1+\sqrt{5}}{2}\right)^n - \left(\dfrac{1-\sqrt{5}}{2}\right)^n\right]$ 이다.
+
+($5$) $f_n$ 은 정의에 의해 항상 자연수이다. 또한 $\left|\dfrac{1}{\sqrt{5}}\left(\dfrac{1-\sqrt{5}}{2}\right)^n\right| < 0.277$ 이다. $a,\,b\in \mathbb{R},\, n\in \mathbb{Z}_+$ 에 대해 $a+b=n$ 이며 $|b|<0.3$ 이라면 $|n-a|<0.3$ 이므로 $n$ 은 $a$ 에 가장 가까운 정수 일 수 밖에 없다. 따라서 $f_n$ 은 $\dfrac{1}{\sqrt{5}}\left(\dfrac{1+\sqrt{5}}{2}\right)^n$ 에 가장 가까운 정수일 수 밖에 없다.
+
+::: 

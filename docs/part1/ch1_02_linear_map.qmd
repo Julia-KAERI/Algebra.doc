@@ -901,3 +901,308 @@ $T\in \mathcal{L}(U,\,V)$ 이며 $T(u)=v$ 일 때 다음을 보여라.
 ($2$) $f:A \to \ker (T)$ 를 $f(y) = y-u$ 로 정의하자. 임의의 $x\in \ker (T)$ 에 대해 $u+x\in A$ 이므로 $f$ 는 전사이다. $y_1-u=y_2-y \implies y_1 = y_2$ 이므로 $f$ 는 전사이다. 
 
 :::
+
+</br>
+
+::: {#exr-axler_3_B_24}
+
+$W$ 가 유한차원 벡터공간이고 $T_1,\,T_2\in \mathcal{L}(V, W)$ 일 때 다음은 동치임을 보여라. 
+
+&emsp; ($1$) $\ker (T_1) \subset \ker (T_2)$,  
+
+&emsp; ($2$) $T_2 = S T_1$ 가 되도록 하는 어떤 $S\in \mathcal{L}(W)$ 가 존재한다.
+
+:::
+
+::: {.solution}
+
+($1 \implies 2$) $\text{im}(T_1)\le W$ 이므로 $\text{im}(T_1)$ 은 유한차원이다. $(w_1,\ldots,\,w_m)$ 을 $\text{im}(T_1)$ 의 기저라고 하자. $T_1^{-1}(\{w_i\})$ $(i=1,\ldots,\,m)$ 에서 하나의 벡터를 골라 $v_j$ 라고 하자. $0_V = c_1v_1 + \cdots c_m v_m$ 이라고 하면 $0_W = \sum_{i=1}^m c_i T(v_i) = \sum_{i=1}^m c_i w_i$ 이므로 $c_1=\cdots =c_m=0$ 이다. 즉 $\{v_1,\ldots,\,v_m\}$ 은 선형독립이다. 
+
+이제 $v\in V$ 는 $v=\sum_{i=1}^m c_iv_i + u,\,u\in \ker (T_1)$ 으로 쓸 수 있다. $\ker (T_1)\subset \ker (T_2)$ 이므로, $T_2(v) = \sum_{i=1}^m c_i T_2(v_i)$ 이다. 
+
+이제 $(w_1,\ldots,\,w_m)$ 을 확장하여 $(w_1, \ldots, w_m, w_{m+1}, \ldots, \,w_n)$ 이 $W$ 의 기저라고 하자. $S\in \mathcal{L}(W)$ 를, 
+
+$$
+S(w_i) = \left\{\begin{array}{ll} T_2(v_i)\qquad &;i \le m \\ 0 &; i>m\end{array} \right.
+$$
+
+로 놓으면 $ST_1 = T_2$ 이다. 
+
+($2 \implies 1$) $v \in \ker (T_1)$ 이면 $T_2 (v) = ST_1(v)=0_W$ 이므로 $v\in \ker (T_2)$ 이다. 즉 $\ker (T_1)\subset \ker (T_2)$ 이다.
+
+:::
+
+</br>
+
+::: {#exr-axler_3_B_25}
+
+$V$ 가 유한차원벡터공간이고 $T_1,\,T_2\in \mathcal{L}(V,W)$ 일 때 다음은 동치임을 보여라.
+
+&emsp; ($1$) $\text{im}(T_1) \subset \text{im}(T_2)$, 
+
+&emsp; ($2$) $T_1 = T_2S$ 가 되도록 하는 어떤 $S\in \mathcal{L}(V)$ 가 존재한다.
+
+:::
+
+::: {.solution}
+
+($1\implies 2$ ) $\text{im}(T_1)$ 의 기저 $(w_1,\ldots,\,w_m)$ 을 생각하자. $T_1^{-1}(\{w_i\})$ 에서 하나의 벡터를 선택하여 $v_i$ 라고 하면 $(v_1,\ldots,\,v_m)$ 은 선형 독립임을 안다(@exr-axler_3_B_24). $(w_1,\ldots,\,w_m)$ 을 확장하여 $(w_1,\ldots,w_m,\, w_{m+1},\ldots, w_{n})$ 이 $\text{im}(T_2)$ 의 기저가 되도록 하고 $T_1$ 에서와 같은 방법으로 $(u_1,\ldots,u_m, u_{m+1}, \ldots, u_{n})$ 을 얻는다. 또한 선형독립인 이 벡터를 확장하여 $(v_1,\ldots,\,v_m,\ldots,\,v_n, \ldots,v_N)$ 이 $V$ 의 기저가 되도록 할 수 있다. 이제
+
+$$
+S(v_i) = \left\{\begin{array}{ll} u_i, \qquad &;\text{if } i \le m, \\ 0 &;\text{if }i > m. \end{array}\right.
+$$
+
+로 놓으면 된다.
+
+($2 \implies 1$) 자명하다.
+
+:::
+
+</br>
+
+::: {#exr-axler_3_B_28}
+
+$T\in \mathcal{L}(V, W)$ 이고 $(w_1,\ldots\,w_m)$ 이 $\text{im}(T)$ 의 기저라고 하자. 어떤 $\varphi_1,\ldots,\,\varphi_m \in \mathcal{L}(V, \mathbb{F})$ 가 존재하여 모든 $v\in V$ 에 대해
+
+$$
+T(v) = \varphi_1 (v) w_1 + \cdots + \varphi_m (v)w_n
+$$
+
+을 만족함을 보여라.
+
+:::
+
+::: {.solution}
+
+$T^{-1}(\{w_j\})$ 가운데 하나의 벡터를 선택하여 $v_1$ 이라고 하면 $\{v_1,\ldots,\,v_m\}$ 은 선형 독립이다(@exr-axler_3_B_24). 이를 확장하여 $V$ 의 기저 $(v_1,\,v_2,\ldots)$ 를 얻을 수 있다. $\phi_i \in \mathcal{L}(V, \mathbb{F})$, $(i=1,\ldots,\,m)$ 를 다음과 같이 정의하자.
+
+$$
+\varphi_i (v_j) = \delta_{ij}
+$$
+
+그렇다면 $v=\sum_i c_i v_i$ 에 대해 
+
+$$
+\varphi_i (v) = \varphi_i \left( \sum_j c_j v_j\right) = \sum_{i=1}^m c_j \delta_{ij} = c_i 
+$$
+
+이며, 
+
+$$
+T(v) = T\left(\sum_i c_i v_i\right) = \sum_{i=1}^m \varphi_i (v) T(v_i) = \sum_{i=1}^m \varphi_i (v) w_i
+$$
+
+이다.
+
+:::
+
+</br>
+
+::: {#exr-axler_3_B_29}
+
+$\varphi \in \mathcal{L}(V, \mathbb{F})$ 이고 $u\in V,\, u\not\in \ker(\varphi)$ 일 때, 
+
+$$
+V = \ker (\varphi) \oplus \{au : a\in \mathbb{F}\}
+$$
+
+임을 보여라.
+
+:::
+
+::: {.solution}
+
+$\ker (\varphi) \cap \{au\}=\{0_V\}$ 이므로 $\ker (\varphi) + \{au\} = \ker (\varphi)\oplus \{au\}$ 이다. $\dim (\mathbb{F})=1$ 이므로 $\{au\} = \text{im}(\varphi)$ 이다.
+
+:::
+
+
+</br>
+
+::: {#exr-axler_3_B_30}
+
+$\varphi_1,\,\varphi_2 \in \mathcal{L}(V,\mathbb{F})$ 이며 $\ker (\varphi_1) = \ker (\varphi_2)$ 라면 어떤 $c\in \mathbb{F}$ 에 대해 $\varphi_1 = c\varphi_2$ 임을 보여라.
+
+:::
+
+::: {.solution}
+
+$u\notin \ker (\varphi_2) \iff u \not\in \ker (\varphi_2)$ 이며 @exr-axler_3_B_29 에 의해 $\text{im}(\varphi_1) =  \text{im}(\varphi_2) = \{au\}$ 이다. 따라서 $\varphi_1 = c\varphi_2$ 를 만족하는 $c\in \mathbb{F}$ 가 존재한다. 
+
+:::
+
+
+</br>
+
+::: {#exr-axler_3_8_9}
+
+유한차원 벡터공간 $U$ 에서 정의된 연산자 $S, T\in \mathcal{L}(U)$ 에 대해 $S,\,T$ 가 가역일 필요충분조건은 $ST$ 가 가역인것임을 보이시오.
+
+:::
+
+::: {.solution}
+
+$S,\,T$ 가 전사이면 $ST$ 도 전사이다. $ST$ 가 전사이면 $S, T$ 도 각각 전사이다.
+
+:::
+
+</br>
+
+
+::: {#exr-axler_3_8_10}
+
+유한차원 벡터공간 $U$ 에서 정의된 연산자 $S, T\in \mathcal{L}(U)$ 에 대해 $ST=I$ 일 필요충분조건은 $TS=I$ 인것임을 보이시오.
+:::
+
+
+::: {.solution}
+
+$ST=I$ 이면 @exr-axler_3_8_9 에 의해 $S,\,T$ 도 가역이다. 모든 $u\in U$ 에 대해 $ST(u)=u$ 이며 $S$ 가 가역이므로 $S(v)=u$ 인 $v\in V$ 가 유일하게 정해지며 따라서 $T(u)=v$ 이다. $TS(v) = v$ 이므로 $TS=I$ 이다.
+
+:::
+
+</br>
+
+::: {#exr-axler_3_8_11}
+
+유한차원 벡터공간 $U$ 에 대해 $R, S, T = \mathcal{L}(U)$ 일 때 $RST=I$ 이면 $S$ 는 가역이며 $S^{-1}= TR$ 임을 보여라. $U$ 가 유한차원이라는 조건이 없다면 성립하지 않을 수도 있음을 보여라.
+
+:::
+
+::: {.solution}
+
+$U$ 가 유한차원 벡터공간이고 $RST=I$ 이면 $RST$ 모두 가역이며, $S=R^{-1}T^{-1}$ 이므로 $S^{-1}= TR$ 이다. 
+
+이제 $U = \mathbb{R}^\infty$ 라고 하자. 
+
+$$
+\begin{aligned}
+R(x_1, x_2, x_3,\ldots) &= (x_2, x_3, x_4, \ldots), \\
+S(x_1, x_2, x_3, \ldots)  &= (0, x_1, x_2, x_3, \dots,), \\
+T & = I
+\end{aligned}
+$$
+
+
+라고 하면 $RST=I$ 이지만 $S$ 는 전사가 아니다.
+
+::: 
+
+</br>
+
+::: {#exr-axler_3_D_3}
+
+$V$ 가 유한차원 벡터공간이고 $U \le V$ 이며 $S\in \mathcal{L}(U, V)$ 일 때 다음이 동치임을 보이시오.
+
+&emsp; ($1$) $S$ 는 단사이다.
+
+&emsp; ($2$) 모든 $u\in U$ 에 대해 $T(u) = S(u)$ 를 만족하는 가역인 $T\in \mathcal{L}(V)$ 가 존재한다.
+
+:::
+
+::: {.solution}
+
+($1 \implies 2$) $U$ 의 기저 $\{ u_1,\ldots,\,u_m \}$ 에 대해 $S(u_i) = v_i$ 라고 하자. $S$ 가 동형이므로 $\{v_1,\ldots,\,v_m \}$ 도 선형 독립이다. $\{u_1,\ldots,\,u_m\}$ 을 확장하여 $V$ 의 기저 $\{u_1,\ldots,\,u_m,\,u_{m+1}, \ldots, v_n\}$ 을 구성 할 수 있으며, $\{v_1,\ldots,\,v_m\}$ 을 확장하여 $V$ 의 기저 $\{v_1,\ldots,\,v_m,\,v_{m+1}, \ldots, v_m\}$ 을 구성 할 수 있다. 이 때 $T\in \mathcal{L}(V)$ 를 $T(u_i) = v_i$ $(i=1,\ldots,\,m)$ 으로 정의하면 된다.
+
+($2 \implies 1$) $T$ 가 가역이므로 $T$ 는 단사이다. $S$ 가 단사가 아니라면 $T$ 도 단사가 아니므로 $S$ 는 단사이다. 
+:::
+
+</br>
+
+::: {#exr-axler_3_D_4}
+
+$W$ 가 유한차원벡터공간이며 $T_1,\,T_2\in \mathcal{L}(V, W)$ 일 때 다음이 동치임을 보여라.
+
+&emsp; ($1$) $\ker (T_1) = \ker (T_2)$, 
+
+&emsp; ($2$) $T_1 = ST_2$ 가 되도록 하는 가역연산자 $S\in \mathcal{L}(W)$ 가 존재한다.
+
+:::
+
+::: {.solution}
+
+($1 \implies 2$) @exr-axler_3_B_24 로 부터 $T_2 = S_1T_1$, $T_1 = S_2T_2$ 를 만족하는 $S_1,\,S_2\in \mathcal{L}(W)$ 가 존재하며 $T_2 = S_1S_2T_2$ 이므로 $S_1S_2$ 는 가역이다. 따라서 $S_1,\,S_2$ 각각 가역이다.
+
+($2 \implies 1$) 자명하다.
+
+:::
+
+</br>
+
+::: {#exr-axler_3_D_5}
+
+$V$ 가 유한차원 벡터공간이며 $T_1,\,T_2\in \mathcal{L}(V, W)$ 일 때 다음이 동치임을 보여라.
+
+&emsp; ($1$) $\text{im}(T_1) = \text{im}(T_2)$, 
+
+&emsp; ($2$) $T_1 = T_2S$ 를 만족하는 가역연산자 $S\in \mathcal{L}(V)$ 가 존재한다.
+:::
+
+::: {.solution}
+($1 \implies 2$) @exr-axler_3_B_25 로부터 $T_1 = T_2S_2$, $T_2 = T_1S_1$ 이 되도록 하는 $S_1,\,S_2\in \mathcal{L}(V)$ 가 존재함을 안다. $T_1 = T_1 S_1S_2$ 이므로 $S_1S_2$ 는 가역이다. 따라서 $S_1, S_2$ 는 각각 가역이다.
+
+($2 \implies 1$) 자명하다.
+
+:::
+
+</br>
+
+::: {#exr-axler_3_D_6}
+
+$V, W$ 가 유한차원 벡터공간이며 $T_1,\,T_2\in \mathcal{L}(V, W)$ 일 때 다음이 동치임을 보여라.
+
+&emsp; ($1$) $\text{nullity}(T_1) = \text{nullity}(T_2)$.
+
+&emsp; ($2$) $T_1 = ST_2R$ 을 만족하는 가역연산자 $S\in \mathcal{L}(W),\, R\in \mathcal{L}(V)$ 가 존재한다. 
+
+:::
+
+::: {.solution}
+
+($1 \implies 2$) $\ker (T_1)$ 을 $\ker (T_2)$ 로 변환하는 연산자 $R\in \mathcal{L}(V)$ 가 존재한다. 즉 $\ker (T_1) =  \ker (T_2R)$ 이다. @exr-axler_3_D_4 에 의해 $T_1 = ST_2R$ 을 만족하는 $\in \mathcal{L}(W)$ 가 존재한다.
+
+($2 \implies 1$) 자명하다.
+
+:::
+
+</br>
+
+::: {#exr-axler_3_D_16}
+
+유한차원 벡터공간 $V$ 에 대해 $T\in \mathcal{L}(V)$ 가 모든 $S\in \mathcal{L}(V)$ 에 대해 $ST=TS$ 이면 $T$ 는 항등사상 $I$ 의 스칼라곱임을 보여라. 즉 어떤 스칼라 $c$ 에 대해 $T=cI$ 이다.
+
+:::
+
+::: {.solution}
+ 
+$S_j (v_k) = \left\{\begin{array}{ll} v_k, \qquad &;\text{if } j = k \\ 0 &l\text{otherwise}. \end{array}\right.$ 는 선형연산자이다. 그리고 $T(v_i) = \sum_{k=1}^n A_{ki} v_k$ 라고 하자. 
+
+$$
+\begin{aligned}
+S_jT(v_i) &= A_{ji}v_j ,\\
+TS_j (v_i) &= T(\delta_{ij}v_i)=\delta_{ij}\left(\sum_{k=1}^n A_{ki}v_k\right),
+\end{aligned}
+$$
+
+이며, $S_jT = TS_j$ 로부터 $i\ne j$ 에 대해 $A_{ij}=0$ 이라는 것을 알 수 있다. 즉 $T(v_i) = c_i v_i$ 이다. 이제 $S_{ij} \in \mathcal{L}(V)$ 를 다음과 같이 정의하자.
+
+$$
+S_{ij}(v_k) =\left\{\begin{array}{ll} v_i, \qquad &;\text{if } k = j \\ v_j, &; \text{if } k = i, \\ 0 &;\text{otherwise}. \end{array}\right.
+$$
+
+그렇다면, 
+
+$$
+\begin{aligned}
+S_{ij}T(v_i) &= S_{ij}(c_iv_i)= c_iv_j, \\
+TS_{ij}(v_j) &= T(v_j) = c_j v_j
+\end{aligned}
+$$
+
+이므로 $c_i = c_j$ 이다. 따라서 $T=cI$ 꼴이어야 한다.
+
+
+
+:::
+
+
