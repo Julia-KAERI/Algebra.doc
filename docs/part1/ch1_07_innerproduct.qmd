@@ -822,26 +822,47 @@ $V$ 의 부분집합 $U$ 에 대해 $U^\perp$ 는 $V$ 의 부분벡터공간이�
 
 </br>
 
-[생성된 부분공간](ch1_01_vectorspace.qmd#sec-generated_subspace) 에서 다뤘던 $\langle U \rangle$ 를 생각하자. 우리는 다음을 보일 수 있다.
+우리는 다음을 보일 수 있다.
 
 ::: {#prp-generated_subspace_and_orthogonal_compliment}
 
-유한차원 벡터공간 $V$ 의 부분집합 $U$ 에 의해 생성된 부분공간 $\langle U \rangle$ 에 대해 다음이 성립한다.
+벡터공간 $V$ 와 유한차원 부분공간 $U$ 에 대해 다음이 성립한다.
 
-&emsp; ($1$) $\langle U \rangle \cap U^\perp = \{0_V\}$, 
+&emsp; ($1$) $U \cap U^\perp = \{0_V\}$, 
 
-&emsp; ($2$) $V = \langle U \rangle \oplus U^\perp$,
+&emsp; ($2$) $V = U \oplus U^\perp$,
 
-&emsp; ($3$) $\dim (V) = \dim (\langle U \rangle) + \dim (U^\perp)$
+&emsp; ($3$) $\dim (V) = \dim (U) + \dim (U^\perp)$
 
 :::
 
 
 ::: {.proof}
-$\langle U\rangle$ 의 정규직교기저를 찾아 $\{e_1,\ldots,\,e_n\}$ 이라 하고 이 기저를 확장하여 나머지 정규직교기저를 $\{f_1,\ldots,\, f_m\}$ 이라 하자. $\{f_1,\ldots,\,f_m\}$ 의 선형결합은 $U$ 와 직교하므로 $U^\perp$ 에 포함된다. $U^\perp$ 의 어떤 벡터가 $\{e_i\}$ 기저 성분을 포함한다면 $U$ 와 직교할수 없다. 따라서 $U^{\perp} = \text{span} (f_1,\ldots,f_m)$ 이다. 이를 이용하면 세가지를 모두 보일 수 있다. $\square$
+$U$ 의 정규직교기저를 찾아 $\{e_1,\ldots,\,e_n\}$ 이라 하고 이 기저를 확장하여 나머지 정규직교기저를 $\{f_1,\ldots\}$ 이라 하자. $\{f_1,\ldots\}$ 의 선형결합은 $U$ 와 직교하므로 $U^\perp$ 에 포함된다. $U^\perp$ 의 어떤 벡터가 $\{e_i\}$ 기저 성분을 포함한다면 $U$ 와 직교할수 없다. 따라서 $U^{\perp} = \text{span} (f_1,\ldots,f_m)$ 이다. 이를 이용하면 세가지를 모두 보일 수 있다. $\square$
+:::
+
+
+::: {.callout-warning appearance="minimal" icon="false"}
+
+위의 @prp-generated_subspace_and_orthogonal_compliment 는 무한차원 벡터공간에서는 성립하지 않는다. @exr-axler_6_C_14 를 참고하라.
+
 :::
 
 </br>
+
+::: {#prp-uniqueness_of_orthogonal_decomposition}
+
+유한차원 벡터공간 $V$ 가 부분공간 $U$ 에 대해 $V=U \oplus U^\perp$ 이다. 이 때 $v\in V$ 는 어떤 $u\in U$ 와 $w\in U^\perp$ 에 대해 $v = u+w$ 로 나타낼 수 있으며, 이를 만족하는 $u,\,w$ 는 유일하다.
+
+:::
+
+::: {.proof}
+@prp-generated_subspace_and_orthogonal_compliment 의 증명에서 보인 대로 $U$ 의 정규직교기저 $\{e_1,\ldots,\,e_n\}$ 과 $U^\perp$ 의 정규직교 기저 $\{f_1,\ldots,\,f_m\}$ 에 대해 $u = \sum_i a_i e_i + \sum_j b_j f_j$ 를 만족하는 $a_i,\, b_j$ 가 존재한다. $u= \sum_i a_i e_i$ 이며 $w=\sum_j b_j f_j$ 이다. 이 때 $u,\,w$ 가 유일하게 정해진다는 것은 자명하다. $\square$
+
+:::
+
+</br>
+
 
 ### Orthogonal projection
 
@@ -868,50 +889,15 @@ $\text{im}(P)$ 는 $P$-불변 부분 공간이다.
 
 ::: {.proof}
 
-$u\in \text{im}(P)$ 이면 $P(v)=u$ 인 $v\in V$ 가 존재하며, $P^2v = Pu = u$ 이므로 $\text{im}(P)$ 는 $P$ 불변 부분 공간이다.
+$u\in \text{im}(P)$ 이면 $P(v)=u$ 인 $v\in V$ 가 존재하며, $P^2v = Pu = u$ 이므로 $\text{im}(P)$ 는 $P$ 불변 부분 공간이다. $\square$
 
 :::
 
 
 </br>
 
-::: {#prp-uniqueness_of_orthogonal_decomposition}
+유한차원 벡터공간 $V$ 와 projection $P\in \mathcal{L}(V)$ 에 대해 $U = \text{im}(P)$ 라 하자. $U \le V$ 이므로 $V=U \oplus U^\perp$ 이다. 또한 @prp-uniqueness_of_orthogonal_decomposition 에서 보인 것처럼 $v\in V$ 에 대해 $v=u+u',\, u\in U,\, u'\in U^{\perp}$ 가 되도록 하는 $u,\,u'$ 은 유일하다. 이제 반대로 $U \le V$ 에 대해 $v\in V$ 는 어떤 $u\in U$ 와 $u'\in U^\perp$ 의 합으로 유일하게 표현 될 수 있다는 것을 안다. 이렇게 어떤 부분공간 $U$ 를 치역으로 갖는 orthogonal projection 이라고 하며 $P_U$ 라고 쓴다.
 
-유한차원 벡터공간 $V$ 가 부분공간 $U$ 에 대해 $V=U \oplus U^\perp$ 이다. 이 때 $v\in V$ 는 어떤 $u\in U$ 와 $w\in U^\perp$ 에 대해 $v = u+w$ 로 나타낼 수 있으며, 이를 만족하는 $u,\,w$ 는 유일하다.
-
-:::
-
-::: {.proof}
-@prp-generated_subspace_and_orthogonal_compliment 의 증명에서 보인 대로 $U$ 의 정규직교기저 $\{e_1,\ldots,\,e_n\}$ 과 $U^\perp$ 의 정규직교 기저 $\{f_1,\ldots,\,f_m\}$ 에 대해 $u = \sum_i a_i e_i + \sum_j b_j f_j$ 를 만족하는 $a_i,\, b_j$ 가 존재한다. $u= \sum_i a_i e_i$ 이며 $w=\sum_j b_j f_j$ 이다. 이 때 $u,\,w$ 가 유일하게 정해진다는 것은 자명하다. $\square$
-
-:::
-
-</br>
-
-@prp-uniqueness_of_orthogonal_decomposition 에서 보인 것처럼 $v\in V$ 가 $u+w$ 라면 $P_U(v)=u$ 인 함수를 생각 할 수 있다. 이 $P_U$ 는 잘 정의되는 함수이며 선형연산자이다.
-
-::: {#exr-orthogonal_projection_linear_operator}
-위에서 정의된 함수 $P_U : V \to V$ 가 선형연산자임을 보이고, projection 임을 보여라. 그리고 $\text{im}(P_U)= U$ 임을 보여라.
-::: 
-
-::: {.proof}
-$v_1,\,v_2\in V$ 에 대해 $v_1 = u_1+w_1,\, v_2=u_2+w_2$, $u_1,\, u_2\in U$, $w_1,\,w_2 \in U^\perp$ 라 하자. 
-
-$$
-P_U(v_1+\lambda v_2) = u_1+ \lambda u_2 = P_U (v_1)+ \lambda P_U (v_2)
-$$
-
-이므로 선형연산자이다. 또한
-
-$$
-P_U^2 (v_1) = P_U(u_1)= u_1 = P_U (v_1)
-$$
-
-이므로 $P$ 는 projection 이다.
-
-$P_U$ 의 정의에 의해 $\text{im}(P_U) \subset U$ 이다. 임의의 $u\in U \le V$ 에 대해 $P_U (u)=u$ 이므로 $U \subset \text{im}(P_U)$ 이다. 따라서 $\text{im}(P_U) = U$ 이다. $\square$ 
-
-:::
 
 </br>
 
@@ -919,7 +905,7 @@ $P_U$ 의 정의에 의해 $\text{im}(P_U) \subset U$ 이다. 임의의 $u\in U 
 ::: {#def-orthogonal_projection}
 #### Orthogonal projection
 
-@prp-uniqueness_of_orthogonal_decomposition 에서 정의된 $P_U$ 를 $V$ 에 대한 $U$ 로의 **orthogonal projection** 이라 한다.
+벡터공간 $V$ 의 부분공간 $U$ 를 치역으로 갖는 projeciton 을 $V$ 에 대한 $U$ 로의 **orthogonal projection** 이라고 하며 $P_U$ 라고 쓴다.
 
 :::
 :::
@@ -1378,7 +1364,7 @@ $\phi \in \mathcal{L}(C_{[-1, 1]}, \mathbb{R})$ 이 $\phi (f) = 0$ 으로 정의
 
 ::: {#exr-axler_6_C_2}
 
-$U$ 가 $V$ 의 유한차원 부분공간일 때 $U^\perp = \{0_V\} \iff U=V$ 임을 보여라. [$U$ 가 $V$ 의 무한차원 부분공간일때는 성립하지 않는다는 것을 @exr-axler_6_c_14 에서 보인다]{.aside}
+$U$ 가 $V$ 의 유한차원 부분공간일 때 $U^\perp = \{0_V\} \iff U=V$ 임을 보여라. [$U$ 가 $V$ 의 무한차원 부분공간일때는 성립하지 않는다는 것을 @exr-axler_6_C_14 에서 보인다]{.aside}
 
 :::
 
@@ -1421,7 +1407,7 @@ $P_UP_W=0$ 이면 $W \le U^\perp$ 이므로 모든 $u\in U,\, w\in W$ 에 대해
 
 ::: {#exr-axler_6_C_7}
 
-유한차원 내적공간 $V$ 에 대해 $P\in \mathcal{L}(V)$ 가 $P^2=P$ 이며 $\ker (P)$ 의 모든 벡터는 $\text{im}(P)$ 의 모든 벡터에 대해 직교한다고 하자. 그렇다면 어떤 $U\le V$ 에 대해 $P=P_U$ 임을 보이시오.
+유한차원 내적공간 $V$ 에 대해 $P\in \mathcal{L}(V)$ 가 $P^2=P $ 이며 $\ker (P)$ 의 모든 벡터는 $\text{im}(P)$ 의 모든 벡터에 대해 직교한다고 하자. 그렇다면 어떤 $U\le V$ 에 대해 $P=P_U$ 임을 보이시오.
 
 :::
 
@@ -1441,8 +1427,34 @@ $\ker (P)$ 와 $\text{im}(P)$ 가 직교하므로 @thm-rank_nullity 에 의해 $
 
 ::: {.solution}
 
-$U = \text{im}(P)$ 라고 하자. 
+$U = \text{im}(P)$.
+:::
 
+</br>
+
+::: {#exr-axler_6_C_9}
+
+$U$ 가 $V$ 의 유한차원 부분공간이며 $T\in \mathcal{L}(V)$ 일 때 다음이 동치임을 보여라.
+
+&emsp; ($1$) $U$ 는 $T$-불변 부분공간이다.
+
+&emsp; ($2$) $P_U T P_U = T P_U$ 이다.
+
+:::
+
+::: {.solution}
+
+$U$ 가 $T$ 불변부분공간이라고 하자. $v \in V$ 에 대해 $P_Uv = u \in U$ 라 하자. $P_UTP_U(v) = P_UT(u)=T(u)$ 이며 $TP_U(v)= T(u)$ 이므로 $P_UTP_U = TP_U$ 이다.
+
+$U$ 가 $T$ 불변부분공간이 아니라고 하자. $u\in U$ 에 대해 $Tu\not\in U$ 라 하자. 어떤 $w'\in U^\perp$ 에 대해 $v=u+w$ 라면 $P_UTP_U(v) = P_UT(u) \in U$ 이지만 $TP_U(v)= T(u)\not\in U$ 이므로 $P_U TP_U \ne TP_U$ 이다.
+
+:::
+
+</br>
+
+::: {#exr-axler_6_C_10}
+
+$V$ 가 유한차원 벡터공간이고 
 :::
 
 </br>
