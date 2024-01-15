@@ -10,7 +10,7 @@ crossref:
 
 ## Adjoint matrix
 
-### Adjoint matrix
+### Adjoint matrix {#sec-adjoint_matrix}
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-adjoint_operator}
@@ -23,7 +23,7 @@ $$
 (\boldsymbol{A}^\ast)_{ij} = \overline{A_{ji}}
 $$
 
-를 만족하는 $\boldsymbol{A}^\ast \in  \mathcal{M}_{m \times n}(\mathbb{F})$ 을 $\boldsymbol{A}$ 에 대한 adjoint matrix 라고 한다. [행렬 $\boldsymbol{A}$ 의 수반행렬에 대해서는 $\boldsymbol{A}^\ast$, $\boldsymbol{A}^\dagger$, $\boldsymbol{A}^H$ 등의 표기법이 사용된다. 물리학 특히 양자역학에서는 수반행렬에 대해 $\boldsymbol{A}^\ast$ 보다는 $\boldsymbol{A}^\dagger$ 의 표현을 더 많이 사용하기도 한다.]{.aside}
+를 만족하는 $\boldsymbol{A}^\ast \in  \mathcal{M}_{m \times n}(\mathbb{F})$ 을 $\boldsymbol{A}$ 에 대한 **adjoint matrix** 라고 한다. [행렬 $\boldsymbol{A}$ 의 adjoint matrix 에 대해서는 $\boldsymbol{A}^\ast$, $\boldsymbol{A}^\dagger$, $\boldsymbol{A}^H$ 등의 표기법이 사용된다. 물리학 특히 양자역학에서는 adjoint matrix 에 대해 $\boldsymbol{A}^\ast$ 보다는 $\boldsymbol{A}^\dagger$ 의 표현을 더 많이 사용하기도 한다.]{.aside}
 
 
 :::
@@ -40,7 +40,7 @@ $$
 $\mathcal{M}_{n \times n}(\mathbb{F})$ 의 정규직교기저 $\{\boldsymbol{e}_i\}$ 와 $\mathcal{M}_{m }(\mathbb{F})$ 의 정규직교기저 $\{\boldsymbol{f}_j\}$ 를 생각하자. $\boldsymbol{u}=\sum_i u_i \boldsymbol{e}_i$, $\boldsymbol{v}= \sum_j v_j \boldsymbol{f}_j$ 라고 하면,
 $$
 \begin{aligned}
-\langle \boldsymbol{Au},\,\boldsymbol{v}\rangle &= \boldsymbol{Au}\cdot \boldsymbol{v} = \sum_i (\boldsymbol{Au})_i\overline{v_i} = \sum_{i, j} A_{ij}u_j\overline{v}_i \\
+\langle \boldsymbol{Au},\,\boldsymbol{v}\rangle &= (\boldsymbol{Au})\cdot \boldsymbol{v} = \sum_i (\boldsymbol{Au})_i\overline{v_i} = \sum_{i, j} A_{ij}u_j\overline{v}_i \\
 \langle \boldsymbol{u},\,\boldsymbol{A}^\ast \boldsymbol{v}\rangle &= \boldsymbol{u} \cdot (\boldsymbol{A}^\ast \boldsymbol{v}) = \sum_j u_j \overline{\left(\sum_i (\boldsymbol{A}^\ast)_{ji}v_i\right)} \\
 &= \sum_j u_j u_j \overline{\left(\sum_i \overline{A_{ij}}v_i\right)} = \sum_{i, j} A_{ij}u_j\overline{v}_i 
 \end{aligned}
@@ -108,7 +108,7 @@ $$
 \end{aligned}
 $$
 
-($2$) ($1$) 의 결과에 $\boldsymbol{A}$ 대신 $\boldsymbol{A}^\ast$ 를 넣으면 $\ker(\boldsymbol{A}) = (\text{im}(\boldsymbol{A}^\ast))^\perp$ 이다. @prp-properties_of_orthogonal_complement 에서 부분공간 $U$ 에 대해 $(U^\perp)^\perp = U$ 임을 이용하면 $2$ 를 얻는다. 
+($2$) ($1$) 의 결과에 $\boldsymbol{A}$ 대신 $\boldsymbol{A}^\ast$ 를 넣으면 $\ker(\boldsymbol{A}) = (\text{im}(\boldsymbol{A}^\ast))^\perp$ 이다. @cor-dimension_relation_of_orthogonal_complement 에서 부분공간 $U$ 에 대해 $(U^\perp)^\perp = U$ 임을 이용하면 $2$ 를 얻는다. 
 
 ($3$), ($4$) 는 ($1$), ($2$) 의 결과에서 $\boldsymbol{A}$ 대신에 $\boldsymbol{A}^\ast$ 를 넣으면 보일 수 있다. $\square$ 
 
@@ -116,18 +116,24 @@ $$
 
 </br>
 
-## 에르미트 행렬 (Hermitian matrix)
+## 에르미트 행렬 (Hermitian matrix) {#sec-hermitian_matrix}
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-hermitian_matrix}
 
-복소행렬 $\boldsymbol{A}$ 에 대해 $A_{ji} = \overline{A_{ij}}$ 이면,  즉 $\boldsymbol{A}^\ast = \boldsymbol{A}$ 이면 이 행렬을 **에르미트 행렬(Hermitian matrix)** 이라 한다. 
+#### 에르미트 행렬과 대칭행렬
+
+
+$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\boldsymbol{A}^\ast = \boldsymbol{A}$ 이면 이 행렬을 **에르미트 행렬(Hermitian matrix)** 이라 한다. 특별히 $\mathbb{F}=\mathbb{R}$ 일 경우에는 **대칭행렬 (Symmetric matrix)** 이라 한다.  
 
 :::
 :::
 
 </br>
 
+$\boldsymbol{A}$ 가 에르미트 행렬일 경우 $(\boldsymbol{A}^\ast)_{ij} = \overline{A_{ji}} = A_{ij}$ 를 만족한다. 대칭행렬의 경우에는 $A_{ij} = A_{ji}$ 이다. 
+
+</br>
 
 ::: {#prp-peroperties_hermitian_operator}
 
@@ -150,7 +156,7 @@ $$
 ($1$) $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{Au}\rangle$.
 
 
-($2$) 고유벡터 $\boldsymbol{u}\in \mathcal{M}_{m }(\mathbb{F})$ 에 대한 고유값을 $\lambda$ 라 하자. 
+($2$) 고유벡터 $\boldsymbol{u}\in \mathcal{M}_{n}(\mathbb{F})$ 에 대한 고유값을 $\lambda$ 라 하자. 
 
 $$
 \lambda \|\boldsymbol{u}\|^2 = \lambda \langle \boldsymbol{u},\, \boldsymbol{u}\rangle  = \langle \boldsymbol{Au},\, \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{u} \rangle = \langle \boldsymbol{u},\, \boldsymbol{Au} \rangle = \overline{\lambda}\|\boldsymbol{u}\|^2\,.
@@ -167,31 +173,25 @@ $$
 \end{aligned}
 $$
 
-($4$) $\mathbb{F}=\mathbb{C}$ 일 경우와 $\mathbb{R}$ 일 경우로 분리하여 증명한다. $\mathbb{C}$ 일 경우는 굳이 에르미트 연산자가 아니어도 성립한다.
+($4$) 내적벡터공간의 경우 내적을 노름의 합으로 표현할 수 있다. 예를 들어, $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{R})$ 이면 임의의 $\boldsymbol{u},\,\boldsymbol{u}'\in \mathcal{M}_{n \times n}(\mathbb{R})$ 에 대해
 
-$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{R})$ 이면 임의의 $\boldsymbol{u},\,\boldsymbol{u}'\in \mathcal{M}_{n \times n}(\mathbb{R})$ 에 대해
+$$
+\langle \boldsymbol{Au},\,\boldsymbol{u}'\rangle =\dfrac{\langle \boldsymbol{A}(\boldsymbol{u}+\boldsymbol{u}'),\, \boldsymbol{u}+\boldsymbol{u}'\rangle -\langle \boldsymbol{A}(\boldsymbol{u}-\boldsymbol{u}'),\, \boldsymbol{u}-\boldsymbol{u}'\rangle}{4}
+$$
+
+이다. 모든 $\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\langle \boldsymbol{Au},\,\boldsymbol{u}\rangle =0$ 이면 우변이 $0$ 이므로 $\langle \boldsymbol{Au},\,\boldsymbol{u}'\rangle = 0$ 이므로 $\boldsymbol{A}=\boldsymbol{0}$ 이다.
+
+
+이다. $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 이라면,
 
 $$
 \begin{aligned}
-0&=\dfrac{\langle \boldsymbol{A}(\boldsymbol{u}+\boldsymbol{u}'),\, \boldsymbol{u}+\boldsymbol{u}'\rangle -\langle \boldsymbol{A}(\boldsymbol{u}-\boldsymbol{u}'),\, \boldsymbol{u}-\boldsymbol{u}'\rangle}{4} \\
-&= \dfrac{1}{2} \left( \langle \boldsymbol{Au},\, \boldsymbol{u}'\rangle + \langle \boldsymbol{Au}',\, \boldsymbol{u}\rangle\right) = \dfrac{1}{2} \left(\langle \boldsymbol{Au},\, \boldsymbol{u}' \rangle + \langle \boldsymbol{u}',\, \boldsymbol{A}^\ast \boldsymbol{u}\rangle  \right) \\
-&= \dfrac{1}{2} \left(\langle \boldsymbol{Au},\,\boldsymbol{u}'\rangle  + \langle \boldsymbol{u}',\, \boldsymbol{Au}\rangle \right) \\
-&= \langle \boldsymbol{Au},\, \boldsymbol{u}'\rangle
+ \langle \boldsymbol{Au},\, \boldsymbol{u}'\rangle & = \dfrac{1}{4} \left(\langle \boldsymbol{A}(\boldsymbol{u}+\boldsymbol{u}'),\, \boldsymbol{u}+\boldsymbol{u}' \rangle - \langle \boldsymbol{A}(\boldsymbol{u}-\boldsymbol{u}'),\, \boldsymbol{u} - \boldsymbol{u}'\rangle \right) \\
+&\qquad + \dfrac{i}{4} \left( \langle \boldsymbol{A}(\boldsymbol{u}+i\boldsymbol{u}'),\, \boldsymbol{v}+i\boldsymbol{u}'\rangle  - \langle \boldsymbol{A}(\boldsymbol{u}-i\boldsymbol{u}'),\, \boldsymbol{u}-i\boldsymbol{u}'\rangle \right) \\
 \end{aligned}
 $$
 
-이다. 이제 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{C})$ 이라면,
-
-$$
-\begin{aligned}
-0 & = \dfrac{1}{4} \left(\langle \boldsymbol{A}(\boldsymbol{v}+\boldsymbol{v}'),\, \boldsymbol{v}+\boldsymbol{v}' \rangle - \langle \boldsymbol{A}(\boldsymbol{v}-\boldsymbol{v}'),\, \boldsymbol{v} - \boldsymbol{v}'\rangle \right) \\
-&\qquad + \dfrac{i}{4} \left( \langle \boldsymbol{A}(\boldsymbol{v}+i\boldsymbol{v}'),\, \boldsymbol{v}+i\boldsymbol{v}'\rangle  - \langle \boldsymbol{A}(\boldsymbol{v}-i\boldsymbol{v}'),\, \boldsymbol{v}-i\boldsymbol{v}'\rangle \right) \\
-&= \dfrac{1}{4} \left(2 \langle \boldsymbol{Av},\,\boldsymbol{v}'\rangle  + 2 \langle \boldsymbol{Av}',\, \boldsymbol{v}\rangle +2 \langle \boldsymbol{Av},\,\boldsymbol{v}'\rangle -2 \langle \boldsymbol{Av}',\,\boldsymbol{v}\rangle \right) \\
-&= \langle \boldsymbol{Av},\, \boldsymbol{v}'\rangle
-\end{aligned}
-$$
-
-이다. 임의의 $\boldsymbol{v},\, \boldsymbol{v}'\in V$ 에 대해 $\langle \boldsymbol{Av},\,\boldsymbol{v}'\rangle =0$ 이므로 $\boldsymbol{A}=0$ 이다. $\square$
+임을 보일 수 있으며, 임의의 $\boldsymbol{u},\, \boldsymbol{u}'\in V$ 에 대해 $\langle \boldsymbol{Au},\,\boldsymbol{u}'\rangle =0$ 이므로 $\boldsymbol{A}=0$ 이다. $\square$
 :::
 
 </br>
@@ -202,7 +202,7 @@ $$
 
 &emsp; ($1$) 임의의 $\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle$ 은 실수이다.
 
-&emsp; ($2$) $\boldsymbol{A}$ 는 hermitian 이다.
+&emsp; ($2$) $\boldsymbol{A}$ 는 에르미트 행렬이다.
 
 :::
 
@@ -218,7 +218,7 @@ $$
 \end{aligned}
 $$
 
-임을 안다. @prp-peroperties_hermitian_operator 의 ($4$) 로 부터 $\boldsymbol{A}=\boldsymbol{A}^\ast$ 임을 알 수 있다. 즉 $\boldsymbol{A}$ 는 hermitian matrix 이다.
+임을 안다. @prp-peroperties_hermitian_operator 의 ($4$) 로 부터 $\boldsymbol{A}=\boldsymbol{A}^\ast$ 임을 알 수 있다. 즉 $\boldsymbol{A}$ 는 에르미트 행렬이다.
  
 ($2 \implies 1$) $\boldsymbol{A}$ 가 hermitian 이라 하자. 
 
@@ -232,7 +232,7 @@ $$
 
 </br>
 
-## Isometry
+## Isometry {#sec-isometry}
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-isometry}
@@ -284,9 +284,9 @@ $$
 \langle\boldsymbol{u},\,\boldsymbol{v}\rangle + \langle\boldsymbol{v},\,\boldsymbol{u}\rangle = \langle\boldsymbol{Su},\,\boldsymbol{Sv}\rangle + \langle\boldsymbol{Sv},\,\boldsymbol{Su}\rangle \tag{1} 
 $$
 
-실수체에서 정의된 행렬와 벡터공간이라면 $\langle\boldsymbol{u},\,\boldsymbol{v}\rangle = \langle\boldsymbol{v},\,\boldsymbol{u}\rangle$, $\langle\boldsymbol{Su},\,\boldsymbol{Sv}\rangle = \langle\boldsymbol{Sv},\,\boldsymbol{Su}\rangle$ 이므로 $\langle\boldsymbol{u},\,\boldsymbol{v}\rangle = \langle\boldsymbol{Su},\,\boldsymbol{Sv}\rangle$ 이다.
+$\mathbb{F}=\mathbb{R}$ 이라면 $\langle\boldsymbol{u},\,\boldsymbol{v}\rangle = \langle\boldsymbol{v},\,\boldsymbol{u}\rangle$, $\langle\boldsymbol{Su},\,\boldsymbol{Sv}\rangle = \langle\boldsymbol{Sv},\,\boldsymbol{Su}\rangle$ 이므로 $\langle\boldsymbol{u},\,\boldsymbol{v}\rangle = \langle\boldsymbol{Su},\,\boldsymbol{Sv}\rangle$ 이다.
 
-복소수체에서 정의된 행렬과 벡터공간이라면 다음을 더 생각하자.
+$\mathbb{F}=\mathbb{C}$ 라면 다음을 더 생각하자.
 
 $$
 \begin{aligned}
@@ -313,25 +313,9 @@ $$
 
 ($2\implies 3$) $\langle \boldsymbol{e}_i, \boldsymbol{e}_i\rangle = \delta_{ij}$ 이므로 ($2$) 에 의해 $\langle \boldsymbol{Se}_i, \boldsymbol{Se}_j \rangle = \langle \boldsymbol{e}_i, \boldsymbol{e}_i\rangle = \delta_{ij}$ 이다.
 
-($3 \implies 4$) 정규직교기저 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 에 대해 $\langle \boldsymbol{S}^\ast\boldsymbol{Se}_i,\,\boldsymbol{e}_j\rangle = \langle \boldsymbol{Se}_i,\boldsymbol{Se}_j\rangle = \delta_{ij}$ 임을 가정한다. 임의의 $\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\boldsymbol{u}=\sum_i u_i \boldsymbol{e}_i$ 이고 $\boldsymbol{S}^\ast\boldsymbol{Su} = \sum_i u'_i \boldsymbol{e}_i$ 라 하자.
+($3 \implies 4$) $(\boldsymbol{S}^\ast\boldsymbol{S})_{ij}= \langle \boldsymbol{S}^\ast \boldsymbol{Se}_j,\, \boldsymbol{e}_i\rangle = \langle \boldsymbol{Se}_j,\,\boldsymbol{Se}_i\rangle = \delta_{ij}$ 이므로 $\boldsymbol{S}^\ast\boldsymbol{S}=\boldsymbol{I}_n$ 이다.
 
-$$
-\begin{aligned}
-u'_j &= \langle \boldsymbol{S}^\ast \boldsymbol{Su}, \boldsymbol{e}_j \rangle = \langle \boldsymbol{Su}, \boldsymbol{Se}_j\rangle  \\
-&= \sum_{i=1}^n u_i \langle \boldsymbol{Se}_i ,\boldsymbol{Se}_j \rangle = u_i \delta_{ij} = u_j
-\end{aligned}
-$$
- 
-이다. 임의의 $\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\boldsymbol{S}^\ast \boldsymbol{Su} =  \boldsymbol{u}$ 이므로 $\boldsymbol{S}^\ast \boldsymbol{S}=\boldsymbol{I}$ 이다. 즉 $\boldsymbol{S}^\ast = \boldsymbol{S}^{-1}$ 이다. 
-
-
-($4 \implies 1$) 임의의 벡터 $\boldsymbol{u}$ 에 대해 $\boldsymbol{S}^\ast =\boldsymbol{S}^{-1}$ 이라면
-
-$$
-\|\boldsymbol{Su}\|^2=\langle \boldsymbol{Su},\,\boldsymbol{Su}\rangle = \langle \boldsymbol{u}, \boldsymbol{S}^\ast\boldsymbol{Su}\rangle = \|\boldsymbol{u}\|^2
-$$
-
-이므로 $\boldsymbol{S}$ 는 isometry 이다. $\square$
+($4 \implies 1$) $\|\boldsymbol{v}\|^2 = \langle \boldsymbol{Iv},\,\boldsymbol{v} \rangle =  \langle \boldsymbol{S}^\ast\boldsymbol{Sv},\,\boldsymbol{v} \rangle = \|\boldsymbol{Sv}\|^2$.   $\square$
 
 :::
 
@@ -468,3 +452,131 @@ $n$ 차원 벡터공간 $V$ 에서 정의된 연산자 $T$ 와 정규직교기�
 
 </br>
 
+## 연습문제
+
+::: {#exr-axler_7_A_2}
+
+$\lambda$ 가 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 의 고유값이라면 $\overline{\lambda}$ 는 $\boldsymbol{A}^\ast$ 의 고유값임을 보여라.
+
+:::
+
+::: {.solution}
+
+$c\in \mathbb{F}$ 가 고유값이 아닐 필요충분조건은 $\boldsymbol{A}-c\boldsymbol{I}_n$ 이 가역행렬인 것이다. $\boldsymbol{S}_c = (\boldsymbol{A}-c\boldsymbol{I}_n)^{-1}$ 이라 하면, $\boldsymbol{S}_c(\boldsymbol{A}-c\boldsymbol{I}_n) = (\boldsymbol{A}-c\boldsymbol{I}_n)\boldsymbol{S}_c=\boldsymbol{I}_n$ 이며 이로부터,
+
+$$
+\boldsymbol{S}_c^\ast(\boldsymbol{A}^\ast-\overline{c}\boldsymbol{I}_n)^\ast = (\boldsymbol{A}^\ast-\overline{c}\boldsymbol{I}_n)^\ast\boldsymbol{S}_c^\ast=\boldsymbol{I}_n
+$$
+
+를 얻는다. 즉 $\boldsymbol{A}-c\boldsymbol{I}_n$ 이 가역일 필요충분조건은 $\boldsymbol{A}^\ast -\overline{c}\boldsymbol{I}_n$ 이 가역인 것이다. $\square$
+
+:::
+
+</br>
+
+::: {#exr-axler_7_A_3}
+
+$\boldsymbol{A}=\mathcal{M}_{n \times n}(\mathbb{F})$ 이며 $U\le \mathcal{M}_n(\mathbb{F})$ 라고 하자. $U$ 가 $\boldsymbol{A}$-불변 일 필요충분조건은 $\boldsymbol{U}^\perp$ 가 $\boldsymbol{A}^\ast$-불변인것임을 보여라.
+
+:::
+
+::: {.solution}
+
+모든 $\boldsymbol{u}\in U$, $\boldsymbol{w}\in U^\perp$ 에 대해 $\langle \boldsymbol{Au}, \boldsymbol{w}\rangle = 0$ 이면 $\langle \boldsymbol{u}, \boldsymbol{A}^\ast \boldsymbol{w}\rangle = 0 = \langle \boldsymbol{A}^\ast \boldsymbol{w}, \boldsymbol{u} \rangle$ 이다. 
+:::
+
+
+</br>
+
+::: {#exr-axler_7_A_4}
+
+$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음을 보여라.
+
+&emsp; ($1$) $\boldsymbol{A}$ 가 단사일 필요충분조건은 $\boldsymbol{A}^\ast$ 가 전사인 것이다.
+
+&emsp; ($2$) $\boldsymbol{A}$ 가 전사일 필요충분조건은 $\boldsymbol{A}^\ast$ 가 단사인 것이다.
+
+:::
+
+::: {.solution}
+
+$(\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}$ 이므로 둘중 하나만 보이면 된다. ($1$) 은 @thm-kernel_image_of_adjoint_operator ($3$) 으로부터 쉽게 보일 수 있다.
+
+:::
+
+</br>
+
+::: {#exr-axler_7_A_5}
+
+$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음을 보여라.
+
+&emsp; ($1$) $\text{nullity}(\boldsymbol{A}^\ast) = \text{nullity}(\boldsymbol{A}) + m - n$, 
+
+&emsp; ($2$) $\text{rank}(\boldsymbol{A}^\ast) = \text{rank}(\boldsymbol{A})$.
+
+:::
+
+::: {.solution}
+
+($1$)  @thm-rank_nullity 에 의해 $m=\text{nullity}(\boldsymbol{A}^\ast) + \text{rank}(\boldsymbol{A}^\ast)$ 이며 @thm-kernel_image_of_adjoint_operator 에 의해 $\text{nullity} (\boldsymbol{A}) = n-\text{rank}(\boldsymbol{A}^\ast)$ 이므로 ($1$) 이 성립한다.
+
+
+($2$) $\text{ker} (\boldsymbol{A}^\ast) = (\text{im} (\boldsymbol{A}))^\perp$ 이므로 $\text{nullity}(\boldsymbol{A}^\ast) = m - \text{rank}(\boldsymbol{A})$ 이다. ($1$) 에 $\text{nullity} (\boldsymbol{A}) = n-\text{rank}(\boldsymbol{A}^\ast)$ 과 함께 대입하면 ($2$) 를 얻는다.
+:::
+
+</br>
+
+::: {#exr-axler_7_A_7}
+
+$\boldsymbol{A},\, \boldsymbol{B} \in \mathcal{M}_{n \times n} (\mathbb{F})$ 가 에르미트 행렬이라고 하자. $\boldsymbol{AB}$ 가 에르미트 행렬일 필요충분조건은 $\boldsymbol{AB}=\boldsymbol{BA}$ 임을 보여라.
+
+:::
+
+::: {.solution} 
+$(\boldsymbol{AB})^\ast = \boldsymbol{AB} \iff \boldsymbol{B}^\ast \boldsymbol{A}^\ast = \boldsymbol{AB} \iff \boldsymbol{BA}= \boldsymbol{AB}$
+
+:::
+
+</br>
+
+::: {#exr-axler_7_A_8_9}
+
+$\mathcal{M}_{m \times n}(\mathbb{R})$ 에서의 에르미트 행렬의 집합은 벡터공간을 이룸을 보여라. $\mathcal{M}_{m \times n}(\mathbb{C})$ 에서의 에르미트 행렬의 집합은 벡터공간을 이루지 않음을 보여라. 
+
+:::
+
+::: {.solution}
+
+$\mathcal{M}_{m \times n}(\mathbb{R})$ 에서의 에르미트 행렬의 집합은 대칭행렬의 집합이며 벡터공간을 이룬다는 것은 쉽게 보일 수 있다. $\mathcal{M}_{m \times n}(\mathbb{C})$ 의 경우,
+
+$$
+\left[\begin{array}{rr} 1 & i \\ -i & 1 \end{array}\right] + i \left[\begin{array}{rr} 1 & 1 \\ 1 & 2 \end{array}\right] = \left[\begin{array}{rr} 1+i & 2i \\ 0 & 1+i \end{array}\right]
+$$
+
+는 에르미트 행렬이 아니다.
+
+
+:::
+
+
+</br>
+
+::: {#exr-axler_7_A_11}
+
+Projection $\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\boldsymbol{P}=\boldsymbol{P}_U$ 인 $U\le \mathcal{M}_{n}(\mathbb{F})$ 가 존재할 필요충분조건은 $\boldsymbol{P}$ 가 에르미트 행렬임을 보여라.
+
+:::
+
+::: {.solution}
+
+$\boldsymbol{P}=\boldsymbol{P}_U$ 인 $U \le \mathcal{M}_n (\mathbb{F})$ 가 존재한다고 하자. $\boldsymbol{v}_1,\, \boldsymbol{v}_2\in \mathcal{M}_n(\mathbb{F})$ 에 대해 $\boldsymbol{v}_1 = \boldsymbol{u}_1 + \boldsymbol{w}_1$, $\boldsymbol{v}_2 = \boldsymbol{u}_2 + \boldsymbol{w}_2$ 를 만족하는 $\boldsymbol{u}_1,\, \boldsymbol{u}_2\in U$, $\boldsymbol{w}_1,\,\boldsymbol{w}_2 \in U^\perp$ 가 존재한다.
+
+$$
+\langle \boldsymbol{Pv}_1,\,\boldsymbol{v}_2\rangle = \langle \boldsymbol{u}_1,\, \boldsymbol{v}_2\rangle = \langle \boldsymbol{u}_1,\,\boldsymbol{u}_2 + \boldsymbol{w}_2 \rangle = \langle \boldsymbol{u}_1,\, \boldsymbol{u}_2\rangle = \langle \boldsymbol{u}_1,\boldsymbol{Pv}_2\rangle = \langle \boldsymbol{v}_1,\, \boldsymbol{Pv}_2\rangle 
+$$
+
+이므로 $\boldsymbol{P}$ 는 에르미트 행렬이다.
+
+역으로 $\boldsymbol{P}$ 가 에르미트 행렬이라고 하고 $U=\text{im}(\boldsymbol{P})$ 라고 하자. $\boldsymbol{P}$ 가 projection 이면 $U\le \mathcal{M}_n(\mathbb{F})$ 에 대해 $\boldsymbol{P}= \boldsymbol{P}_U$ 임은 이미 보였다. 
+
+:::
