@@ -31,7 +31,6 @@ $\mathbb{F}$-벡터공간 $V$ 에서 정의된 $\phi : V \times V \to \mathbb{F}
 :::
 :::
 
-
 </br>
 
 대표적인 내적 벡터 공간으로는 다음과 같은 것들이 있다.
@@ -1129,6 +1128,83 @@ $u=(1, 0), v=(0, 1)$ 이라 하자. $\|u+v\|^2+\|u-v\|^2 = 2\|u\|^2+2\|v\|^2$ �
 :::
 
 </br>
+
+::: {#exr-axler-6_A_19_20}
+
+내적벡터공간에서 내적을 노름의 합으로 표현 할 수 있다. 
+
+&emsp; ($1$) 내적이 정의된 실벡터공간 $V$ 에서 $u,\,v\in V$ 에 대해 다음이 성랍함을 보여라.
+
+$$
+\langle u,\,v \rangle = \dfrac{1}{4} \left[\|u+v\|^2 - \|u-v\|^2\right].
+$$
+
+&emsp; ($2$) 내적이 정의된 복소벡터공간 $V$ $u,\,v\in V$ 에 대해 다음이 성랍함을 보여라.
+
+$$
+\langle u,\, v\rangle = \dfrac{1}{4} \left[\| u+v\|^2 - \|u-v\|^2 + i \|u+iv\|^2 - i \|u-iv\|^2 \right].
+$$
+
+:::
+
+::: {.solution}
+
+($1$) 실벡터 공간에서 $\langle u,\,v\rangle = \langle v,\, u\rangle$ 이다. 따라서,
+
+$$
+\begin{aligned}
+\left[\|u+v\|^2 - \|u-v\|^2\right] &= \langle u + v, u+v\rangle - \langle u-v,\, u-v\rangle \\
+&= \|u\|^2 + \|v\|^2 + 2 \langle u,\,v\rangle -\|u\|^2 -\|v\|^2 +2 \langle u,\, v\rangle \\
+& = 4\langle u,\, v\rangle
+\end{aligned}
+$$
+
+이다.
+
+($2$) 
+
+$$
+\begin{aligned}
+\left[\| u+v\|^2 -\right. & \left. \|u-v\|^2 +  i \|u+iv\|^2 - i \|u-iv\|^2 \right] \\
+&= \langle u+v,u+v\rangle -\langle u-v, u-v\rangle +i \langle u+iv, u+iv\rangle - i \langle u-iv,\,u-iv \rangle \\
+&= 2\langle u, v\rangle + 2\langle v, u \rangle +2 \langle u,\,v\rangle - 2 \langle v, u\rangle \\
+&= 4\langle u,\, v\rangle
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+::: {#exr-operator_orthogonal_to_every_vector}
+
+내적 $\mathbb{F}$-벡터공간에서 정의된 연산자 $T\in \mathcal{L}(V)$ 가 모든 $v\in V$ 에 대해 $\langle Tv,\,v\rangle = 0$ 이면 $T=0$ 임을 보여라.
+
+:::
+
+::: {.solution}
+
+$T\in \mathcal{L}(V)$ 가 $0$ 라는 것은 모든 $u,\,v \in V$ 에 대해 $\langle Tu,\,v\rangle =0$ 인것과 동치이다. $\mathbb{F}=\mathbb{R}$ 일 경우,
+
+$$
+\langle T u,\,v \rangle =  \dfrac{1}{4} \left[\langle T(u+v),\, u+v \rangle - \langle T(u-v),\, u-v\rangle \right]
+$$
+
+이므로 $\langle Tu,\,v\rangle =0$ 이다. 따라서 $T=0$ 이다. $\mathbb{F}=\mathbb{C}$ 인 경우,
+
+$$
+\begin{aligned}
+\langle T u,\,v \rangle &=  \dfrac{1}{4} \left[\langle T(u+v),\, u+v \rangle - \langle T(u-v),\, u-v\rangle  \right] \\
+&\qquad \qquad + \dfrac{i}{4} \left[\langle T(u+iv),\, u+iv \rangle - \langle T(u-iv),\, u-iv\rangle  \right] \\
+\end{aligned}
+$$
+
+이므로 $\langle Tu,\, v\rangle =0$ 이다. 따라서 $T=0$ 이다.
+
+:::
+
+</br>
+
 
 ::: {#exr-axler_6_A_22}
 $a_1,\ldots,\,a_n\in\mathbb{R}$ 에 대해 다음이 성립함을 보이시오.

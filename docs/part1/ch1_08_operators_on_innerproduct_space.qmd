@@ -146,9 +146,6 @@ $\boldsymbol{A}$ 가 에르미트 행렬일 경우 $(\boldsymbol{A}^\ast)_{ij} =
 &emsp; ($2$) 고유값은 항상 실수이다.
 
 &emsp; ($3$) 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.
-
-&emsp; ($4$) 모든 $\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\langle \boldsymbol{Au},\,\boldsymbol{u}\rangle =0$ 이면 $\boldsymbol{A}=0$ 이다.
-
 :::
 
 ::: {.proof}
@@ -169,29 +166,11 @@ $$
 \begin{aligned}
 &\lambda_1 \langle \boldsymbol{u}_1,\, \boldsymbol{u}_2\rangle = \langle \boldsymbol{Au}_1,\,\boldsymbol{u}_2\rangle = \langle \boldsymbol{u}_1,\, \boldsymbol{A}^\ast \boldsymbol{u}_2 \rangle = \langle \boldsymbol{u}_1,\,\boldsymbol{Au}_2\rangle  = \overline{\lambda_2} \langle \boldsymbol{u}_1,\,\boldsymbol{u}_2\rangle  = \lambda_2 \langle \boldsymbol{u}_1,\,\boldsymbol{u}_2 \rangle \\
 \implies & (\lambda_1-\lambda_2) \langle \boldsymbol{u}_1,\, \boldsymbol{u}_2\rangle   = 0 \\
-\implies & \langle \boldsymbol{u}_1,\,\boldsymbol{u}_2 \rangle = 0
+\implies & \langle \boldsymbol{u}_1,\,\boldsymbol{u}_2 \rangle = 0 \qquad \square
 \end{aligned}
 $$
 
-($4$) 내적벡터공간의 경우 내적을 노름의 합으로 표현할 수 있다. 예를 들어, $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{R})$ 이면 임의의 $\boldsymbol{u},\,\boldsymbol{u}'\in \mathcal{M}_{n \times n}(\mathbb{R})$ 에 대해
 
-$$
-\langle \boldsymbol{Au},\,\boldsymbol{u}'\rangle =\dfrac{\langle \boldsymbol{A}(\boldsymbol{u}+\boldsymbol{u}'),\, \boldsymbol{u}+\boldsymbol{u}'\rangle -\langle \boldsymbol{A}(\boldsymbol{u}-\boldsymbol{u}'),\, \boldsymbol{u}-\boldsymbol{u}'\rangle}{4}
-$$
-
-이다. 모든 $\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\langle \boldsymbol{Au},\,\boldsymbol{u}\rangle =0$ 이면 우변이 $0$ 이므로 $\langle \boldsymbol{Au},\,\boldsymbol{u}'\rangle = 0$ 이므로 $\boldsymbol{A}=\boldsymbol{0}$ 이다.
-
-
-이다. $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 이라면,
-
-$$
-\begin{aligned}
- \langle \boldsymbol{Au},\, \boldsymbol{u}'\rangle & = \dfrac{1}{4} \left(\langle \boldsymbol{A}(\boldsymbol{u}+\boldsymbol{u}'),\, \boldsymbol{u}+\boldsymbol{u}' \rangle - \langle \boldsymbol{A}(\boldsymbol{u}-\boldsymbol{u}'),\, \boldsymbol{u} - \boldsymbol{u}'\rangle \right) \\
-&\qquad + \dfrac{i}{4} \left( \langle \boldsymbol{A}(\boldsymbol{u}+i\boldsymbol{u}'),\, \boldsymbol{v}+i\boldsymbol{u}'\rangle  - \langle \boldsymbol{A}(\boldsymbol{u}-i\boldsymbol{u}'),\, \boldsymbol{u}-i\boldsymbol{u}'\rangle \right) \\
-\end{aligned}
-$$
-
-임을 보일 수 있으며, 임의의 $\boldsymbol{u},\, \boldsymbol{u}'\in V$ 에 대해 $\langle \boldsymbol{Au},\,\boldsymbol{u}'\rangle =0$ 이므로 $\boldsymbol{A}=0$ 이다. $\square$
 :::
 
 </br>
@@ -218,9 +197,9 @@ $$
 \end{aligned}
 $$
 
-임을 안다. @prp-peroperties_hermitian_operator 의 ($4$) 로 부터 $\boldsymbol{A}=\boldsymbol{A}^\ast$ 임을 알 수 있다. 즉 $\boldsymbol{A}$ 는 에르미트 행렬이다.
+임을 안다. @exr-operator_orthogonal_to_every_vector 로 부터 $\boldsymbol{A}=\boldsymbol{A}^\ast$ 임을 알 수 있다. 즉 $\boldsymbol{A}$ 는 에르미트 행렬이다.
  
-($2 \implies 1$) $\boldsymbol{A}$ 가 hermitian 이라 하자. 
+($2 \implies 1$) $\boldsymbol{A}$ 가 에르미트 행렬이라 하자. 
 
 $$
 \langle \boldsymbol{Au},\, \boldsymbol{u}\rangle - \overline{\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle} = \langle \boldsymbol{Au},\, \boldsymbol{u}\rangle - \langle \boldsymbol{A}^\ast\boldsymbol{u},\, \boldsymbol{u}\rangle =0
@@ -233,6 +212,7 @@ $$
 </br>
 
 ## Isometry {#sec-isometry}
+
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-isometry}
@@ -365,13 +345,15 @@ $$
 
 </br>
 
+::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-orthogonal_operator}
 
 #### 유니타리행렬과 직교행렬
 
-복소공간에서 정의된 isometry 를 **유니타리 연산자/행렬 (unitary operator/matrix)** 라 하고 실수공간에서 정의된 isometry 를 **직교 연산자/행렬 (orthogonal operator/matrix)** 라 한다. 유니타리 행렬에 의한 행렬/벡터의 닮을 변환을 **유니타리 변환 (unitary transformation)**, 직교행렬에 의핸 행렬/벡터의 변환을 **직교 변환 (orthogonal transformation)**이라고 한다.
+$\mathbb{C}$-벡터공간에서 정의된 isometry 를 **유니타리 연산자/행렬 (unitary operator/matrix)** 라 하고 $\mathbb{R}$-벡터공간에서 정의된 isometry 를 **직교 연산자/행렬 (orthogonal operator/matrix)** 라 한다. 유니타리 행렬에 의한 행렬/벡터의 변환을 **유니타리 변환 (unitary transformation)**, 직교행렬에 의핸 행렬/벡터의 변환을 **직교 변환 (orthogonal transformation)**이라고 한다.
 
-::::
+:::
+:::
 
 
 
