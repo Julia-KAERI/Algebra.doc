@@ -55,18 +55,14 @@ $$
 
 </br>
 
-$V^\ast$ 이 벡터공간이므로 차원을 갖는다.
+유한차원 벡터공간 $V$ 에 대해 $V^\ast$ 의 차원을 정의 할 수 있다.
 
 ::: {#prp-dim_of_dual_space}
-$\dim (V^\ast) = \dim (V)$ 이다.
+유한차원 벡터공간 $V$ 에 대해 $\dim (V^\ast) = \dim (V)$ 이다.
 :::
 
 ::: {.proof}
-@cor-dimension_of_LUV 에 의해, 
-
-$$
-\dim (V^\ast) = \dim (\mathcal{L}(V,\,\mathbb{F})) = (\dim (V)) \times (\dim (\mathbb{F})) = \dim (V)\;\square
-$$
+@cor-dimension_of_LUV 에 의해 $\dim (V^\ast) = \dim (\mathcal{L}(V,\,\mathbb{F})) = \dim (V)$. $\square$
 
 :::
 
@@ -75,7 +71,7 @@ $$
 
 ::: {#prp-dual_basis}
 
-유한차원 $\mathbb{F}$-벡터공간 $V$ 의 기저 $\{v_1,\ldots,\,v_n\}$ 에 대해 범함수 $\varphi_1,\ldots,\,\varphi_n \in V^\ast$ 를 다음과 같이 정의하자.
+유한차원 벡터공간 $V$ 의 기저 $\{v_1,\ldots,\,v_n\}$ 에 대해 범함수 $\varphi_1,\ldots,\,\varphi_n \in V^\ast$ 를 다음과 같이 정의하자.
 
 $$
 \varphi_i (v_j) = \delta_{ij}
@@ -99,7 +95,7 @@ $\square$
 :::
 
 
-즉 $n$ 차원 $\mathbb{F}$-벡터공간 $V$ 의 모든 범함수는 $\{\varphi_i,\ldots,\,\varphi_n\}$ 의 선형결합으로 표현할 수 있다는 뜻이다. 
+즉 $n$ 차원 $\mathbb{F}$-벡터공간 $V$ 의 모든 선형 범함수는 $\{\varphi_i,\ldots,\,\varphi_n\}$ 의 선형결합으로 표현할 수 있다는 뜻이다. 
 
 </br>
 
@@ -127,28 +123,29 @@ $\square$
 ::: {#def-dual_map}
 #### 쌍대 사상(Dual map)
 
-$T\in \mathcal{L}(V,\, W)$ 와 $\varphi \in W^\ast$ 에 대해 아래와 같이 정의된 $T^\ast \in \mathcal{L}(W^\ast,\, V^\ast)$ 를 $T$ 의 **쌍대 사상(dual map)** 이라 한다.
+$T\in \mathcal{L}(U,\, V)$ 와 $\varphi \in V^\ast$ 에 대해 아래와 같이 정의된 $T^T \in \mathcal{L}(V^\ast,\, U^\ast)$ 를 $L$ 의 **쌍대 사상(dual map)** 이라 한다.
 
 $$
-T^\ast(\varphi) = \varphi \circ T
-$$
+T^T(\varphi) = \varphi \circ T
+$$ 
+[$T^T$ 의 위첨자 $T$ 는 전치(transpose) 의 $T$ 이다. 이유는 마지막에 나온다.]{.aside}
 :::
 ::: 
 
 </br>
 
 ::: {#prp-dual_map}
-$T^\ast$ 은 선형사상이다.
+@def-dual_map 에서 정의된 $T^T$ 은 선형사상이다.
 :::
 
 ::: {.proof}
-$\varphi,\,\psi \in W^\ast,\, \lambda \in \mathbb{F}$ 일 때,
+$\varphi,\,\psi \in V^\ast,\, c \in \mathbb{F}$ 일 때,
 
 $$
-T^\ast (\varphi + \lambda \psi)  = (\varphi + \lambda \psi )\circ T = \varphi \circ T  + \lambda (\psi \circ T) = T^\ast (\varphi) + \lambda T^\ast (\psi) 
+T^T (\varphi + c \psi)  = (\varphi + c \psi )\circ T = \varphi \circ T  +c (\psi \circ T) = T^T (\varphi) + c T^T (\psi) 
 $$
 
-이므로 $T^\ast$ 은 선형사상이다. $\square$
+이므로 $T'$ 은 선형사상이다. $\square$
 :::
 
 </br>
@@ -157,32 +154,35 @@ $$
 
 ::: {#thm-dual-map}
 
-$S,\,T \in \mathcal{L}(V,\,W)$ 일 때 쌍대사상 $S^\ast ,\,T^\ast$ 은 다음 성질을 만족한다.
+$S,\,T \in \mathcal{L}(U,\,V)$ 일 때 쌍대사상 $S^T ,\,T^T$ 은 다음 성질을 만족한다.
 
-1. $(S+T)^\ast = S^\ast + T^\ast$,
+&emsp; ($1$) $(S+T)^T= S^T + T^T$,
 
-2. $(\lambda S)^\ast = \lambda S^\ast$
+&emsp; ($2$) $(\lambda S)^T = \lambda S^T$
 
 또한 $T \in \mathcal{L}(U,\,V),\, S \in \mathcal{L}(V,\,W)$ 일 때 다음 성질을 만족한다.
 
-3. $(S\circ T)^\ast = T^\ast \circ S^\ast$
+&emsp; ($3$) $(S\circ T)^T = T^T \circ S^T$
 :::
 
 ::: {.proof}
 
-1, 2 는 아래와 같이 증명한다.
+($1$), ($2$) 는 아래와 같이 증명한다.
 
 $$
 \begin{aligned}
-(S+T)^\ast(\varphi)  &=\varphi \circ (S+T) = \varphi \circ S + \varphi \circ T = S^\ast + T^\ast,\\
-(\lambda S)^/ast (\varphi) &= \varphi \circ (\lambda S) = \lambda (\varphi \circ S) = \lambda S^\ast
+(S+T)^T(\varphi)  &=\varphi \circ (S+T) = \varphi \circ S + \varphi \circ T = S^T + T^T,\\
+(\lambda S)^T (\varphi) &= \varphi \circ (\lambda S) = \lambda (\varphi \circ S) = \lambda S^T
 \end{aligned}
 $$
 
-이제 3을 증명하자.
+이제 ($3$) 을 증명하자.
 
 $$
-(S\circ T)^\ast(\varphi) = \varphi \circ (S \circ T) = (\varphi \circ S)\circ T = T^\ast (\varphi \circ S) = T^\ast (S^\ast(\varphi)) = (T^\ast \circ S^\ast) (\varphi)
+\begin{aligned}
+(S\circ T)^T(\varphi) &= \varphi \circ (S \circ T) = (\varphi \circ S)\circ T = T^T (\varphi \circ S) = T^T (S^T(\varphi)) \\
+&= (T^T \circ S^T) (\varphi)
+\end{aligned}
 $$
 $\square$
 :::
@@ -241,34 +241,34 @@ $$
 i(u) = u
 $$
 
-로 정의하면, $i^\ast \in \mathcal{L}(V^\ast,\, U^\ast)$ 을 생각 할 수 있다. 임의의 $\varphi \in V^\ast$ 에 대해 $i^\ast (\varphi) = \varphi  \circ i$ 이며,
+로 정의하면, $i^T \in \mathcal{L}(V^\ast,\, U^\ast)$ 을 생각 할 수 있다. 임의의 $\varphi \in V^\ast$ 에 대해 $i^T (\varphi) = \varphi  \circ i$ 이며,
 
 $$
 \psi \in \ker (i^\ast) \iff \psi \circ i = 0 \iff \psi (u) = 0,\;\forall u \in U \iff \psi \in U^0
 $$
 
-이므로 $\ker (i^\ast) = U^0$ 이다. Rank-nullity theorem (@thm-rank_nullity)에 의해,
+이므로 $\ker (i^T) = U^0$ 이다. Rank-nullity theorem (@thm-rank_nullity)에 의해,
 
 $$
-\text{rank} (i^\ast) + \text{nullity} (i^\ast) = \dim (V^\ast)
+\text{rank} (i^T) + \text{nullity} (i^T) = \dim (V^\ast)
 $$
 
-이며 $\text{nullity} (i^\ast) = \dim (U^0),\, \dim (V^\ast) = \dim (V)$ 이므로,
+이며 $\text{nullity} (i^T) = \dim (U^0),\, \dim (V^\ast) = \dim (V)$ 이므로,
 
 $$
-\text{rank}(i^\ast) + \dim (U^0) = \dim (V)
+\text{rank}(i^T) + \dim (U^0) = \dim (V)
 $$
 
 임을 안다. $U$ 의 기저 $u_1,\ldots,\,u_m$ 을 확장하여 $V$ 의 기저를 구성 할 수 있다. 여기에 추가된 기저가 $v_1,\ldots,\,v_n$ 이라 하자. $u_j$ 의 쌍대기저를 $\varphi_j$, 추가된 $v_k$ 에 대한 쌍대기저를 $\psi_k$ 라 하자.
 
 $$
 \begin{aligned}
-i^\ast(\varphi_k)(u_j) &= (\varphi_k \circ i)(v_j) = \delta_{jk}\\
-i^\ast(\psi_k) (u_j) &= (\psi_k \circ i)(u_j) = \psi_k (u_j) = 0
+i'(\varphi_k)(u_j) &= (\varphi_k \circ i)(v_j) = \delta_{jk}\\
+i'(\psi_k) (u_j) &= (\psi_k \circ i)(u_j) = \psi_k (u_j) = 0
 \end{aligned}
 $$
 
-이므로 $\text{im}\, i^\ast = U^\ast$ 이다. 즉 $\text{rank} (i^\ast) = \dim (U^\ast) = \dim (U)$ 이므로 주어진 식이 성립한다. $\square$
+이므로 $\text{im}(i^T) = U^\ast$ 이다. 즉 $\text{rank} (i^T) = \dim (U^\ast) = \dim (U)$ 이므로 주어진 식이 성립한다. $\square$
 :::
 
 </br>
@@ -276,31 +276,31 @@ $$
 ::: {#thm-ker_Tprime}
 $V,\, W$ 가 유한차원 벡터공간이고 $T\in \mathcal{L}(V,\,W)$ 일 때, 다음이 성립한다.
 
-1. $\ker (T^\ast) = (\text{im}\, T)^0$
+&emsp; ($1$) $\ker (T^T) = (\text{im}\, T)^0$
 
-2. $\text{nullity} (T^\ast) = \text{nullity} (T) + \dim (W) - \dim (V)$
+&emsp; ($2$) $\text{nullity} (T^T) = \text{nullity} (T) + \dim (W) - \dim (V)$
 
 :::
 
 
 ::: {.proof}
 
-우선 1. 을 증명한다.
+($1$)
 
 $$
 \begin{aligned}
-\varphi \in \ker (T^\ast) &\iff \varphi \circ T = 0  \\ 
+\varphi \in \ker (T^T) &\iff \varphi \circ T = 0  \\ 
 & \iff \forall v\in V,\;(\varphi \circ T)(v) = 0 \\ 
 & \iff \varphi(T(v)) = 0 \\ 
 & \iff \varphi \in (\text{im} T)^0
 \end{aligned}
 $$
 
-이제 2. 를 증명하자.
+($2$)
 
 $$
 \begin{aligned}
-\text{nullity} (T^\ast) &= \dim ((\text{im} T)^0) \\ 
+\text{nullity} (T^T) &= \dim ((\text{im} T)^0) \\ 
 & = \dim (W) - \dim (\text{im}(T)) \\ 
 &= \dim (W) - (\dim (V) - \text{nullity} (T))
 \end{aligned}
@@ -312,7 +312,7 @@ $\square$
 
 ::: {#lem-injective_dual_map}
 
-유한차원 벡터공간 $V,\,W$ 에 대해 $T\in \mathcal{L}(V,\,W)$ 가 전사인 것의 필요충분조건은 $T^\ast$ 이 단사인 것이다.
+유한차원 벡터공간 $V,\,W$ 에 대해 $T\in \mathcal{L}(V,\,W)$ 가 전사인 것의 필요충분조건은 $T^T$ 이 단사인 것이다.
 
 :::
 
@@ -322,53 +322,53 @@ $$
 \begin{aligned}
 T \text{ 가 전사} & \iff \text{im} (T) = W  \\ 
 & \iff (\text{im} (T))^0 = \{0 \}  \\ 
-& \iff \ker (T^\ast) = 0  \\ 
-& \iff T^\ast \text{ 이 단사}. \square
+& \iff \ker (T^T) = 0  \\ 
+& \iff T' \text{ 이 단사}. \square
 \end{aligned}
 $$
 :::
 </br>
 
-::: {#lem-rank_Tast}
+::: {#lem-rank_Tprime}
 
 $V,\,W$ 가 유한차원 벡터공간이고 $T\in \mathcal{L}(V,\,W)$ 일 때 다음이 성립한다.
 
-1. $\text{rank} (T^\ast) = \text{rank} (T)$
+&emsp; ($1$) $\text{rank} (T^T) = \text{rank} (T)$
 
-2. $\text{im} (T^\ast) = (\ker (T))^0$
+&emsp; ($2$) $\text{im} (T^T) = (\ker (T))^0$
 :::
 
 ::: {.proof}
-우선 1. 은 다음과 같이 보일 수 있다. 
+($1$)
 
 $$
 \begin{aligned}
-\text{rank} (\text{im} (T^\ast)) & = \dim (W^\ast) - \text{nullity} (T^\ast) = \dim (W) - \dim (\text{im} (T))^0 \\ 
+\text{rank} (\text{im} (T^T)) & = \dim (W^\ast) - \text{nullity} (T^T) = \dim (W) - \dim (\text{im} (T))^0 \\ 
 &= \text{rank} (T).
 \end{aligned}
 $$
 
-이제 2. 를 보이자. $\varphi \in \text{im} (T^\ast)$ 이면 어떤 $\psi \in W^\ast$ 에 대해 $\psi \circ T = \varphi$ 이다. $v \in \ker (T)$ 이면,
+($2$) $\varphi \in \text{im} (T^T)$ 이면 어떤 $\psi \in W^\ast$ 에 대해 $\psi \circ T = \varphi$ 이다. $v \in \ker (T)$ 이면,
 
 $$
 \varphi (v) = \psi \circ T (v ) = \psi (0) =0
 $$
 
-이므로 $\varphi \in (\ker (T))^0$ 이다. 즉 $\text{im}(T^\ast) \subset  (\ker (T))^0$ 이다.
+이므로 $\varphi \in (\ker (T))^0$ 이다. 즉 $\text{im}(T^T) \subset  (\ker (T))^0$ 이다.
 
 또한,
 
 $$
-\text{rank} (T^\ast) = \text{rank} (T) = \dim (V) - \text{nullity} (T) = \dim ((\ker (T))^0)
+\text{rank} (T^T) = \text{rank} (T) = \dim (V) - \text{nullity} (T) = \dim ((\ker (T))^0)
 $$
 
-이므로 $\text{im} (T^\ast) = (\ker (T))^0$ 이다. $\square$
+이므로 $\text{im} (T^T) = (\ker (T))^0$ 이다. $\square$
 :::
 
 </br>
 
 ::: {#lem-tprime_surjective}
-$V,\,W$ 가 유한차원 벡터공간이고 $T\in \mathcal{L}(V,\,W)$ 일 때 $T$ 가 단사일 필요충분조건은 $T^\ast$ 이 전사이다.
+$V,\,W$ 가 유한차원 벡터공간이고 $T\in \mathcal{L}(V,\,W)$ 일 때 $T$ 가 단사일 필요충분조건은 $T^T$ 이 전사이다.
 :::
 
 ::: {.proof}
@@ -376,8 +376,186 @@ $$
 \begin{aligned}
 T \text{ 가 단사} &\iff \text{nullity} (T) = 0  \\ 
 & \iff (\ker T)^0 = V^\ast  \\ 
-& \iff \text{im} (T^\ast) = V^\ast  \\ 
-& \iff T^\ast \text{ 은 전사} \;\square
+& \iff \text{im} (T^T) = V^\ast  \\ 
+& \iff T^T \text{ 은 전사} \;\square
 \end{aligned}
 $$
 :::
+
+</br>
+
+## 전치행렬과 행렬의 rank
+
+우리는 이미 전치행렬과 행렬의 rank 에 대해 [행간소 사다리꼴 행렬을 통한 선형사상의 이해](../part1/ch1_05_matrix.qmd#sec-linear_map_understood_by_RREM) 알아보았다. 여기서는 그 의미를 다른 방법으로 알아보자.
+
+
+벡터공간 $U,\,V$ 와 그 기저 $\mathcal{B}_U = (u_1,\ldots,\,u_n),\, \mathcal{B}_V = (v_1,\ldots,\,v_m)$, 그리고 이 기저에 대한 쌍대기저 $\mathcal{B}_{U^\ast} = (\varphi_1,\ldots,\,\varphi_n),\, \mathcal{B}_{V^\ast} = (\psi_1,\ldots,\,\psi_m)$ 를 생각하자. $T\in \mathcal{L}(U, V)$ 와 그 쌍대사상 $T'\in \mathcal{L}(V^\ast, U^\ast)$ 를 생각 할 수 있다. $[T]_{\mathcal{B}_U, \mathcal{B}_V} = \boldsymbol{A}$, $[T^T]_{\mathcal{B}_{V^\ast}, \mathcal{B}_{U^\ast}} =\boldsymbol{B}$ 라고 하자. 
+
+$$
+T^T(\psi_j)  =  \sum_{i=1}^n B_{ij}\varphi_i
+$$
+
+$T^T(\psi_j) = \psi_j \circ T$ 이므로, 
+
+$$
+(\psi_j \circ T)(u_k) = \sum_{i=1}^n B_{ij}\varphi_i(u_k) = B_{kj}
+$$
+
+이다. 또한
+
+$$
+(\psi_j \circ T)(u_k) =  \psi_j (T(u_k)) = \psi_j \left(\sum_{i=1}^m A_{ik}v_i \right) = A_{jk}
+$$
+
+이므로 $\boldsymbol{B}=\boldsymbol{A}^T$ 임을 알 수 있다. 즉 우리는 다음을 보였다.
+
+::: {#prp-transpose_of_matrix}
+
+벡터공간 $U,\,V$ 와 그 기저 $\mathcal{B}_U = (u_1,\ldots,\,u_n),\, \mathcal{B}_V = (v_1,\ldots,\,v_m)$ 에 대한 선형사상 $T\in \mathcal{L}(U, V)$ 의 행렬표현 $\boldsymbol{A}=[T]_{\mathcal{B}_U, \mathcal{B}_V}$ 의 전치행렬 $\boldsymbol{A}^T$ 는 $\mathcal{B}_U$ 와 $\mathcal{B}_V$ 의 쌍대기저에 대한 쌍대사상 $T^T\in \mathcal{L}(V^\ast, U^\ast)$ 의 행렬표현이다.
+
+:::
+
+</br>
+
+
+이제 $T$ 에 대한 쌍대사상을 $T^T$ 로 표현하는것이 자연스럽다 라는 것을 알게 되었다. 우리는 자연스럽게 다음의 결론에 도달한다. 
+
+::: {#thm-dimension_of_matrix_by_transpose}
+
+행렬 $\boldsymbol{A}$ 의 행공간의 차원과 열공간의 차원은 같다.
+
+:::
+
+::: {.proof}
+
+@prp-transpose_of_matrix 의 표기법을 그대로 사용한다. $\boldsymbol{A}$ 의 열공간의 차원은 $\text{rank}(T)$ 와 같다. @lem-rank_Tprime 에 따라 $\text{rank}(T^T)$ 과도 같다. 이것은 $\boldsymbol{A}^T$ 의 열공간의 차원과 같고 또한 $\boldsymbol{A}$ 의 행공간의 차원과 같다. $\square$ 
+:::
+
+결국 우리는 @thm-dimension_of_matrix 과 같은 내용을 다른 방법으로 증명하였다. 
+
+</br>
+
+## 연습문제
+
+::: {#exr-axler_3_F_1}
+
+모든 선형 범함수는 0 사상이거나 전사함수임을 보여라.
+
+:::
+
+::: {.solution}
+
+$\varphi \in \mathcal{L}(V)$ 가 $0$ 사상이 아니라고 하자. $\varphi(v) \ne 0$ 인 $v\in V$ 가 존재하며, 모든 $c\in \mathbb{F}$ 에 대해 $cv\in V$ 이고 $\varphi(cv)= c \varphi(v)$ 이므로 $\text{im} (\varphi) = \mathbb{F}$ 이다.
+
+:::
+
+</br>
+
+::: {#exr-alxer-3_F_3}
+
+$V$ 가 유한차원 벡터공간이고 $v\in V,\, v \ne 0_V$ 라고 하자. 이 때 $\varphi\in V^\ast$, $\varphi(v) = 1$ 인 $\varphi$ 가 존재함을 보여라.
+
+:::
+
+::: {.solution}
+
+$v$ 를 포함하는 기저를 만들고 이 기저에 대한 쌍대기저를 만들라.
+
+:::
+
+</br>
+
+::: {#exr-axler_3_F_4}
+
+$V$ 가 유한차원 벡터공간이며 $U\le V,\, U  \ne V$ 라고 하자. $0$ 사상이 아니면서 $\forall u\in U,\, \varphi (u)=0$ 을 만족하는 $\varphi \in V^\ast$ 가 존재함을 보여라.
+
+:::
+
+::: {.solution}
+
+$v\in V-U$ 를 선택하여 $v$ 를 첫번째 원소로 하는 기저를 구성하고 쌍대기저를 만들면 된다.
+
+:::
+
+</br>
+
+::: {#exr-axler_3_F_5}
+
+$V_1,\ldots,\,V_m$ 이 벡터공간일 때 $(V_1\times \cdots \times V_m)^\ast$ 과 $V_1^\ast \times \cdots \times V_m^\ast$ 가 동형임을 보여라.
+
+:::
+
+::: {.solution}
+
+$v_i \in V_i,\, \phi_i \in V_i^\ast$ 에 대해 
+
+$$
+\Phi_{1, \ldots, m}(v_1,\ldots, v_m) = \phi_1(v_1) + \cdots + \phi_m(v_m)
+$$ 
+
+이라 하자. 
+
+ *-- to be done --*
+:::
+
+</br>
+
+::: {#exr-axlr_3_F_6}
+
+유한차원 $\mathbb{F}$-벡터공간 $V$ 에 대해 $v_1,\ldots,\,v_m\in V$ 라고 하자. $\Gamma \in \mathcal{L}(V^\ast,\, \mathbb{F}^m)$ 을 다음과 같이 정의한다.
+
+$$
+\Gamma (\varphi) = (\varphi (v_1), \ldots, \varphi(v_m)).
+$$
+
+이 때 다음을 보여라.
+
+&emsp; ($1$) $V=\text{span}(v_1,\ldots,\,v_m)$ 일 필요충분조건은 $\Gamma$ 가 단사인 것이다.
+ 
+&emsp; ($2$) $\{v_1,\ldots,\,v_m\}$ 이 선형독립일 필요충분조건은 $\Gamma$ 가 전사인 것이다.
+
+:::
+
+::: {.solution}
+
+($1$) $V=\text{span}(v_1,\ldots,\,v_m)$ 임을 가정하자. $\Gamma(\varphi_1) = \Gamma(\varphi_2)$ 라면 모든 $v_1,\ldots,\,v_m$ 에 대해 $\varphi_1(v_i)= \varphi_2(v_i)$ 이며 가정에 의해 $\varphi_1 = \varphi_2$ 이다. 따라서 $\Gamma$ 는 단사이다.  
+
+$V\ne \text{span}(v_1,\ldots,\,v_m)$ 라면 $v\in V- \text{span}(v_1,\ldots,\,v_m)$ 을 생각 할 수 있으며. $\Gamma (\varphi_1) = \Gamma(\varphi_2)$ 라도 $\varphi_1 \ne \varphi_2$ 일 수 있다. 
+
+($2$) $\{v_1,\ldots,\,v_m\}$ 이 선형독립이라면 $\psi_j (v_i) = \delta_{ij}$ 를 만족하는 $\psi_j\in V^\ast$ ($j=1,\ldots,\,m$) 가 존재한다. $\phi = \sum_{j=1}^m \psi_j \in V^\ast$ 이면 $\Gamma (\phi)$ 는 전사함수이다.
+
+$\Gamma$ 가 전사함수라고 하자. 임의의 $(x_1,\ldots,\,x_m)\in \mathbb{F}^m$ 에 대해 $\psi(v_i) = x_i$ 를 만족하는 $\psi \in V^\ast$ 가 존재한다. $\{v_1,\ldots,\,v_m\}$ 이 선형종속이라면 $c_1 v_1 + \cdots + c_m v_m =0$ 을 만족하는 $0$ 이 아닌 $c_j$ 가 존재한다. 이 때 일반성을 잃지 않고 $c_m \ne 0$ 이라고 할 수 있다. 즉 $v_m = \sum_{j=1}^{m-1} d_j v_j$ 이며, 
+
+$$
+x_m=\psi(v_m) = \sum_{j=1}^{m-1} d_j \psi (v_j) = \sum_{j=1}^{m-1}d_j x_j
+$$ 
+
+이어야 한다. 이것은 임의의 $(x_1,\ldots,\,x_m)$ 에 대해 성립할 수 없으므로 $\{v_1,\ldots,\,v_m\}$ 은 선형독립이어야 한다. 
+
+:::
+
+</br>
+
+::: {#axler-3_F_9}
+
+$(v_1,\ldots,\,v_n)$ 이 $V$ 의 기저이며 $\{\varphi_1,\ldots,\,\varphi_n\}$ 이 이에 대한 쌍대 기저라고 하자. $\psi\in V'$ 에 대해
+
+$$
+\psi = \psi(v_1)\varphi_1 + \cdots + \psi(v_n)\varphi_n
+$$
+
+임을 보여라.
+:::
+
+::: {.solution}
+
+@prp-dual_basis 에 의해 $\psi$ 는 $\{\varphi_1,\ldots,\,\varphi_n\}$ 의 선형 결합이다. $\psi = \sum_i c_i \varphi_i$ 라고 하면
+
+$$
+\psi(v_j) = \sum_{i=1}^n c_i \varphi_i (v_j) = c_j
+$$
+
+이므로 $\psi = \sum_i \psi(v_i)\varphi_i$ 이다.
+
+:::
+

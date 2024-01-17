@@ -131,7 +131,7 @@ $$
 
 ## 복소수체($\mathbb{C}$) 에서 정의된 행렬에 대한 스펙트럼 정리
 
-::: {#thm-spectrum_theorem_for_complex_field}
+::: {#thm-spectrum_theorem_for_complex_vector_space}
 
 #### 복소수체에서 정의된 행렬에 대한 스펙트럼 정리
 
@@ -406,7 +406,7 @@ $\boldsymbol{A}$ 가 $n \times n$ 대칭 행렬일 때 고유값이 항상 존�
 
 </br>
 
-::: {#thm-spectrum_theorem_of_real_vector_space}
+::: {#thm-spectrum_theorem_for_real_vector_space}
 
 #### 실수체($\mathbb{R}$) 에서 정의된 행렬의 스펙트럼 정리
 
@@ -588,7 +588,7 @@ $$
 \ker (\boldsymbol{A}^k) = \ker (\boldsymbol{A}) =\ker (\boldsymbol{A}^\ast) = \ker ((\boldsymbol{A}^\ast)^k) =  \ker ((\boldsymbol{A}^k)^\ast)
 $$
 
-이다. 
+이다. 따라서
 $$
 \text{im}(\boldsymbol{A}^k) = (\ker ((\boldsymbol{A}^k)^\ast))^\perp = (\ker (\boldsymbol{A}^\ast)) = \text{im}(\boldsymbol{A})
 $$
@@ -596,11 +596,66 @@ $$
 이다. 
 
 :::
-1
+
 </br>
 
 ::: {#exr-axler_7_A_18}
 
-$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 어떤 정규직교기저 $(\boldsymbol{u}_1, \ldots,\,\boldsymbol{u}_n)$ 에 대해 $\|\boldsymbol{Au}_i\| = \|\boldsymbol{A}^\ast \boldsymbol{u}_i\|$ 이면 $\boldsymbol{A}$ 가 정규행렬인가? 
+$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 표준기저 $(\boldsymbol{e}_1, \ldots,\,\boldsymbol{e}_n)$ 에 대해 $\|\boldsymbol{Ae}_i\| = \|\boldsymbol{A}^\ast \boldsymbol{e}_i\|$ $(i=1,\ldots,\,n)$ 이면 $\boldsymbol{A}$ 가 정규행렬인가? 
+
+:::
+
+::: {.solution}
+
+(<u>*이게 맞다면 텍스트에 명제로 나왔겠지?*</u>) 
+
+$\boldsymbol{A}= \left[\begin{array}{rr} 1 & -1 \\ 1 & -1\end{array}\right]$ 에 대해 $\|\boldsymbol{Ae}_1\| = \|\boldsymbol{Ae}_2\| = \sqrt{2}$ 이지만 $\boldsymbol{AA}^\ast - \boldsymbol{A}^\ast\boldsymbol{A} = \left[\begin{array}{rr} 0 & 4 \\ 4 & 0\end{array}\right] \ne \boldsymbol{0}$ 이다. 
+
+:::
+
+</br>
+
+::: {#exr-axler_7_B_1}
+
+대칭행렬이 아니면서 행렬의 고유벡터로 이루어진 기저를 갖도록 하는 정사각행렬이 존재하는가?
+
+:::
+
+::: {.solution}
+
+$\boldsymbol{A} = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatrix}$ 는 $\boldsymbol{Ae}_1 = \boldsymbol{e}_1$, $\boldsymbol{A}(\boldsymbol{e}_1 + \boldsymbol{e}_2) = 2(\boldsymbol{e}_1 + \boldsymbol{e}_2)$, $\boldsymbol{Ae}_3 = 3\boldsymbol{e}_3$ 인데 대칭행렬이 아니다. 
+
+:::
+
+::: {.callout-tip appearance="minimal" icon="false"}
+
+스펙트럼 정리가 이야기하는 것은 복소수체에서의 정규행렬, 실수체에서의 대칭행렬의 경우 행렬의 고유벡터로 정규직교기저를 구성할 수 있다는 것이다. 위의 문제의 경우는 대칭행렬이 아니므로 고유벡터로 정규직교기저를 구성할 수 없지만 기저는 구성 할 수 있다는 것이다.
+
+:::
+
+
+</br>
+
+::: {#exr-axler_7_B_4}
+
+$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때 $\boldsymbol{A}$ 가 정규행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 $\mathcal{M}_n(\mathbb{C})$ 는 모든 $\boldsymbol{A}$ 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.
+:::
+
+::: {.solution}
+
+@thm-spectrum_theorem_for_complex_vector_space 
+
+:::
+
+</br>
+
+::: {#exr-axler_7_B_5}
+
+$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 일 때 $\boldsymbol{A}$ 가 대칭행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 $\mathcal{M}_n(\mathbb{R})$ 는 모든 $\boldsymbol{A}$ 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.
+:::
+
+::: {.solution}
+
+@thm-spectrum_theorem_for_real_vector_space
 
 :::
