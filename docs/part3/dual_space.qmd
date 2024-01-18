@@ -14,7 +14,7 @@ crossref:
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-functional_dualspace}
+::: {#def-functional_dualspace} 
 #### 선형 범함수와 쌍대공간
 
 $\mathbb{F}$-벡터공간 $V$ 에 대해 $\mathcal{L}(V,\,\mathbb{F})$ 에 속하는 함수를 **선형 범함수(linear functional)** 라 한다. $\mathcal{L}(V,\,\mathbb{F})$ 는 벡터공간이며 이를 $V$ 에 대한 **쌍대공간(dual space)** 이라 하고 $V^\ast$ 이라 쓴다.
@@ -235,40 +235,40 @@ $$
 :::
 
 ::: {.proof}
-$U$ 가 $V$ 의 부분공간이므로 $i\in \mathcal{L}(U,\,V)$ 를
+$U$ 가 $V$ 의 부분공간이므로 $I\in \mathcal{L}(U,\,V)$ 를
 
 $$
-i(u) = u
+I(u) = u
 $$
 
-로 정의하면, $i^T \in \mathcal{L}(V^\ast,\, U^\ast)$ 을 생각 할 수 있다. 임의의 $\varphi \in V^\ast$ 에 대해 $i^T (\varphi) = \varphi  \circ i$ 이며,
+로 정의하면, $I^T \in \mathcal{L}(V^\ast,\, U^\ast)$ 을 생각 할 수 있다. 임의의 $\varphi \in V^\ast$ 에 대해 $I^T (\varphi) = \varphi  \circ I$ 이며,
 
 $$
-\psi \in \ker (i^\ast) \iff \psi \circ i = 0 \iff \psi (u) = 0,\;\forall u \in U \iff \psi \in U^0
+\psi \in \ker (I^T) \iff \psi \circ I = 0 \iff \psi (u) = 0,\;\forall u \in U \iff \psi \in U^0
 $$
 
-이므로 $\ker (i^T) = U^0$ 이다. Rank-nullity theorem (@thm-rank_nullity)에 의해,
+이므로 $\ker (I^T) = U^0$ 이다. Rank-nullity theorem (@thm-rank_nullity)에 의해,
 
 $$
-\text{rank} (i^T) + \text{nullity} (i^T) = \dim (V^\ast)
+\text{rank} (I^T) + \text{nullity} (I^T) = \dim (V^\ast)
 $$
 
-이며 $\text{nullity} (i^T) = \dim (U^0),\, \dim (V^\ast) = \dim (V)$ 이므로,
+이며 $\text{nullity} (I^T) = \dim (U^0),\, \dim (V^\ast) = \dim (V)$ 이므로,
 
 $$
-\text{rank}(i^T) + \dim (U^0) = \dim (V)
+\text{rank}(I^T) + \dim (U^0) = \dim (V)
 $$
 
 임을 안다. $U$ 의 기저 $u_1,\ldots,\,u_m$ 을 확장하여 $V$ 의 기저를 구성 할 수 있다. 여기에 추가된 기저가 $v_1,\ldots,\,v_n$ 이라 하자. $u_j$ 의 쌍대기저를 $\varphi_j$, 추가된 $v_k$ 에 대한 쌍대기저를 $\psi_k$ 라 하자.
 
 $$
 \begin{aligned}
-i'(\varphi_k)(u_j) &= (\varphi_k \circ i)(v_j) = \delta_{jk}\\
-i'(\psi_k) (u_j) &= (\psi_k \circ i)(u_j) = \psi_k (u_j) = 0
+I^T(\varphi_k)(u_j) &= (\varphi_k \circ I)(v_j) = \delta_{jk}\\
+I^T(\psi_k) (u_j) &= (\psi_k \circ I)(u_j) = \psi_k (u_j) = 0
 \end{aligned}
 $$
 
-이므로 $\text{im}(i^T) = U^\ast$ 이다. 즉 $\text{rank} (i^T) = \dim (U^\ast) = \dim (U)$ 이므로 주어진 식이 성립한다. $\square$
+이므로 $\text{im}(I^T) = U^\ast$ 이다. 즉 $\text{rank} (I^T) = \dim (U^\ast) = \dim (U)$ 이므로 주어진 식이 성립한다. $\square$
 :::
 
 </br>
@@ -536,7 +536,7 @@ $$
 
 </br>
 
-::: {#axler-3_F_9}
+::: {#exr-axler-3_F_9}
 
 $(v_1,\ldots,\,v_n)$ 이 $V$ 의 기저이며 $\{\varphi_1,\ldots,\,\varphi_n\}$ 이 이에 대한 쌍대 기저라고 하자. $\psi\in V'$ 에 대해
 
@@ -559,3 +559,54 @@ $$
 
 :::
 
+</br>
+
+::: {#exr-axler_3_F_11}
+
+$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $\boldsymbol{A}\ne \boldsymbol{0}$ 일 때 $\text{rank}(\boldsymbol{A})=1$ 일 필요충분조건은 어떤 $\boldsymbol{c}\in \mathcal{M}_{m}(\mathbb{F})$, $\boldsymbol{d}\in \mathcal{M}_n(\mathbb{F})$ 가 존재하여 $(\boldsymbol{A})_{ij} = (\boldsymbol{c})_i (\boldsymbol{d})_j$ 를 만족하는 것임을 보이시오.
+
+:::
+
+::: {.solution}
+
+행렬의 행교환에도 rank 는 변화가 없으므로 일반성을 잃지 않고 $\boldsymbol{A}_{1:}\ne \boldsymbol{0}$ 임을 가정 할 수 있다. $\text{rank}(\boldsymbol{A})=1$ 이라면 첫번째 행이 아닌 나머지 행이 모두 첫번째 행의 스칼라배이므로 $\boldsymbol{d}=\boldsymbol{A}_{1:}$, 이며 $\boldsymbol{A}_{i:} = c_i \boldsymbol{A}_{1:}$ 인 $c_i$ 를 성분으로 갖는 $\boldsymbol{c}$ 를 생각하면 $(\boldsymbol{A})_{ij} = (\boldsymbol{c})_i (\boldsymbol{d})_j$ 이다.
+
+역으로 $\boldsymbol{A}_{ij}=(\boldsymbol{c})_i (\boldsymbol{d})_j$ 라면 $\boldsymbol{A}\ne \boldsymbol{0}$ 이므로 $\boldsymbol{A}$ 는 $\boldsymbol{0}$ 벡터가 아닌 $\boldsymbol{d}$ 의 $c_i$ 배를 $i$ 번째 행으로 갖는 행렬이다. 따라서 $\text{rank}(\boldsymbol{A})=1$ 이다.
+
+:::
+
+</br>
+
+::: {#exr-axler_3_F_12}
+
+$V$ 에서의 항등사상의 쌍대사상은 $V^\ast$ 에서의 항등사상임을 보여라.
+
+:::
+
+::: {.solution}
+
+항등사상 $I:V \to V$ 에 대한 쌍대사상 $I^T(\varphi) = \varphi \circ I = \varphi$ 이다. 
+
+:::
+
+</br>
+
+::: {#exr-axler_3_F_13}
+
+$T\in \mathcal{L}(\mathbb{R}^3, \mathbb{R}^2)$ 가 $T(x, y, z) = (4x+5y+6z, 7x+8y+9z)$ 로 정의되었다고 하자. $\varphi_1,\,\varphi_2$ 가 $\mathbb{R}^2$ 에서의 표준기저에 대한 쌍대기저이며 $\psi_1,\,\psi_2,\,\psi_3$ 는 $\mathbb{R}^3$ 에서의 표준기저에 대한 쌍대기저라고 하자. 이 때 $T^T(\varphi_1)$ 과 $T^T(\varphi_2)$ 를 $\psi_1,\,\psi_2,\,\psi_3$ 의 선형결합으로 표현하라.
+
+:::
+
+::: {.solution}
+
+ $T^T(\varphi_i) = \varphi_i\circ T$ 이므로,
+
+$$
+\begin{aligned}
+T^T(\varphi_1) (x, y, z) &= 4x+5y+6z, \\
+T^T(\varphi_2) (x, y, z) &= 7x+8y+9z
+\end{aligned}
+$$
+
+
+:::

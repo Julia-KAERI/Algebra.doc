@@ -1,5 +1,5 @@
 ---
-title: "III. 선형대수학의 주제들"
+title: "III. 심화 선형대수학"
 number-sections: true
 number-depth : 2
 crossref:
