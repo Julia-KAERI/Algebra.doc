@@ -700,7 +700,9 @@ trivial. see @exr-axler_3_F_18
 
 ::: {.solution}
 
-trivial
+$$
+\psi \in W^0 \implies \forall w\in W, \psi(w)=0 \implies \forall u\in U\subset W,  \psi(u)=0 \implies \psi \in U^0
+$$
 
 :::
 
@@ -714,5 +716,38 @@ trivial
 
 ::: {.solution}
 
+
+$$
+u\in U \implies \forall \psi \in U^0,  \psi (u) = 0 \implies \forall\phi \in W^0 \subset U^0, \phi(u) =0 \implies u\in W
+$$
+
+:::
+
+</br>
+
+::: {#exr-axler_3_F_22}
+
+$U\le V,\, W\le V$ 일 때 $(U+W)^0 = U^0 \cap W^0$ 임을 보여라.
+
+:::
+
+::: {.proof}
+
+$\psi \in (U+W)^0$ 이면 모든 $u\in U,\, w\in W$ 에 대해 $\psi(u+w)=0$ 이어야 한다. $0_V\in U,\, 0_V\in W$ 이므로 $\psi (u)= \psi (v)=0$ 이어야 한다. 따라서 $\psi \in U^0 \cap W^0$ 이다. 즉 $(U+W)^0 \subset U^0 \cap W^0$ 이다.
+
+이제 $\psi \in U^0 \cap W^0$ 라 하자. $v\in U+W$ 는 어떤 $u\in U,\, w\in W$ 에 대해 $v=u+w$ 이며, $\psi(v)= \psi(u+w)= \psi(u)+\psi(w)=0$ 이다. 즉 $U^0 \cap W^0 \subset (U+W)^0$ 이다.
+
+:::
+
+
+</br>
+
+::: {#exr-axler_3_F_23}
+
+$V$ 가 유한차원 벡터공간이고 $U\le V,\,W\le V$ 일 때 $(U\cap W)^0 = U^0 + W^0$ 임을 보여라.
+
+:::
+
+::: {.solution}
 
 :::

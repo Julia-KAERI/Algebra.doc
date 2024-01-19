@@ -39,7 +39,7 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
-    fontsize: 0.95em
+    fontsize: 0.9em
     toc: true
     #html-math-method: mathml #to be changed to mathjax
   # pdf:

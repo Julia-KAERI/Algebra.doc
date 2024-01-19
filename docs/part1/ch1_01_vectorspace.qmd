@@ -322,7 +322,7 @@ $\mathbb{C}^2$ 는 $\mathbb{C}$-벡터공간이다. $\mathbb{R}^2$ 는 $\mathbb{
 
 </br>
 
-### 합공간과 직합
+### 합공간과 직합 {#sec-sum_of_subspaces_and_direct_sum}
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-sum_of_subspace}
@@ -341,7 +341,7 @@ $$
 </br>
 
 ::: {#prp-sum_of_subspace}
-$V_1 \le V,\, V_2 \le V$ 일 때 $V_1+ V_2 \le V$ 이다. 따라서 $V$ 의 부분공간 $V_1, \ldots,\,V_m$ 의 합도 $V$ 의 부분공간이다.
+$V_1 \le V,\, V_2 \le V$ 일 때 $V_1+ V_2 \le V$ 이다. 따라서 $V$ 의 부분공간 $V_1, \ldots,\,V_m$ 의 합공간도 $V$ 의 부분공간이다.
 :::
 
 </br>
@@ -364,7 +364,7 @@ $V$ 의 부분공간 $V_1,\ldots,\,V_m$ 에 대해 다음은 동치이다.
 
 &emsp; ($1$) $V_1+ \cdots + V_m = V_1 \oplus \cdots \oplus V_m$ 이다.
   
-&emsp; ($2$) $0_V$ 를 각각의 $v_i\in V_i$ 의 합으로 나타내는 방법은 모든 $v_1 = \cdots = v_m = 0_V$ 뿐이다.
+&emsp; ($2$) $v_i\in V_i$ 에 대해 $v_1+\cdots + v_m = 0_V$ 인 경우는 $v_1 = \cdots = v_m = 0_V$ 뿐이다.
 :::
 
 ::: {.proof}
@@ -389,136 +389,6 @@ $V_1 \cap V_2= \{0_V\}$ 라고 하자. 어떤 $v_1\in V_1,\, v_2\in V_2$ 에 대
 
 
 </br>
-
-### 곱공간과 직합
-
-우리는 앞서 어떤 집합을 확장하는 데카르트곱에 대해 알아보았다. 이제 벡터공간의 데카르트곱이 벡터공간이 되도록 확장하는 것을 알아보도록 하자.
-
-</br>
-
-
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-product_space}
-
-#### 곱공간
-
-$V_1,\ldots,\,V_m$ 이 각각 $\mathbb{F}$-벡터공간일 때 **곱공간(product space)** $V_1 \times \cdots \times V_m$ 은 다음과 같이 집합과 덧셈과 스칼라곱이 정의된 집합이다.
-
-**1.** 집합의 정의
-
-$$
-\begin{aligned}V_1 \times \cdots \times V_m = \{(v_1,\ldots,v_m): v_1\in V_1,\ldots,\,v_m \in V_m\} \\
-\end{aligned}
-$$
-
-**2.** 덧셈의 정의
-$u = (u_1,\ldots,\,u_m) \in V_1 \times \cdots \times V_m,\, v=(v_1,\ldots,\,v_m)\in V_1 \times \cdots \times V_m$ 에 대해 $u+v$ 을 다음과 같이 정의한다. 
-$$
-(u_1,\ldots,\,u_m)+ (v_1,\ldots,\,v_m) = (u_1+v_1, \ldots,\, u_m+v_m)
-$$
-
-**3.** 스칼라곱의 정의
-
-$v=(v_1,\ldots,\,v_m)\in V_1 \times \cdots \times V_m,\, c \in \mathbb{F}$ 에 대해 스칼라곱을 다음과 같이 정의한다. 
-$$
-c(v_1,\ldots,\,v_m) = (c v_1,\ldots,\,c v_m)
-$$
-
-</br>
-
-$v\in V_1 \times \cdots \times V_m$ 일 때 $v$ 는 $(v_1,\ldots,\,v_m)$ 이며 각각의 $v_i \in V_i, (i=1,\ldots,\,m)$ 이다. 
-
-
-:::
-:::
-
-</br>
-
-우리는 다음 명제를 쉽게 증명할 수 있다.
-
-::: {#prp-product_space}
-곱공간은 벡터공간이다.
-:::
-
-</br>
-
-
-::: {#exm-cartesian_product_space}
-
-우리는 $\mathbb{F}$ 가 벡터공간임을 안다. 위의 @def-product_space 의 정의에 따라 곱공간 $\mathbb{F}^n$ 을 벡터공간으로 
-
-
-:::
-
-
-
-::: {#prp-dimension_of_product_space}
-$V_1,\ldots,\,V_m$ 이 유한차원 벡터공간일 때,
-$$
-\dim (V_1 \times \cdots \times V_m) = \dim V_1 + \cdots + \dim V_m 
-$$
-이다.
-:::
-
-
-우리는 앞에서 실수의 집합 $\mathbb{R}$ 이나 복소수의 집합 $\mathbb{C}$ 도 벡터공간임을 보였으며, 은근슬쩍 $\mathbb{R}^n$ 과 $\mathbb{C}^n$ 을 도입했다. $\mathbb{R}^n$ 은 $\mathbb{R}$ 의 곱공간으로 볼 수 있다는 것을 이해 할 수 있을 것이다. 곱공간을 통해 우리는 어떤 벡터공간들을 모아 더 큰 벡터공간을 만들 수 있다.
-
-</br>
-
-::: {#prp-map_product_space}
-
-$U_1,\ldots,\,U_m$ 이 $\mathbb{F}$-벡터공간 $V$ 의 부분공간일 때 다음과 같이 정의된 함수 $\phi :  U_1 \times \cdots \times U_m  \to  U_1 + \cdots + U_m$ 는 선형사상이다.
-
-$$
-\phi(u_1,\ldots,u_m) = u_1 + \cdots + u_m
-$$
-:::
-
-::: {.proof}
-$U = U_1 \times \cdots \times U_m$ 에 대해 $u,\,u'\in U,\, c \in \mathbb{F}$ 일 때 $\phi (u+c u') = \phi(u) + c\phi (u')$ 인 것을 쉽게 보일 수 있다. $\square$
-:::
-
-</br>
-
-::: {#prp-product_space_and_direct_sum}
-위에서 정의된 $\phi$ 가 단사인 것의 필요충분조건은 $U_1+ \cdots +U_m$ 이 [직합(direct sum)](#직합) 인 것이다.
-:::
-
-::: {.proof}
-
-@thm-directsum 에 의해 $U_1 + \cdots + U_m$ 이 직합일 필요충분조건은 $0$ 을 각각의 $u_i\in U_i$ 의 합으로 나타내는 방법이 모든 $u_i=0$ 인 것 뿐이다. 따라서, 
-
-$$
-\begin{aligned}
-U_1 + \cdots + U_m \text{ 이 직합} & \iff  u_1 + \cdots + u_m = 0 \implies  u_1 = \cdots = u_m =0\\ 
-& \iff \ker \phi =\{(0,\ldots,\,0)\} \\ 
-& \iff  \phi \text{ 가 단사.}\qquad \square
-\end{aligned}
-$$
-
-:::
-
-</br>
-
-::: {#prp-directsum_condition}
-유한차원 벡터공간 $V$ 의 부분공간 $U_1,\ldots,\,U_m$ 에 대해 $U_1 + \cdots + U_m$ 이 직합일 필요충분조건은
-$$
-\dim (U_1 + \cdots + U_m) = \dim U_1 + \cdots + \dim U_m
-$$
-
-이다.
-:::
-
-::: {.proof}
-@prp-map_product_space 에서 정의된 $\phi$ 를 생각한다. @prp-product_space_and_direct_sum 에 의해 $U_1+\cdots + U_m$ 이 직합일 필요충분조건이 $\phi$ 가 단사인 것이며, $U_1 \times \cdots \times U_m$ 과 $U_1 + \cdots + U_m$ 이 유한차원 벡터공간이므로 $\phi$ 가 단사인 것의 필요충분조건은 
-$$
-\dim (U_1 + \cdots + U_m) = \dim U_1 + \cdots + \dim U_m
-$$
-이다. $\square$
-:::
-
-</br>
-
 
 ## 벡터공간의 기저와 차원
 
