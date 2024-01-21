@@ -1,0 +1,294 @@
+---
+title: "Bilinear Form"
+number-sections: true
+number-depth : 2
+crossref:
+  chapters: true
+---
+
+## Bilinear form
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-k_linear_form} 
+#### $k$-linear form
+
+$V_1,\ldots,\,V_k$ 가 $\mathbb{F}$-벡터공간이라고 하자. 함수 $T : V_1 \times \cdots \times V_k \to \mathbb{F}$ 가 각각의 $V_i$ 에 대해 선형일 때 $T$ 를 $k$**-linear form** 이라고 한다. 즉 임의의 $i\in \{1,\ldots,\,k\}$ 에 대해 $v_i,\,v_i'\in V_i$, $c\in \mathbb{F}$ 일 때, 
+
+$$
+T (\cdots, v_i+cv_i', \cdots) = T(\cdots,\, v_i ,\cdots) + c T (\cdots,\, v_i',\,\cdots)
+$$
+
+를 만족하면 $T$ 는 $k$-linear form 이다. 특히 $k=1$ 일 때 **bilinear form** 이라고 한다. 그리고 $V_1=\cdots =V_k = V$ 이며 $T$ 가 $k$-linear form 일 때 $T$ 를 $V$ 에 대한 $k$-linear form 혹은 $V$ 에 대한 **$k$-텐서 ($k$-tensor)**라고 한다. $V$ 에 대한 $k$-linear form 의 집합을 $\mathcal{T}^{k}(V)$ 라고 쓴다.
+
+:::
+:::
+
+</br>
+
+::: {#exm-k_linear_1}
+
+$T$ 가 벡터공간 $V$ 에 대하 $k$-linear form 일 때 다음이 성립한다.
+
+$$
+T(\cdots, 0, \cdots ) = 0
+$$
+
+:::
+
+</br>
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-matrix_representation_of_bilinear_form} 
+#### Bilinear form 의 행렬표현
+
+유한차원 $\mathbb{F}$-벡터공간 $V$ 에 대한 bilinear form $T\in \mathcal{T}^2(V)$ 을 생각하자. $\mathcal{B}=(v_1,\ldots,\,v_n)$ 이 $V$ 의 기저라고 할 때 $T$ 의 $\mathcal{B}$ 에 대한 행렬표현 $[T]_{\mathcal{B}}$ 를 다음과 같이 정의한다.
+
+$$
+([T]_{\mathcal{B}})_{i, j} = T(v_i, v_j).
+$$
+:::
+:::
+
+</br>
+
+::: {#prp-matrix_representation_of_blinear_form}
+
+@def-matrix_representation_of_bilinear_form 에서 정의된 $[T]_{\mathcal{B}}$ 에 대해 다음이 성립한다.
+
+$$
+T(v, v') = \left([v]_\mathcal{B}\right)^T [T]_\mathcal{B} [v']_\mathcal{B}.
+$$
+
+:::
+
+::: {.solution}
+$v=\sum_i a_i v_i,\, v'=\sum_j b_j v_j$ 라 하자. 
+
+$$
+\begin{aligned}
+T(v, v') &= \sum_{i, j} T(a_i v_i, b_j, v_j) = \sum_{i, j} a_i b_j T(v_i, v_j) = \sum_{i, j} ([v]_{\mathcal{B}})_i ([T]_{\mathcal{B}})_{ij} ([v']_{\mathcal{B}})_j\\
+&= \left([v]_\mathcal{B}\right)^T [T]_\mathcal{B} [v']_\mathcal{B}. \qquad \square
+\end{aligned}
+$$
+:::
+
+</br>
+
+::: {#prp-bilinear_form_for_column_space}
+
+$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 아래와 같이 정의된 $B:\mathcal{M}_n(\mathbb{F}) \times \mathcal{M}_n(\mathbb{F}) \to \mathbb{F}$ 는 $\mathcal{M}_n(\mathbb{F})$ 에 대한 blinear form 이다.
+
+$$
+B(\boldsymbol{u}, \boldsymbol{v}) = \boldsymbol{u}^T\boldsymbol{A}\boldsymbol{v}.
+$$
+
+:::
+
+::: {.proof}
+trivial.
+:::
+
+</br>
+
+위의 두 명제를 가만히 생각해보자. Bilinear form 을 행렬로 생각 할 수 있고, 임의의 행렬에 대한 bilinear form 을 정의 할 수 있다. 행렬과 선형사상의 관계를 밝힐 때 했던 것을 여기서 다시 한 번 해보자.
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-arithmatics_for_bilinear_form} 
+#### Bilinear form 의 합과 스칼라곱
+
+$\mathbb{F}$-벡터공간 $V$ 에 대해 $S,\,T\in \mathcal{T}^2(V),\, a\in \mathbb{F}$ 일 때 다음과 같이 정의한다.
+
+$$
+(S+aT)(v_1,\,v_2) =  S(v_1, v_2) + a\cdot T(v_1, v_2).
+$$
+
+:::
+:::
+
+</br>
+
+::: {#prp-set_of_bilinear_form_is_vector_space}
+
+$\mathbb{F}$-벡터공간 $V$ 에 대한 $T^2(V)$ 는 $\mathbb{F}$-벡터공간이다.
+:::
+
+
+::: {.proof}
+모든 $v_i,\,v_j\in V$ 에 대해 $T(v_i, v_j)=0$ 인 $T$ 도 $V$ 에 대한 bilinear form 이다. 따라서 $T^2(V)\ne \varnothing$ 이다. $S,\,T\in \mathcal{T}^2(V)$ 이며 $a,\,b\in \mathbb{F}$ 라고 하자.
+
+$$
+\begin{aligned}
+(S+aT)(v_1 + bv_2, v_3) &= S(v_1 +bv_2, v_3) + aT(v_1 +bv_2, v_3) \\
+&=  S(v_1, v_3)+ bS(v_2, v_3) + aT(v_1, v_3)+ abT(v_2, v_3) \\
+&= (S+aT)(v_1, v_3) + b(S+aT)(v_1, v_3)
+\end{aligned}
+$$
+
+같은 방법으로 $(S+aT)(v_1 , v_2+bv_3) = (S+aT)(v_1, v_2) + b(S+aT)(v_1, v_3)$ 임을 보일 수 있다. 즉 $S,\, T\in \mathcal{T}^2(V)$ 와 $a\in \mathbb{F}$ 에 대해 $S+aT\in \mathcal{T}^2(V)$ 이다.  벡터공간에 대한 나머지 사항들은 쉽게 증명 할 수 있다. $\square$
+:::
+
+</br>
+
+::: {#thm-isomorphism_between_matrix_and_bilinear}
+
+$n$ 차원 $\mathbb{F}$-벡터공간 $V$ 의 기저 $\mathcal{B}_V = \{v_1,\ldots,\,v_n\}$ 을 생각하자. 아래에 정의된 $\Phi_\mathcal{B} : \mathcal{T}^2(V) \to \mathcal{M}_{n\times n}(\mathbb{F})$ 는 동형사상이다.
+
+$$
+\Phi_\mathcal{B} (T) = [T]_\mathcal{B}.
+$$
+
+:::
+
+::: {.proof}
+
+$\Phi_\mathcal{B}$ 가 선형사상임을 보이자. $S,\,T\in \mathcal{T}^2(V),\, a\in \mathbb{F}$ 일 때 
+
+$$
+([S+aT]_\mathcal{B})_{ij} = (S+aT)(v_i, v_j) = S(v_i, v_j) + aT(v_i, v_j) = ([S]_{\mathcal{B}})_{ij} + a\cdot ([T]_{\mathcal{B}})_{ij}
+$$
+
+이다. 따라서 $\Phi_\mathcal{B}(S+aT) = \Phi_\mathcal{B}(S) + a \Phi_\mathcal{B}(T)$ 이므로 $\Phi_B$ 는 선형사상이다.
+
+
+임의의 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 와 $v_1,\,v_2 \in V$ 에 대해 $([v_1]_\mathcal{B})^T \boldsymbol{A} [v_2]_\mathcal{B}$ 는 $V$ 에서의 bilinear form 이다. 따라서 $\Phi_\mathcal{B}$ 는 전사이다. 또한 @prp-matrix_representation_of_blinear_form 에 따라 $[T]_\mathcal{B}$ 는 유일하게 정해진다. 따라서 $\Phi_\mathcal{B}$ 는 전사이다. 즉 $\Phi_\mathcal{B}$ 는 동형사상이다.
+
+:::
+
+</br>
+
+## Symmetric form 과 alternating form
+
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-alternating_form} 
+#### Symmetric form, Alternating form
+
+
+$T\in \mathcal{T}^k(V)$ 이며 $T$ 의 임의의 두 벡터 $v,\,v'\in V$ 에 대해 다음이 성립하면 $T$ 를 $V$ 에 대핸 **$k$-symmetric form** 이라고 한다.
+
+$$
+T(\cdots, v_i, \cdots,v_j, \cdots) = T(\cdots, v_j,\cdots, v_i,\cdots)
+$$
+
+
+반대로 $T\in \mathcal{T}^k(V)$ 이며 $v\in V$ 에 대해 다음이 성렵하면 $T$ 를 $V$ 에 대한 **$k$-alternating form** 이라고 한다. 즉,
+
+$$
+T(\cdots, v, \cdots,v, \cdots) =0
+$$
+
+이면 $T$ 를 $V$ 에 대한 $k$-alternating form 이라고 한다. $V$ 에 대한 $k$-symmetric form 의 집합을 $\mathcal{S}^k(V)$ 라고 쓰고 $k$-alternating form 의 집합을 $\mathcal{A}^k(V)$ 라고 쓴다.
+
+:::
+:::
+
+
+</br> 
+
+::: {#prp-k_alternating_form}
+
+$T\in \mathcal{A}^k(V)$ 이면 
+
+$$
+T( \cdots, v_i, \cdots, v_j ,\cdots) = - T(\cdots, v_j, \cdots, v_i, \cdots)
+$$
+
+이다. 
+:::
+
+::: {.proof}
+$T(\cdots, v_i + v_j, \cdots, v_i + v_j, \cdots) = 0$ 이다. $\square$
+:::
+
+</br>
+
+우리는 이것을 이미 [행렬식](../part1/ch1_03_determinant.qmd) 에서 보았다. 행렬식은 $n$ 차원 벡터 $V$ 에 대한 $n$-alternating form 의 대표적인 함수이다. 이제부터 우리는 $\mathcal{S}^2(V)$ 와 $\mathcal{A}^2(V)$ 에 집중하기로 하자.
+
+</br>
+
+::: {#prp-matrix_form_of_symmetric_form}
+
+유한차원 벡터공간 $V$ 에 대해 $\mathcal{B}$ 가 $V$ 의 기저라고 할 때 두 명제는 동치이다.
+
+&emsp; ($1$) $T\in \mathcal{S}^2(V)$ 이다.
+
+&emsp; ($2$) $[T]_\mathcal{B}$ 는 대칭행렬이다.
+
+:::
+
+::: {.proof}
+
+$T(v_i, v_j)= ([T]_\mathcal{B})_{ij}$,  $T(v_j, v_i) = ([T]_{\mathcal{B}})_{ji}$ 이다. 따라서,
+$$
+T\in \mathcal{S}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= T(v_2, v_1) \iff ([T]_\mathcal{B})_{ij} = ([T]_{\mathcal{B}})_{ji}
+$$
+
+이다. $\square$
+
+:::
+
+</br>
+
+::: {#prp-matrix_form_of_alternating_form}
+
+유한차원 벡터공간 $V$ 에 대해 $\mathcal{B}$ 가 $V$ 의 기저라고 할 때 두 명제는 동치이다.
+
+&emsp; ($1$) $T\in \mathcal{A}^2(V)$ 이다.
+
+&emsp; ($2$) $([T]_\mathcal{B})_{ij} = - ([T]_\mathcal{B})_{ji}$ 이다.[$A_{ij} = -A_{ji}$ 형태의 행렬을 *skew-symmetric* 이라고 한다.]{.aside}
+
+:::
+
+::: {.proof}
+
+$T(v_i, v_j)= ([T]_\mathcal{B})_{ij}$,  $T(v_j, v_i) = ([T]_{\mathcal{B}})_{ji}$ 이다. 따라서,
+$$
+T\in \mathcal{A}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= -T(v_2, v_1) \iff ([T]_\mathcal{B})_{ij} = -([T]_{\mathcal{B}})_{ji}
+$$
+
+이다. $\square$
+
+:::
+
+</br>
+
+::: {#prp-symmetric_and_alternating_form_as_subgroups}
+
+유한차원 $\mathbb{F}$-벡터공간 $V$ 에 대해 다음이 성립한다.
+
+&emsp; ($1$) $\mathcal{S}^2(V)$ 과 $\mathcal{A}^2(V)$ 는 $\mathcal{T}^2(V)$ 의 부분공간이다.
+
+&emsp; ($2$) $\dim(V)=n$ 일 때 $\dim(\mathcal{S}^2(V)) = \dfrac{n(n+1)}{2}$ 이며  $\dim(\mathcal{A}^2(V)) = \dfrac{n(n-1)}{2}$ 이다. 
+
+&emsp; ($3$) $\mathcal{T}^2(V) = \mathcal{S}^2(V) \oplus \mathcal{A}^2(V)$ 이다.
+
+:::
+
+::: {.proof}
+
+$V$ 의 기저 $\mathcal{B} = \{v_1,\ldots,\,v_n\}$ 을 생각하자.
+
+($1$) $A,\,B\in \mathcal{S}^2(V),\, c\in \mathbb{F}$ 일 때, 
+
+$$
+(A+cB)(v,\,v') = A(v,\,v') + cB(v,\,v')= A(v',\,v) +cB(v',\,v) = (A+cB)(v',\,v)
+$$
+
+이며 $0\in \mathcal{T}^2(V)$ 도 $0(v,\,v')=0 = 0(v',\,v)$ 이므로 $0\in \mathcal{S}^2(V)$ 이다. 따라서 $\mathcal{S}^2(V) \le \mathcal{T}^2(V)$ 이다. 같은 방법으로 $\mathcal{A}^2(V)\le \mathcal{T}^2(V)$ 임을 보일 수 있다.
+
+($2$) $\boldsymbol{E}^{(i, j)} \in \mathcal{M}_{n\times n}(\mathbb{F})$ 를 $i$ 행 $j$ 열 성분은 $1$, 나머지 $n^2-1$ 개의 성분은 $0$ 인 행렬이라고 하자. $\{\boldsymbol{E}^{(i, j)}:  1 \le i,\,j\le n\}$ 은 $\mathcal{M}_{n \times n}(\mathbb{F})$ 의 기저임은 쉽게 알 수 있다. 이 때, 
+
+$$
+\{\boldsymbol{E}^{(i, i)}: 1 \le i \le n \} \cup \{ \boldsymbol{E}^{(i, j)}+ \boldsymbol{E}^{(j, i)} : 1 \le i < j \le n\}
+$$
+
+은 선형 독립이며 $n\times n$ 대칭행렬을 span 한다는 것을 알 수 있다. $n \times n$ 대칭행렬과 $S^2(V)$ 사이에 
+
+
+
+:::
+

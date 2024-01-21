@@ -107,7 +107,7 @@ $\square$
 
 #### 쌍대 기저 (Dual basis)
 
-@prp-dual_basis 의 $\{\varphi_1,\ldots,\,\varphi_n\}$ 을 $V$ 의 기저 $\{v_1,\ldots,\,v_n\}$ 에 대한 **쌍대 기저(dual basis)** 라 한다.
+@prp-dual_basis 의 $\{\varphi_1,\ldots,\,\varphi_n\}$ 을 $V$ 의 기저 $\{v_1,\ldots,\,v_n\}$ 에 대한 **쌍대 기저(dual basis)** 라 한다. $\{v_1,\ldots,\,v_n\}$ 에 대한 쌍대기저를 $\{v_1^\ast,\ldots,\,v_n^\ast\}$ 라고 표기한다.
  
 :::
 :::
@@ -434,6 +434,74 @@ $$
 
 </br>
 
+## 이중 쌍대 공간
+
+우리는 벡터공간 $V$ 에 대해 $V^\ast = \mathcal{L}(V, \mathbb{F})$ 인 벡터공간을 알아보았다. 그렇다면 $\mathcal{L}(V^\ast, \mathbb{F})$ 도 생각 할 수 있을것이다. 그런데 이것은 뜻밖에 매우 중요하다.
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-double_dual} 
+#### 이중 쌍대 공간
+
+$\mathbb{F}$-벡터공간 $V$ 의 쌍대공간 $V^\ast$ 에 대한 쌍대공간 $\mathcal{L}(V^\ast, \mathbb{F})$ 를 $V$ 에 대한 **이중 쌍대 공간 (double dual space)** 이라 하고 ${V^\ast}{}^\ast$ 라 쓴다.
+
+:::
+:::
+
+</br>
+
+
+::: {#thm-isomorphsm_to_dual_space}
+
+유한차원 벡터공간 $V$ 의 이중쌍대공간 $V^\ast{}^\ast$ 에 대해 $\Psi : V \to V^\ast{}^\ast$ 를 다음과 같이 정의하자.
+
+$$
+\Psi (v) (\psi) = \psi(v).
+$$
+
+이 때 다음이 성립한다.
+
+&emsp; ($1$) $v\in V$ 이면 $\Psi(v) \in V^\ast{}^\ast$ 이다.
+
+&emsp; ($2$) $\Psi$ 는 동형사상이다.
+
+&emsp; ($3$) $V$ 의 기저 $\{v_i\}$ 에 대해 $\Psi (v_i) = (v_i^\ast)^\ast$ 이다.
+
+:::
+
+::: {.proof}
+
+($1$) $\Psi(v)$ 는 $V^\ast \mapsto \mathbb{F}$ 함수여야 한다. $\psi\in V^\ast$ 에 대해 위와 같이 정의된 $\Psi$ 는 $V \mapsto V^\ast{}^\ast$ 함수이다. 이제 선형사상임을 보이자. $v_1,\,v_2\in V,\, c\in \mathbb{F}$ 에 대해,
+
+$$
+\begin{aligned}
+\Psi(v_1+cv_2)(\psi) &= \psi(v_1+cv_2)= \psi(v_1)+c\psi(v_2) = \Psi(v_1)(\psi) + c\Psi (v_2)(\psi) \\
+&= (\Psi (v_1)+ c\Psi(v_2))(\psi)
+\end{aligned}
+$$
+
+이므로 $\Psi \in \mathcal{L}(V^\ast, \mathbb{F})$ 이다.
+
+
+($2$) 유한차원 벡터공간이며 $\ker (\Psi)= \{0_{V^\ast}\}$ 이므로 동형사상이다.
+
+($3$) $V$ 의 기저 $\{v_i:i=1,\ldots,\,n\}$ 에 대해 $v_i^\ast$ 는 $v_i^\ast(v_j)= \delta_{ij}$ 를 만족하는 선형사상이다. 따라서 $\Psi_i = (v_i^\ast)^\ast$ 라면 $\Psi_i (v_j^\ast) = \delta_{ij}$ 를 만족한다. $\psi \in V^\ast$ 는 $\{v_i^\ast\}$ 의 선형결합이므로 $\psi = \sum_j c_j \psi_j^\ast$ 로 쓸 수 있다.
+
+$$
+\Psi (v_i)(\psi)= \left( \sum_{j}c_j v_j^\ast\right) (v_i) = c_i = v_i^\ast{}^\ast (v_i)(\psi)
+$$
+
+이다. 따라서 $\Psi(v_i) = \Psi_i (v_i) = (v_i^\ast){}^\ast (v_i)$ 이다.
+:::
+
+</br>
+
+유한차원 벡터공간 $V$ 에 대해 $V$ 와 $V'$ 은 동형지만 동형사상은 보통 $V$ 의 기저를 정하고 난후 찾을 수 있다. 그러나 $V$ 와 $V^\ast{}^\ast$ 사이의 동형사상은 @thm-isomorphsm_to_dual_space 의 ($3$) 에서 보였듯이 매우 직접적이고 자연스럽다. 
+
+
+
+</br>
+
+
 ## 연습문제
 
 ::: {#exr-axler_3_F_1}
@@ -749,5 +817,68 @@ $V$ 가 유한차원 벡터공간이고 $U\le V,\,W\le V$ 일 때 $(U\cap W)^0 =
 :::
 
 ::: {.solution}
+
+@exr-axler_3_F_22 로 부터 $\dim(U^0 \cap W^0) = \dim (U+W)^0$ 임을 안다. 따라서,
+
+$$
+\begin{aligned}
+\dim (U^0 + W^0) &= \dim (U^0) + \dim (W^0) - \dim (U^0 \cap W^0) \\
+& = \dim (V) - \dim (U) + \dim (V) - \dim (W) - \dim ((U+W)^0) \\
+&= \dim (V) - \dim (U) + \dim (V) - \dim (W) - \dim (V) + \dim (U+W) \\
+&= \dim (V) - \dim (U) - \dim (W)  + \dim (U) + \dim (W) - \dim (U\cap W)\\
+& = \dim (V) - \dim (U\cap W) \\
+& = \dim ((U\cap W)^0)
+\end{aligned}
+$$
+
+이다. 또한 $\psi \in (U^0 + W^0)$ 이면 어떤 $\psi_U\in U^0,\, \psi_W\in W^0$ 에 대해 $\psi = \psi_U+\psi_W$ 이다. 따라서 $v\in U\cap W$ 이면 $\psi(v)= 0$ 이므로 $\psi \in (U\cap W)^0$ 이다. 즉 $U^0 + W^0 \subset (U \cap W)^0$ 이다. 따라서 $(U\cap W)^0 = U^0 + W^0$ 이다. 
+
+:::
+
+</br>
+
+::: {#exr-3_F_25}
+
+유한차원 벡터공간 $V$ 에 대해 $U \le V$ 일 때 $U'$ 을 다음과 같이 정의하자.
+
+$$
+U' = \{v\in V: \forall \varphi \in U^0,\, \varphi (v) = 0\}.
+$$
+
+$U=U'$ 임을 보여라.
+:::
+
+::: {.solution}
+
+$U^0$ 의 정의에 의해 $U \subset U'$ 이다. 이제 $U'\le V$ 임을 보이자. $0_V\in U'$ 은 자명하며, $u_1,\,u_2\in U',\, c\in \mathbb{F}$ 과 $\varphi\in U^0$ 에 대해 $\varphi (u_1 +cu_2)= \varphi (u_1)+ c\varphi (u_2)=0$ 이므로 $U' \le V$ 이다.
+
+$U$ 의 기저 $(u_1,\ldots,\,u_m)$ 을 확장하여 $(u_1,\ldots,\,u_m,\,v_1,\ldots,\,v_n)$ 이 $V$ 의 기저라고 하자. $v\not \in U$ 이면 $v=\sum_{i}a_i u_i + \sum_j b_i v_j$ 이며 $\varphi \in U^0$ 에 대해 $\varphi (v) = \sum_j b_j \varphi (v_j)$ 이며 $\varphi (v)\ne 0$ 이 되도록 하는 $\varphi$ 가 항상 존재한다. 따라서 $\dim U'= \dim U$ 이며 $U' \le U$ 이므로 $U=U'$ 이다.
+
+
+:::
+
+</br>
+
+::: {#exr-3-F_26}
+
+유한차원 벡터공간 $V$ 에 대해 $\Delta \le V^\ast$ 에 대해 $\Delta'$ 을 다음과 같이 정의하자.
+
+$$
+\Delta' = \{v\in V : \forall \varphi \in \Delta,\, \varphi (v)= 0 \}^0.
+$$
+
+$\Delta = \Delta'$ 임을 보여라.
+
+:::
+
+::: {.solution}
+
+$D= \{v\in V:   \forall \varphi \in \Delta,\, \varphi(v)=0\}$ 이라 하면 $D \le V$ 임은 쉽게 보일 수 있다. 이 때 $\Delta' = D^0$ 이다. 그렇다면
+
+$$
+\phi \in \Delta \implies \forall v\in D,\, \phi(v) = 0 \implies \phi \in D^0=\Delta'
+$$
+
+이므로 $\Delta \subset \Delta'$ 이다. $\Delta$ 의 기저를 $\{\varphi_1,\ldots,\,\varphi_m\}$ 이라 하고 이를 확장하여 $V^\ast$ 의 기저 $\{\varphi_1,\ldots,\,\varphi_m,\,\psi_1,\ldots,\,\psi_n\}$ 를 구성 할 수 있다.  
 
 :::
