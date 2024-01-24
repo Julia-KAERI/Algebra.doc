@@ -286,9 +286,121 @@ $$
 \{\boldsymbol{E}^{(i, i)}: 1 \le i \le n \} \cup \{ \boldsymbol{E}^{(i, j)}+ \boldsymbol{E}^{(j, i)} : 1 \le i < j \le n\}
 $$
 
-은 선형 독립이며 $n\times n$ 대칭행렬을 span 한다는 것을 알 수 있다. $n \times n$ 대칭행렬과 $S^2(V)$ 사이에 
+은 선형 독립이며 $n\times n$ 대칭행렬을 span 한다는 것을 알 수 있다. $n \times n$ 대칭행렬의 집합과 $S^2(V)$ 사이에 동형사상이 존재하므로 $\dim(\mathcal{S}^2(V)) = \dfrac{n(n+1)}{2}$ 이다. 또한,
+
+$$
+\{ \boldsymbol{E}^{(i, j)}- \boldsymbol{E}^{(j, i)} : 1 \le i < j \le n\}
+$$
+
+는 선형독립이며 $n\times n$ alternating 행렬을 span 한다. 따라서 $\dim(\mathcal{A}^2(V)) = \dfrac{n(n-1)}{2}$ 이다. 
+
+
+($3$) $\boldsymbol{A} = \dfrac{1}{2}(\boldsymbol{A}+\boldsymbol{A}^T) + \dfrac{1}{2} (\boldsymbol{A}-\boldsymbol{A}^T)$ 이다. 여기서 $\dfrac{1}{2}(\boldsymbol{A}+\boldsymbol{A}^T)$ 는 대칭행렬이며 $\dfrac{1}{2}(\boldsymbol{A}-\boldsymbol{A}^T)$ 는 alternating 행렬이므로 $\mathcal{T}^2(V) = \mathcal{S}^2(V) + \mathcal{A}^2(V)$ 이다. 또한 $\mathcal{S}^2(V) \cap \mathcal{A}^2(V)=\{0\}$ 이므로 $\mathcal{T}^2(V) = \mathcal{S}^2(V) \oplus \mathcal{A}^2(V)$ 이다. $\square$
+
+:::
+
+</br>
+
+## Quadratic form
+
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-quadratic_form} 
+#### Quadratic form
+
+벡터공간 $V$ 에서 정의된 함수 $\Psi : V\to \mathbb{F}$ 가 임의의 $c\in \mathbb{F},\, v,\,v'\in V$ 에 대해
+
+&emsp; ($1$) $B_\Psi (v, v') = \Psi (v+v') - \Psi (v) - \Psi (v')$ 이 $V$ 에 대한 symmetric bilinear form 이며,
+
+&emsp; ($2$) $\Psi (cv) =  c^2 \Psi (v)$ 
+
+를 만족 할 때 $\Psi$ 를 $V$ 에 대한 **quadratic form** 이라고 한다.
+
+:::
+:::
+
+</br>
+
+::: {#prp-quadratic_and_bilinear_1}
+
+$T\in \mathcal{S}^2(V)$ 일 때 $\Psi_T(v) = T(v, v)$ 는 quadratic form 이다.
+
+:::
+
+::: {.proof}
+
+우선 조건 ($1$) 을 만족한다는 것을 보이자.
+$$
+\begin{aligned}
+B_\Psi(v, v') &= \Psi_T(v+v') - \Psi(v)-\Psi(v') \\
+&= T(v+v', v+v') -T(v, v)- T(v', v') = T(v, v') + T(v', v) = 2T(v, v') 
+\end{aligned}
+$$
+
+이므로 $B_\Psi \in \mathcal{S}^2(V)$ 이다. 또한
+
+$$
+\Psi_T(cv) = T(cv, cv) =  cT(v, cv)= c^2T(v) = c^2 \Psi_T(v)
+$$ 
+
+이므로 ($2$) 를 만족한다. 따라서 $\Psi_T$ 는 $V$ 에 대한 quadratic form 이다. $\square$
+:::
+
+
+</br>
+
+@prp-quadratic_and_bilinear_1 로부터 우리는 symmetric bilinear form 에 대한 quadratic form 이 존재함을 안다. 이제 좀 더 깊이 알아보자.
+
+::: {#prp-quadratic_and_bilinear}
+
+$\mathbb{F}$-벡터공간 $V$ 에서의 quardratic form 전체의 집합을 $\mathcal{Q}_V$ 라고 하자. $0_Q : V \to \mathbb{F}$ 를 다음과 같이 정의한다.
+
+$$
+\forall v\in V,\, 0_Q(v) = 0
+$$
+
+$\Psi, \Phi\in Q_V,\, a\in \mathbb{F}$ 에 대해
+
+$$
+(\Psi + c \Phi)(v) = \Psi (v) + a\Phi(v)
+$$
+
+라고 하자. 이 때 $\mathcal{Q}_V$ 는 $\mathbb{F}$-벡터공간이다.
+
+:::
+
+::: {.proof}
+
+$0_Q \in \mathcal{Q}_V$ 임은 쉽게 보일 수 있다. 
+$$
+\begin{aligned}
+B_{\Psi + a\Phi} (v, v') &= (\Psi+a\Phi)(v+v') - (\Psi + a\Phi)(v) - (\Psi + a\Phi)(v') \\
+&= B_\Psi(v, v') + aB_\Phi (v, v')
+\end{aligned}
+$$
+
+이며 $B_\Psi,\, B_\Phi \in \mathcal{S}^2(V)$ 이므로 $B_\Psi + aB\Phi\in \mathcal{S}^2(V)$ 이다. 또한,
+
+$$
+(\Psi + a\Phi)(cv) = \Psi (cv) + a\Phi (cv) = c^2 (\Psi + a\Phi)(v)
+$$
+
+이므로 $\Psi + a\Phi \in \mathcal{Q}_V$ 이다. 이로부터 $\mathcal{Q}_V$ 가 벡터공간임은 쉽게 증명 할 수 있다. $\square$
+
+:::
+
+</br>
+
+::: {#thm-isomorphism_between_S2V_QV}
+
+벡터공간 $V$ 에 대해 $\mathcal{S}^2(V)$ 와 $\mathcal{Q}_V$ 는 동형이다. 
+
+:::
+
+::: {.proof}
+
 
 
 
 :::
-
