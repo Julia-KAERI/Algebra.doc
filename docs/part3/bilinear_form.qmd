@@ -303,6 +303,7 @@ $$
 
 ## Quadratic form
 
+### Quadratic form {#sec-quadratic_form}
 
 
 ::: {.callout-note appearance="simple" icon="false"}
@@ -324,7 +325,7 @@ $$
 
 ::: {#prp-quadratic_and_bilinear_1}
 
-$T\in \mathcal{S}^2(V)$ 일 때 $\Psi_T(v) = T(v, v)$ 는 quadratic form 이다.
+$T\in \mathcal{S}^2(V)$ 일 때 $\Psi_T(v) = \frac{1}{2}T(v, v)$ 는 quadratic form 이다.
 
 :::
 
@@ -334,14 +335,14 @@ $T\in \mathcal{S}^2(V)$ 일 때 $\Psi_T(v) = T(v, v)$ 는 quadratic form 이다.
 $$
 \begin{aligned}
 B_\Psi(v, v') &= \Psi_T(v+v') - \Psi(v)-\Psi(v') \\
-&= T(v+v', v+v') -T(v, v)- T(v', v') = T(v, v') + T(v', v) = 2T(v, v') 
+&= \dfrac{1}{2}T(v+v', v+v') - \dfrac{1}{2}T(v, v)- \dfrac{1}{2}T(v', v') = T(v, v') 
 \end{aligned}
 $$
 
 이므로 $B_\Psi \in \mathcal{S}^2(V)$ 이다. 또한
 
 $$
-\Psi_T(cv) = T(cv, cv) =  cT(v, cv)= c^2T(v) = c^2 \Psi_T(v)
+\Psi_T(cv) = \dfrac{1}{2}T(cv, cv) =  \dfrac{1}{2}cT(v, cv)= \dfrac{1}{2}c^2T(v) = c^2 \Psi_T(v)
 $$ 
 
 이므로 ($2$) 를 만족한다. 따라서 $\Psi_T$ 는 $V$ 에 대한 quadratic form 이다. $\square$
@@ -352,7 +353,8 @@ $$
 
 @prp-quadratic_and_bilinear_1 로부터 우리는 symmetric bilinear form 에 대한 quadratic form 이 존재함을 안다. 이제 좀 더 깊이 알아보자.
 
-::: {#prp-quadratic_and_bilinear}
+
+::: {#prp-quadratic_and_bilinear_2}
 
 $\mathbb{F}$-벡터공간 $V$ 에서의 quardratic form 전체의 집합을 $\mathcal{Q}_V$ 라고 하자. $0_Q : V \to \mathbb{F}$ 를 다음과 같이 정의한다.
 
@@ -372,7 +374,7 @@ $$
 
 ::: {.proof}
 
-$0_Q \in \mathcal{Q}_V$ 임은 쉽게 보일 수 있다. 
+$0_Q \in \mathcal{Q}_V$ 임은 쉽게 보일 수 있다. 또한 임의의 $\Psi\in \mathcal{Q}_V$ 에 대해 $0_Q + \Psi = \Psi+0_Q =\Psi$ 라는 것도 쉽게 보일 수 있다.
 $$
 \begin{aligned}
 B_{\Psi + a\Phi} (v, v') &= (\Psi+a\Phi)(v+v') - (\Psi + a\Phi)(v) - (\Psi + a\Phi)(v') \\
@@ -386,13 +388,13 @@ $$
 (\Psi + a\Phi)(cv) = \Psi (cv) + a\Phi (cv) = c^2 (\Psi + a\Phi)(v)
 $$
 
-이므로 $\Psi + a\Phi \in \mathcal{Q}_V$ 이다. 이로부터 $\mathcal{Q}_V$ 가 벡터공간임은 쉽게 증명 할 수 있다. $\square$
+이므로 $\Psi + a\Phi \in \mathcal{Q}_V$ 이다. 이로부터 $\mathcal{Q}_V$ 가 벡터공간이라는 것을 벡터공간의 정의에 맞추어 증명 할 수 있다. $\square$
 
 :::
 
 </br>
 
-::: {#thm-isomorphism_between_S2V_QV}
+::: {#thm-quadratic_and_bilinear}
 
 벡터공간 $V$ 에 대해 $\mathcal{S}^2(V)$ 와 $\mathcal{Q}_V$ 는 동형이다. 
 
@@ -400,7 +402,192 @@ $$
 
 ::: {.proof}
 
+$\Gamma : \mathcal{Q}_V \to \mathcal{S}^2(V)$ 를 @def-quadratic_form 에 따라 $\Gamma (\Psi) = B_\Psi$ 로 정의하자. 
+@prp-quadratic_and_bilinear_1 에서 $T\in \mathcal{S}^2(V)$ 일 때 $\Psi_T(v) = \dfrac{1}{2}T(v, v)$ 는 quadratic form 이며 
+
+$$
+\begin{aligned}
+B_{\Psi_T}(v, v) = \Gamma (\Psi_T) (v, v') &= \Psi_T(v+v') - \Psi_T(v) - \Psi_T(v') \\
+&= \dfrac{1}{2}T(v+v', v+v') - \dfrac{1}{2}T(v, v) - \dfrac{1}{2}T(v', v') \\
+&= T(v, v')
+\end{aligned}
+$$
+
+이다. 즉 $\Gamma$ 는 전사이다. 또한 $\Psi,\, \Phi \in \mathcal{Q}_V$ 에 대해 $B_\Psi = B_\Phi$ 이면 $\Phi = \Psi$ 이므로 $\Gamma$ 는 단사이다. 
+
+이제 $\Gamma$ 가 선형사상임을 보이면 된다. 즉 $\Phi,\, \Psi\in \mathcal{Q}_V,\, c\in \mathbb{F}$ 에 대해 $\Gamma (\Phi + c\Psi) = \Gamma (\Phi) + c\Gamma(\Psi)$ 임을 보이면 된다.
+
+$$
+\begin{aligned}
+\Gamma (\Phi + c\Psi)(v, v') & = (\Phi + c\Psi)(v+v') - (\Phi+c\Psi)(v)- (\Phi + c\Psi)(v') \\
+&= \Phi(v+v') - \Phi(v) - \Phi (v') + c\Psi(v+v') - c\Psi(v) - c\Psi(v') \\
+&= (\Gamma (\Phi) + c\Gamma (\Psi))(v, v').
+\end{aligned}
+$$
+
+따라서 $\mathcal{Q}_V \cong \mathcal{S}^2(V)$ 이다. $\square$
 
 
+:::
+
+</br>
+
+### Quadratic_form 의 행렬 표현 {#sec-matrix_representation_of_quadratic_form}
+
+이제 $n$ 차원 $\mathbb{F}$-벡터공간 $V$ 에 대해 $\Psi \in \mathcal{Q}_V$ 라고 하자. 우리는 $B_\Psi(v, v) = \dfrac{1}{2} \Psi(v) \in \mathcal{S}^2(V)$ 라는 것을 알며, 따라서 $\Psi_B$ 가 대칭행렬로 표현된다는 것도 안다. 이제 $V$ 의 기저 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 을 생각하자.  @prp-matrix_representation_of_blinear_form 에 따라
+
+$$
+\Psi(v) = \dfrac{1}{2}B_\psi(v, v) = \dfrac{1}{2}([v]_\mathcal{B})^T[B_{\Psi}]_\mathcal{B} ([v]_\mathcal{B})
+$$
+
+이다.
+
+
+$x\in V$ 에 대해 $[x]_\mathcal{B} = \boldsymbol{x}=\begin{bmatrix}x_1 & \cdots &x_n\end{bmatrix}^T,\, [B_\Psi]_\mathcal{B}=\boldsymbol{A}$ 라고 하자. 그렇다면, 
+
+$$
+\Psi(x) = \dfrac{1}{2}\boldsymbol{x}^T\boldsymbol{Ax} = \dfrac{1}{2} \sum_{i=1}^n A_{ii}{x_i}^2 + \sum_{i<j} A_{ij}x_i x_j
+$$
+
+이다. 즉 quadratic form 은 동차인 2차식이 된다. 역으로
+
+$$
+f(x_1,\ldots,\,x_n) = \sum_{i=1} b_i {x_i}^2 + \sum_{i<j} c_{ij}x_i x_j
+$$
+
+인 동차인 2차식은 $A_{ii} = 2 b_i,\, A_{ij} = c_{ij}$ 에 대해 quadratic form 이 된다는 것을 알 수 있다.
+
+
+
+</br>
+
+## 직교군과 심플렉틱 군
+
+### Quadratic space 와 직교군 {#sec-orthogonal_group}
+
+
+
+우리는 앞서 벡터공간 $V$ 에 내적이 부여되면 내적벡터공간이라고 불렀다. 마찬가지로 어떤 quadratic form 이 부여되었을 경우에도 이름을 붙일 수 있다.
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-quadratic_space} 
+#### Quadratic space
+
+유한차원 $\mathbb{F}$-벡터공간 $V$ 에서 어떤 quadratic form $\Psi \in \mathcal{Q}_V$ 이 정해졌다면 이에 따라 symmetric bilinear form $B_\Psi$ 도 정의된다. 이렇게 벡터공간에 quadratic form $\Psi$ 이 부여되었을 때, 혹은 이와 동등하게 simmetric bilinear form 이 부여되었을 때 **quadratic space** 라고 하고 $(V,\, \Psi)$, $(V,\, B_\Psi,\, \Psi)$, 혹은 $(V, B_\Psi)$ 라고 쓴다
+
+:::
+:::
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-orthogonal_group} 
+#### 직교군
+
+Quadratic space $(V, B_\Psi)$ 에 대해 다음과 같이 정의된 $O(V, B_\Psi)$ 를 $(V, B_\Psi)$ 에 대한 **직교군 (orthonormal group)** 이라 한다. 
+
+$$
+O(V,\, B_\Psi) = \{ L \in GL(V) : B_\Psi(Lv, Lv')=B_\Psi(v, v'),\,\forall v,\,v'\in V\}.
+$$
+
+$SL(V)$ 를 정의할 때와 마찬가지로 $SO(V,\, \mathcal{B}_\Psi)$ 를 정의 할 수 있다.
+
+$$
+SO(V,\, B_\Psi) = \{ L\in O(V,\, B_\Psi) : \det(L) = 1\}.
+$$
+
+:::
+:::
+
+</br>
+
+직교군이라는 이름이 붙었다는 것은 $O(V,\, B_\Psi)$ 가 군이라는 뜻이며 따라서 $GL(V)$ 의 부분군일 것이라는 것을 예상 할 수 있다.
+
+::: {#prp-orthogonal_group_is_a_normal_subgroup}
+
+유한차원 벡터공간 $V$ 에 대해 다음이 성립한다.
+
+&emsp; ($1$) $O(V, B_\Psi) \le GL(V)$.
+
+&emsp; ($2$) $SO(V,\, B_\Psi) \trianglelefteq O(V,\, B_\Psi)$.
+
+:::
+
+::: {proof}
+
+($1$) $V$ 에서의 항등사상 $I_V$ 가 $I_V\in O(V, \mathcal{B}_\Phi)$ 임은 자명하다. $L_1,\,L_2\in O(V,\,B_\Psi)$ 에 대해 $B(L_1L_2v,\, L_1L_2v')=B(v, v')$ 이므로 $L_1L_2 \in O(V,\, B_\Psi)$ 이다. $L\in O(V,\,B_\Psi)$ 이면,
+
+$$
+B_\Psi (L^{-1}v,\,L^{-1}v') =  B_\Psi (LL^{-1}v, LL^{-1}v') = B_\Psi (v, v')
+$$
+
+이미로 $L^{-1} \in O(V,\, B_\Psi)$ 이다. 따라서 $O(V,\, B_\Psi) \le GL(V)$ 이다.
+
+($2$) $SO(V, B_\Psi) \le O(V,B_\Psi)$ 임은 쉽게 보일 수 있다. $L\in O(V, B_\Psi),\, S\in SO(V, B_\Psi)$ 에 대해 $\det(LSL^{-1})=1$ 이므로 $SO(V,\, B_\Psi) \trianglelefteq O(V,\, B_\Psi)$ 이다. $\square$
+
+:::
+
+
+</br>
+
+::: {#cor-orthogonal_group_is_a_normal_subgroup_1}
+
+유한차원 벡터공간 $V$ 와 그 기저 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 에 대해 다음이 성립한다.
+
+$$
+\begin{aligned}
+O(V,\,B_\Psi) &= \{L \in GL(V) : \Psi (Lv) =  \Psi (v)\} \\
+&= \{L\in GL(V) : B_\Psi(Lv_i, Lv_j) = B_\Psi (v_i, v_j),\,\forall v_i,\,v_j\in \mathcal{B} \}
+\end{aligned}
+$$ 
+
+이다.
+
+:::
+
+::: {.proof}
+
+$A,\,B$ 를 다음과 같이 정하자.
+$$
+\begin{aligned}
+O_1 &=\{L \in GL(V) : \Psi (Lv) =  \Psi (v)\}, \\
+O_2 &=\{L\in GL(V) : B_\Psi(Lv_i, Lv_j) = B_\Psi (v_i, v_j),\,\forall v_i,\,v_j\in \mathcal{B} \}.
+\end{aligned}
+$$ 
+
+우선 $O(V, B_\Psi) = O_1$ 임을 보이자. $L\in O(V, B_\Psi)$ 이면 $\Psi (Lv) = B_\Psi (Lv, Lv) = B_\Psi(v, v) = \Psi (v)$ 이므로 $L \in O_1$ 이다. 즉 $O(V, B_\Psi) \subset O_1$ 이다. $L\in O_1$ 이면 $\Psi(Lv) = \Psi (v)$ 이고, 
+
+$$
+B_\Psi (Lv, Lv') = \Psi (Lv+Lv') - \Psi (Lv)- \Psi(Lv') = \Psi (v+v')-\Psi(v)- \Psi (v') = B_\Psi (Lv)
+$$
+
+이므로 $L\in O(V, B_\Psi)$ 이다. 따라서 $O(V,\,B_\Psi) = O_1$ 이다. 
+
+이제 $O(V, B_\Psi) = O_2$ 임을 보이자. 두 집합의 정의에 의해 $O(L, B_\Psi) \subset O_2$ 이다. 이제 $L\in O_2$ 라고 하자. $v=\sum_i a_i v_i,\, v' = \sum_j b_j v_j$ 라고 하면, 
+
+$$
+B_\Psi (Lv, Lv') =  \sum_{i, j} a_i b_j B_\Psi (Lv_i, Lv_j) = \sum_{i,j}B_\Psi (v_i, v_j) = B_\Psi (v, v')
+$$
+
+이다. 따라서 $O(L, B_\Psi) = O_2$ 이다. $\square$ 
+
+:::
+
+
+
+</br>
+
+::: {#cor-orthogonal_group_is_a_normal_subgroup_2}
+
+유한차원 벡터공간 $V$ 와 quadratic form $\Psi$ 에 대한 quadratic space $(V, \Psi)$ 를 생각하자. $V$ 의 기저 $\mathcal{B}$ 에 대해 다음은 동치이다.
+
+&emsp; ($1$) $L \in O(V, B_\Psi)$.
+
+&emsp; ($2$) $([L]_\mathcal{B})^T[B_\Psi]_\mathcal{B}([L]_\mathcal{B}) =[B_\Psi]_\mathcal{B}$.
+:::
+
+::: {.proof}
+
+$v,\,v'\in V$ 에 대해 $[v]_\mathcal{B}=\boldsymbol{v},\, [v']_\mathcal{B}=\boldsymbol{v}'$ 이라 하자. $[L]_\mathcal{B}=\boldsymbol{L},\, [B_\Psi]_\mathcal{B}= \boldsymbol{B}$ 라고 하자. @prp-matrix_representation_of_blinear_form 에 따라 $B_{\Psi}(Lv, Lv') = \boldsymbol{v}^T\boldsymbol{L}^T\boldsymbol{BLv}$, $B_\Psi (v,v) = \boldsymbol{v}^T\boldsymbol{Bv}$ 이다. 따라서 $\boldsymbol{L}^T\boldsymbol{BL}= \boldsymbol{B}$ 이다. $\square$
 
 :::
