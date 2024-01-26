@@ -121,7 +121,7 @@ $\det (\lambda \boldsymbol{I}-\boldsymbol{A})  = 0$ 이면 $\text{nullity} (\lam
 
 </br>
 
-## 특성다항식
+## 특성다항식 {#sec-characteristic_polynomial}
 
 $\lambda$ 를 미지수로 간주하면 $n \times n$ 행렬 $\boldsymbol{A}$ 에 대해 $\det (\lambda \boldsymbol{I}-\boldsymbol{A})$ 는 $\lambda$ 에 대한 $n$ 차 다항식이다. 이 다항식의 근이 존재한다면, 그 근이 고유값이 되며, 이 고유값에 대한 고유벡터가 항상 존재한다는 의미이다. 이 다항식은 매우 중요하기 때문에 특별한 이름이 붙어 있다.
 

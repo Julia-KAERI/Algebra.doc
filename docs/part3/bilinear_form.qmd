@@ -1,7 +1,7 @@
 ---
 title: "Bilinear Form"
 number-sections: true
-number-depth : 2
+number-depth : 3
 crossref:
   chapters: true
 ---
@@ -530,7 +530,7 @@ $$
 
 </br>
 
-::: {#cor-orthogonal_group_is_a_normal_subgroup_1}
+::: {#exr-orthogonal_group_is_a_normal_subgroup}
 
 유한차원 벡터공간 $V$ 와 그 기저 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 에 대해 다음이 성립한다.
 
@@ -545,7 +545,7 @@ $$
 
 :::
 
-::: {.proof}
+::: {.solution}
 
 $A,\,B$ 를 다음과 같이 정하자.
 $$
@@ -577,7 +577,7 @@ $$
 
 </br>
 
-::: {#cor-orthogonal_group_is_a_normal_subgroup_2}
+::: {#prp-metix_representation_of_orthogonal_group}
 
 유한차원 벡터공간 $V$ 와 quadratic form $\Psi$ 에 대한 quadratic space $(V, \Psi)$ 를 생각하자. $V$ 의 기저 $\mathcal{B}$ 에 대해 다음은 동치이다.
 
@@ -587,7 +587,114 @@ $$
 :::
 
 ::: {.proof}
+$v,\,v'\in V$ 에 대해 $[v]_\mathcal{B}=\boldsymbol{v},\, [v']_\mathcal{B}=\boldsymbol{v}'$ 이라 하고 $[L]_\mathcal{B}=\boldsymbol{L},\, [B_\Psi]_\mathcal{B}= \boldsymbol{B}$ 라고 하자.
+우선 $\Psi,\,\Psi\in \mathcal{Q}_V$ 일 때 $B_\Psi (v, v) = B_\Phi (v, v) \iff \Psi = \Phi$ 임은 당연하다. 따라서 $\boldsymbol{v}^T[B_\Psi]\boldsymbol{v} = \boldsymbol{v}^T[B_\Phi]\boldsymbol{v} \iff [B_\Psi]=[B_\Phi]$ 를 의미한다.
 
-$v,\,v'\in V$ 에 대해 $[v]_\mathcal{B}=\boldsymbol{v},\, [v']_\mathcal{B}=\boldsymbol{v}'$ 이라 하자. $[L]_\mathcal{B}=\boldsymbol{L},\, [B_\Psi]_\mathcal{B}= \boldsymbol{B}$ 라고 하자. @prp-matrix_representation_of_blinear_form 에 따라 $B_{\Psi}(Lv, Lv') = \boldsymbol{v}^T\boldsymbol{L}^T\boldsymbol{BLv}$, $B_\Psi (v,v) = \boldsymbol{v}^T\boldsymbol{Bv}$ 이다. 따라서 $\boldsymbol{L}^T\boldsymbol{BL}= \boldsymbol{B}$ 이다. $\square$
+($1 \implies 2$)  @prp-matrix_representation_of_blinear_form 에 따라 $B_{\Psi}(Lv, Lv') = \boldsymbol{v}^T\boldsymbol{L}^T\boldsymbol{BLv}$, $B_\Psi (v,v) = \boldsymbol{v}^T\boldsymbol{Bv}$ 이다. 따라서 $\boldsymbol{L}^T\boldsymbol{BL}= \boldsymbol{B}$ 이다. 
+
+($2 \implies 1$)  $\boldsymbol{L}^T\boldsymbol{BL}= \boldsymbol{B}$ 이면 $\boldsymbol{v}^T\boldsymbol{L}^T\boldsymbol{BLv}$, $B_\Psi (v,v) = \boldsymbol{v}^T\boldsymbol{Bv}$ 이므로 $L\in O(V,B_\Psi)$ 이다. $\square$
 
 :::
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-orthogonal_group_on_symmetric_matrix} 
+#### 대칭행렬에 대한 직교군 
+
+$\boldsymbol{J}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 대칭행렬 일 때 
+
+$$
+O_n^\boldsymbol{J} (\mathbb{F}) = \{ \boldsymbol{A} \in GL_n(\mathbb{F}) : \boldsymbol{A}^T\boldsymbol{JA} = \boldsymbol{J}\}
+$$
+
+를 $\boldsymbol{J}$ 에 대한 대칭군이라고 한다.
+
+:::
+:::
+
+</br>
+
+::: {#exm-determinant_of_O_n_J}
+
+대칭행렬 $\boldsymbol{J}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 가역일 때 $\boldsymbol{A}\in O_n^\boldsymbol{J}(\mathbb{F})$ 의 행렬식은 $\pm 1$ 이다.
+
+:::
+
+::: {.solution}
+
+$\det(\boldsymbol{A}^T\boldsymbol{JA}) = \boldsymbol{J}$ 이며 $\det (\boldsymbol{A}^T) = \det (\boldsymbol{A})$ 이므로 $\det (\boldsymbol{A})= \pm 1$ 이다.
+
+:::
+
+</br>
+
+### 심플렉틱 군
+
+심플렉틱 군에 대해서는 간단히 소개만 하고 넘어가기로 한다.
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-symplectic_group} 
+#### 심플렉틱 군
+
+$n$ 차원 벡터공간 $V$ 에 대해 $B\in \mathcal{A}^2(V)$ 일 때 다음과 같이 정의된 $Sp(V, B)$ 를 $B$ 로부터 생성된 **심플렉틱 군 (symplectic group)** 이라고 한다.
+
+$$
+Sp (V, B)=\{ L\in GL(V) : T(Lv, Lw) = T(v, w)\}.
+$$
+
+:::
+:::
+
+::: {#prp-metix_representation_of_symplectic_group}
+
+유한차원 벡터공간 $V$ 와 $B\in\mathcal{A}^2(\mathbb{F})$ 를 생각하자. $V$ 의 기저 $\mathcal{B}$ 에 대해 다음은 동치이다.
+
+&emsp; ($1$) $L \in Sp(V, B)$.
+
+&emsp; ($2$) $([L]_\mathcal{B})^T[B]_\mathcal{B}([L]_\mathcal{B}) =[B]_\mathcal{B}$.
+:::
+
+::: {.proof}
+$v,\,v'\in V$ 에 대해 $[v]_\mathcal{B}=\boldsymbol{v},\, [v']_\mathcal{B}=\boldsymbol{v}'$ 이라 하고 $[L]_\mathcal{B}=\boldsymbol{L},\, [B]_\mathcal{B}= \boldsymbol{B}$ 라고 하자.
+우선 $B,\,B'\in \mathcal{Q}_V$ 일 때 $B (v, v') = B' (v, v') \iff B = B'$ 임은 당연하다. 따라서 $\boldsymbol{v}^T[B]\boldsymbol{v} = \boldsymbol{v}^T[B']\boldsymbol{v} \iff [B]=[B']$ 를 의미한다.
+
+($1 \implies 2$)  $B(Lv, Lv') = \boldsymbol{v}^T\boldsymbol{L}^T\boldsymbol{BLv}$, $B (v,v) = \boldsymbol{v}^T\boldsymbol{Bv}$ 이다. 따라서 $\boldsymbol{L}^T\boldsymbol{BL}= \boldsymbol{B}$ 이다. 
+
+($2 \implies 1$)  $\boldsymbol{L}^T\boldsymbol{BL}= \boldsymbol{B}$ 이면 $\boldsymbol{v}^T\boldsymbol{L}^T\boldsymbol{BLv}$, $B (v,v) = \boldsymbol{v}^T\boldsymbol{Bv}$ 이므로 $L\in Sp(V,B_\Psi)$ 이다. $\square$
+
+:::
+
+
+</br>
+
+## 특별한 직교군
+
+### $O(1, 1)$
+
+
+[대칭행렬에 대한 직교군](#def-orthogonal_group_on_symmetric_matrix) 을 생각하자. 
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-O_11} 
+#### $O(1, 1)$
+
+$\mathcal{M}_{2 \times 2}(\mathbb{R})$ 에서 정의된 $\boldsymbol{J} = \begin {bmatrix} 1 & 0 \\ 0 & -1\end{bmatrix}$ 에 대한 직교군 $O_2^\boldsymbol{J}$ 을 $O(1, 1)$ 이라고 한다.
+
+:::
+:::
+
+</br>
+
+::: {#exm-O_11}
+
+다음은 동치이다.
+
+&emsp; ($1$) $\boldsymbol{A} = \begin{bmatrix} x& z \\ y & w\end{bmatrix} \in O(1, 1)$.
+
+&emsp; ($2$) $x^2-y^2 = w^2-z^2 = 1,\, xz-yw=0$.
+
+::: 
+
+
+
