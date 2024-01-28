@@ -1,7 +1,7 @@
 ---
 title: "쌍대공간과 쌍대 사상"
 number-sections: true
-number-depth : 2
+number-depth : 3
 crossref:
   chapters: true
 ---
@@ -33,7 +33,7 @@ $\varphi : \mathbb{R}^3 \to  \mathbb{R}$ 을 임의의 $a,\,b,\,c\in \mathbb{R}$
 
 ::: {#exm-linear_functional_2}
 
-$n$ 차 다항식 이하의 다항식의 집합 $P_n(\mathbb{F})$ 는 $\mathbb{F}$ 벡터공간이다. $f\in P_n(\mathbb{F})$ 와 $c \in \mathbb{F}$ 에 대해 $\varphi (f)=f(c)$ 는 $P_n^\ast$ 에 속하는 선형 범함수이다.
+$n$ 차 다항식 이하의 다항식의 집합 $\mathbb{F}_n[t]$ 는 $\mathbb{F}$ 벡터공간이다. $f\in \mathbb{F}_n[t]$ 와 $c \in \mathbb{F}$ 에 대해 $\varphi (f)=f(c)$ 는 $(\mathbb{F}_n[t])^\ast$ 에 속하는 선형 범함수이다.
 
 :::
 

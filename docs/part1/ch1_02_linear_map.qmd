@@ -1,7 +1,7 @@
 ---
 title: "선형사상"
 number-sections: true
-number-depth : 2
+number-depth : 3
 crossref:
   chapters: true
 ---
@@ -64,7 +64,7 @@ $T\in \mathcal{L}(U,\,V)$ 에 대해 $T(u)=v$ 이면 $T(-u)=-v$ 임을 보여라
 
 ::: {#exm-derivative_integral_as_operator}
 
-무한번 미분 가능한 $\mathbb{R} \mapsto \mathbb{R}$ 실함수의 집합을 $C^{\infty}$ 라고 한다. $C^\infty$ 는 $\mathbb{R}$-벡터공간임을 쉽게 보일 수 있다. $f\in C^{\infty}$ 에 대한 미분연산자를 $\mathcal{D}$ 라고 하자. 즉 $(\mathcal{Df})(x)= f'(x)$ 이다. $f,\,g\in C^\infty,\, c\in \mathbb{R}$ 에 대해 $\mathcal{D}(f+cg) = f'+cg'\in C^\infty$ 이므로 $\mathcal{D} \in \mathcal{L}(C^\infty)$ 이다. 또한 $\mathcal{I}:C^\infty \to C^\infty$ 를 $(\mathcal{I}f)(x)=\int_{0}^x f(x)\,dx$ 로 정의하자. $\mathcal{I}\in \mathcal{L}(C^\infty)$ 임을 알 수 있다.
+실수 전체 구간에서 무한번 미분 가능한 $\mathbb{R} \mapsto \mathbb{R}$ 실함수의 집합을 $C_\mathbb{R}^{\infty}$ 라고 한다. $C_\mathbb{R}^\infty$ 는 $\mathbb{R}$-벡터공간임을 쉽게 보일 수 있다. $f\in C_\mathbb{R}^{\infty}$ 에 대한 미분연산자를 $\mathcal{D}$ 라고 하자. 즉 $(\mathcal{Df})(x)= f'(x)$ 이다. $f,\,g\in C_\mathbb{R}^\infty,\, c\in \mathbb{R}$ 에 대해 $\mathcal{D}(f+cg) = f'+cg'\in C_\mathbb{R}^\infty$ 이므로 $\mathcal{D} \in \mathcal{L}(C_\mathbb{R}^\infty)$ 이다. 또한 $\mathcal{I}:C_\mathbb{R}^\infty \to C^\infty$ 를 $(\mathcal{I}f)(x)=\int_{0}^x f(x)\,dx$ 로 정의하자. $\mathcal{I}\in \mathcal{L}(C_\mathbb{R}^\infty)$ 임을 알 수 있다.
 
 :::
 
@@ -967,6 +967,21 @@ $$
 
 </br>
 
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-similarity_transformation_of_linear_operator}
+
+#### 연산자의 닮음과 닮음변환
+
+벡터공간 $V$ 에서 정의된 두 연산자 $T,\,S\in \mathcal{L}(V)$ 에 대해 어떤 가역 연산자 $P\in \mathcal{L}(V)$ 가 존재하여 $S=P^{-1}\circ T \circ P$ 라면 두 연산자 $T$ 와 $S$ 는 닮았다고 하며 $P^{-1}\circ T \circ P$ 를 $T$ 의 **닮음변환 (similarity transfroamtion)** 이라고 한다.
+
+:::
+:::
+
+
+$S=P^{-1}\circ T \circ P$ 라면 그 행렬표현도 $[S] = [P^{-1}][T][P]$ 일 것이다. 연산자에 대한 것도 행렬에 대해 똑같이 정의 할 수 있다. 
+
+
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-similarity_transformation}
 
@@ -984,7 +999,7 @@ $\boldsymbol{P}$ 가 가역행렬일 때 $\boldsymbol{P}$ 의 각 열은 표준�
 :::
 
 ::: {.proof}
-표준기저 $\{\boldsymbol{e}_i\}$ 에 대해 $\boldsymbol{Pe}_i = \boldsymbol{P}_{:i}$ 이다. $\square$ 
+표준기저 $\{\boldsymbol{e}_i\}$ 에 대해 $\boldsymbol{Pe}_i = \boldsymbol{P}_{:i}$ 이다. $\boldsymbol{P}$ 가 가역행렬이므로 열벡터의 집합은 선형독립이다. $\square$ 
 :::
 
 </br>

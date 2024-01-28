@@ -1,7 +1,7 @@
 ---
 title: "벡터와 벡터공간"
 number-sections: true
-number-depth : 2
+number-depth : 3
 crossref:
   chapters: true
 ---
@@ -213,7 +213,7 @@ $$
 </br>
 
 ::: {#exm-vectorspace_polynomial}
-다항식 $p(x) = a_0 + a_1 x + \cdots + a_n x^n$ 을 생각하자. $a_n\ne 0$ 일 때 $p(x)$ 를 $n$ 차 다항식이라고 하며 이때의 $n$ 값을 다항식 $p(x)$ 의 **차수 (degree)** 라 한다. 굳이 0차 다항식이라고 이름을 붙이지는 않지만 상수함수도 다항식에 포함된다. $P_n(\mathbb{R})$ 을 실계수를 갖는 $n$ 차 이하의 다항식의 집합이라고 하면 $P_n(\mathbb{R})$ 이 $\mathbb{R}$-벡터공간임을 쉽게 알 수 있다. $P_n (\mathbb{C})$ 또한 $\mathbb{C}$ -벡터공간이다.
+다항식 $p(x) = a_0 + a_1 x + \cdots + a_n x^n$ 을 생각하자. $a_n\ne 0$ 일 때 $p(x)$ 를 $n$ 차 다항식이라고 하며 이때의 $n$ 값을 다항식 $p(x)$ 의 **차수 (degree)** 라 한다. 굳이 0차 다항식이라고 이름을 붙이지는 않지만 상수함수도 다항식에 포함된다. 앞으로 $\mathbb{F}$ 값을 계수로 갖는 변수 $t$ 에 대한 다항식의 집합을 $\mathbb{F}[t]$ 라고 표기하며, $\mathbb{F}_n[t]$ 는 $n$ 차를 포함하여 그 이하의 차수를 갖는 다항식의 집합을 의미한다. 예를 들어 $\mathbb{R}_3[t]$ 는 3차 이하의 차수를 갖는 실계수 다항식의 집합을 말한다. 0 이상의 정수 $n$ 에 대해 $\mathbb{F}_n[t]$ 은 $\mathbb{F}$-벡터공간이다. 또한 $\mathbb{F}[t]$ 도 벡터공간이다.
 :::
 
 </br>
@@ -293,7 +293,7 @@ $U,\,V$ 가 벡터공간일 때 $U \cap V$ 도 벡터공간이다.
 
 
 ::: {#exm-subspace_2}
-@exm-vectorspace_polynomial 에서 정의한 $P_n(\mathbb{R})$ 을 생각하자. $m \le n$ 일 때, $P_m(\mathbb{R})$ 은 $P_n (\mathbb{R})$ 의 부분공간이다.
+@exm-vectorspace_polynomial 에서 정의한 $\mathbb{R}_n[t]$ 을 생각하자. $m \le n$ 일 때, $\mathbb{R}_m[t]$ 는 $\mathbb{R}_n[t]$ 의 부분공간이다.
 :::
 
 </br>

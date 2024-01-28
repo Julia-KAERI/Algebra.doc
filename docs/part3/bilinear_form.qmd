@@ -27,7 +27,7 @@ $$
 
 ::: {#exm-k_linear_1}
 
-$T$ 가 벡터공간 $V$ 에 대하 $k$-linear form 일 때 다음이 성립한다.
+$T$ 가 벡터공간 $V$ 에 대한 $k$-linear form 일 때 다음이 성립한다.
 
 $$
 T(\cdots, 0, \cdots ) = 0
@@ -112,12 +112,12 @@ $$
 
 ::: {#prp-set_of_bilinear_form_is_vector_space}
 
-$\mathbb{F}$-벡터공간 $V$ 에 대한 $T^2(V)$ 는 $\mathbb{F}$-벡터공간이다.
+$\mathbb{F}$-벡터공간 $V$ 에 대한 $\mathcal{T}^2(V)$ 는 $\mathbb{F}$-벡터공간이다.
 :::
 
 
 ::: {.proof}
-모든 $v_i,\,v_j\in V$ 에 대해 $T(v_i, v_j)=0$ 인 $T$ 도 $V$ 에 대한 bilinear form 이다. 따라서 $T^2(V)\ne \varnothing$ 이다. $S,\,T\in \mathcal{T}^2(V)$ 이며 $a,\,b\in \mathbb{F}$ 라고 하자.
+모든 $v_i,\,v_j\in V$ 에 대해 $T(v_i, v_j)=0$ 인 $T$ 도 $V$ 에 대한 bilinear form 이다. 따라서 $\mathcal{T}^2(V)\ne \varnothing$ 이다. $S,\,T\in \mathcal{T}^2(V)$ 이며 $a,\,b\in \mathbb{F}$ 라고 하자.
 
 $$
 \begin{aligned}

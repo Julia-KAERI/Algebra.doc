@@ -1,7 +1,7 @@
 ---
 title: "행렬식"
 number-sections: true
-number-depth : 2
+number-depth : 3
 crossref:
   chapters: true
 ---
@@ -274,7 +274,7 @@ $$
 ### $\det$ 함수의 기본적인 성질
 
 
-::: {#lem-determinant_of_identity}
+::: {#exr-determinant_of_identity}
 
 단위 벡터 $\hat{\boldsymbol{e}}_i \in \mathcal{M}_{1 \times n}(\mathbb{F}),\, i=1,\ldots,\,n$ 를 
 
@@ -287,10 +287,10 @@ $$
 \det (\hat{\boldsymbol{e}}_1,\ldots,\,\hat{\boldsymbol{e}}_n) = 1
 $$
  
-이다.
+임을 보여라.
 :::
 
-::: {.proof}
+::: {.solution}
 $e_{ij} = (\hat{\boldsymbol{e}}_i)_j = \delta_{ij}$ 라 하면, 
 $$
 \sum_{\sigma\in S_n} \text{sgn}(\sigma) \prod_{i=1}^n e_{i\sigma(i)} = \sum_{\sigma\in S_n} \text{sgn}(\sigma) \prod_{i=1}^n \delta_{i\sigma(i)} = \text{sgn}(i_d)=1
@@ -300,7 +300,7 @@ $$
 
 </br>
 
-::: {#lem-determinant_change_of_order}
+::: {#exm-determinant_change_of_order}
 
 정해진 $\tau \in S_n$ 에 대해
 
@@ -308,10 +308,10 @@ $$
 \det (\boldsymbol{a}_{\tau(1)},\ldots,\boldsymbol{a}_{\tau(n)}) = \text{sgn}(\tau)\,\det (\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n)
 $$
 
-이다.
+임을 보여라.
 :::
 
-::: {.proof}
+::: {.solution}
 $\text{sgn}(\tau \circ \tau^{-1})=1$ 이므로 임의의 $\sigma\in S_n$ 에 대해  $\text{sgn}(\sigma) = \text{sgn}(\tau) \,\text{sgn}(\sigma \circ \tau^{-1})$ 임을 이용한다. 우선 정의에 의해
 $$
 \begin{aligned}
@@ -341,8 +341,8 @@ $$
 
 </br>
 
-::: {#cor-altermating_of_determinant}
-$i\ne j$ 에 대해 $i$ 번째 벡터와 $j$ 번째 벡터를 바꿨을 때, 다음이 성립한다.
+::: {#prp-altermating_form_of_determinant}
+$i\ne j$ 에 대해 $i$ 번째 벡터와 $j$ 번째 벡터를 바꿨을 때, 다음이 성립한다. [@prp-altermating_form_of_determinant 의 성질을 만족하는 $V^n \mapsto \mathbb{F}$ 함수를 [alternating bilinear form](../part3/bilinear_form.qmd#def-alternating_form) 이라고 한다.]{.aside}
 $$
 \det(\boldsymbol{a}_1,\ldots,\boldsymbol{a}_i,\ldots,\,\boldsymbol{a}_j,\ldots,\boldsymbol{a}_n) = - \det(\boldsymbol{a}_1,\ldots,\boldsymbol{a}_j,\ldots,\,\boldsymbol{a}_i,\ldots,\boldsymbol{a}_n)
 $$
@@ -525,13 +525,6 @@ $$
 이다. $\det (\boldsymbol{A}) = \det (\boldsymbol{A}^T)$ 임을 이용하면 두 열이 선형종속일 때 행렬식이 $0$ 임을 알 수 있다. $\square$
 :::
 
-
-
-
-
-
-
-
 </br>
 
 ::: {#prp-determinant_product_of_matrix}
@@ -559,7 +552,7 @@ $$
 \end{aligned}
 $$
 
-여기서 $\sigma_{i_1,\ldots,i_n} = \begin{pmatrix} 1 & 2 & \cdots & n \\ i_1 & i_2 & \cdots & i_n\end{pmatrix}$ 라 하면,  @lem-determinant_change_of_order 에 의해
+여기서 $\sigma_{i_1,\ldots,i_n} = \begin{pmatrix} 1 & 2 & \cdots & n \\ i_1 & i_2 & \cdots & i_n\end{pmatrix}$ 라 하면,  @exm-determinant_change_of_order 에서 보았듯이
 $$
 \begin{aligned}
 \det (\boldsymbol{AB}) &= \sum_{i_1=1}^n \cdots \sum_{i_n=1}^n A_{1,i_1} \cdots A_{n, {i_n}} \text{sgn}(\sigma_{i_1,\ldots,i_n}) \det(\boldsymbol{B}_{1:}, \ldots, \boldsymbol{B}_{n:}) \\
@@ -592,6 +585,83 @@ $$
 :::
 
 </br>
+
+::: {#cor-derterminant_is_invariant_under_similar_transformation}
+
+정사각 행렬에 대한 행렬식은 닮음 변환에 대해 불변이다. 즉 $\boldsymbol{A},\, \boldsymbol{P} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 이고 $\boldsymbol{P}$ 가 가역일 때 $\det (\boldsymbol{P}^{-1}\boldsymbol{AP}) = \det (\boldsymbol{A})$ 이다.
+
+:::
+
+::: {.proof}
+
+$\det (\boldsymbol{P}^{-1}\boldsymbol{AP}) = \det (\boldsymbol{P}^{-1})\det (\boldsymbol{A})\det (\boldsymbol{P}) = 1. \qquad \square$
+:::
+
+
+</br>
+
+## 연습문제
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-block_matrix}
+
+#### 블록 행렬
+
+행렬을 정사각형, 혹은 직사각형의 구획으로 겹치거나 빠지지 않게 나누었을 때 각각의 구획을 부분행렬이라 하고, 행렬을 부분행렬로 표현한 것을 블록행렬이라 한다. 예를 들어
+
+$$
+\boldsymbol{A} = \left[ \begin{array}{rrr:rr} 1 & 2 & 3 & 4 & 5 \\ 6 & 7 & 8 & 9 & 10 \\ \hdashline  11 & 12 & 13 & 14& 15 \end{array} \right]
+$$
+
+라 했을 때, 점선을 따라 부분행렬을 나누어 아래와 같이 정하면,
+
+$$
+\boldsymbol{A}_1 = \begin{bmatrix} 1 & 2 & 3 \\ 6 & 7 & 8\end{bmatrix},\, \boldsymbol{A}_2 = \begin{bmatrix} 4 & 5 \\ 9 & 10 \end{bmatrix},\, \boldsymbol{A}_3 = \begin{bmatrix} 11 & 12 & 13 \end{bmatrix},\, \boldsymbol{A}_4 = \begin{bmatrix} 14 & 15 \end{bmatrix}
+$$
+
+행렬 $\boldsymbol{A}$ 는 부분행렬을 이용하여
+
+$$
+\boldsymbol{A} = \begin{bmatrix} \boldsymbol{A}_1 & \boldsymbol{A}_2 \\ \boldsymbol{A}_3 & \boldsymbol{A}_4 \end{bmatrix}
+$$
+
+라 표현할 수 있다. 같은 행의 부분행렬끼리는 행의 개수가 같고, 같은 열의 부분행렬끼리는 열의 개수가 같게 된다.
+
+:::
+:::
+
+</br>
+
+::: {#exr-determinant_of_block_matrix}
+
+$\boldsymbol{A} \in \mathcal{M}_{m \times m}(\mathbb{F}),\, \boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 블록 정사각 행렬 $\boldsymbol{D}= \begin{bmatrix} \boldsymbol{A}& \boldsymbol{0} \\ \boldsymbol{0} & \boldsymbol{B}\end{bmatrix} \in \mathcal{M}_{(m+n)\times (m+n)}(\mathbb{F})$ 의 행렬식이 $\det (\boldsymbol{D}) = \det(\boldsymbol{A}) \det(\boldsymbol{B})$ 임을 보여라.
+
+:::
+
+::: {.solution}
+
+행렬식의 정의에 의해
+$$
+\begin{aligned}
+\det (\boldsymbol{D}) &= \sum_{\sigma \in S_{m+n}} \text{sgn}(\sigma) \prod_{i=1}^{m+n} D_{i, \sigma(i)} \\
+&=  \sum_{\sigma \in S_{m+n}} \text{sgn}(\sigma) \prod_{i=1}^m D_{i, \sigma(i)} \prod_{i=m+1}^{m+n} D_{i,\sigma(i)}
+\end{aligned}
+$$
+
+이다. $1\le i \le m$ 에 대해 $\sigma(i)>m$ 이면 $D_{i,\sigma(i)}=0$ 이며 $m+1 \le i \le m+n$ 에 대해 $\sigma(i)\le m$ 이면 $D_{i, \sigma(i)} = 0$ 이다. 즉 $\prod_{i=1}^m D_{i, \sigma(i)}$ 부분은 $\{1,\ldots,\,m\}$ 에 대한 순열만이 의미있으며, $\prod_{i=m+1}^{m+n} D_{i,\sigma(i)}$ 부분은 $\{m+1,\ldots,m+n\}$ 에 대한 순열만이 의미있다. 이제 $\{1,\ldots,\,m\}$ 에 대한 순열 $S_m$ 과 $\{m+1,\ldots,\,m+n\}$ 에 대한 순열 $S'$ 을 생각하자. $\tau \in S_m,\, \zeta \in S'$ 에 대해 $\tau\zeta \in S_{m+n}$ 이며 $\sigma = \tau \zeta$ 일 때 $\text{sgn}(\sigma) = \text{sgn}(\tau)\,\text{sgn}(\zeta)$ 이다. 또한 어떤 $\tau \in S_m,\, \zeta\in S'$ 에 대해 $\sigma = \tau \zeta$ 가 되지 않으면 행렬식에 대한 기여가 $0$ 이 된다. 따라서, 
+
+$$
+\begin{aligned}
+\det (\boldsymbol{D}) &= \sum_{\tau \in S_m,\, \zeta \in S'} \text{sgn}(\tau)\text{sgn}(\zeta)\prod_{i=1}^m A_{i, \tau(i)} \prod_{j=m+1}^{m+n} B_{j-m, \sigma(j-m)-m}  \\
+&= \left(\sum_{\tau \in S_m}\text{sgn}(\tau)\prod_{i=1}^m A_{i, \tau(i)}\right) \left( \sum_{\zeta \in S'} \text{sgn}(\zeta) \prod_{j=m+1}^{m+n} B_{j-m, \sigma(j-m)-m} \right) \\
+&= \det (\boldsymbol{A}) \det(\boldsymbol{B})
+\end{aligned}
+$$
+
+이다. 
+
+:::
+
 <!-- 
 
 ## 행공간과 열공간
