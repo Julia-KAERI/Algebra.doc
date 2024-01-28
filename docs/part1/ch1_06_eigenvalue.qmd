@@ -339,7 +339,7 @@ $\boldsymbol{A}_n \in \mathcal{M}_{n \times n}(\mathbb{C})$ 이라 하고 $n$ �
 
 </br>
 
-::: {#prp-diagonalizability}
+::: {#thm-diagonalizability}
 
 정사각 행렬 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 서로 다른 고유값 $\lambda_1,\ldots,\,\lambda_m$ 을 가질 때 다음은 동치이다.
 
