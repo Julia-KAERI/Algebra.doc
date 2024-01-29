@@ -1,7 +1,7 @@
 ---
 title: "군에서의 준동형사상"
 number-sections: true
-number-depth : 2
+number-depth : 3
 crossref:
   chapters: true
 ---
@@ -29,8 +29,8 @@ $$
 
 $$
 \begin{aligned}
-\ker \varphi &= \{x\in G: \varphi (x) = 1_{G'}\}, \\
-\text{im}\, \varphi &= \{\varphi(x) : x\in G\}.
+\ker (\varphi) &= \{x\in G: \varphi (x) = 1_{G'}\}, \\
+\text{im} (\varphi) &= \{\varphi(x) : x\in G\}.
 \end{aligned}
 $$
 
@@ -68,7 +68,7 @@ $\varphi :G \to G'$ 이 준동형사상일 때 다음이 성립한다.
 ::: {.proof}
 ($1$) 은 induction 으로 보일 수 있다.
 
-($2$) 일$\varphi(1_G)= \varphi(1_G 1_G) = \varphi(1_G)\varphi(1_G)$ 이므로 $\varphi(1_G)=1_{G'}$ 이다.  
+($2$) $\varphi(1_G)= \varphi(1_G 1_G) = \varphi(1_G)\varphi(1_G)$ 이므로 $\varphi(1_G)=1_{G'}$ 이다.  
 
 ($3$) $1_{G'} = \varphi(1_G) = \varphi(aa^{-1}) = \varphi(a)\varphi(a^{-1})$ 이므로 $\varphi(a^{-1})=(\varphi(a))^{-1}$ 이다. $\square$
 
@@ -143,6 +143,22 @@ $H\le G$ 이며 $a,\,b\in G$ 에 대해 다음 명제들은 동치이다.
 
 </br>
 
+::: {#prp-kernel_and_image}
+
+$\varphi \in \text{Hom}(G, G')$ 이며 $K=\ker \varphi$ 일 때 $g \in \varphi^{-1}(\{g'\})$ 이라면 $\varphi^{-1}(\{g'\}) = gK$ 이다.
+
+:::
+
+::: {.proof}
+
+$k\in K$ 이면 $\varphi (gk)=\varphi(g)\varphi(k) = g$ 이므로 $gK \subset \varphi^{-1}(\{g'\})$ 이다. $x\in \varphi^{-1}(\{g'\})$ 이면 $\varphi (g^{-1}x) = \varphi(g^{-1})\varphi(x)=(g')^{-1}g=1_{G'}$ 이므로 $g^{-1}x \in \ker \varphi$ 이다. @prp-cosets 에 따라 $x\in gK$ 이므로 $\varphi^{-1}(\{g'\}) \subset gK$. 따라서 $gK = \varphi^{-1}(\{g'\})$. $\square$
+
+:::
+
+
+</br>
+
+
 ::: {#cor-cosets}
 
 $\varphi \in \text{Hom}\, (G,G')$ 이 단사일 필요충분 조건은 $\ker \varphi = \{1_G\}$ 인 것이다.
@@ -190,7 +206,7 @@ $H\le G$ 일 때 $H$ 에 의한 두 잉여류 사이에 전단사 함수가 존�
 
 ::: {.proof}
 
-$f:aH \to bH$ 에 대해 $f(x) = ba^{-1}x$ 라 하자. $bh\in bH$ 에 대해 $f(ah)=bh$ 이므로 $f$ 는 전사이다. $ba^{-1}x_1 = ba^{-1}x_2$ 이면 제거규칙에 의해 $x_1=x_2$ 이므로 $f$ 는 단사이다. $\square$
+함수 $f:aH \to bH$ 를 $f(x) = ba^{-1}x$ 로 정의하자. $bh\in bH$ 에 대해 $f(ah)=bh$ 이므로 $f$ 는 전사이다. $ba^{-1}x_1 = ba^{-1}x_2$ 이면 제거규칙에 의해 $x_1=x_2$ 이므로 $f$ 는 단사이다. $\square$
 
 :::
 
@@ -226,7 +242,7 @@ $o(g) = |\langle g \rangle |$ 이며 $\langle g\rangle \le G$ 이다. $\square$
 
 ::: {#cor-prime_order_group}
 
-군 $G$ 의 order 가 소수 $p$ 이면 $G$ 는 $1_G$ 가 아닌 $g\in G$ 에 의해 생성되는 순환군이다.
+군 $G$ 의 order 가 소수 $p$ 이면 $G$ 는 항등원이 아닌 $g\in G$ 에 의해 생성되는 순환군이다.
 :::
 
 ::: {.proof}
@@ -243,15 +259,15 @@ $|G|=p$ 가 소수이면 $|G|$ 의 진부분군이 존재하지 않는다. 따�
 
 &emsp; ($1$) $|G| = |\ker \varphi| \cdot | \text{im}\, \varphi|$, 
 
-&emsp; ($2$) $|\text{im}\, \varphi|$ 는 $|G'|$ 을 나눈다.
+&emsp; ($2$) $|\text{im}(\varphi)|$ 는 $|G'|$ 을 나눈다.
 
 :::
 
 ::: {.proof}
 
-($1$) 우선 $g'\in \text{im}\, \varphi$ 에 대해 $|\varphi^{-1}(\{g'\})| = |\ker \varphi|$ 임을 보이자. $g\in \varphi{-1}(\{g'\})$ 을 하나 선택하여 $f : \ker \varphi \to G$ 을 $f(x) = gx$ 라 하자. $f$ 는 단사이며, $x\in \ker \varphi$ 에 대해 $\varphi (f(x)) = \varphi (gx)= g'$ 이다. 임의의 $\overline{g}\in \varphi^{-1}(\{g'\})$ 에 대해  $\varphi (g^{-1}\overline{g}) =1_G'$ 이므로 $g^{-1}\overline{g}\in \ker \varphi$ 이다. 즉 $\ker \varphi$ 와 $\varphi^{-1}(\{g'\})$ 사이에 전단사 함수가 존재한다. $\ker \varphi$ 가 유한군이므로 $|\ker \varphi| = |\varphi^{-1}(\{g'\})|$ 이다. 
+($1$) @prp-kernel_and_image 와 라그랑쥬 정리(@thm-lagrange_theorem_for_subgrous) 를 보라.
 
-($2$) $\text{im}\,\varphi \le G'$ 이므로 자명하다. $\square$
+($2$) $\text{im}(\varphi) \le G'$ 이므로 자명하다. $\square$
 
 :::
 
@@ -626,7 +642,7 @@ $x,\,y\in S$ 이지만 $xy\not\in S$ 라면 $xy\in (xy)S$ 이다. 그런데 $y^{
 ::: {#def-normal_subgroups}
 #### Conjugate 와 정규부분군
 
-$a,\,g$ 가 군 $G$ 의 원소일 때 $gag^{-1}$ 을 $g$ 에 의한 $a$ 의 **conjugate** 라고 한다. $N\le G$ 일 때 모든 $a\in N$ 과 $g\in G$ 에 대해 $gag^{-1}\in N$ 일 때 $N$ 을 $G$ 의 **정규부분군(normal subgroup)** 이라고 하며 $N \trianglelefteq G$ 라고 쓴다.
+$a,\,g$ 가 군 $G$ 의 원소일 때 $gag^{-1}$ 을 $g$ 에 의한 $a$ 의 **conjugate** 라고 한다. $N\le G$ 가 모든 $a\in N$ 과 $g\in G$ 에 대해 $gag^{-1}\in N$ 일 때 $N$ 을 $G$ 의 **정규부분군(normal subgroup)** 이라고 하며 $N \trianglelefteq G$ 라고 표기한다.
 
 :::
 :::
@@ -641,7 +657,7 @@ $H \le G$ 일 때 $g\in G$ 에 대해 $gHg^{-1}= \{ ghg^{-1}: h\in H\}$ 는 $G$ 
 
 ::: {.proof}
 
-$h_1,\,h_2\in H$ 에 대해 $(gh_1g^{-1})(gh_2g^{-1}) = g(h_1h_2)g^{-1}\in gHg$ 이며, $(gh_1g^{-1})^{-1}=gh_1^{-1}g^{-1}\in gHg^{-1}$ 이므로 $gHg^{-1} \le G$ 이다. $\square$
+$1_G\in H$ 이며 $g1_Gg^{-1}=1_G\in gHg^{-1}$ 이다. $h_1,\,h_2\in H$ 에 대해 $(gh_1g^{-1})(gh_2g^{-1}) = g(h_1h_2)g^{-1}\in gHg$ 이며, $(gh_1g^{-1})^{-1}=gh_1^{-1}g^{-1}\in gHg^{-1}$ 이므로 $gHg^{-1} \le G$ 이다. $\square$
 :::
 
 
