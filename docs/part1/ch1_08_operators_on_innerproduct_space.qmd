@@ -211,21 +211,25 @@ $$
 
 </br>
 
-## Isometry {#sec-isometry}
+## Linear Isometry {#sec-linear_isometry}
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-isometry}
+::: {#def-linear_isometry}
 행렬 $\boldsymbol{S} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 임의의 $\boldsymbol{v} \in \mathcal{M}_{n }(\mathbb{F})$ 에 대해
 
 $$
 \|\boldsymbol{Sv}\|^2 = \|\boldsymbol{v}\|^2
 $$
 
-일 때 $\boldsymbol{S}$ 를 **isometry** 라 한다. 즉 Isometry는 거리를 보존시키는 선형 변환을 나타내는 행렬이다.
+일 때 $\boldsymbol{S}$ 를 **linear isometry** 라 한다. 즉 Linear isometry는 거리를 보존시키는 선형 변환을 나타내는 행렬이다.
 
 :::
 :::
+
+
+많은 선형대수학 교재에서 linear isometry 를 isometry 라고 소개한다. 정확한 의미의 isometry 는 거리공간에서 거리를 보존하는 함수이며 여기에 대해서는 [Isometry](../part2/ch2_04_symmetry.qmd#sec-isometry) 에서 다루기로 한다. 
+
 
 </br>
 
@@ -233,7 +237,7 @@ $$
 
 행렬 $\boldsymbol{S}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음은 동치이다.  
 
-&emsp; ($1$) $\boldsymbol{S}$ 는 Isometry이다.
+&emsp; ($1$) $\boldsymbol{S}$ 는 linear isometry이다.
 
 &emsp; ($2$) $\langle \boldsymbol{Su},\, \boldsymbol{Sv}\rangle = \langle \boldsymbol{u},\,\boldsymbol{v}\rangle$
 
@@ -302,17 +306,17 @@ $$
 </br>
 
 ::: {#exm-cojugate_of_isometry}
-$\boldsymbol{S}$ 가 isometry 이면 $\boldsymbol{S}^\ast$ 도 isometry 이다.
+$\boldsymbol{S}$ 가 linear isometry 이면 $\boldsymbol{S}^\ast$ 도 linear isometry 이다.
 :::
 
 ::: {.proof}
 
-@prp-properties_of_isometry 에서 보였듯이 $\boldsymbol{S}$ 가 isometry 이면 $\boldsymbol{S}^\ast = \boldsymbol{S}^{-1}$ 이다. 따라서
+@prp-properties_of_isometry 에서 보였듯이 $\boldsymbol{S}$ 가 linear isometry 이면 $\boldsymbol{S}^\ast = \boldsymbol{S}^{-1}$ 이다. 따라서
 $$
 \|\boldsymbol{S}^\ast \boldsymbol{u}\|^2 = \langle \boldsymbol{S}^\ast\boldsymbol{u},\, \boldsymbol{S}^\ast\boldsymbol{u}\rangle = \langle \boldsymbol{u} | \boldsymbol{SS}^\ast \boldsymbol{u}\rangle = \|\boldsymbol{u}\|^2
 $$
 
-이므로 $\boldsymbol{S}^\ast$ 도 isometry 이다. $\square$
+이므로 $\boldsymbol{S}^\ast$ 도 linear isometry 이다. $\square$
 :::
 
 
@@ -320,13 +324,13 @@ $$
 
 
 ::: {#exm-product_of_isometries}
-$\boldsymbol{S},\,\boldsymbol{T}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 isometry 이면 $\boldsymbol{ST}$ 도 isometry 이다.
+$\boldsymbol{S},\,\boldsymbol{T}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 linear isometry 이면 $\boldsymbol{ST}$ 도 linear isometry 이다.
 :::
 
 
 ::: {.solution}
 
-@prp-properties_of_isometry 에 의해 $\boldsymbol{S}^{-1}=\boldsymbol{S}^\ast$ 이면 $\boldsymbol{S}$ 가 isometry 인 것을 이용한다.
+@prp-properties_of_isometry 에 의해 $\boldsymbol{S}^{-1}=\boldsymbol{S}^\ast$ 이면 $\boldsymbol{S}$ 가 linear isometry 인 것을 이용한다.
 $$
 (\boldsymbol{ST})^{-1}= \boldsymbol{T}^{-1}\boldsymbol{S}^{-1}= \boldsymbol{T}^\ast \boldsymbol{S}^\ast = (\boldsymbol{ST})^\ast
 $$
@@ -350,7 +354,7 @@ $$
 
 #### 유니타리행렬과 직교행렬
 
-$\mathbb{C}$-벡터공간에서 정의된 isometry 를 **유니타리 연산자/행렬 (unitary operator/matrix)** 라 하고 $\mathbb{R}$-벡터공간에서 정의된 isometry 를 **직교 연산자/행렬 (orthogonal operator/matrix)** 라 한다. 유니타리 행렬에 의한 행렬/벡터의 변환을 **유니타리 변환 (unitary transformation)**, 직교행렬에 의핸 행렬/벡터의 변환을 **직교 변환 (orthogonal transformation)**이라고 한다.
+$\mathbb{C}$-벡터공간에서 정의된 linear isometry 를 **유니타리 연산자/행렬 (unitary operator/matrix)** 라 하고 $\mathbb{R}$-벡터공간에서 정의된 linear isometry 를 **직교 연산자/행렬 (orthogonal operator/matrix)** 라 한다. 유니타리 행렬에 의한 행렬/벡터의 변환을 **유니타리 변환 (unitary transformation)**, 직교행렬에 의핸 행렬/벡터의 변환을 **직교 변환 (orthogonal transformation)**이라고 한다.
 
 :::
 :::
@@ -365,12 +369,12 @@ $\mathbb{C}$-벡터공간에서 정의된 isometry 를 **유니타리 연산자/
 정규직교기저간의 기저 변환과 isometry 에 대한 두가지를 보인다.
 
 ::: {#prp-isometry_orthonormal_basis}
-$\boldsymbol{S}$ 가 isometry 일 때 $\boldsymbol{S}$ 의 각 열벡터의 집합은 정규직교기저이며, 정규직교기저를 각 열벡터로 갖는 행렬은 isometry 이다.
+$\boldsymbol{S}$ 가 linear isometry 일 때 $\boldsymbol{S}$ 의 각 열벡터의 집합은 정규직교기저이며, 정규직교기저를 각 열벡터로 갖는 행렬은 linear isometry 이다.
 :::
 
 ::: {.proof}
 
-$\boldsymbol{S}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 isometry 이면 $\boldsymbol{S}^\ast\boldsymbol{S} = \boldsymbol{I}$ 임을 안다. 따라서, 
+$\boldsymbol{S}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 linear isometry 이면 $\boldsymbol{S}^\ast\boldsymbol{S} = \boldsymbol{I}$ 임을 안다. 따라서, 
 
 $$
 \delta_{ij} = (\boldsymbol{S}^\ast\boldsymbol{S})_{ij} = \sum_k (\boldsymbol{S}^\ast)_{ik}(\boldsymbol{S})_{kj} = \sum_k \overline{\boldsymbol{S}_{ki}}\boldsymbol{S}_{kj} = \boldsymbol{S}_{:j}\cdot \boldsymbol{S}_{:i}
@@ -382,13 +386,13 @@ $$
  (\boldsymbol{S}^\ast\boldsymbol{S})_{ij} = \sum_k (\boldsymbol{S}^\ast)_{ik}(\boldsymbol{S})_{kj} = \sum_k \overline{\boldsymbol{S}_{ki}}\boldsymbol{S}_{kj} = \boldsymbol{S}_{:j}\cdot \boldsymbol{S}_{:i} = \delta_{ij}
 $$
 
-이다. 즉 $\boldsymbol{S}^\ast \boldsymbol{S}=\boldsymbol{I}$ 이므로 $\boldsymbol{S}$ 는 isometry 이다. $\square$
+이다. 즉 $\boldsymbol{S}^\ast \boldsymbol{S}=\boldsymbol{I}$ 이므로 $\boldsymbol{S}$ 는 linear isometry 이다. $\square$
 
 :::
 </br>
 
 ::: {#prp-2}
-정규직교기저간의 변환행렬은 isometry 이다.
+정규직교기저간의 변환행렬은 linear isometry 이다.
 :::
 
 
@@ -410,7 +414,7 @@ $$
 \end{aligned}
 $$
 
-이다. 즉 $\boldsymbol{P}^\ast \boldsymbol{P}=\boldsymbol{I}$ 이므로 $\boldsymbol{P}$ 는 isometry 이다.
+이다. 즉 $\boldsymbol{P}^\ast \boldsymbol{P}=\boldsymbol{I}$ 이므로 $\boldsymbol{P}$ 는 linear isometry 이다.
 
 :::
 
@@ -428,7 +432,7 @@ $\det(\boldsymbol{S}^\ast \boldsymbol{S})=\det(\boldsymbol{S}^\ast) \det(\boldsy
 
 </br>
 
-### Isometry 와 행렬의 변환
+### Linear Isometry 와 행렬의 변환
 
 $n$ 차원 벡터공간 $V$ 에서 정의된 연산자 $T$ 와 정규직교기저 $\{u_1,\ldots,\,u_n\}$ 를 생각하자. 이 정규직교기저에서 $T$ 의 행렬표현이 $\boldsymbol{A}$ 이며, 닮을변환을 나타내는 $\boldsymbol{P}$ 에 의해 기저가 변화했을 때의 행렬표현은 $\boldsymbol{P}^{-1}\boldsymbol{AP}$ 임을 안다. $\boldsymbol{P}$ 가 isometry 이면 $\boldsymbol{P}^{-1}=\boldsymbol{P}^\ast$ 이므로 기저가 변환된 행렬은 $\boldsymbol{P}^\ast \boldsymbol{AP}$ 이다.
 

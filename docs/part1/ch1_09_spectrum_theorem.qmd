@@ -155,7 +155,7 @@ $$
 \boldsymbol{APe}_i = \boldsymbol{P}\boldsymbol{P}^{-1}\boldsymbol{APe}_i= \boldsymbol{PDe}_i=\lambda_i \boldsymbol{Pe}_i
 $$
 
-이므로 $\boldsymbol{Pe}_i$ 는 $\boldsymbol{A}$ 의 고유벡터이다. $\boldsymbol{P}$ 가 isometry 이므로 $\{\boldsymbol{Pe}_1,\ldots,\,\boldsymbol{Pe}_n\}$ 은 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_n(\mathbb{C})$ 의 정규직교기저이다.
+이므로 $\boldsymbol{Pe}_i$ 는 $\boldsymbol{A}$ 의 고유벡터이다. $\boldsymbol{P}$ 가 linear isometry 이므로 $\{\boldsymbol{Pe}_1,\ldots,\,\boldsymbol{Pe}_n\}$ 은 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_n(\mathbb{C})$ 의 정규직교기저이다.
 
 ($3. \implies 1.$) $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 이 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저라 하자. 이 때 $\boldsymbol{u}_i$ 의 고유값은 $\lambda_i$ 라 하자.  
 
@@ -430,7 +430,7 @@ $$
 \boldsymbol{APe}_i = \boldsymbol{P}\boldsymbol{P}^{-1}\boldsymbol{APe}_i= \boldsymbol{PDe}_i=\lambda_i \boldsymbol{Pe}_i
 $$
 
-이므로 $\boldsymbol{Pe}_i$ 는 $\boldsymbol{A}$ 의 고유벡터이다. $\boldsymbol{P}$ 가 isometry 이므로 $\{\boldsymbol{Pe}_1,\ldots,\,\boldsymbol{Pe}_n\}$ 은 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{R})$ 의 정규직교기저이다.
+이므로 $\boldsymbol{Pe}_i$ 는 $\boldsymbol{A}$ 의 고유벡터이다. $\boldsymbol{P}$ 가 linear isometry 이므로 $\{\boldsymbol{Pe}_1,\ldots,\,\boldsymbol{Pe}_n\}$ 은 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{R})$ 의 정규직교기저이다.
 
 ($3 \implies 1$) $\{\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n\}$ 이 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathbb{R}^n$ 의 정규직교기저라 하자. 이 때 $\boldsymbol{u}_i$ 의 고유값은 $\lambda_i$ 라 하자.  $\lambda_i$ 는 실수이므로,
 

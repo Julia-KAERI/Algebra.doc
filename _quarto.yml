@@ -27,6 +27,7 @@ book:
         - docs/part2/ch2_01_groups.qmd
         - docs/part2/ch2_02_homomorphisms.qmd
         - docs/part2/ch2_03_normal_subgroup.qmd
+        - docs/part2/ch2_04_symmetry.qmd
     - part: docs/part3/part3.qmd
       chapters:
         - docs/part3/characteristic_polynomial.qmd

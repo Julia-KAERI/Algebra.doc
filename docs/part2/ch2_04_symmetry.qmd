@@ -1,0 +1,268 @@
+---
+title: "Symmetry"
+number-sections: true
+number-depth : 3
+crossref:
+  chapters: true
+---
+
+## Symmetry {#sec-symmetry}
+![Symmetry](symmetry.png){width=700 fig-align="center"}
+
+
+## Isometry 
+
+### Isometry {#sec-isometry}
+
+이미 우리는 [linear isometry](../part1/ch1_08_operators_on_innerproduct_space.qmd#sec-linear_isometry) 에서 선형대수학적인 입장에서 다루었다. 여기서는 내적벡터공간에서 내적을 보존하는 선형연산자를 Isometry 라고 정의했다.(@prp-properties_of_isometry) 
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-isometry}
+#### Isometry
+
+거리공간 $X$ 에 대해 함수 $f:X \to X$ 가 모든 $x,\,y\in X$ 에서
+
+$$
+\|f(x)-f(y)\| = \|x-y\|
+$$
+
+를 만족할 때 $f$ 를 **isometry** 라고 한다.
+
+:::
+:::
+
+
+::: {#prp-composition_of_isometries}
+
+$f,\,g$ 가 $\mathbb{R}^n$ 에서 정의된 isometry 일 때 $f \circ g$ 도 isometry 이다.
+
+:::
+
+
+::: {.proof}
+
+$\|f(g(x))-f(g(y))\| = \|g(x)-g(y)\| = \|x-y\|$. 
+
+:::
+
+</br>
+
+거리공간에 대해서는 특히 해석학에서 많이 다루었을 것이다. 여기서는 거리공간중에 유클리드 공간 $\mathbb{R}^n$ 을 중점적으로 다룬다. 유클리드 공간은 $\mathbb{R}$-내적벡터공간이다. 이제 linear isometry 가 아닌 isometry 의 가장 대표적인 예를 들어보자.
+
+
+:::: {.callout-note appearance="simple" icon="false"}
+::: {#def-translation}
+#### Translation
+
+유클리드 공간 $\mathbb{R}^n$ 에서 어떤 고정된 $v\in \mathbb{R}^n$ 에 대해 다음과 같이 정의된 함수 $t_v :\mathbb{R}^n \to \mathbb{R}^n$ 를 $v$ 만큼의 **translation** 이라고 한다.
+
+$$
+t_v (x) = x+v
+$$
+
+:::
+:::
+
+
+::: {#exm-translation_1}
+
+$v \in \mathbb{R}^n,\, v\ne 0$ 에 대한 translation $t_v$ 는 isometry 이지만 linear isometry 는 아니다.
+:::
+
+</br>
+
+::: {#exm-translation_2}
+
+$t_a :\mathbb{R}^n \to \mathbb{R}^n$ 은 전단사함수이다.
+:::
+
+</br>
+
+::: {#exm-translation_3}
+
+${t_a}^{-1} = t_{-a}$ 이다. $(t_a \circ t_{-a})(x) = (t_{-a}\circ t_a)(x) = x$. 
+:::
+
+</br>
+
+
+::: {#lem-innerproduct_conserving_function}
+
+$u,\,v\in \mathbb{R}^n$ 일 때 $\langle u,\, u\rangle = \langle u,\, v\rangle = \langle v,\,v \rangle$ 이면 $u=v$ 이다.
+
+:::
+
+
+::: {.proof}
+
+$\mathbb{R}^n$ 에서 $\|u-v\|=0\iff u=v$ 이다.
+$$
+\langle u-v,\, u-v\rangle = \langle u,\, u\rangle - 2\langle u,\, v\rangle + \langle v,\,v\rangle = 0
+$$
+
+이므로 $\|u-v\|=0$ 이다. 따라서 $u = v$ 이다. $\square$
+
+:::
+
+
+</br>
+
+::: {#thm-innerproduct_conserving_function}
+
+$\varphi : \mathbb{R}^n \to \mathbb{R}^n$ 에 대해 다음이 성립한다.
+
+&emsp; ($1$) $\varphi$ 는 linear isometry 이다.
+
+&emsp; ($2$) $\varphi$ 는 $\varphi (0)=0$ 인 isometry 이다.
+
+&emsp; ($3$) 모든 $u,\,v\in \mathbb{R}^n$ 에 대해 $\langle \varphi (u),\,\varphi (v) \rangle = \langle u,\,v\rangle$ 이다.
+
+:::
+
+::: {.proof}
+
+($1\implies 2$) $\varphi$ 가 linear isometry 이면 $\|\varphi(u)\| = \|u\|$ 이므로 $\varphi (0) = 0$ 이다.
+
+($2 \implies 3$) 정의에 의해 $\|\varphi (u)\| = \|u\|$ 이다. 또한
+
+$$
+0 = \|\varphi (u)-\varphi (v)\|^2 - \|u-v\|^2 = 2(\langle \varphi(u),\, \varphi (v) \rangle - \langle u,\, v\rangle)
+$$
+
+이다.
+
+($3\implies 1$) $\varphi$ 가 내적을 보존하면 선형사상임을 보이자. 우선 $\varphi (u+v) = \varphi (u) + \varphi (v)$ 임을 보인다.
+
+$$
+\begin{aligned}
+\langle \varphi (u+v),\, \varphi (u+v) \rangle &= \langle  u+v,\, u+v\rangle = \langle u,\,u\rangle + \langle v,\,v \rangle + 2\langle u, v\rangle ,\\
+\langle \varphi (u) + \varphi (v),\, \varphi (u)+\varphi (v)\rangle  &= \langle u,\,u \rangle + \langle v,\,v\rangle + 2\langle \varphi (u),\, \varphi (v) \rangle = \langle u,\,u\rangle + \langle v,\,v \rangle + 2\langle u, v\rangle,\\
+\langle \varphi(u+v),\, \varphi (u)+\varphi(v) \rangle & =\langle \varphi (u+v),\, \varphi (u)\rangle + \langle \varphi (u+v),\varphi (v) \rangle = \langle u,\,u\rangle + \langle v,\,v \rangle + 2\langle u, v\rangle
+\end{aligned}
+$$
+
+이므로 @lem-innerproduct_conserving_function 에 의해 $\varphi (u+v) = \varphi(u) + \varphi(v)$ 이다. 
+
+이제 $c\in \mathbb{R}$ 에 대해 $\varphi (cu) = c\varphi (u)$ 임을 보이자. $S=\{c\in \mathbb{R} : \varphi (cu) = c \varphi (u)\}$ 라고 하자. $0,\,1\in S$ 임은 자명하다. $0 = \varphi (u-u) = \varphi (u) + \varphi (-u)$ 이므로 $\varphi(-u) = -\varphi(u)$ 이다. 따라서 $-1\in S$ 이다. $c\in S$ 일 때 
+
+$$
+\begin{aligned}
+\varphi ((c+1)u) &=  \varphi (cu) + \varphi (u) = (c+1)\varphi(u), \\
+\varphi ((c-1)u) &= \varphi (cu) - \varphi (u) = (c-1)\varphi (u)
+\end{aligned}
+$$
+
+이므로 $\mathbb{Z}\subset S$ 이다. 이제 $\mathbb{Q}\subset S$ 임을 보이자. $c=m/n,\, m,\,n\in\mathbb{Z}$ 라고 하자. $n\varphi (m/n u) = \varphi (mu) = m\varphi (u)$ 이므로 $\varphi (m/n u) = (m/n)\varphi(u)$ 이다. 따라서 $\mathbb{Q}\subset S$ 이다. $\varphi$ 가 연속함수이며, $\mathbb{Q}$ 는 $\mathbb{R}$ 에 대해 조밀한 부분집합이고 모든 $c\in \mathbb{Q}$ 에 대해 $\varphi(cu)=c\varphi(u)$ 이므로 모든 $c\in \mathbb{R}$ 에 대해 $\varphi(cu)=c\varphi(u)$ 이다. (@Rudin1976, Chapter 4, Exercises 4) 
+
+이제 $\varphi$ 가 선형사상임을 보였다. $\varphi$ 가 내적을 보존하는 선형사상이므로 $\varphi$ 는 linear isometry 이다. $\square$
+
+:::
+
+</br>
+
+우리는 원점을 보존하는 isometry 는 linear isometry 라는 것을 알았다. 
+
+::: {#prp-factorization_of_isotropy}
+
+$\mathbb{R}^n \mapsto\mathbb{R}^n$ isometry 는  translation 과 linear isometry 의 합성으로 표현 할 수 있다. 
+
+:::
+
+::: {.proof}
+
+Isometry $f:\mathbb{R}^n \to \mathbb{R}^n$ 를 생각하자. $f(0)=a$ 일 때 $t_{-a}\circ f$ 를 생각하자. @prp-composition_of_isometries 에 의해 $t_{-a}\circ f$ 도 isometry 이며 원점을 보존하므로 $t_{-a}\circ f$ 는 linear isometry 이다. $\varphi = t_{-a}\circ f$ 라 하면 $f = t_{a}\circ \varphi$ 이므로 임의의 isometry 는 translation 과 linear isometry 의 합성이다. $\square$
+
+:::
+
+
+</br>
+
+::: {#exr-composition_of_isometries}
+
+$t_a$ 가 $a$ 만큼의 translation 이고 $\varphi,\, \psi$ 가 linear isometry 일 때 다음이 성립한다.
+
+&emsp; ($1$) $\varphi \circ \psi$ 도 linear isometry 이다.
+
+&emsp; ($2$) $t_a \circ t_b = t_{a+b}$ 이다.
+
+&emsp; ($3$) $\varphi \circ t_a = t_{\varphi (a)} \varphi$ 이다.
+
+:::
+
+::: {.solution}
+
+($1$) @prp-composition_of_isometries 에 의해 $\varphi \circ \psi$ 도 isometry 이며 $(\varphi \circ \psi)(0) = 0$ 이므로 linear isometry 이다.
+
+($2$) $(t_a\circ t_b)(x) = t_a(x+b)= x+a+b = t_{a+b}(x)$.
+
+($3$) $(\varphi \circ t_a)(x) = \varphi (x+a) = \varphi (x) + \varphi(a) = (t_{\varphi(a)} \circ \varphi) (x)$.
+
+:::
+
+
+</br>
+
+::: {#prp-group_of_isomeetries}
+
+$\mathbb{R}^n$ 에 대한 모든 isometry 의 집합은 함수 합성 연산에 대해 군이다.
+
+:::
+
+::: {.proof}
+
+$M_n$ 을 $\mathbb{R}^n$ 에서의 isometry 의 집합이라고 하자. $\mathbb{R}^n$ 에서의 translation 과 linear isometry 가 전단사임을 안다. 또한 합성도 isometry 임을 안다. $f=(t_a\circ \varphi)$ 일 때 $f^{-1} = \varphi^{-1}\circ t_{-a} \in M_n$ 이다. $\square$
+
+:::
+
+
+</br>
+
+### $M_n \mapsto O_n$ 준동형사상
+
+Isometry $f$ 는 translation $t_a$ 와 linear isomeetry $\varphi$ 의 합성으로 $f=t_a \circ \varphi$ 로 표현 할 수 있다. 이 때 $a=f(0)$ 으로 정해진다. $\mathbb{R}^n$ 에서의 linear isomeetry 의 집합을 $O_n$ 이라 하자. ($O_n$ 은 $n \times n$ 직교행렬의 집합과 동형이라는 것을 안다!!!). 선형대수학에서 배운 지식으로 우리는 이것을 쉽게 보일 수 있다.
+
+::: {#prp-linear_isometry_is_a_group}
+
+$\mathbb{R}^n$ 에서의 linear isometry 의 집합은 군이다.
+
+:::
+
+
+</br>
+
+::: {#prp-mn_to_on_homomorphism}
+
+$\pi : M_n \to O_n$ 을 $\pi (f) = t_{-f(0)}\circ f$ 로 정의할 때 다음이 성립한다. 
+
+&emsp; ($1$) $\pi \in \text{Hom}(M_n,\, O_n)$.
+
+&emsp; ($2$) $\ker (\pi)$ 는 $\mathbb{R}^n$ 에서의 translation 의 집합 $T_n$이다.
+
+&emsp; ($3$) $T_n \trianglelefteq M_n$ 이다.
+
+:::
+
+::: {.proof}
+
+($1$) $f\in M_n$ 이라면 어떤 $\varphi \in O_n$ 에 대해 $f = t_{f(0)}\circ \varphi$ 이므로 $\pi(f) = \varphi \in O_n$ 이다. $f,\,g\in M_n$ 이며 $\pi(f) = \varphi,\, \pi(g)= \psi$ 라면, 
+
+$$
+\pi (f \circ g)= \pi (t_{f(0)} \circ \varphi\circ t_{g(0)} \circ \psi) = \pi (t_{f(0)} \circ t_{\varphi (g(0))} \circ \varphi  \circ \psi ) = \varphi \circ \psi = \pi (f)\circ \pi (g)
+$$
+
+이므로 $\pi$ 는 준동형사상이다.
+
+($2$) ($3$) 은 쉽게 보일 수 있다. $\square$
+:::
+
+</br>
+
+### Isometry 에 의한 좌표의 변경
+
+같은 공간을 기술하는데 여러개의 좌표계를 사용 할 수 있으며, 좌표 변환에서 거리를 보존하는 좌표 변환은 매우 중요하다. Isometry $\eta\in M_n$ 은 거리를 보존하는 좌표 변환에 사용 할 수 있다. $P$ 를 변환 전의 좌표계 $P'$ 을 변환 전의 좌표계라고 하자. 즉 $\boldsymbol{x},\,\boldsymbol{y} \in \mathbb{R}^n$ 에 대해 $\boldsymbol{x}',\,\boldsymbol{y}'\in \mathbb{R}^n$ 을 $\boldsymbol{x}'=\eta(\boldsymbol{x}),\, \boldsymbol{y}'=\eta(\boldsymbol{y})$ 라고 하자. 이 때 $f\in M_n$ 에 의해 $f(\boldsymbol{p})=\boldsymbol{q}$ 라면 변환된 좌표계에서는 어떻게 될까? $\boldsymbol{p}=\eta^{-1}(\boldsymbol{p}')$, $\boldsymbol{q} = \eta^{-1}(\boldsymbol{q}')$ 에 대해 $f'(\boldsymbol{p}') = \boldsymbol{q}' = (\eta \circ f)(\boldsymbol{p})$ 이어야 하므로, $f' \circ \eta= \eta \circ f$ 이며, 따라서
+
+$$
+f' = \eta \circ f \circ \eta^{-1}
+$$

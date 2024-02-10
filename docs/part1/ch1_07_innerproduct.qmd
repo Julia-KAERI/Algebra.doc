@@ -640,7 +640,7 @@ $$
 \phi ((c-1)u, v)= \phi (cu-u, v)= \phi (cu, v) + \phi (-u, v)= (c-1)\phi (u, v)
 $$
 
-이로부터 $\mathbb{Z}\subset C$ 임을 안다. $\mathbb{Q}\in S$ 임을 보이자. $m, n\in \mathbb{Z},\, n\ne 0$ 에 대해 $c=m/n$ 이라 하자. 
+이로부터 $\mathbb{Z}\subset C$ 임을 안다. $\mathbb{Q}\subset S$ 임을 보이자. $m, n\in \mathbb{Z},\, n\ne 0$ 에 대해 $c=m/n$ 이라 하자. 
 
 $$
 n\phi (cu, v) = \phi (ncu, v)= \phi (mu, v)= m \phi (u, v)= cn \phi(u, v)

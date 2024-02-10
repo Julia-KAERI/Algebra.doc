@@ -143,7 +143,7 @@ $$
 
 ::: {#prp-polar_decomposition2}
 
-행렬 $\boldsymbol{A}$ 에 대해 어떤 isometry $\boldsymbol{S}$ 가 존재하여 $\boldsymbol{A} =\boldsymbol{S}\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 가 된다.
+행렬 $\boldsymbol{A}$ 에 대해 어떤 linear isometry $\boldsymbol{S}$ 가 존재하여 $\boldsymbol{A} =\boldsymbol{S}\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 가 된다.
 
 :::
 
@@ -185,7 +185,7 @@ $$
 \boldsymbol{S}_1 = \begin{bmatrix} |& &|\\ \dfrac{1}{\lambda_1}\boldsymbol{Av}_1 & \cdots & \dfrac{1}{\lambda_n}\boldsymbol{v}_m \\ |& &| \end{bmatrix} \begin{bmatrix} -&  \boldsymbol{v}^\ast_1 & -\\ & \vdots &  \\  - &  \boldsymbol{v}^\ast_m & - \end{bmatrix}
 $$
 
-이 때 $\boldsymbol{S}_1 \boldsymbol{v}_i = \dfrac{1}{\lambda_i}\boldsymbol{Av}_i$ 이며 $\boldsymbol{S}_1$ 은 isometry 이다.
+이 때 $\boldsymbol{S}_1 \boldsymbol{v}_i = \dfrac{1}{\lambda_i}\boldsymbol{Av}_i$ 이며 $\boldsymbol{S}_1$ 은 linear isometry 이다.
 
 또한 $\{\boldsymbol{v}_{m+1},\ldots,\boldsymbol{v}_n\}$ 은 $\left(\text{im} \left(\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}\right)\right)^\perp$  의 기저이다. $B$ 는 $\text{im} (\boldsymbol{A})$ 의 기저이므로 이 기저를 확장하여 원래 벡터공간의 기저를 구성 할 수 있다. 기저에 추가된 벡터를 $\{\boldsymbol{u}_{m+1},\ldots, \boldsymbol{u}_n\}$ 이라 하고, $\boldsymbol{S}_2$ 는
 
@@ -193,7 +193,7 @@ $$
 \boldsymbol{S}_2 = \begin{bmatrix} |& &|\\ \boldsymbol{u}_{m+1} & \cdots & \boldsymbol{u}_n \\ |& &| \end{bmatrix} \begin{bmatrix} -&  \boldsymbol{v}^\ast_{m+1} & -\\ & \vdots &  \\  - &  \boldsymbol{v}^\ast_n & - \end{bmatrix}
 $$
 
-이라 하자. 이제 블록대각행렬 $\boldsymbol{S}=\begin{bmatrix} \boldsymbol{S}_1 & 0 \\ 0 &\boldsymbol{S}_2 \end{bmatrix}$ 을 생각하면 $\boldsymbol{S}_1,\,\boldsymbol{S}_2$ 가 isometry 이므로 $\boldsymbol{S}$ 도 isometry 이며, $\boldsymbol{v}_i \not \in \ker \sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 이면,
+이라 하자. 이제 블록대각행렬 $\boldsymbol{S}=\begin{bmatrix} \boldsymbol{S}_1 & 0 \\ 0 &\boldsymbol{S}_2 \end{bmatrix}$ 을 생각하면 $\boldsymbol{S}_1,\,\boldsymbol{S}_2$ 가 linear isometry 이므로 $\boldsymbol{S}$ 도 linear isometry 이며, $\boldsymbol{v}_i \not \in \ker \sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 이면,
 
 $$
 \boldsymbol{S}\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}\boldsymbol{v}_i = \boldsymbol{S} \lambda_i \boldsymbol{v}_i = \boldsymbol{Av}_i
@@ -211,7 +211,7 @@ $$
 
 #### 극분해
 
-이렇게 임의의 행렬은 isometry 와 positive semidefinite 행렬의 곱으로 표현 될 수 있으며, 이것을 **극분해(polar decomposition)** 라고 한다.
+이렇게 임의의 행렬은 linear isometry 와 positive semidefinite 행렬의 곱으로 표현 될 수 있으며, 이것을 **극분해(polar decomposition)** 라고 한다.
 
 :::
 :::
@@ -233,7 +233,7 @@ $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\sqrt{\bol
 
 ::: {#thm-singular_value_decomposition}
 
-$\boldsymbol{A}\in \in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 특이값으로 $s_1,\ldots,\,s_n$ 을 가질 때 어떤 isometry $\boldsymbol{U},\,\boldsymbol{V} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 와 대각행렬 $\boldsymbol{D} \in\mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해
+$\boldsymbol{A}\in \in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 특이값으로 $s_1,\ldots,\,s_n$ 을 가질 때 어떤 linear isometry $\boldsymbol{U},\,\boldsymbol{V} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 와 대각행렬 $\boldsymbol{D} \in\mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해
 $$
 \boldsymbol{A}=\boldsymbol{UDV}^\ast
 $$
@@ -244,13 +244,13 @@ $$
 
 ::: {.proof} 
 
-극분해에 의해 $\boldsymbol{A}=\boldsymbol{S}\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 이다. $\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}$ 는 positive semidifinite 이므로 어떤 isometry $\boldsymbol{V}$ 에 의해 $\boldsymbol{V}^\ast \sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}\boldsymbol{V}=\boldsymbol{D}$ 로 대각화 된다. 따라서,
+극분해에 의해 $\boldsymbol{A}=\boldsymbol{S}\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 이다. $\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}$ 는 positive semidifinite 이므로 어떤 linear isometry $\boldsymbol{V}$ 에 의해 $\boldsymbol{V}^\ast \sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}\boldsymbol{V}=\boldsymbol{D}$ 로 대각화 된다. 따라서,
 
 $$
 \boldsymbol{A} = \boldsymbol{S}\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}} = \boldsymbol{S}\boldsymbol{V}\boldsymbol{D}\boldsymbol{V}^\ast =\boldsymbol{UDV}^\ast \,\qquad \text{where } \boldsymbol{U}=\boldsymbol{SV}
 $$
 
-이다. 두 isometry 의 곱은 isometry 이므로 $\boldsymbol{U}$ 도 isometry 이다. $\square$
+이다. 두 linear isometry 의 곱은 linear isometry 이므로 $\boldsymbol{U}$ 도 linear isometry 이다. $\square$
 
 :::
 
