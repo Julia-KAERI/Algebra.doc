@@ -1,0 +1,8 @@
+---
+title: "특이값 분해"
+number-sections: true
+number-depth : 3
+crossref:
+  chapters: true
+---
+

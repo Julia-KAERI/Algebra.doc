@@ -27,7 +27,9 @@ $\mathbb{F}$-벡터공간 $V$ 에서 정의된 $\phi : V \times V \to \mathbb{F}
 
 [$x,\,y \in \mathbb{R}$ 에 대해 복소수 $z=x+iy$ 의 켤레복소수 $\overline{z}$ 는 $x-iy$ 이다. 즉 $\overline{x+iy}= x-iy$ 이다.]{.aside}
 
-이것을 만족하는 함수는 어떤 것이든 내적이 될 수 있으며, 내적이 정의된 벡터공간을 **내적 벡터 공간(Inner product vector space)** 혹은 **내적 공간(Inner product space)**라 한다. 필드를 명시할 경우 $\mathbb{F}$-**내적 벡터 공간** 이라고 한다.흔히 두 백터의 내적을 $\langle u,\,v\rangle$ 로 쓰며 그 정의는 위의 $\phi$ 함수에 대해 $\langle u,\, v\rangle = \phi (u,\,v)$ 이다. 
+이것을 만족하는 함수는 어떤 것이든 내적이 될 수 있으며, 내적이 정의된 벡터공간을 **내적 벡터 공간(Inner product vector space)** 혹은 **내적 공간(Inner product space)**라 한다. 필드를 명시할 경우 $\mathbb{F}$-**내적 벡터 공간** 이라고 한다.흔히 두 백터의 내적을 $\langle u,\,v\rangle$ 로 쓰며 그 정의는 위의 $\phi$ 함수에 대해 $\langle u,\, v\rangle = \phi (u,\,v)$ 이다.$^\ast$ 
+
+[$^\ast$ 물리학, 특히 양자역학에서는 소위 디렉 브라켓 기호를 사용하여 $\langle u,\, v\rangle$ 을 $\langle v\,|\,u\rangle$ 로 표기한다. $u,\,v$ 의 순서가 바뀌거 중간에 $\mid$ 가 삽입되는 것에 주의하라. ]{.aside}  
 :::
 :::
 
@@ -66,8 +68,16 @@ $\mathbb{R}^n$ 에서 $x = (x_1,\ldots,\,x_n)$, $y=(y_1,\ldots,\,y_n)\in \mathbb
 
 $[0,\,1]$ 구간에서 연속인 실함수로 이루어진 벡터공간에서의 내적을 아래와 같이 정의 할 수 있다.
 $$
-\langle f,\,g \rangle = \displaystyle \int_0^1 f(x)g(x)\, dx
+\langle f,\,g \rangle = \displaystyle \int_0^1 f(x)g(x)\, dx.
 $$
+
+복소공간에서는 다음과 같이 정의할 수 있다.
+
+$$
+\langle f,\,g \rangle = \displaystyle \int_0^1 \overline{f(x)}g(x)\, dx.
+$$
+
+
 :::
 
 
@@ -515,8 +525,6 @@ $$
 
 <br>
 
-
-
 ::: {#thm-Reisz_representaion_theorem}
 ### Riesz 의 표현 정리 (Reisz Representation theorem)
 
@@ -526,7 +534,7 @@ $$
 \varphi (v) = \langle v,\, u\rangle
 $$
 
-이다.
+이다. 또한 선형 범함수를 내적으로 표현할 수 있도록 해 주는 벡터 $u$ 는 유일하다. 
 :::
 
 ::: {.proof}
@@ -540,7 +548,7 @@ $$
 \end{aligned}
 $$
 
-이므로, $u = \sum_i \overline{\varphi (e_i)}e_i$ 로 잡으면 된다. $\square$
+이므로, $u = \sum_i \overline{\varphi (e_i)}e_i$ 로 잡으면 된다. 이제 유일성을 보이자. $\phi (v) = \langle v,\, u\rangle = \langle v,\,u'\rangle$ 이라 하자. 모든 $v\in V$ 에 대해 $\langle v, u-u'\rangle =0$ 이므로 $v=u-u'$ 을 생각하면 $u=u'$ 이어야 한다. $\square$
 
 :::
 

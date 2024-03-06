@@ -21,7 +21,8 @@ book:
         - docs/part1/ch1_07_innerproduct.qmd
         - docs/part1/ch1_08_operators_on_innerproduct_space.qmd
         - docs/part1/ch1_09_spectrum_theorem.qmd
-        - docs/part1/ch1_10_svd.qmd
+        - docs/part1/ch1_10_positive_definite_matrix.qmd
+        - docs/part1/ch1_11_svd.qmd
     - part: docs/part2/part2.qmd
       chapters: 
         - docs/part2/ch2_01_groups.qmd

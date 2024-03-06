@@ -1,5 +1,5 @@
 ---
-title: "특이값 분해"
+title: "Positive Definite Matrix"
 number-sections: true
 number-depth : 3
 crossref:
@@ -40,11 +40,11 @@ $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 �
 ::: 
 
 ::: {.proof}
-($1 \implies 2$) $\boldsymbol{A}$ 가 positive definite 이므로 정의에 의해 에르미트 행렬이다. $\lambda$ 가 $\boldsymbol{A}$ 의 고유값이고 $\boldsymbol{v}$ 가 $\lambda$ 에 대한 고유벡터 일 때, $0 \le \langle \boldsymbol{Av},\, \boldsymbol{v}\rangle = \lambda \|\boldsymbol{v}\|^2$ 이므로 $\lambda \ge 0$ 이다.
+($1 \implies 2$) $\boldsymbol{A}$ 가 positive semidefinite 이므로 정의에 의해 에르미트 행렬이다. $\lambda$ 가 $\boldsymbol{A}$ 의 고유값이고 $\boldsymbol{v}$ 가 $\lambda$ 에 대한 고유벡터 일 때, $0 \le \langle \boldsymbol{Av},\, \boldsymbol{v}\rangle = \lambda \|\boldsymbol{v}\|^2$ 이므로 $\lambda \ge 0$ 이다.
 
-($2 \implies 3$) 스펙트럼 정리에 의해 $\boldsymbol{P}^\ast\boldsymbol{AP}$ 를 대각행렬 $\boldsymbol{D}$ 로 하는 유니타리 행렬 $\boldsymbol{P}$ 가 존재한다. $\boldsymbol{A}$ 의 고유값 $\lambda_1,\ldots,\,\lambda_n$ 에 대해 $D_{ij} = \lambda_{i}\delta_{ij}$ 일 때, 대각행렬 $\boldsymbol{T}$ 를 $T_{ij}= \sqrt{\lambda_{i}}\delta_{ij}$ 라 하자.  $\boldsymbol{R} = \boldsymbol{P}^\ast\boldsymbol{TP}$ 라 하면 $\boldsymbol{R}^2 = \boldsymbol{A}$ 이다.
+($2 \implies 3$) 스펙트럼 정리에 의해 $\boldsymbol{U}^\ast\boldsymbol{AU}$ 를 대각행렬 $\boldsymbol{D}$ 로 하는 유니타리 행렬 $\boldsymbol{U}$ 가 존재한다. $\boldsymbol{A}$ 의 고유값 $\lambda_1,\ldots,\,\lambda_n$ 에 대해 $D_{ij} = \lambda_{i}\delta_{ij}$ 일 때, 대각행렬 $\boldsymbol{T}$ 를 $T_{ij}= \sqrt{\lambda_{i}}\delta_{ij}$ 라 하자.  $\boldsymbol{R} = \boldsymbol{P}^\ast\boldsymbol{TP}$ 라 하면 $\boldsymbol{R}^2 = \boldsymbol{A}$ 이다.
 
-($3 \implies 4$) 위에서 정의한 $\boldsymbol{R}$ 은 $\boldsymbol{R}^\ast = \boldsymbol{P}^\ast \boldsymbol{AU} = \boldsymbol{R}$ 이므로 에르미트 행렬이다.
+($3 \implies 4$) 위에서 정의한 $\boldsymbol{R}$ 은 $\boldsymbol{R}^\ast = \boldsymbol{U}^\ast \boldsymbol{AU} = \boldsymbol{R}$ 이므로 에르미트 행렬이다.
 
 ($4 \implies 5$) 앞서 정의한 $\boldsymbol{R}$ 이다.
 
@@ -219,7 +219,7 @@ $$
 
 </br>
 
-## 특이값 분해 (Singular value decomposition, SVD)
+## 연산자에 대한 특이값 분해 (Singular value decomposition, SVD)
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-singular_value}
@@ -233,7 +233,7 @@ $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\sqrt{\bol
 
 ::: {#thm-singular_value_decomposition}
 
-$\boldsymbol{A}\in \in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 특이값으로 $s_1,\ldots,\,s_n$ 을 가질 때 어떤 linear isometry $\boldsymbol{U},\,\boldsymbol{V} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 와 대각행렬 $\boldsymbol{D} \in\mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해
+$\boldsymbol{A}\in  \mathcal{M}_{n \times n}(\mathbb{F})$ 가 특이값으로 $s_1,\ldots,\,s_n$ 을 가질 때 어떤 linear isometry $\boldsymbol{U},\,\boldsymbol{V} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 와 대각행렬 $\boldsymbol{D} \in\mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해
 $$
 \boldsymbol{A}=\boldsymbol{UDV}^\ast
 $$

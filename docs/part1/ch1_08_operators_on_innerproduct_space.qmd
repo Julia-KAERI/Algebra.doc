@@ -8,12 +8,86 @@ crossref:
 
 </br>
 
-## Adjoint matrix
+## Adjoint 연산자와 행렬
 
-### Adjoint matrix {#sec-adjoint_matrix}
+### Adjoint operator {#sec-adjoint_operator}
+
+$L\in \mathcal{L}(U,\,V)$ 에 대해 다음의 성질을 만족하는 $L^\ast : V \to U$ 를 $L$ 에 대한 adjoint function 이라고 한다.
+
+$$
+\langle L (u),\,v \rangle = \langle u,\, L^\ast (v) \rangle.
+$$
+
+우선 고정된 $v$ 에 대해 $\phi (u) = \langle Lu,\,v\rangle$ 는 선형 범함수(@exr-adjoint_operator_1) 이며 @thm-Reisz_representaion_theorem 에 의해 $\phi(u) = \langle u, w\rangle$ 인 $w\in U$ 가 유일하게 존재한다. 이제 함수 $L^\ast : V \to U$ 를 $L^\ast( v)= w$ 인 함수로 생각 할 수 있다. (뭔가 이상한가? 이상해야 하는데..) 이 $L^\ast$ 를 $L$ 에 대한 adjoint function 이라고 한다.
+
+::: {#exr-adjoint_operator_1}
+
+$L\in \mathcal{L}(U, V)$ 일 때 고정된 $v\in V$ 에 대해 $\phi (u) = \langle L(u),\,v\rangle$ 이 선형범함수임을 보여라.
+
+:::
+
+</br>
+
+::: {#prp-adjoint_transformation}
+
+위에서 정의된 $L\in \mathcal{L}(U,\,V)$ 에 대한 adjoint function $L^\ast$ 는 선형사상이다.
+
+:::
+
+::: {.proof}
+
+$$
+\begin{aligned}
+\langle u,\, L^\ast (v_1+cv_2)\rangle &= \langle L(u), v_1+cv_2\rangle \\
+&= \langle L(u),\,v_1\rangle + \overline{c}\langle L(u),\,v_2\rangle  \\
+&=\langle u,\, L^\ast(v_1) + c L^\ast(v_2)\rangle &\square 
+\end{aligned}
+$$
+
+:::
+
+
+즉 $L\in \mathcal{L}(U, V)$ 이면 $L^\ast \in \mathcal{L}(U, V)$ 이다. 이제 $L^\ast$ 를 $L$ 에 대한 adjoint transformation 이라고 한다. 여기서 한가지 짚어야 할 것이 있다. 우리는 리츠의 표현정리(@thm-Reisz_representaion_theorem) 를 이용하였는데 이 정리는 유한차원 벡터공간에서만 성립한다. 실제로 adjoint 는 유한차원 벡터공간에서만 유일하게 정해지며, 무한차원벡터공간에서는 유일하지 않을 수 있다$^1$.[$^1$ K. Hoffman, R. Kunze, *Linear Algebra*, 2nd Ed. pp 295]{.aside} 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-adjoint_operator}
+::: {#def-adjoint}
+
+#### Adjoint
+
+내적벡터공간 $U,\,V$ 에서 정의된 $L\in \mathcal{L}(U,\,V)$ 에 대해 $\langle L(u),\, v\rangle = \langle u,\,L^\ast(v)\rangle$ 을 만족하는 $L^\ast \in \mathcal{L}(V,\,U)$ 가 존재하며 $L^\ast$ 를 $L$ 의 **adjoint** 라고 한다. 
+
+:::
+:::
+
+</br>
+
+::: {#prp-adjoint_matrix}
+
+$L\in \mathcal{L}(U,\,V)$ 이며 $\mathcal{B}_U=(e_1,\ldots,\,e_n)$, $\mathcal{B}_V=(f_1,\ldots,\,f_n\)$ 이 각각 $U,\,V$ 에서의 정규직교기저라고 하자. $\boldsymbol{A} = [L]_{\mathcal{B}_U,\mathcal{B}_V}$, $\boldsymbol{A}^\ast = [L^\ast]_{\mathcal{B}_V,\mathcal{B}_U}$ 라면 다음이 성립한다.
+
+$$
+(\boldsymbol{A}^\ast)_{ij} = \overline{(\boldsymbol{A})_{ji}}.
+$$
+
+:::
+
+::: {.proof}
+
+$$
+A_{ji}=\langle L(e_i),\, f_j\rangle = \langle e_i,\, L^\ast(f_j)\rangle = \overline{\langle L^\ast(f_j),\, e_i\rangle}=\overline{(\boldsymbol{A}^\ast)_{ij}} \qquad \square
+$$
+
+:::
+
+
+</br>
+
+따라서 행렬 $\boldsymbol{A}$ 에 대한 adjoint 를 adjoint matrix 라고 하여 아래와 같이 정의 할 수 있다.
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-adjoint_matrix}
 
 #### Adjoint matrix
 
@@ -57,43 +131,46 @@ $$
 
 다음이 성립한다.
 
-&emsp; ($1$) $\boldsymbol{A},\, \boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 $(\boldsymbol{A}+\boldsymbol{B})^\ast = (\boldsymbol{A}^\ast + \boldsymbol{B}^\ast)$ 이다.
+&emsp; ($1$) $S,\, T\in \mathcal{L}(U,\,V)$ 일 때 $(S+T)^\ast = S^\ast + T^\ast$ 이다.
 
-&emsp; ($2$) $\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$, $\lambda \in \mathbb{F}$ 일 때 $(\lambda \boldsymbol{A})^\ast = \overline{\lambda}\boldsymbol{A}^\ast$.
+&emsp; ($2$) $L \in \mathcal{L}(U,\,V)$, $\lambda \in \mathbb{F}$ 일 때 $(\lambda L)^\ast = \overline{\lambda}L^\ast$.
 
-&emsp; ($3$) $(\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}$.
+&emsp; ($3$) $L \in \mathcal{L}(U,\,V)$ 일 때 $(L^\ast)^\ast = L$.
 
-&emsp; ($4$) $\boldsymbol{I}^\ast = \boldsymbol{A}$.
+&emsp; ($4$) 항등연산자 $I\in \mathcal{L}(V)$ 에 대해 $I^\ast =I$.
 
-&emsp; ($5$) $\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F}),\, \boldsymbol{B}\in \mathcal{M}_{n \times l}(\mathbb{F})$ 일 때 $(\boldsymbol{AB})^\ast = \boldsymbol{B}^\ast \boldsymbol{A}^\ast$ 이다.
+&emsp; ($5$) $S\in \mathcal{L}(U, V),\, T\in \mathcal{L}(V,\,W)$ 에 대해 $(TS)^\ast = S^\ast T^\ast$ 이다.
 
 :::
 
 ::: {.proof}
 
 ($1$) 에서 ($4$) 는 생략한다. 
-$$
-(\boldsymbol{AB}^{\ast})_{ij} =\overline{\boldsymbol{AB}_{ji}} = \sum_k \overline{A_{jk}}\overline{B_{ki}}= \sum_k (\boldsymbol{A}^\ast)_{kj}(\boldsymbol{B}^\ast)_{ik} = (\boldsymbol{B}^\ast \boldsymbol{A}^\ast)_{ij}
-$$ 
 
-이므로  $(\boldsymbol{AB})^\ast = \boldsymbol{B}^\ast \boldsymbol{A}^\ast$ 이다. $\square$
+$\langle TS(u),\,w\rangle = \langle u,\, (TS)^\ast (w)\rangle$ 이다. 또한
+$$
+\langle TS(u),\,w\rangle = \langle S(u),\, T^\ast(w)\rangle = \langle u,\, S^\ast T^\ast (w)\rangle
+$$
+
+이므로 $(TS)^\ast = S^\ast T^\ast$ 이다. $\square$
+
 
 :::
 
 </br>
 
 ::: {#thm-kernel_image_of_adjoint_operator}
-#### Adjoint metrix 의 kernel 과 치역
+#### Adjoint 의 kernel 과 치역
 
-$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
+$L\in \mathcal{L}(U,\,V)$ 일 때 다음이 성립한다.
 
-&emsp; ($1$) $\ker (\boldsymbol{A}^\ast) = (\text{im} (\boldsymbol{A}))^\perp$
+&emsp; ($1$) $\ker (L^\ast) = (\text{im} (L))^\perp$
 
-&emsp; ($2$) $\text{im} (\boldsymbol{A}^\ast) = (\ker (\boldsymbol{A}))^\perp$,
+&emsp; ($2$) $\text{im} (L^\ast) = (\ker (L))^\perp$,
 
-&emsp; ($3$) $\ker (\boldsymbol{A}) = (\text{im}\, (\boldsymbol{A}^\ast))^\perp$,
+&emsp; ($3$) $\ker (L) = (\text{im}\, (L^\ast))^\perp$,
 
-&emsp; ($4$) $\text{im} (\boldsymbol{A}) = (\ker (\boldsymbol{A}^\ast))^\perp$.
+&emsp; ($4$) $\text{im} (L) = (\ker (L^\ast))^\perp$.
 :::
 
 ::: {.proof}
@@ -101,16 +178,16 @@ $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성�
 ($1$) 다음과 같이 보일 수 있다.
 $$
 \begin{aligned}
-\boldsymbol{v}\in \ker (\boldsymbol{A}^\ast) & \iff \boldsymbol{A}^\ast\boldsymbol{v}=\boldsymbol{0}  \\
-&\iff \forall\boldsymbol{u}\in \mathcal{M}_{n}(\mathbb{F}),\, \langle \boldsymbol{u},\boldsymbol{A}^\ast\boldsymbol{v}\rangle = 0 \\
-&\iff \forall\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{F}), \langle \boldsymbol{Au},\boldsymbol{v}\rangle = 0 \\
-&\iff \boldsymbol{v} \in \left(\text{im}(\boldsymbol{A})\right)^\perp
+v\in \ker (L^\ast) & \iff L^\ast v=0_V  \\
+&\iff \forall u\in U,\, \langle u,L^\ast(v)\rangle = 0 \\
+&\iff \forall u\in U, \langle L(u),v\rangle = 0 \\
+&\iff v \in \left(\text{im}(L)\right)^\perp
 \end{aligned}
 $$
 
-($2$) ($1$) 의 결과에 $\boldsymbol{A}$ 대신 $\boldsymbol{A}^\ast$ 를 넣으면 $\ker(\boldsymbol{A}) = (\text{im}(\boldsymbol{A}^\ast))^\perp$ 이다. @cor-dimension_relation_of_orthogonal_complement 에서 부분공간 $U$ 에 대해 $(U^\perp)^\perp = U$ 임을 이용하면 $2$ 를 얻는다. 
+($2$) ($1$) 의 결과에 $L$ 대신 $L^\ast$ 를 넣으면 $\ker(L) = (\text{im}(L^\ast))^\perp$ 이다. @cor-dimension_relation_of_orthogonal_complement 에서 부분공간 $U$ 에 대해 $(U^\perp)^\perp = U$ 임을 이용하면 $2$ 를 얻는다. 
 
-($3$), ($4$) 는 ($1$), ($2$) 의 결과에서 $\boldsymbol{A}$ 대신에 $\boldsymbol{A}^\ast$ 를 넣으면 보일 수 있다. $\square$ 
+($3$), ($4$) 는 ($1$), ($2$) 의 결과에서 $L$ 대신에 $L^\ast$ 를 넣으면 보일 수 있다. $\square$ 
 
 :::
 
@@ -121,10 +198,9 @@ $$
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-hermitian_matrix}
 
-#### 에르미트 행렬과 대칭행렬
+#### 에르미트 연산자, 에르미트 행렬, 대칭행렬
 
-
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\boldsymbol{A}^\ast = \boldsymbol{A}$ 이면 이 행렬을 **에르미트 행렬(Hermitian matrix)** 이라 한다. 특별히 $\mathbb{F}=\mathbb{R}$ 일 경우에는 **대칭행렬 (Symmetric matrix)** 이라 한다.  
+$L\in \mathcal{L}(V)$ 에 대해 $L^\ast = L$ 일 때 $L$ 을 **에르미트 연산자(hermitian operator)** 혹은 **self-adjoint operator** 라고 한다. $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\boldsymbol{A}^\ast = \boldsymbol{A}$ 이면 이 행렬을 **에르미트 행렬(Hermitian matrix)** 혹은 **self-adjoint matrix** 이라 한다. 특별히 $\mathbb{F}=\mathbb{R}$ 일 경우에는 **대칭행렬 (Symmetric matrix)** 이라 한다.  
 
 :::
 :::
@@ -137,11 +213,11 @@ $\boldsymbol{A}$ 가 에르미트 행렬일 경우 $(\boldsymbol{A}^\ast)_{ij} =
 
 ::: {#prp-peroperties_hermitian_operator}
 
-#### 에르미트 행렬의 성질
+#### 에르미트 연산자의 성질
 
-에르미트 행렬 $\boldsymbol{A}$ 에 대해 대해 다음이 성립한다.
+에르미트 연산자 $L \in \mathcal{L}(V)$ 에 대해 대해 다음이 성립한다.
 
-&emsp; ($1$) $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{Au}\rangle$ 이다.
+&emsp; ($1$) $\langle L(v_1),\, v_2\rangle = \langle v_1,\, L(v_2)\rangle$ 이다.
 
 &emsp; ($2$) 고유값은 항상 실수이다.
 
@@ -150,23 +226,23 @@ $\boldsymbol{A}$ 가 에르미트 행렬일 경우 $(\boldsymbol{A}^\ast)_{ij} =
 
 ::: {.proof}
 
-($1$) $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{Au}\rangle$.
+($1$) $\langle L(v_1),\, v_2\rangle = \langle v_1,\, L^\ast (v_2) \rangle = \langle v_1,\, L(v_2)\rangle$.
 
 
-($2$) 고유벡터 $\boldsymbol{u}\in \mathcal{M}_{n}(\mathbb{F})$ 에 대한 고유값을 $\lambda$ 라 하자. 
+($2$) 고유벡터 $v\in V$ 에 대한 고유값을 $\lambda$ 라 하자. 
 
 $$
-\lambda \|\boldsymbol{u}\|^2 = \lambda \langle \boldsymbol{u},\, \boldsymbol{u}\rangle  = \langle \boldsymbol{Au},\, \boldsymbol{u}\rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{u} \rangle = \langle \boldsymbol{u},\, \boldsymbol{Au} \rangle = \overline{\lambda}\|\boldsymbol{u}\|^2\,.
+\lambda \|v\|^2 = \lambda \langle v,\, v\rangle  = \langle L(v),\, v\rangle = \langle v,\, L^\ast(v) \rangle = \langle v,\, L(v) \rangle = \overline{\lambda}\|v\|^2\,.
 $$
 이므로 $\lambda = \overline{\lambda}$ 이다. 즉 $\lambda$ 는 실수이다.
 
-($3$) $\lambda_1,\,\lambda_2$ 가 서로 다른 고유벡터이며 $\boldsymbol{u}_1,\,\boldsymbol{u}_2$ 를 각각에 대한 고유벡터라 하자. 에르미트 행렬의 고유값은 항상 실수이므로 $\overline{\lambda_2}=\lambda_2$ 이다.
+($3$) $\lambda_1,\,\lambda_2$ 가 서로 다른 고유벡터이며 $v_1,\,v_2$ 를 각각에 대한 고유벡터라 하자. 에르미트 행렬의 고유값은 항상 실수이므로 $\overline{\lambda_2}=\lambda_2$ 이다.
 
 $$
 \begin{aligned}
-&\lambda_1 \langle \boldsymbol{u}_1,\, \boldsymbol{u}_2\rangle = \langle \boldsymbol{Au}_1,\,\boldsymbol{u}_2\rangle = \langle \boldsymbol{u}_1,\, \boldsymbol{A}^\ast \boldsymbol{u}_2 \rangle = \langle \boldsymbol{u}_1,\,\boldsymbol{Au}_2\rangle  = \overline{\lambda_2} \langle \boldsymbol{u}_1,\,\boldsymbol{u}_2\rangle  = \lambda_2 \langle \boldsymbol{u}_1,\,\boldsymbol{u}_2 \rangle \\
-\implies & (\lambda_1-\lambda_2) \langle \boldsymbol{u}_1,\, \boldsymbol{u}_2\rangle   = 0 \\
-\implies & \langle \boldsymbol{u}_1,\,\boldsymbol{u}_2 \rangle = 0 \qquad \square
+&\lambda_1 \langle v_1,\, v_2\rangle = \langle L(v_1),\,v_2\rangle = \langle v_1,\,L(v_2)\rangle  = \overline{\lambda_2} \langle v_1,\,v_2\rangle  = \lambda_2 \langle v_1,\,v_2 \rangle \\
+\implies & (\lambda_1-\lambda_2) \langle v_1,\, v_2\rangle   = 0 \\
+\implies & \langle v_1,\,v_2 \rangle = 0 \qquad \square
 \end{aligned}
 $$
 
@@ -177,35 +253,35 @@ $$
 
 ::: {#prp-hermite_tvv}
 
-복소연산자 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음 두 명제는 동치이다.
+복소내적벡터공간 $U$ 에서 정의된 연산자 $L\in \mathcal{L}(U)$ 에 대해 다음 두 명제는 동치이다.
 
-&emsp; ($1$) 임의의 $\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle$ 은 실수이다.
+&emsp; ($1$) 임의의 $u\in U$ 에 대해 $\langle L(u),\, u\rangle$ 은 실수이다.
 
-&emsp; ($2$) $\boldsymbol{A}$ 는 에르미트 행렬이다.
+&emsp; ($2$) $L$ 는 에르미트 연산자이다.
 
 :::
 
 
 ::: {.proof}
 
-($1\implies 2$) $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle$ 이 실수이면 $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle = \overline{\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle}$ 이다. 따라서,
+($1\implies 2$) $\langle L(u),\, u\rangle$ 이 실수이면 $\langle L(u),\, u\rangle = \overline{\langle L(u),\, u\rangle }$ 이다. 따라서,
 
 $$
 \begin{aligned}
-0 &= \langle \boldsymbol{Au},\, \boldsymbol{u}\rangle - \overline{\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle} = \langle \boldsymbol{Au},\, \boldsymbol{u}\rangle - \langle \boldsymbol{u},\, \boldsymbol{Au}\rangle = \langle \boldsymbol{Au},\, \boldsymbol{u}\rangle - \langle \boldsymbol{A}^\ast\boldsymbol{u},\, \boldsymbol{u}\rangle \\
-&= \langle (\boldsymbol{A}-\boldsymbol{A}^\ast)\boldsymbol{u},\, \boldsymbol{u}\rangle
+0 &= \langle L(u),\, u\rangle - \overline{\langle L(u),\, u\rangle } = \langle L(u),\, u\rangle - \langle u,\, L(u)\rangle = \langle L(u),\, u\rangle - \langle L^\ast(u),\, u\rangle \\
+&= \langle (L-L^\ast)(u),\, u\rangle
 \end{aligned}
 $$
 
-임을 안다. @exr-operator_orthogonal_to_every_vector 로 부터 $\boldsymbol{A}=\boldsymbol{A}^\ast$ 임을 알 수 있다. 즉 $\boldsymbol{A}$ 는 에르미트 행렬이다.
+임을 안다. @exr-operator_orthogonal_to_every_vector 로 부터 $L=L^\ast$ 임을 알 수 있다. 즉 $L$ 는 에르미트 연산자이다.
  
-($2 \implies 1$) $\boldsymbol{A}$ 가 에르미트 행렬이라 하자. 
+($2 \implies 1$) $L$ 이 에르미트 연산자라고 하자.
 
 $$
-\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle - \overline{\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle} = \langle \boldsymbol{Au},\, \boldsymbol{u}\rangle - \langle \boldsymbol{A}^\ast\boldsymbol{u},\, \boldsymbol{u}\rangle =0
+\langle L(u),\, u\rangle - \overline{\langle L(u),\, u\rangle} = \langle L(u),\, u\rangle - \langle L^\ast(u),\, u\rangle =0
 $$
 
-이므로 $\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle$ 는 실수이다. $\square$
+이므로 $\langle L(u),\, u\rangle$ 는 실수이다. $\square$
 :::
 
 

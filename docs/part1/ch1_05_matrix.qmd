@@ -159,7 +159,7 @@ $\boldsymbol{A},\,\boldsymbol{B}$ 가 가역행렬이고 $\lambda \in \mathbb{F}
 
 #### 행공간, 열공간
 
-행렬 $\boldsymbol{A}$ 의 모든 행벡터에 의해 span 되는 벡터공간을 $\boldsymbol{A}$ 의 **행공간 (row space)** 이라고 한다. 마찬가지로 모든 열벡터에 의해 span 되는 벡터공간을 행렬 $\boldsymbol{a}$ 의 **열공간 (column space)** 라고 한다. 따라서 $\boldsymbol{A}$ 의 행공간은 $\text{span}(\boldsymbol{A}_{1:},\, \boldsymbol{A}_{2:},\ldots)$ 이며 열공간은 $\text{span}(\boldsymbol{A}_{:1}, \, \boldsymbol{A}_{:2},\ldots)$ 이다.
+행렬 $\boldsymbol{A}$ 의 모든 행벡터에 의해 span 되는 벡터공간을 $\boldsymbol{A}$ 의 **행공간 (row space)** 이라고 한다. 마찬가지로 모든 열벡터에 의해 span 되는 벡터공간을 행렬 $\boldsymbol{A}$ 의 **열공간 (column space)** 라고 한다. 따라서 $\boldsymbol{A}$ 의 행공간은 $\text{span}(\boldsymbol{A}_{1:},\, \boldsymbol{A}_{2:},\ldots)$ 이며 열공간은 $\text{span}(\boldsymbol{A}_{:1}, \, \boldsymbol{A}_{:2},\ldots)$ 이다.
 
 :::
 :::
@@ -433,13 +433,13 @@ $$
 \boldsymbol{E}_N \cdots \boldsymbol{E}_1\boldsymbol{A} =\boldsymbol{I}_n
 $$
 
-이라고 했을 때 각각의 $\boldsymbol{E}_j$ 는 대각행렬이거나 상삼각 행렬이므로 $\boldsymbol{E}=\boldsymbol{E}_N \cdots \boldsymbol{E}_1$ 은 상삼각행렬인다. 그런데 $\boldsymbol{E}=\boldsymbol{A}^{-1}$ 이므로 상삼각행렬 $\boldsymbol{A}$ 의 역행렬은 상삼각행렬이다. $\square$
+이라고 했을 때 각각의 $\boldsymbol{E}_j$ 는 대각행렬이거나 상삼각 행렬이므로 $\boldsymbol{E}=\boldsymbol{E}_N \cdots \boldsymbol{E}_1$ 은 상삼각행렬이다. 그런데 $\boldsymbol{E}=\boldsymbol{A}^{-1}$ 이므로 상삼각행렬 $\boldsymbol{A}$ 의 역행렬은 상삼각행렬이다. $\square$
 
 :::
 
 </br>
 
-상삼각행렬의 전치행렬이 하삼각행렬이므로 하삼∏각행렬에 대해서도 다음을 알 수 있다.
+상삼각행렬의 전치행렬이 하삼각행렬이므로 하삼각행렬에 대해서도 다음을 알 수 있다.
 
 ::: {#prp-properties_of_lower_triangular-matrix}
 

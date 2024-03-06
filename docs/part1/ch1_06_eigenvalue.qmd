@@ -13,13 +13,13 @@ crossref:
 
 #### 불변부분공간
 
-$\mathcal{M}_{n}(\mathbb{F})$ 에서 정의된 선형사상을 표현하는 정사각 행렬 $\boldsymbol{A}\in \mathcal{M}_{n \times n} (\mathbb{F})$ 와 $\mathcal{M}_{n}(\mathbb{F})$ 의 부분공간 $V$ 에 대해 
+$L\in \mathcal{L}(V)$ 이고 $U \le V$ 일 때
 
 $$
-\boldsymbol{v} \in V \implies \boldsymbol{Av} \in V
+L(U) \le U
 $$
 
-일 때, $V$ 를 $\boldsymbol{A}$ 에 대한 $\mathcal{M}_{n}(\mathbb{F})$ 의 **불변부분공간 (invariant subspace)** 라 한다.
+이면 $U$ 를 $L$ 에 대한 $V$ 의 **불변부분공간(invariant subspace)** 라고 한다.
 :::
 :::
 
@@ -28,17 +28,17 @@ $$
 
 ::: {#prp-invariant_subspace}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음이 성립한다.
+$T\in \mathcal{L}(V)$ 에 대해 다음이 성립한다.
 
-&emsp; ($1$) $\mathcal{M}_n(\mathbb{F})$ 는 $\boldsymbol{A}$ 에 대한 불변부분공간이다.
+&emsp; ($1$) $V$ 는 $L$ 에 대한 불변부분공간이다.
 
-&emsp; ($2$) $\ker (\boldsymbol{A})$ 는 $\boldsymbol{A}$ 에 대한 불변부분공간이다. 
+&emsp; ($2$) $\ker (L)$ 는 $L$ 에 대한 불변부분공간이다. 
 
-&emsp; ($3$) $\text{im} (\boldsymbol{A})$ 는 $\boldsymbol{A}$ 에 대한 불변부분공간이다.
+&emsp; ($3$) $\text{im} (L)$ 은 $L$ 에 대한 불변부분공간이다.
 :::
 
 ::: {.proof}
-($1$) 은 자명하다. $\boldsymbol{u}\in \ker (\boldsymbol{A}) \implies \boldsymbol{Au}=\boldsymbol{0} \in \ker (\boldsymbol{A})$ 이므로 ($2$) 도 성립한다. $\boldsymbol{v} \in \text{im} (\boldsymbol{A})$ 일 때 $\boldsymbol{Av}\in \text{im}(\boldsymbol{A})$ 이므로 ($3$) 도 성립한다. $\square$
+($1$) 은 자명하다. $u\in \ker (L) \implies L(u) \in \ker (L)$ 이므로 ($2$) 도 성립한다. $u \in \text{im} (L)$ 일 때 $L(u)\in \text{im}(L)$ 이므로 ($3$) 도 성립한다. $\square$
 
 :::
 
@@ -49,13 +49,13 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음이 �
 
 #### 고유값, 고유벡터, 고유공간
 
-정사각 행렬 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 어떤 벡터 $\boldsymbol{v}\ne \boldsymbol{0}$ 과 스칼라 $\lambda\in \mathbb{F}$ 가 존재하여,
+$\mathbb{F}$-벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 에 대해 어떤 벡터 $v\ne O_V$ 와 스칼라 $\lambda\in \mathbb{F}$ 가 존재하여,
 
 $$
-\boldsymbol{Av} = \lambda \boldsymbol{v}
+L(v) = \lambda v
 $$
 
-일 때 $\boldsymbol{v}$ 를 $\boldsymbol{A}$ 의 **고유벡터 (eigenvector)**, $\lambda$ 를 $\boldsymbol{A}$ 에 대한 $\boldsymbol{v}$ 의 **고유값(eigenvalue)** 이라 한다. 행렬 $\boldsymbol{A}$ 가 고유값 $\lambda$ 를 가질 때, 이 고유값 $\lambda$ 를 갖는 고유벡터와 영벡터의 집합을 $\lambda$ 에 대한 $\boldsymbol{A}$ 의 **고유공간(eigenspace)** 이라고 하며 $E(\lambda, \boldsymbol{A})$ 라 쓴다.
+일 때 $v$ 를 $L$ 의 **고유벡터 (eigenvector)**, $\lambda$ 를 $L$ 에 대한 $v$ 의 **고유값(eigenvalue)** 이라 한다. 연산자 $L$ 이 고유값 $\lambda$ 를 가질 때, 이 고유값 $\lambda$ 를 갖는 고유벡터와 영벡터의 집합을 $\lambda$ 에 대한 $L$ 의 **고유공간(eigenspace)** 이라고 하며 $E(\lambda, L)$ 라 쓴다.
 :::
 :::
 
@@ -80,18 +80,18 @@ $\boldsymbol{D}\hat{\boldsymbol{e}}_i = \lambda_i \hat{\boldsymbol{e}}_i$ 이다
 
 ::: {#prp-eigenspace_invariant}
 
-$E(\lambda,\, \boldsymbol{A})$ 는 행렬 $\boldsymbol{A}$ 에 대한 불변부분공간이다.
+$E(\lambda,\, L)$ 은 $L$ 에 대한 불변부분공간이다.
 
 :::
 
 ::: {.proof}
-우선 고유공간이 부분공간임을 보이자. 고유공간은 정의상 영벡터를 포함한다. 즉 $\boldsymbol{0}\in E(\lambda, \boldsymbol{A})$ 이다. $\boldsymbol{v}_1,\,\boldsymbol{v}_2 \in E(\lambda, \boldsymbol{A})$ 이며 $c$ 가 스칼라 일 때
+$L\in \mathcal{L}(V)$ 라고 하고 우선 고유공간이 부분공간임을 보이자. 고유공간은 정의상 영벡터를 포함한다. 즉 $0_V\in E(\lambda, L)$ 이다. $v_1,\,v_2 \in E(\lambda, L)$ 이며 $c\in \mathbb{F}$ 일 때
 
 $$
-\boldsymbol{A}(\boldsymbol{v}_1 + c\boldsymbol{v}_2) = \lambda(\boldsymbol{v}_1 + c\boldsymbol{v}_2)
+L(v_1 + cv_2) = \lambda(v_1 + cv_2)
 $$
 
-이므로 $\boldsymbol{v}_1 + c\boldsymbol{v}_2 \in E(\lambda,\boldsymbol{A})$ 이다. 따라서 $E(\lambda,\boldsymbol{A})$ 는 부분공간이다. $\boldsymbol{v}\in E(\lambda,\boldsymbol{A})$ 이면 $\boldsymbol{Av}=\lambda \boldsymbol{v}\in E(\lambda, \boldsymbol{A})$ 이다. 따라서 고유공간은 불변부분공간이다. $\square$
+이므로 $v_1 + cv_2 \in E(\lambda, L)$ 이다. 따라서 $E(\lambda,L)$ 은 부분공간이다. $v\in E(\lambda,L)$ 이면 $L(v)=\lambda v\in E(\lambda, L)$ 이다. 따라서 고유공간은 불변부분공간이다. $\square$
 
 :::
 
@@ -121,9 +121,40 @@ $\det (\lambda \boldsymbol{I}-\boldsymbol{A})  = 0$ 이면 $\text{nullity} (\lam
 
 </br>
 
+::: {#prp-eigenvector_linear_independence}
+$T\in \mathcal{L}(V)$ 의 고유벡터의 집합 $\{v_1,\ldots,\, v_m\}$ 에 대해 고유벡터가 각각 서로 다른 고유값 $\lambda_1,\ldots,\lambda_m$ 을 갖는 고유벡터라면 이 벡터의 집합은 선형독립이다.
+:::
+
+::: {.proof}
+$V_0=\{v_1, \ldots,\,v_m\}$ 가 선형종속임을 가정하자. $v_k$ 가 $\{ v_1, \ldots, v_{k-1}\}$ 의 선형결합으로 표현되는 첫번째 벡터라고 하자. 이런 $v_k$ 가 존재하지 않으면 $V_0$ 는 선형독립이므로 $v_k$ 는 항상 존재한다ㅣ. 이 때, 당연히도 $\{v_1,\ldots,\,v_{k-1}\}$ 은 선형독립이다.
+
+$$
+\begin{aligned}
+& v_k = c_1 v_1 + \cdots + c_m v_{k-1} \\
+\implies & L(v_k) = c_1 L(v_1) + \cdots + c_{k-1} L(v_{k-1}() \\
+\implies & \lambda_k v_k = \lambda_1 c_1 v_1 + \cdots + \lambda_{k-1} c_{k-1}v_{k-1}
+\end{aligned}
+$$
+
+이다. 또한 $\lambda_k v_k = \lambda_k (c_1 v_1 + \cdots + c_{k-1} v_{k-1})$ 이므로,
+
+$$
+c_1 (\lambda_k -\lambda_1) v_1 + \cdots + c_{k-1}(\lambda_k -\lambda_{k-1}) v_{k-1}=0
+$$
+
+이다. $\{v_1,\ldots,v_{k-1}\}$ 이 선형독립이며 모든 $\{\lambda_i\}$ 가 서로 다르므로, $c_1 = \cdots = c_{k-1}=0$ 이다. 즉 $\{v_1,\ldots,\,v_k\}$ 는 선형독립이므로 가정에 모순이다. 즉 $V_0$ 는 선형독립이다. $\square$
+:::
+
+</br>
+
+
 ## 특성다항식 {#sec-characteristic_polynomial}
 
-$\lambda$ 를 미지수로 간주하면 $n \times n$ 행렬 $\boldsymbol{A}$ 에 대해 $\det (\lambda \boldsymbol{I}-\boldsymbol{A})$ 는 $\lambda$ 에 대한 $n$ 차 다항식이다. 이 다항식의 근이 존재한다면, 그 근이 고유값이 되며, 이 고유값에 대한 고유벡터가 항상 존재한다는 의미이다. 이 다항식은 매우 중요하기 때문에 특별한 이름이 붙어 있다.
+::: {.callout-caution appearance="simple"  icon="false"}
+여기부터 이 장의 마지막까지 유한차원 벡터공간에서 생각하기로 한다. 그리고 유한차원 벡터공간과 그 연산자가 아니라 그 행렬표현으로 전개하도록 하겠다. 
+:::
+
+ $\lambda$ 를 미지수로 간주하면 $n \times n$ 행렬 $\boldsymbol{A}$ 에 대해 $\det (\lambda \boldsymbol{I}-\boldsymbol{A})$ 는 $\lambda$ 에 대한 $n$ 차 다항식이다. 이 다항식의 근이 존재한다면, 그 근이 고유값이 되며, 이 고유값에 대한 고유벡터가 항상 존재한다는 의미이다. 이 다항식은 매우 중요하기 때문에 특별한 이름이 붙어 있다.
 
 
 ::: {.callout-note appearance="simple" icon="false"}
@@ -175,6 +206,11 @@ $p_{\boldsymbol{A}}(\lambda)=0$ 일 때 $\lambda$ 가 $\boldsymbol{A}$ 의 고�
 
 </br>
 
+@prp-invariance_of_characteristic_polynomial 와 @prp-eigenvalue_characteristic_polynomial 는 유한차원 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 에 대한 특성다항식을 정의 할 수 있게 해 준다. 어떤 기저에 대해서도 $[L]$ 의 특성다항식은 같기 때문에 이것은 연산자 $L$ 에 대한 특성다항식이라고 할 수 있다. 
+
+
+</br>
+
 ::: {.callout-important appearance="simple" icon="false"}
 
 #### 대수학의 기본정리
@@ -195,31 +231,7 @@ $p_{\boldsymbol{A}}(\lambda)=0$ 일 때 $\lambda$ 가 $\boldsymbol{A}$ 의 고�
 
 </br>
 
-::: {#prp-eigenvector_linear_independence}
-$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 의 고유벡터의 집합 $\{\boldsymbol{v}_1,\ldots,\, \boldsymbol{v}_m\}$ 에 대해 고유벡터가 각각 서로 다른 고유값 $\lambda_1,\ldots,\lambda_m$ 을 갖는 고유벡터라면 이 벡터의 집합은 선형독립이다.
-:::
 
-::: {.proof}
-$V_0=\{\boldsymbol{v}_1, \ldots,\,\boldsymbol{v}_m\}$ 가 선형종속임을 가정하자. $\boldsymbol{v}_k$ 가 $\{ \boldsymbol{v}_1, \ldots, \boldsymbol{v}_{k-1}\}$ 의 선형결합으로 표현되는 첫번째 벡터라 하면 이것을 만족하는 $k$ 가 항상 존재한다. (존재하지 않으면 $V_0$ 는 선형독립이다) 이 때, 당연히도 $\{\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_{k-1}\}$ 은 선형독립이다.
-
-$$
-\begin{aligned}
-& \boldsymbol{v}_k = c_1 \boldsymbol{v}_1 + \cdots + c_m \boldsymbol{v}_{k-1} \\
-\implies & \boldsymbol{Av}_k = c_1 \boldsymbol{Av}_1 + \cdots + c_{k-1} \boldsymbol{Av}_{k-1} \\
-\implies & \lambda_k \boldsymbol{v}_k = \lambda_1 c_1 \boldsymbol{v}_1 + \cdots + \lambda_{k-1} c_{k-1} \boldsymbol{v}_{k-1}
-\end{aligned}
-$$
-
-이다. 또한 $\lambda_k \boldsymbol{v}_k = \lambda_k (c_1 \boldsymbol{v}_1 + \cdots + c_{k-1} \boldsymbol{v}_{k-1})$ 이므로,
-
-$$
-c_1 (\lambda_k -\lambda_1) \boldsymbol{v}_1 + \cdots + c_{k-1}(\lambda_k -\lambda_{k-1}) \boldsymbol{v}_{k-1}=0
-$$
-
-이다. $\{\boldsymbol{v}_1,\ldots,\boldsymbol{v}_{k-1}\}$ 이 선형독립이며 모든 $\{\lambda_i\}$ 가 서로 다르므로, $c_1 = \cdots = c_{k-1}=0$ 이다. 즉 $\{\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_k\}$ 는 선형독립이므로 가정에 모순이다. 즉 $V_0$ 는 선형독립이다. $\square$
-:::
-
-</br>
 
 
 ## 블록행렬과 불변부분공간
@@ -250,7 +262,7 @@ $$
 
 #### 불변부분공간과 블럭상삼각행렬
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 행렬에 대해 불변부분공간이 존재하면 $\boldsymbol{A}$ 와 닮은 블럭 상삼각 행렬이 존재한다.
+행렬 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 불변부분공간이 존재하면 $\boldsymbol{A}$ 와 닮은 블럭 상삼각 행렬이 존재한다.
 
 :::
 
@@ -325,7 +337,32 @@ $\boldsymbol{A}_n \in \mathcal{M}_{n \times n}(\mathbb{C})$ 이라 하고 $n$ �
 
 ## 행렬의 대각화
 
+### 고유공간의 성질
+
+우리는 연산자 $L\in\mathcal{L}(V)$ 에 대한 고유공간 $E(\lambda, L)$ 을 @def-eigenvector 에서 정의하였다. 또한 서로 다른 고유값을 갖는 벡터의 집합은 선형독립이라는 것도 안다(@prp-eigenvector_linear_independence). 이제 고유공간에 대해 좀 더 알아보자. 
+
+::: {#prp-sum_of_eigenspace}
+
+$L\in \mathcal{L}(V)$ 이고 $\lambda_1,\,\lambda_2,\ldots,\,\lambda_n$ 이 $L$ 의 고유값일 때, 
+
+$$
+E(\lambda_1,L) + \cdots + E(\lambda_m,L) = \bigoplus_{i=1}^m E(\lambda_i,L)
+$$
+
+이다. 
+
+:::
+
+::: {.proof}
+
+임의의 $\lambda_i\ne \lambda_j$ 에 대해 $E(\lambda_i, L) \cap E(\lambda_j,L) = \{0_V\}$ 이다. $\square$
+:::
+
+
 </br>
+
+### 대각화가능 행렬
+
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-diagonalizable_matrix}
@@ -352,7 +389,14 @@ $\boldsymbol{A}_n \in \mathcal{M}_{n \times n}(\mathbb{C})$ 이라 하고 $n$ �
 :::
 
 ::: {.proof}
-($1 \implies 2$) 대각 행렬 $\boldsymbol{D}$ 에 대해 $\boldsymbol{D} = \boldsymbol{P}^{-1}\boldsymbol{AP}$ 라고 하자. $\boldsymbol{D}\hat{\boldsymbol{e}}_i = D_{ii}\hat{\boldsymbol{e}}_i$ 이므로, $\boldsymbol{P}\hat{\boldsymbol{e}}_i = \boldsymbol{P}_{:i}$ 는 $D_{ii}$ 를 고유값으로 갖는 $\boldsymbol{A}$ 의 고유벡터이다. $\boldsymbol{P}$ 가 가역행렬이므로 $\{\boldsymbol{P}\hat{\boldsymbol{e}}_1,\ldots,\boldsymbol{P}\hat{\boldsymbol{e}}_1\}$ 는 $\mathcal{M}_n(\mathbb{F})$ 의 기저이다.
+($1 \implies 2$) 대각 행렬 $\boldsymbol{D}$ 에 대해 $\boldsymbol{D} = \boldsymbol{P}^{-1}\boldsymbol{AP}$ 라고 하자. $\boldsymbol{D}\hat{\boldsymbol{e}}_i = D_{ii}\hat{\boldsymbol{e}}_i$ 이므로, 
+
+$$
+\boldsymbol{APe}_i = \boldsymbol{PDe}_i = D_{ii}\boldsymbol{Pe}_i
+$$
+
+
+이며, 따라서 $\boldsymbol{Pe}_i$  는 $D_{ii}$ 를 고유값으로 갖는 $\boldsymbol{A}$ 의 고유벡터이다. $\boldsymbol{P}$ 가 가역행렬이므로 $\{\boldsymbol{P}\hat{\boldsymbol{e}}_1,\ldots,\boldsymbol{P}\hat{\boldsymbol{e}}_1\}$ 는 $\mathcal{M}_n(\mathbb{F})$ 의 기저이다.
 
 ($2 \implies 3$) $(\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n)$ 이 $\boldsymbol{A}$ 의 고유벡터이며 $\mathcal{M}_n(\mathbb{F})$ 의 기저일 때 같은 고유값 $\lambda_j$ 를 갖는 $\boldsymbol{u}_i$ 들은 $E(\lambda_j, \boldsymbol{A})$ 의 기저이다. 임의의 $\lambda_{j_1}\le \lambda_{j_2}$ 일 때 $E(\lambda_{j_1}, \boldsymbol{A})\cap E(\lambda_{j_2})= \{\boldsymbol{0}\}$ 이므로, $\mathcal{M}_n (\mathbb{F}) = E(\lambda_1, \boldsymbol{A}) \oplus \cdots \oplus E(\lambda_m, \boldsymbol{A})$ 이다. 
 
