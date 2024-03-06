@@ -6,12 +6,65 @@ crossref:
   chapters: true
 ---
 
+
+
 우리는 앞에서 정사각 행렬에 대한 특이값 분해를 알아보았다. 이제 일반적인 행렬에 대한 특이값 분해를 보기로 하자. 여기서는 행렬을 주로 다룰 것이며 지금까지와는 다르게 굵은 글씨체로 하지 않겠다.
+
+우리는 앞서 @def-singular_value_of_operator 에서 연산자, 즉 정사각 행렬의 특이값에 대해 정의했다. 이제 이것을 일반화하여 임의의 행렬의 특이값에 대해 정의한다.
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-singular_value_of_matrix}
+
+#### 특이값
+$\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 의 고유값을 **특이값(singular value)** 라 한다. $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 가 positive 이므로 당연히 모든 특이값은 $0$ 이 아닌 실수이다.
+:::
+:::
 
 ::: {#prp-properties_of_AAast}
 
-$$A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한다.
+$A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한다.
 
-&emsp; ($1$)
+&emsp; ($1$) $A^\ast A$ 는 positive 행렬이다.
+
+&emsp; ($2$) $\ker (A^\ast A) = \ker (A)$.
+
+&emsp; ($3$) $\text{im}(A^\ast A) = \text{im}(A^\ast)$.
+
+&emsp; ($4$) $\text{rank}(A) = \text{rank}(A^\ast) = \text{rank}(A^\ast A)$
+ 
+:::
+
+::: {.proof}
+
+($1$) $(A^\ast A)^\ast = A^\ast A$ 이므로 $A^\ast A$ 는 에르미트 행렬이다. 또한 $\langle A^\ast Au,\, v\rangle = \|Au\|^2\ge 0$ 이므로 $A^\ast A$ 는 positive 이다.
+
+($2$) $u\in \ker(A^\ast A) \implies \langle A^\ast Au,\, v\rangle = \|Au\|^2=0$ 이므로 $u\in \ker (A)$. 역으로 $u\in \ker A$ 이면 $Au=0$ 이므로 $A^\ast A=0$ 이며, 따라서 $u\in \ker (A^\ast A)$. 따라서 $\ker (A^\ast A) = \ker (A)$.
+
+($3$) @thm-kernel_image_of_adjoint_operator 과 ($2$) 로부터 $\text{im}(A^\ast A) = (\ker(A^\ast A))^\perp = (\ker (A))^\perp = \text{im}(A^\ast)$ 임을 안다. 
+
+($4$) @exr-axler_7_A_5 로부터 $\text{rank}(A) = \text{rank}(A^\ast)$. ($3$) 으로부터 $\text{rank}(A^\ast) = \text{rank}(A^\ast A)$. $\square$
+
+:::
+
+</br>
+
+::: {#prp-properties_of_singular_value}
+
+$A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
+
+&emsp; ($1$) $A$ 가 단사일 필요충분조건은 $0$ 이 $A$ 의 특이값이 아닌 것이다.
+
+&emsp; ($2$) $A$ 의 특이값의 갯수는 $\text{rank}(A)$ 와 같다. 
+
+&emsp; ($3$) $A$ 가 전사일 필요충분조건은 $A$ 의 특이값의 갯수가 $n$ 인 것이다. 
+
+:::
+
+::: {.proof}
+$\sigma(A)$ 를 $A$ 의 특이값의 순서집합이라고 하자. 따라서 $\sigma(A)$ 는 같은 여러 개 가질 수 있다. $n(\sigma(A))$ $s(A)$ 의 갯수라고 하자. $s(A)$ 는 $A^\ast A$ 의 고유값의 집합
+
+
+
+($1$) $A$ 가 단사 $\iff \ker (A) = \{0\} \iff \ker(A^\ast A)= \{0\}$ 
 
 :::

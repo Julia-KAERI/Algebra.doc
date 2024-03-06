@@ -222,9 +222,9 @@ $$
 ## 연산자에 대한 특이값 분해 (Singular value decomposition, SVD)
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-singular_value}
+::: {#def-singular_value_of_operator}
 
-#### 특이값 (singular value)
+#### 연산자의 특이값
 $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 의 고유값을 **특이값(singular value)** 라 한다. $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 가 positive 이므로 당연히 모든 특이값은 $0$ 이 아닌 실수이다.
 :::
 :::
