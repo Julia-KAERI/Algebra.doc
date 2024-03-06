@@ -6,14 +6,14 @@ crossref:
   chapters: true
 ---
 
-## Positive definite, Positive semidefinite 행렬과 제곱근 행렬
+## Positive, Positive definite 행렬과 제곱근 행렬
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-pisitive_definite_matrix}
 
 #### Positive Definite 행렬 와 제곱근 행렬
 
-에르미트 행렬 $\boldsymbol{A}$ 이 임의의 벡터 $\boldsymbol{v}$ 에 대해,$\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle > 0$ 일 때 $\boldsymbol{A}$ 를 **positive definite** 라 하고 $\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle \ge 0$ 일 때 $\boldsymbol{A}$ 를 **positive semidefinite** 라 한다. $\boldsymbol{A}$ 가 positive 이거나 positive semidefinite 일 때  $\boldsymbol{A}=\boldsymbol{R}^2$ 인 행렬 $\boldsymbol{R}$ 이 존재하면 $\boldsymbol{R}$ 을 $\boldsymbol{A}$ 의 **제곱근 행렬**이고 하고 $\sqrt{\boldsymbol{A}}$ 라고 쓴다. 행렬 $\boldsymbol{A}$ 의 제곱근 행렬이 존재 할 때 $\boldsymbol{A}$ 가 제곱근 행렬을 가진다라고 한다.
+에르미트 행렬 $\boldsymbol{A}$ 이 임의의 벡터 $\boldsymbol{v}$ 에 대해,$\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle > 0$ 일 때 $\boldsymbol{A}$ 를 **positive definite** 라 하고 $\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle \ge 0$ 일 때 $\boldsymbol{A}$ 를 **positive** 혹은 **positive semidefinite** 라 한다. $\boldsymbol{A}$ 가 positive 이거나 positive definite 일 때  $\boldsymbol{A}=\boldsymbol{R}^2$ 인 행렬 $\boldsymbol{R}$ 이 존재하면 $\boldsymbol{R}$ 을 $\boldsymbol{A}$ 의 **제곱근 행렬**이고 하고 $\sqrt{\boldsymbol{A}}$ 라고 쓴다. 행렬 $\boldsymbol{A}$ 의 제곱근 행렬이 존재 할 때 $\boldsymbol{A}$ 가 제곱근 행렬을 가진다라고 한다.
 
 :::
 :::
@@ -27,11 +27,11 @@ crossref:
 
 $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 동치이다.
 
-&emsp; ($1$) $\boldsymbol{A}$ 는 positive semidefinite 이다.
+&emsp; ($1$) $\boldsymbol{A}$ 는 positive 이다.
 
 &emsp; ($2$) $\boldsymbol{A}$ 는 에르미트행렬이며 모든 고유값은 non-negative 하다
 
-&emsp; ($3$) $\boldsymbol{A}$ 의 positive semidifinite 제곱근 행렬이 존재한다.
+&emsp; ($3$) $\boldsymbol{A}$ 의 positive 제곱근 행렬이 존재한다.
 
 &emsp; ($4$) $\boldsymbol{A}$ 의 에르미트 제곱근 행렬이 존재한다.
 
@@ -40,7 +40,7 @@ $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 �
 ::: 
 
 ::: {.proof}
-($1 \implies 2$) $\boldsymbol{A}$ 가 positive semidefinite 이므로 정의에 의해 에르미트 행렬이다. $\lambda$ 가 $\boldsymbol{A}$ 의 고유값이고 $\boldsymbol{v}$ 가 $\lambda$ 에 대한 고유벡터 일 때, $0 \le \langle \boldsymbol{Av},\, \boldsymbol{v}\rangle = \lambda \|\boldsymbol{v}\|^2$ 이므로 $\lambda \ge 0$ 이다.
+($1 \implies 2$) $\boldsymbol{A}$ 가 positive 이므로 정의에 의해 에르미트 행렬이다. $\lambda$ 가 $\boldsymbol{A}$ 의 고유값이고 $\boldsymbol{v}$ 가 $\lambda$ 에 대한 고유벡터 일 때, $0 \le \langle \boldsymbol{Av},\, \boldsymbol{v}\rangle = \lambda \|\boldsymbol{v}\|^2$ 이므로 $\lambda \ge 0$ 이다.
 
 ($2 \implies 3$) 스펙트럼 정리에 의해 $\boldsymbol{U}^\ast\boldsymbol{AU}$ 를 대각행렬 $\boldsymbol{D}$ 로 하는 유니타리 행렬 $\boldsymbol{U}$ 가 존재한다. $\boldsymbol{A}$ 의 고유값 $\lambda_1,\ldots,\,\lambda_n$ 에 대해 $D_{ij} = \lambda_{i}\delta_{ij}$ 일 때, 대각행렬 $\boldsymbol{T}$ 를 $T_{ij}= \sqrt{\lambda_{i}}\delta_{ij}$ 라 하자.  $\boldsymbol{R} = \boldsymbol{P}^\ast\boldsymbol{TP}$ 라 하면 $\boldsymbol{R}^2 = \boldsymbol{A}$ 이다.
 
@@ -58,12 +58,12 @@ $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 �
 
 ::: {#prp-uniqueness_of_squareroot_matrix}
 
-Positive semidefinite 행렬 $\boldsymbol{A}$ 의 positive semidefinte 한 제곱근 행렬은 유일하다.
+Positive 행렬 $\boldsymbol{A}$ 의 positive 한 제곱근 행렬은 유일하다.
 
 :::
 
 :::{.proof}
-우리는 앞서 positive semidifinite 행렬 $\boldsymbol{A}$ 에 대한 positive semidifinite 한 제곱근 행렬이 존재함을 보였다. 여기서는 이것이 유일함을 보인다. 행렬 $\boldsymbol{A}$ 에 대한 positive semidifinite 한 제곱근 행렬을 $\boldsymbol{R}$ 이라 하자. 스펙트럼 정리에 의해 $\boldsymbol{R}$ 에 대한 고유값 $\eta_1,\ldots,\,\eta_n$ 과 그에 대한 정규 고유 벡터 $\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n$ 이 존재한다. 이 때 $\eta_i \ge 0$ 이다. 임의의 벡터 $\boldsymbol{v} = \sum_i a_i \boldsymbol{u}_i$ 에 대해,
+우리는 앞서 positive 행렬 $\boldsymbol{A}$ 에 대한 positive 한 제곱근 행렬이 존재함을 보였다. 여기서는 이것이 유일함을 보인다. 행렬 $\boldsymbol{A}$ 에 대한 positive 한 제곱근 행렬을 $\boldsymbol{R}$ 이라 하자. 스펙트럼 정리에 의해 $\boldsymbol{R}$ 에 대한 고유값 $\eta_1,\ldots,\,\eta_n$ 과 그에 대한 정규 고유 벡터 $\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n$ 이 존재한다. 이 때 $\eta_i \ge 0$ 이다. 임의의 벡터 $\boldsymbol{v} = \sum_i a_i \boldsymbol{u}_i$ 에 대해,
 
 $$
 \begin{aligned}
@@ -90,7 +90,7 @@ $$
 
 &emsp; ($1$) 에르미트이다.
 
-&emsp; ($2$) positive semidefinite 이다.
+&emsp; ($2$) positive 이다.
 
 &emsp; ($3$) $\sqrt{\boldsymbol{B}^\ast \boldsymbol{B}}$ 를 생각 할 수 있다.
 
@@ -211,7 +211,7 @@ $$
 
 #### 극분해
 
-이렇게 임의의 행렬은 linear isometry 와 positive semidefinite 행렬의 곱으로 표현 될 수 있으며, 이것을 **극분해(polar decomposition)** 라고 한다.
+이렇게 임의의 행렬은 linear isometry 와 positive 행렬의 곱으로 표현 될 수 있으며, 이것을 **극분해(polar decomposition)** 라고 한다.
 
 :::
 :::
@@ -225,7 +225,7 @@ $$
 ::: {#def-singular_value}
 
 #### 특이값 (singular value)
-$\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 의 고유값을 **특이값(singular value)** 라 한다. $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 가 positive semidefinite 이므로 당연히 모든 특이값은 $0$ 이 아닌 실수이다.
+$\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 의 고유값을 **특이값(singular value)** 라 한다. $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 가 positive 이므로 당연히 모든 특이값은 $0$ 이 아닌 실수이다.
 :::
 :::
 
@@ -244,7 +244,7 @@ $$
 
 ::: {.proof} 
 
-극분해에 의해 $\boldsymbol{A}=\boldsymbol{S}\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 이다. $\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}$ 는 positive semidifinite 이므로 어떤 linear isometry $\boldsymbol{V}$ 에 의해 $\boldsymbol{V}^\ast \sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}\boldsymbol{V}=\boldsymbol{D}$ 로 대각화 된다. 따라서,
+극분해에 의해 $\boldsymbol{A}=\boldsymbol{S}\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 이다. $\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}$ 는 positive 이므로 어떤 linear isometry $\boldsymbol{V}$ 에 의해 $\boldsymbol{V}^\ast \sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}\boldsymbol{V}=\boldsymbol{D}$ 로 대각화 된다. 따라서,
 
 $$
 \boldsymbol{A} = \boldsymbol{S}\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}} = \boldsymbol{S}\boldsymbol{V}\boldsymbol{D}\boldsymbol{V}^\ast =\boldsymbol{UDV}^\ast \,\qquad \text{where } \boldsymbol{U}=\boldsymbol{SV}
