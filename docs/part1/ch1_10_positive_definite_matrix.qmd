@@ -13,42 +13,57 @@ crossref:
 
 #### Positive Definite 행렬 와 제곱근 행렬
 
-에르미트 행렬 $\boldsymbol{A}$ 이 임의의 벡터 $\boldsymbol{v}$ 에 대해,$\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle > 0$ 일 때 $\boldsymbol{A}$ 를 **positive definite** 라 하고 $\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle \ge 0$ 일 때 $\boldsymbol{A}$ 를 **positive** 혹은 **positive semidefinite** 라 한다. $\boldsymbol{A}$ 가 positive 이거나 positive definite 일 때  $\boldsymbol{A}=\boldsymbol{R}^2$ 인 행렬 $\boldsymbol{R}$ 이 존재하면 $\boldsymbol{R}$ 을 $\boldsymbol{A}$ 의 **제곱근 행렬**이고 하고 $\sqrt{\boldsymbol{A}}$ 라고 쓴다. 행렬 $\boldsymbol{A}$ 의 제곱근 행렬이 존재 할 때 $\boldsymbol{A}$ 가 제곱근 행렬을 가진다라고 한다.
+에르미트 행렬 $\boldsymbol{A}$ 이 임의의 벡터 $\boldsymbol{v}$ 에 대해,$\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle > 0$ 일 때 $\boldsymbol{A}$ 를 **positve** 혹은 **positive definite** 라 하고 $\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle \ge 0$ 일 때 $\boldsymbol{A}$ 를 **non-negative** 혹은 **positive semidefinite** 라 한다. $\boldsymbol{A}$ 가 positive 이거나 positive definite 일 때  $\boldsymbol{A}=\boldsymbol{R}^2$ 인 행렬 $\boldsymbol{R}$ 이 존재하면 $\boldsymbol{R}$ 을 $\boldsymbol{A}$ 의 **제곱근 행렬**이고 하고 $\sqrt{\boldsymbol{A}}$ 라고 쓴다. 행렬 $\boldsymbol{A}$ 의 제곱근 행렬이 존재 할 때 $\boldsymbol{A}$ 가 제곱근 행렬을 가진다라고 한다.
 
 :::
 :::
+
 
 </br>
 
+::: {.callout-warning icon="false"}
 
-### Positive definite 행렬의 성질
+#### 용어의 혼란을 막기 위해
+
+예를 들어 S. Axler 의 *Linear Algebra Done Right* 의 경우 $\langle \boldsymbol{Av},\,\boldsymbol{v}\rangle \ge 0$ 일 때 $\boldsymbol{A}$ 를 *positive* 라고 정의한다(3rd Ed. pp 225). 그러나 K. Hoffman, R. Kunze 의 *Linear Algebra* 의 경우에는  $\langle \boldsymbol{Av},\,\boldsymbol{v}\rangle > 0$ 일 때 positive 라고 정의한다(2nd Ed. pp 329). 여기서는 더 직관적인 non-negative, positive 라는 용어를 사용하기로 한다.
+
+:::
+
+
+</br>
+
+### Non-negative 행렬의 성질
 
 ::: {#prp-properties_of_posivive_definite_matrix}
 
 $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 동치이다.
 
-&emsp; ($1$) $\boldsymbol{A}$ 는 positive 이다.
+&emsp; ($1$) $\boldsymbol{A}$ 는 non-negative 이다.
 
 &emsp; ($2$) $\boldsymbol{A}$ 는 에르미트행렬이며 모든 고유값은 non-negative 하다
 
-&emsp; ($3$) $\boldsymbol{A}$ 의 positive 제곱근 행렬이 존재한다.
+&emsp; ($3$) $\boldsymbol{A}$ 는 대각성분이 모두 음수가 아닌 대각행렬과 닮았다.
 
-&emsp; ($4$) $\boldsymbol{A}$ 의 에르미트 제곱근 행렬이 존재한다.
+&emsp; ($4$) $\boldsymbol{A}$ 의 non-negative positive 제곱근 행렬이 존재한다.
 
-&emsp; ($5$) $\boldsymbol{A} = \boldsymbol{R}^\ast \boldsymbol{R}$ 인 행렬 $\boldsymbol{R}$ 이 존재한다.
+&emsp; ($5$) $\boldsymbol{A}$ 의 에르미트 제곱근 행렬이 존재한다.
+
+&emsp; ($6$) $\boldsymbol{A} = \boldsymbol{R}^\ast \boldsymbol{R}$ 인 행렬 $\boldsymbol{R}$ 이 존재한다.
 
 ::: 
 
 ::: {.proof}
-($1 \implies 2$) $\boldsymbol{A}$ 가 positive 이므로 정의에 의해 에르미트 행렬이다. $\lambda$ 가 $\boldsymbol{A}$ 의 고유값이고 $\boldsymbol{v}$ 가 $\lambda$ 에 대한 고유벡터 일 때, $0 \le \langle \boldsymbol{Av},\, \boldsymbol{v}\rangle = \lambda \|\boldsymbol{v}\|^2$ 이므로 $\lambda \ge 0$ 이다.
+($1 \implies 2$) $\boldsymbol{A}$ 가 non-negative 이므로 정의에 의해 에르미트 행렬이다. $\lambda$ 가 $\boldsymbol{A}$ 의 고유값이고 $\boldsymbol{v}$ 가 $\lambda$ 에 대한 고유벡터 일 때, $0 \le \langle \boldsymbol{Av},\, \boldsymbol{v}\rangle = \lambda \|\boldsymbol{v}\|^2$ 이므로 $\lambda \ge 0$ 이다.
 
-($2 \implies 3$) 스펙트럼 정리에 의해 $\boldsymbol{U}^\ast\boldsymbol{AU}$ 를 대각행렬 $\boldsymbol{D}$ 로 하는 유니타리 행렬 $\boldsymbol{U}$ 가 존재한다. $\boldsymbol{A}$ 의 고유값 $\lambda_1,\ldots,\,\lambda_n$ 에 대해 $D_{ij} = \lambda_{i}\delta_{ij}$ 일 때, 대각행렬 $\boldsymbol{T}$ 를 $T_{ij}= \sqrt{\lambda_{i}}\delta_{ij}$ 라 하자.  $\boldsymbol{R} = \boldsymbol{P}^\ast\boldsymbol{TP}$ 라 하면 $\boldsymbol{R}^2 = \boldsymbol{A}$ 이다.
+($2 \implies 3$) $\boldsymbol{A}$ 가 에르미트 행렬이므로 스펙트럼 정리에 의해 $\boldsymbol{U}^\ast\boldsymbol{AU}$ 를 대각행렬 $\boldsymbol{D}$ 로 하는 유니타리 행렬 $\boldsymbol{U}$ 가 존재한다. 대각성분이 고유값이므로 $\boldsymbol{D}$ 의 모든 대각성분은 실수이며 음수가 아니다.
 
-($3 \implies 4$) 위에서 정의한 $\boldsymbol{R}$ 은 $\boldsymbol{R}^\ast = \boldsymbol{U}^\ast \boldsymbol{AU} = \boldsymbol{R}$ 이므로 에르미트 행렬이다.
+($3 \implies 4$) $\boldsymbol{A}$ 의 고유값 $\lambda_1,\ldots,\,\lambda_n$ 에 대해 $D_{ij} = \lambda_{i}\delta_{ij}$ 일 때, 행렬 $\boldsymbol{S}$ 를 대각행렬 $S_{ij} = \sqrt{D_{ij}}$ 로 정의하자. $\boldsymbol{R} = \boldsymbol{U}^\ast\boldsymbol{SU}$ 라 하면 $\boldsymbol{R}^2 = \boldsymbol{A}$ 이다.
 
-($4 \implies 5$) 앞서 정의한 $\boldsymbol{R}$ 이다.
+($4 \implies 5$) 위에서 정의한 $\boldsymbol{R}$ 은 $\boldsymbol{R}^\ast = \boldsymbol{U}^\ast \boldsymbol{SU} = \boldsymbol{R}$ 이므로 에르미트 행렬이다.
 
-($5 \implies 6$) $\boldsymbol{A}=\boldsymbol{R}^\ast \boldsymbol{R}$ 이면 $\boldsymbol{A}^\ast = (\boldsymbol{R}^\ast\boldsymbol{R})^\ast = \boldsymbol{R}^\ast \boldsymbol{R}=\boldsymbol{A}$ 이므로 $\boldsymbol{A}$ 는 에르미트 행렬이다. 또한 임의의 $\boldsymbol{v}\in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \boldsymbol{v},\, \boldsymbol{A}\boldsymbol{v}\rangle = \langle \boldsymbol{R}^\ast \boldsymbol{R}\boldsymbol{v},\, \boldsymbol{v} \rangle = \|\boldsymbol{Rv}\|^2\ge 0$ 이므로 $\boldsymbol{A}$ 는 positive definite 이다. $\square$
+($5 \implies 6$) 앞서 정의한 $\boldsymbol{R}$ 이다.
+
+($6 \implies 1$) $\boldsymbol{A}=\boldsymbol{R}^\ast \boldsymbol{R}$ 이면 $\boldsymbol{A}^\ast = (\boldsymbol{R}^\ast\boldsymbol{R})^\ast = \boldsymbol{R}^\ast \boldsymbol{R}=\boldsymbol{A}$ 이므로 $\boldsymbol{A}$ 는 에르미트 행렬이다. 또한 임의의 $\boldsymbol{v}\in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \boldsymbol{v},\, \boldsymbol{A}\boldsymbol{v}\rangle = \langle \boldsymbol{R}^\ast \boldsymbol{R}\boldsymbol{v},\, \boldsymbol{v} \rangle = \|\boldsymbol{Rv}\|^2\ge 0$ 이므로 $\boldsymbol{A}$ 는 non-negative 이다. $\square$
 
 :::
 
@@ -58,12 +73,12 @@ $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 �
 
 ::: {#prp-uniqueness_of_squareroot_matrix}
 
-Positive 행렬 $\boldsymbol{A}$ 의 positive 한 제곱근 행렬은 유일하다.
+non-negative 행렬 $\boldsymbol{A}$ 의 non-nagative 한 제곱근 행렬은 유일하다.
 
 :::
 
 :::{.proof}
-우리는 앞서 positive 행렬 $\boldsymbol{A}$ 에 대한 positive 한 제곱근 행렬이 존재함을 보였다. 여기서는 이것이 유일함을 보인다. 행렬 $\boldsymbol{A}$ 에 대한 positive 한 제곱근 행렬을 $\boldsymbol{R}$ 이라 하자. 스펙트럼 정리에 의해 $\boldsymbol{R}$ 에 대한 고유값 $\eta_1,\ldots,\,\eta_n$ 과 그에 대한 정규 고유 벡터 $\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n$ 이 존재한다. 이 때 $\eta_i \ge 0$ 이다. 임의의 벡터 $\boldsymbol{v} = \sum_i a_i \boldsymbol{u}_i$ 에 대해,
+우리는 앞서 non-negative 행렬 $\boldsymbol{A}$ 에 대한 non-negative 한 제곱근 행렬이 존재함을 보였다. 여기서는 이것이 유일함을 보인다. 행렬 $\boldsymbol{A}$ 에 대한 non-negative 한 제곱근 행렬을 $\boldsymbol{R}$ 이라 하자. 스펙트럼 정리에 의해 $\boldsymbol{R}$ 에 대한 고유값 $\eta_1,\ldots,\,\eta_n$ 과 그에 대한 정규 고유 벡터 $\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n$ 이 존재한다. 이 때 $\eta_i \ge 0$ 이다. 임의의 벡터 $\boldsymbol{v} = \sum_i a_i \boldsymbol{u}_i$ 에 대해,
 
 $$
 \begin{aligned}
@@ -84,13 +99,25 @@ $$
 
 </br>
 
+::: {.callout-note appearance="minimal" icon="false"}
+::: {#def-square_root_matrix}
+
+#### $\sqrt{\boldsymbol{A}}$
+
+$\boldsymbol{A}$ 가 non-negative 행렬일 때 $\boldsymbol{A}$ 의 non-negative 한 제곱근 행렬을 $\sqrt{\boldsymbol{A}}$ 라고 쓴다.
+
+:::
+:::
+
+</br>
+
 ::: {#prp-squareroot_matrix}
 
 임의의 $\boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\boldsymbol{B}^\ast \boldsymbol{B}$ 를 생각 할 수 있다. 이 때 $\boldsymbol{B}^\ast \in \mathcal{M}_{n \times m}(\mathbb{F})$ 이다. $\boldsymbol{B}^\ast \boldsymbol{B}$ 는
 
 &emsp; ($1$) 에르미트이다.
 
-&emsp; ($2$) positive 이다.
+&emsp; ($2$) non-negative 이다.
 
 &emsp; ($3$) $\sqrt{\boldsymbol{B}^\ast \boldsymbol{B}}$ 를 생각 할 수 있다.
 
@@ -108,6 +135,11 @@ $$
 </br>
 
 ### 극분해
+
+복소수 $z=x+iy,\,x,\,y\in \mathbb{C}$ 는 $z=re^{i\theta},\, r=\sqrt{x^2+y^2},\, \theta = \tan^{-1}(y/x)$ 로 표현 할 수 있다. 어떤 행렬은 이와 비슷하게 유니타리 행렬과 non-negative 행렬의 곱으로 표현할 수 있으며 매우 유용하다. 여기에 대해 알아보기로 하자.
+
+
+</br>
 
 ::: {#prp-polar_decomposition}
 
@@ -224,8 +256,8 @@ $$
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-singular_value_of_operator}
 
-#### 연산자의 특이값
-$\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 의 고유값을 **특이값(singular value)** 라 한다. $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 가 positive 이므로 당연히 모든 특이값은 $0$ 이 아닌 실수이다.
+#### 특이값
+$\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 의 고유값을 **특이값(singular value)** 라 한다. $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 가 positive 이므로 당연히 모든 특이값은 $0$ 이 아닌 실수이다.
 :::
 :::
 

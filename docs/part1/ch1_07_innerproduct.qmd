@@ -309,6 +309,7 @@ $$ {#eq-innerproduct}
 
 즉 각각의 기저의 쌍에 대한 내적을 알면 벡터의 내적을 계산 할 수 있다. 그런데 만약 서로 다른 두 기저벡터의 내적이 $0$ 이라면, 즉 기저들이 직교한다면 $\|h_i\|^2$ 만을 생각해도 되기 때문에 계산이 쉬워질 것이다. 거기에 더하여 기저벡터의 노름이 모두 1 이라면 더욱 쉬워질 것이다. 이것을 만족하는 기저를 정규직교기저라고 한다.
 
+
 </br>
 
 ### 정규직교기저
@@ -327,6 +328,50 @@ $$ {#eq-innerproduct}
 </br>
 
 우리는 @prp-orthogonal_linearity 와 @cor-number_of_orthogonal_vectors 를 통해 유한차원 내적벡터공간의 서로 직교하는 벡터의 갯수는 벡터공간의 차원보다 작거나 같다는 것을 안다. 정규직교기저가 되기 위해서는 정규직교벡터의 숫자가 차원과 같아야 하는데 이것은 뒤에 [그람-슈미트 과정과 정규직교기저](ch1_07_innerproduct.qmd#sec-gram_schmidt) 에서 자연스럽게 알게 된다. 
+
+</br>
+
+### 정규직교벡터의 성질
+
+::: {#prp-properties_of_orthonormal_vectors}
+
+$\{e_1,\ldots,\,e_m\}$ 이 $\mathbb{F}$-내적벡터공간 $V$ 에서의 정규직교벡터일 때 다음이 성립한다.
+
+
+&emsp; ($1$) $\{e_1,\ldots,\,e_m\}$ 은 선형독립이다.
+
+&emsp; ($2$) $a_1,\ldots,\,a_m\in \mathbb{F}$ 일 때 $\|a_1e_1 + \cdots + a_me_m \|^2 = |a_1|^2 + \cdots + |a_m|^2$ 이다.
+
+&emsp; ($3$) (**베셀 부등식 (Bessel's inequality)**) $v\in V$ 일 때 $|\langle v,\,e_1\rangle + \cdots + \langle v,\,e_m\rangle|^2 \le \|v\|^2$ 
+
+:::
+
+::: {.proof}
+
+($1$) $c_1,\ldots,\,c_m\in \mathbb{F}$ 에 대해 $c_1e_1 + \cdots +c_me_m=0_V$ 이라고 하자. $0 = \langle 0_V,\,e_j\rangle =c_j$ 이므로 $c_1=\cdots = c_m=0$ 이다. 따라서 $\{e_1,\ldots,\,e_m\}$ 은 선형독립이다.
+
+($2$) $v=a_1e_1+\cdots+a_me_m$ 이라고하자. $\|a_1e_1+\cdots + a_me_m\|^2 = \|v\|^2 = \langle v,\, v\rangle$ 이며,
+
+$$
+\langle v,\, v\rangle = \left\langle \sum_i a_ie_i , \sum_j a_j e_j\right\rangle = \sum_{i, j} a_i \overline{a_j}\langle e_i,\, e_j \rangle = \sum_i |a_i|^2.
+$$
+
+($3$) $w = \langle v, e_1\rangle e_1 + \cdots + \langle v,\,e_m\rangle e_m$ 이라 하자. $v=w+(v-w)$ 이며 
+
+$$
+\langle v-w,\,w\rangle =\sum_{i=1}^m \langle v,\,e_i\rangle \langle v-w,\, e_i\rangle = \sum_{i=1}^m \langle v,\, e_i\rangle \left( \langle v,\,e_i\rangle - \langle w,\, e_i \rangle\right) = 0
+$$
+
+이다. 따라서, 
+
+$$
+\|v\|^2 = \|w\|^2 + \|v-w\|^2 \ge \|w\|^2
+$$
+
+이다. $\square$
+
+:::
+
 
 </br>
 
