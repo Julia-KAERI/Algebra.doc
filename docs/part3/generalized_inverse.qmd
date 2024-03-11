@@ -6,15 +6,20 @@ crossref:
   chapters: true
 ---
 
+## 일반화된 역행렬
 ::: {.callout-warning icon="false"}
 
 #### 참고자료
 
 [1] [STANLEY SAWYER 교수의 강의록](https://www.math.wustl.edu/~sawyer/handouts/GenrlInv.pdf)
 
+[2] [https://en.wikibooks.org/wiki/Topics_in_Abstract_Algebra/Linear_algebra](https://en.wikibooks.org/wiki/Topics_in_Abstract_Algebra/Linear_algebra)
+
 :::
 
-## 일반화된 역행렬
+</br>
+
+### 일반화된 역행렬
 
 ::: {.callout-note appearance="minimal" icon="false"}
 
@@ -22,7 +27,7 @@ crossref:
 
 #### 일반화된 역행렬
 
-행렬 $\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\boldsymbol{AGA}=\boldsymbol{A}$ 를 만족하는 행렬 $\boldsymbol{G} \in \mathcal{M}_{n \times m}(\mathbb{F})$ 를 $\boldsymbol{A}$ 에 대한 **일반화된 역행렬(generalized inverse matrix)** 라고 한다. $\boldsymbol{A}$ 의 일반화된 역행렬을 $\boldsymbol{A}^{-}$ 로 표기한다. 
+행렬 $A \in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $AGA=A$ 를 만족하는 행렬 $G \in \mathcal{M}_{n \times m}(\mathbb{F})$ 를 $A$ 에 대한 **일반화된 역행렬(generalized inverse matrix)** 라고 한다. $A$ 의 일반화된 역행렬을 $A^{-}$ 로 표기한다. 
 
 :::
 :::
@@ -31,15 +36,15 @@ crossref:
 
 ::: {#prp-generalized_inverse_of_invertible_matrix}
 
-$\boldsymbol{A}$ 가 가역행렬이면 $\boldsymbol{G}=\boldsymbol{A}^{-1}$ 이다.
+$A$ 가 가역행렬이면 $G=A^{-1}$ 이다.
 
 :::
 
 ::: {.proof}
 
-$\boldsymbol{A}$ 가 가역행렬이면 $m=n$ 이다.
+$A$ 가 가역행렬이면 $m=n$ 이다.
 $$
-\boldsymbol{AGA} = \boldsymbol{A} \implies \boldsymbol{AGAA}^{-1} = \boldsymbol{AA}^{-1} \implies \boldsymbol{AG}= \boldsymbol{I}_n \qquad \square
+AGA = A \implies AGAA^{-1} = AA^{-1} \implies AG= I_n \qquad \square
 $$
 
 :::
@@ -76,41 +81,367 @@ $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 이고 $G=A^-$ 일 때 임의의 $y\
 
 &emsp; ($1$) $Ax=y$ 가 해 $x\in \mathcal{M}_n(\mathbb{F})$ 를 가질 필요충분조건은 $AGy = y$ 이다.
 
-&emsp; ($2$) 
-
-
-
-
-Theorem 1.1. Let A by an m×n matrix and assume that G is a generalized inverse of A (that is, AGA = A). Then, for any fixed y ∈ Rm,
-(i) the equation
-Ax = y, x ∈ Rn (1.3)
-hasasolutionx∈Rn ifandonlyifAGy=y(thatis,ifandonlyifyis
-in the range of the projection AG).
-(ii) IfAx=yhasanysolutions,thenxisasolutionofAx=yifandonly
-if
-Remark. If we want a particular solution of Ax = y for y in the range
-x = Gy + (I − GA)z for some z ∈ Rn (1.4)
+&emsp; ($2$) $Ax=y$ 가 해를 가지고 있을 때 $x_1\in \mathcal{M}_n(\mathbb{F})$ 가 해일 필요충분조건은 $x_1$ 이 어떤 $z\in \mathcal{M}_n(\mathbb{F})$ 에 대해 $x_1=Gy+(I-GA)z$ 일 때이다. 
 
 :::
-
-
-::: {#prp-generalized_inverse_of_invertible_matrix}
-
-$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 와 $\boldsymbol{G}\in \mathcal{M}_{n \times n}$  에 대해 다음은 동치이다.
-
-&emsp; ($1$) $\boldsymbol{G}$ 는 $\boldsymbol{A}$ 의 일반화된 역행렬이다.
-
-&emsp; ($2$) $\boldsymbol{AG}$ 가 멱등행렬이고 $\operatorname{rank}(\boldsymbol{AG})= \operatorname{rank}(\boldsymbol{A})$ 이거나 $\boldsymbol{GA}$ 가 멱등행렬이며 $\operatorname{rank}(\boldsymbol{GA})= \operatorname{rank}(\boldsymbol{A})$ 이다.
-
-&emsp; ($3$) $\boldsymbol{Ax}=\boldsymbol{y}$ 의 해는 $\boldsymbol{x}=\boldsymbol{Gy}$ 이다.
-
-:::
-
-
 
 ::: {.proof}
 
-($1\implies 2$) $AGA=A$ 이면 $AGAGA=AGA=A$ 이다. $(AG)^2A=A$  
+($1$) $y\in \text{im}(AG)$ 이면 $AG$ 가 projection 이므로 $AGy = y$ 이다. 따라서 $x=Gy$ 는 $Ax=y$ 의 해이다. 역으로 $Ax=y$ 이면 $GAx=Gy$ 이며 $AGAx=AGy=AGy$ 이다. 여기서 $AGA=A$ 이므로 $y=AGy$ 이다
 
-($2\implies 3$) $Ax=y$ 에 대해 
+($2$) $AGy=y$ 이면 $Ax_1 = AGy - Az - AGAz = AGy$ 이다. 따라서 $Ax=y$ 가 해를 가지고 있을 때 $x_1=Gy+(I-GA)z$ 는 $Ax=y$ 의 해이다. 역으로 $Ax=y$ 가 해를 가지고 있다고 가정하고 $z=x$ 로 놓자. $x_1=Gy + (I-GA)x = x$ 이므로 $Ax=y$ 의 해이다. $\square$
+
+:::
+
+
+</br>
+
+::: {#thm-gim_abcd}
+
+$A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 $r=\text{rank}(A)$ 일 때 적절한 행교환 $P_1$ 과 열교환 $P_2$,  가역행렬 $R\in \mathcal{M}_{r \times r}(\mathbb{F})$ 과, 어떤 $B=\mathcal{M}_{r\times (n-r)}(\mathbb{F})$, $C=\mathcal{M}_{(m-r)\times r}(\mathbb{F})$ 에 대해 
+
+$$
+P_1AP_2=\begin{bmatrix} R & B \\ C & CR^{-1}B \end{bmatrix}
+$$
+
+이다.
+
+:::
+
+::: {.proof}
+
+$A$ 를 행교환 $P_1$ 을 통해 $1$ 행부터 $r$ 행까지가 선형독립이 되도록 할 수 있다. 또한 열교환 $P_2$ 를 통해 선형독립인 $1$ 행부터 $r$ 행까지 가운데 $1$ 열부터 $r$ 열까지를 선형독립이 되도록 할 수 있다. 이렇게 변한 행렬을 $A_1 = P_1 A P_2$ 이라 하자. $A_1$ 에 대해 $1$ 행 $1$ 열부터 $r$ 행 $r$ 열 까지를 $R$ 이라고 하고 여기에 맞추어 $A_1$ 을 다음과 같이 블럭행렬로 표현 할 수 있다.
+
+$$
+A_1 = \begin{bmatrix} R & B \\ C & D \end{bmatrix}
+$$
+
+$r+1$ 행부터 $m$ 행까지는 $1$ 행부터 $r$ 행까지의 선형결합으로 표현 할 수 있다. 즉 $LR = C,\, LB = D$ 를 만족하는 행렬 $L$ 이 존재한다. 그런데 $R$ 이 가역행렬이므로 $L=CR^{-1}$ 이며, 따라서 $D=CR^{-1}B$ 이다. $\square$
+
+:::
+
+
+</br>
+
+::: {#thm-gim}
+
+@thm-gim_abcd 의 notation 에 대해 $G_0 = \begin{bmatrix} R^{-1} & 0 \\ 0 & 0 \end{bmatrix} \in \mathcal{M}_{n \times m}(\mathbb{F})$ 를 생각하자. 이 때 $G=P_2G_0 {P_1}$ 이 $A$ 의 일반화된 역행렬이다.
+
+:::
+
+::: {.proof}
+
+$$
+\begin{aligned}
+AGA &= \left({P_1}^{-1}\begin{bmatrix}R & B \\ C & CR^{-1}B\end{bmatrix} P_2\right) (P_2 G_0 P_1 ) \left({P_1}^{-1}\begin{bmatrix}R & B \\ C & CR^{-1}B\end{bmatrix} P_2\right) \\
+&= {P_1}^{-1} \begin{bmatrix}R & B \\ C & CR^{-1}B\end{bmatrix}\begin{bmatrix} R^{-1} & 0 \\ 0 & 0 \end{bmatrix}\begin{bmatrix}R & B \\ C & CR^{-1}B\end{bmatrix}{P_2 }^{-1} \\
+&= {P_1}^{-1} \begin{bmatrix} I & 0 \\ CR^{-1} &0 \end{bmatrix}\begin{bmatrix}R & B \\ C & CR^{-1}B\end{bmatrix} {P_2}^{-1} \\
+&= {P_1}^{-1} \begin{bmatrix} R & B \\ C & CR^{-1}B\end{bmatrix} {P_2}^{-1} = A. \qquad \square
+\end{aligned}
+$$
+
+:::
+
+
+</br>
+
+@thm-gim 은 일반적인 행렬에 대해 최소한 하나의 일반화된 역행렬이 존재한다는 것을 보장한다. 
+
+</br>
+
+## 펜로즈 역행렬
+
+### 정의와 기본적인 성질
+
+::: {.callout-note appearance="minimal" icon="false"}
+
+::: {#def-penrose_inverse}
+
+#### 펜로즈 역행렬
+
+행렬 $A \in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 다음의 네 조건을 만족하는 $G\in \mathcal{M}_{n \times n}(\mathbb{F})$ 를 $A$ 에 대한 **펜로즈 역행렬(Penrose inverse matrix)**, **무어-펜로즈 역행렬(Moore-Penrose inverse matrix)** 혹은 **유사 역행렬(pseudoinverse matrix)** 라고 $A^+$ 로 표기한다.
+
+&emsp; ($1$) $AGA = A$.
+
+&emsp; ($2$) $GAG = G$.
+
+&emsp; ($3$) $AG = (AG)^\ast$ 이며 $\mathcal{M}_m(\mathbb{F})$ 에 대한 projection 이다.
+
+&emsp; ($4$) $GA = (GA)^\ast$ 이며 $\mathcal{M}_n(\mathbb{F})$ 에 대한 projection 이다.
+
+:::
+:::
+
+($1$) 은 $G=A^-$ 를 의미하며 ($2$) 는 $A=G^-$ 를 의미한다. ($3$) 은 $AG$ 가 에르미트 행렬이며 projection 임을 의미하며 $4$ 는 $GA$ 가 에르미트 행렬이며 projection 임을 의미한다. 즉 펜로즈 역행렬은 일반화된 역행렬보다 조건이 좀 더 까다롭다. 또한 펜로즈 역행렬은 여러가지 좋은 성질을 가지고 있다.
+
+</br>
+
+::: {#prp-uniqueness_of_penrose_inverse}
+
+펜로즈 역행렬은 유일하다.
+
+:::
+
+::: {.proof}
+
+$A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대한 펜로즈 역행렬 $G_1,\,G_2$ 를 생각하자.
+
+$$
+\begin{aligned}
+AG_1 &= (AG_2A)G_1 = (AG_2)(AG_1) = (AG_2)^\ast (AG_1)^\ast = G_2^\ast A^\ast G_1^\ast A \\
+&=G_2^\ast (AG_1A)^\ast = G_2^\ast A^\ast = AG_2
+\end{aligned}
+$$
+
+으로부터 $AG_1= AG_2$ 를 얻는다. 또한, 
+$$
+\begin{aligned}
+G_1A &= G_1(AG_2A) = (G_1A)^\ast(G_2A)^\ast = A^\ast G_1^\ast A^\ast G_2^\ast = A^\ast G_2^\ast = G_2 A
+\end{aligned}
+$$
+
+로부터 $G_1A = G_2A$ 를 얻는다. 이를 이용하면, 
+
+
+이므로, 
+
+$$
+G_1 = G_1AG_1 = G_1(AG_1) = G_1AG_2 = (G_1A)G_2  = G_2AG_2 = G_2 
+$$
+
+이다. 즉 펜로즈 역행렬은 유일하다. $\square$
+
+:::
+
+</br>
+
+::: {#prp-penrose_inverse_for_diagonal_matrix}
+
+$D \in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 대각성분이 아닌 성분이 모두 $0$ 인 일반화된 대각행렬일 때 $D$ 의 펜로즈 역행렬 $D^{+} \in \mathcal{M}_{n \times m}(\mathbb{F})$ 는 다음과 같다.
+
+$$
+(D^+)_{ij} = \left\{\begin{array}{ll} 1/D_{ij} \qquad &\text{if } i=j \text{ and } D_{ij} \neq 0\\0 &\text{otherwise}.  \end{array}\right.
+$$
+
+
+:::
+
+::: {.proof}
+
+@def-penrose_inverse 의 각 조건을 만족함을 보이자.
+
+우선 $(DD^+)_{ij} = \sum_k D_{ik}D^{+}_{kj}= D_{ij}\delta_{ij}$ 이며 $(D^+D)= D_{ij}\delta_{ij}$ 이다.
+
+
+($1$) $(DD^+D)_{ij} = \sum_{k,l} D_{ik}D^+{kl}D_{lj} = D_{ii}D^+{ii}D_{ii} \delta_{ij}= D_{ij}\delta_{ij}$
+
+($2$) $(D^+DD^+)_{ij} = \sum_{k,l} D^+_{ik}D{kl}D^+_{lj} = D^+_{ii}D_{ii}D^+_{ii} \delta_{ij}= D^+_{ij}\delta_{ij}$
+
+($3$) $DD^+$ 는 대각행렬므로 에르미트 행렬이다. 또한 대각성분이 $0$ 혹은 $1$ 뿐인 대각행렬이므로 projection 이다.
+
+($4$) $D^+D$ 역시 ($3$) 과 같은 이유로 에르미트 행렬이며 projection 이다. $\square$
+:::
+
+
+</br>
+
+### 펜로즈 역행렬과 특이값 분해
+
+::: {#thm-psudo_invserse}
+
+특이값 분해 $A = U \Sigma V^\ast$ 에 대해 $A^+ = V\Sigma^+U^\ast$ 이다. 
+
+:::
+
+::: {.proof}
+
+@def-penrose_inverse 의 각 조건을 만족함을 보이자.
+
+($1$) $AA^+A= (U\Sigma V^\ast) (V\Sigma^+ U^\ast) (U \Sigma V^\ast)= U(\Sigma \Sigma^+ \Sigma)V^\ast = U\Sigma V^\ast = A$.
+
+($2$) $A^+AA^+ = (V\Sigma^+ U^\ast)(U\Sigma V^\ast) (V\Sigma^+ U^\ast) = V\Sigma^+\Sigma \Sigma^+ U^\ast = A^+$.
+
+($3$) $AA^+ =  (U\Sigma V^\ast) (V\Sigma^+ U^\ast) = U\Sigma \Sigma^+ U^\ast = (U\Sigma \Sigma^+ U^\ast)^\ast = (AA^+)^\ast$ 이므로 에르미트 행렬이다.  또한 $(AA^+)^2 = AA^+$ 이므로 projecion 이다.
+
+($4$) ($3$) 과 같은 방법으로 보일 수 있다. $\square$
+
+:::
+
+</br>
+
+### 펜로즈 역행렬의 항등식
+
+::: {#exr-penrose_inverse_and_adjoint}
+
+$(A^\ast)^+ = (A^+)^\ast$ 임을 보여라.
+:::
+
+::: {.solution}
+
+특이값 분해 $A=U\Sigma V^\ast$ 에 대해 
+
+$$
+(A^\ast)^+ = (V\Sigma U^\ast)^+ = U \Sigma^+ V^\ast = (V \Sigma^+ U^\ast)^\ast = (A^+)^\ast. \qquad\square 
+$$
+
+:::
+
+
+
+</br>
+
+::: {#exr-basic_properties_of_penrose_inverse_1}
+
+행렬 $A$ 와 그 펜로즈 역행럴 $A^+$ 에 대해 다음이 성립함을 보여라.
+
+&emsp; ($1$) $A^+ = A^+ {A^+}^\ast A^\ast$.
+
+&emsp; ($2$) $A^+ = A^\ast {A^+}^\ast A^+$.
+
+&emsp; ($3$) $A = {A^+}^\ast A^\ast A$.
+
+&emsp; ($4$) $A = A A^\ast {A^+}^\ast$.
+
+&emsp; ($5$) $A^\ast = A^\ast A A^+$.
+
+&emsp; ($6$) $A^\ast = A^+ A A^\ast$.
+
+:::
+
+::: {.solution}
+
+$AA^+$ 와 $A^+A$ 가 에르미트 행렬임을 이용한다.
+
+($1$) $A^+= A^+(AA^+)=A^+(AA^+)^\ast = A{A^+}^\ast A^\ast$.
+
+($2$) $A^+ = (A^+A)A^+ = (A^+A)^\ast A^+ = A^\ast{A^+}^\ast A^+$.
+
+($3$) $A=(AA^+)A =(AA^+)^\ast A = {A^+}^\ast A^\ast A$.
+
+($4$) $A = A(A^+A)= A(A^+A)^\ast = AA^\ast {A^+}^\ast$.
+
+($5$) ($3$) 을 이용한다. $A^\ast = ({A^+}^\ast A^\ast A)^\ast= A^\ast A A^+$.  
+
+($6$) ($4$) 를 이용한다. $A^\ast = (AA^\ast {A^+}^\ast)^\ast = A^+AA^\ast$. $\square$
+
+
+:::
+
+</br>
+
+::: {#prp-basic_properties_of_penrose_inverse_2}
+
+$A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $A^+ = A^\ast (AA^\ast)^+ = (A^\ast A)^+ A^\ast$ 이다.
+
+:::
+
+::: {.proof}
+
+($1$) 우선 $A^+ = A^\ast (AA^\ast)^+$ 를 보인다. $D = A^\ast(AA^\ast)^+$ 라 하자. $D$ 가  @def-penrose_inverse 를 따르는 $A$ 의 펜로즈 역행렬임을 보인다.
+
+($1-1$)
+$$
+\begin{aligned}
+AA^\ast = (AA^\ast)(AA^\ast)^+(AA^\ast) &\iff AA^\ast = ADAA^\ast \iff (I-AD)AA^\ast = 0 
+\end{aligned}
+$$ {#eq-prp_basic_properties_of_penrose_inverse_2_1}
+
+이다. 여기서 $AA^\ast$ 는 non-negative 이다. 우선 $XAA^\ast = 0 \implies AA^\ast=0$ 임을 보이자. 
+
+$$
+XAA^\ast = 0 \implies XAA^\ast X^\ast = 0 \implies (XA)(XA)^\ast = 0
+$$
+
+이므로 $XA=0$ 이다. 즉 @eq-prp_basic_properties_of_penrose_inverse_2_1 에 대해 $(I-AD)A=0 \implies ADA=A$.
+
+($1-2$) 같은 방법으로 
+
+$$
+(AA^\ast)^+ = (AA^\ast)^+(AA^\ast)(AA^\ast)^+ \implies A^\ast(AA^\ast)^+ = [A^\ast(AA^\ast)^+]A[A^\ast(AA^\ast)^+] \implies D=DAD
+$$
+
+임을 보일 수 있다.  
+
+($1-3$) $AD = AA^\ast(AA^\ast)^+$ 이므로 
+
+$$
+(AD)^\ast = [(AA^\ast)^+]^\ast AA^\ast = (AA^\ast)^+(AA^\ast) = [(AA^\ast)^+(AA^\ast)]^\ast = (AA^\ast)(AA^\ast)^+ = AD
+$$
+
+이다. 
+
+($1-4$) $DA = A^\ast(AA^\ast)^+A$ 이므로 $(DA)^\ast =A^\ast [(AA^\ast)^+]^\ast A= A^\ast(AA^\ast)^+A = DA$ 이다.
+
+따라서 $A^\ast(AA^\ast)^+ = A^+$ 이다. 
+
+
+($2$) 이제 $A^+ = (A^\ast A)^+ A^\ast$ 임을 보이자. 
+
+($2-1$) $D=(A^\ast A)^+ A^\ast$ 라 놓으면
+$$
+A^\ast A = (A^\ast A)(A^\ast A)^+ (A^\ast A) \iff A^\ast A =  A^\ast A D A \iff A^\ast A (I-DA) = 0.
+$${#eq-prp_basic_properties_of_penrose_inverse_2_2}
+
+이며 $A^\ast A$ 도 non-negative 이다. $A^\ast A X = 0$ 이면 $X^\ast A^\ast A=0$ 이므로 ($1$) 에서 보였듯이 $A^\ast A=0$ 이다. $A^\ast A X = 0 \implies X^\ast A^\ast AX = 0 \implies (AX)^\ast (AX)=0$ 이므로 $AX=0$ 이다. 따라서 $A(I-DA)=0$ 이므로 $A=ADA$ 이다.
+
+($2-2$) 같은 방법으로
+
+$$
+(A^\ast A)^+ = (A^\ast A)^+(A^\ast A) (A^\ast A)^+  \implies (A^\ast A)^+ A^\ast = DAD \implies D=DAD
+$$
+
+이다. 
+
+($2-3$) $AD = A (A^\ast A)^+ A^\ast \implies (AD)^\ast = A(A^\ast A)^+ A^\ast = AD$
+
+($2-4$) $DA = (A^\ast A)^+ A^\ast A \implies (DA)^\ast = A^\ast A (A^\ast A)^+ =  [A^\ast A (A^\ast A)^+]^\ast = (A^\ast A)^+ (A^\ast A) = DA$ 
+
+따라서 $A^+ = (A^\ast A)^+ A^\ast$ 이다. $\square$
+
+:::
+
+</br>
+
+### 행렬곱의 펜로즈 역행렬
+
+역행렬과는 달리 일반적으로 $(AB)^+ \ne B^+ A^+$ 이다. 그러나 특별한 경우에 등식이 성립한다.
+
+::: {#prp-product_of_penrose_inverse}
+
+$A\in \mathcal{M}_{m \times n}(\mathbb{F}),\, B\in \mathcal{M}_{n \times k}(\mathbb{F})$ 에 대해 $A$ 의 모든 열벡터가 northonormal 하면 $(AB)^+ = B^+ A^+$ 이다. 
+
+:::
+
+::: {.proof}
+
+$A$ 의 모든 열벡터가 orthonormal 하면 $\text{rank}(A) = n$ 이이며 $m \le n$ 이다. $A^\ast A = I_m$ 이므로 $A^+ = A^\ast$ 이다. $C=AB$, $D=B^+A^+ = B^+A^\ast$ 라고 하면, 
+
+$$
+\begin{aligned}
+CDC &= ABB^+A^\ast AB = ABB^+B=AB=C, \\
+DCD &= B^+ A^\ast AB B^+A^\ast = B^+ A^\ast = D, \\
+(CD)^\ast &= A(B^+)^\ast B^\ast A^\ast = A(BB^+)^\ast A^\ast = ABB^+A^\ast = CD, \\
+(DC)^\ast &= B^\ast A^\ast A(B^\ast)^+ = B^\ast (B^\ast)^+ = (B^+B)^\ast = B^+B = DC.
+\end{aligned}
+$$
+
+따라서 $C^+=D$ 이다. $\square$
+
+:::
+
+</br>
+
+::: {#prp-product_of_penrose_inverse}
+
+$A\in \mathcal{M}_{m \times n}(\mathbb{F}),\, B\in \mathcal{M}_{n \times k}(\mathbb{F})$ 에 $\text{rank}(A) = \text{rank}(B) = n$ 일 때 $(AB)^+ = B^+ A^+$ 이다.
+
+:::
+
+::: {.proof}
+
+$n=\text{rank} (A) \le \min(m,\,n)$ 이므로 $m\ge n$ 이어야 한다. $n=\text{rank}(B) = \min (k, n)$ 이므로 $k \ge n$ 이어야 한다.
+
+$
+
+
 :::
