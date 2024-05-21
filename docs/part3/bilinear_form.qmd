@@ -18,7 +18,7 @@ $$
 T (\cdots, v_i+cv_i', \cdots) = T(\cdots,\, v_i ,\cdots) + c T (\cdots,\, v_i',\,\cdots)
 $$
 
-를 만족하면 $T$ 는 $k$-linear form 이다. 특히 $k=1$ 일 때 **bilinear form** 이라고 한다. 그리고 $V_1=\cdots =V_k = V$ 이며 $T$ 가 $k$-linear form 일 때 $T$ 를 $V$ 에 대한 $k$-linear form 혹은 $V$ 에 대한 **$k$-텐서 ($k$-tensor)**라고 한다. $V$ 에 대한 $k$-linear form 의 집합을 $\mathcal{T}^{k}(V)$ 라고 쓴다.
+를 만족하면 $T$ 는 $k$-linear form 이다. 특히 $k=2$ 일 때 특별히 **쌍선형 형식(bilinear form)** 이라고 한다. 그리고 $V_1=\cdots =V_k = V$ 이며 $T$ 가 $k$-linear form 일 때 $T$ 를 $V$ 에 대한 $k$-linear form 혹은 $V$ 에 대한 **$k$-텐서 ($k$-tensor)**라고 한다. $V$ 에 대한 $k$-linear form 의 집합을 $\mathcal{T}^{k}(V)$ 라고 쓴다.
 
 :::
 :::
@@ -37,6 +37,9 @@ $$
 
 </br>
 
+내적과 쌍선형 형식은 모두 $U \times U \mapsto \mathbb{F}$ 함수이다. 그러나 쌍선형 형식은 내적과 두가지 면에서 다르다. 우선 $\mathbb{C}$-내적벡터공간에서 정의된 내적 $\langle\,,\,\rangle$ 과 bilinear form $T$ 의 경우 $\langle u,\, cv\rangle = \overline{c}\langle u,\,v\rangle$ 이지만 $T(u,\,cv)= cT(u,\,v)$ 이다. 또한 $\mathbb{R}$-내적벡터공간에서 $\langle u,\,v\rangle = \langle v,\,u\rangle$ 이지만 쌍선형 형식은 일반적으로 $T(u,\,v)\ne T(v,\,u)$ 이다. 
+
+</br>
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-matrix_representation_of_bilinear_form} 

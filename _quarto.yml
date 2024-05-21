@@ -35,6 +35,7 @@ book:
         - docs/part3/bilinear_form.qmd
         - docs/part3/dual_space.qmd
         - docs/part3/quotient_space_rank_of_matrix.qmd
+        - docs/part3/tensor_product.qmd
         # - docs/part3/jordan_form.qmd
     - summary.qmd
     - references.qmd
