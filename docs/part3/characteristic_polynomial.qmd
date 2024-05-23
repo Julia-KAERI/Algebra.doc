@@ -70,35 +70,35 @@ $$
 
 ::: {#exr-SNU_7_4_1}
 
-$T\in \mathcal{L}(V)$ 이고 $p(\lambda) \in \mathbb{F}[\lambda]$ 라고 하자. $v \in E(\lambda, T)$ 이면 $v \in E(p(\lambda), p(T))$ 임을 보여라.
+$L\in \mathcal{L}(V)$ 이고 $p(\lambda) \in \mathbb{F}[\lambda]$ 라고 하자. $v \in E(\lambda, L)$ 이면 $v \in E(p(\lambda), p(L))$ 임을 보여라.
 
 :::
 
 ::: {.solution}
 
-$p(t) = a_nt^n + \cdots + a_1t  + a_0$ 라고 하자. $T\in \mathcal{L}(V)$ 이면 
+$p(t) = a_nt^n + \cdots + a_1t  + a_0$ 라고 하자. $L\in \mathcal{L}(V)$ 이면 
 
 $$
 \begin{aligned}
-p(T) -p(\lambda)I_V &=  a_n(T^n -\lambda^n I_V) + \cdots + a_1(T-\lambda I_V)   \\
-&= (T-\lambda I_V)\left[  \cdots \right]
+p(L) -p(\lambda)I_V &=  a_n(L^n -\lambda^n I_V) + \cdots + a_1(L-\lambda I_V)   \\
+&= (L-\lambda I_V)\left[  \cdots \right]
 \end{aligned}
 $$ 
 
-이므로 $\left( p(T)-p(\lambda) I_V\right) v = 0$ 이다.
+이므로 $\left( p(L)-p(\lambda) I_V\right) v = 0$ 이다.
 :::
 
 </br>
 
 ::: {#exr-SNU_7_4_2}
 
-$T,\,U\in \mathcal{L}(V)$ 이고 $U$ 가 가역사상일 때 $p(t)\in \mathbb{F}[t]$ 이면 $p(U^{-1}TU) = U^{-1}p(t)U$ 임을 보여라.
+$L,\,T\in \mathcal{L}(V)$ 이고 $T$ 가 가역사상일 때 $p(t)\in \mathbb{F}[t]$ 이면 $p(T^{-1}LU) = T^{-1}p(t)T$ 임을 보여라.
 
 :::
 
 ::: {.solution}
 
-임의의 정수 $m$ 에 대해 $(U^{-1}TU)^m = U^{-1}T^mU$ 임을 이용하여 쉽게 보일 수 있다. 
+임의의 정수 $m$ 에 대해 $(T^{-1}LT)^m = T^{-1}L^mT$ 임을 이용하여 쉽게 보일 수 있다. 
 
 :::
 
@@ -107,6 +107,8 @@ $T,\,U\in \mathcal{L}(V)$ 이고 $U$ 가 가역사상일 때 $p(t)\in \mathbb{F}
 ### 행렬의 대각화와 특성다항식 {#sec-characteristic_polynomial_and_diagonalization}
 
 @thm-diagonalizability 에서 우리는 행렬의 대각화에 대해 정리하였다. 이제 행렬의 대각화를 특성다항식의 관점에서 보자.
+
+-- to be done -- 
 
 
 </br>
@@ -118,28 +120,29 @@ $T,\,U\in \mathcal{L}(V)$ 이고 $U$ 가 가역사상일 때 $p(t)\in \mathbb{F}
 
 #### Annihilator Ideal
 
-$\mathbb{F}$-벡터공간 $V$ 에 대해 $T\in \mathcal{L}(V)$ 일 때 아래와 같이 정의된 $I_T$ 를 **annihilator ideal** 이라고 한다.
+$\mathbb{F}$-벡터공간 $V$ 에 대해 $L\in \mathcal{L}(V)$ 일 때 아래와 같이 정의된 $I_L$ 를 **annihilator ideal** 이라고 한다.
 
 $$
-\mathcal{I}_T = \{ p(t) \in \mathbb{F}[t] : p(T)=0 I_V\}
+\mathcal{I}_L = \{ p(t) \in \mathbb{F}[t] : p(L)=0 I_V\}
 $$
 
 :::
 :::
 
-
+</br>
+ 
 ::: {#prp-annihilator_ideal}
 
-$\mathbb{F}$-벡터 $V$ 에 대해 $T\in \mathcal{L}(V)$ 일 때 다음을 보여라.
+$\mathbb{F}$-벡터 $V$ 에 대해 $L\in \mathcal{L}(V)$ 일 때 다음을 보여라.
 
-&emsp; ($1$) $\mathcal{I}_T \le \mathbb{F}[t]$.
+&emsp; ($1$) $\mathcal{I}_L \le \mathbb{F}[t]$.
 
-&emsp; ($2$) $g(t)\in \mathbb{F}[t],\, p \in \mathcal{I}_T \implies g(t)p(t) \in \mathcal{I}_T$.
+&emsp; ($2$) $g(t)\in \mathbb{F}[t],\, p \in \mathcal{I}_L \implies g(t)p(t) \in \mathcal{I}_L$.
 :::
 
 ::: {.proof}
 
-($1$) $0\in \mathcal{I}_T$ 임은 자명하다. $p,\, q\in \mathcal{I}_T$ 이고 $c\in \mathbb{F}$ 라면 $(p+cq)(t) = p(t) +cq(t) \in \mathcal{I}_T$ 임은 자명하다. 이로부터 $\mathcal{I}_T\le \mathbb{F}[t]$ 라는 것을 쉽게 보일 수 있다.
+($1$) $0\in \mathcal{I}_T$ 임은 자명하다. $p,\, q\in \mathcal{I}_L,\,c\in \mathbb{F}$ 에 대해 $(p+cq)(t) = p(t) +cq(t) \in \mathcal{I}_L$ 임은 자명하다. 이로부터 $\mathcal{I}_L\le \mathbb{F}[t]$ 라는 것을 쉽게 보일 수 있다.
 
 ($2$) trivial 하다.
 
@@ -164,7 +167,7 @@ $S,\, T\in \mathcal{L}(V)$ 에 대해 $S\sim T$ 이면 $\mathcal{I}_S= \mathcal{
 
 ::: {#prp-annihilator_ideal_is_nontrivial}
 
-유한차원 벡터공간 $V$ 에서 정의된 $T\in \mathcal{L}(V)$ 에 대해 $\mathcal{I}_T \ne \{0\}$ 이다.
+유한차원 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 에 대해 $\mathcal{I}_L \ne \{0\}$ 이다.
 
 :::
 
@@ -204,7 +207,7 @@ $$
 
 #### 케일리-해밀턴 정리(Cayley-Hamilton Theorem)
 
-유한차원 벡터공간 $V$ 에서 정의된 $T\in \mathcal{L}(V)$ 와 특성다항식 $p_T(t) = \det (tI_V - T)$ 에 대해 $p_T \in \mathcal{I}_T$ 이다.
+유한차원 $\mathbb{F}$-벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 와 특성다항식 $p_L(t) = \det (tI_V - L)$ 에 대해 $p_L \in \mathcal{I}_L$ 이다.
 
 :::
 
@@ -216,7 +219,7 @@ $$
 p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymbol{I}_n)=0
 $$ 
 
-임을 보이면 된다. $\boldsymbol{A}$ 가 상삼각행렬이므로 $(\boldsymbol{A}- A_{ii}\boldsymbol{I}_n)_{ii}  = 0$ 이다. 위의 @exr-before_cayley_hamilton 에서 보였듯이 $p_\boldsymbol{A}(\boldsymbol{A}) =0$ 이므로 $p_T(T) \in \mathcal{I}_T$ 이다.
+임을 보이면 된다. $\boldsymbol{A}$ 가 상삼각행렬이므로 $(\boldsymbol{A}- A_{ii}\boldsymbol{I}_n)_{ii}  = 0$ 이다. 위의 @exr-before_cayley_hamilton 에서 보였듯이 $p_\boldsymbol{A}(\boldsymbol{A}) =0$ 이므로 $p_T(L) \in \mathcal{I}_L$ 이다.
 
 이제 $\mathbb{F}=\mathbb{R}$ 인 경우에 대해 생각하자. $\mathbb{R}\subset \mathbb{C}$ 이므로 성립하지 않을 이유가 없다. $\square$ 
 
@@ -235,7 +238,7 @@ $$
 
 #### 최소다항식
 
-$T\in \mathcal{L}(V)$ 에 대한 annihilator ideal $\mathcal{I}_T$ 가운데 1 차 이상의 다항식 중 가장 작은 차수를 갖는 monic 다항식을 $T$ 에 대한 **최소다항식(minimal polynomnial)** 이라고 한다. 
+$L\in \mathcal{L}(V)$ 에 대한 annihilator ideal $\mathcal{I}_L$ 가운데 1 차 이상의 다항식 중 가장 작은 차수를 갖는 monic 다항식을 $L$ 에 대한 **최소다항식(minimal polynomnial)** 이라고 한다. 
 
 :::
 :::
@@ -244,13 +247,13 @@ $T\in \mathcal{L}(V)$ 에 대한 annihilator ideal $\mathcal{I}_T$ 가운데 1 �
 
 ::: {#thm-existance_and_uniqueness_of_minimal_polynomial}
 
-$T\in \mathcal{L}(V)$ 에 대한 최소다항식은 존재하며, 유일하다.
+$L\in \mathcal{L}(V)$ 에 대한 최소다항식은 존재하며, 유일하다.
 
 :::
 
 ::: {.proof}
 
-@prp-annihilator_ideal_is_nontrivial 에 의해 $T$ 에 대한 최소다항식은 존재한다. 이제 $p,\,q$ 가 $T$ 에 대한 최소다항식이라고 하자. 당연히 두 다항식은 같은 차수 $m$ 를 가진다. $p \ne q$ 라면 $r=p-q$ 는 $m$ 보다 작은 차수를 가지며 $r(T)=0$ 이다. $p,\,q$ 가 최소다항식이므로 남은 유일한 가능성은 $r=0$ 일 때 뿐이며 따라서 $p=q$ 이다. $\square$
+@prp-annihilator_ideal_is_nontrivial 에 의해 $L$ 에 대한 최소다항식은 존재한다. 이제 $p,\,q$ 가 $L$ 에 대한 최소다항식이라고 하자. 당연히 두 다항식은 같은 차수 $m$ 를 가진다. $p \ne q$ 라면 $r=p-q$ 는 $m$ 보다 작은 차수를 가지며 $r(L)=0$ 이다. $p,\,q$ 가 최소다항식이므로 남은 유일한 가능성은 $r=0$ 일 때 뿐이며 따라서 $p=q$ 이다. $\square$
 :::
 
 </br>
@@ -271,7 +274,7 @@ $V$ 에서의 두 연산자가 닮았으면, 두 연산자의 최소다항식은
 
 ::: {#prp-divisability_of_annihilator_ideal}
 
-$p\in \mathcal{I}_T$ 는 $T$ 에 대한 최소다항식으로 나누어 떨어진다. 또한 최소다항식에 임의의 다항식을 곱한 다항식은 $\mathcal{I}_T$ 포함된다.
+$p\in \mathcal{I}_L$ 는 $L$ 에 대한 최소다항식으로 나누어 떨어진다. 또한 최소다항식에 임의의 다항식을 곱한 다항식은 $\mathcal{I}_L$ 포함된다.
 
 :::
 
@@ -283,28 +286,25 @@ $p\in \mathcal{I}_T$ 는 $T$ 에 대한 최소다항식으로 나누어 떨어�
 
 ## 일반화된 고유벡터 와 일반화된 고유공간
 
-벡터공간 $V$ 에서의 선형 연산자 $T\in \mathcal{L}(V)$ 에 대해 다음이 성립한다는 것은 쉽게 보일 수 있다.
+벡터공간 $V$ 에서의 선형 연산자 $L\in \mathcal{L}(V)$ 에 대해 다음이 성립한다는 것은 쉽게 보일 수 있다.
 
 ::: {#prp-kernel_of_power_of_operator}
 
-$T\in \mathcal{L}(V)$ 에서
+$L\in \mathcal{L}(V)$ 이며 $L^0 :=I_V$ 라고 하자. 이 때 다음이 성립한다. 
 
 $$
-\{0\} \subset \ker (T^0) \subset \ker (T^1)  \subset \cdots \subset \ker (T^k) \subset \ker (T^{k+1})\subset \cdots
+\{0\} \subset \ker (L^0) \subset \ker (L^1)  \subset \cdots \subset \ker (L^k) \subset \ker (L^{k+1})\subset \cdots.
 $$
-
-이 성립한다. 이 때 $T^0$ 는 항등연산자이다.
-
 :::
 
 </br>
 
 ::: {#prp-equality_in_the_sequence_of_kernel}
 
-$T\in \mathcal{L}(V)$ 에서 어떤 자연수 $m$ 에 대해 $\ker (T^m) = \ker (T^{m+1})$ 이면 $n\ge m$ 에 대해 
+$L\in \mathcal{L}(V)$ 에서 어떤 자연수 $m$ 에 대해 $\ker (L^m) = \ker (L^{m+1})$ 이면 $n\ge m$ 에 대해 
 
 $$
-\ker (T^n) = \ker (T^m)
+\ker (L^n) = \ker (L^m)
 $$
 
 이다.
@@ -312,7 +312,7 @@ $$
 
 ::: {.proof}
 
-@prp-kernel_of_power_of_operator 에 의해 $\ker (T^m)\subset \ker (T^n)$ 이다. 따라서 $\ker (T^n) \subset \ker (T^m)$ 임을 보이면 된다. 만약 우리가 임의의 양의 정수 $k$ 에 대해 $\ker (T^{m+k+1}) \subset \ker (T^{m+k})$ 임을 보인다면 연쇄적으로 $\ker (T^n) = \ker (T^m)$ 라는 것을 보이는 것이 된다. 
+@prp-kernel_of_power_of_operator 에 의해 $\ker (L^m)\subset \ker (L^n)$ 이다. 따라서 $\ker (L^n) \subset \ker (L^m)$ 임을 보이면 된다. 만약 우리가 임의의 양의 정수 $k$ 에 대해 $\ker (L^{m+k+1}) \subset \ker (L^{m+k})$ 임을 보인다면 연쇄적으로 $\ker (L^n) = \ker (L^m)$ 라는 것을 보이는 것이 된다. 
 $$
 \begin{aligned}
 v\in \ker (T^{m+k+1}) &\implies T^{m+1}(T^{k}v) = 0\\
