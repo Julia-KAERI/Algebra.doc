@@ -315,12 +315,12 @@ $$
 @prp-kernel_of_power_of_operator 에 의해 $\ker (L^m)\subset \ker (L^n)$ 이다. 따라서 $\ker (L^n) \subset \ker (L^m)$ 임을 보이면 된다. 만약 우리가 임의의 양의 정수 $k$ 에 대해 $\ker (L^{m+k+1}) \subset \ker (L^{m+k})$ 임을 보인다면 연쇄적으로 $\ker (L^n) = \ker (L^m)$ 라는 것을 보이는 것이 된다. 
 $$
 \begin{aligned}
-v\in \ker (T^{m+k+1}) &\implies T^{m+1}(T^{k}v) = 0\\
-&\implies T^k v \in \ker (T^{m+1}) = \ker(T^{m})
+v\in \ker (L^{m+k+1}) &\implies L^{m+1}(T^{k}v) = 0\\
+&\implies L^k v \in \ker (L^{m+1}) = \ker(L^{m})
 \end{aligned}
 $$
 
-이므로 $\ker (T^{m+k+1}) \subset \ker (T^{m})$ 이다. $\square$
+이므로 $\ker (L^{m+k+1}) \subset \ker (L^{m})$ 이다. $\square$
 :::
 
 </br>
