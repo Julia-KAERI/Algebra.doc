@@ -1,18 +1,20 @@
 ---
-title: "Bilinear Form"
+title: "다중선형 형식"
 number-sections: true
 number-depth : 3
 crossref:
   chapters: true
 ---
 
-## Bilinear form
+## 다중선형 형식과 쌍선형 형식
+
+### 쌍선형 형식의 정의 {#sec-bilinear_form}
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-k_linear_form} 
-#### $k$-linear form
+#### $k$-다중선형 형식, 쌍선형 형식, $k$-텐서
 
-$V_1,\ldots,\,V_k$ 가 $\mathbb{F}$-벡터공간이라고 하자. 함수 $T : V_1 \times \cdots \times V_k \to \mathbb{F}$ 가 각각의 $V_i$ 에 대해 선형일 때 $T$ 를 $k$**-linear form** 이라고 한다. 즉 임의의 $i\in \{1,\ldots,\,k\}$ 에 대해 $v_i,\,v_i'\in V_i$, $c\in \mathbb{F}$ 일 때, 
+$V_1,\ldots,\,V_k$ 가 $\mathbb{F}$-벡터공간이라고 하자. 함수 $T : V_1 \times \cdots \times V_k \to \mathbb{F}$ 가 각각의 $V_i$ 에 대해 선형일 때 $T$ 를 $k$-**다중선형 형식**($k$**-linear form**) 이라고 한다. 즉 임의의 $i\in \{1,\ldots,\,k\}$ 에 대해 $v_i,\,v_i'\in V_i$, $c\in \mathbb{F}$ 일 때, 
 
 $$
 T (\cdots, v_i+cv_i', \cdots) = T(\cdots,\, v_i ,\cdots) + c T (\cdots,\, v_i',\,\cdots)
@@ -27,7 +29,7 @@ $$
 
 ::: {#exm-k_linear_1}
 
-$T$ 가 벡터공간 $V$ 에 대한 $k$-linear form 일 때 다음이 성립한다.
+$T$ 가 벡터공간 $V$ 에 대한 $k$-다중선형형식 일 때 다음이 성립한다.
 
 $$
 T(\cdots, 0, \cdots ) = 0
@@ -41,11 +43,73 @@ $$
 
 </br>
 
+
+</br>
+ 
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-arithmatics_for_multilinear_form} 
+####  다중선형 형식의 합과 스칼라곱
+
+$\mathbb{F}$-벡터공간 $V_1,\ldots,\,V_k$ 에서 정의된 $k$-다중선형형식 $S,\,T$ 와 $c\in \mathbb{F}$ 에 대해 합과 스칼라곱을 아래와 같이 정의한다. 
+
+$$
+(S+aT)(v_1,\ldots,\,v_k) :=  S(v_1,\ldots,\,v_k) + c\cdot T(v_1,\ldots,\,v_k)
+$$
+
+:::
+:::
+
+
+</br>
+
+::: {#prp-vector_space_of_k_linear_form}
+
+$\mathbb{F}$-벡터공간 $V_1,\ldots,\,V_k$ 에서 정의된 $k$-다중선형형식의 집합 $\mathfrak{M}_k$ 는 @def-arithmatics_for_multilinear_form 에 의해 벡터공간이다.
+
+:::
+
+::: {.proof}
+
+우선 $0_T: \mathfrak{M}_k \to \mathbb{F}$ 를 다음과 같이 정의한다.
+
+$$
+0_M(v_1,\ldots,\,v_k) := 0
+$$ {#eq-zero_of_k_linear_form}
+
+이렇게 정의된 $0_M$ 는 $\mathfrak{M}_k$ 에 포함된다. $T_1,\, T_2\in \mathfrak{M}_k,\, c\in \mathbb{F}$ 에 대해 합과 스칼라곱을 다음과 같이 정의한다.
+
+$$
+\begin{aligned}
+(T_1 + c T_2)(v_1,\ldots,\,v_k) := T_1 (v_1,\ldots,\,v_k) + cT_2 (v_1,\ldots,\,v_k)
+\end{aligned}
+$$ {#eq-operation_in_k_linear_form}
+
+그렇다면 $T_1 + cT_2\in \mathfrak{M}_k$ 이다. 이를 통해 우리는 $\mathfrak{M}_k$ 가 벡터공간임을 알 수 있다. $\square$
+
+:::
+
+</br>
+
+
+여기서는 일반적인 $k$-다중형식보다는 쌍선형 형식과 $k$-텐서에 대해 집중해서 다루기로 한다. 보통 쌍선형 형식도 서로 다른 $U,\,V$ 에 대해 정해지는 것보다는 2-텐서를(즉 $U=V$ 인 경우) 더 많이 사용한다. 벡터공간 $V$ 에 대한 쌍선형 형식이라고 할 때는 $V$ 에 대한 $2$-텐서 를 의미한다. 이제 @prp-vector_space_of_k_linear_form 로부터 자연스럽게 아래의 결론을 내릴 수 있다.
+
+::: {#prp-bilinear_and_k_tensor_are_vector_space}
+
+벡터공간 $V$ 에서 정의된 쌍선형 형식의 집합은 벡터공간이다. 벡터공간 $V$ 에서 정의된 $k$-텐선의 집합 $\mathcal{T}^k(V)$ 는 벡터공간이다.
+
+:::
+
+
+</br>
+
+
+### 쌍선형 형식의 행렬 표현 {#sec-matrix_representation_of_bilinear_form}
+
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-matrix_representation_of_bilinear_form} 
-#### Bilinear form 의 행렬표현
+#### 쌍선형 형식의 행렬표현
 
-유한차원 $\mathbb{F}$-벡터공간 $V$ 에 대한 bilinear form $T\in \mathcal{T}^2(V)$ 을 생각하자. $\mathcal{B}=(v_1,\ldots,\,v_n)$ 이 $V$ 의 기저라고 할 때 $T$ 의 $\mathcal{B}$ 에 대한 행렬표현 $[T]_{\mathcal{B}}$ 를 다음과 같이 정의한다.
+유한차원 $\mathbb{F}$-벡터공간 $V$ 에서의 쌍선형 형식 $T\in \mathcal{T}^2(V)$ 을 생각하자. $\mathcal{B}=(v_1,\ldots,\,v_n)$ 이 $V$ 의 기저라고 할 때 $T$ 의 $\mathcal{B}$ 에 대한 행렬표현 $[T]_{\mathcal{B}}$ 를 다음과 같이 정의한다.
 
 $$
 ([T]_{\mathcal{B}})_{i, j} = T(v_i, v_j).
@@ -74,13 +138,14 @@ T(v, v') &= \sum_{i, j} T(a_i v_i, b_j, v_j) = \sum_{i, j} a_i b_j T(v_i, v_j) =
 &= \left([v]_\mathcal{B}\right)^T [T]_\mathcal{B} [v']_\mathcal{B}. \qquad \square
 \end{aligned}
 $$
+
 :::
 
 </br>
 
 ::: {#prp-bilinear_form_for_column_space}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 아래와 같이 정의된 $B:\mathcal{M}_n(\mathbb{F}) \times \mathcal{M}_n(\mathbb{F}) \to \mathbb{F}$ 는 $\mathcal{M}_n(\mathbb{F})$ 에 대한 blinear form 이다.
+$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 아래와 같이 정의된 $B:\mathcal{M}_n(\mathbb{F}) \times \mathcal{M}_n(\mathbb{F}) \to \mathbb{F}$ 는 $\mathcal{M}_n(\mathbb{F})$ 에 대한 쌍선형 형식이다.
 
 $$
 B(\boldsymbol{u}, \boldsymbol{v}) = \boldsymbol{u}^T\boldsymbol{A}\boldsymbol{v}.
@@ -94,50 +159,13 @@ trivial.
 
 </br>
 
-위의 두 명제를 가만히 생각해보자. Bilinear form 을 행렬로 생각 할 수 있고, 임의의 행렬에 대한 bilinear form 을 정의 할 수 있다. 행렬과 선형사상의 관계를 밝힐 때 했던 것을 여기서 다시 한 번 해보자.
-
-</br>
-
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-arithmatics_for_bilinear_form} 
-#### Bilinear form 의 합과 스칼라곱
-
-$\mathbb{F}$-벡터공간 $V$ 에 대해 $S,\,T\in \mathcal{T}^2(V),\, a\in \mathbb{F}$ 일 때 다음과 같이 정의한다.
-
-$$
-(S+aT)(v_1,\,v_2) =  S(v_1, v_2) + a\cdot T(v_1, v_2).
-$$
-
-:::
-:::
-
-</br>
-
-::: {#prp-set_of_bilinear_form_is_vector_space}
-
-$\mathbb{F}$-벡터공간 $V$ 에 대한 $\mathcal{T}^2(V)$ 는 $\mathbb{F}$-벡터공간이다.
-:::
-
-
-::: {.proof}
-모든 $v_i,\,v_j\in V$ 에 대해 $T(v_i, v_j)=0$ 인 $T$ 도 $V$ 에 대한 bilinear form 이다. 따라서 $\mathcal{T}^2(V)\ne \varnothing$ 이다. $S,\,T\in \mathcal{T}^2(V)$ 이며 $a,\,b\in \mathbb{F}$ 라고 하자.
-
-$$
-\begin{aligned}
-(S+aT)(v_1 + bv_2, v_3) &= S(v_1 +bv_2, v_3) + aT(v_1 +bv_2, v_3) \\
-&=  S(v_1, v_3)+ bS(v_2, v_3) + aT(v_1, v_3)+ abT(v_2, v_3) \\
-&= (S+aT)(v_1, v_3) + b(S+aT)(v_1, v_3)
-\end{aligned}
-$$
-
-같은 방법으로 $(S+aT)(v_1 , v_2+bv_3) = (S+aT)(v_1, v_2) + b(S+aT)(v_1, v_3)$ 임을 보일 수 있다. 즉 $S,\, T\in \mathcal{T}^2(V)$ 와 $a\in \mathbb{F}$ 에 대해 $S+aT\in \mathcal{T}^2(V)$ 이다.  벡터공간에 대한 나머지 사항들은 쉽게 증명 할 수 있다. $\square$
-:::
+위의 두 명제를 가만히 생각해보자. 쌍선형 형식을 행렬로 생각 할 수 있고, 임의의 행렬을 이용하여 쌍선형 형식을 정의 할 수 있다. 행렬과 선형사상의 관계를 밝힐 때 했던 것을 여기서 다시 한 번 해보자.
 
 </br>
 
 ::: {#thm-isomorphism_between_matrix_and_bilinear}
 
-$n$ 차원 $\mathbb{F}$-벡터공간 $V$ 의 기저 $\mathcal{B}_V = \{v_1,\ldots,\,v_n\}$ 을 생각하자. 아래에 정의된 $\Phi_\mathcal{B} : \mathcal{T}^2(V) \to \mathcal{M}_{n\times n}(\mathbb{F})$ 는 동형사상이다.
+$n$ 차원 $\mathbb{F}$-벡터공간 $V$ 의 기저 $\mathcal{B}_V = (v_1,\ldots,\,v_n)$ 을 생각하자. 아래에 정의된 $\Phi_\mathcal{B} : \mathcal{T}^2(V) \to \mathcal{M}_{n\times n}(\mathbb{F})$ 는 동형사상이다.
 
 $$
 \Phi_\mathcal{B} (T) = [T]_\mathcal{B}.
@@ -156,66 +184,132 @@ $$
 이다. 따라서 $\Phi_\mathcal{B}(S+aT) = \Phi_\mathcal{B}(S) + a \Phi_\mathcal{B}(T)$ 이므로 $\Phi_B$ 는 선형사상이다.
 
 
-임의의 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 와 $v_1,\,v_2 \in V$ 에 대해 $([v_1]_\mathcal{B})^T \boldsymbol{A} [v_2]_\mathcal{B}$ 는 $V$ 에서의 bilinear form 이다. 따라서 $\Phi_\mathcal{B}$ 는 전사이다. 또한 @prp-matrix_representation_of_blinear_form 에 따라 $[T]_\mathcal{B}$ 는 유일하게 정해진다. 따라서 $\Phi_\mathcal{B}$ 는 전사이다. 즉 $\Phi_\mathcal{B}$ 는 동형사상이다.
+임의의 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 와 $v_1,\,v_2 \in V$ 에 대해 $([v_1]_\mathcal{B})^T \boldsymbol{A} [v_2]_\mathcal{B}$ 는 $V$ 에서의 쌍선형 형식이다. 따라서 $\Phi_\mathcal{B}$ 는 전사이다. 또한 @prp-matrix_representation_of_blinear_form 에 따라 $[T]_\mathcal{B}$ 는 유일하게 정해진다. 따라서 $\Phi_\mathcal{B}$ 는 단사이다. 즉 $\Phi_\mathcal{B}$ 는 동형사상이다.
 
 :::
 
 </br>
 
-## Symmetric form 과 alternating form
+## 대칭형식과 교대형식 
 
-
+### 대칭형식 과 교대형식의 정의 {#sec-def_of_symmetric_form_and_alternating_form}
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-alternating_form} 
-#### Symmetric form, Alternating form
+#### 대칭형식 교대형식
 
 
-$T\in \mathcal{T}^k(V)$ 이며 $T$ 의 임의의 두 벡터 $v,\,v'\in V$ 에 대해 다음이 성립하면 $T$ 를 $V$ 에 대핸 **$k$-symmetric form** 이라고 한다.
+$T\in \mathcal{T}^k(V)$ 에 대해 $T$ 에 입력되는 두 벡터의 위치를 바꾸어도 그 값이 바뀌지 않는다면 $T$ 를 $V$ 에 대핸 $k$-**대칭형식**($k$-**symmetric form**) 이라고 한다. 즉 $T$ 가 $k$-대칭형식이면 임의의 $v,\,v'\in V$ 에 대해 다음이 성립한다.
 
 $$
-T(\cdots, v_i, \cdots,v_j, \cdots) = T(\cdots, v_j,\cdots, v_i,\cdots)
-$$
+T(\cdots, v, \cdots,v', \cdots) = T(\cdots, v',\cdots, v,\cdots)
+$$ {#eq-def_symmetric_form}
 
 
-반대로 $T\in \mathcal{T}^k(V)$ 이며 $v\in V$ 에 대해 다음이 성렵하면 $T$ 를 $V$ 에 대한 **$k$-alternating form** 이라고 한다. 즉,
+반대로 $T\in \mathcal{T}^k(V)$ 에 대해 $T$ 입력되는 두 벡터의 위치를 바꾸었을 때 그 값이 항상 $0$ 이 되면 $T$ 를 $V$ 에 대한 **$k$-교대형식**(**$k$-alternating form**) 이라고 한다. 즉 임의의 $v\in V$ 에 대해
 
 $$
 T(\cdots, v, \cdots,v, \cdots) =0
-$$
+$$ {#eq-def_alternating_form}
 
-이면 $T$ 를 $V$ 에 대한 $k$-alternating form 이라고 한다. $V$ 에 대한 $k$-symmetric form 의 집합을 $\mathcal{S}^k(V)$ 라고 쓰고 $k$-alternating form 의 집합을 $\mathcal{A}^k(V)$ 라고 쓴다.
+이면 $T$ 는 $V$ 에 대한 $k$-교대형식 이다. $V$ 에 대한 $k$-대칭형식의 집합을 $\mathcal{S}^k(V)$ 라고 쓰고 $k$-교대형식 의 집합을 $\mathcal{A}^k(V)$ 라고 쓴다.
 
 :::
 :::
 
-
-</br> 
+</br>
 
 ::: {#prp-k_alternating_form}
 
-$T\in \mathcal{A}^k(V)$ 이면 
+$T\in \mathcal{S}^k(V)$ 에 대해 다음은 동치임을 보여라.
+
+&emsp; ($1$) $T$ 는 $k$-교대형식이다. 즉 $T\in \mathcal{A}^k(V)$ 이다.
+
+&emsp; ($2$) $T$ 에 입력되는 벡터들 가운데 두개의 위치를 바꾸면 결과값은 원래값에 $-1$ 을 곱한값이다. 즉
 
 $$
 T( \cdots, v_i, \cdots, v_j ,\cdots) = - T(\cdots, v_j, \cdots, v_i, \cdots)
-$$
+$$ {#eq-def_alternating_form_2}
 
 이다. 
 :::
 
 ::: {.proof}
-$T(\cdots, v_i + v_j, \cdots, v_i + v_j, \cdots) = 0$ 이다. $\square$
+
+($1 \implies 2$) 임의의 두 벡터의 위치를 선택하여 $T(\cdots, v, \cdots, v', \cdots)$ 를 $T(v,\,v)$ 라고 표기하자. 교대형식의 정의에 의해 $T(v,v)=0$ 이다. 
+$$ 
+\begin{aligned}
+0 = T(v_i + v_j, v_i + v_j) &= T(v_i, v_i) + T(v_i, v_j) + T(v_j, v_i) + T(v_j, v_j) = T(v_i, v_j)+ T(v_j, v_i)
+\end{aligned}
+$$
+
+이므로 $T(v_i, v_j)=-T(v_j, v_i)$ 이다.
+
+($2 \implies 1$) $T(v,v)= -T(v,v)$ 이므로 $T(v,v)=0$ 이다. $\square$
+
 :::
+
+
+즉 교대형식의 정의 @eq-def_alternating_form 과 @eq-def_alternating_form_2 는 동치이다. 
+
 
 </br>
 
-우리는 이것을 이미 [행렬식](../part1/ch1_03_determinant.qmd) 에서 보았다. 행렬식은 $n$ 차원 벡터 $V$ 에 대한 $n$-alternating form 의 대표적인 함수이다. 이제부터 우리는 $\mathcal{S}^2(V)$ 와 $\mathcal{A}^2(V)$ 에 집중하기로 하자.
+우리는 앞서 $\mathcal{T}^k(V)$ 가 벡터공간임을 보였다. $\mathcal{S}^k(V)$ 와 $\mathcal{A}^k(V)$ 는 $\mathcal{T}^k(V)$ 의 부분집합이기 때문에 당연한 질문에 답해야 한다.
+
+::: {#prp-symetric_and_alternating_form_are_subspace}
+
+$\mathcal{S}^k(V)$ 와 $\mathcal{A}^k(V)$ 는 $\mathcal{T}^k(V)$ 의 부분공간이다.
+
+:::
+
+::: {.proof}
+
+@eq-zero_of_k_linear_form 의 $0_M$ 는 
+
+$$
+0_M(\cdots, v_i, \cdots,v_j, \cdots) = 0_M(\cdots, v_j,\cdots, v_i,\cdots)=0
+$$
+
+이므로 $0_M\in \mathcal{S}^k(V)$ 이다. $S_1,\,S_2\in \mathcal{S}^k(V),\, c\in \mathbb{F}$ 에 대해 $S_1 + cS_2\in \mathcal{T}^k(V)$ 임을 쉽게 보일 수 있다. 따라서 $\mathcal{S}^k(V)\le \mathcal{T}^k(V)$ 이다. 같은 방법으로 $\mathcal{A}^k(V) \le \mathcal{T}^k(V)$ 임을 보일 수 있다. $\square$
+
+:::
+
+
+</br> 
+
+$k$-교대형식을 다시 보자. 우리는 이것을 이미 [행렬식](../part1/ch1_03_determinant.qmd) 에서 보았다. 행렬식은 $n$ 차원 벡터 $V$ 에 대한 $n$-교대형식의 대표적인 예이다. 이제부터 우리는 $\mathcal{S}^2(V)$ 와 $\mathcal{A}^2(V)$ 에 집중하기로 하자. 우리는 쌍선형 형식이 행렬로 표현될 수 있다는 것을 안다. 당연히 대칭형식과 교대형식도 행렬로 표현될 수 있는데, 각각의 행렬은 대칭적인 특성을 가지고 있다. 우선 미리 행렬의 형식에 대해 정의하자.
+
+</br>
+
+::: {.callout-note appearance="minimal"}
+::: {#def-symmmectric_and_skew_symmetric_matrix}
+
+#### 대칭행렬, 반대칭 행렬
+
+$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 모든 $1\le i,\,j\ne n$ 에 대해 $A_{ij}= A_{ji}$ 일 때 $\boldsymbol{A}$ 를 **대칭행렬(symmectric matrix)** 라고 한다. 모든 $1 \le i \le j \le n$ 에 대해 $A_{ij} = -A_{ji}$ 일 때 $\boldsymbol{A}$ 를 **교대행렬(alternaing matrix)** 혹은 **반대칭 행렬(skew-symmetric matrix)** 이라고 한다.
+
+:::
+:::
+
+
+</br>
+
+::: {#exm-alternating_matrix}
+
+$\boldsymbol{A}$ 가 교대행렬이라면 $A_{ii} = - A_{ii}$ 이므로 모든 대각성분은 $0$ 이다.
+:::
+
+
+</br>
+
+이제 대칭형식과 교대형식에 대한 행렬표현에 대해 알아보자.
 
 </br>
 
 ::: {#prp-matrix_form_of_symmetric_form}
 
-유한차원 벡터공간 $V$ 에 대해 $\mathcal{B}$ 가 $V$ 의 기저라고 할 때 두 명제는 동치이다.
+유한차원 벡터공간 $V$ 와 그 기저 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 에 대해 아래 두 명제는 동치이다.
 
 &emsp; ($1$) $T\in \mathcal{S}^2(V)$ 이다.
 
@@ -225,7 +319,7 @@ $T(\cdots, v_i + v_j, \cdots, v_i + v_j, \cdots) = 0$ 이다. $\square$
 
 ::: {.proof}
 
-$T(v_i, v_j)= ([T]_\mathcal{B})_{ij}$,  $T(v_j, v_i) = ([T]_{\mathcal{B}})_{ji}$ 이다. 따라서,
+$T(v_i, v_j)= ([T]_\mathcal{B})_{ij}$,  $T(v_j, v_i)= ([T]_{\mathcal{B}})_{ji}$ 이다. 따라서,
 $$
 T\in \mathcal{S}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= T(v_2, v_1) \iff ([T]_\mathcal{B})_{ij} = ([T]_{\mathcal{B}})_{ji}
 $$
@@ -238,12 +332,11 @@ $$
 
 ::: {#prp-matrix_form_of_alternating_form}
 
-유한차원 벡터공간 $V$ 에 대해 $\mathcal{B}$ 가 $V$ 의 기저라고 할 때 두 명제는 동치이다.
+유한차원 벡터공간 $V$ 와 그 기저 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 에 대해 아래 두 명제는 동치이다.
 
 &emsp; ($1$) $T\in \mathcal{A}^2(V)$ 이다.
 
-&emsp; ($2$) $([T]_\mathcal{B})_{ij} = - ([T]_\mathcal{B})_{ji}$ 이다.[$A_{ij} = -A_{ji}$ 형태의 행렬을 *skew-symmetric* 이라고 한다.]{.aside}
-
+&emsp; ($2$) $[T]_\mathcal{B}$ 는 교대행렬이다. 
 :::
 
 ::: {.proof}
@@ -256,6 +349,12 @@ $$
 이다. $\square$
 
 :::
+
+
+</br>
+
+이제 벡터공간으로서의 $\mathcal{T}^2(V)$ 와 그 부분공간으로서의 $\mathcal{S}^2(V),\, \mathcal{A}^2(V)$ 의 성질에 대해 알아보자.
+
 
 </br>
 
@@ -273,15 +372,9 @@ $$
 
 ::: {.proof}
 
-$V$ 의 기저 $\mathcal{B} = \{v_1,\ldots,\,v_n\}$ 을 생각하자.
+$V$ 의 기저 $\mathcal{B} = (v_1,\ldots,\,v_n)$ 을 생각하자.
 
-($1$) $A,\,B\in \mathcal{S}^2(V),\, c\in \mathbb{F}$ 일 때, 
-
-$$
-(A+cB)(v,\,v') = A(v,\,v') + cB(v,\,v')= A(v',\,v) +cB(v',\,v) = (A+cB)(v',\,v)
-$$
-
-이며 $0\in \mathcal{T}^2(V)$ 도 $0(v,\,v')=0 = 0(v',\,v)$ 이므로 $0\in \mathcal{S}^2(V)$ 이다. 따라서 $\mathcal{S}^2(V) \le \mathcal{T}^2(V)$ 이다. 같은 방법으로 $\mathcal{A}^2(V)\le \mathcal{T}^2(V)$ 임을 보일 수 있다.
+($1$) @prp-symetric_and_alternating_form_are_subspace
 
 ($2$) $\boldsymbol{E}^{(i, j)} \in \mathcal{M}_{n\times n}(\mathbb{F})$ 를 $i$ 행 $j$ 열 성분은 $1$, 나머지 $n^2-1$ 개의 성분은 $0$ 인 행렬이라고 하자. $\{\boldsymbol{E}^{(i, j)}:  1 \le i,\,j\le n\}$ 은 $\mathcal{M}_{n \times n}(\mathbb{F})$ 의 기저임은 쉽게 알 수 있다. 이 때, 
 
@@ -304,22 +397,95 @@ $$
 
 </br>
 
-## Quadratic form
+### 교대형식과 행렬식 {#sec-alternating_form_and_determinant_of_matrix}
 
-### Quadratic form {#sec-quadratic_form}
+우리가 @sec-determinant 에서 행렬식을 도입할 때 우선 행렬의 행벡터에 대한 $\det$ 함수로 도입하였다. 행벡터로 도입한것은 우리가 바로 전에 행 기본연산에 대해 논의했기 때문에 그 연속선상에서 그렇게 했다. 우리는 이미 열벡터에 대해서도 정의할 수 있다는 것을 안다. $\boldsymbol{A}_i$ 를 $\boldsymbol{A}$ 의 $i$ 번째 열벡터라고 하자.
+
+$$
+\phi (\boldsymbol{A}_{1},\ldots,\,\boldsymbol{A}_{k}) := \det (\boldsymbol{A})
+$$
+
+라고 하하면 $\phi$ 함수는 다음과 같은 성질을 가진다는 것을 안다. 
+
+&emsp; ($1$) $\phi (\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_k)=1$
+
+&emsp; ($2$) $\phi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))$
+
+
+이제 우리는 반대로 위의 두 조건을 만족하는 $k$-alternating form 은 유일하다는 것을 보일 것이다.
+
+</br>
+
+::: {#lem-dimension_of_k_alternating_form}
+
+$\mathcal{M}_k(\mathbb{F})$ 에 대해 다음이 성립한다.
+
+$$
+\dim (\mathcal{A}^k (\mathcal{M}_k(\mathbb{F})))=1.
+$$
+
+:::
+
+::: {.proof}
+
+우선 $\dim (\mathcal{A}^k (\mathcal{M}_k(\mathbb{F})))\ne 0$ 임을 보이자. 대칭군을 사용하여, 
+
+$$
+\phi(\boldsymbol{A}_1,\ldots,\,\boldsymbol{A}_k) := \sum_{\sigma \in S_k} \text{sgn}(\sigma) \prod_{i=1}^k A_{\sigma(i),i}
+$$ {#eq-first_def_of_det}
+
+라고 정의하자. 우리는 $\phi \in \mathcal{T}^k(\mathcal{M}_k(\mathbb{F}))$ 임을 쉽게 보일 수 있으며 @exr-determinant_change_of_order 에서 보인대로 $\phi \in \mathcal{A}^k (\mathcal{M}_k(\mathbb{F}))$ 이다. 이 때 $\phi (\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_k)=1$ 이므로 $\dim (\mathcal{A}^k (\mathcal{M}_k(\mathbb{F}))) > 0$ 이다.
+
+이제 $\psi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))$ 이며 $\psi (\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_k) = c$ 라고 하자. 여기에 대해 $\chi := c\phi -\psi$ 라고 정의하면 $\chi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))$ 이며 $\chi(\boldsymbol{e}_1,\ldots,\boldsymbol{e}_k)=0$ 이다.
+
+그런데 모든 $\boldsymbol{v}\in \mathcal{M}_k(\mathbb{F})$ 는 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_k\}$ 의 선형결합이다. $i=1,\ldots,\,k$ 에 대해 $\boldsymbol{v}_i = \sum_j A_{ij}\boldsymbol{e}_j$ 라고 하자. 
+
+$$
+\begin{aligned}
+\chi(\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_k) &= \sum_{j_1=1}^k A_{1, j_1}\chi (\boldsymbol{e}_{j_1},\boldsymbol{v}_2,\ldots,\,\boldsymbol{v}_k) \\
+& \qquad \vdots \\
+&= \sum_{j_1=1}^k \cdots \sum_{j_k=1}^k A_{1, j_1}\cdots A_{k,\,j_k} \chi(\boldsymbol{e}_{j_1},\ldots,\,\boldsymbol{e}_{j_k})
+\end{aligned}
+$$
+
+이다. 그런데 $\chi$ 안의 표준기저의 인덱스 가운데 어떤 두개가 같으면 alternating $k$ form 의 정의에 의해 $\chi$ 함수값이 $0$ 이다. 모두 다르면 $\chi$ 함수의 정의에 의해 $0$ 이다. 따라서 임의의 $\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_n$ 에 대해 $\chi(\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_n)=0$ 이다. 
+
+
+이것은 $\mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))$ 의 모든 원소는 @eq-first_def_of_det 에서 정의된 $\phi$ 의 상수배라는 의미이다. 즉 $\dim (\mathcal{A}^k (\mathcal{M}_k(\mathbb{F}))) = 1$ 이다. $\square$
+
+:::
+
+</br>
+
+이로부터 자연스럽게 행렬식의 유일성이 증명된다.
+
+::: {#thm-uniqueness_of_determinant}
+
+#### 행렬식의 유일성
+
+$\phi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))$ 이며 $\phi (\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_k)=1$ 인 $\phi$ 는 유일하다. 
+
+:::
+
+
+</br>
+
+## 이차형식
+
+### 이차형식 {#sec-quadratic_form}
 
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-quadratic_form} 
-#### Quadratic form
+#### 이차형식
 
 벡터공간 $V$ 에서 정의된 함수 $\Psi : V\to \mathbb{F}$ 가 임의의 $c\in \mathbb{F},\, v,\,v'\in V$ 에 대해
 
-&emsp; ($1$) $B_\Psi (v, v') = \Psi (v+v') - \Psi (v) - \Psi (v')$ 이 $V$ 에 대한 symmetric bilinear form 이며,
+&emsp; ($1$) $B_\Psi (v, v') = \Psi (v+v') - \Psi (v) - \Psi (v')$ 이 $V$ 에 대한 대칭인 쌍선형 형식 이며,
 
 &emsp; ($2$) $\Psi (cv) =  c^2 \Psi (v)$ 
 
-를 만족 할 때 $\Psi$ 를 $V$ 에 대한 **quadratic form** 이라고 한다.
+를 만족 할 때 $\Psi$ 를 $V$ 에 대한 **이차형식(quandratic form)** 이라고 한다.
 
 :::
 :::
@@ -328,7 +494,7 @@ $$
 
 ::: {#prp-quadratic_and_bilinear_1}
 
-$T\in \mathcal{S}^2(V)$ 일 때 $\Psi_T(v) = \frac{1}{2}T(v, v)$ 는 quadratic form 이다.
+$T\in \mathcal{S}^2(V)$ 일 때 $\Psi_T(v) = \frac{1}{2}T(v, v)$ 는 이차형식이다.
 
 :::
 
@@ -348,18 +514,18 @@ $$
 \Psi_T(cv) = \dfrac{1}{2}T(cv, cv) =  \dfrac{1}{2}cT(v, cv)= \dfrac{1}{2}c^2T(v) = c^2 \Psi_T(v)
 $$ 
 
-이므로 ($2$) 를 만족한다. 따라서 $\Psi_T$ 는 $V$ 에 대한 quadratic form 이다. $\square$
+이므로 ($2$) 를 만족한다. 따라서 $\Psi_T$ 는 $V$ 에 대한 이차형식이다. $\square$
 :::
 
 
 </br>
 
-@prp-quadratic_and_bilinear_1 로부터 우리는 symmetric bilinear form 에 대한 quadratic form 이 존재함을 안다. 이제 좀 더 깊이 알아보자.
+@prp-quadratic_and_bilinear_1 로부터 우리는 대칭 쌍선형형식 대한 이차형식이 존재함을 안다. 이제 좀 더 깊이 알아보자.
 
 
 ::: {#prp-quadratic_and_bilinear_2}
 
-$\mathbb{F}$-벡터공간 $V$ 에서의 quardratic form 전체의 집합을 $\mathcal{Q}_V$ 라고 하자. $0_Q : V \to \mathbb{F}$ 를 다음과 같이 정의한다.
+$\mathbb{F}$-벡터공간 $V$ 에서의 이차형식 전체의 집합을 $\mathcal{Q}_V$ 라고 하자. $0_Q : V \to \mathbb{F}$ 를 다음과 같이 정의한다.
 
 $$
 \forall v\in V,\, 0_Q(v) = 0
@@ -435,7 +601,7 @@ $$
 
 </br>
 
-### Quadratic_form 의 행렬 표현 {#sec-matrix_representation_of_quadratic_form}
+### 이차형식의 행렬 표현 {#sec-matrix_representation_of_quadratic_form}
 
 이제 $n$ 차원 $\mathbb{F}$-벡터공간 $V$ 에 대해 $\Psi \in \mathcal{Q}_V$ 라고 하자. 우리는 $B_\Psi(v, v) = \dfrac{1}{2} \Psi(v) \in \mathcal{S}^2(V)$ 라는 것을 알며, 따라서 $\Psi_B$ 가 대칭행렬로 표현된다는 것도 안다. 이제 $V$ 의 기저 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 을 생각하자.  @prp-matrix_representation_of_blinear_form 에 따라
 
@@ -452,13 +618,13 @@ $$
 \Psi(x) = \dfrac{1}{2}\boldsymbol{x}^T\boldsymbol{Ax} = \dfrac{1}{2} \sum_{i=1}^n A_{ii}{x_i}^2 + \sum_{i<j} A_{ij}x_i x_j
 $$
 
-이다. 즉 quadratic form 은 동차인 2차식이 된다. 역으로
+이다. 즉 이차형식은 동차인 2차식이 된다. 역으로
 
 $$
 f(x_1,\ldots,\,x_n) = \sum_{i=1} b_i {x_i}^2 + \sum_{i<j} c_{ij}x_i x_j
 $$
 
-인 동차인 2차식은 $A_{ii} = 2 b_i,\, A_{ij} = c_{ij}$ 에 대해 quadratic form 이 된다는 것을 알 수 있다.
+인 동차인 2차식은 $A_{ii} = 2 b_i,\, A_{ij} = c_{ij}$ 에 대해 이차형식 이 된다는 것을 알 수 있다.
 
 
 
@@ -466,18 +632,18 @@ $$
 
 ## 직교군과 심플렉틱 군
 
-### Quadratic space 와 직교군 {#sec-orthogonal_group}
+### 이차공간과 직교군 {#sec-orthogonal_group}
 
 
 
-우리는 앞서 벡터공간 $V$ 에 내적이 부여되면 내적벡터공간이라고 불렀다. 마찬가지로 어떤 quadratic form 이 부여되었을 경우에도 이름을 붙일 수 있다.
+우리는 앞서 벡터공간 $V$ 에 내적이 부여되면 내적벡터공간이라고 불렀다. 마찬가지로 어떤 이차형식이 부여되었을 경우에도 이름을 붙일 수 있다.
 
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-quadratic_space} 
-#### Quadratic space
+#### 이차공간
 
-유한차원 $\mathbb{F}$-벡터공간 $V$ 에서 어떤 quadratic form $\Psi \in \mathcal{Q}_V$ 이 정해졌다면 이에 따라 symmetric bilinear form $B_\Psi$ 도 정의된다. 이렇게 벡터공간에 quadratic form $\Psi$ 이 부여되었을 때, 혹은 이와 동등하게 simmetric bilinear form 이 부여되었을 때 **quadratic space** 라고 하고 $(V,\, \Psi)$, $(V,\, B_\Psi,\, \Psi)$, 혹은 $(V, B_\Psi)$ 라고 쓴다
+유한차원 $\mathbb{F}$-벡터공간 $V$ 에서 어떤 이차형식 $\Psi \in \mathcal{Q}_V$ 이 정해졌다면 이에 따라 대칭 쌍선형 형식 $B_\Psi$ 도 정의된다. 이렇게 벡터공간에 이차형식 $\Psi$ 이 부여되었을 때, 혹은 이와 동등하게 대칭 쌍선형 형식이 부여되었을 때 이 벡터공간 $V$ 를 **이차공간(quadratic space)** 라고 하고 $(V,\, \Psi)$, $(V,\, B_\Psi,\, \Psi)$, 혹은 $(V, B_\Psi)$ 라고 쓴다
 
 :::
 :::

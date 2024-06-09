@@ -1,0 +1,255 @@
+---
+title: "행렬식의 라플라시안 형식"
+number-sections: true
+number-depth : 3
+crossref:
+  chapters: true
+---
+
+## 라플라스 전개를 이용한 행렬식
+
+::: {.callout-warning icon="false"}
+
+### 필요 지식
+
+ - [다중선형 형식](bilinear_form.qmd)
+
+:::
+
+
+우리는 이미 [대칭군을 이용한 행렬식](../part1/ch1_03_determinant.qmd#sec-determinant_definition_using_symmetric_group) 에서 행렬식을 정의하였다. 여기서는 라플라스 전개를 이용하여 행렬식을 정의하는 또 다른 방법에 대해 알아보기로 한다. 라플라스 전개를 이용한 행렬식이 우리가 이미 아는 대칭군을 이용한 정의와 동등하다는 것을 보일 것이다. 라플라스 전개를 이용한 행렬식을 배우는 이유는 많은 이 정의가 많은 행렬식 계산을 편하게 해 주기 때문이다. 
+
+우리는 행렬식이 다음과 같은 성질을 가진다는 것을 안다.
+
+::: {.callout-note icon="false"}
+
+### 행렬식의 성질
+
+1. 행렬식은 $\mathcal{M}_{n\times n}(\mathbb{F})\mapsto \mathbb{F}$ 함수이다.
+
+2. $\det(\boldsymbol{I}_n) =1$. 
+
+3. $\det(\boldsymbol{A})$ 는 $n$-교대형식이다.
+
+::::
+
+[교대형식과 행렬식](../part3/bilinear_form.qmd#sec-alternating_form_and_determinant_of_matrix) 에서 위의 조건을 만족하는 함수가 유일하다는 것을 보였다(@thm-uniqueness_of_determinant). 즉 우리가 위의 조건을 만족하는 어떤 함수를 생각해낸다면 그것은 행렬식과 같다는 의미이다. 일단 우리는 이것을 인정하기로 하자.
+
+
+::: {.callout-note appearance="minimal"}
+
+::: {#def-minor_of_matrix}
+#### Minor
+
+$n \times n$ 정사각 행렬 $\boldsymbol{A}$ 에 대해 $i$ 번째 행과 $j$ 번째 열을 제거한 $(n-1)\times (n-1)$ 행렬의 행렬식을 $\boldsymbol{A}$ 에 대한 $(i,\,j)$-minor 라고 부르고 $M_{ij}$ 혹은 $M_{ij}(\boldsymbol{A})$ 라고 쓴다. 
+:::
+
+:::
+
+</br>
+
+::: {.callout-note appearance="minimal"}
+::: {#def-minor_expansion}
+
+#### 라플라스 전개
+
+$n\times n$ 행렬 $\boldsymbol{A}$ 에 대한 $(i,\,j)$-minor 를 $M_{ij}$ 라고 할 때 아래 함수 $D^{j}:\mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}$ 를 **$j$-번째 열에 대한 라플라스 전개**라고 한다.
+
+$$
+D^j(\boldsymbol{A}) :=   \sum_{i=1}^n (-1)^{i+j} A_{ij}M_{ij}.
+$$ {#eq-laplace_expansion_for_column}
+
+같은 방법으로 **$i$-번째 행에 대해 라플라스 전개** $D_i:\mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}$ 를 아래와 같이 정의한다.
+
+$$
+D_i(\boldsymbol{A}) :=   \sum_{j=1}^n (-1)^{i+j} A_{ij}M_{ij}.
+$$ {#eq-laplace_expansion_for_row}
+
+:::
+
+:::
+
+</br>
+
+우리는 이제 $D_j(\boldsymbol{A})=D_i(\boldsymbol{A})=\det(\boldsymbol{A})$ 임을 보일 것이다. 우선 행렬식의 조건 1. 은 충족한다. 
+
+
+::: {#lem-laplace_expansion_and_k_laternating_form_0}
+
+$D_i(\boldsymbol{A}^T) = D^i (\boldsymbol{A})$ 이다.
+:::
+
+::: {.proof}
+
+$\boldsymbol{A}$ 의 $(i, j)$-monor 를 $M_{ij}(\boldsymbol{A})$ 라고 쓰기로 하자. 우리는 이미 $\det(\boldsymbol{A}^T) = \det(\boldsymbol{A})$ 임을 안다. 그리고 $\boldsymbol{A}$ 에서 $i$ 번째 행과 $j$ 번째 열을 제외한 행렬의 전치행렬은 $\boldsymbol{A}^T$ 에서 $j$ 번째 행과 $i$ 번째 열을 제외한 행렬이라는 것도 쉽계 알 수 있다. 따라서 $\boldsymbol{A}$ 의 $(i,j)$-minor 는 $\boldsymbol{A}^T$ 의 $(j, i)$-minor 와 같다. 즉 $M_{ij}(\boldsymbol{A}) = M_{ji}(\boldsymbol{A}^T)$ 이다. 이로부터
+
+$$
+D_i(\boldsymbol{A}^T) = \sum_{j=1}^n (-1) (\boldsymbol{A}^T)_{ij} M_{ij}(\boldsymbol{A}^T) = \sum_{j=1}^n A_{ji} M_{ji}(\boldsymbol{A}) = D^i(\boldsymbol{A}) 
+$$
+
+임을 안다. $\square$
+
+:::
+
+</br>
+
+::: {#lem-laplace_expansion_and_k_laternating_form_1}
+
+$D_i(\boldsymbol{I}_n)=D^j(\boldsymbol{I}_n)=1$ 이다.
+
+:::
+
+::: {.proof}
+
+정해진 $i$ 번째 행에서 $0$ 이 아닌 값은 $i$ 열 밖에 없다. 따라서
+
+$$
+\begin{aligned}
+D_i(\boldsymbol{I}_n) = (-1)^{2i} M_{ii}
+\end{aligned}
+$$
+
+이며 $M_{ii}$ 는 $\det(\boldsymbol{I}_{n-1}) =1$ 이므로 $D_i(\boldsymbol{I}_n)=1$ 이다. $D^j(\boldsymbol{I}_n)$ 도 같은 방법으로 $1$ 임을 보일 수 있다. $\square$
+
+:::
+
+</br>
+
+::: {#lem-laplace_expansion_and_k_laternating_form_2}
+
+$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대한 $D_i(\boldsymbol{A})$ 는 $n$-교대형식이다.
+
+:::
+
+::: {.proof}
+
+우선 $D_i(\boldsymbol{A})$ 가 $n$-다중선형형식임을 보이자. $k$ 번째 열만 $\boldsymbol{A}_{:k}$ 와 $\boldsymbol{A}'_{:k}$ 로 다른 두 행렬 $\boldsymbol{A},\, \boldsymbol{A}'$ 을 생각하자. $\boldsymbol{B}$ 는 $\boldsymbol{A}$ 와 $\boldsymbol{A}'$ 과는 $k$ 번째 열을 제외하면 모두 같고 $\boldsymbol{B}_{:k}= \boldsymbol{A}_{:k} + c\boldsymbol{A}'_{:k}$ 라고 하자. 
+
+$$
+\begin{aligned}
+D_i(\boldsymbol{B}) &= \sum_{j=1}^n (-1)^{i+j} B_{ij} M_{ij}(\boldsymbol{B}) \\
+&= \sum_{j=1,\, j\ne k}^n (-1)^{i+j} A_{ij}(M_{ij}(\boldsymbol{A})+ cM_{ij}(\boldsymbol{A}')) + (-1)^{i+k} (A_{ik} + cA'_{ik}) M_{ik}(\boldsymbol{A})
+\end{aligned}
+$$
+
+이다. 그런데 $M_{ik}(\boldsymbol{A})= M_{ik}(\boldsymbol{A}')$ 이므로 (차이가 나는 $k$ 열이 제외되었다!)
+
+$$
+D_{i}(\boldsymbol{B}) = D_i(\boldsymbol{A}) + cD_i (\boldsymbol{A}')
+$$
+
+이다. 즉 $D_i$ 는 $n$-다중선형형식이다.
+
+이제 $D_i$ 가 교대형식이라는 것을 보이자. 교대형식은 두 열이 같을 때 그 값이 $0$ 이 된다(@prp-k_alternating_form). $k$ 번째 열과 $m(>k)$ 번째 열이 같다면 $M_{ij}$ 에서 $j=k$ 이거나 $j=m$ 일 경우를 제외하면 $M$ 을 계산하는데 포함되는 부분행렬에 같은 열이 최소한 두개 존재하므로 $M_{ij}=0$ 이된다. 따라서, 
+
+$$
+D_{i}(\boldsymbol{A}) = (-1)^{i+k}A_{ik}M_{ik} + (-1)^{i+m}A_{im} M_{im}
+$$
+
+이다. $k$ 열과 $m$ 열이 같기 때문에 $A_{ik} = A_{im}$ 이다. $M_{ik}$ 를 계산하는데 사용되는 부분행렬 $\boldsymbol{A}_k$ 에서 $\boldsymbol{A}$ 의 $m$ 열은 ($k$ 열이 제거되었으므로) $\boldsymbol{A}_k$ 의 $m-1$ 열이다. $M_{im}$ 을 계산하는데 사용되는 $\boldsymbol{A}$ 의 부분행렬 $\boldsymbol{A}_m$ 에서 $\boldsymbol{A}$ 의 $k$ 열은 $\boldsymbol{A}_k$ 에서도 $k$ 열이다. $\boldsymbol{A}_m$ 의 $k$ 열을 열교환을 통해 $m-1$ 열로 옮긴다면 그 결과로서 나타나는 행렬은 $\boldsymbol{A}_k$ 와 같다. 여기에 열교환을 $(m-k-1)$ 번을 해야 하므로 
+
+$$
+M_{im}=\det(\boldsymbol{A}_m) = (-1)^{m-k-1}\det(\boldsymbol{A}_k) = (-1)^{m-k-1}M_{ik}
+$$ 
+이다. 따라서,
+
+$$
+D_i(\boldsymbol{A}) = (-1)^{i+k} A_{ik}M_{ik} +(-1)^{i+2m-k-1}A_{ik}M_{ik} = 0
+$$
+
+이다. 즉 $D_i(\boldsymbol{A})$ 는 $n$-교대형식이다. $\square$
+
+:::
+
+</br>
+
+::: {#thm-laplacian_expansion_and_determinant}
+
+@def-minor_expansion 의 @eq-laplace_expansion_for_row 와 @eq-laplace_expansion_for_column 은 모두 행렬식의 정의와 같다.
+:::
+
+::: {.proof}
+
+@lem-laplace_expansion_and_k_laternating_form_1 과 @lem-laplace_expansion_and_k_laternating_form_2 에 의해 $D_i(\boldsymbol{A})$ 는 행렬식이다. 따라서 $D_i(\boldsymbol{A})=D_i(\boldsymbol{A}^T)$ 와 같다. 그런데 @lem-laplace_expansion_and_k_laternating_form_0 에 의해 $D_i(\boldsymbol{A}^T)=D^i(\boldsymbol{A}^T)$ 이다. $\square$
+
+:::
+
+</br>
+
+::: {#exr-determinant_of_cartan_matrix}
+
+#### 카르탕 행렬 (Cartan matrix)
+$n\ge 1$ 에 대해 $\boldsymbol{A}_n\in \mathcal{M}_{n\times n}(\mathbb{F})$, $n \ge 2$ 에 대해 $\boldsymbol{B}_n\in \mathcal{M}_{n\times n}(\mathbb{F})$, $n\ge 4$ 에 대해 $\boldsymbol{D}_n \in \mathcal{M}_{n\times n}(\mathbb{F})$ 를 각각 아래와 같이 정의한다.
+
+$$
+\begin{aligned}
+(\boldsymbol{A}_n)_{ij} &= \left\{\begin{array}{ll} 2 \qquad &;\text{if } i=j\\ -1 &;\text{if } |i-j| =  1 \\ 0 &;\text{otherwise}\end{array}\right. . \\[1em]
+\boldsymbol{B}_n &= \left[\begin{array}{cccc|c} & & & & 0 \\ & &\boldsymbol{A}_{n-1} & & \vdots \\ & & & & 0 \\ & & & & -2 \\ \hline 0 &\cdots & 0 & -1 & 2\end{array}\right]  .\\[1em]
+\boldsymbol{D}_n &= \left[\begin{array}{ccccc|c} & & & &  & 0 \\ & & & & & \vdots \\ & & &\boldsymbol{A}_{n-1} & & 0 \\ & & & & &-1 \\ & & & & & 0 \\ \hline 0 &\cdots & 0 & -1 & 0 & 2\end{array}\right]  . 
+\end{aligned}
+$$
+
+각 행렬의 행렬식을 구하라.
+:::
+
+::: {.solution}
+
+$\boldsymbol{A}_1 = \begin{bmatrix}2\end{bmatrix}$, $\boldsymbol{A}_2 = \begin{bmatrix} 2 & -1 \\ -1 & 2\end{bmatrix}$, $\boldsymbol{A}_3 = \begin{bmatrix} 2 & -1 & 0 \\ -1 & 2 & -1 \\ 0 & -1 & 2\end{bmatrix}$ 로
+
+$$
+\boldsymbol{A}_n = \left[\begin{array}{cccc|c} & & & & 0 \\ & &\boldsymbol{A}_{n-1} & & \vdots \\ & & & & 0 \\ & & & & -1 \\ \hline 0 &\cdots & 0 & -1 & 2\end{array}\right]  .
+$$
+
+이므로 
+
+$$
+D_n(\boldsymbol{A}_n)  = (-1)^{2n}(2)\det(\boldsymbol{A}_{n-1}) +(-1)^{2n-1}(-1)M_{n,n-1} = \det(\boldsymbol{A}_{n-1}) + M_{n,\,n-1}
+$$
+
+이며 $M_{n,n-1}$ 을 계산하는데 사용된 부분행렬은 $\left[\begin{array}{cccc|c} & & & & 0 \\ & &\boldsymbol{A}_{n-2} & & \vdots \\ & & & & 0 \\ \hline 0 &\cdots & 0 & -1 & -1\end{array}\right]$ 
+
+이므로 $M_{n,n-1} = -\det(\boldsymbol{A}_{n-2})$ 이다. 즉
+
+$$
+D_n(\boldsymbol{A}_n) = 2 \det(\boldsymbol{A}_{n-1}) - \det(\boldsymbol{A}_{n-2})
+$$
+
+이므로 $\det(\boldsymbol{A}_n)$ 은 $n$ 에 대한 등차수열이다. $\det(\boldsymbol{A}_1)=2$, $\det(\boldsymbol{A}_2)= 3$ 이므로 $\det(\boldsymbol{A}_n)=n$ 이다.
+
+같은 방법으로 계산하면
+
+$$
+D_n (\boldsymbol{B}_n) = 2\det(\boldsymbol{A}_{n-1}) - 2 \det(\boldsymbol{A}_{n-2}) = 2(n-1)-2(n-2)= 2
+$$
+
+임을 안다. 이제 $\boldsymbol{D}_n$ 에 대한 행렬식을 구하자.
+
+$$
+D_n(\boldsymbol{D}_n) = 2 \det(\boldsymbol{A}_{n-1}) + (-1)^{2n-2}(-1) M_{n, n-2} = 2 \det(\boldsymbol{A}_{n-1}) - M_{n, n-2}
+$$
+
+이며 $M_{n, n-2}$ 를 구하는데 쓰이는 부분행렬은 
+
+$$
+\left[\begin{array}{ccc|cc} & & & 0 & 0 \\ & \boldsymbol{A}_{n-3} & & \vdots &  \vdots \\ & & & 0 & 0 \\ \hline 0 &\cdots & -1 & -1 & -1\\  0 &\cdots & 0 & 2 & 0\end{array}\right]
+$$
+
+이다. 그렇다면, 
+
+$$
+M_{n, n-2} = 2\det(\boldsymbol{A}_{n-3})
+$$
+
+임을 알 수 있다. 따라서 
+
+$$
+\det(\boldsymbol{D}_n) = 2(n-1) - 2(n-3) = 4
+$$
+
+이다. 
+
+:::
+
+
+</br>
+

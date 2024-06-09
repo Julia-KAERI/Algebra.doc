@@ -15,8 +15,8 @@ book:
         - docs/part1/ch1_01_vectorspace.qmd
         - docs/part1/ch1_02_linear_map.qmd
         - docs/part1/ch1_03_determinant.qmd
-        - docs/part1/ch1_04_gauss_jordan_elimination.qmd
-        - docs/part1/ch1_05_matrix.qmd
+        # - docs/part1/ch1_04_gauss_jordan_elimination.qmd
+        # - docs/part1/ch1_05_matrix.qmd
         - docs/part1/ch1_06_eigenvalue.qmd
         - docs/part1/ch1_07_innerproduct.qmd
         - docs/part1/ch1_08_operators_on_innerproduct_space.qmd
@@ -30,13 +30,16 @@ book:
         - docs/part2/ch2_04_symmetry.qmd
     - part: docs/part3/part3.qmd
       chapters:
+        - docs/part3/dual_space.qmd
+        - docs/part3/bilinear_form.qmd
+        - docs/part3/laplacian_form_of_determinant.qmd
         - docs/part3/generalized_inverse.qmd
         - docs/part3/characteristic_polynomial.qmd
-        - docs/part3/bilinear_form.qmd
-        - docs/part3/dual_space.qmd
-        - docs/part3/quotient_space_rank_of_matrix.qmd
+        - docs/part3/generalized_eigenspace.qmd
+
+        - docs/part3/quotient_space.qmd
         - docs/part3/tensor_product.qmd
-        - docs/part3/jordan_form.qmd
+        # - docs/part3/jordan_form.qmd
     - summary.qmd
     - references.qmd
 

@@ -18,10 +18,10 @@ crossref:
 ::: {#def-linear_map}
 #### 선형사상/선형변환
 
-$U,\,V$ 가 $\mathbb{F}$-벡터공간이라 하자. 함수 $T: U \to V$ 가 모든 $u_1,\,u_2\in U,\, c\in \mathbb{F}$ 에서 다음을 만족하면 **선형 사상(linear map)** 혹은 **선형 변환 (linear transformation)** 이라 한다. 
+$\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 정의된 함수 $L: U \to V$ 이 모든 $u_1,\,u_2\in U,\, c\in \mathbb{F}$ 에서 다음을 만족하면 $L$ 을 $U$ 에서 $V$ 로의 **선형 사상(linear map)** 혹은 **선형 변환 (linear transformation)** 이라 한다. 
 
 $$
-T(u_1+ c u_2) = T(u_1) + c T(u_2).
+L(u_1+ c u_2) = L(u_1) + c L(u_2).
 $$
 
 또한 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $U\mapsto V$ 인 선형사상의 집합을 $\mathcal{L}(U,\,V)$ 라고 쓴다.
@@ -33,21 +33,21 @@ $$
 
 ::: {#exm-zero_map}
 
-함수 $T:U \to V$ 가 모든 $u\in U$ 에 대해 $T(u)=0_V$ 일 때 이 $T$ 를 **영사상(zero map)** 이라 부르며 $0(u)$ 와 같이 표기한다. 영사상이 선형사상임을 보여라.
+함수 $L:U \to V$ 가 모든 $u\in U$ 에 대해 $L(u)=0_V$ 일 때 이 $L$ 를 **영사상(zero map)** 이라 부르며 $0(u)$ 와 같이 표기한다. 영사상이 선형사상임을 보여라.
 
 :::
 
 </br>
 
 ::: {#exm-T_zero}
-$T\in \mathcal{L}(U,\,V)$ 일 때 $T(0_U) = 0_V$ 임을 보여라.
+$L\in \mathcal{L}(U,\,V)$ 일 때 $L(0_U) = 0_V$ 임을 보여라.
 :::
 
 </br>
 
 ::: {#exm-negative_map}
 
-$T\in \mathcal{L}(U,\,V)$ 에 대해 $T(u)=v$ 이면 $T(-u)=-v$ 임을 보여라.
+$L\in \mathcal{L}(U,\,V)$ 에 대해 $L(u)=v$ 이면 $L(-u)=-v$ 임을 보여라.
 
 :::
 
@@ -74,42 +74,44 @@ $T\in \mathcal{L}(U,\,V)$ 에 대해 $T(u)=v$ 이면 $T(-u)=-v$ 임을 보여라
 
 보통 두 집합 $A,\,B$ 사이의 함수 $f:A\to B$ 가 정의된다는 것은 모든 $a\in A$ 에 대해 $f(a) \in B$ 가 잘 정의된다는 것을 뜻한다. 그러나 벡터공간에서 정의된 선형 사상은 모든 벡터에 대해 알 필요 없이 기저에 대해서만 함수값을 알면 그 함수가 정의된다. 다음 명제는 그것을 증명한다.
 
+</br>
 
 ::: {#prp-linearmap_basis}
+
 유한차원 벡터공간 $U$ 의 기저 $\{u_1,\ldots,\,u_n\}$ 와 벡터공간 $V$ 를 생각하자. $v_1,\ldots,\,v_n\in V$ 에 대해 
 
 $$
-T(u_i) = v_i
+L(u_i) = v_i
 $$
 
-를 만족하는 선형사상 $T:U \to V$ 가 유일하게 존재한다.
+를 만족하는 선형사상 $L:U \to V$ 는 존재하며 유일하다.
 :::
 
 ::: {.proof}
-$u\in U$ 는 $\{u_1,\ldots,u_n\}$ 의 선형결합으로 유일하게 표현된다. $u= a_1 u_1 + \cdots + a_n u_n$ 와 $\{v_1,\ldots,\,v_n\}\subset V$ 에 대해 함수 $T:U \to V$ 를 다음과 같이 정의하자.
+$u\in U$ 는 $\{u_1,\ldots,u_n\}$ 의 선형결합으로 유일하게 표현된다. $u= a_1 u_1 + \cdots + a_n u_n$ 와 $\{v_1,\ldots,\,v_n\}\subset V$ 에 대해 함수 $L:U \to V$ 를 다음과 같이 정의하자.
 
 $$
-T(u)=T(a_1u_1 + \cdots + a_n u_n) = a_1v_1 + \cdots + a_n v_n
+L(u)=L(a_1u_1 + \cdots + a_n u_n) = a_1v_1 + \cdots + a_n v_n
 $$
 
-이제 $T$ 가 선형사상임을 보이자. $u' = b_1 u_1 + \cdots + b_n u_n \in U,\, c\in \mathbb{F}$ 일 때
+이 함수 $L$ 은 잘 정의된다. 즉 $u\in U$ 가 정해진다면 $L(u)$ 도 확실하게 정해진다. 이제 $L$ 이 선형사상임을 보이자. $u' = b_1 u_1 + \cdots + b_n u_n \in U,\, c\in \mathbb{F}$ 일 때
 
 $$
 \begin{aligned}
-T(u+ c u') &= T((a_1 + c b_1)u_1 + \cdots + (a_n + c b_n) u_n) \\
+L(u+ c u') &= L((a_1 + c b_1)u_1 + \cdots + (a_n + c b_n) u_n) \\
 &= (a_1+c b_1)v_1 + \cdots + (a_n + c b_n)v_n \\ 
 &= a_1v_1 + \cdots a_n v_n + c (b_1 v_1 + \cdots + b_n v_n) \\
-&= T(u) + c T(u') \\ 
+&= L(u) + c L(u') \\ 
 \end{aligned}
 $$
 
-이므로 $T$ 는 선형사상이다. 이제 유일하게 존재함을 보이자. $T'\in \mathcal{L}(U,\,V)$ 가 $T'(u_i)=v_i$ 라 하자. $T'$ 이 선형사상이므로
+이므로 $L$ 는 선형사상이다. 이제 유일하게 존재함을 보이자. $K\in \mathcal{L}(U,\,V)$ 가 $K(u_i)=v_i$ 라 하자. $K$ 가 선형사상이므로
 
 $$
-T'(a_1u_1 + \cdots + a_n u_n) = a_1 v_1 + \cdots + a_n v_n
+K(a_1u_1 + \cdots + a_n u_n) = a_1 v_1 + \cdots + a_n v_n
 $$
 
-이다. 즉 $T=T'$ 이므로 주어진 조건을 만족하는 선형사상은 유일하다. $\square$
+이다. 즉 $L=K$ 이므로 주어진 조건을 만족하는 선형사상은 유일하다. $\square$
 :::
 
 </br>
@@ -118,11 +120,11 @@ $$
 ::: {#exm-identity_operator}
 
 #### 항등사상
-$I_U\in \mathcal{L}(U)$ 일 때 모든 $u\in u$ 에 대해 $I_U(u) = u$ 이면 $I_U$ 를 벡터공간 $U$ 에서의 **항등 사상 (identity operator)** 이라고 한다. 항등사상은 선형사상임을 보여라. 또한 $T\in \mathcal{L}(U)$ 일 때 다음 두 명제가 동치이다.
+$I_U\in \mathcal{L}(U)$ 일 때 모든 $u\in u$ 에 대해 $I_U(u) = u$ 이면 $I_U$ 를 벡터공간 $U$ 에서의 **항등 사상 (identity operator)** 이라고 한다. 항등사상은 선형사상임을 보여라. 또한 $L\in \mathcal{L}(U)$ 일 때 다음 두 명제가 동치이다.
 
-&emsp; ($1$) $T$ 는 항등사상이다.
+&emsp; ($1$) $L$ 은 항등사상이다.
 
-&emsp; ($2$) $U$ 의 기저 $\{u_i\}$ 에 대해 $T(u_i) = u_i,\, i=1,\,2,\ldots$ 이다.
+&emsp; ($2$) $U$ 의 기저 $\{u_i\}$ 에 대해 $L(u_i) = u_i,\, i=1,\,2,\ldots$ 이다.
 
 :::
 
@@ -133,7 +135,7 @@ $I_U\in \mathcal{L}(U)$ 일 때 모든 $u\in u$ 에 대해 $I_U(u) = u$ 이면 $
 
 #### 한정 사상
 
-$T\in \mathcal{L}(V,\,W)$ 이고 $U \le V$ 라 하자. 이 때 $T$ 의 정의역(domain) 을 $U$ 로 제한하는 $T|_U\in \mathcal{L}(U,\,W)$ 를 생각할 수 있다. 즉, $T|_U(u)=T(u)$ 이며 이것을 **한정 사상(restriction)** 이라 한다.
+$L\in \mathcal{L}(V,\,W)$ 이고 $U \le V$ 라 하자. 이 때 $L$ 의 정의역(domain) 을 $U$ 로 제한하는 $L|_U\in \mathcal{L}(U,\,W)$ 를 생각할 수 있다. 즉, $L|_U(u)=L(u)$ 이며 이것을 **한정 사상(restriction)** 이라 한다.
 
 :::
 :::
@@ -150,12 +152,12 @@ $T\in \mathcal{L}(V,\,W)$ 이고 $U \le V$ 라 하자. 이 때 $T$ 의 정의역
 ::: {#def-sum_prod_linear_map}
 #### 선형사상의 합과 스칼라곱
 
-$\mathbb{F}$-벡터공간 $U,\,V$ 와 $T,\,S\in \mathcal{L}(U,\,V),\, u\in V,\, c \in \mathbb{F}$ 에 대해, 선형사상의 합과 스칼라곱은 다음과 같이 정의된다.
+$\mathbb{F}$-벡터공간 $U,\,V$ 와 $L,\,K\in \mathcal{L}(U,\,V),\, u\in V,\, c \in \mathbb{F}$ 에 대해, 선형사상의 합과 스칼라곱은 다음과 같이 정의된다.
 
 $$
 \begin{aligned}
-(T+S)(u) & = T(u) + S(u)\\
-(c T)(u) &= c (T(u))
+(L+K)(u) & := L(u) + K(u)\\
+(c L)(u) & := c (L(u))
 \end{aligned}
 $$
 
@@ -174,19 +176,19 @@ $U,\,V$ 가 $\mathbb{F}$-벡터공간일 때, 위에서 정의된 선형사상�
 :::
 
 ::: {.proof}
-$T,\,S\in \mathcal{L}(U,\,V)$, $a,\,b\in \mathbb{F}$ 라 하자. $u_1,\,u_i \in U$ 에 대해 $T(u_1) = v_1$, $T(u_2) = v_2$, $S(u_1) = v'_1$, $S(u_2) = v'_2$ 라 하자.
+$L,\,K\in \mathcal{L}(U,\,V)$, $a,\,b\in \mathbb{F}$ 라 하자. $u_1,\,u_i \in U$ 에 대해 $L(u_1) = v_1$, $L(u_2) = v_2$, $K(u_1) = v'_1$, $K(u_2) = v'_2$ 라 하자.
 $$
 \begin{aligned}
-(T+S)(u_1 + b u_2) &= T(u_1 + b u_2) + S(u_1+ b u_2) \\
+(L+K)(u_1 + b u_2) &= L(u_1 + b u_2) + K(u_1+ b u_2) \\
 &= v_1+ b v_2 +v'_1+ b v'_2  \\ 
-& = (T+S)(u_1) + b  (T+S)(u_2) \\ 
-(c T)( u_1 + b u_2) &= c (T(u_1+ b u_2))= c (v_1 + b v_2) \\ 
+& = (L+K)(u_1) + b  (L+K)(u_2) \\ 
+(c L)( u_1 + b u_2) &= c (L(u_1+ b u_2))= c (v_1 + b v_2) \\ 
 &= c v_1 + cb v_2  \\ 
-&= c T(u_1) + b \left(c T (u_2)\right)
+&= c L(u_1) + b \left(c L (u_2)\right)
 \end{aligned}
 $$
 
-즉 $T+S\in \mathcal{L}(U,\,V),\, c T \in \mathcal{L}(U,\,V)$ 이다. 영사상 즉 모든 $u\in U$ 에 대해 $T_0(u)=0_V\in V$ 인 $T_0$ 는 $\mathcal{L}(U,\,V)$ 에서의 덧셈의 항등원이다. 벡터공간에 대한 나머지의 증명은 쉽게 할 수 있으므로 생략한다. $\square$ 
+즉 $L+K\in \mathcal{L}(U,\,V),\, c L \in \mathcal{L}(U,\,V)$ 이다. 영사상 즉 모든 $u\in U$ 에 대해 $L_0(u)=0_V\in V$ 인 $L_0$ 는 $\mathcal{L}(U,\,V)$ 에서의 덧셈의 항등원이다. 벡터공간에 대한 나머지의 증명은 쉽게 할 수 있으므로 생략한다. $\square$ 
 
 :::
 
@@ -196,14 +198,15 @@ $$
 
 ### 선형사상의 합성
 
-선형사상은 함수이므로 함수의 합성처럼 선형사상의 합성을 정의 할 수 있다. $\mathbb{F}$-벡터공간 $U,\,V,\,W$ 와 $T \in \mathcal{L}(U,\,V),\, S\in\mathcal{L}(V,\,W)$ 에 대해 
+선형사상은 함수이므로 함수의 합성처럼 선형사상의 합성을 정의 할 수 있다. $\mathbb{F}$-벡터공간 $U,\,V,\,W$ 와 $L: \in \mathcal{L}(U,\,V),\, K\in\mathcal{L}(V,\,W)$ 에 대해 
 
 $$
-(S\circ T)(u) = S(T(u))
+(L\circ K)(u) = L(K(u))
 $$
 
 이다. 
 
+</br>
 
 ::: {#prp-product_map}
 선형사상의 합성도 선형사상이다.
@@ -211,15 +214,15 @@ $$
 
 
 ::: {.proof}
-$\mathbb{F}$-벡터공간 $U,\,V,\,W$ 와 $c\in \mathbb{F}$ 를 생각하자. $T \in \mathcal{L}(U,\,V),\, S\in\mathcal{L}(V,\,W)$ 에 대해 
+$\mathbb{F}$-벡터공간 $U,\,V,\,W$ 와 $c\in \mathbb{F}$ 를 생각하자. $L \in \mathcal{L}(U,\,V),\, K\in\mathcal{L}(V,\,W)$ 에 대해 
 $$
 \begin{aligned}
-(S\circ T)(u_1 + c u_2) &= S(T(u_1+ c u_2)) = S(T(u_1)+ T(c u_2)) \\ 
-&= (S\circ T)(u_1) + c (S \circ T)(u_2)\\
+(L\circ K)(u_1 + c u_2) &= L(K(u_1+ c u_2)) = L(K(u_1)+ K(c u_2)) \\ 
+&= (L\circ K)(u_1) + c (L\circ K)(u_2)\\
 \end{aligned}
 $$
 
-이므로 $S\circ T \in \mathcal{L}(U, W)$ 이다. $\square$
+이므로 $L\circ K\in \mathcal{L}(U, W)$ 이다. $\square$
 :::
 
 </br>
@@ -229,9 +232,9 @@ $$
 선형사상에 대해서는 다음이 성립한다.
 $$
 \begin{aligned}
-(T_1 \circ T_2) \circ T_3 &= T_1 \circ  (T_2 \circ T_3) \\
-(S_1+S_2) \circ T &= S_1 \circ T + S_2  \circ T \\
-S\circ (T_1 +T_2) &= S \circ T_1 + S \circ T_2
+(L_1 \circ L_2) \circ L_3 &= L_1 \circ  (L_2 \circ L_3) \\
+(L_1+L_2) \circ K &= L_1 \circ K + L_2  \circ K \\
+L\circ (K_1 +K_2) &= L \circ K_1 + L \circ K_2
 \end{aligned}
 $$
 
@@ -265,30 +268,30 @@ $V$ 와 그 기저 $\{v_1,\ldots,\,v_n\}$ 에 대해 이렇게 정의된 선형�
 
 ### 선형사상의 행렬표현
 
-$\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $T\in \mathcal{L}(U,\,V)$ 라 하자. $\dim U = n$, $\dim V = m$ 이며 $\mathcal{B}_U=(u_j),\,\mathcal{B}_V=(v_i)$ 를 각각 $U$ 와 $V$ 의 순서기저라 하자. $u\in U$ 에 대해 $T(u)$ 는 $V$ 의 벡터이므로 $(v_i)$ 의 선형결합으로 표현된다. 따라서 $T(u_j)$ 를 $(v_i)$ 의 선형결합으로 아래와 같이 표현 할 수 있다.
+$\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $L\in \mathcal{L}(U,\,V)$ 라 하자. $\dim (U) = n$, $\dim (V) = m$ 이며 $\mathcal{B}_U=(u_j),\,\mathcal{B}_V=(v_i)$ 를 각각 $U$ 와 $V$ 의 순서기저라 하자. $u\in U$ 에 대해 $L(u)$ 는 $V$ 의 벡터이므로 $(v_i)$ 의 선형결합으로 표현된다. 따라서 $L(u_j)$ 를 $(v_i)$ 의 선형결합으로 아래와 같이 표현 할 수 있다.
 
 $$
-T(u_j) = A_{1j}v_1 + \cdots + A_{nj} v_n = \sum_{i=1}^m A_{ij} v_i
+L(u_j) = A_{1j}v_1 + \cdots + A_{nj} v_n = \sum_{i=1}^m A_{ij} v_i
 $$
 
 $u \in U$ 는 $(u_j)$ 의 선형결합이므로 $u= \sum_j a_j u_j$ 라 하면,
 
 $$
 \begin{aligned}
-T(u) &= T \left( \sum_{j=1}^n a_j u_j \right) = \sum_{j=1}^n a_j T(u_j) = \sum_{j=1}^n \sum_{i=1}^m a_j A_{ij} v_i = \sum_{i=1}^m \left(\sum_{j=1}^n A_{ij}a_j\right)v_i
+L(u) &= T \left( \sum_{j=1}^n a_j u_j \right) = \sum_{j=1}^n a_j L(u_j) = \sum_{j=1}^n \sum_{i=1}^m a_j A_{ij} v_i = \sum_{i=1}^m \left(\sum_{j=1}^n A_{ij}a_j\right)v_i
 \end{aligned}
 $$
 
-이다. $b_i = \displaystyle \sum_{j} A_{ij}a_j$ 라 하면 $T(u) = \sum_i b_i v_i$ 이므로
+이다. $b_i = \displaystyle \sum_{j} A_{ij}a_j$ 라 하면 $L(u) = \sum_i b_i v_i$ 이므로
 
 $$
-\left[T\left( \sum_j a_j u_j \right)\right]_{\mathcal{B}_V} = \begin{bmatrix} b_1 \\ \vdots \\ b_n\end{bmatrix}=  \begin{bmatrix} \sum_j A_{1j}a_j \\ \vdots \\ \sum_{j} A_{nj}a_j\end{bmatrix}
+\left[L\left( \sum_j a_j u_j \right)\right]_{\mathcal{B}_V} = \begin{bmatrix} b_1 \\ \vdots \\ b_n\end{bmatrix}=  \begin{bmatrix} \sum_j A_{1j}a_j \\ \vdots \\ \sum_{j} A_{nj}a_j\end{bmatrix}
 $$
 
-임을 안다. 선형사상 $T$ 를 기저 $\mathcal{B}_U,\,\mathcal{B}_V$ 에 대해 행렬로 표현한 것을 $[T]_{\mathcal{B}_U,\mathcal{B}_V}$ 라 하고 다음과 같이 표현하자.
+임을 안다. 선형사상 $L$ 를 기저 $\mathcal{B}_U,\,\mathcal{B}_V$ 에 대해 행렬로 표현한 것을 $[L]_{\mathcal{B}_U,\mathcal{B}_V}$ 라 하고 다음과 같이 표현하자.
 
 $$
-[T]_{\mathcal{B}_U,\mathcal{B}_V} = \begin{bmatrix} A_{11} & \cdots & A_{1j} & \cdots &A_{1n} \\ \vdots & & \vdots & & \vdots  \\ A_{i1} & \cdots  & A_{ij} & \cdots & A_{in} \\\vdots & & \vdots & & \vdots  \\ A_{m1} & \cdots & A_{mj} & \cdots & A_{mn}\end{bmatrix} .
+[L]_{\mathcal{B}_U,\mathcal{B}_V} = \begin{bmatrix} A_{11} & \cdots & A_{1j} & \cdots &A_{1n} \\ \vdots & & \vdots & & \vdots  \\ A_{i1} & \cdots  & A_{ij} & \cdots & A_{in} \\\vdots & & \vdots & & \vdots  \\ A_{m1} & \cdots & A_{mj} & \cdots & A_{mn}\end{bmatrix} .
 $$
 
 우리는 $[u]_{\mathcal{B}_U} = \begin{bmatrix} a_1 \\ \vdots \\a_m \end{bmatrix}$ 임을 안다. 만약 우리가 $m \times n$ 행렬 $\boldsymbol{A}$ 와 $n \times l$ 행렬 $\boldsymbol{B}$ 의 행렬의 곱을 다음과 같이 정의한다고 하자.
@@ -297,19 +300,19 @@ $$
 (\boldsymbol{AB})_{ij} := \sum_{k=1}^n A_{ik}B_{kj}
 $$
 
-그렇다면, $[T]_{\mathcal{B}_U,\mathcal{B}_V}$ 와 $[u]_{\mathcal{B}_U}$ 의 곱은 $m \times 1$ 행렬이 되며,
+그렇다면, $[L]_{\mathcal{B}_U,\mathcal{B}_V}$ 와 $[u]_{\mathcal{B}_U}$ 의 곱은 $m \times 1$ 행렬이 되며,
 
 $$
-\left([T]_{\mathcal{B}_U,\mathcal{B}_V} [u]_{\mathcal{B}_U}\right)_{i1} = \sum_{j=1}^n A_{ij}a_j = \left(\left[T\left( \sum_j a_j u_j \right)\right]_{\mathcal{B}_V}\right)_{i1}  
+\left([L]_{\mathcal{B}_U,\mathcal{B}_V} [u]_{\mathcal{B}_U}\right)_{i1} = \sum_{j=1}^n A_{ij}a_j = \left(\left[L\left( \sum_j a_j u_j \right)\right]_{\mathcal{B}_V}\right)_{i1}  
 $$
 
 이 된다. 즉, 
 
 $$
-\left[T(u)\right]_{\mathcal{B}_V} = [T]_{\mathcal{B}_U,\mathcal{B}_V} [u]_{\mathcal{B}_U}
+\left[L(u)\right]_{\mathcal{B}_V} = [L]_{\mathcal{B}_U,\mathcal{B}_V} [u]_{\mathcal{B}_U}
 $$
 
-이다. 행렬의 곱셈을 위와 같이 정의하여 특정 기저에서의 행렬과 벡터의 곱이 선형사상에 맞춰 자연스럽게 정해졌다. 선형 연산자의 경우, 즉 $U=V$ 인 경우는 $\mathcal{B}_U=\mathcal{B}_V$ 일 수 있다. 이경우는 $[T]_{\mathcal{B}_U}$ 로 쓰기로 하자. 기저가 이미 정해져서 아는 경우, 혹은 어떤 기저라도 상관 없는 경우에는 행렬 표현을 $[T]$ 나 $[v]$ 와 같이 줄여서 사용하기로 한다. 
+이다. 행렬의 곱셈을 위와 같이 정의하여 특정 기저에서의 행렬과 벡터의 곱이 선형사상에 맞춰 자연스럽게 정해졌다. 선형 연산자의 경우, 즉 $U=V$ 인 경우는 $\mathcal{B}_U=\mathcal{B}_V$ 일 수 있다. 이경우는 $[L]_{\mathcal{B}_U}$ 로 쓰기로 하자. 기저가 이미 정해져서 아는 경우, 혹은 어떤 기저라도 상관 없는 경우에는 행렬 표현을 $[L]$ 나 $[v]$ 와 같이 줄여서 사용하기로 한다. 
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-multiplication_of_matrix}
@@ -328,28 +331,28 @@ $$ {#eq-multiplication_of_matrix}
 
 ### 선형사상의 합의 행렬표현
 
-$S,\,T \in \mathcal{L}(U,\,V)$ 이고 $U,\,V$ 의 기저 $\mathcal{B}_U,\,\mathcal{B}_V$ 에 대해 $\boldsymbol{A}=[S]_{\mathcal{B}_U,\mathcal{B}_V}$, $\boldsymbol{B} =[T]_{\mathcal{B}_U,\mathcal{B}_V}$ 라 하자. $(S+T)(u)= S(u)+ T(u)$  이므로,
+$L,\,K \in \mathcal{L}(U,\,V)$ 이고 $U,\,V$ 의 기저 $\mathcal{B}_U,\,\mathcal{B}_V$ 에 대해 $\boldsymbol{L}=[L]_{\mathcal{B}_U,\mathcal{B}_V}$, $\boldsymbol{K} =[K]_{\mathcal{B}_U,\mathcal{B}_V}$ 라 하자. $(L+K)(u)= L(u)+ K(u)$  이므로,
 
 $$
 \begin{aligned}
-(S+T)\left( \sum_j a_j u_j \right) &= S\left( \sum_j a_j u_j \right) + T\left( \sum_j a_j u_j \right) \\ 
-&= \sum_j a_j S(u_j) + a_j T(u_j) \\
-&= \sum_i \left(\sum_j (A_{ij}+B_{ij})a_j  \right) v_i
+(L+K)\left( \sum_j a_j u_j \right) &= L\left( \sum_j a_j u_j \right) + K\left( \sum_j a_j u_j \right) \\ 
+&= \sum_j a_j L(u_j) + a_j K(u_j) \\
+&= \sum_i \left(\sum_j (L_{ij}+K_{ij})a_j  \right) v_i
 \end{aligned}
 $$
 
-이다. 이로부터 $(\boldsymbol{A}+\boldsymbol{B})_{ij} = A_{ij} + B_{ij}$ 로 정의하는 것이 자연스럽다는 것을 알 수 있다.
+이다. 이로부터 $(\boldsymbol{L}+\boldsymbol{K})_{ij} = L_{ij} + K_{ij}$ 로 정의하는 것이 자연스럽다는 것을 알 수 있다.
 
 </br>
 
 ### 선형사상의 합성의 행렬표현
 
-$T\in \mathcal{L}(U,\, W),\, S \in \mathcal{L}(W, V)$ 라 하자. $U,\,V,\,W$ 의 한 기저를 $\mathcal{B}_U =(u_j),\,\mathcal{B}_V = (v_i),\,\mathcal{B}_W = (w_k)$ 라 하자. 이 기저에서의 $S$ 와 $T$ 의 행렬표현을 $\boldsymbol{A},\,\boldsymbol{B}$ 라 하고, $(S\circ T)\in \mathcal{L}(U, V)$ 에 대한 행렬표현 $\boldsymbol{C}$ 를 알아보자.
+$L\in \mathcal{L}(U,\, W),\, K \in \mathcal{L}(W, V)$ 라 하자. $U,\,V,\,W$ 의 한 기저를 $\mathcal{B}_U =(u_j),\,\mathcal{B}_V = (v_i),\,\mathcal{B}_W = (w_k)$ 라 하자. 이 기저에서의 $L$ 와 $K$ 의 행렬표현을 $\boldsymbol{L},\,\boldsymbol{K}$ 라 하고, $(L\circ K)\in \mathcal{L}(U, V)$ 에 대한 행렬표현 $\boldsymbol{M}$ 를 알아보자.
 
 $$
 \begin{aligned}
-T(u_j) &= \sum_{k} B_{kj}w_k \\
-S(w_k) &= \sum_{i} A_{ik}v_i
+L(u_j) &= \sum_{k} L_{kj}w_k \\
+K(w_k) &= \sum_{i} K_{ik}v_i
 \end{aligned}
 $$
 
@@ -357,24 +360,24 @@ $$
 
 $$
 \begin{aligned}
-(S \circ T)(u_j) & = S\left( \sum_k B_{kj} w_k\right) = \sum_k B_{kj} S(w_k) \\
-&= \sum_k B_{kj} \sum_i A_{ik} v_i = \sum_i \left(\sum_k A_{ik}B_{kj}\right)v_i \\
+(K \circ L)(u_j) & = K\left( \sum_k L_{kj} w_k\right) = \sum_k L_{kj} K(w_k) \\
+&= \sum_k L_{kj} \sum_i K_{ik} v_i = \sum_i \left(\sum_k K_{ik}L_{kj}\right)v_i \\
 \end{aligned}
 $$
 
-이다. @def-multiplication_of_matrix 에 의해 선형사상의 합성은 각 선형사상의 행렬표현의 곱임을 알 수 있다. $\boldsymbol{A}$ 가 $S\in \mathcal{L}(W,\,V)$ 의 행렬표현이며, $\boldsymbol{B}$ 가 $T\in \mathcal{L}(U,\,W)$ 의 행렬표현이므로 $\boldsymbol{A}$ 의 열의 갯수와 $\boldsymbol{B}$ 의 행의 갯수는 $\text{dim}(W)$ 와 같아야 한다. 
+이다. @def-multiplication_of_matrix 에 의해 선형사상의 합성은 각 선형사상의 행렬표현의 곱임을 알 수 있다. $\boldsymbol{K}$ 가 $K\in \mathcal{L}(W,\,V)$ 의 행렬표현이며, $\boldsymbol{L}$ 가 $L\in \mathcal{L}(U,\,W)$ 의 행렬표현이므로 $\boldsymbol{K}$ 의 열의 갯수와 $\boldsymbol{L}$ 의 행의 갯수는 $\text{dim}(W)$ 와 같아야 한다. 
 
 </br>
 
 ### 선형 사상의 스칼라곱
 
-$\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $T \in \mathcal{L}(U,\,V)$ 일 때 $[T]_{\mathcal{B}_U,\mathcal{B}_V} = \boldsymbol{A}$ 이며 $c\in \mathbb{F}$ 라 하자.
+$\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $L \in \mathcal{L}(U,\,V)$ 일 때 $[L]_{\mathcal{B}_U,\mathcal{B}_V} = \boldsymbol{L}$ 이며 $c\in \mathbb{F}$ 라 하자.
 
 $$
-(c T)(u_i) = c \left( T(u_i)\right) = \sum_j c A_{ji}v_j
+(c L)(u_i) = c \left( L(u_i)\right) = \sum_j c L_{ji}v_j
 $$
 
-이므로 $(c \boldsymbol{A})_{ij} = c A_{ij}$ 임을 알 수 있다.
+이므로 $(c \boldsymbol{L})_{ij} = c L_{ij}$ 임을 알 수 있다.
 
 </br>
 
@@ -437,12 +440,12 @@ $$
 
 #### $\text{ker}$ 와 $\text{im}$
 
-$T\in \mathcal{L}(U,\,V)$ 에 대해 $T$ 의 kernel ($\ker (T)$) 과 image ($\text{im}(T)$) 는 다음과 같이 정의된다.
+$L\in \mathcal{L}(U,\,V)$ 에 대해 $L$ 의 kernel ($\ker (T)$) 과 image ($\text{im}(T)$) 는 다음과 같이 정의된다.
 
 $$
 \begin{aligned}
-\ker (T) &:= \{ u\in U : T(u) = 0_V\} ,\\
-\text{im}(T) &:= \{T(u) : u \in U\}.
+\ker (L) &:= \{ u\in U : L(u) = 0_V\} ,\\
+\text{im}(L) &:= \{L(u) : u \in U\}.
 \end{aligned}
 $$
 
@@ -453,36 +456,37 @@ $$
 
 ::: {#lem-ker_range_subspace}
 
-$T\in \mathcal{L}(U,\,V)$ 일 때, $\ker (T)$ 는 $U$ 의 부분공간이며 $\text{im} (T)$ 는 $V$ 의 부분공간이다.
+$L\in \mathcal{L}(U,\,V)$ 일 때, $\ker (L)$ 는 $U$ 의 부분공간이며 $\text{im} (L)$ 는 $V$ 의 부분공간이다.
 
 :::
 
 ::: {.proof}
-$\ker (T) \subset U$ 임은 자명하다. $T(0_U)=0_V$ 이므로 $0_U \in \ker (T)$ 이다. $u_1,\,u_2\in \ker (T),\, c \in \mathbb{F}$ 일 때, 
+$\ker (L) \subset U$ 임은 자명하다. $L(0_U)=0_V$ 이므로 $0_U \in \ker (L)$ 이다. $u_1,\,u_2\in \ker (L),\, c \in \mathbb{F}$ 일 때, 
 
 $$
-T(u_1 + c u_2) = T(u_1)+ c T(u_2) = 0_V
+L(u_1 + c u_2) = L(u_1)+ c L(u_2) = 0_V
 $$
 
-이므로 $\ker (T)$ 는 $U$ 의 부분공간이다. 같은 방법으로 $\text{im}(T)$ 가 $V$ 의 부분공간임을 보일 수 있다. $\square$
+이므로 $\ker (L)$ 는 $U$ 의 부분공간이다. 같은 방법으로 $\text{im}(L)$ 가 $V$ 의 부분공간임을 보일 수 있다. $\square$
 
 :::
 
 </br>
 
-$\ker (T)$ 와 $\text{im}(T)$ 가 각각 부분공간이기 때문에 차원을 정의 할 수 있다. 
+$\ker (L)$ 와 $\text{im}(L)$ 가 각각 부분공간이기 때문에 차원을 정의 할 수 있다. 
 
 ::: {.callout-note appearance="simple" icon="false"}
 
 ::: {#def-nullity_rank}
 
 #### **nullity** 와 **rank**
-$T\in \mathcal{L}(U,\,V)$ 에서 $\ker (T)$ 의 차원을 $\text{nullity}(T)$ 라 하고 $\text{im}(T)$ 의 차원을 $\text{rank}(T)$ 라 한다. 즉,
+
+$L\in \mathcal{L}(U,\,V)$ 에서 $\ker (L)$ 의 차원을 $\text{nullity}(L)$ 라 하고 $\text{im}(L)$ 의 차원을 $\text{rank}(L)$ 라 한다. 즉,
 
 $$
 \begin{aligned}
-\text{nullity}(T) &:= \dim (\ker (T)), \\
-\text{rank}(T) &:= \dim (\text{im}(T)),
+\text{nullity}(L) &:= \dim (\ker (L)), \\
+\text{rank}(L) &:= \dim (\text{im}(L)),
 \end{aligned}
 $$
 
@@ -499,33 +503,24 @@ $$
 
 #### Rank-nullity 정리
 
-$T$ 가 유한차원 벡터공간 $U,\,V$ 에서의 선형사상 $T\in \mathcal{L}(U,\,V)$ 일 때 다음이 성립한다.
+유한차원 벡터공간 $U,\,V$ 에서의 선형사상 $L\in \mathcal{L}(U,\,V)$ 에 대해 다음이 성립한다.
 
 $$
-\dim (U) = \text{nullity} (T) + \text{rank}(T)
+\dim (U) = \text{nullity} (L) + \text{rank}(L)
 $$
 
 :::
 
 ::: {.proof}
-$\ker (T)$ 는 $U$ 의 부분공간이다(@lem-ker_range_subspace). $\text{nullity}(T)=m$ 이라 하고 $\ker (T)$ 의 기저를 $\{u_1,\ldots,u_m \}$ 이라 하자. 이 기저를 확장하여 $U$ 의 기저를 이루는 벡터 $\{u_1,\ldots,\,u_m,\,w_1,\ldots,w_n\}$ 를 구할 수 있다(@lem-basis_expansion). 그렇다면 $\dim (U) = m + n$ 이다. 이제 $\text{rank}(T)=n$ 임을 보이면 된다.
+$\ker (L)$ 는 $U$ 의 부분공간이다(@lem-ker_range_subspace). $\text{nullity}(L)=m$ 이라 하고 $\ker (L)$ 의 기저를 $(u_1,\ldots,u_m )$ 이라 하자. 이 기저를 확장하여 $U$ 의 기저를 이루는 벡터 $(u_1,\ldots,\,u_m,\,w_1,\ldots,w_n)$ 를 구할 수 있다(@lem-basis_expansion). 그렇다면 $\dim (U) = m + n$ 이다. 이제 $\text{rank}(L)=n$ 임을 보이면 된다.
 
-임의의 $v = a_1 u_1 + \cdots a_m u_m + b_1 w_1 + \cdots + b_n w_n$ 에 대해 $T(v)=a_1 T(w_1) + \cdots + a_n T(w_n)$ 이다. 즉 $\{T(w_1),\ldots,T(w_n)\}$ 이 $\text{im}(T)$ 를 span 한다. 이제 $\{T(w_1),\ldots,T(w_n)\}$ 이 선형 독립임을 보이자. $c_1 T(w_1) + \cdots + c_n T(w_n) = 0_V$ 인 $c_1,\ldots,c_n \in \mathbb{F}$ 를 찾자.
-
-$$
-\begin{aligned}
-&c_1T(w_1)  + \cdots + c_n T(w_n) = 0_V \\
-\implies & T(c_1 w_1 + \cdots + c_n w_n) = 0_V
-\end{aligned}
-$$
-
-이므로 $c_1T(w_1) + \cdots + c_n T(w_n) \in \ker (T)$ 이어야 한다. 따라서,
+임의의 $v = a_1 u_1 + \cdots a_m u_m + b_1 w_1 + \cdots + b_n w_n$ 에 대해 $L(v)=a_1 L(w_1) + \cdots + a_n L(w_n)$ 이다. 즉 $\{L(w_1),\ldots,L(w_n)\}$ 이 $\text{im}(L)$ 를 span 한다. 이제 $\{L(w_1),\ldots,L(w_n)\}$ 이 선형 독립임을 보이자. $c_1 L(w_1) + \cdots + c_n L(w_n) = 0_V$ 인 $c_1,\ldots,c_n \in \mathbb{F}$ 를 찾자. $c_1 L(w_1) + \cdots + c_n L(w_n) = 0_V$ 라면 $L(c_1 w_1 + \cdots + c_n w_n) = 0_V$ 이므로 $c_1T(w_1) + \cdots + c_n T(w_n) \in \ker (T)$ 이어야 한다. 따라서,
 
 $$
 c_1 w_1 + \cdots + c_n w_1 = d_1 u_1 + \cdots +d_m u_m
 $$
 
-인 $d_1,\ldots,\,d_m \in \mathbb{F}$ 가 존재해야 한다. 그런데 $\{u_1,\ldots,\,u_m,\,w_1,\ldots,\,w_n\}$ 이 선형독립이므로, $c_1=\cdots =c_n = d_1 = \cdots =d_m = 0$ 이다. 따라서 $\{T(w_1),\ldots,\, T(w_n)\}$ 은 선형독립니다. 즉 $n= \text{rank}(T)$ 이므로 위의 식이 성립한다. $\square$
+인 $d_1,\ldots,\,d_m \in \mathbb{F}$ 가 존재해야 한다. 그런데 $\{u_1,\ldots,\,u_m,\,w_1,\ldots,\,w_n\}$ 이 선형독립이므로, $c_1=\cdots =c_n = d_1 = \cdots =d_m = 0$ 이다. 따라서 $\{L(w_1),\ldots,\, L(w_n)\}$ 은 선형독립니다. 즉 $n= \text{rank}(L)$ 이므로 위의 식이 성립한다. $\square$
 
 :::
 
@@ -534,7 +529,7 @@ $$
 아래의 명제는 위의 증명과정에서 보였지만 별도로 언급할 가치가 있다.
 
 ::: {#cor-range_independence}
-선형사상 $T\in \mathcal{L}(U,\,V)$ 에 대해 $\{u_1,\ldots,\,u_m\}\subset U$ 가 선형독립이며 $T(u_i)\ne 0_V\, (i=1,\ldots,\,m)$ 이라 하자. 이 때 $\{T(u_1),\ldots,\, T(u_m)\}$ 은 선형독립이다.
+선형사상 $L\in \mathcal{L}(U,\,V)$ 에 대해 $\{u_1,\ldots,\,u_m\}\subset U$ 가 선형독립이며 $L(u_i)\ne 0_V\, (i=1,\ldots,\,m)$ 이라 하자. 이 때 $\{L(u_1),\ldots,\, L(u_m)\}$ 은 선형독립이다.
 :::
 
 
@@ -551,7 +546,7 @@ $$
 
 #### 가역사상/동형사상 
 
-$T\in \mathcal{L}(U,\,V)$ 에 대한 역사상은 $T^{-1}$ 로 표기하며, 역변환이 존재하는 선형 사상을 **가역 사상(invertible map)** 혹은 **동형사상(isomorphism)** 이라 한다. 그리고 두 벡터공간 사이에 가역인 사상이 존재하면 두 벡터공간이 **동형(isomorphic)** 이라고 한다. 두 벡터공간 $U,\,V$ 가 동형일 때 $U \cong V$ 라고 쓴다.
+$L\in \mathcal{L}(U,\,V)$ 에 대한 역사상은 $T^{-1}$ 로 표기하며, 역변환이 존재하는 선형 사상을 **가역 사상(invertible map)** 혹은 **동형사상(isomorphism)** 이라 한다. 그리고 두 벡터공간 사이에 가역인 사상이 존재하면 두 벡터공간이 **동형(isomorphic)** 이라고 한다. 두 벡터공간 $U,\,V$ 가 동형일 때 $U \cong V$ 라고 쓴다.
 
 :::
 :::
@@ -568,14 +563,14 @@ $T\in \mathcal{L}(U,\,V)$ 에 대한 역사상은 $T^{-1}$ 로 표기하며, 역
 
 ::: {#prp-condition_of_injectivity}
 
-선형사상 $T\in \mathcal{L}(U,\,V)$ 가 단사(injection) 일 필요충분조건은 $\text{nullity} (T) = 0$ 이다.
+선형사상 $L\in \mathcal{L}(U,\,V)$ 가 단사(injection) 일 필요충분조건은 $\text{nullity} (L) = 0$ 이다.
 
 :::
 
 ::: {.proof}
-$T$ 가 단사라 하자. $T(u)=0_V$ 인 $u$ 는 $0_U$ 뿐이므로 $\ker (T) = \{0_U\}$ 이다. 따라서 $\text{nullity} (T) = 0$ 이다. 
+$L$ 이 단사라 하자. $L(u)=0_V$ 인 $u$ 는 $0_U$ 뿐이므로 $\ker (L) = \{0_U\}$ 이다. 따라서 $\text{nullity} (L) = 0$ 이다. 
 
-$\text{nullity}(T)=0$ 이면 $\ker (T)=\{0_U\}$ 이다. $T(u_1)=T(u_2)$ $\implies$ $T(u_1-u_2)=0_V$ 이므로 $u_1 =u_2$ 이다. 즉 $T$ 는 단사이다. $\square$
+$\text{nullity}(L)=0$ 이면 $\ker (L)=\{0_U\}$ 이다. $L(u_1)=L(u_2)$ $\implies$ $L(u_1-u_2)=0_V$ 이므로 $u_1 =u_2$ 이다. 즉 $L$ 는 단사이다. $\square$
 :::
 
 <br>
@@ -593,12 +588,12 @@ $\text{nullity}(T)=0$ 이면 $\ker (T)=\{0_U\}$ 이다. $T(u_1)=T(u_2)$ $\implie
 ::: {.proof}
 $m=\dim (U),\, n = \dim (V)$ 이며 $(u_i),\,(v_j)$ 가 각각의 기저라 하자. 
 
-(1 $\implies$ 2) $T\in \mathcal{L}(U,\,V)$ 를 $T({u_i}) =v_i, \, i=1,\ldots, m=n$ 로 정의하면,  $\ker (T) = \{0_U\}$ 이므로 단사이고, $\text{im}(T) = V$ 이므로 전사이다. 따라서 $U \cong V$ 이다. 
+(1 $\implies$ 2) $L\in \mathcal{L}(U,\,V)$ 를 $L({u_i}) =v_i, \, i=1,\ldots, m=n$ 로 정의하면,  $\ker (L) = \{0_U\}$ 이므로 단사이고, $\text{im}(L) = V$ 이므로 전사이다. 따라서 $U \cong V$ 이다. 
 
-(2 $\implies$ 1) $T\in \mathcal{L}(U,\,V)$ 가 동형사상이면 $T$ 가 전사이므로 $\text{im}(T) = V$ 이어야 하며, $T$ 가 단사이므로 $\text{nullity} (T) = 0$ 이어야 한다. 선형사상의 기본정리(@thm-rank_nullity) 에 의해
+(2 $\implies$ 1) $L\in \mathcal{L}(U,\,V)$ 가 동형사상이면 $L$ 가 전사이므로 $\text{im}(L) = V$ 이어야 하며, $L$ 가 단사이므로 $\text{nullity} (L) = 0$ 이어야 한다. 선형사상의 기본정리(@thm-rank_nullity) 에 의해
 
 $$
-\dim (U) = \text{nullity} (T) + \text{rank}(T) = 0 + \dim (V) = \dim (V)
+\dim (U) = \text{nullity} (L) + \text{rank}(L) = 0 + \dim (V) = \dim (V)
 $$
 
 이다. $\square$ 
@@ -623,21 +618,21 @@ $n$ 차원 $\mathbb{F}$-벡터공간 $U$ 와 $\mathcal{M}_{n}(\mathbb{F})$, $\ma
 
 ::: {#lem-linearity_of_inverse_map}
 
-$T\in \mathcal{L}(U,\,V)$ 가 동형사상일 때 $T^{-1}$ 도 동형사상이다.
+$L\in \mathcal{L}(U,\,V)$ 가 동형사상일 때 $L^{-1}$ 도 동형사상이다.
 
 :::
 
 ::: {.proof}
 
-우선 $T\in \mathcal{L}(U,\,V)$ 가 동형사상이면 $T^{-1}$ 이 선형사상임을 보이자. $u_1,\,u_2 \in U$ 에 대해 $v_1 = T(u_1),\, v_2 = T(u_2)$ 이며 $c \in \mathbb{F}$라 하자. $T$ 가 선형사상이므로 $T(u_1 + c u_2) = v_1 +c v_2$ 이다. 즉,
+우선 $L\in \mathcal{L}(U,\,V)$ 가 동형사상이면 $L^{-1}$ 이 선형사상임을 보이자. $u_1,\,u_2 \in U$ 에 대해 $v_1 = L(u_1),\, v_2 = L(u_2)$ 이며 $c \in \mathbb{F}$라 하자. $L$ 이 선형사상이므로 $L(u_1 + c u_2) = v_1 +c v_2$ 이다. 즉,
 
 $$
 \begin{aligned}
-T^{-1}(v_1 + c v_2) &= u_1 + c u_2 = T^{-1}(u_1) + c T^{-1}(u_2)
+L^{-1}(v_1 + c v_2) &= u_1 + c u_2 = L^{-1}(u_1) + c L^{-1}(u_2)
 \end{aligned}
 $$
 
-이다. 즉 $T^{-1}$ 은 선형사상이다. $(T^{-1})^{-1}=T$ 이므로 $T^{-1}$ 도 동형사상이다. $\square$ 
+이다. 즉 $L^{-1}$ 은 선형사상이다. $(L^{-1})^{-1}=L$ 이므로 $L^{-1}$ 도 동형사상이다. $\square$ 
 :::
 
 </br>
@@ -646,19 +641,19 @@ $$
 
 #### 가역사상과 기저의 변환
 
-$T\in \mathcal{L}(V,\,W)$ 에 대해 다음 두 조건은 동치이다. 
+$L\in \mathcal{L}(V,\,W)$ 에 대해 다음 두 조건은 동치이다. 
 
-&emsp; ($1$) $T$ 는 동형사상이다.
+&emsp; ($1$) $L$ 는 동형사상이다.
 
-&emsp; ($2$) $T$ 는 $V$ 의 기저를 $W$ 의 기저로 변환한다.
+&emsp; ($2$) $L$ 는 $V$ 의 기저를 $W$ 의 기저로 변환한다.
 
 :::
 
 ::: {.proof}
 
-(1 $\implies$ 2) $V$ 의 기저 $\{v_1,\ldots,\,v_m\}$ 에 대해 $\text{nullity} (T) = 0$ 이므로 @cor-range_independence 에 따라 $\{T(v_1),\ldots,\, T(v_m)\}$ 은 선형독립이다. $T$ 가 전사이므로  $\{T(v_1),\ldots,\, T(v_m)\}$ 는 역시 $V$ 의 기저이다.
+(1 $\implies$ 2) $V$ 의 기저 $\{v_1,\ldots,\,v_m\}$ 에 대해 $\text{nullity} (L) = 0$ 이므로 @cor-range_independence 에 따라 $\{L(v_1),\ldots,\, L(v_m)\}$ 은 선형독립이다. $L$ 이 전사이므로  $\{L(v_1),\ldots,\, L(v_m)\}$ 는 역시 $V$ 의 기저이다.
 
-(2 $\implies$ 1) $T$ 가 $V$ 의 기저를 $W$ 로 기저로 변환하므로 $\text{im}\, (T)=W$ 이다. 따라서 $T$ 는 전사이다. $V$ 의 기저 벡터중 $T$ 에 의해 영벡터가 되는 것이 없으므로 (영벡터를 포함하는 벡터의 집합은 무조건 선형종속이므로 기저가 될 수 없다) $\text{nullity}(T) = 0$ 이다. 따라서 $T$ 는 단사이다. 즉 $T$ 는 동형사상이다. $\square$
+(2 $\implies$ 1) $L$ 가 $V$ 의 기저를 $W$ 로 기저로 변환하므로 $\text{im}\, (L)=W$ 이다. 따라서 $L$ 은 전사이다. $V$ 의 기저 벡터중 $L$ 에 의해 영벡터가 되는 것이 없으므로 (영벡터를 포함하는 벡터의 집합은 무조건 선형종속이므로 기저가 될 수 없다) $\text{nullity}(L) = 0$ 이다. 따라서 $L$ 은 단사이다. 즉 $L$ 는 동형사상이다. $\square$
 
 :::
 
@@ -666,10 +661,10 @@ $T\in \mathcal{L}(V,\,W)$ 에 대해 다음 두 조건은 동치이다.
 
 ### 선형사상공간의 차원
 
-우리는 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $\mathcal{L}(U,\,V)$ 가 벡터공간이라는 것을 안다(@prp-LUV_vector_space). 또한 $\mathbb{F}$ 의 원소를 성분으로 갖는 $m \times n$ 행렬의 집합 $\mathcal{M}_{m \times n}(\mathbb{F})$ 도 벡터공간이라는 것을 안다 (@exm-vectorspace_matrix). $n = \dim (U),\, m = \dim (V)$ 이고 $\mathcal{B}_U = (u_i)$, $\mathcal{B}_V = (v_j)$ 가 각각 $U,\,V$ 의 기저라고 하자. $T\in \mathcal{L}(U,\,V)$ 의 행렬표현 $[T]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 를 생각하면 $[-]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 는 $\mathcal{L}(U,\,V) \mapsto\mathcal{M}_{\dim V \times \dim U}(\mathbb{F})$ 함수이다. $T,\, S\in \mathcal{L}(U,\,V)$, $c \in \mathbb{F}$ 에 대해
+우리는 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $\mathcal{L}(U,\,V)$ 가 벡터공간이라는 것을 안다(@prp-LUV_vector_space). 또한 $\mathbb{F}$ 의 원소를 성분으로 갖는 $m \times n$ 행렬의 집합 $\mathcal{M}_{m \times n}(\mathbb{F})$ 도 벡터공간이라는 것을 안다 (@exm-vectorspace_matrix). $n = \dim (U),\, m = \dim (V)$ 이고 $\mathcal{B}_U = (u_i)$, $\mathcal{B}_V = (v_j)$ 가 각각 $U,\,V$ 의 기저라고 하자. $L\in \mathcal{L}(U,\,V)$ 의 행렬표현 $[L]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 를 생각하면 $[-]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 는 $\mathcal{L}(U,\,V) \mapsto\mathcal{M}_{\dim V \times \dim U}(\mathbb{F})$ 함수이다. $L,\, K\in \mathcal{L}(U,\,V)$, $c \in \mathbb{F}$ 에 대해
 
 $$
-\left[ T + c S \right]_{\mathcal{B}_U, \mathcal{B}_V} = [T]_{\mathcal{B}_U, \mathcal{B}_V} + [c S]_{\mathcal{B}_U, \mathcal{B}_V} = [T]_{\mathcal{B}_U, \mathcal{B}_V} + c [S]_{\mathcal{B}_U, \mathcal{B}_V}
+\left[ L + c K \right]_{\mathcal{B}_U, \mathcal{B}_V} = [L]_{\mathcal{B}_U, \mathcal{B}_V} + [c K]_{\mathcal{B}_U, \mathcal{B}_V} = [L]_{\mathcal{B}_U, \mathcal{B}_V} + c [K]_{\mathcal{B}_U, \mathcal{B}_V}
 $$
 
 이므로 $[-]_{\mathcal{B}_U,\mathcal{B}_V}$ 는 선형사상이다. 즉 우리는 다음을 증명했다.
@@ -677,7 +672,7 @@ $$
 
 ::: {#lem-MM_linearmap}
 
-$\mathbb{F}$ 에서 정의된 유한차원 벡터공간 $U,\,V$ 와 그 순서기저 $\mathcal{B}_U,\, \mathcal{B}_V$ 에 대해 $[T] = [T]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 는 $\mathcal{L}(U,\,V) \to \mathcal{M}_{\dim V \times \dim U}(\mathbb{F})$ 인 선형사상이다.
+$\mathbb{F}$ 에서 정의된 유한차원 벡터공간 $U,\,V$ 와 그 순서기저 $\mathcal{B}_U,\, \mathcal{B}_V$ 에 대해 $[L] = [L]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 는 $\mathcal{L}(U,\,V) \to \mathcal{M}_{\dim V \times \dim U}(\mathbb{F})$ 인 선형사상이다.
 
 :::
 
@@ -692,7 +687,7 @@ $n$ 차원 벡터공간 $U$ 와 $m$ 차원 벡터공간 $V$ 에 대해 $\mathcal
 :::
 
 ::: {.proof}
-$U,\,V$ 의 기저를 각각 $\mathcal{B}_U = (u_i),\,\mathcal{B}_V = (v_j)$ 라 할 때 $\Phi: \mathcal{L}(U,\,V) \to \mathcal{M}_{m \times n}(\mathbb{F})$ 를 $\Phi(T) = [T]_{\mathcal{B}_U, \mathcal{B}_V}$ 로 정의한다. @lem-MM_linearmap 으로부터 $\Phi$ 는 선형사상임을 안다. $\ker (\Phi) = \{0_U\}$ 이므로 단사(injective)이다. 모든 $\mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 상응하는 $T$ 가 존재하므로 전사(surjective)이다. 즉 $\Phi$ 는 동형사상이다. $\square$
+$U,\,V$ 의 기저를 각각 $\mathcal{B}_U = (u_i),\,\mathcal{B}_V = (v_j)$ 라 할 때 $\Phi: \mathcal{L}(U,\,V) \to \mathcal{M}_{m \times n}(\mathbb{F})$ 를 $\Phi(L) = [L]_{\mathcal{B}_U, \mathcal{B}_V}$ 로 정의한다. @lem-MM_linearmap 으로부터 $\Phi$ 는 선형사상임을 안다. $\ker (\Phi) = \{0_U\}$ 이므로 단사(injective)이다. 모든 $\mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 상응하는 $L$ 가 존재하므로 전사(surjective)이다. 즉 $\Phi$ 는 동형사상이다. $\square$
 
 :::
 
@@ -721,7 +716,7 @@ $$
 임을 안다. 또한 $U$ 와 $V$ 의 각각의 기저 $\mathcal{B}_U$, $\mathcal{B}_V$ 에 대해, 
 
 $$
-T(u)=v \iff [T]_{\mathcal{B}_U, \mathcal{B}_V}[u]_{\mathcal{B}_U} = [v]_{\mathcal{B}_V}
+L(u)=v \iff [L]_{\mathcal{B}_U, \mathcal{B}_V}[u]_{\mathcal{B}_U} = [v]_{\mathcal{B}_V}
 $$
 
 라는 것도 안다. 이것은 근본적으로 선형사상과 행렬이 같은것이며, 벡터와 열벡터가 같은것임을 말해준다. 
@@ -735,30 +730,30 @@ $$
 
 #### 선형 연산자의 기본 정리
 
-유한차원 벡터공간 $V$ 에서의 선형 연산자 $T\in \mathcal{L}(V)$ 에 대해 다음 세 명제는 동치이다.
+유한차원 벡터공간 $V$ 에서의 선형 연산자 $L\in \mathcal{L}(V)$ 에 대해 다음 세 명제는 동치이다.
 
-&emsp; ($1$) $T$ 는 가역이다.
+&emsp; ($1$) $L$ 는 가역이다.
 
-&emsp; ($2$) $T$ 는 단사이다.
+&emsp; ($2$) $L$ 는 단사이다.
 
-&emsp; ($3$) $T$ 는 전사이다.
+&emsp; ($3$) $L$ 는 전사이다.
 
 :::
 
 ::: {.proof}
-함수가 가역이면 전단사이고, 전단사 이면 가역이다. 따라서 $T$ 가 전사라는 것과 단사라는 것이 동치임을 보이면 된다. Rank-nullity 정리(@thm-rank_nullity)로부터
+함수가 가역이면 전단사이고, 전단사 이면 가역이다. 따라서 $L$ 가 전사라는 것과 단사라는 것이 동치임을 보이면 된다. Rank-nullity 정리(@thm-rank_nullity)로부터
 
 $$
-\dim (V) = \text{nullity}(T)  + \text{rank}(T)
+\dim (V) = \text{nullity}(L)  + \text{rank}(L)
 $$
 
 임을 안다. 이로부터 다음을 보일 수 있다.
 
 $$
 \begin{aligned}
-T \text{ 가 전사} &\iff \text{rank} (T) = \dim V \\ 
-& \iff \text{nullity} (T) = 0  \\ 
-& \iff T \text{ 는 단사} & 
+L \text{ 이 전사} &\iff \text{rank} (L) = \dim V \\ 
+& \iff \text{nullity} (L) = 0  \\ 
+& \iff L \text{ 는 단사} & 
 \end{aligned}
 $$
 
@@ -774,11 +769,11 @@ $$
 
 ::: {#cor-basis_transformation}
 
-유한차원 벡터공간 $V$ 에서의 선형연산자 $T\in \mathcal{L}(V)$ 에 대해 다음은 동치이다.
+유한차원 벡터공간 $V$ 에서의 선형연산자 $L\in \mathcal{L}(V)$ 에 대해 다음은 동치이다.
 
-&emsp; ($1$) $T$ 는 동형이다.
+&emsp; ($1$) $L$ 은 동형이다.
 
-&emsp; ($2$) $\{v_1,\ldots,\,v_m\}$ 이 $V$ 의 기저일 때, $\{T(v_1),\ldots,\,T(v_m)\}$ 도 $V$ 의 기저이다.
+&emsp; ($2$) $\{v_1,\ldots,\,v_m\}$ 이 $V$ 의 기저일 때, $\{L(v_1),\ldots,\,L(v_m)\}$ 도 $V$ 의 기저이다.
 :::
 
 </br>
@@ -917,7 +912,7 @@ $$
 
 ### 가역사상과 역행렬
 
-$T\in \mathcal{L}(U,\,V)$ 가 가역사상이라고 하자. 이 때 임의의 $u\in U,\, v\in V$ 에 대해 $(T^{-1}\circ T )(u)=u$ 이고 $(T \circ T^{-1}) (v)= v$ 이다. $\mathcal{B}_U,\,\mathcal{B}_V$ 가 각각 $U,\,V$ 의 기저라고 하자. $\boldsymbol{A}=[T]_{\mathcal{B}_U, \mathcal{B}_V}$ 에 대해 $[T^{-1}]_{\mathcal{B}_V,\mathcal{B}_U} =\boldsymbol{A}^{-1}$ 이라고 쓰는 것은 자연스럽다. 또한 $\boldsymbol{AA}^{-1} = \boldsymbol{A}^{-1}\boldsymbol{A} = \boldsymbol{I}$ 라는 것을 알 수 있다. 이 때 $\boldsymbol{A}^{-1}$ 을 $\boldsymbol{A}$ 의 **역행렬 (inverse matrix)** 라 한다.
+$L\in \mathcal{L}(U,\,V)$ 가 가역사상이라고 하자. 이 때 임의의 $u\in U,\, v\in V$ 에 대해 $(L^{-1}\circ T )(u)=u$ 이고 $(L \circ L^{-1}) (v)= v$ 이다. $\mathcal{B}_U,\,\mathcal{B}_V$ 가 각각 $U,\,V$ 의 기저라고 하자. $\boldsymbol{L}=[L]_{\mathcal{B}_U, \mathcal{B}_V}$ 에 대해 $[L^{-1}]_{\mathcal{B}_V,\mathcal{B}_U} =\boldsymbol{L}^{-1}$ 이라고 쓰는 것은 자연스럽다. 또한 $\boldsymbol{LL}^{-1} = \boldsymbol{L}^{-1}\boldsymbol{L} = \boldsymbol{I}$ 라는 것을 알 수 있다. 이 때 $\boldsymbol{L}^{-1}$ 을 $\boldsymbol{L}$ 의 **역행렬 (inverse matrix)** 라 한다.
 
 </br>
 
@@ -972,13 +967,13 @@ $$
 
 #### 연산자의 닮음과 닮음변환
 
-벡터공간 $V$ 에서 정의된 두 연산자 $T,\,S\in \mathcal{L}(V)$ 에 대해 어떤 가역 연산자 $P\in \mathcal{L}(V)$ 가 존재하여 $S=P^{-1}\circ T \circ P$ 라면 두 연산자 $T$ 와 $S$ 는 닮았다고 하며 $P^{-1}\circ T \circ P$ 를 $T$ 의 **닮음변환 (similarity transfroamtion)** 이라고 한다.
+벡터공간 $V$ 에서 정의된 두 연산자 $L,\,K\in \mathcal{L}(V)$ 에 대해 어떤 가역 연산자 $P\in \mathcal{L}(V)$ 가 존재하여 $K=P^{-1}\circ L \circ P$ 라면 두 연산자 $L$ 과 $K$ 는 닮았다고 하며 $P^{-1}\circ L \circ P$ 를 $L$ 의 **닮음변환 (similarity transfroamtion)** 이라고 한다.
 
 :::
 :::
 
 
-$S=P^{-1}\circ T \circ P$ 라면 그 행렬표현도 $[S] = [P^{-1}][T][P]$ 일 것이다. 연산자에 대한 것도 행렬에 대해 똑같이 정의 할 수 있다. 
+$K=P^{-1}\circ L \circ P$ 라면 그 행렬표현도 $[K] = [P^{-1}][L][P]$ 일 것이다. 연산자에 대한 것도 행렬에 대해 똑같이 정의 할 수 있다. 
 
 
 ::: {.callout-note appearance="simple" icon="false"}
@@ -1026,12 +1021,12 @@ $\boldsymbol{P}$ 가 가역행렬일 때 $\boldsymbol{P}$ 의 각 열은 표준�
 
 ::: {#exr-linear_map_1}
 
-$V$ 가 유한차원 벡터공간이고 $T\in \mathcal{L}(V, W)$ 이다. $V$ 의 어떤 부분공간 $U$ 는 $U \cap \ker (T)=\{0\}$ 이며 $\text{im}\,(T)=\{T(u) : u \in U\}$ 임을 보이시오.
+$V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(V, W)$ 이다. $V$ 의 어떤 부분공간 $U$ 는 $U \cap \ker (L)=\{0\}$ 이며 $\text{im}\,(L)=\{L(u) : u \in U\}$ 임을 보이시오.
 :::
 
 ::: {.solution}
 
-$\ker (T)$ 의 기저 $(v_1,\ldots,\,v_m)$ 을 확장하여 $V$ 의 기저 $(v_1,\ldots,\,v_m,\,u_1,\ldots,\,u_n)$ 을 구성 할 수 있다(@lem-basis_expansion). $U=\text{span}(u_1,\ldots,\,u_n)$ 이라 놓으면 된다. 
+$\ker (L)$ 의 기저 $(v_1,\ldots,\,v_m)$ 을 확장하여 $V$ 의 기저 $(v_1,\ldots,\,v_m,\,u_1,\ldots,\,u_n)$ 을 구성 할 수 있다(@lem-basis_expansion). $U=\text{span}(u_1,\ldots,\,u_n)$ 이라 놓으면 된다. 
 
 :::
 
@@ -1048,12 +1043,12 @@ $U,\,V$ 가 유한차원 벡터공간일 때 다음을 보여라.
 :::
 
 ::: {.solution}
-($1$) $\dim(V) \ge \text{rank}\,(T) = \dim(U)-\text{nullity}\, (T)$ 임을 안다. $T$ 가 단사이면 $\text{nullity}\,(T)=0$ 이므로 $\dim(V) \ge \dim (U)$ 이다. $n=\dim (V)\ge \dim (U)=m$ 이라고 하자. $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 과 $U$ 의 기저 $(u_1,\ldots,\,u_m)$ 에 대해 $T(u_i)=v_i$, $i=1,\ldots,\,m$ 는 단사인 선형사상이다.
+($1$) $L\in \mathcal{L}(U,\,V)$ 라고 하자. $\dim(V) \ge \text{rank}\,(L) = \dim(U)-\text{nullity}\, (L)$ 임을 안다. $L$ 이 단사이면 $\text{nullity}\,(L)=0$ 이므로 $\dim(V) \ge \dim (U)$ 이다. $n=\dim (V)\ge \dim (U)=m$ 이라고 하자. $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 과 $U$ 의 기저 $(u_1,\ldots,\,u_m)$ 에 대해 $L(u_i)=v_i$, $i=1,\ldots,\,m$ 는 단사인 선형사상이다.
 
-($2$) $T$ 가 전사이면 $\dim(V) = \text{rank}\, (T) = \dim(U) - \text{nullity}\,(T)$ 에 따라 $\dim(U) \ge \dim(V)$ 이다. $m = \dim(U) \ge \dim(V) = n$ 이라 하면 $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 과 $U$ 의 기저 $(u_1,\ldots,\,u_m)$ 에 대해 
+($2$) $L$ 이 전사이면 $\dim(V) = \text{rank}\, (L) = \dim(U) - \text{nullity}\,(L)$ 에 따라 $\dim(U) \ge \dim(V)$ 이다. $m = \dim(U) \ge \dim(V) = n$ 이라 하면 $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 과 $U$ 의 기저 $(u_1,\ldots,\,u_m)$ 에 대해 
 
 $$
-T(u_i)=\left\{\begin{array}{ll} v_i \qquad &i=1,\ldots,\,n \\ 0_V & i > n\end{array}\right.
+L(u_i)=\left\{\begin{array}{ll} v_i \qquad &i=1,\ldots,\,n \\ 0_V & i > n\end{array}\right.
 $$
 
 는 전사인 선형사상이다. 
@@ -1063,19 +1058,19 @@ $$
 
 ::: {#exr-inverse_image_of_linear_map}
 
-$T\in \mathcal{L}(U,\,V)$ 이며 $T(u)=v$ 일 때 다음을 보여라.
+$L\in \mathcal{L}(U,\,V)$ 이며 어떤 $u\in U$ 에 대해 $L(u)=v$ 일 때 다음을 보여라.
 
-&emsp; ($1$) $T^{-1}(\{v\}) = \{u+x: x\in \ker (T)\}$ 이다.
+&emsp; ($1$) $L^{-1}(\{v\}) = \{u+x: x\in \ker (L)\}$ 이다.
 
-&emsp; ($2$) $T^{-1}(\{v\})$ 와 $\ker (T)$ 사이에 전단사 함수가 존재한다.
+&emsp; ($2$) $L^{-1}(\{v\})$ 와 $\ker (L)$ 사이에 전단사 함수가 존재한다.
 
 :::
 
 ::: {.solution}
 
-($1$) $A = \{u+x: x\in \ker (T)\}$ 라 하자.  $y \in A$ 에 대해 $T(y) = v$ 이므로 $A \subset T^{-1}(\{v\})$ 이다. $y\in U - A$ 에 대해 $y-u\not\in \ker{T}$ 이므로 $T(y)\ne v$ 이다. 따라서 $T^{-1}(\{v\}) = A$ 이다.
+($1$) $A = \{u+x: x\in \ker (L)\}$ 라 하자.  $y \in A$ 에 대해 $L(y) = v$ 이므로 $A \subset L^{-1}(\{v\})$ 이다. $y\in U - A$ 에 대해 $y-u\not\in \ker{L}$ 이므로 $L(y)\ne v$ 이다. 따라서 $L^{-1}(\{v\}) = A$ 이다.
 
-($2$) $f:A \to \ker (T)$ 를 $f(y) = y-u$ 로 정의하자. 임의의 $x\in \ker (T)$ 에 대해 $u+x\in A$ 이므로 $f$ 는 전사이다. $y_1-u=y_2-y \implies y_1 = y_2$ 이므로 $f$ 는 전사이다. 
+($2$) $f:A \to \ker (T)$ 를 $f(y) = y-u$ 로 정의하자. 임의의 $x\in \ker (T)$ 에 대해 $u+x\in A$ 이므로 $f$ 는 전사이다. $y_1-u=y_2-y \implies y_1 = y_2$ 이므로 $f$ 는 단사이다. 
 
 :::
 
@@ -1083,29 +1078,29 @@ $T\in \mathcal{L}(U,\,V)$ 이며 $T(u)=v$ 일 때 다음을 보여라.
 
 ::: {#exr-axler_3_B_24}
 
-$W$ 가 유한차원 벡터공간이고 $T_1,\,T_2\in \mathcal{L}(V, W)$ 일 때 다음은 동치임을 보여라. 
+$W$ 가 유한차원 벡터공간이고 $L,\,K\in \mathcal{L}(V, W)$ 일 때 다음은 동치임을 보여라. 
 
-&emsp; ($1$) $\ker (T_1) \subset \ker (T_2)$,  
+&emsp; ($1$) $\ker (L) \subset \ker (K)$,  
 
-&emsp; ($2$) $T_2 = S T_1$ 가 되도록 하는 어떤 $S\in \mathcal{L}(W)$ 가 존재한다.
+&emsp; ($2$) $K= S L$ 가 되도록 하는 어떤 $S\in \mathcal{L}(W)$ 가 존재한다.
 
 :::
 
 ::: {.solution}
 
-($1 \implies 2$) $\text{im}(T_1)\le W$ 이므로 $\text{im}(T_1)$ 은 유한차원이다. $(w_1,\ldots,\,w_m)$ 을 $\text{im}(T_1)$ 의 기저라고 하자. $T_1^{-1}(\{w_i\})$ $(i=1,\ldots,\,m)$ 에서 하나의 벡터를 골라 $v_j$ 라고 하자. $0_V = c_1v_1 + \cdots c_m v_m$ 이라고 하면 $0_W = \sum_{i=1}^m c_i T(v_i) = \sum_{i=1}^m c_i w_i$ 이므로 $c_1=\cdots =c_m=0$ 이다. 즉 $\{v_1,\ldots,\,v_m\}$ 은 선형독립이다. 
+($1 \implies 2$) $\text{im}(L)\le W$ 이므로 $\text{im}(L)$ 은 유한차원이다. $(w_1,\ldots,\,w_m)$ 을 $\text{im}(L)$ 의 기저라고 하자. 각각의 $L^{-1}(\{w_i\})$ $(i=1,\ldots,\,m)$ 에서 하나의 벡터를 골라 $v_i$ 라고 하자. $0_V = c_1v_1 + \cdots c_m v_m$ 이라고 하면 $0_W = \sum_{i=1}^m c_i L(v_i) = \sum_{i=1}^m c_i w_i$ 이므로 $c_1=\cdots =c_m=0$ 이다. 즉 $\{v_1,\ldots,\,v_m\}$ 은 선형독립이다. 
 
-이제 $v\in V$ 는 $v=\sum_{i=1}^m c_iv_i + u,\,u\in \ker (T_1)$ 으로 쓸 수 있다. $\ker (T_1)\subset \ker (T_2)$ 이므로, $T_2(v) = \sum_{i=1}^m c_i T_2(v_i)$ 이다. 
+이제 $v\in V$ 는 $v=\sum_{i=1}^m c_iv_i + u,\,u\in \ker (L)$ 로 쓸 수 있다. $\ker (L)\subset \ker (K)$ 이므로, $K(v) = \sum_{i=1}^m c_i K(v_i)$ 이다. 
 
 이제 $(w_1,\ldots,\,w_m)$ 을 확장하여 $(w_1, \ldots, w_m, w_{m+1}, \ldots, \,w_n)$ 이 $W$ 의 기저라고 하자. $S\in \mathcal{L}(W)$ 를, 
 
 $$
-S(w_i) = \left\{\begin{array}{ll} T_2(v_i)\qquad &;i \le m \\ 0 &; i>m\end{array} \right.
+S(w_i) = \left\{\begin{array}{ll} K(v_i)\qquad &;i \le m \\ 0 &; i>m\end{array} \right.
 $$
 
-로 놓으면 $ST_1 = T_2$ 이다. 
+로 놓으면 $SL = K$ 이다. 
 
-($2 \implies 1$) $v \in \ker (T_1)$ 이면 $T_2 (v) = ST_1(v)=0_W$ 이므로 $v\in \ker (T_2)$ 이다. 즉 $\ker (T_1)\subset \ker (T_2)$ 이다.
+($2 \implies 1$) $v \in \ker (L)$ 이면 $K (v) = SL(v)=0_W$ 이므로 $v\in \ker (K)$ 이다. 즉 $\ker (L)\subset \ker (K)$ 이다.
 
 :::
 
@@ -1113,17 +1108,17 @@ $$
 
 ::: {#exr-axler_3_B_25}
 
-$V$ 가 유한차원벡터공간이고 $T_1,\,T_2\in \mathcal{L}(V,W)$ 일 때 다음은 동치임을 보여라.
+$V$ 가 유한차원벡터공간이고 $L,\,K\in \mathcal{L}(V,W)$ 일 때 다음은 동치임을 보여라.
 
-&emsp; ($1$) $\text{im}(T_1) \subset \text{im}(T_2)$, 
+&emsp; ($1$) $\text{im}(L) \subset \text{im}(K)$, 
 
-&emsp; ($2$) $T_1 = T_2S$ 가 되도록 하는 어떤 $S\in \mathcal{L}(V)$ 가 존재한다.
+&emsp; ($2$) $L = KS$ 가 되도록 하는 어떤 $S\in \mathcal{L}(V)$ 가 존재한다.
 
 :::
 
 ::: {.solution}
 
-($1\implies 2$ ) $\text{im}(T_1)$ 의 기저 $(w_1,\ldots,\,w_m)$ 을 생각하자. $T_1^{-1}(\{w_i\})$ 에서 하나의 벡터를 선택하여 $v_i$ 라고 하면 $(v_1,\ldots,\,v_m)$ 은 선형 독립임을 안다(@exr-axler_3_B_24). $(w_1,\ldots,\,w_m)$ 을 확장하여 $(w_1,\ldots,w_m,\, w_{m+1},\ldots, w_{n})$ 이 $\text{im}(T_2)$ 의 기저가 되도록 하고 $T_1$ 에서와 같은 방법으로 $(u_1,\ldots,u_m, u_{m+1}, \ldots, u_{n})$ 을 얻는다. 또한 선형독립인 이 벡터를 확장하여 $(v_1,\ldots,\,v_m,\ldots,\,v_n, \ldots,v_N)$ 이 $V$ 의 기저가 되도록 할 수 있다. 이제
+($1\implies 2$ ) $\text{im}(L)$ 의 기저 $(w_1,\ldots,\,w_m)$ 을 생각하자. $L^{-1}(\{w_i\})$ 에서 하나의 벡터를 선택하여 $v_i$ 라고 하면 $(v_1,\ldots,\,v_m)$ 은 선형 독립임을 안다(@exr-axler_3_B_24). $(w_1,\ldots,\,w_m)$ 을 확장하여 $(w_1,\ldots,w_m,\, w_{m+1},\ldots, w_{n})$ 이 $\text{im}(K)$ 의 기저가 되도록 하고 $L$ 에서와 같은 방법으로 $(u_1,\ldots,u_m, u_{m+1}, \ldots, u_{n})$ 을 얻는다. 또한 선형독립인 이 벡터를 확장하여 $(v_1,\ldots,\,v_m,\ldots,\,v_n, \ldots,v_N)$ 이 $V$ 의 기저가 되도록 할 수 있다. 이제
 
 $$
 S(v_i) = \left\{\begin{array}{ll} u_i, \qquad &;\text{if } i \le m, \\ 0 &;\text{if }i > m. \end{array}\right.
@@ -1139,10 +1134,10 @@ $$
 
 ::: {#exr-axler_3_B_28}
 
-$T\in \mathcal{L}(V, W)$ 이고 $(w_1,\ldots\,w_m)$ 이 $\text{im}(T)$ 의 기저라고 하자. 어떤 $\varphi_1,\ldots,\,\varphi_m \in \mathcal{L}(V, \mathbb{F})$ 가 존재하여 모든 $v\in V$ 에 대해
+$L\in \mathcal{L}(V, W)$ 이고 $(w_1,\ldots\,w_m)$ 이 $\text{im}(L)$ 의 기저라고 하자. 어떤 $\varphi_1,\ldots,\,\varphi_m \in \mathcal{L}(V, \mathbb{F})$ 가 존재하여 모든 $v\in V$ 에 대해
 
 $$
-T(v) = \varphi_1 (v) w_1 + \cdots + \varphi_m (v)w_n
+L(v) = \varphi_1 (v) w_1 + \cdots + \varphi_m (v)w_n
 $$
 
 을 만족함을 보여라.
@@ -1151,7 +1146,7 @@ $$
 
 ::: {.solution}
 
-$T^{-1}(\{w_j\})$ 가운데 하나의 벡터를 선택하여 $v_1$ 이라고 하면 $\{v_1,\ldots,\,v_m\}$ 은 선형 독립이다(@exr-axler_3_B_24). 이를 확장하여 $V$ 의 기저 $(v_1,\,v_2,\ldots)$ 를 얻을 수 있다. $\phi_i \in \mathcal{L}(V, \mathbb{F})$, $(i=1,\ldots,\,m)$ 를 다음과 같이 정의하자.
+$L^{-1}(\{w_j\})$ 가운데 하나의 벡터를 선택하여 $v_1$ 이라고 하면 $\{v_1,\ldots,\,v_m\}$ 은 선형 독립이다(@exr-axler_3_B_24). 이를 확장하여 $V$ 의 기저 $(v_1,\,v_2,\ldots)$ 를 얻을 수 있다. $\phi_i \in \mathcal{L}(V, \mathbb{F})$, $(i=1,\ldots,\,m)$ 를 다음과 같이 정의하자.
 
 $$
 \varphi_i (v_j) = \delta_{ij}
@@ -1166,7 +1161,7 @@ $$
 이며, 
 
 $$
-T(v) = T\left(\sum_i c_i v_i\right) = \sum_{i=1}^m \varphi_i (v) T(v_i) = \sum_{i=1}^m \varphi_i (v) w_i
+L(v) = L\left(\sum_i c_i v_i\right) = \sum_{i=1}^m \varphi_i (v) L(v_i) = \sum_{i=1}^m \varphi_i (v) w_i
 $$
 
 이다.
@@ -1177,7 +1172,7 @@ $$
 
 ::: {#exr-axler_3_B_29}
 
-$\varphi \in \mathcal{L}(V, \mathbb{F})$ 이고 $u\in V,\, u\not\in \ker(\varphi)$ 일 때, 
+$\varphi \in \mathcal{L}(V, \mathbb{F}),\, \varphi \ne 0$ 에 대해 $u \in V- \ker(\varphi)$ 일 때, 
 
 $$
 V = \ker (\varphi) \oplus \{au : a\in \mathbb{F}\}
@@ -1189,7 +1184,7 @@ $$
 
 ::: {.solution}
 
-$\ker (\varphi) \cap \{au\}=\{0_V\}$ 이므로 $\ker (\varphi) + \{au\} = \ker (\varphi)\oplus \{au\}$ 이다. $\dim (\mathbb{F})=1$ 이므로 $\{au\} = \text{im}(\varphi)$ 이다.
+$U=\{au:a\in \mathbb{F}\}$ 라고 하자. $\ker (\varphi) \cap U=\{0_V\}$ 이므로 $\ker (\varphi) + U = \ker (\varphi)\oplus U$ 이다. $\varphi \ne 0$ 이므로 $\text{rank}(\varphi)=1$ 이며 따라서 $u$ 의 스칼라곱이 아닌 벡터는 모두 $\ker (\varphi)$ 에 포함된다. 즉 $V = \ker (\varphi)\oplus U$ 이다.
 
 :::
 
@@ -1213,13 +1208,13 @@ $u\notin \ker (\varphi_2) \iff u \not\in \ker (\varphi_2)$ 이며 @exr-axler_3_B
 
 ::: {#exr-axler_3_8_9}
 
-유한차원 벡터공간 $U$ 에서 정의된 연산자 $S, T\in \mathcal{L}(U)$ 에 대해 $S,\,T$ 가 가역일 필요충분조건은 $ST$ 가 가역인것임을 보이시오.
+유한차원 벡터공간 $U$ 에서 정의된 연산자 $K,\,L\in \mathcal{L}(U)$ 에 대해 $K,\,L$ 이 각각 가역일 필요충분조건은 $KL$ 이 가역인것임을 보이시오.
 
 :::
 
 ::: {.solution}
 
-$S,\,T$ 가 전사이면 $ST$ 도 전사이다. $ST$ 가 전사이면 $S, T$ 도 각각 전사이다.
+$K,\,L$ 이 전사이면 $KL$ 도 전사이다. $KL$ 이 전사이면 $K, L$ 도 각각 전사이다. 유한차원 벡터공간에서의 연산자므로 전사이면 전단사이다.
 
 :::
 
@@ -1228,14 +1223,15 @@ $S,\,T$ 가 전사이면 $ST$ 도 전사이다. $ST$ 가 전사이면 $S, T$ 도
 
 ::: {#exr-axler_3_8_10}
 
-유한차원 벡터공간 $U$ 에서 정의된 연산자 $S, T\in \mathcal{L}(U)$ 에 대해 $ST=I$ 일 필요충분조건은 $TS=I$ 인것임을 보이시오.
+유한차원 벡터공간 $U$ 에서 정의된 연산자 $K, L\in \mathcal{L}(U)$ 에 대해 $KL=I$ 일 필요충분조건은 $LK=I$ 인것임을 보이시오.
 :::
 
 
 ::: {.solution}
 
-$ST=I$ 이면 @exr-axler_3_8_9 에 의해 $S,\,T$ 도 가역이다. 모든 $u\in U$ 에 대해 $ST(u)=u$ 이며 $S$ 가 가역이므로 $S(v)=u$ 인 $v\in V$ 가 유일하게 정해지며 따라서 $T(u)=v$ 이다. $TS(v) = v$ 이므로 $TS=I$ 이다.
+($\implies$) $KL=I$ 임을 가정하자. @exr-axler_3_8_9 에 의해 $K,\,L$ 도 가역이다. 모든 $u\in U$ 에 대해 $KL(u)=u$ 이며 $K$ 가 가역이므로 $K(v)=u$ 인 $v\in V$ 가 유일하게 정해지며 따라서 $L(u)=v$ 이다. $LK(v) = v$ 이므로 $LK=I$ 이다.
 
+($\,\Longleftarrow\,$) $K,\,L$ 을 바꿔서 위의 증명을 그대로 쓸 수 있다.
 :::
 
 </br>
@@ -1288,17 +1284,17 @@ $V$ 가 유한차원 벡터공간이고 $U \le V$ 이며 $S\in \mathcal{L}(U, V)
 
 ::: {#exr-axler_3_D_4}
 
-$W$ 가 유한차원벡터공간이며 $T_1,\,T_2\in \mathcal{L}(V, W)$ 일 때 다음이 동치임을 보여라.
+$W$ 가 유한차원벡터공간이며 $L,\,K\in \mathcal{L}(V, W)$ 일 때 다음이 동치임을 보여라.
 
-&emsp; ($1$) $\ker (T_1) = \ker (T_2)$, 
+&emsp; ($1$) $\ker (L) = \ker (K)$, 
 
-&emsp; ($2$) $T_1 = ST_2$ 가 되도록 하는 가역연산자 $S\in \mathcal{L}(W)$ 가 존재한다.
+&emsp; ($2$) $L = SK$ 가 되도록 하는 가역연산자 $S\in \mathcal{L}(W)$ 가 존재한다.
 
 :::
 
 ::: {.solution}
 
-($1 \implies 2$) @exr-axler_3_B_24 로 부터 $T_2 = S_1T_1$, $T_1 = S_2T_2$ 를 만족하는 $S_1,\,S_2\in \mathcal{L}(W)$ 가 존재하며 $T_2 = S_1S_2T_2$ 이므로 $S_1S_2$ 는 가역이다. 따라서 $S_1,\,S_2$ 각각 가역이다.
+($1 \implies 2$) @exr-axler_3_B_24 로 부터 $K = S_1L$, $L = S_2K$ 를 만족하는 $S_1,\,S_2\in \mathcal{L}(W)$ 가 존재하며 $K = S_1S_2K$ 이므로 $S_1S_2$ 는 가역이다. 따라서 $S_1,\,S_2$ 각각 가역이다.
 
 ($2 \implies 1$) 자명하다.
 
@@ -1308,15 +1304,15 @@ $W$ 가 유한차원벡터공간이며 $T_1,\,T_2\in \mathcal{L}(V, W)$ 일 때 
 
 ::: {#exr-axler_3_D_5}
 
-$V$ 가 유한차원 벡터공간이며 $T_1,\,T_2\in \mathcal{L}(V, W)$ 일 때 다음이 동치임을 보여라.
+$V$ 가 유한차원 벡터공간이며 $L,\,K\in \mathcal{L}(V, W)$ 일 때 다음이 동치임을 보여라.
 
-&emsp; ($1$) $\text{im}(T_1) = \text{im}(T_2)$, 
+&emsp; ($1$) $\text{im}(L) = \text{im}(K)$, 
 
-&emsp; ($2$) $T_1 = T_2S$ 를 만족하는 가역연산자 $S\in \mathcal{L}(V)$ 가 존재한다.
+&emsp; ($2$) $L = KS$ 를 만족하는 가역연산자 $S\in \mathcal{L}(V)$ 가 존재한다.
 :::
 
 ::: {.solution}
-($1 \implies 2$) @exr-axler_3_B_25 로부터 $T_1 = T_2S_2$, $T_2 = T_1S_1$ 이 되도록 하는 $S_1,\,S_2\in \mathcal{L}(V)$ 가 존재함을 안다. $T_1 = T_1 S_1S_2$ 이므로 $S_1S_2$ 는 가역이다. 따라서 $S_1, S_2$ 는 각각 가역이다.
+($1 \implies 2$) @exr-axler_3_B_25 로부터 $L = KS_2$, $K = LS_1$ 이 되도록 하는 $S_1,\,S_2\in \mathcal{L}(V)$ 가 존재함을 안다. $L = L S_1S_2$ 이므로 $S_1S_2$ 는 가역이다. 따라서 $S_1, S_2$ 는 각각 가역이다.
 
 ($2 \implies 1$) 자명하다.
 
@@ -1326,17 +1322,17 @@ $V$ 가 유한차원 벡터공간이며 $T_1,\,T_2\in \mathcal{L}(V, W)$ 일 때
 
 ::: {#exr-axler_3_D_6}
 
-$V, W$ 가 유한차원 벡터공간이며 $T_1,\,T_2\in \mathcal{L}(V, W)$ 일 때 다음이 동치임을 보여라.
+$V, W$ 가 유한차원 벡터공간이며 $L,\,K\in \mathcal{L}(V, W)$ 일 때 다음이 동치임을 보여라.
 
-&emsp; ($1$) $\text{nullity}(T_1) = \text{nullity}(T_2)$.
+&emsp; ($1$) $\text{nullity}(L) = \text{nullity}(K)$.
 
-&emsp; ($2$) $T_1 = ST_2R$ 을 만족하는 가역연산자 $S\in \mathcal{L}(W),\, R\in \mathcal{L}(V)$ 가 존재한다. 
+&emsp; ($2$) $L = SKR$ 을 만족하는 가역연산자 $S\in \mathcal{L}(W),\, R\in \mathcal{L}(V)$ 가 존재한다. 
 
 :::
 
 ::: {.solution}
 
-($1 \implies 2$) $\ker (T_1)$ 을 $\ker (T_2)$ 로 변환하는 연산자 $R\in \mathcal{L}(V)$ 가 존재한다. 즉 $\ker (T_1) =  \ker (T_2R)$ 이다. @exr-axler_3_D_4 에 의해 $T_1 = ST_2R$ 을 만족하는 $\in \mathcal{L}(W)$ 가 존재한다.
+($1 \implies 2$) $\ker (L)$ 을 $\ker (K)$ 로 변환하는 연산자 $R\in \mathcal{L}(V)$ 가 존재한다. 즉 $\ker (K) =  \ker (KR)$ 이다. @exr-axler_3_D_4 에 의해 $L = SKR$ 을 만족하는 $\in \mathcal{L}(W)$ 가 존재한다.
 
 ($2 \implies 1$) 자명하다.
 
@@ -1346,22 +1342,21 @@ $V, W$ 가 유한차원 벡터공간이며 $T_1,\,T_2\in \mathcal{L}(V, W)$ 일 
 
 ::: {#exr-axler_3_D_16}
 
-유한차원 벡터공간 $V$ 에 대해 $T\in \mathcal{L}(V)$ 가 모든 $S\in \mathcal{L}(V)$ 에 대해 $ST=TS$ 이면 $T$ 는 항등사상 $I$ 의 스칼라곱임을 보여라. 즉 어떤 스칼라 $c$ 에 대해 $T=cI$ 이다.
+유한차원 벡터공간 $V$ 에 대해 $L\in \mathcal{L}(V)$ 이 모든 $S\in \mathcal{L}(V)$ 에 대해 $SL=LS$ 이면 $L$ 은 항등사상 $I$ 의 스칼라곱임을 보여라. 즉 어떤 스칼라 $c$ 에 대해 $L=cI$ 임을 보여라.
 
 :::
 
 ::: {.solution}
- 
-$S_j (v_k) = \left\{\begin{array}{ll} v_k, \qquad &;\text{if } j = k \\ 0 &l\text{otherwise}. \end{array}\right.$ 는 선형연산자이다. 그리고 $T(v_i) = \sum_{k=1}^n A_{ki} v_k$ 라고 하자. 
+$V$ 의 기저 $(v_1,\ldots,\,v_n)$ 을 생각한다. $S_j (v_k) = \delta_{jk}v_k$ 는 선형연산자이다. 그리고 $L(v_i) = \sum_{k=1}^n A_{ki} v_k$ 라고 하자. 
 
 $$
 \begin{aligned}
-S_jT(v_i) &= A_{ji}v_j ,\\
-TS_j (v_i) &= T(\delta_{ij}v_i)=\delta_{ij}\left(\sum_{k=1}^n A_{ki}v_k\right),
+S_jL(v_i) &= A_{ji}v_j ,\\
+LS_j (v_i) &= L(\delta_{ij}v_i)=\delta_{ij}\left(\sum_{k=1}^n A_{ki}v_k\right),
 \end{aligned}
 $$
 
-이며, $S_jT = TS_j$ 로부터 $i\ne j$ 에 대해 $A_{ij}=0$ 이라는 것을 알 수 있다. 즉 $T(v_i) = c_i v_i$ 이다. 이제 $S_{ij} \in \mathcal{L}(V)$ 를 다음과 같이 정의하자.
+이며, $S_jT = TS_j$ 로부터 $i\ne j$ 에 대해 $A_{ij}=0$ 이라는 것을 알 수 있다. 즉 $L(v_i) = c_i v_i$ 이다. 이제 $S_{ij} \in \mathcal{L}(V)$ 를 다음과 같이 정의하자.
 
 $$
 S_{ij}(v_k) =\left\{\begin{array}{ll} v_i, \qquad &;\text{if } k = j \\ v_j, &; \text{if } k = i, \\ 0 &;\text{otherwise}. \end{array}\right.
@@ -1371,8 +1366,8 @@ $$
 
 $$
 \begin{aligned}
-S_{ij}T(v_i) &= S_{ij}(c_iv_i)= c_iv_j, \\
-TS_{ij}(v_j) &= T(v_j) = c_j v_j
+S_{ij}L(v_i) &= S_{ij}(c_iv_i)= c_iv_j, \\
+LS_{ij}(v_j) &= L(v_j) = c_j v_j
 \end{aligned}
 $$
 

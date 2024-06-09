@@ -8,6 +8,8 @@ crossref:
 
 ## 고유값, 고유벡터, 고유공간
 
+### 고유값, 고유벡터, 고유공간 
+
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-invariant_subspace}
 
@@ -122,7 +124,7 @@ $\det (\lambda \boldsymbol{I}-\boldsymbol{A})  = 0$ 이면 $\text{nullity} (\lam
 </br>
 
 ::: {#prp-eigenvector_linear_independence}
-$T\in \mathcal{L}(V)$ 의 고유벡터의 집합 $\{v_1,\ldots,\, v_m\}$ 에 대해 고유벡터가 각각 서로 다른 고유값 $\lambda_1,\ldots,\lambda_m$ 을 갖는 고유벡터라면 이 벡터의 집합은 선형독립이다.
+$L\in \mathcal{L}(V)$ 의 고유벡터의 집합 $\{v_1,\ldots,\, v_m\}$ 에 대해 고유벡터가 각각 서로 다른 고유값 $\lambda_1,\ldots,\lambda_m$ 을 갖는 고유벡터라면 이 벡터의 집합은 선형독립이다.
 :::
 
 ::: {.proof}
@@ -147,8 +149,288 @@ $$
 
 </br>
 
+### 연습문제 
 
-## 특성다항식 {#sec-characteristic_polynomial}
+::: {#exr-invariant_subspace_1}
+
+벡터공간 $V$ 에서 정의된 $K,\, L\in \mathcal{L}(V)$ 가 $LK = KL$ 이라고 하자. 이 때 다음을 보여라.
+
+&emsp; ($1$) $\ker (K)$ 는 $L$ 에 대한 불변부분공간이다.
+
+&emsp; ($2$) $\text{im}\,(K)$ 는 $L$ 에 대한 불변부분공간이다.
+
+:::
+
+::: {.solution}
+
+($1$) $u\in \ker (K)$ 라고 하자. $KLu = LKu = 0_V$ 이므로 $Lu\in \ker (K)$ 이다. 즉 $\ker (K)$ 는 $L$ 에 대한 불변부분공간이다. 
+
+($2$) $v\in \text{im}(K)$ 이면 $v=Ku$ 인 $u\in V$ 가 존재한다. $Lv = LKu = KLu$ 이므로 $Lv\in \text{im}(K)$ 이다. 
+
+:::
+
+</br>
+
+::: {#exr-invarant_subspace_2}
+
+유한차원 $\mathbb{F}$-벡터공간 $V$ 에 대해 $U\le V$ 가 $V$ 에 대한 모든 연산자에 대해 불변부분공간이면 $U=\{0_V\}$ 이거나 $U=V$ 임을 보여라.
+
+:::
+
+::: {.solution}
+
+$U=\{0_V\}$ 이거나 $U=V$ 이면 자명하다. $1 < \dim (U) < \dim (V)$ 라고 하자. $U$ 의 임의의 기저 $(u_1,\ldots,\,u_m)$ 를 확장하여 $V$ 의 기저 $(u_1,\ldots,\,u_m,\,v_1,\ldots,\,v_n)$ 을 구성했다고 하자. $L\in \mathcal{L}(V)$ 를 $L(u_1) = v_1$ 이 되도록 정할 수 있으며 이 경우 $U$ 는 $L$ 의 불변부분공간이 되지 않는다. 
+
+:::
+
+</br>
+
+::: {#exr-axler_5_a_14}
+
+유한차원 벡터공간 $V$ 에 대해 $V= U \oplus W$ 이며 $U,\,W$ 는 $\{0_V\}$ 이 아니다. $P\in \mathcal{L}(V)$ 가 모든 $u\in U,\, w\in W$ 에 대해 $P(u+w)= u$  일 때 $P$ 의 모든 고유값과 고유벡터를 구하시오.
+
+:::
+
+::: {.solution}
+
+$P(u)=u,\, P(w) = 0$ 이므로 $U$ 의 모든 벡터는 고유값 $1$ 을 $W$ 의 모든 벡터는 고유값 $0$ 을 가진다. $u\in U,\, w\in W$ 가 모두 $0_V$ 가 아닐 때 $P(u+w)=u$ 이므로 이런 형태의 벡터는 고유값을 갖지 않는다.
+
+:::
+
+</br>
+
+::: {#exr-similar_transformation_and_eigenvectors}
+
+$S,\,L\in \mathcal{L}{V}$ 이며 $S$ 가 가역일 때 $S^{-1}LS$ 는 $L$ 과 같은 고유값을 가짐을 보여라. $L$ 과 $S^{-1}LS$ 의 고유벡터의 관계를 보여라.
+
+:::
+
+::: {.solution}
+
+$v\in V$ 가 $L$ 의 고유벡터이면 $Lv = \lambda v$ 이다. $u=S^{-1}v$ 에 대해 $S^{-1}LS u= \lambda u$ 이다. 따라서 $v$ 가 $L$ 의 고유벡터이면 $S^{-1}v$ 는 $S^{-1}LS$ 의 같은 은 고유값을 갖는 고유벡터이다.
+:::
+
+</br>
+
+::: {#exr-axler4_5a_14}
+
+(**주의** : [쌍대사상](../part3/dual_space.qmd) 을 보라) 유한차원 벡터공간 $V$ 와 $L\in \mathcal{L}(V)$ 에 대해 $\lambda$ 가 $L$ 의 고유값이면 $\lambda$ 는 $L$ 의 쌍대연산자의 고유값임을 보여라.
+
+:::
+
+::: {.proof}
+
+$Lv =\lambda v$ 라고 하고 $v$ 에 대한 쌍대기저를 $\delta_v$ 라고 하자. $L$ 에대한 쌍대연산자를 $L^T$ 라고 하면 $\phi \in V^\ast$ 에 대해 $L^T (\phi) = \phi \circ L$ 이며 $L^T(\delta_v) = \lambda\delta_v (v)$ 이므로 $\lambda$ 는 $L^T$ 의 고유값이다. 
+
+
+:::
+
+</br>
+
+::: {#exr-eigenvalue_and_inverse_matrix}
+
+$L\in \mathcal{L}(V)$ 가 가역일 때 $\lambda (\ne 0)$ 이 $L$ 의 고유값이면 $L^{-1}$ 은 같은 고유벡터에 대해 $1/\lambda$ 를 고유값으로 갖게 됨을 보여라.
+
+:::
+
+
+
+::: {.solution}
+
+$Lv=\lambda v$ 에 대해 $v=L^{-1}L v = \lambda L^{-1}v$ 이므로 $L^{-1}v = \dfrac{1}{\lambda}v$ 이다.
+
+:::
+
+</br>
+
+::: {#exr-axler4_5a_16}
+
+$\mathcal{B}=(v_1,\ldots,\,v_n)$ 이 $V$ 의 기저이며 $L\in \mathcal{L}(V)$ 일 때 $\lambda$ 가 $L$ 의 고유값이라면 다음이 성립함을 보여라.
+
+$$
+|\lambda| \le n \max \{\left|\left([L]_{\mathcal{B}}\right)_{ij}\right| : 1 \le i,\,j \le n\}
+$$
+
+:::
+
+::: {.solution}
+
+$\lambda$ 의 고유값을 갖는 고유벡터를 $v=\sum_i a_i v_i$ 라고 하자. 또 $\boldsymbol{v}=[v]_\mathcal{B}$, $\boldsymbol{L}=[L]_\mathcal{B}$ 라고 하자. $\boldsymbol{Lv}=\lambda\boldsymbol{v}$ 이므로
+
+$$
+\lambda a_i = \sum_{j=1}^n L_{ij}a_j
+$$
+
+이다. $k$ 를 $|a_i|$ 가 가장 큰 인덱스라고 하고 $M = \max \{\left|\left([L]_{\mathcal{B}}\right)_{ij}\right| : 1 \le i,\,j \le n\}$ 라고 하자.
+
+$$
+|\lambda a_k| = \left|\sum_{j=1}^n L_{ij}a_j \right| \le \sum_{j=1}^n |L_{ij} a_j|\le \sum_{j=1}^n M|a_j| \le \sum_{j=1}^n M|a_k| = nM|a_k| 
+$$
+
+이다. 따라서 $|\lambda|\le nM$ 이 성립한다. 
+
+:::
+
+</br>
+
+::: {#exr-eigenvalue_of_product_matrix}
+
+유한차원 벡터공간 $V$ 에서 $K,\,L\in \mathcal{L}(V)$ 일 때 $KL$ 과 $LK$ 는 같은 고유값을 가진다는 것을 보여라.
+
+:::
+
+::: {.solution}
+
+$KLv=\lambda v$ 라고 하자. $LK(Lv)= L(\lambda v)= \lambda (Lv)$ 이므로 $LK$ 역시 고유값 $\lambda$ 를 가진다.
+
+:::
+
+</br>
+
+::: {#exr-sum_of_eigenvector_is_eigenvector}
+
+$u,\,v$ 가 벡터공간 $V$ 에서 정의된 연산자 $L$ 의 고유벡터이고 $u+v$ 도 고유벡터이면 $u$ 와 $v$ 는 같은 고유값을 가짐을 보여라.
+
+:::
+
+::: {.solution}
+
+$Lu=au,\, Lv=bv,\,, L(u+v)=c(u+v)$ 라고 하자. $a\ne b$ 이면 $\{u,\,v\}$ 는 선형독립이다.  
+
+$$
+c(u+v) = L(u+v)= Lu+Lv = au+bv
+$$
+
+이므로 $(a-c)u+(b-c)v=0$ 이어야 한데 $u,\,v$ 가 선형독립이므로 $a=b=c$ 이다.
+
+:::
+
+</br>
+
+::: {#exr-scalar_multiple_of_identity_matrix}
+
+벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 를 생각하자. 모든 $V$ 의 벡터가 $L$ 의 고유벡터라면 $L$ 은 항등연산자의 스칼라곱임을 보여라.
+
+:::
+
+::: {.solution}
+
+@exr-sum_of_eigenvector_is_eigenvector 에 따라 모든 $V$ 의 벡터는 같은 고유값을 가지는 벡터이다. 이 고유값을 $c$ 라고 하자. 모든 기저에 대해 $L$ 의 행렬형식은 $cI_V$ 이므로 $L$ 은 $cI_V$ 이다. .
+
+:::
+
+</br>
+
+::: {#exr-axler4_5a_27}
+
+유한차원 벡터공간 $V$ 에서 정의된 연산자 $L$ 을 생각하자. 모든 $V$ 의 부분공간이 $L$ 에 대한 불변부분공간이라면 $L$ 은 항등행렬의 스칼라곱임을 보여라.
+
+:::
+
+::: {.solution}
+
+$v\in V$ 에 대해 $\text{span}\{v_i\}$ 가 $L$ 에 대한 불변부분공간이므로 모든 $v$ 는 $L$ 의 고유벡터이다. @exr-scalar_multiple_of_identity_matrix 에 따라 $L$ 은 항등연산자의 스칼라곱이다.
+
+:::
+
+
+</br>
+
+::: {#exr-axler4_5a_34}
+
+유한차원 벡터공간 $V$ 와 $V_0=\{v_1,\ldots,\,v_m: v_i\in V\}$ 에 대해 다음은 동치임을 보여라.
+
+&emsp; ($1$) $V_0$ 는 선형독립이다.
+
+&emsp; ($2$) 어떤 $L\in \mathcal{L}(V)$ 가 존재하여 $v_1,\ldots,\,v_m$ 은 각각 다른 고유값을 갖는 $L$ 의 고유벡터이다. 
+
+:::
+
+::: {.solution}
+
+($\,\Longleftarrow \,$) @prp-eigenvector_linear_independence.
+
+($\implies$) @prp-linearmap_basis 에 따라 $V_0$ 가 선형독립이므로 $Lv_j = j v_j$ 인 선형연산자가 존재한다.
+:::
+
+
+</br>
+
+## 특성다항식 
+
+### 다항식과 연산자 {#sec-polynomials_and_operators}
+
+::: {.callout-note appearance="minimal"}
+
+::: {#def-power_of_operator}
+
+#### $L^m$
+
+$L\in \mathcal{L}(V)$ 이고 $m$ 이 음이 아닌 정수일 때 다음과 같이 정의된다.
+
+&emsp; ($1$) $L^m := \underbrace{L\cdots L}_{m\,\text{times}}$.
+
+&emsp; ($2$) $L^0 :=I_V$.
+
+&emsp; ($3$) $L$ 이 가역일 때 $L^{-m} := (L^{-1})^m$.
+
+:::
+
+:::
+
+</br>
+
+다음 명제는 쉽게 보일 수 있다.
+
+::: {#prp-power_of_operators}
+
+$L\in \mathcal{L}(V)$ 이며 $m,\,n\in \mathbb{Z}$ 일 때 다음이 성립한다.
+
+$$
+L^mL^n = L^{m+n},\qquad (L^m)^n = L^{mn}.
+$$
+
+:::
+
+</br>
+
+::: {.callout-note appearance="minimal"}
+
+::: {#def-polynomials_on_operator}
+
+#### 다항식과 연산자
+
+$L\in \mathcal{L}(V)$ 라고 하자. 다항식 $p(t) := a_nt^n + a_{n-1}t^{n-1}+ \cdots + a_1 t + a_0$ 에 대해 $p(L)$ 은 다음과 같이 정의된다.
+
+$$
+p(L) := a_n L^n + a_{n-1}L^{n-1} + \cdots a_1 L + a_0 I_V.
+$$
+
+:::
+
+:::
+
+</br>
+
+::: {#prp-kernal_and_images_of_operator_under_polynomial}
+
+$p(t)\in \mathbb{F}[t]$ 이고 $V$ 가 $\mathbb{F}$-벡터공간이며 $L\in \mathcal{L}(V)$ 일 때 $\ker (p(L)),\, \text{im}(p(L))$ 은 $L$ 에 대한 불변부분공간이다.
+
+:::
+
+::: {.proof}
+
+$v\in \ker (p(L))$ 에 대해 $p(L)(Lv)= Lp(L)v =0_V$ 이므로 $Lv \in \ker (p(L))$ 이다. 따라서 $\ker (p(L))$ 은 $L$ 에 대한 불변부분공간이다. 
+
+$u\in \text{im}(p(L))$ 이면 $u=p(L)v$ 인 $v\in V$ 가 존재한다. $Lu = Lp(L)v = p(L)(Lv)$ 이므로 $Lu\in \text{im}(p(L))$ 이다. 따라서 $\text{im}(p(L))$ 은 $L$ 에 대한 부분공간이다.
+
+:::
+
+
+
+</br>
+
+### 특성다항식 {#sec-characteristic_polynomial}
 
 ::: {.callout-caution appearance="simple"  icon="false"}
 여기부터 이 장의 마지막까지 유한차원 벡터공간에서 생각하기로 한다. 그리고 유한차원 벡터공간과 그 연산자가 아니라 그 행렬표현으로 전개하도록 하겠다. 
@@ -433,142 +715,7 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 의 특성다항식 $p_
 
 ## 연습문제
 
-::: {#exr-invariant_subspace_1}
 
-$\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\boldsymbol{AB}=\boldsymbol{BA}$ 일 때 다음을 보여라 
-
-&emsp; ($1$) $\ker (\boldsymbol{A})$ 는 $\boldsymbol{B}$ 에 대한 불변부분공간이다.
-
-&emsp; ($2$) $\text{im}\,(\boldsymbol{A})$ 는 $\boldsymbol{B}$ 에 대한 불변부분공간이다.
-
-:::
-
-::: {.solution}
-
-($1$) $\boldsymbol{u}\in \ker (\boldsymbol{A})$ 일 때 $\boldsymbol{ABu}=\boldsymbol{BAu}= \boldsymbol{0}$ 이므로 $\boldsymbol{Bu}\in \ker (\boldsymbol{A})$ 이다. 즉 $\ker(\boldsymbol{A})$ 는 $\boldsymbol{B}$ 에 대한 불변부분공간이다.
-
-($2$) $\boldsymbol{v}\in \text{im} \,(\boldsymbol{A})$ 라고 하자. $\boldsymbol{v} = \boldsymbol{Au}$ 인 벡터 $\boldsymbol{v}$ 가 존재하며, $\boldsymbol{Bv}= \boldsymbol{BAu}= \boldsymbol{ABu} \in \text{im}\, (\boldsymbol{A})$ 이다. 따라서 $\text{im}\, (\boldsymbol{A})$ 는 $\boldsymbol{B}$ 에 대한 불변부분공간이다.
-
-:::
-
-</br>
-
-::: {#exr-invarant_subspace_2}
-
-$V=\mathcal{M}_{n }(\mathbb{F})$ 이고 $U \le V$ 이며 모든 $V$ 에 대한 연산자에 대해 불변이면 $U=\{\boldsymbol{0}\}$ 이거나 $U=V$ 임을 보이시오.
-
-:::
-
-::: {.solution}
-$U=\{\boldsymbol{0}\}$ 이거나 $U=V$ 이면 불변부분공간임은 자명하다. $\dim U < \dim V$ 일 때 $U$ 의 기저 $\{\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_m\}$ 을 생각하자. 이 기저를 확장하여 $V$ 의 기저 $\{\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_m,\,\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_{n-m}\}$ 를 이루었을 때 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 를 $\boldsymbol{Au}_1 = \boldsymbol{v}_1$ 이 되도록 할 수 있으며 $U$ 는 $\boldsymbol{A}$ 에 대한 불변부분공간이 아니다. 
-
-:::
-
-</br>
-
-::: {#exr-axler_5_a_14}
-
-$V= U \oplus W \le \mathcal{M}_n(\mathbb{F})$ 이며 $U,\,W$ 는 $\{\boldsymbol{0}\}$ 이 아니다. $\boldsymbol{P}\in \mathcal{M}_{n\times n} (\mathbb{F})$ 가 모든 $\boldsymbol{u}\in U,\, \boldsymbol{w}\in W$ 에 대해 $\boldsymbol{P}(\boldsymbol{u}+\boldsymbol{w})= \boldsymbol{u}$ 일 때 $\boldsymbol{P}$ 의 모든 고유값과 고유벡터를 구하시오.
-
-:::
-
-::: {.solution}
-
-$U = E(1, \boldsymbol{P})$ 이며 $W=E(0, \boldsymbol{P})$ 이다.
-
-:::
-
-</br>
-
-::: {#exr-similar_transformation_and_eigenvectors}
-
-$\boldsymbol{T},\, \boldsymbol{S}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이고 $\boldsymbol{S}$ 가 가역이다. 이 때 $\boldsymbol{S}^{-1}\boldsymbol{TS}$ 는 $\boldsymbol{T}$ 와 같은 고유값을 가짐을 보여라. $\boldsymbol{T}$ 와 $\boldsymbol{S}^{-1}\boldsymbol{TS}$ 의 고유벡터의 관계를 밝혀라.
-
-:::
-
-::: {.solution}
-
-$\boldsymbol{Tv}=\lambda \boldsymbol{v}$ 이면 
-
-$$
-(\boldsymbol{S}^{-1}\boldsymbol{TS})\boldsymbol{S}^{-1}\boldsymbol{v} = \lambda \boldsymbol{S}^{-1}\boldsymbol{v}
-$$
-
-이다. 즉 $\boldsymbol{v}$ 가 $\lambda$ 의 고유값을 갖는 $\boldsymbol{T}$ 의 고유벡터이면 $\boldsymbol{S}^{-1}\boldsymbol{v}$ 는 $\lambda$ 의 고유값을 갖는 $\boldsymbol{S}^{-1}\boldsymbol{TS}$ 의 고유벡터이다.
-
-:::
-
-
-</br>
-
-::: {#exr-eigenvalue_and_inverse_matrix}
-
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가역일 때 $\lambda \ne 0$ 이 $\boldsymbol{A}$ 의 고유값이면 $1/\lambda$ 는 $\boldsymbol{A}^{-1}$ 의 고유값이며 $\boldsymbol{A}$ 와 $\boldsymbol{A}^{-1}$ 은 같은 고유벡터를 갖는다는 것을 보여라.
-
-:::
-
-
-
-::: {.solution}
-
-우선 $0$ 을 고유값으로 갖는 행렬은 가역이 아님을 확인한다. 
-
-$$
-\boldsymbol{Av}=\lambda \boldsymbol{v} \implies \boldsymbol{A}^{-1}\boldsymbol{Av} = \lambda \boldsymbol{A}^{-1}\boldsymbol{v} \implies \boldsymbol{A}^{-1}\boldsymbol{v} = \dfrac{1}{\lambda}\boldsymbol{v}.$$ 
-
-:::
-
-</br>
-
-::: {#exr-eigenvalue_of_product_matrix}
-
-$\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 일 때 $\boldsymbol{AB}$ 와 $\boldsymbol{BA}$ 는 같은 고유값을 가진다는 것을 보여라.
-
-:::
-
-::: {.solution}
-
-$\boldsymbol{ABv}=\lambda \boldsymbol{v}$ 라 하자. $\boldsymbol{BA}(\boldsymbol{Bv})=\lambda (\boldsymbol{Bv})$ 이므로 $\boldsymbol{Bv}$ 는 같은 고유값을 갖는 $\boldsymbol{BA}$ 의 고유벡터이다. 
-
-:::
-
-</br>
-
-::: {#exr-sum_of_eigenvector_is_eigenvector}
-
-$\boldsymbol{u},\, \boldsymbol{v}\in \mathcal{M}_n(\mathbb{F})$ 가 $\boldsymbol{A}\in \mathbb{M}_{n \times n}(\mathbb{F})$ 의 고유벡터이고 $\boldsymbol{u}+\boldsymbol{v}$ 도 $\boldsymbol{A}$ 의 고유벡터이면 $\boldsymbol{u}$ 와 $\boldsymbol{v}$ 는 같은 고유값을 가진다는 것을 보여라.
-
-:::
-
-::: {.solution}
-
-$\boldsymbol{Au}=\lambda_U \boldsymbol{u},\, \boldsymbol{Av}=\lambda_V \boldsymbol{v}$ 일 때, $\boldsymbol{A}(\boldsymbol{u}+\boldsymbol{v})= \lambda(\boldsymbol{u}+\boldsymbol{v})$ 라 하자. $\lambda_U \boldsymbol{u}+ \lambda_V \boldsymbol{v}= \lambda \boldsymbol{u}+\lambda \boldsymbol{v}$ 이다. $\lambda_U \ne \lambda_V$ 라면 서로 다른 고유값을 갖는 고유벡터는 선형독립인데, $(\lambda-\lambda_U)\boldsymbol{u}+(\lambda -\lambda_V)\boldsymbol{v} = \boldsymbol{0}$ 이므로 $\lambda = \lambda_U = \lambda_V$ 인데 이는 가정에 모순된다. 따라서 $\lambda_U = \lambda_V$ 이다.
-:::
-
-</br>
-
-::: {#exr-scalar_multiple_of_identity_matrix}
-
-모든 $\boldsymbol{v}\in \mathcal{M}_n(\mathbb{F})$ 가 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 의 고유벡터라면 $\boldsymbol{A}$ 는 항등행렬 혹은 어떠 $c\in \mathbb{F}$ 에 대해 $c\boldsymbol{I}_n$ 임을 보여라. $\dim (U)= n-1$ 인 모든 $U\le \mathcal{M}_{n}(\mathbb{F})$ 가 $\boldsymbol{A}$ 의 불변부분공간이라면 역시 $\boldsymbol{A}$ 는 항등행렬의 스칼라곱임을 보여라.
-
-:::
-
-::: {.solution}
-
-@exr-sum_of_eigenvector_is_eigenvector 에 따라 모든 $\boldsymbol{v}\in \mathcal{M}_n(\mathbb{F})$ 는 같은 고유값을 갖는 $\boldsymbol{A}$ 의 고유벡터이다. 이 고유값을 $c$ 라고 하자. 모든 표준기저 $\hat{\boldsymbol{e}}_i$ 에 대해 $\boldsymbol{A}\hat{\boldsymbol{e}}_i = c\hat{\boldsymbol{e}}_i$ 이므로 $\boldsymbol{AI}_i = c\boldsymbol{I}_n$ 이다. 즉 $\boldsymbol{A}=c\boldsymbol{I}_n$ 이다.
-
-
-$U,\,V$ 가 $\boldsymbol{A}$ 의 불변부분공간이라고 하자. $\boldsymbol{x}\in U \cap V$ 이면 $\boldsymbol{Ax}\in U\cap V$ 이므로 $U \cap V$ 도 불변부분공간이다. 즉 유한개의 불변부분공간의 교집합도 불변부분공간이다.
-
-$$
-U_j = \text{span} (\{\hat{\boldsymbol{e}}_i: i=1,\ldots,j-1,\,j+1,\ldots,\,n\})
-$$
-
-이라 하자. $\displaystyle \bigcup_{j=2}^n U_j = \text{span}(\hat{\boldsymbol{e}}_1)$ 이므로 $\hat{\boldsymbol{e}}_1$ 은 $\boldsymbol{A}$ 의 불변부분공간이다. 즉 $\hat{\boldsymbol{e}}_1$ 은 $\boldsymbol{A}$ 의 고유벡터이다. 같은 방법으로 모든 표준기저가 고유벡터임을 보일 수 있으며 따라서 $\boldsymbol{A}$ 는 항등행렬의 스칼라곱이다. 
-
-:::
-
-</br>
 
 ::: {#exr-linearly_independency_and_distict_eigenvalues}
 

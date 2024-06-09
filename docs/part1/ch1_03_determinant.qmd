@@ -1,23 +1,285 @@
 ---
-title: "행렬식"
+title: "가우스 조단 소거법과 행렬식"
 number-sections: true
 number-depth : 3
 crossref:
   chapters: true
 ---
 
+</br>
+
+이제 가우스 조단 소거법에 대해 알아보자. 가우스 조단 소거법을 통해 행 간소 사다리꼴을 구하는 것은 선형방정식을 푸는 것 뿐만 아니라 행렬의 여러가지 성질에 대한 통찰을 줄 수 있다. 또한 행렬식을 통해 정사각행렬의 다양한 성질에 대해 알아볼 것이다. 대표적으로 행렬식은 어떤 행렬이 가역인지 아닌지를 쉽게 보일 수 있다.
+
+</br>
+
+## 기본 행 연산 {#sec-elementary_row_operation}
+
+### 기본 행 연산의 정의와 행렬표현
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-elementary_row_operation}
+
+#### 기본 행 연산
+
+행렬에 대한 다음 세 연산을 **기본 행 연산 (elementary row operation)** 이라 한다.
+
+&emsp; ($1$) $E^{(1)}(i,j)$ : $i$ 행과 $j$ 행의 위치를 바꾼다.
+
+&emsp; ($2$) $E^{(2)}(i, t)$ : $i$ 행에 $0$ 이 아닌 스칼라 $t \in \mathbb{F}$ 를 곱한다.
+
+&emsp; ($3$) $E^{(3)}(i, j, r)$ : $i$ 행에 $j$ 번째 행의 $r\in \mathbb{F}$ 배를 더한다. 
+
+:::
+:::
+
+</br>
+
+행렬 $\boldsymbol{A}$ 의 $i$ 번째 행을 $\boldsymbol{A}_{i:}$ 라고 하자. 3번째 연산의 결과로 변환된 행렬을 $\boldsymbol{A}'$ 이라 하면,
+
+$$
+\boldsymbol{A}'_{i:} = \boldsymbol{A}_{i:} + r \boldsymbol{A}_{j:},\qquad \boldsymbol{A}'_{j:} = \boldsymbol{A}_{j:}
+$$
+
+이다.
 
 
-::: {.callout-warning appearance="simple" icon="false"}
-이 선형대수학 문서를 작성하면서 가장 고민이 된 것 중의 하나가 행렬식을 어디서 도입하느냐 하는 것이다. 어떤 교재는 거의 시작부분에서 소개하기도 하며, 다른 교재는 가장 뒤에 놔두기도 한다. 행렬식은 선형대수학에서 매우 중요하지만 행렬식을 유도하는 것이 좀 어렵기 때문이다. 그러나 여건이 된다면 앞부분에 도입하는 것이 이후에 내용을 설명하는데 도움이 되기 때문에 여기서는 다소 빠르게 소개하기로 하겠다.
+</br>
+
+::: {#prp-elementary_row_operation}
+
+기본행 연산은 행렬에 대한 선형 연산이며, 가역연산이다.
+:::
+
+::: {.proof}
+
+기본행 연산은 $E:\mathcal{M}_{m \times n}(\mathbb{F}) \mapsto \mathcal{M}_{m \times n}(\mathbb{F})$ 함수로서 $\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $c\in \mathbb{F}$ 에 대해 $E(\boldsymbol{A}+c\boldsymbol{B}) = E(\boldsymbol{A}) + cE(\boldsymbol{B})$ 이다. $\left(E^{(1)}(i, j)\right)^{-1} = E^{(1)}(i, j)$ 이며, $\left(E^{(2)}(i, t)\right)^{-1} = E^{(2)}(i, 1/t)$ 이고 $\left(E^{(3)}(i, j, r)\right)^{-1} = E^{(3)}(i, j, -r)$ 이다. $\square$
+:::
+
+</br>
+
+### 기본 행 연산의 행렬 표현
+
+기본 행 연산은 선형 연산이기 때문에 행렬로 표현 할 수 있다. 행 연산에 대한 표기로 $E^{(i)}$ 를 사용했는데 이와 유사하게 이의 행렬 표기를 $\boldsymbol{E}^{(i)}$ 로 한다. 또한 $\boldsymbol{I}_{k:}$ 는 단위행렬의 $k$ 번째 행벡터를 의미한다.
+
+($1$) $\boldsymbol{E}^{(1)}(i, j)$ 의 $k$ 번째 행은 다음 식으로 결정된다. 
+
+$$
+\boldsymbol{E}^{(1)}(i, j)_{k:} = (1-\delta_{ik})(1-\delta_{jk})\boldsymbol{I}_{k:} + \delta_{ik}\boldsymbol{I}_{j:} + \delta_{jk}\boldsymbol{I}_{i:}
+$$
+
+$i$ 행과 $j$ 행, $i$ 열과 $j$ 열을 제외한 모든 성분은 항등행렬의 성분과 같기 때문에 이 두 행과 열만을 표현하면 다음과 같다.
+
+$$
+\boldsymbol{E}^{(1)} (i, j) = \begin{bmatrix} 0 & & 1  \\ & \ddots & \\ 1 & & 0  \end{bmatrix} 
+$$
+
+($2$) $\boldsymbol{E}^{(2)}(i, t)$ 의 $k$ 번째 행은 다음 식으로 결정된다.
+
+$$
+\boldsymbol{E}^{(2)}(i, t)_{k:} = (1-\delta_{ik})\boldsymbol{I}_{k:} + t\delta_{ik} \boldsymbol{I}_{k:}
+$$
+
+즉 $\boldsymbol{E}_{ii}=t$ 이고 나머지 성분은 항등행렬과 같다.
+
+($3$). $\boldsymbol{E}^{(3)}(i, j, r)$ 의 $k$ 번째 행은 다음 식으로 결정된다.
+
+$$
+\boldsymbol{E}^{(3)}(i, j, r)_{k:} = \boldsymbol{I}_{k:} + r\delta_{ik} \boldsymbol{I}_{j:}
+$$
+
+$i$ 행과 $j$ 행, $i$ 열과 $j$ 열을 제외한 모든 성분은 항등행렬의 성분과 같기 때문에 이 두 행과 열만을 표현하면 다음과 같다.
+
+$$
+\begin{aligned}
+\boldsymbol{E}^{(3)} (i, j, r) &= \begin{bmatrix} 1 & & r\\ & \ddots & \\  & & 1 \end{bmatrix} & i<j \\
+\boldsymbol{E}^{(3)} (i, j, r) &= \begin{bmatrix} 1 & & \\ & \ddots & \\ r & & 1 \end{bmatrix}  & i>j
+\end{aligned}
+$$
+
+</br>
+
+
+기본행 연산은 가역연산 이므로 이에 대한 행렬은 가역행렬이다. $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $\boldsymbol{B}\in \mathcal{M}_{m \times m}(\mathbb{F})$, $\boldsymbol{u}\in \mathcal{M}_n(\mathbb{F})$, $\boldsymbol{v}\in \mathcal{M}_m(\mathbb{F})$ 에 대해 $\boldsymbol{B}$ 가 가역이면 다음이 성립하는 것을 안다. 
+
+$$
+\boldsymbol{BAu}=\boldsymbol{Bv} \iff \boldsymbol{Au}=\boldsymbol{v}.
+$$
+
+따라서 $\boldsymbol{Au}=\boldsymbol{v}$ 의 양쪽에 유한번의 기본행연산 $\boldsymbol{E}_1,\ldots,\boldsymbol{E}_N$ 을 수행했을 때도 다음이 성립함을 알 수 있다.
+
+$$
+(\boldsymbol{E}_N \cdots \boldsymbol{E}_1)\boldsymbol{Au} = (\boldsymbol{E}_N \cdots \boldsymbol{E}_1) \boldsymbol{v} \iff \boldsymbol{Au} =\boldsymbol{v}
+$$
+
+
+</br>
+
+::: {#exm-infinite_number_of_operations}
+
+벡터공간 $V$ 에서의 유한개의 가역연산자 $T_1,\ldots,\,T_n \in \mathcal{L}(V)$ 와 $S\in \mathcal{L}$ 에 대해
+
+$$
+(T_1 \circ \cdots \circ T_n \circ S)(u) = (T_1 \circ \cdots \circ T)(v) \iff S(u)= v
+$$
+
+
+이다. 그러나 무한개의 가역연산자의 경우를 생각하자. 항등연산자 $I$ 에 대해 $T_k = \dfrac{1}{k}I$, $k=1,\,2,\ldots$ 라면 $(T_1 \circ \cdots)(u)=0$ 이다. 즉 유한개의 가역연산의 합성은 가역연산이지만 무한개의 가역연산의 합성은 가역연산이라는 것을 보장 할 수 없다.   
+
+:::
+
+</br>
+
+
+
+## 행 사다리꼴 행렬과 행 간소 사다리꼴 행렬
+
+### 행 사다리꼴 행렬 {#sec-row_echelon_matrix}
+
+::: {.callout-note appearance="simple" icon='false'}
+
+::: {#def-echelon_matrix}
+
+#### 행 사다리꼴 행렬
+
+
+행 사다리꼴 행렬(row echelon form matrix)은 다음의 조건을 만족하는 행렬이다.
+
+1. 행벡터 가운데 영벡터가 존재할 경우 이 영벡터는 영벡터가 아닌 행벡터의 아래에 위치한다. 
+
+2. 행렬의 행벡터가 영벡터가 아닐 때, 처음으로 나타나는 0 이 아닌 성분을 **선행 성분**이라 한다. 윗 행의 선행 성분은 아래 행 전체의 각각의 선행성분보다 앞서 존재한다.
+
+:::
+
+:::
+
+</br>
+
+::: {#exm-non-echelon_matrix}
+아래의 행렬 $\boldsymbol{A}_1,\,\boldsymbol{A}_2$ 는 각각 1, 2 번 조건을 거스르는 행렬이므로 행사다리꼴이 아니다. (선행 성분을 밑줄로 표시하였다.)
+
+$$
+\boldsymbol{A}_1 = \begin{bmatrix} \underline{2} & 2 & 0 \\0 & 0 & 0 \\ 0 & \underline{1} & 0\end{bmatrix} , \qquad\boldsymbol{A}_2 = \begin{bmatrix} 0 & 0 & \underline{3} \\ \underline{2} & 0 & 2\end{bmatrix}. 
+$$
+
 :::
 
 
-이번 장에서는 행렬식의 정의의 중요한 성질에 대해 알아보겠다. 행렬식을 도입하는 방법은 여러가지가 있지만 그 가운데 대칭군을 도입하여 정의 한 후 행렬식의 중요한 성질을 하나하나 증명해 나가보도록 한다.
+::: {#exm-echelon_matrix}
+다음 행렬은 사다리꼴 행렬이다.
+
+$$
+\begin{bmatrix} 1 & 0 & 2 & -1 \\ 0 & 2 & 0 & 0 \\ 0 & 0 & 3 & 1\end{bmatrix} ,\qquad \begin{bmatrix}0 & 1 & 2  \\ 0 & 0 & 3  \\ 0 & 0 & 0 \\ 0 & 0 & 0\end{bmatrix}.
+$$ 
+:::
+
+</br>
+
+
+행렬 $\boldsymbol{A}$ 의 $i$ 행 $j$ 열 성분을 $A_{ij}$ 라고 쓴다. 이 때 $i$ 를 *행 인덱스*, $j$ 를 *열 인덱스*라 하자. 이제 모든 행렬은 기본 행 연산을 통해 행 사다리꼴 행렬로 변형될 수 있다는 것을 보이고자 한다. 우선 $l(\boldsymbol{A}, j)$ 는 $\boldsymbol{A}_{:j}$ 의 선행성분의 열인덱스라고 정의하고 $k$ 행에 대해 다음 두 과정을 생각하자.
+
+
+::: {.callout-tip appearance="minimal"}
+
+#### 피보팅과 열소거
+
+**[피보팅]** $m \times n$ 행렬 $\boldsymbol{A}$ 를 생각하자. $\boldsymbol{A}$ 에서 $l(\boldsymbol{A}, k),\, l(\boldsymbol{A}, k+1), \ldots, l(\boldsymbol{A}, m)$ 중 가장 작은 값(즉 열 인덱스)을 찾아 그 행과 $k$ 행을 교환하는 것을 $k$ 행에 대한 **피보팅 (pivoting)** 이라 한다. 피보팅은 특정 조건에서의 $E^{(1)}$ 기본 행 연산이다. <u> $k$ 행에 대해 피보팅을 하는 것은 $k$ 행 보다 위의 행들은 고려하지 않는다는 것을 유의하라.</u>
+
+
+**[열소거]** $k$ 행에 대한 피보팅을 수행한 행렬을 $\boldsymbol{A}'$ 이라 하면 $l(\boldsymbol{A}', j>k) \ge l(\boldsymbol{A}', k)$ 가 된다. $l_k = l(\boldsymbol{A}', k)$ 라고 할 때 기본 행 연산을 통해 $k$ 행 아래의 행들의 $l_k$ 열의 값을 $0$ 으로 만들고자 한다. 즉, $E_3 \left(j, k, - \dfrac{(A')_{j, l_k}}{(A')_{k, l_k}}\right)$ 연산을 $j=k+1, \ldots, m$ 에 대해 수행하면 그 결과로 계산되는 행렬 $\boldsymbol{A}''$ 에서 $k$ 행 아래의 행들의 $l_k$ 번째 열들은 $0$ 이다. 행렬 $\boldsymbol{A}$ 의 $k$ 번째 행에 피보팅을 포함한 위의 연산을 수행하는 것은 기본 행 연산의 반복이므로(정확히는 $E^{(1)}$ 연산과 $E^{(3)}$ 연산의 반복) 가역행렬로 표현 할 수 있다. <u> $k$ 행에 대해 열소거를 하는 것 역시 $k$ 행 보다 위의 행들은 고려하지 않는다는 것을 유의하라.</u>
+
+:::
+
+</br>
+
+차례로 $1,\,2,\ldots,\, k-1$ 행에 대해 각각의 행에서의 피보팅과 열소거를 수행한 결과의 행렬을 $\boldsymbol{A}_{k-1}$ 라고 하자. $k$ 행부터 마지막 $m$ 행까지가 모두 영벡터가 아니라면 피보팅이 가능하며, 피보팅 이후에는 $k$ 행이 영벡터가 아니게 된다. 열소거 까지 수행하면 $p>k$ 행에 대해 $l(\boldsymbol{A}_k, k) < l (\boldsymbol{A}_{k}, p)$ 이다. 즉 $1$ 행부터 $j$ 행 까지는 사다리꼴 행렬이다. 이것은 $m-1$ 행까지 피보팅과 열소거를 수행하거나, 나머지 행벡터가 모두 영벡터가 될 때 까지 계속하면 전체 행렬이 사다리꼴 행렬이 된다. 모든 과정은 유한번의 기본 행 연산으로 이루어지므로 우리는 다음을 알 수 있다.
+
+
+::: {#prp-echolon_matrix}
+행렬은 유한번의 기본행연산을 통해 행 사다리꼴 행렬이 될 수 있다.
+:::
+
+
+
+::: {#exr-echelon_form1}
+$m \times n$ 인 사다리꼴 행렬 $\boldsymbol{A}$ 를 생각하자. $m>n$ 일 때 $n$ 보다 큰 행의 성분은 모두 $0$ 이다.
+:::
+
+::: {.proof}
+행렬 $\boldsymbol{A}$ 가 사다리꼴 행렬이면 $l(\boldsymbol{A}, i) \ge i$ 인데 $i>n$ 이면 $n$ 보다 큰 열은 존재하지 않는다. 따라서 이 열의 성분은 모두 $0$ 이다.
+:::
+
+</br>
+
+
+:::
+
+
+</br>
+
+### 행 간소 사다리꼴 행렬 {#sec-reduced_raw_echelon_matrix}
+
+
+
+행 간소 사다리꼴 행렬(row-reduced echelon form matrix)은 행 사다리꼴 행렬의 조건에 더해진다.
+
+::: {.callout-note appearance="simple" icon="false"}
+
+::: {#def-rref}
+#### 행 간소 사다리꼴 행렬
+
+행렬이 다음의 조건을 만족하면 **행 간소 사다리꼴 행렬** 이라고 한다.
+
+1. 행벡터 가운데 영벡터가 존재할 경우 이 영벡터는 영벡터가 아닌 행벡터의 아래에 위치한다. 
+
+2. 행렬의 행벡터가 영벡터가 아닐 때, 처음으로 나타나는 성분은 $1$ 이며 이를 **선행 1 성분** 이라 한다. 어떤 행의 선행 1 성분은 아래 모든 행들의 선행 1성분보다 앞서 존재한다.
+
+3. 선행 1 성분이 존재하는 열은 선행 1 성분을 제외한 모든 성분이 $0$ 이다.
+
+:::
+:::
+
+
+</br>
+
+
+행 간소 사다리꼴 행렬을 만드는 방법은 사다리꼴 행렬을 만드는 방법과 유사하다. $j=1,\,2,\ldots,$ 행에 대해 다음을 수행한다.
+
+::: {.callout-tip appearance="minimal"}
+
+**[피보팅]** 행 사다리꼴 행렬의 피보팅과 같다.
+
+**[선행 1]** 피보팅을 수행한 $j$ 행에 선행 성분의 역수를 곱해서 선행 1 성분으로 만들어준다. 이것은 $E^{(2)}$ 과정이다.
+
+**[열소거]** 행 사다리꼴 행렬에서는 $j$ 행보다 아래 행에 대해서만 열 소거 과정을 수행하지만 <u>행 간소 사다리꼴 행렬에 대해서는 $j$ 행을 제외한 나머지 행에 모두에 대해 열소거 과정을 수행한다. </u>
+
+:::
+
+</br>
+
+행 사다리꼴 행렬에 대해서와 같이 1행부터 차례로 수행하며, 마지막 행까지 수행하거나(마지막 행에서는 피보팅을 할 필요가 없다), 어떤 행에 대해 수행했을 때, 그 행의 아래의 행이 모두 영벡터이면 이 과정이 종료된다. 행 사다리꼴 행렬에 비하면 [선행 1] 과정이 추가되었고, [열소거] 과정이 변경되었다. 행 사다리꼴 행렬에서 $k$ 행에 대한 열소거는 $k$ 행보다 아래 행에 대해 수행하지만, 행 간소 사다리꼴 행렬에서는 $k$ 행을 제외한 전체 행에 대해 수행한다. 이 결과로 나오는 행렬은 행 간소 사다리꼴 행렬의 정의를 만족한다.
+
+위의 모든 과정이 행 기본 연산에 의해 수행되기 때문에 우리는 다음을 증명하였다.
+
+::: {#thm-reduced_echelon_matrix}
+모든 행렬은 유한번의 행 기본 연산에 의해 행 간소 사다리꼴 행렬이 된다. 
+:::
+
+</br>
+
+::: {.callout-warning appearance="simple" icon="false"}
+#### 행 간소 사다리꼴의 유일성
+
+우리는 어떤 과정에 의해 행렬의 행 간소 사다리꼴을 구할 수 있다는 것을 보았다. 그러나 다른 과정을 통해 구한 행 간소 사다리꼴도 있을 수 있으며, 다른 방법으로 구한 행 간소 사다리꼴이 항상 같은지 아닌지가 문제가 된다. 결론적으로 행렬의 행 간소 사다리꼴은 유일한데 그것은 다음 장의 [행 간소 사다리꼴의 유일성](ch1_05_matrix.qmd#sec-uniqueness_of_reduced_row_echelon_form)에서 보일 것이다.
+
+:::
+
 
 </br>
 
 ## 대칭군
+
+이제 행렬식에 대해 알아보도록 하자. 행렬식을 도입하는 방법은 여러가지가 있지만 그 가운데 대칭군을 도입하여 정의 한 후 행렬식의 중요한 성질을 하나하나 증명해 나가보도록 한다.
+
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-symmetric_group}
@@ -251,7 +513,9 @@ $\sigma,\, \tau \in S_n$ 에 대해 다음이 성립한다.
 </br>
 
 
-## 행렬식
+## 대칭군을 이용한 행렬식 {#sec-determinant_definition_using_symmetric_group}
+
+행렬식을 도입하는 방법은 몇가지가 있다. 여기서는 우선 대칭군을 이용하여 행렬식을 도입하기로 한다. 
 
 ### 행렬식의 정의
 
@@ -300,7 +564,7 @@ $$
 
 </br>
 
-::: {#exm-determinant_change_of_order}
+::: {#exr-determinant_change_of_order}
 
 정해진 $\tau \in S_n$ 에 대해
 
@@ -363,8 +627,8 @@ $$
 
 </br>
 
-::: {#lem-bilinearity_of_determinant}
-$\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n\in \mathbb{F}^{1\times n}$, $c \in \mathbb{F}$ 와 임의의 $1\le j \le n$ 에서의 $\boldsymbol{a}'_j \in \mathbb{F}^{1\times n}$ 에 대해
+::: {#prp-bilinearity_of_determinant}
+$\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n\in \mathcal{M}_{1\times n}(\mathbb{F})$, $c \in \mathbb{F}$ 와 임의의 $1\le j \le n$ 에서의 $\boldsymbol{a}'_j \in \mathbb{F}^{1\times n}$ 에 대해
 
 $$
 \begin{aligned}
@@ -392,7 +656,7 @@ $$
 
 이를 이용하면 다음을 쉽게 보일 수 있다. 
 
-::: {#cor-determinant_scala_multiple}
+::: {#prp-determinant_scala_multiple}
 $$
 \det (c_1 \boldsymbol{a}_1, \ldots, c_n \boldsymbol{a}_n) = c_1 \cdots c_n \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_n)
 $$
@@ -400,7 +664,37 @@ $$
 
 </br>
 
+::: {#prp-linear_dependency_and_determinant}
+
+#### 선형종속과 행렬식
+
+$\boldsymbol{a}_1,\ldots,\boldsymbol{a}_n\in \mathcal{M}_{1\times n}(\mathbb{F})$ 가 선형종속이면 $\det(\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n)=0$ 이다. 
+
+:::
+
+::: {.proof}
+
+마지막 $\boldsymbol{a}_n$ 이 다른 벡터들의 선형결합이라고 하자. $\boldsymbol{a}_n = \sum_i^{n-1} c_i \boldsymbol{a}_i$ 라면, @prp-altermating_form_of_determinant, @prp-bilinearity_of_determinant 를 이용하여 다음을 보일 수 있다.
+
+$$
+\begin{aligned}
+\det (\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n) &= \det \left(\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_{n-1},\, \sum_{i=1}^{n-1}c_i \boldsymbol{a}_i\right) \\
+&= \det \left(\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_{n-1},\, c_1 \boldsymbol{a}_1\right) + \det \left(\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_{n-1},\, \sum_{i=2}^{n-1}c_i \boldsymbol{a}_i\right) \\
+&= \qquad \vdots \\
+& = \sum_{i=1}^{n-1} c_i \det(\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_{n-1},\, \boldsymbol{a}_i) = 0. 
+\end{aligned}
+$$
+
+선형종속인 벡터가 마지막 벡터가 아닌 경우에는 @prp-altermating_form_of_determinant 를 이용하여 마지막 벡터와 위치를 바꿀 수 있다. 그 경우 행렬식은 원래의 행렬식에 $-1$ 을 곱한 값이므로 명제가 성립한다. $\square$
+
+:::
+
+</br>
+
+### 행렬식 {#sec-determinant}
+
 이제 $\mathcal{M}_{1 \times n}(\mathbb{F})$ 에 속하는 행벡터 $n$ 개에 대한 함수를 $\mathcal{M}_{n \times n}(\mathbb{F})$ 행렬의 각 행벡터에 대한 함수로 생각하자. 행렬 $\boldsymbol{A}$ 의 $i$ 번째 행을 $\boldsymbol{A}_{i:}$ 라고 하자. 이 때 행렬 $\boldsymbol{A}$ 의 행렬식 $\det(\boldsymbol{A})$ 를 $\det (\boldsymbol{A}_{1:},\ldots,\boldsymbol{A}_{n:})$ 로 정의한다. 
+
 
 
 ::: {.callout-note appearance="simple" icon="false"}
@@ -419,29 +713,33 @@ $$
 
 </br>
 
-::: {#prp-properties_of_determinant}
+::: {#prp-elementary_row_operation_and_determinant}
+#### 행 기본 연산과 행렬식
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 의 행렬식 $\det(\boldsymbol{A})$ 에 대해 다음이 성립한다. 
+$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 라고 하자. @def-elementary_row_operation 에서 정의된 행 기본연산 $E^{(1)},\, E^{(2)},\, E^{(3)}$ 에 대해 다음이 성립한다.
 
-&emsp; ($1$) 항등행렬의 행렬식은 $1$ 이다. 즉, $\det (\boldsymbol{I}_{n}) = 1$  이다.
+&emsp; ($1$) $\det(\boldsymbol{I}_n) = 1$
 
-&emsp; ($2$) 행렬 $\boldsymbol{A}$ 의 $i$ 번째 행에 $1\times n$ 벡터 $\lambda \boldsymbol{A}'_{i:}$ 를 더한 행렬의 행렬식은 행렬 $\boldsymbol{A}$ 의 행렬식과 $i$ 번째 행만 $\boldsymbol{A}'_{i:}$ 으로 바꾼 행렬의 행렬식에 $\lambda$ 를 곱한 값의 합이다. 즉, 
+&emsp; ($2$) $\det\left(E^{(1)}(i, j)\boldsymbol{A}\right) = -\det(\boldsymbol{A})$.
 
-$$
-\begin{aligned}
-\det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(i-1):} \\ \boldsymbol{A}_{i:} + \lambda \boldsymbol{A}'_{i:} \\ \boldsymbol{A}_{(i+1):} \\ \vdots \\ \boldsymbol{A}_{n:} \end{bmatrix} \right)  = \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(i-1):} \\ \boldsymbol{A}_{i:} \\ \boldsymbol{A}_{(i+1):} \\ \vdots \\ \boldsymbol{A}_{n:} \end{bmatrix} \right)  + \lambda \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(i-1):} \\ \boldsymbol{A}'_{i:} \\ \boldsymbol{A}_{(i+1):} \\ \vdots \\ \boldsymbol{A}_{n:} \end{bmatrix} \right) 
-\end{aligned}
-$$
+&emsp; ($3$) $\det\left(E^{(2)}(i, t)\boldsymbol{A}\right) = t\det(\boldsymbol{A})$.
 
-&emsp; ($3$) 행렬 $\boldsymbol{A}$ 의 $i$ 번째 행과 $j(\ne i)$ 번째 행을 바꾼 행렬을 $\boldsymbol{A}'$ 이라고 하면 $\det (\boldsymbol{A}') = -\det (\boldsymbol{A})$ 이다. 
-
-&emsp; ($4$) 행렬 $\boldsymbol{A}$ 의 한 행에 스칼라 $k$ 를 곱했을 때의 행렬식은 원래의 행렬식에 $k$ 를 곱한 값이다. 즉, 
-
-$$
-\det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(i-1):} \\ k\boldsymbol{A}_{i:}  \\ \boldsymbol{A}_{(i+1):} \\ \vdots \\ \boldsymbol{A}_{n:} \end{bmatrix} \right)  = k \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(i-1):} \\ \boldsymbol{A}_{i:} \\ \boldsymbol{A}_{(i+1):} \\ \vdots \\ \boldsymbol{A}_{n:} \end{bmatrix} \right)  .
-$$
+&emsp; ($4$) $\det \left( E^{(3)}(i,j, r)\boldsymbol{A} \right) = \det(\boldsymbol{A})$.
 
 :::
+
+::: {.proof}
+
+($1$) @exr-determinant_of_identity
+
+($2$) @prp-altermating_form_of_determinant
+
+($3$) @prp-bilinearity_of_determinant
+
+($4$) @prp-determinant_scala_multiple
+
+:::
+
 
 </br>
 
@@ -452,21 +750,48 @@ $$
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-transposed_matrix}
 
-#### 전치 행렬
+#### 전치행렬
 
-$m \times n$ 정사각 행렬 $\boldsymbol{A}$ 에 대해 $\boldsymbol{A}$ 의 행과 열을 바꾼 행렬을 $\boldsymbol{A}$ 의 **전치 행렬 (transposed matrix)** 라 하며 $\boldsymbol{A}^T$ 라 쓴다. 즉, 
+$m\times n$ 행렬 $\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\boldsymbol{A}$ 의 행과 열을 바꾼 행렬을 $\boldsymbol{A}$ 의 **전치 행렬 (transposed matrix)** 라 하며 $\boldsymbol{A}^T$ 라 쓴다. 즉, 
 
 $$
 \left(\boldsymbol{A}^T \right)_{ij} = (\boldsymbol{A})_{ji}, \qquad i=1,\ldots, n,\, j = 1,\ldots, m
 $$
+
+이다. 이 때 $\boldsymbol{A}^T$ 는 $n \times m$ 행렬이다.  
+
 :::
 :::
-
-
-$m \times n$ 행렬 $\boldsymbol{A}$ 에 대해 $\boldsymbol{A}^T$ 는 $n \times m$ 행렬이 된다.
 
 </br>
 
+::: {#exm-transpose_matrix}
+
+#### 전치행렬의 성질
+
+$\boldsymbol{A}$ 가 $m \times n$ 행렬 $\boldsymbol{B}$ 가 $n \times l$ 행렬이며 $\lambda \in \mathbb{F}$ 일 때 다음이 성립한다.
+
+&emsp; ($1$) $\left(\boldsymbol{A}^{T}\right)^{T} = \boldsymbol{A}$, 
+
+&emsp; ($2$) $(\lambda \boldsymbol{A})^T = \lambda (\boldsymbol{A})^T$
+
+&emsp; ($3$) $(\boldsymbol{AB})^T = \boldsymbol{B}^T\boldsymbol{A}^T$
+:::
+
+::: {.proof} 
+
+($\text{3}$) 만을 증명한다.
+
+$$
+\begin{aligned}
+\left(\left( \boldsymbol{AB} \right)^T \right)_{ij} = (\boldsymbol{AB})_{ji} = \sum_{k=1}^n A_{jk} B_{ki} = \sum_{k=1}^n \left( \boldsymbol{B}^T\right)_{ik}\left(\boldsymbol{A}^T\right)_{kj} = (\boldsymbol{B}^T\boldsymbol{A}^T)_{ij}
+\end{aligned}
+$$
+$\square$
+
+:::
+
+</br>
 
 ::: {#prp-determinant_of_transpose}
 $n\times n$ 행렬 $\boldsymbol{A}$ 에 대해 $\det (\boldsymbol{A}^T) = \det (\boldsymbol{A})$ 이다.
@@ -498,31 +823,38 @@ $$
 
 </br>
 
-이제 행렬 $\boldsymbol{A}$ 의 행들 $\{\boldsymbol{A}_{1:},\ldots,\,\boldsymbol{A}_{n:}\}$ 에 대한 @prp-properties_of_determinant 가 열들 $\{\boldsymbol{A}_{:1},\ldots,\boldsymbol{A}_{:n}\}$ 에 대해서도 똑같이 성립한다는 것은 쉽게 보일 수 있다. 
+이제 행렬 $\boldsymbol{A}$ 의 행들 $\{\boldsymbol{A}_{1:},\ldots,\,\boldsymbol{A}_{n:}\}$ 에 대한 @prp-elementary_row_operation_and_determinant 가 열들 $\{\boldsymbol{A}_{:1},\ldots,\boldsymbol{A}_{:n}\}$ 에 대해서도 똑같이 성립한다는 것은 쉽게 보일 수 있다. 
 
 </br>
+
+::: {#prp-elementary_column_operation_and_determinant}
+
+#### 행렬의 열에 대한 연산과 행렬식
+
+$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 라고 하자. 
+
+&emsp; ($1$) $\boldsymbol{A}$ 의 두 열을 바꾸었을 때의 행렬식은 원래의 행렬식에 $-1$ 을 곱한 값이다.
+
+&emsp; ($2$) $\boldsymbol{A}$ 의 한 열에 상수 $c$ 를 곱한 행렬의 행렬식은 원래의 행렬식에 $c$ 를 곱한 값이다.
+
+&emsp; ($3$) $\boldsymbol{A}$ 의 $i$ 번째 열에 $c \times$ [$j$ 번째 열] 을 더한 행렬의 행렬식은 원래 행렬식과 같다.
+
+:::
+
+
+
+</br>
+
+이제 행렬식과 정사각 행렬의 성질에 관한 중요한 명제를 제시한다. 증명은 이미 우리가 했다.
 
 ::: {#prp-zero_determinant_of_linear_dependency}
 정사각행렬 $\boldsymbol{A}$ 의 행벡터가 선형 종속일 경우 그 행렬식은 $0$ 이다. $\boldsymbol{A}$ 의 열벡터가 선형 종속이어도 그 행렬식은 $0$ 이다. [이 명제의 역, 즉 행렬식이 $0$ 경우 행벡터와 열벡터가 선형독립인 것은 이후에 보이게 된다. (@prp-determinant_of_invertible_matrix)]{.aside}
 :::
 
 ::: {.proof}
-$\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 이라 하자. 우선 마지막 행벡터가 다른 행벡터의 선형 결합으로 표현된다고 하자.
 
-$$
-\boldsymbol{A}_{n:} = a_1 \boldsymbol{A}_{1:} + \cdots + a_{n-1}\boldsymbol{A}_{(n-1):}
-$$
+@prp-linear_dependency_and_determinant
 
-이라 하면, 행렬의 두 행이 같을때 그 행렬의 행렬식이 $0$ 임을 이용하면
-
-$$
-\begin{aligned}
-\det (\boldsymbol{A}) &= \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(n-1):} \\ \boldsymbol{A}_{n:}\end{bmatrix} \right) = \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(n-1):} \\ a_1 \boldsymbol{A}_{1:}\end{bmatrix} \right)  + \cdots + \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(n-1):} \\ a_{n-1} \boldsymbol{A}_{1:}\end{bmatrix} \right) \\ 
-&= a_1 \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(n-1):} \\ \boldsymbol{A}_{1:}\end{bmatrix} \right)  + \cdots +a_{n-1} \det \left( \begin{bmatrix} \boldsymbol{A}_{1:} \\ \vdots \\ \boldsymbol{A}_{(n-1):} \\  \boldsymbol{A}_{(n-1):}\end{bmatrix} \right) =0
-\end{aligned}
-$$
-
-이다. $\det (\boldsymbol{A}) = \det (\boldsymbol{A}^T)$ 임을 이용하면 두 열이 선형종속일 때 행렬식이 $0$ 임을 알 수 있다. $\square$
 :::
 
 </br>
@@ -552,7 +884,7 @@ $$
 \end{aligned}
 $$
 
-여기서 $\sigma_{i_1,\ldots,i_n} = \begin{pmatrix} 1 & 2 & \cdots & n \\ i_1 & i_2 & \cdots & i_n\end{pmatrix}$ 라 하면,  @exm-determinant_change_of_order 에서 보았듯이
+여기서 $\sigma_{i_1,\ldots,i_n} = \begin{pmatrix} 1 & 2 & \cdots & n \\ i_1 & i_2 & \cdots & i_n\end{pmatrix}$ 라 하면,  @exr-determinant_change_of_order 에서 보았듯이
 $$
 \begin{aligned}
 \det (\boldsymbol{AB}) &= \sum_{i_1=1}^n \cdots \sum_{i_n=1}^n A_{1,i_1} \cdots A_{n, {i_n}} \text{sgn}(\sigma_{i_1,\ldots,i_n}) \det(\boldsymbol{B}_{1:}, \ldots, \boldsymbol{B}_{n:}) \\
@@ -586,21 +918,99 @@ $$
 
 </br>
 
-::: {#cor-derterminant_is_invariant_under_similar_transformation}
 
-정사각 행렬에 대한 행렬식은 닮음 변환에 대해 불변이다. 즉 $\boldsymbol{A},\, \boldsymbol{P} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 이고 $\boldsymbol{P}$ 가 가역일 때 $\det (\boldsymbol{P}^{-1}\boldsymbol{AP}) = \det (\boldsymbol{A})$ 이다.
+
+## 다양한 행렬의 행렬식
+
+### 기본적인 행렬과 행렬식
+
+
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-basic_matrix_notation}
+
+#### 기본적인 행렬
+
+1. 행의 갯수와 열의 갯수가 같은 행렬을 **정사각 행렬(square matrix)** 라 한다.
+
+2. 행렬에서 행과 열이 같은 위치의 성분을 **대각성분 (diagonal elements)** 이라 한다. 즉 행렬 $\boldsymbol{A}$ 에서 $A_{ii}$ 들이 대각성분이다.
+
+3. 항등행렬 $\boldsymbol{I}_n \in \mathcal{M}_{n \times n}(\mathbb{F})$ 는 정사각행렬이며 대각성분이 $1$ 이고 나머지 성분은 $0$ 인 행렬이다. 즉 $(\boldsymbol{I}_n)_{ij}=\delta_{ij}$ 로 정의된다. $\boldsymbol{v} \in \mathcal{M}_{n}(\mathbb{F})$ 에 대해, $\boldsymbol{I}_n\boldsymbol{v}=\boldsymbol{v}$ 이며 $n \times m$ 행렬 $\boldsymbol{A}$ 와 $m \times n$ 행렬 $\boldsymbol{B}$ 에 대해 $\boldsymbol{I}_n\boldsymbol{A}=\boldsymbol{A},\, \boldsymbol{B}\boldsymbol{I}_n=\boldsymbol{B}$ 이므로 항등행렬이라 불린다. 임의의 크기의 항등행렬을 $\boldsymbol{I}$ 으로 표현한다.
+
+4. 정사각행렬에서 대각성분을 제외한 모든 성분이 $0$ 일 때 **대각 행렬 (diagonal matrix)** 라 한다. 대각성분의 아래 행이 모두 $0$ 인 행렬을 **상 삼각 행렬 (upper triangular matrix)** 라 한다. 대각성분의 위 행이 모두 $0$ 인 행렬을 **하 삼각 행렬 (lower triangular matrix)** 라고 한다. 예를 들어 아래 행렬에서 $\boldsymbol{D}$ 는 대각행렬, $\boldsymbol{U}$ 는 상삼각행렬, $\boldsymbol{L}$ 은 하삼각행렬이다.
+
+$$
+\boldsymbol{D} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1\end{pmatrix},\qquad \boldsymbol{U} = \begin{pmatrix} 1 & 3 & 2 \\ 0 & 2 & 1 \\ 0 & 0 & 3 \end{pmatrix} , \qquad \boldsymbol{L} = \begin{pmatrix} 3 & 0 & 0 \\ 1 & 1 & 0 \\ 2 & 5 & 1\end{pmatrix}
+$$
+
+
+6. $n \times n$ 정사각 행렬 $\boldsymbol{A}$ 에 대해 어떤 $n \times n$ 행렬 $\boldsymbol{B}$ 가 존재하여 $\boldsymbol{AB}=\boldsymbol{BA}=\boldsymbol{I}_n$ 일 때 $\boldsymbol{A}$ 를 **가역행렬 (invertible matrix)** 라 하고, $\boldsymbol{B}$ 를 $\boldsymbol{A}$ 의 **역행렬(inverse matrix)** 이라 한다. $\boldsymbol{A}$ 의 역행렬은 $\boldsymbol{A}^{-1}$ 로 표현한다.
+
+:::
+:::
+
+</br>
+
+### 행렬에 대한 몇가지 기본적인 성질들 {#sec-basic_properties_of_matrix}
+
+이제 행렬의 몇가지 기본적인 성질들을 보이려고 한다. 이것들은 유용하긴 하지만 Theorem 이나 Lemma, Proposition 등의 좀 거창인 이름을 붙일 정도는 아니기 때문에 **보기** 로 돌린다.
+
+</br>
+
+::: {#exm-multiplication_of_diagonal_matrix}
+
+대각행렬의 곱은 대각행렬이다. 상 삼각 행렬의 곱은 상 삼각 행렬이다. 하 삼각 행렬의 곱은 하 삼각 행렬이다.
 
 :::
 
 ::: {.proof}
+$\boldsymbol{D},\,\boldsymbol{F}$ 가 모두 $n \times n$ 대각행렬이라 하자. $D_{ij} = d_i \delta_{ij},\, F_{ij} = f_i \delta_{ij}$ 이므로, 
 
-$\det (\boldsymbol{P}^{-1}\boldsymbol{AP}) = \det (\boldsymbol{P}^{-1})\det (\boldsymbol{A})\det (\boldsymbol{P}) = 1. \qquad \square$
+$$
+(\boldsymbol{DF})_{ij} = \sum_k D_{ik}F_{kj} = \sum_k d_i \delta_{ik} f_j \delta_{kj} = d_i f_i \delta_{ij} 
+$$
+
+이므로 $\boldsymbol{DF}$ 는 대각행렬이다.
+
+$\boldsymbol{U},\, \boldsymbol{V}$ 가 모두 $n \times n$ 상삼각행렬이라 하자. $i>j$ 에 대해 $U_{ij}=0,\, V_{ij}=0$ 이므로,
+
+$$
+(\boldsymbol{UV})_{ij} = \sum_k U_{ik}V_{kj} = \sum_{k\ge i, k \le j} U_{ik}V_{kj}
+$$
+
+이다. 그런데 $i>j$ 이면 $i \le k \le j$ 인 $k$ 가 존재하지 않으므로 $(\boldsymbol{UV})_{ij} =0$ 이다. 즉 $\boldsymbol{UV}$ 는 상 삼각 행렬이다. 하삼각 행렬의 곱이 하삼각행렬이라는 것은 비슷한 방법으로 보일 수 있다. $\square$
+
 :::
-
 
 </br>
 
-## 연습문제
+::: {#exm-determinant_of_upper_lower_triangular_matrix}
+
+대각 행렬, 상 삼각 행렬과 하삼각 행렬의 행렬식은 그 대각성분의 곱과 같다. $\boldsymbol{A}$ 가 대각행렬, 상 삼각 행렬 혹은 하 삼각 행렬일 때,
+
+$$
+\det (\boldsymbol{A}) = \prod_{i=1}^n A_{ii}
+$$
+
+이다.
+:::
+
+::: {.proof}
+$n\times n$ 행렬 $\boldsymbol{A}$ 가 상삼각 행렬 이라 하자. $i>j$ 이면 $A_{ij}=0$ 이다.
+$$
+\det (\boldsymbol{A}) = \sum_{\sigma \in S_n} \text{sgn}(\sigma) \prod_{i=1}^n A_{i \sigma(i)}
+$$
+에서 $\displaystyle \prod_{i=1}^n A_{i\sigma(i)} \ne 0$ 이려면 모든 $i=1,\ldots,\,n$ 에 대해 $\sigma(i)\ge i$  이어야 한다. 그런데 가능한 경우는 $\sigma(1) = 1,\, \sigma(2) = 2,\ldots$ 일 수 밖에 없으며 따라서, 
+$$
+\det (\boldsymbol{A}) = \text{sgn}(i_d) A_{11} \cdots A_{nn} = \prod_{i=1}^n A_{ii}
+$$
+이다. $\boldsymbol{B}$ 가 하 삼각 행렬이면 $\boldsymbol{B}^T$ 는 상 삼각 행렬이므로 역시 행렬식은 대각성분의 곱이다. 대각행렬은 상삼각행렬이며 하 삼각 행렬이므로 역시 그 행렬식은 대각성분의 곱이다. $\square$ 
+
+:::
+
+</br>
+
+### 블록 행렬의 행렬식
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-block_matrix}
@@ -625,30 +1035,43 @@ $$
 \boldsymbol{A} = \begin{bmatrix} \boldsymbol{A}_1 & \boldsymbol{A}_2 \\ \boldsymbol{A}_3 & \boldsymbol{A}_4 \end{bmatrix}
 $$
 
-라 표현할 수 있다. 같은 행의 부분행렬끼리는 행의 개수가 같고, 같은 열의 부분행렬끼리는 열의 개수가 같게 된다.
+라 표현할 수 있다. 같은 행의 부분행렬끼리는 행의 개수가 같고, 같은 열의 부분행렬끼리는 열의 개수가 같게 된다. 행렬 $\boldsymbol{A}_1,\,\boldsymbol{A}_2,\,\boldsymbol{A}_3$ 가 부분행렬 $\boldsymbol{B},\,\boldsymbol{C},\, \boldsymbol{D}$ 에 대해 
+
+$$
+\boldsymbol{A}_D = \begin{bmatrix} \boldsymbol{B}& \boldsymbol{0} \\ \boldsymbol{0} & \boldsymbol{D} \end{bmatrix}, \qquad \boldsymbol{A}_U = \begin{bmatrix} \boldsymbol{B}& \boldsymbol{C} \\ \boldsymbol{0} & \boldsymbol{D} \end{bmatrix},\qquad \boldsymbol{A}_L = \begin{bmatrix} \boldsymbol{B}& \boldsymbol{0} \\ \boldsymbol{C} & \boldsymbol{D} \end{bmatrix},
+$$
+
+형태라고 하자. $\boldsymbol{A}_D$ 형태이면 **블록 대각 행렬**, $\boldsymbol{A}_U$ 형태이면 **블록 상삼각 행렬**, $\boldsymbol{A}_D$ 형태이면 **블록 하삼각 행렬** 이라고 한다. 
+
 
 :::
 :::
 
 </br>
 
-::: {#exr-determinant_of_block_matrix}
+::: {#prp-determinant_of_block_matrix}
 
-$\boldsymbol{A} \in \mathcal{M}_{m \times m}(\mathbb{F}),\, \boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 블록 정사각 행렬 $\boldsymbol{D}= \begin{bmatrix} \boldsymbol{A}& \boldsymbol{0} \\ \boldsymbol{0} & \boldsymbol{B}\end{bmatrix} \in \mathcal{M}_{(m+n)\times (m+n)}(\mathbb{F})$ 의 행렬식이 $\det (\boldsymbol{D}) = \det(\boldsymbol{A}) \det(\boldsymbol{B})$ 임을 보여라.
+#### 블록대각행렬의 행렬식
+
+$\boldsymbol{B} \in \mathcal{M}_{m \times m}(\mathbb{F}),\, \boldsymbol{D}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 블록 정사각 행렬 $\boldsymbol{A}= \begin{bmatrix} \boldsymbol{B}& \boldsymbol{0} \\ \boldsymbol{0} & \boldsymbol{D}\end{bmatrix} \in \mathcal{M}_{(m+n)\times (m+n)}(\mathbb{F})$ 의 행렬식이 $\det (\boldsymbol{A}) = \det(\boldsymbol{B}) \det(\boldsymbol{D})$ 임을 보여라.
 
 :::
 
-::: {.solution}
+::: {.proof}
 
 행렬식의 정의에 의해
 $$
 \begin{aligned}
-\det (\boldsymbol{D}) &= \sum_{\sigma \in S_{m+n}} \text{sgn}(\sigma) \prod_{i=1}^{m+n} D_{i, \sigma(i)} \\
-&=  \sum_{\sigma \in S_{m+n}} \text{sgn}(\sigma) \prod_{i=1}^m D_{i, \sigma(i)} \prod_{i=m+1}^{m+n} D_{i,\sigma(i)}
+\det (\boldsymbol{A}) &= \sum_{\sigma \in S_{m+n}} \text{sgn}(\sigma) \prod_{i=1}^{m+n} A_{i, \sigma(i)} \\
+&=  \sum_{\sigma \in S_{m+n}} \text{sgn}(\sigma) \prod_{i=1}^m A_{i, \sigma(i)} \prod_{i=m+1}^{m+n} A_{i,\sigma(i)}
 \end{aligned}
 $$
 
-이다. $1\le i \le m$ 에 대해 $\sigma(i)>m$ 이면 $D_{i,\sigma(i)}=0$ 이며 $m+1 \le i \le m+n$ 에 대해 $\sigma(i)\le m$ 이면 $D_{i, \sigma(i)} = 0$ 이다. 즉 $\prod_{i=1}^m D_{i, \sigma(i)}$ 부분은 $\{1,\ldots,\,m\}$ 에 대한 순열만이 의미있으며, $\prod_{i=m+1}^{m+n} D_{i,\sigma(i)}$ 부분은 $\{m+1,\ldots,m+n\}$ 에 대한 순열만이 의미있다. 이제 $\{1,\ldots,\,m\}$ 에 대한 순열 $S_m$ 과 $\{m+1,\ldots,\,m+n\}$ 에 대한 순열 $S'$ 을 생각하자. $\tau \in S_m,\, \zeta \in S'$ 에 대해 $\tau\zeta \in S_{m+n}$ 이며 $\sigma = \tau \zeta$ 일 때 $\text{sgn}(\sigma) = \text{sgn}(\tau)\,\text{sgn}(\zeta)$ 이다. 또한 어떤 $\tau \in S_m,\, \zeta\in S'$ 에 대해 $\sigma = \tau \zeta$ 가 되지 않으면 행렬식에 대한 기여가 $0$ 이 된다. 따라서, 
+이다. 
+
+$1\le i \le m$ 에 대해 $\sigma(i)>m$ 이면 $A_{i,\sigma(i)}=0$ 이며 $m+1 \le i \le m+n$ 에 대해 $\sigma(i)\le m$ 이면 $A_{i, \sigma(i)} = 0$ 이다. 즉 $\prod_{i=1}^m A_{i, \sigma(i)}$ 부분은 $\{1,\ldots,\,m\}$ 에 대한 순열만이 의미있으며, $\prod_{i=m+1}^{m+n} D_{i,\sigma(i)}$ 부분은 $\{m+1,\ldots,m+n\}$ 에 대한 순열만이 의미있다. 
+
+이제 $\{1,\ldots,\,m\}$ 에 대한 순열 $S_m$ 과 $\{m+1,\ldots,\,m+n\}$ 에 대한 순열 $S'$ 을 생각하자. $\tau \in S_m,\, \zeta \in S'$ 에 대해 $\tau\zeta \in S_{m+n}$ 이며 $\sigma = \tau \zeta$ 일 때 $\text{sgn}(\sigma) = \text{sgn}(\tau)\,\text{sgn}(\zeta)$ 이다. 또한 어떤 $\tau \in S_m,\, \zeta\in S'$ 에 대해 $\sigma = \tau \zeta$ 가 되지 않으면 행렬식에 대한 기여가 $0$ 이 된다. 따라서, 
 
 $$
 \begin{aligned}
@@ -658,23 +1081,453 @@ $$
 \end{aligned}
 $$
 
-이다. 
+이다. $\square$
 
 :::
 
-<!-- 
 
-## 행공간과 열공간
+</br>
 
-앞으로 보일 것을 미리 이야기하자면 어떤 선형 연산자에 대해 행렬식이 $0$ 이 아닌것과 행렬이 가역인 것은 동치이다. 
 
+::: {#prp-determinant_of_bloc_triangular_matrix}
+
+#### 블록 삼각행렬의 행렬식
+
+$\boldsymbol{B}\in \mathcal{M}_{m \times m}(\mathbb{F}),\, \boldsymbol{D}\in \mathcal{M}_{n\times n}(\mathbb{F}),\, \boldsymbol{C}=\mathcal{M}_{n \times m}(\mathbb{F})$ 에 대해 
+
+$$
+\det \left(\begin{bmatrix} \boldsymbol{B} & \boldsymbol{0}\\  \boldsymbol{C} & \boldsymbol{D} \end{bmatrix}\right) = \det(\boldsymbol{B})\cdot \det(\boldsymbol{D})
+$$
+
+임을 보여라. 
+:::
+
+::: {.solution}
+
+$\boldsymbol{B}$ 가 가역행렬이 아니라면 가우스 소거법으로 $1$ 행부터 $m$ 행 까지 중에 $0$ 으로만 이루어지 행을 만들 수 있으며 따라서 행렬식은 $0$ 이다. $\boldsymbol{A}$ 가 가역행렬이라면 
+
+$$
+\begin{bmatrix}\boldsymbol{I}_m & \boldsymbol{0} \\ -\boldsymbol{CA}^{-1} & \boldsymbol{I}_n \end{bmatrix} \begin{bmatrix} \boldsymbol{A} & \boldsymbol{0}\\  \boldsymbol{C} & \boldsymbol{B} \end{bmatrix} = \begin{bmatrix} \boldsymbol{A} & \boldsymbol{0} \\ \boldsymbol{0} & \boldsymbol{B}\end{bmatrix}
+$$
+
+첫번째 행렬은 하삼각행렬이므로 행렬식은 대각성분의 곱인 $1$ 이다. @prp-determinant_of_block_matrix 을 보라.
+
+:::
+
+
+</br>
+
+::: {#exm-inverse_matrix}
+
+#### 역행열의 성질
+
+$\boldsymbol{A},\,\boldsymbol{B}$ 가 가역행렬이고 $\lambda \in \mathbb{F}$ 일 때 다음이 성립한다.
+
+&emsp; ($1$) $\left(\boldsymbol{A}^{-1}\right)^{-1} = \boldsymbol{A}$, 
+
+&emsp; ($2$) $(\lambda\boldsymbol{A})^{-1} = \dfrac{1}{\lambda} \boldsymbol{A}^{-1}$,
+
+&emsp; ($3$) $(\boldsymbol{AB})^{-1} = \boldsymbol{B}^{-1}\boldsymbol{A}^{-1}$,
+:::
+
+</br>
+
+
+::: {#cor-derterminant_is_invariant_under_similar_transformation}
+
+정사각 행렬에 대한 행렬식은 닮음 변환에 대해 불변이다. 즉 $\boldsymbol{A},\, \boldsymbol{P} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 이고 $\boldsymbol{P}$ 가 가역일 때 $\det (\boldsymbol{P}^{-1}\boldsymbol{AP}) = \det (\boldsymbol{A})$ 이다.
+
+:::
+
+::: {.proof}
+
+$\det (\boldsymbol{P}^{-1}\boldsymbol{AP}) = \det (\boldsymbol{P}^{-1})\det (\boldsymbol{A})\det (\boldsymbol{P}) = 1. \qquad \square$
+:::
+
+</br>
+
+## 행간소 사다리꼴 행렬을 통한 선형사상의 이해 {#sec-linear_map_understood_by_RREM}
+
+우리는 앞장에서 행 간소 사다리꼴을 구하는 방법을 배웠지만 그것이 얼마나 유용한지, 어디에 사용하는지는 직접접으로 보이지 않았다. 이제 행 간소 사다리꼴이 왜 필요한지에 대해 알아볼 것이다. 그러나 거기까지 가기 전에 조금 준비운동이 필요하다.
+
+</br>
+
+### 행공간과 열공간 {#sec-row_space_and_column_space}
+
+행렬의 행벡터와 열벡터에 의해 span 되는 벡터공간을 생각 할 수 있으며 이를 각각 행공간 열공간이라고 한다.
+
+::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-column_space_row_space}
 
-#### 행공간과 열공간
+#### 행공간, 열공간
 
-행렬 $\boldsymbol{A}$ 의 모든 행벡터에 의해 span 되는 벡터공간을 **행공간 (row space)** 라고 한다. 마찬가지로 모든 열벡터에 의해 span 되는 벡터공간을 **열공간 (column space)** 라고 한다. 따라서 $\boldsymbol{A}$ 의 행공간은 $\text{span}(\boldsymbol{A}_{1:},\, \boldsymbol{A}_{2:},\ldots)$ 이며 열공간은 $\text{span}(\boldsymbol{A}_{:1}, \, \boldsymbol{A}_{:2},\ldots)$ 이다.
+행렬 $\boldsymbol{A}$ 의 모든 행벡터에 의해 span 되는 벡터공간을 $\boldsymbol{A}$ 의 **행공간 (row space)** 이라고 한다. 마찬가지로 모든 열벡터에 의해 span 되는 벡터공간을 행렬 $\boldsymbol{A}$ 의 **열공간 (column space)** 라고 한다. 따라서 $\boldsymbol{A}$ 의 행공간은 $\text{span}(\boldsymbol{A}_{1:},\, \boldsymbol{A}_{2:},\ldots)$ 이며 열공간은 $\text{span}(\boldsymbol{A}_{:1}, \, \boldsymbol{A}_{:2},\ldots)$ 이다.
+
+:::
+:::
+
+</br>
+
+::: {#exm-column_space_row_space}
+
+$\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$ 이라면 $\boldsymbol{A}$ 의 행공간은 $\mathcal{M}_{1 \times n}(\mathbb{F})$ 의 부분공간이며 $\boldsymbol{A}$ 의 열공간은 $\mathcal{M}_{m}(\mathbb{F})$ 의 부분공간이다. 
 
 :::
 
 
- -->
+</br>
+
+선형사상에서 $\ker,\, \text{im},\, \text{nullity},\, \text{rank}$ 를 정의했듯이 행렬에 대해서도 정의 할 수 있다.
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-kernel_of_matrox}
+
+#### 행렬의 $\ker$ 과 $\text{im}$
+$\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\ker (\boldsymbol{A})$, $\text{im} (\boldsymbol{A})$, $\text{nullity} (\boldsymbol{A})$, $\text{rank} (\boldsymbol{A})$ 를 다음과 같이 정의한다.
+
+$$ 
+\begin{aligned}
+\ker (\boldsymbol{A}) &= \{ \boldsymbol{x} \in \mathcal{M}_{n}(\mathbb{F}) : \boldsymbol{Ax} = \boldsymbol{0}\}, \\
+\text{im} (\boldsymbol{A}) & = \{ \boldsymbol{Ax} : \boldsymbol{x} \in \mathcal{M}_n(\mathbb{F})\}, \\
+\text{nullity} (\boldsymbol{A}) &= \dim (\ker (\boldsymbol{A})), \\
+\text{rank} (\boldsymbol{A}) & =  \dim (\text{im} (\boldsymbol{A})).
+\end{aligned}
+$$
+
+:::
+:::
+
+</br>
+
+::: {#prp-rank_of_matrix}
+
+행렬 $\boldsymbol{A}$ 에 대해 $\text{im}(\boldsymbol{A})$ 는 $\boldsymbol{A}$ 의 열공간이다.
+
+:::
+
+::: {.proof}
+$\boldsymbol{A} = \begin{bmatrix} \boldsymbol{A}_{:1} & \cdots & \boldsymbol{A}_{:n}\end{bmatrix}$ 이고 $\boldsymbol{x} = \begin{bmatrix} x_1  & \cdots & x_n\end{bmatrix}^T$ 라 하면, 
+
+$$
+\boldsymbol{Ax} = x_1 \boldsymbol{A}_{:1} + \cdots + x_n \boldsymbol{A}_{:n}
+$$
+
+이다. 따라서 (이미 짐작 할 수 있듯이) $\text{im} (\boldsymbol{A}) = \text{span}(\boldsymbol{A}_{:1}, \ldots, \boldsymbol{A}_{:n})$ 이므로 $\text{im}(\boldsymbol{A})$ 는 $\boldsymbol{A}$ 의 열공간이다. $\square$
+:::
+
+</br>
+
+우리는 앞서 가역 연산자는 기저를 다른 기저로 바꾸는 연산자라는 것을 알았다(@cor-basis_transformation). 이제 가역변환에 의해 변하는 것과 변하지 않는 것을 알아보자.
+
+
+::: {#lem-same_range_reduced_echelon_form}
+$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 어떤 가역 변환 $\boldsymbol{S}$ 를 수행했을 때 
+
+$$
+\begin{aligned} 
+\ker (\boldsymbol{A}) &= \ker (\boldsymbol{SA}), \\
+\text{rank} (\boldsymbol{A}) &= \text{rank} (\boldsymbol{SA})
+\end{aligned}
+$$
+
+이다.
+:::
+
+::: {.proof}
+
+$\boldsymbol{S}$ 가 가역행렬이므로 $\boldsymbol{Av}=\boldsymbol{0} \iff \boldsymbol{SAv}=\boldsymbol{0}$ 이다. 따라서 $\ker \boldsymbol{A} = \ker (\boldsymbol{SA})$ 이다. 따라서 선형사상의 기본정리(@thm-rank_nullity) 에 의해 $\dim (\text{im} (\boldsymbol{A})) = \dim (\text{im} (\boldsymbol{SA}))$ 이므로 $\text{rank} (\boldsymbol{A}) = \text{rank} (\boldsymbol{SA})$ 이다. $\square$ 
+
+
+::::
+
+</br>
+
+행렬 $\boldsymbol{A}$ 가 유한번의 기본 행 연산을 통해 행 간소 사다리꼴 $\boldsymbol{A}'$ 이 되었다면 $\boldsymbol{A}'$ 을 $\boldsymbol{A}$ 의 행 간소 사다리꼴 형태라고 부르겠다. 행렬과 행 간소 사다리꼴 형태에 대해 다음이 성립한다.
+
+::: {#prp-rank_of_reduced_echelon_form}
+행렬 $\boldsymbol{A}$ 와 행 간소 사다리꼴 형태 $\boldsymbol{A}'$ 에 대해 다음이 성립한다. 
+
+$$
+\begin{aligned}
+\ker (\boldsymbol{A}) &= \ker (\boldsymbol{A}'), \\
+\text{rank} (\boldsymbol{A}) &= \text{rank} (\boldsymbol{A}').
+\end{aligned}
+$$
+:::
+
+::: {.proof}
+
+모든 행 기본 연산 행렬은 가역행렬이므로 $\boldsymbol{A}'$ 은 가역행렬과 $\boldsymbol{A}$ 의 곱이다. 따라서 @lem-same_range_reduced_echelon_form 에 의해 위의 식이 성립한다. $\square$ 
+:::
+
+</br>
+
+행 간소 사다리꼴은 다음과 같은 형태이다. 선행 1 선분에는 밑줄을 그었다.
+
+$$
+\begin{bmatrix} 0 & \underline{1} & 2 & 0 & 0 & 3 & 1 \\ 0 & 0 & 0 & \underline{1} & 0 & 0 & 3 \\ 0 & 0 & 0 & 0 & \underline{1} & 2 & 3 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix}
+$$
+
+행 간소 사다리꼴 행렬의 열벡터는 선행 1 성분을 포함하는 열과 포함하지 않는 열이 있다. 선행 1 성분을 포함하는 열은 1 성분을 제외한 성분이 모두 $0$ 이며, 영벡터를 포함하여 선행 1 성분을 포함하지 않는 열은 그 앞 열들의 선형결합이다. 따라서 우리는 다음을 알 수 있다.
+
+::: {#prp-dimension_of_row_space}
+
+$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 과 그 행 간소 사다리꼴 행렬 $\boldsymbol{A}'$ 에 대해 다음이 성립한다.
+$$
+\text{rank} (\boldsymbol{A}) =\text{rank} (\boldsymbol{A}') = [\text{선행 1 성분의 개수}]
+$$
+
+:::
+
+</br>
+
+### 행렬의 rank {#sec-rank_of_matrix}
+
+@def-column_space_row_space 에서 정의했듯이 $m\times n$ 행렬 $\boldsymbol{A}$ 에서 $\text{span}(\boldsymbol{A}_{1:},\ldots,\boldsymbol{A}_{:m})$ 을 행렬 $\boldsymbol{A}$ 의 행공간 이라 한다. 행렬의 행 기본 연산이 모두 행벡터들 사이의 선형결합이라는 것을 이해한다면, 아래 명제는 쉽게 이해 할 수 있다.
+
+
+::: {#prp-invariance_of_rowspace_by_row_operation}
+$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 의 행공간은 행 기본연산에 의해 변하지 않는다.
+:::
+
+::: {.proof}
+$\boldsymbol{A}$ 가 행 기본 연산에 의해 변환된 행렬을 $\boldsymbol{A}'$ 이라 하자. 우리는 $\text{rank}(\boldsymbol{A})=\text{rank}(\boldsymbol{A}')$ 임을 알고 있다. $\boldsymbol{a}$ 가 $\boldsymbol{A}'$ 의 행공간에 포함된다면 모든 $\boldsymbol{A}_{j:}$ 는 $\boldsymbol{A}$ 의 행공간에 포함되므로 $\boldsymbol{a}$ 역시 $\boldsymbol{A}$ 의 행공간에 포함된다. 즉 $\boldsymbol{A}'$ 은 $\boldsymbol{A}$ 의 부분공간이다. 그런데 두 행공간의 차원이 같으므로 두 행공간은 같다. $\square$
+
+:::
+
+</br>
+
+따라서 행렬 $\boldsymbol{A}$ 의 행공간과 그 행 간소 사다리꼴 형태 $\boldsymbol{A}'$ 의 행공간은 일치한다. 
+
+또하나의 중요한 사실은 행 간소 사다리꼴에서 $0$ 행을 제외한 행들은 모두 선형 독립이다. 영벡터가 아닌 행벡터는 모두 선행 1 성분을 가지고 있으며, 선행 1 성분이 있는 열은 선행 1 성분을 제외하면 모두 $0$ 이므로 영벡터가 아닌 행벡터는 선형 독립임을 알 수 있다. 즉
+
+::: {#prp-dimension_of_row_space}
+$\boldsymbol{A}$ 의 행 간소 사다리꼴 형태를 $\boldsymbol{A'}$ 이라고 할 때 다음이 성립한다.
+
+$$
+\boldsymbol{A} \text{ 의 행공간의 차원} = \boldsymbol{A'} \text{ 의 행공간의 차원 } = [\text{선행 1 성분의 개수}].
+$$
+:::
+
+</br>
+
+@prp-dimension_of_row_space 를 생각하면 다음과 같은 결론을 얻는다.
+
+::: {#thm-dimension_of_matrix}
+
+$m\times n$ 행렬 $\boldsymbol{A}$ 에 대해 다음이 성립한다.
+$$
+\text{rank}(\boldsymbol{A}) = \boldsymbol{A} \text{ 의 행공간의 차원 } = \boldsymbol{A} \text{ 의 열공간의 차원 }
+$$
+:::
+
+
+</br>
+
+### 행 간소 사다리꼴의 유일성 {#sec-uniqueness_of_reduced_row_echelon_form}
+
+행렬의 행 간소 사다리꼴은 유일할까? 우리가 행렬을 행 간소 사다리꼴로 바꾸는 일관된 과정을 거쳤지만 다른 과정도 존재할 수 있다. 이제 어떤 방법으로른 행 간소 사다리꼴로 만들었다면 그 형태는 유일하다는 것을 보이고자 한다. 
+
+</br>
+
+::: {#thm-uniqueness_of_reduced_echelon_form}
+행렬의 행 간소 사다리꼴은 유일하다.
+:::
+
+::: {.proof}
+행렬 $\boldsymbol{A}$ 의 두 행간소 사다리꼴 형태를 $\boldsymbol{S}$ 와 $\boldsymbol{T}$ 라 하자. 
+
+($1$) $\text{rank}(\boldsymbol{S}) = \text{rank}(\boldsymbol{T})$ 이며 이 값은 $\boldsymbol{S}$ 와 $\boldsymbol{T}$ 의 $0$ 행이 아닌 행의 갯수이므로 $\boldsymbol{S}$ 와 $\boldsymbol{T}$ 는 같은 수의 $0$ 행이 아닌 행을 가져야 한다. $1$ 행부터 $l$ 행까지가 $0$ 행이 아니라고 가정하자.
+
+
+($2$) 우리는 행 기본 연산에 의해 행공간이 바뀌지 않는다는 것을 안다. 따라서 $\boldsymbol{S}$ 와 $\boldsymbol{T}$ 의 행공간이 같아야 한다. $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 $\boldsymbol{S}$ 와 $\boldsymbol{T}$ 의 각 행은 $\mathcal{M}_{1\times n}(\mathbb{F})$ 벡터이다. 
+$s_i,\,i=1,\ldots,l$ 을 행렬 $\boldsymbol{S}$ 의 $i$ 행에서 첫번째 $1$ 이 나오는 열 인덱스 이라 하자. $t_i,\, i=1,\ldots,l$ 도 $\boldsymbol{T}$ 에 대해 마찬가지로 정의하자. $s_1 > t_1$ 이라면 $\boldsymbol{T}_{1:}$ 은 $\boldsymbol{S}$ 의 행공간에 존재하지 않는다. $s_1<t_1$ 이면 $\boldsymbol{S}_{1:}$ 은 $\boldsymbol{T}$ 의 행공간에 존재하지 않는다. 따라서 $s_1=t_1$ 이다. 마찬가지로 $s_2 = t_2, \cdots , s_l = t_l$ 임을 보일 수 있다. 
+
+($3$) ($2$) 로부터 $\boldsymbol{S}_{j:} \in \text{span}(\boldsymbol{T}_{j:},\, \boldsymbol{T}_{(j+1):},\ldots, \boldsymbol{T}_{l:})$ 임을 안다. 따라서
+
+$$
+\boldsymbol{S}_{1:} =  a_1 \boldsymbol{T}_{1:} + \cdots + a_l \boldsymbol{T}_{l:}
+$$
+
+인 $a_1,\ldots,\,a_l$ 이 존재한다. 여기서 $s_1=t_1$ 이므로 $a_1=1$ 이다. 또한 $s_2,\ldots,\,s_l$ 번째 성분을 고려하면 $a_2=\cdots =a_l=0$ 임을 안다. 따라서 $\boldsymbol{S}_{1:} = \boldsymbol{T}_{1:}$ 이다. 이렇게
+
+$$
+\boldsymbol{S}_{j:} = a_j \boldsymbol{T}_{j:} + a_{j+1}\boldsymbol{T}_{(j+1):} + \cdots + a_l \boldsymbol{T}_{l:}
+$$
+
+과 $s_j=t_j,\ldots, s_{l}=t_{l}$ 을 생각하면 $\boldsymbol{S}_{j:} =\boldsymbol{T}_{j:}$, $j=1,\ldots, l$ 이다. 즉 $\boldsymbol{S}=\boldsymbol{T}$ 이므로 행 간소 사다리꼴은 유일하다. $\square$
+
+:::
+
+</br>
+
+### 가역행렬의 행 간소 사다리꼴, 역행렬 과 행렬식 {#sec-reduced_row_echelon_form_of_inverse_matrix}
+
+
+::: {#prp-reduced_echelon_form_of_invertible_matrix}
+
+가역행렬의 행 간소 사다리꼴 형태는 항등행렬이다. 또한 가역행렬 $\boldsymbol{A}$ 가  기본행렬의 곱 $\boldsymbol{E}$ 에 의해 항등행렬 이 되었다고 할때 $\boldsymbol{E}$ 는 $\boldsymbol{A}$ 의 역행렬이다.
+
+:::
+
+::: {.proof}
+$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 기본행렬의 곱 $\boldsymbol{E}$ 에 의해 행 간소 사다리꼴 $\boldsymbol{A}'$ 으로 변화하였다고 하자. @prp-rank_of_matrix 에 따라 가역행렬이라면 $\text{nullity} (\boldsymbol{A})=0$ 이므로 $\boldsymbol{A}'$ 에 $0$ 으로만 이루어진 행이 없어야 한다. 행 간소 사다리꼴이므로 $i$ 행에서 첫번째 $1$ 의 위치를 $l_i$ 라 하면 $l_i \ge i (i=1,\ldots, n)$ 이다. 또한 $\boldsymbol{A}$ 가 정사각 행렬이며 $0$ 행이 없어야 하므로 $l_n \le n$ 이다. 이 두가지로부터 $l_i = i,\, i = 1,\ldots, n$ 임을 알 수 있으며 이런 행 간소 사다리꼴은 항등행렬 $\boldsymbol{I}_n$ 뿐이다. 즉 $\boldsymbol{EA}=\boldsymbol{I}_n$ 
+이므로 $\boldsymbol{E}=\boldsymbol{A}^{-1}$ 이다. $\square$
+
+:::
+
+</br>
+
+우리는 앞서 @prp-zero_determinant_of_linear_dependency 에서 행렬의 행벡터들이 선형종속이면, 혹은 열벡터들이 선형 종속이면 행렬식이 0 이 됨을 보였다. 이제 그 역에 대해서도 보일 수 있다. 
+
+::: {#prp-determinant_of_invertible_matrix}
+$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음은 동치이다.
+
+1. $\boldsymbol{A}$ 는 가역행렬이다.
+
+2. $\det (\boldsymbol{A}) \ne 0$.
+:::
+
+::: {.proof}
+
+$\boldsymbol{A}$ 가 기본 행 연산 $\boldsymbol{E}_1,\ldots,\,\boldsymbol{E}_N$ 을 통해 행 간소 사다리꼴 $\boldsymbol{A}'$ 이 되었다고 하자. 즉,
+$$
+\det (\boldsymbol{A}') = \det (\boldsymbol{E}_N) \cdots \det (\boldsymbol{E}_1) \det (\boldsymbol{A}) 
+$$
+
+임을 안다. @prp-elementary_row_operation_and_determinant 을 다시 한번 보자. $\det (\boldsymbol{E}^{(1)}(i, j))=-1$ 이며 $\det (\boldsymbol{E}^{(2)}(j, t))=t$ 이고 $\det (\boldsymbol{E}^{(3)}(i, j, r))=1$ 이므로, 모든 기본 행 연산의 행렬식은 $0$ 이 아니다. 따라서,
+
+$$
+\det (\boldsymbol{A}) \ne 0 \iff \det (\boldsymbol{A}') \ne 0 
+$$
+
+이다. 
+
+$\boldsymbol{A}$ 가 가역행렬인 경우 그 행 간소 사다리꼴이 단위행렬이므로 $\det (\boldsymbol{A}') = 1$ 이며, 따라서 $\det (\boldsymbol{A}') \ne 0$ 이다. $\boldsymbol{A}$ 가 가역행렬이 아니라면 $\boldsymbol{A}'$ 에 $0$ 으로 이루어진 행이 존재하므로 그 행렬식이 $0$ 이다. $\square$
+
+:::
+
+</br>
+
+### 삼각행렬의 성질 {#sec-triangular_matrix}
+
+::: {#prp-properties_of_upper_triangular-matrix}
+
+상삼각행렬은 다음과 같은 성질을 가진다.
+
+&emsp; ($1$) 상삼각행렬의 곱은 상삼각행렬인다.
+
+&emsp; ($2$) 상삼각행렬이 가역가역행렬이라는 것과 모든 대각성분이 $0$ 이 아니라는 것은 동치이다.
+
+&emsp; ($3$) 상삼각행렬의 역행렬은 상삼각행렬이다.
+
+:::
+
+::: {.proof}
+
+($1$) @exm-multiplication_of_diagonal_matrix 에서 보였다.
+
+($2$) @exm-determinant_of_upper_lower_triangular_matrix 에서 보였다.
+
+($3$) $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 가역인 상 삼각행렬이라고 하자. 가역이므로 모든 대각성분이 $0$ 이 아니다. 가우스 조단 소거법을 생각하면 피보팅이 필요 없으며, 각 행을 그 행의 대각성분의 역수를 곱해주면 모든 행의 대각성분이 선행 1 성분이 된다. 각 행에 스칼라 곱을 수행하는 행 기본연산은 대각행렬이다. 또한 $n-1$ 행부터 $E^{(3)}(i, j, r)$ 연산을 통해 대각성분이 아닌 성분을 모두 없엘 수있다. 이 때 $i<j$ 이므로 $E^{(3)}$ 연산에 대한 행렬은 상삼각행렬이다. 행 기본연산 $\boldsymbol{E}_1,\ldots,\,\boldsymbol{E}_N$ 을 통해 $\boldsymbol{A}$ 가 항등행렬 $\boldsymbol{I}_n$ 이 되었다고 하자. 즉, 
+
+$$
+\boldsymbol{E}_N \cdots \boldsymbol{E}_1\boldsymbol{A} =\boldsymbol{I}_n
+$$
+
+이라고 했을 때 각각의 $\boldsymbol{E}_j$ 는 대각행렬이거나 상삼각 행렬이므로 $\boldsymbol{E}=\boldsymbol{E}_N \cdots \boldsymbol{E}_1$ 은 상삼각행렬이다. 그런데 $\boldsymbol{E}=\boldsymbol{A}^{-1}$ 이므로 상삼각행렬 $\boldsymbol{A}$ 의 역행렬은 상삼각행렬이다. $\square$
+
+:::
+
+</br>
+
+상삼각행렬의 전치행렬이 하삼각행렬이므로 하삼각행렬에 대해서도 다음을 알 수 있다.
+
+::: {#prp-properties_of_lower_triangular-matrix}
+
+하삼각행렬은 다음과 같은 성질을 가진다.
+
+&emsp; ($1$) 하삼각행렬의 곱은 하삼각행렬인다.
+
+&emsp; ($2$) 하삼각행렬이 가역가역행렬이라는 것과 모든 대각성분이 $0$ 이 아니라는 것은 동치이다.
+
+&emsp; ($3$) 하삼각행렬의 역행렬은 하삼각행렬이다.
+
+:::
+
+</br>
+
+## 연습문제
+
+
+
+::: {#exr-determinant_with_standard_vector}
+
+$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 의 첫번째 행이 $c\boldsymbol{e}_1$, 즉 첫번째 열이 $c$ 이며 나머지 열은 $0$ 이라면 $\boldsymbol{A}$ 의 행렬식은 $\boldsymbol{A}$ 에서 $1$ 행과 $1$ 열을 제외한 $(n-1)\times (n-1)$ 행렬의 행렬식과 같다는 것을 보여라.
+
+
+:::
+
+::: {.solution}
+
+행렬식의 정의를 보자. 
+
+$$
+\begin{aligned}
+\det(\boldsymbol{A}) &= \sum_{\sigma\in S_n} \text{sgn}(\sigma) \prod_{i=1}^n A_{i,\, \sigma (i)} 
+\end{aligned}
+$$
+
+여기서 $A_{1,\sigma(i)}$ 는 $A_{11}$ 을 제외하면 모두 $0$ 이므로, 
+
+$$
+\begin{aligned}
+\det(\boldsymbol{A}) &= c\sum_{\sigma\in S_n} \text{sgn}(\sigma) \prod_{i=2}^n A_{i,\, \sigma (i)} \\
+\end{aligned}
+$$
+
+이다. 임의의 $\sigma\in S_n$ 에서 $\sigma(1) = 1$ 로 고정시켰을 만을 생각하자. 그렇다면 $\sigma$ 는 $2$ 에서 $n$ 까지의 자연수에 대한 순환과 같으므로 $\boldsymbol{A}$ 에서 $1$ 행과 $1$ 열을 제외한 부분행렬을 $\boldsymbol{A}_1$ 이라고 하면 $\det (\boldsymbol{A}) = c\det(\boldsymbol{A}_1)$ 이다. 
+
+:::
+
+</br>
+
+::: {#exr-determinant_of_vandermond_matrix}
+
+#### Vandermond 행렬의 행렬식
+
+$t_0,\,\ldots,\,t_n \in \mathbb{F}$ 에 대해 아래와 같이 정의된 행렬을 Vandermond 행렬 이라고 한다. 
+
+$$
+\boldsymbol{V} = \begin{bmatrix} 1 & t_0 & t_0^2 & \cdots & t_0^n \\ 1 & t_1 & t_1^2 & \cdots & t_1^n \\ & & \vdots & & \\ 1 & t_n^1 & t_n^2 & \cdots & t_n^n\end{bmatrix}.
+$$ {#eq-vandermond_matrix}
+
+이 때 행렬식이 다음과 같음을 보여라. 
+
+$$
+\det(V) = \prod_{0 \le i < j \le n} (t_j-t_i)
+$$ {#eq-determinant_of_vandermond_matrix}
+
+
+:::
+
+::: {.solution}
+
+행렬식의 정의를 보면 행렬식은 각 열에서 행-인덱스가 겹치지 않게 고른 것들을 $1$ 혹은 $-1$ 을 곱해 합한것이라는 것을 알 수 있다. 각 $j$ 열은 $t_i$ 에 대한 $j-1$ 차 항이므로 $\det(\boldsymbol{V})$ 는 $t_0^{p_0}t_1^{p_1}\cdots t_n^{p_n}$ 의 선형합이며 $p_0+\cdots + p_n = \dfrac{n(n+1)}{2}$ 임을 알 수 있다. 
+
+또한 $1\le i,\,j \le n$ 가운데 둘중 하나만이라도 같으면 행렬식은 $0$ 이 된다. 
+
+$$
+q(t_0,\ldots,\,t_n) := \prod_{0\le i<j\le n} (t_j -t_i)
+$$ 
+
+라고 정의하면 $q(t_0,\ldots,\,t_n)$ 은 $\det(\boldsymbol{V})$ 를 나눈다. 그런데 $q(t_0,\ldots,\,t_n)$ 역시 $t_0^{p_0}t_1^{p_1}\cdots t_n^{p_n}$ 의 선형합이며 $p_0+\cdots + p_n = \dfrac{n(n+1)}{2}$ 이다. 즉 $\det(\boldsymbol{V})$ 는 $q(t_0,\ldots,\,t_n)$ 의 상수배이다. 그렇다면
+
+$$
+\det(\boldsymbol{V}) = c\cdot q(t_1,\ldots,\,t_n) = c\prod_{0\le i<j\le n} (t_j- t_i)
+$$
+
+여기서 $\boldsymbol{V}$ 의 대각성분의 곱을 보자. 대각성분의 순열은 항등순열이므로 $\text{sgn}$ 값은 $1$ 이다. 즉, $\det(\boldsymbol{V})$ 에서 $t_1 t_2^2 \cdots t_n^n$ 의 계수는 $1$ 이다. 그리고 $\cdot \prod_{1 \le i < j \le n}(t_j-t_i)$ 에서 $(t_j-t_i)$ 중 앞에 있는 것들의 곱을 모으면 $t_1 t_2^2 \cdots t_n^n$ 이다. 즉 $c=1$ 이다. $\square$
+
+
+:::

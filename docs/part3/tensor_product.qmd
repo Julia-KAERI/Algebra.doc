@@ -8,37 +8,14 @@ crossref:
 
 ## 쌍선형 형식
 
-두 벡터공간을 곱하는 것에 대해 우리는 곱공간 $U \times V$ 를 안다. 여기서는 $U \otimes V$ 로 표기되는 두 벡터공간의 텐서곱에 대해 알아보고자 한다. 이를 위해 @def-k_linear_form 에서의 쌍선형 형식을 이용한다.
+두 벡터공간을 곱하는 것에 대해 우리는 곱공간 $U \times V$ 를 안다. 여기서는 $U \otimes V$ 로 표기되는 두 벡터공간의 텐서곱에 대해 알아보고자 한다. 이를 위해 @def-k_linear_form 에서의 쌍선형 형식을 이용한다.  여기서는 쌍선형 형식을 많이 쓰기 때문에 $\mathcal{T}^2(U, V)$ 를 $\mathfrak{B}(U,\,V)$ 로 표기하기로 한다. @prp-vector_space_of_k_linear_form 로부터 다음을 안다.
 
 ::: {#prp-part_3_bilinear_form_is_vector_space}
 
-$\mathbb{F}$-벡터공간 $U\times V$ 에서 정의된 쌍선형 형식의 집합 $\mathfrak{B}(U,\,V)$ 는 벡터공간이다.
+$\mathbb{F}$-벡터공간 $U\times V$ 에서 정의된 쌍선형 형식의 집합 $\mathfrak{B}(U,\,V)$ 는 벡터공간이다. 
 
 :::
 
-
-::: {.proof}
-
-$T,\,S\in \mathfrak{B}(U,\,V),\, c\in \mathbb{F}$ 라고 하자. $u\in U,\,v\in V,\, a\in \mathbb{F}$ 에 대해
-
-$$
-(T+cS)(u,\,v) := T(u,\,v) + cS(u,\,v) 
-$$
-
-로 정의하자. 그렇다면, 
-
-$$
-\begin{aligned}
-(T+cS)(u+au',\,v)&= T(u+au',v) + cS(u+au', v) \\
-&= T(u, v)+aT(u', v) +c(S(u, v)+ aS(u', v)) \\
-&= (T+cS)(u,\,v) + a(T+cS)(u',\,v)\\
-(T+cS)(u,\, v+av') &= (T+cS)(u, v) + a(T+cS)(u, v')
-\end{aligned}
-$$
-
-이므로 $T+cS \in \mathfrak{B}(U, V)$ 이다. 따라서 $\mathfrak{B}(U, V)$ 는 벡터공간이다. $\square$
-
-:::
 
 
 </br>
@@ -58,9 +35,9 @@ $$
 
 3. $\beta \in \mathfrak{B}(U,\, U^\ast)$ 를 $\beta(u,\, \phi) = \phi(u)$ 로 정의하면 $\beta$ 는 $U \times U^\ast$ 에서의 쌍선형 형식이다.
 
-4. $\psi \in U^\ast$ 에 대해 $\beta \in \mathfrak{B}(U , \mathcal{L}(U))$ 를 $\beta (u,\,L) = \phi (Lu)$ 라고 정의하면 $\beta$ 는 $U \times \mathcal{L}(U)$ 에서의 쌍선형 형식이다.
+4. $\phi \in U^\ast$ 에 대해 $\beta \in \mathfrak{B}(U , \mathcal{L}(U))$ 를 $\beta (u,\,L) = \phi (Lu)$ 라고 정의하면 $\beta$ 는 $U \times \mathcal{L}(U)$ 에서의 쌍선형 형식이다.
 
-5. $\beta \in \mathfrak{B}(\mathcal{M}(\mathbb{F})_{m \times n}, \mathcal{M}(\mathbb{F})_{n \times m})$ 를 $\beta (A,\,B) = \textrm{tr}(AB)$ 로 정의하면 $\beta$ 는 $\mathcal{M}(\mathbb{F})_{m \times n} \times \mathcal{M}(\mathbb{F})_{n \times m}$ 에서의 쌍선형 형식이다.
+5. $\beta \in \mathfrak{B}(\mathcal{M}_{m \times n}(\mathbb{F}), \mathcal{M}(\mathbb{F})_{n \times m})$ 를 $\beta (A,\,B) = \textrm{tr}(AB)$ 로 정의하면 $\beta$ 는 $\mathcal{M}(\mathbb{F})_{m \times n} \times \mathcal{M}(\mathbb{F})_{n \times m}$ 에서의 쌍선형 형식이다.
 
 
 :::
@@ -71,7 +48,7 @@ $$
 
 ::: {#prp-part3_dimension_of_bilinear_functional}
 
-유한차원 벡터공간 $U,\,V$ 에 대해 $\dim(\mathfrak{B}(U,\,V)) = \dim(U) \times \dim(V)$ 이다. 
+유한차원 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $\dim(\mathfrak{B}(U,\,V)) = \dim(U) \times \dim(V)$ 이다. 
 
 :::
 
@@ -83,15 +60,19 @@ $$
 (\Phi (\beta))_{ij} := \beta(e_i, f_j)
 $$
 
-로 정의하자. 여기서 $\Phi$ 가 동형사상임을 보이면 된다. $c\in \mathbb{F},\, \beta,\,\gamma \in \mathfrak{B}(U,\,V)$ 에 대해 
+로 정의하자. 우리는 $\Phi$ 가 선형사상이며 동형사상임을 보이고자 한다. $c\in \mathbb{F},\, \beta,\,\gamma \in \mathfrak{B}(U,\,V)$ 에 대해 
 
 $$
 (\Phi (\beta + c\gamma))_{ij} = (\beta + c\gamma)(e_i, f_j) = (\Phi(\beta))_{ij} + c (\Phi (\gamma))_{ij}
 $$
 
-이므로 $\Phi$ 는 선형사상이다. $\beta \in \ker (\Phi)$ 라고 하자. $e_i\in \mathcal{B}_U,\, f_j\in \mathcal{B}_V$ 에 대해 $\beta (e_i,\,f_j)=0$ 
+이므로 $\Phi$ 는 선형사상이다. 어떤 행렬 $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\beta_A :U \times V \to \mathbb{F}$ 를 다음과 같이 정의하자. 
 
-또한 $\ker (\Phi) = 0 \in \mathcal{M}(\mathbb{F})_{m \times n}$ 이므로 $\Phi$ 는 동형사상이다. $\square$
+$$
+\beta_A (a_1e_1+\cdots + a_me_m,\, b_1f_1+ \cdots + b_n f_n) =  \sum_{i=1}^m \sum_{j=1}^n A_{ij}a_ib_j
+$$
+
+$\beta_A$ 가 $U,\, V$ 에서의 쌍선형 형식이라는 것은 쉽게 보일 수 있다. 행렬에 대해 쌍선형 형식이 정해지며, 쌍선형 형식에 의해 행렬이 정해진다. 따라서 둘은 동형사상이며 따라서 명제가 성립한다. $\square$
 
 :::
 
@@ -167,11 +148,11 @@ $$
 
 ::: {#thm-part3_basis_of_tensor_product}
 
-$\mathcal{B}_U = \{e_1,\ldots,\,e_m\},\, \mathcal{B}_V=\{f_1,\ldots,\,f_n\}$ 이 각각 벡터공간 $U,\,V$ 의 부분집합이고 $\mathcal{B} = \{e_i \otimes f_j : i=1,\ldots,\,m,\, j=1,\ldots,\,n\}$ 일 때 다음이 성립한다. 
+$\mathcal{B}_U = (e_1,\ldots,\,e_m),\, \mathcal{B}_V=(f_1,\ldots,\,f_n)$ 이 각각 벡터공간 $U,\,V$ 의 부분집합이고 $\mathcal{B} = \{e_i \otimes f_j : i=1,\ldots,\,m,\, j=1,\ldots,\,n\}$ 일 때 다음이 성립한다. 
 
 &emsp; ($1$) $\mathcal{B}_U,\,\mathcal{B}_V$ 가 각각 선형독립이면 $\mathcal{B}$ 도 $U\otimes V$ 에서 선형독립이다. 
 
-&emsp; ($2$) $\mathcal{B}_U,\,\mathcal{B}_V$ 가 $U\otimes V$ 의 기저이면 $\mathcal{B}$ 는 $U \otimes V$ 의 기저이다.
+&emsp; ($2$) $\mathcal{B}_U,\,\mathcal{B}_V$ 각각 $U,\, V$ 의 기저이면 $\mathcal{B}$ 는 $U \otimes V$ 의 기저이다.
 
 
 :::
@@ -307,7 +288,7 @@ $$
 
 ::: {.proof}
 
-$(e_1,\ldots,\,e_m)$ 이 $U$ 의 기저이고 $(f_1,\ldots,\,f_n)$ 이 $V$ 의 기라고 하자. 
+$(e_1,\ldots,\,e_m)$ 이 $U$ 의 기저이고 $(f_1,\ldots,\,f_n)$ 이 $V$ 의 기저라고 하자. 
 
 ($1$) @prp-linearmap_basis 과 @thm-part3_basis_of_tensor_product ($2$) 에 의해 다음을 만족하는 선형사상 $\hat{\Gamma}(U \otimes V) \to W$ 가 존재한다.
 
