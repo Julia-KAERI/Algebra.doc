@@ -122,11 +122,25 @@ $\square$
 
 #### 쌍대 기저 (Dual basis)
 
-@prp-dual_basis 의 $\{\varphi_1,\ldots,\,\varphi_n\}$ 을 $V$ 의 기저 $\{v_1,\ldots,\,v_n\}$ 에 대한 **쌍대 기저(dual basis)** 라 한다. $\{v_1,\ldots,\,v_n\}$ 에 대한 쌍대기저를 $\{v_1^\ast,\ldots,\,v_n^\ast\}$ 라고 표기한다.
+@prp-dual_basis 의 $(\varphi_1,\ldots,\,\varphi_n)$ 을 $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 에 대한 **쌍대 기저(dual basis)** 라 한다. 
  
 :::
 :::
 
+::: {#prp-dual_basis_and_vector}
+
+유한차원 벡터공간 $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 와 그 쌍대기저 $(\varphi_1,\ldots,\,\varphi_n)$ 를 생각하자. $v\in V$ 일 때 다음이 성립한다.
+
+$$
+v=\varphi_1(v)v_1 +\cdots + \varphi_n (v)v_n.
+$$
+
+:::
+
+::: {.proof}
+
+$v=\sum_i a_iv_i$ 일 $\varphi_j(v) = \sum_i \varphi_j (av_i) = a_j$ 이다. $\square$
+:::
 
 </br>
 
@@ -138,10 +152,10 @@ $\square$
 ::: {#def-dual_map}
 #### 쌍대 사상(Dual map)
 
-$T\in \mathcal{L}(U,\, V)$ 와 $\varphi \in V^\ast$ 에 대해 아래와 같이 정의된 $T^T \in \mathcal{L}(V^\ast,\, U^\ast)$ 를 $L$ 의 **쌍대 사상(dual map)** 이라 한다.
+$L\in \mathcal{L}(U,\, V)$ 와 $\varphi \in V^\ast$ 에 대해 아래와 같이 정의된 $L^T \in \mathcal{L}(V^\ast,\, U^\ast)$ 를 $L$ 의 **쌍대 사상(dual map)** 이라 한다.
 
 $$
-T^T(\varphi) = \varphi \circ T
+L^T(\varphi) = \varphi \circ L
 $$ 
 [$T^T$ 의 위첨자 $T$ 는 전치(transpose) 의 $T$ 이다. 이유는 마지막에 나온다.]{.aside}
 :::
@@ -150,17 +164,17 @@ $$
 </br>
 
 ::: {#prp-dual_map}
-@def-dual_map 에서 정의된 $T^T$ 은 선형사상이다.
+@def-dual_map 에서 정의된 $L^T$ 은 선형사상이다.
 :::
 
 ::: {.proof}
 $\varphi,\,\psi \in V^\ast,\, c \in \mathbb{F}$ 일 때,
 
 $$
-T^T (\varphi + c \psi)  = (\varphi + c \psi )\circ T = \varphi \circ T  +c (\psi \circ T) = T^T (\varphi) + c T^T (\psi) 
+L^T (\varphi + c \psi)  = (\varphi + c \psi )\circ L = \varphi \circ L  +c (\psi \circ L) = L^T (\varphi) + c L^T (\psi) 
 $$
 
-이므로 $T'$ 은 선형사상이다. $\square$
+이므로 $L^T$ 는 선형사상이다. $\square$
 :::
 
 </br>
@@ -169,15 +183,15 @@ $$
 
 ::: {#thm-dual-map}
 
-$S,\,T \in \mathcal{L}(U,\,V)$ 일 때 쌍대사상 $S^T ,\,T^T$ 은 다음 성질을 만족한다.
+$K,\,L \in \mathcal{L}(U,\,V)$ 일 때 쌍대사상 $K^T ,\,L^T$ 은 다음 성질을 만족한다.
 
-&emsp; ($1$) $(S+T)^T= S^T + T^T$,
+&emsp; ($1$) $(K+L)^T= K^T + L^T$,
 
-&emsp; ($2$) $(\lambda S)^T = \lambda S^T$
+&emsp; ($2$) $(\lambda L)^T = \lambda L^T$
 
-또한 $T \in \mathcal{L}(U,\,V),\, S \in \mathcal{L}(V,\,W)$ 일 때 다음 성질을 만족한다.
+또한 $K \in \mathcal{L}(U,\,V),\, L \in \mathcal{L}(V,\,W)$ 일 때 다음 성질을 만족한다.
 
-&emsp; ($3$) $(S\circ T)^T = T^T \circ S^T$
+&emsp; ($3$) $(K\circ L)^T = L^T \circ K^T$
 :::
 
 ::: {.proof}
@@ -186,8 +200,8 @@ $S,\,T \in \mathcal{L}(U,\,V)$ 일 때 쌍대사상 $S^T ,\,T^T$ 은 다음 성�
 
 $$
 \begin{aligned}
-(S+T)^T(\varphi)  &=\varphi \circ (S+T) = \varphi \circ S + \varphi \circ T = S^T + T^T,\\
-(\lambda S)^T (\varphi) &= \varphi \circ (\lambda S) = \lambda (\varphi \circ S) = \lambda S^T
+(K+L)^T(\varphi)  &=\varphi \circ (K+L) = \varphi \circ K + \varphi \circ L = K^T + L^T,\\
+(\lambda L)^T (\varphi) &= \varphi \circ (\lambda L) = \lambda (\varphi \circ L) = \lambda L^T
 \end{aligned}
 $$
 
@@ -195,11 +209,10 @@ $$
 
 $$
 \begin{aligned}
-(S\circ T)^T(\varphi) &= \varphi \circ (S \circ T) = (\varphi \circ S)\circ T = T^T (\varphi \circ S) = T^T (S^T(\varphi)) \\
-&= (T^T \circ S^T) (\varphi)
+(K\circ L)^T(\varphi) &= \varphi \circ (K \circ L) = (\varphi \circ K)\circ L = K^T \circ L = (L^T \circ K^T) (\varphi) \quad \square
 \end{aligned}
 $$
-$\square$
+
 :::
 
 </br>
@@ -256,10 +269,10 @@ $$
 i_U(u) = u
 $$
 
-로 정의하면, $i_U^T \in \mathcal{L}(V^\ast,\, U^\ast)$ 을 생각 할 수 있다. 임의의 $\varphi \in V^\ast$ 에 대해 $i_U^T (\varphi) = \varphi  \circ i_U$ 이며,
+로 정의하면, $i_U^T \in \mathcal{L}(V^\ast,\, U^\ast)$ 를 생각 할 수 있다. 임의의 $\varphi \in V^\ast$ 에 대해 $i_U^T (\varphi) = \varphi  \circ i_U$ 이며,
 
 $$
-\psi \in \ker (i_U^T) \iff \psi \circ i_U = 0 \iff \psi (u) = 0,\;\forall u \in U \iff \psi \in U^0
+\psi \in \ker (i_U^T) \iff \psi \circ i_U = 0 \iff \forall u \in U,\,\psi (u) = 0  \iff \psi \in U^0
 $$
 
 이므로 $\ker (i_U^T) = U^0$ 이다. Rank-nullity theorem (@thm-rank_nullity)에 의해,
@@ -289,11 +302,11 @@ $$
 </br>
 
 ::: {#thm-ker_Tprime}
-$U,\, V$ 가 유한차원 벡터공간이고 $T\in \mathcal{L}(U,\,V)$ 일 때, 다음이 성립한다.
+$U,\, V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(U,\,V)$ 일 때, 다음이 성립한다.
 
-&emsp; ($1$) $\ker (T^T) = (\text{im}\, T)^0$
+&emsp; ($1$) $\ker (L^T) = \left(\text{im}(L)\right)^0$
 
-&emsp; ($2$) $\text{nullity} (T^T) = \text{nullity} (T) + \dim (V) - \dim (U)$
+&emsp; ($2$) $\text{nullity} (L^T) = \text{nullity} (L) + \dim (V) - \dim (U)$
 
 :::
 
@@ -304,9 +317,9 @@ $U,\, V$ 가 유한차원 벡터공간이고 $T\in \mathcal{L}(U,\,V)$ 일 때, 
 
 $$
 \begin{aligned}
-\varphi \in \ker (T^T) &\iff \varphi \circ T = 0  \\ 
-& \iff \forall u\in U,\;(\varphi \circ T)(u) = 0 \\ 
-& \iff \varphi \in (\text{im} T)^0
+\varphi \in \ker (L^T) &\iff \varphi \circ L = 0  \\ 
+& \iff \forall u\in U,\;(\varphi \circ L)(u) = 0 \\ 
+& \iff \varphi \in (\text{im} (L))^0
 \end{aligned}
 $$
 
@@ -314,8 +327,8 @@ $$
 
 $$
 \begin{aligned}
-\text{nullity} (T^T) &= \dim ((\text{im} T)^0) \\ 
-& = \dim (V) - \dim (\text{im}(T)) \\ 
+\text{nullity} (L^T) &= \dim ((\text{im} (L))^0) \\ 
+& = \dim (V) - \dim (\text{im}(L)) \\ 
 &= \dim (V) - (\dim (U) - \text{nullity} (T))
 \end{aligned}
 $$
@@ -326,7 +339,7 @@ $\square$
 
 ::: {#lem-injective_dual_map}
 
-유한차원 벡터공간 $U,\,V$ 에 대해 $T\in \mathcal{L}(U,\,V)$ 가 전사인 것의 필요충분조건은 $T^T$ 이 단사인 것이다.
+유한차원 벡터공간 $U,\,V$ 에 대해 $L\in \mathcal{L}(U,\,V)$ 가 전사인 것의 필요충분조건은 $L^T$ 이 단사인 것이다.
 
 :::
 
@@ -334,10 +347,10 @@ $\square$
 
 $$
 \begin{aligned}
-T \text{ 가 전사} & \iff \text{im} (T) = V  \\ 
-& \iff (\text{im} (T))^0 = \{0 \}  \\ 
-& \iff \ker (T^T) = 0  \\ 
-& \iff T^T \text{ 이 단사}. \square
+L \text{ 가 전사} & \iff \text{im} (L) = V  \\ 
+& \iff (\text{im} (L))^0 = \{0 \}  \\ 
+& \iff \ker (L^T) = 0  \\ 
+& \iff L^T \text{ 이 단사}. \square
 \end{aligned}
 $$
 :::
@@ -345,55 +358,60 @@ $$
 
 ::: {#lem-rank_Tprime}
 
-$U,\,V$ 가 유한차원 벡터공간이고 $T\in \mathcal{L}(U,\,V)$ 일 때 다음이 성립한다.
+$U,\,V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(U,\,V)$ 일 때 다음이 성립한다.
 
-&emsp; ($1$) $\text{rank} (T^T) = \text{rank} (T)$
+&emsp; ($1$) $\text{rank} (L^T) = \text{rank} (L)$
 
-&emsp; ($2$) $\text{im} (T^T) = (\ker (T))^0$
+&emsp; ($2$) $\text{im} (L^T) = (\ker (L))^0$
+
 :::
 
 ::: {.proof}
+
 ($1$)
 
 $$
 \begin{aligned}
-\text{rank} (T^T) & = \dim (V^\ast) - \text{nullity} (T^T) = \dim (W) - \dim ((\text{im} (T))^0) \\ 
-&= \dim(W) - \text{nullity}(T) = \text{rank} (T).
+\text{rank} (L^T) & = \dim (V^\ast) - \text{nullity} (L^T) = \dim (V) - \dim ((\text{im} (L))^0) \\ 
+&= \dim(\text{im}(L))  = \text{rank} (L).
 \end{aligned}
 $$
 
-($2$) $\varphi \in \text{im} (T^T)$ 이면 어떤 $\psi \in V^\ast$ 에 대해 $\psi \circ T = \varphi$ 이다. $u \in \ker (T)$ 이면,
+($2$) $\varphi \in \text{im} (L^T)$ 이면 어떤 $\psi \in V^\ast$ 에 대해 $\psi \circ L = \varphi$ 이다. $u \in \ker (L)$ 이면,
 
 $$
-\varphi (u) = \psi \circ T (u) = \psi (0_V) =0
+\varphi (u) = \psi \circ L (u) = \psi (0_V) =0
 $$
 
-이므로 $\varphi \in (\ker (T))^0$ 이다. 즉 $\text{im}(T^T) \subset  (\ker (T))^0$ 이다.
+이므로 $\varphi \in (\ker (T))^0$ 이다. 즉 $\text{im}(L^T) \subset  (\ker (L))^0$ 이다.
 
 또한,
 
 $$
-\text{rank} (T^T) = \text{rank} (T) = \dim (V) - \text{nullity} (T) = \dim ((\ker (T))^0)
+\text{rank} (L^T) = \text{rank} (L) = \dim (V) - \text{nullity} (L) = \dim ((\ker (L))^0)
 $$
 
-이므로 $\text{im} (T^T) = (\ker (T))^0$ 이다. $\square$
+이므로 $\text{im} (L^T) = (\ker (L))^0$ 이다. $\square$
 :::
 
 </br>
 
 ::: {#lem-tprime_surjective}
-$U,\,V$ 가 유한차원 벡터공간이고 $T\in \mathcal{L}(U,\,V)$ 일 때 $T$ 가 단사일 필요충분조건은 $T^T$ 이 전사이다.
+
+$U,\,V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(U,\,V)$ 일 때 $L$ 가 단사일 필요충분조건은 $L^T$ 이 전사이다.
+
 :::
 
 ::: {.proof}
 $$
 \begin{aligned}
-T \text{ 가 단사} &\iff \text{nullity} (T) = 0  \\ 
-& \iff (\ker (T))^0 = U^\ast  \\ 
-& \iff \text{im} (T^T) = U^\ast  \\ 
-& \iff T^T \text{ 은 전사} \;\square
+L \text{ 이 단사} &\iff \text{nullity} (L) = 0  \\ 
+& \iff (\ker (L))^0 = U^\ast  \\ 
+& \iff \text{im} (L^T) = U^\ast  \\ 
+& \iff L^T \text{ 은 전사} \;\square
 \end{aligned}
 $$
+
 :::
 
 </br>
@@ -403,36 +421,36 @@ $$
 우리는 이미 전치행렬과 행렬의 rank 에 대해 [행간소 사다리꼴 행렬을 통한 선형사상의 이해](../part1/ch1_05_matrix.qmd#sec-linear_map_understood_by_RREM) 알아보았다. 여기서는 그 의미를 다른 방법으로 알아보자.
 
 
-벡터공간 $U,\,V$ 와 그 기저 $\mathcal{B}_U = (u_1,\ldots,\,u_n),\, \mathcal{B}_V = (v_1,\ldots,\,v_m)$, 그리고 이 기저에 대한 쌍대기저 $\mathcal{B}_{U^\ast} = (\varphi_1,\ldots,\,\varphi_n),\, \mathcal{B}_{V^\ast} = (\psi_1,\ldots,\,\psi_m)$ 를 생각하자. $T\in \mathcal{L}(U, V)$ 와 그 쌍대사상 $T'\in \mathcal{L}(V^\ast, U^\ast)$ 를 생각 할 수 있다. $[T]_{\mathcal{B}_U, \mathcal{B}_V} = \boldsymbol{A}$, $[T^T]_{\mathcal{B}_{V^\ast}, \mathcal{B}_{U^\ast}} =\boldsymbol{B}$ 라고 하자. 
+벡터공간 $U,\,V$ 와 그 기저 $\mathcal{B}_U = (u_1,\ldots,\,u_n),\, \mathcal{B}_V = (v_1,\ldots,\,v_m)$, 그리고 이 기저에 대한 쌍대기저 $\mathcal{B}_{U^\ast} = (\varphi_1,\ldots,\,\varphi_n),\, \mathcal{B}_{V^\ast} = (\psi_1,\ldots,\,\psi_m)$ 를 생각하자. $L\in \mathcal{L}(U, V)$ 와 그 쌍대사상 $L^T\in \mathcal{L}(V^\ast, U^\ast)$ 를 생각 할 수 있다. $[L]_{\mathcal{B}_U, \mathcal{B}_V} = \boldsymbol{A}$, $[L^T]_{\mathcal{B}_{V^\ast}, \mathcal{B}_{U^\ast}} =\boldsymbol{B}$ 라고 하자. 
 
 $$
-T^T(\psi_j)  =  \sum_{i=1}^n B_{ij}\varphi_i
+L^T(\psi_j)  =  \sum_{i=1}^n B_{ij}\varphi_i
 $$
 
-$T^T(\psi_j) = \psi_j \circ T$ 이므로, 
+$L^T(\psi_j) = \psi_j \circ L$ 이므로, 
 
 $$
-(\psi_j \circ T)(u_k) = \sum_{i=1}^n B_{ij}\varphi_i(u_k) = B_{kj}
+(\psi_j \circ L)(u_k) = \sum_{i=1}^n B_{ij}\varphi_i(u_k) = B_{kj}
 $$
 
 이다. 또한
 
 $$
-(\psi_j \circ T)(u_k) =  \psi_j (T(u_k)) = \psi_j \left(\sum_{i=1}^m A_{ik}v_i \right) = A_{jk}
+(\psi_j \circ L)(u_k) =  \psi_j (L(u_k)) = \psi_j \left(\sum_{i=1}^m A_{ik}v_i \right) = A_{jk}
 $$
 
 이므로 $\boldsymbol{B}=\boldsymbol{A}^T$ 임을 알 수 있다. 즉 우리는 다음을 보였다.
 
 ::: {#prp-transpose_of_matrix}
 
-벡터공간 $U,\,V$ 와 그 기저 $\mathcal{B}_U = (u_1,\ldots,\,u_n),\, \mathcal{B}_V = (v_1,\ldots,\,v_m)$ 에 대한 선형사상 $T\in \mathcal{L}(U, V)$ 의 행렬표현 $\boldsymbol{A}=[T]_{\mathcal{B}_U, \mathcal{B}_V}$ 의 전치행렬 $\boldsymbol{A}^T$ 는 $\mathcal{B}_U$ 와 $\mathcal{B}_V$ 의 쌍대기저에 대한 쌍대사상 $T^T\in \mathcal{L}(V^\ast, U^\ast)$ 의 행렬표현이다.
+벡터공간 $U,\,V$ 와 그 기저 $\mathcal{B}_U = (u_1,\ldots,\,u_n),\, \mathcal{B}_V = (v_1,\ldots,\,v_m)$ 에 대한 선형사상 $L\in \mathcal{L}(U, V)$ 의 행렬표현 $\boldsymbol{A}=[L]_{\mathcal{B}_U, \mathcal{B}_V}$ 의 전치행렬 $\boldsymbol{A}^T$ 는 $\mathcal{B}_U$ 와 $\mathcal{B}_V$ 의 쌍대기저에 대한 쌍대사상 $L^T\in \mathcal{L}(V^\ast, U^\ast)$ 의 행렬표현이다.
 
 :::
 
 </br>
 
 
-이제 $T$ 에 대한 쌍대사상을 $T^T$ 로 표현하는것이 자연스럽다 라는 것을 알게 되었다. 우리는 자연스럽게 다음의 결론에 도달한다. 
+이것이 $L\in \mathcal{L}(U,\,V)$ 에 대한 쌍대사상을 $L^T$ 로 표현한 이유이다. 우리는 자연스럽게 다음의 결론에 도달한다. 
 
 ::: {#thm-dimension_of_matrix_by_transpose}
 
@@ -442,7 +460,7 @@ $$
 
 ::: {.proof}
 
-@prp-transpose_of_matrix 의 표기법을 그대로 사용한다. $\boldsymbol{A}$ 의 열공간의 차원은 $\text{rank}(T)$ 와 같다. @lem-rank_Tprime 에 따라 $\text{rank}(T^T)$ 과도 같다. 이것은 $\boldsymbol{A}^T$ 의 열공간의 차원과 같고 또한 $\boldsymbol{A}$ 의 행공간의 차원과 같다. $\square$ 
+@prp-transpose_of_matrix 의 표기법을 그대로 사용한다. $\boldsymbol{A}$ 의 열공간의 차원은 $\text{rank}(L)$ 와 같다. @lem-rank_Tprime 에 따라 $\text{rank}(L^T)$ 과도 같다. 이것은 $\boldsymbol{A}^T$ 의 열공간의 차원과 같고 또한 $\boldsymbol{A}$ 의 행공간의 차원과 같다. $\square$ 
 :::
 
 결국 우리는 @thm-dimension_of_matrix 과 같은 내용을 다른 방법으로 증명하였다. 
