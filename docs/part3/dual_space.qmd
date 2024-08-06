@@ -537,8 +537,9 @@ $$
 
 ## 연습문제
 
-::: {#exr-axler_3_F_1}
+::: {#exr-axler4_3F_1}
 
+#### Axler4 3F.1
 모든 선형 범함수는 0 사상이거나 전사함수임을 보여라.
 
 :::
@@ -551,8 +552,9 @@ $\varphi \in \mathcal{L}(V)$ 가 $0$ 사상이 아니라고 하자. $\varphi(v) 
 
 </br>
 
-::: {#exr-alxer-3_F_3}
+::: {#exr-alxer4-3F_3}
 
+#### Axler4 3F.3
 $V$ 가 유한차원 벡터공간이고 $v\in V,\, v \ne 0_V$ 라고 하자. 이 때 $\varphi\in V^\ast$, $\varphi(v) = 1$ 인 $\varphi$ 가 존재함을 보여라.
 
 :::
@@ -565,12 +567,13 @@ $v$ 를 포함하는 기저를 만들고 이 기저에 대한 쌍대기저를 �
 
 </br>
 
-::: {#exr-axler_3_F_4}
+::: {#exr-axler4_3F_4}
+
+#### Axle4 3F.4
 
 $V$ 가 유한차원 벡터공간이며 $U\le V,\, U  \ne V$ 라고 하자. $0$ 사상이 아니면서 $\forall u\in U,\, \varphi (u)=0$ 을 만족하는 $\varphi \in V^\ast$ 가 존재함을 보여라.
 
 :::
-
 ::: {.solution}
 
 $v\in V-U$ 를 선택하여 $v$ 를 첫번째 원소로 하는 기저를 구성하고 쌍대기저를 만들면 된다.
@@ -579,7 +582,48 @@ $v\in V-U$ 를 선택하여 $v$ 를 첫번째 원소로 하는 기저를 구성�
 
 </br>
 
-::: {#exr-axler_3_F_5}
+::: {#exr-axler4_3F_5}
+
+#### Axler4 3F.5
+
+$L\in \mathcal{L}(U,\,V)$ 이고 $(v_1,\ldots,\,v_m)$ 이 $\text{im}(L)$ 의 기저라고 하자. 각각의 $u \in U$ 에 대해 어떤 유일하게 정해지는 $\varphi_1(u),\ldots,\,\varphi_m(u)$ 가 존재하여
+
+$$
+L(u) = \varphi_1 (u)v_1 + \cdots + \varphi_m (u) v_m
+$$
+
+를 만족시킨다. 즉 $\varphi_1,\ldots\,\varphi_m : U \to \mathbb{F}$ 이 정의된다. 이 때 $\varphi_1,\ldots,\,\varphi_m$ 이 범함수 임을 보여라.
+
+
+:::
+
+::: {.solution}
+
+$u_1,\,u_2\in U,\, c\in \mathbb{F}$ 에 대해 $L(u_1+cu_2) = L(u_1)+cL(u_2)$ 이어야 한다. 따라서 각각의 $i=1,\ldots,\,m$ 에 대해 $\varphi_i (u_1 +c u_2) =  \varphi_i (u_1) + c\varphi(u_2)$ 이어야 한다. 즉 $\varphi_i$ 는 $U \mapsto \mathbb{F}$ 선형 범함수이다. $\square$ 
+
+:::
+
+</br>
+
+::: {#exr-axler4_3F_6}
+
+#### Axler4 3F.6
+
+$\mathbb{F}$-벡터공간 $V$ 에 대해 $\varphi,\, \beta \in V^\ast$ 라고 하자. $\ker \varphi \subseteq \ker \beta$ 일 필요충분조건은 어떤 $c \in \mathbb{F}$ 에 대해 $\beta = c\varphi$ 임을 보여라.
+
+:::
+
+::: {.solution}
+$\Longleftarrow$ 는 자명하므로 $\implies$ 만 보인다. $\beta$ 가 0 사상일 경우에 $c=0$ 이므로 $\beta$ 가 $0$ 사상이 아닌 경우만 생각한다. $\beta$ 가 영사상이 아니면 $\text{rank}(\beta)=1$ 이며, 따라서 어떤 $v_0\in V$ 에 대해 $\beta(v_0) \ne 0$ 이다. $v_0 \notin \ker \beta$ 이므로 $v_0 \not\in \ker \varphi$ 이며 따라서 $\varphi (v_0) \ne 0$ 이다. $c_0 = \beta(v_0)/\varphi(v_0)$ 라고 하고 이 $c_0$ 에 대해 $\psi := \beta - c_0 \varphi$ 라고 하자. $\psi(v_0)=0$ 이다.
+
+이제 $v$ 가 $v_0$ 와 선형독립이며 $\beta (v)\ne 0$ 이라면 $c_1\beta(v_1) + c_2 \beta(v_2)=0$ 이라는 조건으로 부터 $c_1=c_2=0$ 를 얻는데 이는 $\text{rank}(\beta)=1$ 이라는 조건에 위배된다. 다라서 $v_0$ 와 선형독립인 모든 $v\in V$ 는 $\ker \beta$ 에 포함되며 마찬가지로 $\ker \varphi$ 에 포함된다. 
+
+
+:::
+
+</br>
+
+::: {#exr-axler3_3F_5}
 
 $V_1,\ldots,\,V_m$ 이 벡터공간일 때 $(V_1\times \cdots \times V_m)^\ast$ 과 $V_1^\ast \times \cdots \times V_m^\ast$ 가 동형임을 보여라.
 

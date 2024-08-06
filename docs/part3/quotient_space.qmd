@@ -11,15 +11,15 @@ crossref:
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-affine_subset}
 
-#### 아핀 부분집합(Affine subset) 
+#### 부분공간의 평행이동
 
-벡터공간 $V$ 의 **아핀 부분집합(Affine subset)** $v+U$ 는 어떤 $v\in V$ 와 $V$ 의 부분공간 $U$ 에 대해,
+벡터공간 $V$ 의 정해진 $v\in V$ 와 $V$ 의 부분공간 $U$ 에 대해 $V$ 의 부분집합 $v+U$ 를 다음과 같이 정의한다.
 
 $$
-v+U = \{v+u : u\in U\}
+v+U := \{v+u : u\in U\}.
 $$
 
-로 정의된 집합을 말한다. $v+U$ 는 $U$ 에 평행하다고 한다.
+이 때 $v+U$ 는 $U$ 가 $v$ 만큼 평행이동했다고 한다.
 :::
 :::
 
@@ -28,8 +28,8 @@ $$
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-quotient_space}
 
-#### 몫공간 (Quotient space)
-$U$ 가 $V$ 의 부분공간일 때 **몫공간 (quotient space)** $V/U$ 는 $U$ 와 평행한 모든 아핀 부분집합의 집합이다. 즉,
+#### 몫공간
+$U$ 가 $V$ 의 부분공간일 때 **몫공간 (quotient space)** $V/U$ 는 $U$ 가 평행이동한 부분집합의 집합이다. 즉,
 
 $$
 V/U = \{v+U: v\in V\}
@@ -47,24 +47,20 @@ $$
 
 ::: {#thm-affine_subset}
 
-#### 아핀 부분집합의 성질
+#### 몫공간의 성질
 
-$U$ 가 $V$ 의 부분공간이고 $v,\,w\in V$ 일 때 다음 세 명제는 동치이다.
+$v_1,\,v_2 \in V$ 와 $U\le V$ 에 대해 다음이 성립한다.
 
-1. $v-w\in U$;
+&emsp; ($1$) $v_1-v_2\in U$ 이면 $v_1+U = v_2+U$ 이다.
 
-2. $v+U = w+U$;
-
-3. $(v+U)\cap (w+ U) \ne \varnothing$
+&emsp; ($2$) $v_1-v_2\notin U$ 이면 $(v_1 + U)\cap (v_2+U) = \varnothing$ 이다.
 
 :::
 
 ::: {.proof}
-($1 \implies 2$) $v - w = u_0 \in U$ 라 가정하자. 임의의 $u \in U$ 에 대해 $v + u = w + u_0 + u \in w + U$ 이므로 $v + U \subset w + U$ 이다. 같은 방법으로 $v - w\in U \implies w + U \subset v + U$ 임을 보일 수 있다. 즉 $v + U = w + U$ 이다.
 
-($2 \implies 3$) 자명하다.
+$v_1 - v_2 = u\in U$ 이면 $v_1+U = v_2+U$ 임은 자명하다. 이제 $v_1-v_2\notin U$ 일 때 $x\in (v_1+U)\cap (v_2+U)$ 라고 하자. $x=v_1+u_1 = v_2+u_2$ 이므로 $v_1-v_2 = u_2-u_1 \in U$ 인데 이는 $v_1-v_2\not\in U$ 인 가정에 모순된다. $\square$
 
-($3 \implies 1$) $(v + U)\cap (w + U) \ne \varnothing$ 이면 어떤 $u_1,\,u_2 \in U$ 에 대해 $v + u_1 = w + u_2$ 이며 $v-w = u_2 - u_1 \in U$ 이다. $\square$
 
 :::
 
@@ -194,3 +190,34 @@ $\tilde{T}$ 에 대해 다음이 성립한다.
 (증명은 쉽다.)
 
 </br>
+
+## 연습문제
+
+::: {#exr-axler4_3E_9}
+
+#### Axler4 3E.9
+
+$A$ 가 $\mathbb{F}$-벡터공간 $V$ 의 부분집합이며 공집합이 아닐 때 다음 두 명제는 동치임을 보여라.
+
+&emsp; ($1$) $A$ 는 $V$ 의 어떤 부분공간의 평행이동이다.
+
+&emsp; ($2$) 임의의 $x,\,y\in A$ 와 $c\in \mathbb{F}$ 에 대해 $cx+(1-c)y\in A$ 이다.
+
+:::
+
+::: {.proof}
+
+($1 \implies 2$) $U\le V,\, v\in V$ 에 대해 $A=v+U$ 라고 하자. $x=v+u_1,\,y=v+u_2$ 라고 하면
+
+$$
+cx+(1-c)y = v+cu_1 + (1-c)u_2 \in v+U = A
+$$
+
+이다.
+
+($2\,\Longrightarrow\,1$) 고정된 $z\in A$ 에 대해 $A_z = \{ x-z: x\in A\}$ 라고 하자. 당연히 $A_z \subset V$ 이다. $z\in A$ 이므로 $0_V\in A_z$ 이다. 임의의 $x,\,y\in A$ 에 대해
+
+$$
+c_1(x-z) + c_2(y-z) = (c_1x+c_2y) - (c_1+c_2)z =
+$$
+:::

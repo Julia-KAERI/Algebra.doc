@@ -30,6 +30,7 @@ book:
         - docs/part2/ch2_04_symmetry.qmd
     - part: docs/part3/part3.qmd
       chapters:
+        - docs/part3/quotient_space.qmd
         - docs/part3/dual_space.qmd
         - docs/part3/bilinear_form.qmd
         - docs/part3/laplacian_form_of_determinant.qmd
@@ -37,7 +38,7 @@ book:
         - docs/part3/characteristic_polynomial.qmd
         - docs/part3/generalized_eigenspace.qmd
 
-        - docs/part3/quotient_space.qmd
+
         - docs/part3/tensor_product.qmd
         # - docs/part3/jordan_form.qmd
     - summary.qmd
