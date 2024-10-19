@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>12&nbsp; Symmetry – 대수학</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../src/part3/part3.html" rel="next">
+<link href="../../src/part2/ch2_03_normal_subgroup.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part2/part2.html">II. 군 (Groups)</a></li><li class="breadcrumb-item"><a href="../../src/part2/ch2_04_symmetry.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Symmetry</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">대수학</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../src/part1/part1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_01_vectorspace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">벡터와 벡터공간</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_02_linear_map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">선형사상</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_03_determinant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">가우스 조단 소거법과 행렬식</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_06_eigenvalue.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">고유값과 고유벡터</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_07_innerproduct.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">내적</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_08_operators_on_innerproduct_space.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">내적벡터공간에서의 연산자</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_09_spectrum_theorem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">스펙트럼 정리</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_10_svd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">특이값 분해</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../src/part2/part2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">II. 군 (Groups)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part2/ch2_01_groups.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군의 기초</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part2/ch2_02_homomorphisms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">군에서의 준동형사상과 동형사상</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part2/ch2_03_normal_subgroup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">정규부분군과 몫군</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part2/ch2_04_symmetry.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Symmetry</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../src/part3/part3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">III. 심화 선형대수학</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/quotient_space.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">몫공간과 몫사상</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/dual_space.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">쌍대공간과 쌍대 사상</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/bilinear_form.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/laplacian_form_of_determinant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/generalized_inverse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/characteristic_polynomial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">특성다항식, 최소다항식과 케일리-해밀턴 정리</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/generalized_eigenspace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">일반화된 고유공간과 조르당 형식</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/tensor_product.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">텐서곱</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#sec-symmetry" id="toc-sec-symmetry" class="nav-link active" data-scroll-target="#sec-symmetry"><span class="header-section-number">12.1</span> Symmetry</a></li>
+  <li><a href="#isometry" id="toc-isometry" class="nav-link" data-scroll-target="#isometry"><span class="header-section-number">12.2</span> Isometry</a>
+  <ul class="collapse">
+  <li><a href="#sec-isometry" id="toc-sec-isometry" class="nav-link" data-scroll-target="#sec-isometry"><span class="header-section-number">12.2.1</span> Isometry</a></li>
+  <li><a href="#m_n-mapsto-o_n-준동형사상" id="toc-m_n-mapsto-o_n-준동형사상" class="nav-link" data-scroll-target="#m_n-mapsto-o_n-준동형사상"><span class="header-section-number">12.2.2</span> <span class="math inline">\(M_n \mapsto O_n\)</span> 준동형사상</a></li>
+  <li><a href="#isometry-에-의한-좌표의-변경" id="toc-isometry-에-의한-좌표의-변경" class="nav-link" data-scroll-target="#isometry-에-의한-좌표의-변경"><span class="header-section-number">12.2.3</span> Isometry 에 의한 좌표의 변경</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part2/part2.html">II. 군 (Groups)</a></li><li class="breadcrumb-item"><a href="../../src/part2/ch2_04_symmetry.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Symmetry</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Symmetry</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sec-symmetry" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="sec-symmetry"><span class="header-section-number">12.1</span> Symmetry</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="symmetry.png" class="img-fluid figure-img" width="700"></p>
+<figcaption>Symmetry</figcaption>
+</figure>
+</div>
+</section>
+<section id="isometry" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="isometry"><span class="header-section-number">12.2</span> Isometry</h2>
+<section id="sec-isometry" class="level3" data-number="12.2.1">
+<h3 data-number="12.2.1" class="anchored" data-anchor-id="sec-isometry"><span class="header-section-number">12.2.1</span> Isometry</h3>
+<p>이미 우리는 <a href="../../src/part1/ch1_08_operators_on_innerproduct_space.html#sec-linear_isometry">linear isometry</a> 에서 선형대수학적인 입장에서 다루었다. 여기서는 내적벡터공간에서 내적을 보존하는 선형연산자를 Isometry 라고 정의했다.(<a href="../part1/ch1_08_operators_on_innerproduct_space.html#prp-properties_of_isometry" class="quarto-xref">명제&nbsp;<span>6.6</span></a>)</p>
+<p><br></p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-isometry" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 12.1 (Isometry)</strong></span> 거리공간 <span class="math inline">\(X\)</span> 에 대해 함수 <span class="math inline">\(f:X \to X\)</span> 가 모든 <span class="math inline">\(x,\,y\in X\)</span> 에서</p>
+<p><span class="math display">\[
+\|f(x)-f(y)\| = \|x-y\|
+\]</span></p>
+<p>를 만족할 때 <span class="math inline">\(f\)</span> 를 <strong>isometry</strong> 라고 한다.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="prp-composition_of_isometries" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 12.1</strong></span> <span class="math inline">\(f,\,g\)</span> 가 <span class="math inline">\(\mathbb{R}^n\)</span> 에서 정의된 isometry 일 때 <span class="math inline">\(f \circ g\)</span> 도 isometry 이다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\|f(g(x))-f(g(y))\| = \|g(x)-g(y)\| = \|x-y\|\)</span>.</p>
+</div>
+<p><br></p>
+<p>거리공간에 대해서는 특히 해석학에서 많이 다루었을 것이다. 여기서는 거리공간중에 유클리드 공간 <span class="math inline">\(\mathbb{R}^n\)</span> 을 중점적으로 다룬다. 유클리드 공간은 <span class="math inline">\(\mathbb{R}\)</span>-내적벡터공간이다. 이제 linear isometry 가 아닌 isometry 의 가장 대표적인 예를 들어보자.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-translation" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 12.2 (Translation)</strong></span> 유클리드 공간 <span class="math inline">\(\mathbb{R}^n\)</span> 에서 어떤 고정된 <span class="math inline">\(v\in \mathbb{R}^n\)</span> 에 대해 다음과 같이 정의된 함수 <span class="math inline">\(t_v :\mathbb{R}^n \to \mathbb{R}^n\)</span> 를 <span class="math inline">\(v\)</span> 만큼의 <strong>translation</strong> 이라고 한다.</p>
+<p><span class="math display">\[
+t_v (x) = x+v
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div id="exm-translation_1" class="theorem example">
+<p><span class="theorem-title"><strong>보기 12.1</strong></span> <span class="math inline">\(v \in \mathbb{R}^n,\, v\ne 0\)</span> 에 대한 translation <span class="math inline">\(t_v\)</span> 는 isometry 이지만 linear isometry 는 아니다.</p>
+</div>
+<p><br></p>
+<div id="exm-translation_2" class="theorem example">
+<p><span class="theorem-title"><strong>보기 12.2</strong></span> <span class="math inline">\(t_a :\mathbb{R}^n \to \mathbb{R}^n\)</span> 은 전단사함수이다.</p>
+</div>
+<p><br></p>
+<div id="exm-translation_3" class="theorem example">
+<p><span class="theorem-title"><strong>보기 12.3</strong></span> <span class="math inline">\({t_a}^{-1} = t_{-a}\)</span> 이다. <span class="math inline">\((t_a \circ t_{-a})(x) = (t_{-a}\circ t_a)(x) = x\)</span>.</p>
+</div>
+<p><br></p>
+<div id="lem-innerproduct_conserving_function" class="theorem lemma">
+<p><span class="theorem-title"><strong>보조정리 12.1</strong></span> <span class="math inline">\(u,\,v\in \mathbb{R}^n\)</span> 일 때 <span class="math inline">\(\langle u,\, u\rangle = \langle u,\, v\rangle = \langle v,\,v \rangle\)</span> 이면 <span class="math inline">\(u=v\)</span> 이다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\mathbb{R}^n\)</span> 에서 <span class="math inline">\(\|u-v\|=0\iff u=v\)</span> 이다. <span class="math display">\[
+\langle u-v,\, u-v\rangle = \langle u,\, u\rangle - 2\langle u,\, v\rangle + \langle v,\,v\rangle = 0
+\]</span></p>
+<p>이므로 <span class="math inline">\(\|u-v\|=0\)</span> 이다. 따라서 <span class="math inline">\(u = v\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<div id="thm-innerproduct_conserving_function" class="theorem">
+<p><span class="theorem-title"><strong>정리 12.1</strong></span> <span class="math inline">\(\varphi : \mathbb{R}^n \to \mathbb{R}^n\)</span> 에 대해 다음이 성립한다.</p>
+<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\varphi\)</span> 는 linear isometry 이다.</p>
+<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\varphi\)</span> 는 <span class="math inline">\(\varphi (0)=0\)</span> 인 isometry 이다.</p>
+<p>  (<span class="math inline">\(3\)</span>) 모든 <span class="math inline">\(u,\,v\in \mathbb{R}^n\)</span> 에 대해 <span class="math inline">\(\langle \varphi (u),\,\varphi (v) \rangle = \langle u,\,v\rangle\)</span> 이다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\implies 2\)</span>) <span class="math inline">\(\varphi\)</span> 가 linear isometry 이면 <span class="math inline">\(\|\varphi(u)\| = \|u\|\)</span> 이므로 <span class="math inline">\(\varphi (0) = 0\)</span> 이다.</p>
+<p>(<span class="math inline">\(2 \implies 3\)</span>) 정의에 의해 <span class="math inline">\(\|\varphi (u)\| = \|u\|\)</span> 이다. 또한</p>
+<p><span class="math display">\[
+0 = \|\varphi (u)-\varphi (v)\|^2 - \|u-v\|^2 = 2(\langle \varphi(u),\, \varphi (v) \rangle - \langle u,\, v\rangle)
+\]</span></p>
+<p>이다.</p>
+<p>(<span class="math inline">\(3\implies 1\)</span>) <span class="math inline">\(\varphi\)</span> 가 내적을 보존하면 선형사상임을 보이자. 우선 <span class="math inline">\(\varphi (u+v) = \varphi (u) + \varphi (v)\)</span> 임을 보인다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\langle \varphi (u+v),\, \varphi (u+v) \rangle &amp;= \langle  u+v,\, u+v\rangle = \langle u,\,u\rangle + \langle v,\,v \rangle + 2\langle u, v\rangle ,\\
+\langle \varphi (u) + \varphi (v),\, \varphi (u)+\varphi (v)\rangle  &amp;= \langle u,\,u \rangle + \langle v,\,v\rangle + 2\langle \varphi (u),\, \varphi (v) \rangle = \langle u,\,u\rangle + \langle v,\,v \rangle + 2\langle u, v\rangle,\\
+\langle \varphi(u+v),\, \varphi (u)+\varphi(v) \rangle &amp; =\langle \varphi (u+v),\, \varphi (u)\rangle + \langle \varphi (u+v),\varphi (v) \rangle = \langle u,\,u\rangle + \langle v,\,v \rangle + 2\langle u, v\rangle
+\end{aligned}
+\]</span></p>
+<p>이므로 <a href="#lem-innerproduct_conserving_function" class="quarto-xref">보조정리&nbsp;<span>12.1</span></a> 에 의해 <span class="math inline">\(\varphi (u+v) = \varphi(u) + \varphi(v)\)</span> 이다.</p>
+<p>이제 <span class="math inline">\(c\in \mathbb{R}\)</span> 에 대해 <span class="math inline">\(\varphi (cu) = c\varphi (u)\)</span> 임을 보이자. <span class="math inline">\(S=\{c\in \mathbb{R} : \varphi (cu) = c \varphi (u)\}\)</span> 라고 하자. <span class="math inline">\(0,\,1\in S\)</span> 임은 자명하다. <span class="math inline">\(0 = \varphi (u-u) = \varphi (u) + \varphi (-u)\)</span> 이므로 <span class="math inline">\(\varphi(-u) = -\varphi(u)\)</span> 이다. 따라서 <span class="math inline">\(-1\in S\)</span> 이다. <span class="math inline">\(c\in S\)</span> 일 때</p>
+<p><span class="math display">\[
+\begin{aligned}
+\varphi ((c+1)u) &amp;=  \varphi (cu) + \varphi (u) = (c+1)\varphi(u), \\
+\varphi ((c-1)u) &amp;= \varphi (cu) - \varphi (u) = (c-1)\varphi (u)
+\end{aligned}
+\]</span></p>
+<p>이므로 <span class="math inline">\(\mathbb{Z}\subset S\)</span> 이다. 이제 <span class="math inline">\(\mathbb{Q}\subset S\)</span> 임을 보이자. <span class="math inline">\(c=m/n,\, m,\,n\in\mathbb{Z}\)</span> 라고 하자. <span class="math inline">\(n\varphi (m/n u) = \varphi (mu) = m\varphi (u)\)</span> 이므로 <span class="math inline">\(\varphi (m/n u) = (m/n)\varphi(u)\)</span> 이다. 따라서 <span class="math inline">\(\mathbb{Q}\subset S\)</span> 이다. <span class="math inline">\(\varphi\)</span> 가 연속함수이며, <span class="math inline">\(\mathbb{Q}\)</span> 는 <span class="math inline">\(\mathbb{R}\)</span> 에 대해 조밀한 부분집합이고 모든 <span class="math inline">\(c\in \mathbb{Q}\)</span> 에 대해 <span class="math inline">\(\varphi(cu)=c\varphi(u)\)</span> 이므로 모든 <span class="math inline">\(c\in \mathbb{R}\)</span> 에 대해 <span class="math inline">\(\varphi(cu)=c\varphi(u)\)</span> 이다. (<span class="citation" data-cites="Rudin1976">Rudin (<a href="../../references.html#ref-Rudin1976" role="doc-biblioref">1976</a>)</span>, Chapter 4, Exercises 4)</p>
+<p>이제 <span class="math inline">\(\varphi\)</span> 가 선형사상임을 보였다. <span class="math inline">\(\varphi\)</span> 가 내적을 보존하는 선형사상이므로 <span class="math inline">\(\varphi\)</span> 는 linear isometry 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<p>우리는 원점을 보존하는 isometry 는 linear isometry 라는 것을 알았다.</p>
+<div id="prp-factorization_of_isotropy" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 12.2</strong></span> <span class="math inline">\(\mathbb{R}^n \mapsto\mathbb{R}^n\)</span> isometry 는 translation 과 linear isometry 의 합성으로 표현 할 수 있다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>Isometry <span class="math inline">\(f:\mathbb{R}^n \to \mathbb{R}^n\)</span> 를 생각하자. <span class="math inline">\(f(0)=a\)</span> 일 때 <span class="math inline">\(t_{-a}\circ f\)</span> 를 생각하자. <a href="#prp-composition_of_isometries" class="quarto-xref">명제&nbsp;<span>12.1</span></a> 에 의해 <span class="math inline">\(t_{-a}\circ f\)</span> 도 isometry 이며 원점을 보존하므로 <span class="math inline">\(t_{-a}\circ f\)</span> 는 linear isometry 이다. <span class="math inline">\(\varphi = t_{-a}\circ f\)</span> 라 하면 <span class="math inline">\(f = t_{a}\circ \varphi\)</span> 이므로 임의의 isometry 는 translation 과 linear isometry 의 합성이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<div id="exr-composition_of_isometries" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 12.1</strong></span> <span class="math inline">\(t_a\)</span> 가 <span class="math inline">\(a\)</span> 만큼의 translation 이고 <span class="math inline">\(\varphi,\, \psi\)</span> 가 linear isometry 일 때 다음이 성립한다.</p>
+<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\varphi \circ \psi\)</span> 도 linear isometry 이다.</p>
+<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(t_a \circ t_b = t_{a+b}\)</span> 이다.</p>
+<p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\varphi \circ t_a = t_{\varphi (a)} \varphi\)</span> 이다.</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <a href="#prp-composition_of_isometries" class="quarto-xref">명제&nbsp;<span>12.1</span></a> 에 의해 <span class="math inline">\(\varphi \circ \psi\)</span> 도 isometry 이며 <span class="math inline">\((\varphi \circ \psi)(0) = 0\)</span> 이므로 linear isometry 이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\((t_a\circ t_b)(x) = t_a(x+b)= x+a+b = t_{a+b}(x)\)</span>.</p>
+<p>(<span class="math inline">\(3\)</span>) <span class="math inline">\((\varphi \circ t_a)(x) = \varphi (x+a) = \varphi (x) + \varphi(a) = (t_{\varphi(a)} \circ \varphi) (x)\)</span>.</p>
+</div>
+<p><br></p>
+<div id="prp-group_of_isomeetries" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 12.3</strong></span> <span class="math inline">\(\mathbb{R}^n\)</span> 에 대한 모든 isometry 의 집합은 함수 합성 연산에 대해 군이다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(M_n\)</span> 을 <span class="math inline">\(\mathbb{R}^n\)</span> 에서의 isometry 의 집합이라고 하자. <span class="math inline">\(\mathbb{R}^n\)</span> 에서의 translation 과 linear isometry 가 전단사임을 안다. 또한 합성도 isometry 임을 안다. <span class="math inline">\(f=(t_a\circ \varphi)\)</span> 일 때 <span class="math inline">\(f^{-1} = \varphi^{-1}\circ t_{-a} \in M_n\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+</section>
+<section id="m_n-mapsto-o_n-준동형사상" class="level3" data-number="12.2.2">
+<h3 data-number="12.2.2" class="anchored" data-anchor-id="m_n-mapsto-o_n-준동형사상"><span class="header-section-number">12.2.2</span> <span class="math inline">\(M_n \mapsto O_n\)</span> 준동형사상</h3>
+<p>Isometry <span class="math inline">\(f\)</span> 는 translation <span class="math inline">\(t_a\)</span> 와 linear isomeetry <span class="math inline">\(\varphi\)</span> 의 합성으로 <span class="math inline">\(f=t_a \circ \varphi\)</span> 로 표현 할 수 있다. 이 때 <span class="math inline">\(a=f(0)\)</span> 으로 정해진다. <span class="math inline">\(\mathbb{R}^n\)</span> 에서의 linear isomeetry 의 집합을 <span class="math inline">\(O_n\)</span> 이라 하자. (<span class="math inline">\(O_n\)</span> 은 <span class="math inline">\(n \times n\)</span> 직교행렬의 집합과 동형이라는 것을 안다!!!). 선형대수학에서 배운 지식으로 우리는 이것을 쉽게 보일 수 있다.</p>
+<div id="prp-linear_isometry_is_a_group" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 12.4</strong></span> <span class="math inline">\(\mathbb{R}^n\)</span> 에서의 linear isometry 의 집합은 군이다.</p>
+</div>
+<p><br></p>
+<div id="prp-mn_to_on_homomorphism" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 12.5</strong></span> <span class="math inline">\(\pi : M_n \to O_n\)</span> 을 <span class="math inline">\(\pi (f) = t_{-f(0)}\circ f\)</span> 로 정의할 때 다음이 성립한다.</p>
+<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\pi \in \text{Hom}(M_n,\, O_n)\)</span>.</p>
+<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\ker (\pi)\)</span> 는 <span class="math inline">\(\mathbb{R}^n\)</span> 에서의 translation 의 집합 <span class="math inline">\(T_n\)</span>이다.</p>
+<p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(T_n \trianglelefteq M_n\)</span> 이다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(f\in M_n\)</span> 이라면 어떤 <span class="math inline">\(\varphi \in O_n\)</span> 에 대해 <span class="math inline">\(f = t_{f(0)}\circ \varphi\)</span> 이므로 <span class="math inline">\(\pi(f) = \varphi \in O_n\)</span> 이다. <span class="math inline">\(f,\,g\in M_n\)</span> 이며 <span class="math inline">\(\pi(f) = \varphi,\, \pi(g)= \psi\)</span> 라면,</p>
+<p><span class="math display">\[
+\pi (f \circ g)= \pi (t_{f(0)} \circ \varphi\circ t_{g(0)} \circ \psi) = \pi (t_{f(0)} \circ t_{\varphi (g(0))} \circ \varphi  \circ \psi ) = \varphi \circ \psi = \pi (f)\circ \pi (g)
+\]</span></p>
+<p>이므로 <span class="math inline">\(\pi\)</span> 는 준동형사상이다.</p>
+<p>(<span class="math inline">\(2\)</span>) (<span class="math inline">\(3\)</span>) 은 쉽게 보일 수 있다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+</section>
+<section id="isometry-에-의한-좌표의-변경" class="level3" data-number="12.2.3">
+<h3 data-number="12.2.3" class="anchored" data-anchor-id="isometry-에-의한-좌표의-변경"><span class="header-section-number">12.2.3</span> Isometry 에 의한 좌표의 변경</h3>
+<p>같은 공간을 기술하는데 여러개의 좌표계를 사용 할 수 있으며, 좌표 변환에서 거리를 보존하는 좌표 변환은 매우 중요하다. Isometry <span class="math inline">\(\eta\in M_n\)</span> 은 거리를 보존하는 좌표 변환에 사용 할 수 있다. <span class="math inline">\(P\)</span> 를 변환 전의 좌표계 <span class="math inline">\(P'\)</span> 을 변환 전의 좌표계라고 하자. 즉 <span class="math inline">\(\boldsymbol{x},\,\boldsymbol{y} \in \mathbb{R}^n\)</span> 에 대해 <span class="math inline">\(\boldsymbol{x}',\,\boldsymbol{y}'\in \mathbb{R}^n\)</span> 을 <span class="math inline">\(\boldsymbol{x}'=\eta(\boldsymbol{x}),\, \boldsymbol{y}'=\eta(\boldsymbol{y})\)</span> 라고 하자. 이 때 <span class="math inline">\(f\in M_n\)</span> 에 의해 <span class="math inline">\(f(\boldsymbol{p})=\boldsymbol{q}\)</span> 라면 변환된 좌표계에서는 어떻게 될까? <span class="math inline">\(\boldsymbol{p}=\eta^{-1}(\boldsymbol{p}')\)</span>, <span class="math inline">\(\boldsymbol{q} = \eta^{-1}(\boldsymbol{q}')\)</span> 에 대해 <span class="math inline">\(f'(\boldsymbol{p}') = \boldsymbol{q}' = (\eta \circ f)(\boldsymbol{p})\)</span> 이어야 하므로, <span class="math inline">\(f' \circ \eta= \eta \circ f\)</span> 이며, 따라서</p>
+<p><span class="math display">\[
+f' = \eta \circ f \circ \eta^{-1}
+\]</span></p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Rudin1976" class="csl-entry" role="listitem">
+Rudin, W. 1976. <em>Principles of Mathematical Analysis</em>. Third. International Series in Pure and Applied Mathematics. McGraw-Hill.
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../src/part2/ch2_03_normal_subgroup.html" class="pagination-link" aria-label="정규부분군과 몫군">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">정규부분군과 몫군</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../src/part3/part3.html" class="pagination-link" aria-label="III. 심화 선형대수학">
+        <span class="nav-page-text">III. 심화 선형대수학</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>10&nbsp; 군에서의 준동형사상과 동형사상 – 대수학</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../src/part2/ch2_03_normal_subgroup.html" rel="next">
+<link href="../../src/part2/ch2_01_groups.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part2/part2.html">II. 군 (Groups)</a></li><li class="breadcrumb-item"><a href="../../src/part2/ch2_02_homomorphisms.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">군에서의 준동형사상과 동형사상</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">대수학</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../src/part1/part1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_01_vectorspace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">벡터와 벡터공간</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_02_linear_map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">선형사상</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_03_determinant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">가우스 조단 소거법과 행렬식</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_06_eigenvalue.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">고유값과 고유벡터</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_07_innerproduct.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">내적</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_08_operators_on_innerproduct_space.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">내적벡터공간에서의 연산자</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_09_spectrum_theorem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">스펙트럼 정리</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part1/ch1_10_svd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">특이값 분해</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../src/part2/part2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">II. 군 (Groups)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part2/ch2_01_groups.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군의 기초</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part2/ch2_02_homomorphisms.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">군에서의 준동형사상과 동형사상</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part2/ch2_03_normal_subgroup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">정규부분군과 몫군</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part2/ch2_04_symmetry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Symmetry</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../src/part3/part3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">III. 심화 선형대수학</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/quotient_space.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">몫공간과 몫사상</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/dual_space.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">쌍대공간과 쌍대 사상</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/bilinear_form.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/laplacian_form_of_determinant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/generalized_inverse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/characteristic_polynomial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">특성다항식, 최소다항식과 케일리-해밀턴 정리</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/generalized_eigenspace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">일반화된 고유공간과 조르당 형식</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/part3/tensor_product.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">텐서곱</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#준-동형사상" id="toc-준-동형사상" class="nav-link active" data-scroll-target="#준-동형사상"><span class="header-section-number">10.1</span> 준 동형사상</a>
+  <ul class="collapse">
+  <li><a href="#sec-group_homomorphsm" id="toc-sec-group_homomorphsm" class="nav-link" data-scroll-target="#sec-group_homomorphsm"><span class="header-section-number">10.1.1</span> 준 동형 사상</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제"><span class="header-section-number">10.1.2</span> 연습문제</a></li>
+  </ul></li>
+  <li><a href="#잉여류-cosets-와-라그랑쥬-정리" id="toc-잉여류-cosets-와-라그랑쥬-정리" class="nav-link" data-scroll-target="#잉여류-cosets-와-라그랑쥬-정리"><span class="header-section-number">10.2</span> 잉여류 (Cosets) 와 라그랑쥬 정리</a>
+  <ul class="collapse">
+  <li><a href="#sec-cosets" id="toc-sec-cosets" class="nav-link" data-scroll-target="#sec-cosets"><span class="header-section-number">10.2.1</span> 잉여류</a></li>
+  <li><a href="#sec-lagrange_theorem" id="toc-sec-lagrange_theorem" class="nav-link" data-scroll-target="#sec-lagrange_theorem"><span class="header-section-number">10.2.2</span> 라그랑쥬 정리</a></li>
+  <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1"><span class="header-section-number">10.2.3</span> 연습문제</a></li>
+  </ul></li>
+  <li><a href="#동형사상" id="toc-동형사상" class="nav-link" data-scroll-target="#동형사상"><span class="header-section-number">10.3</span> 동형사상</a>
+  <ul class="collapse">
+  <li><a href="#sec-group_isomorphism" id="toc-sec-group_isomorphism" class="nav-link" data-scroll-target="#sec-group_isomorphism"><span class="header-section-number">10.3.1</span> 동형사상</a></li>
+  <li><a href="#연습문제-2" id="toc-연습문제-2" class="nav-link" data-scroll-target="#연습문제-2"><span class="header-section-number">10.3.2</span> 연습문제</a></li>
+  </ul></li>
+  <li><a href="#연습문제-3" id="toc-연습문제-3" class="nav-link" data-scroll-target="#연습문제-3"><span class="header-section-number">10.4</span> 연습문제</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part2/part2.html">II. 군 (Groups)</a></li><li class="breadcrumb-item"><a href="../../src/part2/ch2_02_homomorphisms.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">군에서의 준동형사상과 동형사상</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">군에서의 준동형사상과 동형사상</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="준-동형사상" class="level2 page-columns page-full" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="준-동형사상"><span class="header-section-number">10.1</span> 준 동형사상</h2>
+<section id="sec-group_homomorphsm" class="level3 page-columns page-full" data-number="10.1.1">
+<h3 data-number="10.1.1" class="anchored" data-anchor-id="sec-group_homomorphsm"><span class="header-section-number">10.1.1</span> 준 동형 사상</h3>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside">어떤 집합과 집합에서의 연산이 잘 정의되어 있을때 둘을 같이 묶어서 대수적 구조(algebraic structure) 라고 한다. 대표적인 우리는 이미 체(field), 벡터공간(vector space), 군(groups)이라는 대수적 구조가 존재한다는 것을 알고 있다. 준동형사상은 대수적 구조 사이에 대수적 구조의 연산을 보존하는 함수를 통칭한다. 그리고 이 준동형사상이 전단사일 경우에는 동형사상(isomorphism) 이라고 한다. 우리는 이미 <a href="../part1/ch1_02_linear_map.html#def-isomorphism_in_vector_space" class="quarto-xref">정의&nbsp;<span>2.9</span></a> 에서 벡터공간에서의 동형사상에 대해 다루었다. 당연히 군에 대해서도 동형사상이 매우 중요하며 앞으로 나올 것이다.</span></div></div>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-homomorphisms_in_groups" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 10.1 (준동형사상)</strong></span> 군 <span class="math inline">\(G,\,G'\)</span> 에 대해 함수 <span class="math inline">\(\varphi :G \to G'\)</span> 이 모든 <span class="math inline">\(a,\,b\in G\)</span> 에 대해</p>
+<p><span class="math display">\[
+\varphi(ab) = \varphi(a)\varphi(b)
+\]</span></p>
+<p>일 때 <span class="math inline">\(\varphi\)</span> 를 <strong>준동형사상(homomophism)</strong> 이라고 한다. 또한 선형사상에서와 같이 <span class="math inline">\(\ker \varphi\)</span> 와 <span class="math inline">\(\text{im}\,\varphi\)</span> 를 다음과 같이 정의한다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\ker (\varphi) &amp;= \{x\in G: \varphi (x) = 1_{G'}\}, \\
+\text{im} (\varphi) &amp;= \{\varphi(x) : x\in G\}.
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(G\)</span> 에서 <span class="math inline">\(G'\)</span> 으로의 준 동형사상의 집합을 <span class="math inline">\(\text{Hom}\, (G,G')\)</span> 이라고 쓴다. 자기 자신으로의 준동형사상일 경우는 <span class="math inline">\(\text{Hom}\, (G)\)</span> 라고 한다.</p>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<div id="exm-homomorphism1" class="theorem example">
+<p><span class="theorem-title"><strong>보기 10.1</strong></span> <span class="math inline">\(\varphi :G \to G'\)</span> 이 <span class="math inline">\(\varphi(g)=1_{G'}\)</span> 일 때 <span class="math inline">\(\varphi\)</span> 를 <strong>사소한 준동형사상 (trivial homomorphism)</strong>이라고 한다. <span class="math inline">\(H \le G\)</span> 일 때 <span class="math inline">\(\psi: H \to G\)</span> 가 포함사상(inclusion map) <span class="math inline">\(\psi (h) = h\)</span> 이라면 <span class="math inline">\(\psi\)</span> 도 준동형사상이다.</p>
+</div>
+<p><br></p>
+<div id="prp-properties_of_homomorphism" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 10.1</strong></span> <span class="math inline">\(\varphi :G \to G'\)</span> 이 준동형사상일 때 다음이 성립한다.</p>
+<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(a_1,\ldots,\,a_k \in G\)</span> 에 대해 <span class="math inline">\(\varphi(a_1\cdots a_k) = \varphi(a_1)\cdots \varphi(a_k)\)</span> 이다.</p>
+<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\varphi(1_G)=1_{G'}\)</span> 이다.</p>
+<p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\varphi(a^{-1}) =  (\varphi(a))^{-1}\)</span> 이다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) 은 induction 으로 보일 수 있다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\varphi(1_G)= \varphi(1_G 1_G) = \varphi(1_G)\varphi(1_G)\)</span> 이므로 <span class="math inline">\(\varphi(1_G)=1_{G'}\)</span> 이다.</p>
+<p>(<span class="math inline">\(3\)</span>) <span class="math inline">\(1_{G'} = \varphi(1_G) = \varphi(aa^{-1}) = \varphi(a)\varphi(a^{-1})\)</span> 이므로 <span class="math inline">\(\varphi(a^{-1})=(\varphi(a))^{-1}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<div id="prp-kernel_and_images_of_group" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 10.2</strong></span> 준동형사상 <span class="math inline">\(\varphi : G\to G'\)</span> 에 대해 <span class="math inline">\(\ker \varphi\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군이며 <span class="math inline">\(\text{im}\, \varphi\)</span> 는 <span class="math inline">\(G'\)</span> 의 부분군이다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\ker \varphi \le G\)</span> 임을 보이자. <span class="math inline">\(a,\, b\in \ker \varphi\)</span> 이면 <span class="math inline">\(\varphi(ab)= \varphi (a)\varphi (b) = 1 \cdot 1 =1\)</span> 이므로 <span class="math inline">\(ab\in \ker \varphi\)</span> 이다. 즉 <span class="math inline">\(\ker \varphi\)</span> 는 연산에 대해 닫혀 있다.</p>
+<p><span class="math inline">\(1\in \ker \varphi\)</span> 이며 <span class="math inline">\(a\in \ker \varphi\)</span> 일 때 <span class="math inline">\(1 = \varphi (1)= \varphi (aa^{-1}) = \varphi(a) \varphi(a^{-1}) = \varphi(a^{-1})\)</span> 이므로 <span class="math inline">\(a^{-1}\in \ker \varphi\)</span> 이다. 따라서 <span class="math inline">\(\ker \varphi \le G\)</span> 이다.</p>
+<p>이제 <span class="math inline">\(\text{im}\, \varphi \le G'\)</span> 임을 보이자. <span class="math inline">\(x',\,y' \in \text{im}\,\varphi\)</span> 라면 어떤 <span class="math inline">\(x,\,y\in G\)</span> 에 대해 <span class="math inline">\(x'=\varphi (x),\, y'=\varphi (y)\)</span> 이다. <span class="math inline">\(\varphi(xy)=x'y' \in \text{im}\,\varphi\)</span> 이므로 <span class="math inline">\(\text{im}\,\varphi\)</span> 는 연산에 대해 닫혀 있다. <span class="math inline">\(\varphi(1_G)=1_{G'}\in \text{im}\,\varphi\)</span> 이다. <span class="math inline">\(x'\in \text{im}\,\varphi\)</span> 이면 어떤 <span class="math inline">\(x\in G\)</span> 에 대해 <span class="math inline">\(x'=\varphi(x)\)</span> 이며 <span class="math inline">\(\varphi(x^{-1})=(x')^{-1}\in \text{im}\,\varphi\)</span> 이므로 <span class="math inline">\(\text{im}\, \varphi \le G'\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+</section>
+<section id="연습문제" class="level3" data-number="10.1.2">
+<h3 data-number="10.1.2" class="anchored" data-anchor-id="연습문제"><span class="header-section-number">10.1.2</span> 연습문제</h3>
+<div id="exr-artin_2_5_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.1 (Artin 2.5.1)</strong></span> <span class="math inline">\(\varphi \in \text{Hom}\,(G,\,G')\)</span> 이 전사인 준동형사상이라고 하자. <span class="math inline">\(G\)</span> 가 순환군이면 <span class="math inline">\(G'\)</span> 도 순환군임을 보이시오. <span class="math inline">\(G\)</span> 가 아벨군이면 <span class="math inline">\(G'\)</span> 도 아벨군임을 보이시오.</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(G=\langle g\rangle\)</span> 이라 하자. <span class="math inline">\(\varphi\)</span> 가 전사이므로 임의의 <span class="math inline">\(y\in G'\)</span> 에 대해 <span class="math inline">\(\varphi (x)=y\)</span> 인 <span class="math inline">\(x\in G\)</span> 가 존재하며 <span class="math inline">\(G\)</span> 가 순환군이므로 어떤 자연수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(x=g^n\)</span> 이며 <span class="math inline">\(y = (\varphi (g))^n\)</span> 이다. 즉 <span class="math inline">\(G' = \langle \varphi(g) \rangle\)</span> 이다.</p>
+<p><span class="math inline">\(G\)</span> 가 아벨군이라 하자. 임의의 <span class="math inline">\(y_1,\,y_2\in G'\)</span> 에 대해 <span class="math inline">\(\varphi(x_1)=y_1,\, \varphi (x_2)=y_2\)</span> 를 만족하는 <span class="math inline">\(x_1,\,x_2\in G\)</span> 가 존재한다.</p>
+<p><span class="math display">\[
+y_1y_2 = \varphi (x_1x_2)=\varphi(x_2x_1)= y_2y_1
+\]</span></p>
+<p>이므로 <span class="math inline">\(G'\)</span> 은 아벨군이다.</p>
+</div>
+<p><br></p>
+<div id="exr-artin_2_5_3" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.2 (Artin 2.5.3)</strong></span> <span class="math inline">\(U\)</span> 는 <span class="math inline">\(A=\begin{bmatrix} a&amp; b \\ 0 &amp; d\end{bmatrix}\)</span> 꼴의 <span class="math inline">\(2\times 2\)</span> 가역행렬로 이루어진 군이며 <span class="math inline">\(\varphi : U \to \mathbb{R}^\times\)</span> 는 <span class="math inline">\(A \rightsquigarrow a^2\)</span> 인 함수이다. <span class="math inline">\(\varphi\)</span> 는 준동형사상임을 보이고 <span class="math inline">\(\ker \varphi\)</span> 와 <span class="math inline">\(\text{im}\,\varphi\)</span> 를 구하시오.</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(1_U = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1\end{bmatrix}\)</span> 이다. <span class="math inline">\(U\)</span> 가 군일 조건은 <span class="math inline">\(ad\ne 0\)</span> 이다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\varphi \left(\begin{bmatrix} a&amp; b \\ 0 &amp; d\end{bmatrix} \begin{bmatrix} a' &amp; b' \\ 0 &amp; d'\end{bmatrix}\right) &amp; = \varphi \left(\begin{bmatrix} aa' &amp; ab'+bd' \\ 0 &amp; dd'\end{bmatrix}\right) \\
+&amp;= (aa')^2 = a^2 a'^2 = \varphi \left(\begin{bmatrix} a&amp; b \\ 0 &amp; d\end{bmatrix}\right) \varphi \left( \begin{bmatrix} a' &amp; b' \\ 0 &amp; d'\end{bmatrix}\right)
+\end{aligned}
+\]</span></p>
+<p>이므로 <span class="math inline">\(\varphi\)</span> 는 준동형사상이다. 또한 <span class="math inline">\(\mathbb{R}^\times\)</span> 의 항등원은 <span class="math inline">\(1\)</span> 이므로</p>
+<p><span class="math display">\[
+\begin{aligned}
+\ker \varphi &amp;= \left\{ \begin{bmatrix} 1 &amp; b \\ 0 &amp; d\end{bmatrix} : b\in \mathbb{R},\, d\in \mathbb{R}-\{0\}\right\}, \\
+\text{im}\, \varphi &amp;= \{x\in \mathbb{R}: x&gt;0\}
+\end{aligned}
+\]</span></p>
+<p>이다.</p>
+</div>
+<p><br></p>
+<p><br></p>
+</section>
+</section>
+<section id="잉여류-cosets-와-라그랑쥬-정리" class="level2 page-columns page-full" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="잉여류-cosets-와-라그랑쥬-정리"><span class="header-section-number">10.2</span> 잉여류 (Cosets) 와 라그랑쥬 정리</h2>
+<section id="sec-cosets" class="level3 page-columns page-full" data-number="10.2.1">
+<h3 data-number="10.2.1" class="anchored" data-anchor-id="sec-cosets"><span class="header-section-number">10.2.1</span> 잉여류</h3>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-cosets" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 10.2 (잉여류)</strong></span> 군 <span class="math inline">\(G\)</span> 와 그 부분군 <span class="math inline">\(H\)</span>, 그리고 <span class="math inline">\(G\)</span> 의 원소 <span class="math inline">\(a\)</span> 에 대해</p>
+<p><span class="math display">\[
+aH = \{ah:h\in H\}
+\]</span></p>
+<p>를 <span class="math inline">\(G\)</span> 에서의 <span class="math inline">\(H\)</span> 의 <strong>왼쪽 잉여류 (left coset)</strong> 이라 한다. 또한,</p>
+<p><span class="math display">\[
+Ha = \{ha : h \in H\}
+\]</span></p>
+<p>를 <strong>오른쪽 잉여류 (right coset)</strong> 이라고 한다.</p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+<div class="no-row-height column-margin column-container"><span class="margin-aside callout-margin-content callout-margin-content-simple">앞으로 잉여류를 이용하여 여러가지를 증명하는데 교과서마다 왼쪽 잉여류를 주로 사용하기도 하고(Artin 등), 오른쪽 잉여류를 주로 사용하기도 한다(Herstein 등). 여기서는 특별히 방향을 지정하지 않았다면 잉여류라고 할 때 왼쪽 잉여류를 말한다.</span></div><p><br></p>
+<div id="prp-cosets" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 10.3</strong></span> <span class="math inline">\(H\le G\)</span> 이며 <span class="math inline">\(a,\,b\in G\)</span> 에 대해 다음 명제들은 동치이다.</p>
+<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(a^{-1}b \in H\)</span>,</p>
+<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(b\in aH\)</span>,</p>
+<p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(aH = bH\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) <span class="math inline">\(a^{-1}b=h\in H\)</span> 이면 <span class="math inline">\(b=ah \in aH\)</span>.</p>
+<p>(<span class="math inline">\(2 \implies 3\)</span>) <span class="math inline">\(h_1\in H\)</span> 에 대해 <span class="math inline">\(b=ah_1\)</span> 이면 <span class="math inline">\(bh=ah_1h \in aH\)</span> 이므로 <span class="math inline">\(bH\subset aH\)</span> 이다. <span class="math inline">\(ah=bh_1^{-1}h\in bH\)</span> 이므로 <span class="math inline">\(aH \subset bH\)</span> 이다. 즉 <span class="math inline">\(aH=bH\)</span> 이다.</p>
+<p>(<span class="math inline">\(3 \implies 1\)</span>) <span class="math inline">\(ah_1=bh_2\)</span> 이면 <span class="math inline">\(a^{-1}b=h_1h_2^{-1}\in H\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<div id="prp-kernel_and_image" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 10.4</strong></span> <span class="math inline">\(\varphi \in \text{Hom}(G, G')\)</span> 이며 <span class="math inline">\(K=\ker \varphi\)</span> 일 때 <span class="math inline">\(g \in \varphi^{-1}(\{g'\})\)</span> 이라면 <span class="math inline">\(\varphi^{-1}(\{g'\}) = gK\)</span> 이다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(k\in K\)</span> 이면 <span class="math inline">\(\varphi (gk)=\varphi(g)\varphi(k) = g\)</span> 이므로 <span class="math inline">\(gK \subset \varphi^{-1}(\{g'\})\)</span> 이다. <span class="math inline">\(x\in \varphi^{-1}(\{g'\})\)</span> 이면 <span class="math inline">\(\varphi (g^{-1}x) = \varphi(g^{-1})\varphi(x)=(g')^{-1}g=1_{G'}\)</span> 이므로 <span class="math inline">\(g^{-1}x \in \ker \varphi\)</span> 이다. <a href="#prp-cosets" class="quarto-xref">명제&nbsp;<span>10.3</span></a> 에 따라 <span class="math inline">\(x\in gK\)</span> 이므로 <span class="math inline">\(\varphi^{-1}(\{g'\}) \subset gK\)</span>. 따라서 <span class="math inline">\(gK = \varphi^{-1}(\{g'\})\)</span>. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<p>이로부터 다음 따름정리를 알 수 있다.</p>
+<div id="cor-cosets" class="theorem corollary">
+<p><span class="theorem-title"><strong>따름정리 10.1</strong></span> <span class="math inline">\(\varphi \in \text{Hom}\, (G,G')\)</span> 이 단사일 필요충분 조건은 <span class="math inline">\(\ker \varphi = \{1_G\}\)</span> 인 것이다.</p>
+</div>
+<p><br></p>
+</section>
+<section id="sec-lagrange_theorem" class="level3" data-number="10.2.2">
+<h3 data-number="10.2.2" class="anchored" data-anchor-id="sec-lagrange_theorem"><span class="header-section-number">10.2.2</span> 라그랑쥬 정리</h3>
+<div id="prp-properties_of_coset" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 10.5</strong></span> <span class="math inline">\(H\le G\)</span> 일 때 <span class="math inline">\(H\)</span> 의 두 왼쪽 잉여류는 같거나 교집합이 공집합이다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(a,\,b \in G\)</span> 에 대해 <span class="math inline">\(x\in aH \cap bH\)</span> 라 하자. 어떤 <span class="math inline">\(h_1,\,h_2\in H\)</span> 에 대해 <span class="math inline">\(x=ah_1=bh_2\)</span> 이며, 따라서 <span class="math inline">\(a^{-1}b=h_1h_2^{-1}\in H\)</span> 이므로 <a href="#prp-cosets" class="quarto-xref">명제&nbsp;<span>10.3</span></a> 에 따라 <span class="math inline">\(aH=bH\)</span> 이다.</p>
+</div>
+<p><br></p>
+<p>군 <span class="math inline">\(G\)</span> 의 왼쪽 잉여류의 집합을 생각하자. <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(g\in gH\)</span> 이므로 모든 <span class="math inline">\(G\)</span> 의 원소는 최소한 하나의 왼쪽 잉여류에 포함된다. 또한 <a href="#prp-properties_of_coset" class="quarto-xref">명제&nbsp;<span>10.5</span></a> 에 의해 두 잉여류는 같거나 그 교집합이 공집합이다. 이로부터 우리는 다음과 같은 결론을 얻는다.</p>
+<div id="prp-partiotion_by_cosets" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 10.6</strong></span> <span class="math inline">\(H\le G\)</span> 일 때 <span class="math inline">\(H\)</span> 에 의한 잉여류의 집합은 <span class="math inline">\(G\)</span> 를 분할한다.</p>
+</div>
+<p><br></p>
+<p>이제 각 잉여류의 크기에 대해 다음이 성립한다.</p>
+<div id="prp-order_of_cosets" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 10.7</strong></span> <span class="math inline">\(H\le G\)</span> 일 때 <span class="math inline">\(H\)</span> 에 의한 두 잉여류 사이에 전단사 함수가 존재한다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>함수 <span class="math inline">\(f:aH \to bH\)</span> 를 <span class="math inline">\(f(x) = ba^{-1}x\)</span> 로 정의하자. <span class="math inline">\(bh\in bH\)</span> 에 대해 <span class="math inline">\(f(ah)=bh\)</span> 이므로 <span class="math inline">\(f\)</span> 는 전사이다. <span class="math inline">\(ba^{-1}x_1 = ba^{-1}x_2\)</span> 이면 제거규칙에 의해 <span class="math inline">\(x_1=x_2\)</span> 이므로 <span class="math inline">\(f\)</span> 는 단사이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<p><span class="math inline">\(H\le G\)</span> 라면 <span class="math inline">\(G\)</span> 는 <span class="math inline">\(H\)</span> 의 잉여류의 집합으로 분할 할 수 있으며, <span class="math inline">\(H\)</span> 의 잉여류 사이에는 일대일 대응관계가 존재하기 때문에 <span class="math inline">\(G\)</span> 가 유한군이라면 <span class="math inline">\(|G|/|H|\)</span> 는 <span class="math inline">\(H\)</span> 의 서로 다른 잉여류의 갯수가 된다. 이 때 <span class="math inline">\(|G|/|H|\)</span> 를 <span class="math inline">\(G\)</span> 에서의 <span class="math inline">\(H\)</span> 의 <strong>인덱스(index)</strong> 라고 하고 <span class="math inline">\([G:H]\)</span> 라고 쓴다. 우리는 이로부터 다음과 같은 중요한 결론을 얻는다.</p>
+<p><br></p>
+<div id="thm-lagrange_theorem_for_subgrous" class="theorem">
+<p><span class="theorem-title"><strong>정리 10.1 (라그랑쥬 정리)</strong></span> 유한군 <span class="math inline">\(G\)</span> 에 대해 <span class="math inline">\(H \le G\)</span> 일 때 <span class="math inline">\(|H|\)</span> 는 <span class="math inline">\(|G|\)</span> 를 나눈다.</p>
+</div>
+<p><br></p>
+<div id="cor-order_of_group_element" class="theorem corollary">
+<p><span class="theorem-title"><strong>따름정리 10.2</strong></span> 유한군 <span class="math inline">\(G\)</span> 에 대해 <span class="math inline">\(g\in G\)</span> 일 때 <span class="math inline">\(o(g)\)</span> 는 <span class="math inline">\(|G|\)</span> 를 나눈다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(o(g) = |\langle g \rangle |\)</span> 이며 <span class="math inline">\(\langle g\rangle \le G\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<div id="cor-prime_order_group" class="theorem corollary">
+<p><span class="theorem-title"><strong>따름정리 10.3</strong></span> 군 <span class="math inline">\(G\)</span> 의 order 가 소수 <span class="math inline">\(p\)</span> 이면 <span class="math inline">\(G\)</span> 는 항등원이 아닌 <span class="math inline">\(g\in G\)</span> 에 의해 생성되는 순환군이다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(|G|=p\)</span> 가 소수이면 <span class="math inline">\(|G|\)</span> 의 진부분군이 존재하지 않는다. 따라서 <span class="math inline">\(G\)</span> 는 계수가 <span class="math inline">\(p\)</span> 인 <span class="math inline">\(g\in G\)</span> 에 의한 순환군인데 <span class="math inline">\(o(g)\)</span> 가 소수이면 <span class="math inline">\(\langle g\rangle\)</span> <span class="math inline">\(1_G\)</span> 가 아닌 모든 원소의 계수도 <span class="math inline">\(p\)</span> 이다. 따라서 <span class="math inline">\(1_G\)</span> 가 아닌 <span class="math inline">\(g\in G\)</span> 에 의한 순환군이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<div id="thm-orders_in_group_homomorphism" class="theorem">
+<p><span class="theorem-title"><strong>정리 10.2</strong></span> 유한군 <span class="math inline">\(G,\,G'\)</span> 에 대해 <span class="math inline">\(\varphi \in \text{Hom}\,(G,G')\)</span> 일 때 다음이 성립한다.</p>
+<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(|G| = |\ker \varphi| \cdot | \text{im}\, \varphi|\)</span>,</p>
+<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(|\text{im}(\varphi)|\)</span> 는 <span class="math inline">\(|G'|\)</span> 을 나눈다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <a href="#prp-kernel_and_image" class="quarto-xref">명제&nbsp;<span>10.4</span></a> 와 라그랑쥬 정리(<a href="#thm-lagrange_theorem_for_subgrous" class="quarto-xref">정리&nbsp;<span>10.1</span></a>) 를 보라.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\text{im}(\varphi) \le G'\)</span> 이므로 자명하다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<div id="prp-multiplicative_properties_of_the_index" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 10.8</strong></span> 유한군 <span class="math inline">\(G\)</span> 에 대해 <span class="math inline">\(K \le H \le G\)</span> 일 때 <span class="math inline">\([G:K]=[G:H][H:K]\)</span> 이다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>trivial.</p>
+</div>
+<p><br></p>
+</section>
+<section id="연습문제-1" class="level3" data-number="10.2.3">
+<h3 data-number="10.2.3" class="anchored" data-anchor-id="연습문제-1"><span class="header-section-number">10.2.3</span> 연습문제</h3>
+<div id="exr-artin_2_8_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.3 (Artin 2.8.2)</strong></span> <span class="math inline">\(\mathbb{R}^m\)</span> 과 이 집합에서의 덧셈을 생각하면 <span class="math inline">\(\mathbb{R}^m\)</span> 은 군이다. <span class="math inline">\(W\)</span> 을 homogeneous 한 선형방정식 <span class="math inline">\(Ax=0\)</span> 의 근의 집합이라고 하자. Inhomogeneous 한 선형 시스템 <span class="math inline">\(Ax=b\)</span> 의 해는 공집합이거나 <span class="math inline">\(W\)</span> 의 (덧셈 연산에 대한) cosets 임을 보이시오.</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(Ax=b\)</span> 의 해의 집합 <span class="math inline">\(V \ne \varnothing\)</span> 이라 하자. <span class="math inline">\(y\in V\)</span> 라면 각각의 <span class="math inline">\(x\in W\)</span> 에 대해 <span class="math inline">\(A(x+y)=b\)</span> 이므로 <span class="math inline">\(x+y\in V\)</span> 이다. 즉 <span class="math inline">\(W+y \subset V\)</span> 이다. 임의의 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(A(v-y)=0\)</span> 이므로 <span class="math inline">\(v-y\in W\)</span> 이다. 따라서 <span class="math inline">\(V\subset W+y\)</span> 이므로 <span class="math inline">\(W+y = V\)</span> 이다.</p>
+</div>
+<p><br></p>
+<div id="exr-artin_2_8_3" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.4 (Artin 2.8.3)</strong></span> Order 가 소수 <span class="math inline">\(p\)</span> 의 승수인 군은 order 가 <span class="math inline">\(p\)</span> 인 원소를 포함하는가?</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(|G|=p^m\)</span> 이라 하자. <span class="math inline">\(1_G\)</span> 가 아닌 <span class="math inline">\(G\)</span> 의 원소 <span class="math inline">\(g\)</span> 를 선택한다. <span class="math inline">\(o(g) = p^n\)</span> 이라면 <span class="math inline">\(o\left(g^{p^{n-1}}\right) = p\)</span> 이다.</p>
+</div>
+<p><br></p>
+<div id="exr-artin_2_8_4" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.5 (Artin 2.8.4)</strong></span> Order 35 인 군은 order 5 나 order 7 원소를 포함하는가?</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(|G|=35\)</span> 이며 순환군이라면, 즉 <span class="math inline">\(G=\langle g \rangle\)</span> 이라면 <span class="math inline">\(o(g^5)=7\)</span>, <span class="math inline">\(o(g^7)=5\)</span> 이다. 이제 순환군이 아닌 order 35 군을 생각하자. <span class="math inline">\(G\)</span> 의 항등원이 아닌 모든 원소는 order 가 5 이거나 7이다.</p>
+</div>
+<p><br></p>
+<div id="exr-artin_2_8_6" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.6 (Artin 2.8.6)</strong></span> <span class="math inline">\(\varphi \in \text{Hom}(G,\,G')\)</span> 이며 <span class="math inline">\(|G|=18\)</span>, <span class="math inline">\(|G'|=15\)</span> 이다. <span class="math inline">\(\phi\)</span> 가 trivial homomorphism 이 아닐 때 <span class="math inline">\(\ker \varphi\)</span> 의 order 는 무엇인가?</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(|G|=|\ker \varphi| |\text{im}\, \varphi |\)</span> 이며 <span class="math inline">\(|\text{im}\, \varphi |{\large \mid} |G'|\)</span> 이므로 <span class="math inline">\(\ker \varphi|\)</span> 가 될 수 있는 수는 <span class="math inline">\(6\)</span> 뿐이다.</p>
+</div>
+<p><br></p>
+<div id="exr-artin_2_8_7" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.7 (Artin 2.8.7)</strong></span> 군 <span class="math inline">\(G\)</span> 에 대해 <span class="math inline">\(|G|=22\)</span> 이며 <span class="math inline">\(x,\,y\in G\)</span> 에 대해 <span class="math inline">\(x \ne 1_G\)</span> 이며 <span class="math inline">\(y\)</span> 는 power of <span class="math inline">\(x\)</span> 가 아니라고 하자. <span class="math inline">\(x\)</span> 와 <span class="math inline">\(y\)</span> 에 의해 생성되는 군은 <span class="math inline">\(G\)</span> 임을 보여라.</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(o(x)\)</span> 는 2, 11, 22 중의 하나이다. <span class="math inline">\(o(x)=22\)</span> 라면 <span class="math inline">\(y\in \langle x\rangle\)</span> 이므로 가정에 모순된다. <span class="math inline">\(H\)</span> fmf <span class="math inline">\(x\)</span> 에 의해 생성되는 부분군이라고 하고 <span class="math inline">\(I\)</span> 를 <span class="math inline">\(x\)</span> 와 <span class="math inline">\(y\)</span> 에 의해 생성되는 부분군이라고 하자. <span class="math inline">\(H \le I \le G\)</span> 이며 <span class="math inline">\(|H|&lt;|I|\le |G|\)</span> 이다. <span class="math inline">\(|H|=2\)</span> 이면 <span class="math inline">\(|I|=22\)</span> 만 가능하며 <span class="math inline">\(|H|=11\)</span> 이어도 <span class="math inline">\(|I|=22\)</span> 만 가능하다.</p>
+</div>
+<p><br></p>
+<div id="exr-artin_2_8_9" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.8 (Artin 2.8.9)</strong></span> <span class="math inline">\(|G|\)</span> 가 유한군이며 함수 <span class="math inline">\(\phi : G \to G\)</span> 가 <span class="math inline">\(\phi(x)=x^2\)</span> 로 정의되었을 때 <span class="math inline">\(\phi\)</span> 가 자기동형사상일 조건은 무엇인가?</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(x,\,y\in G\)</span> 에 대해 <span class="math inline">\(\phi(xy)=xyxy\)</span> 이며 <span class="math inline">\(\phi(x)\phi(y)=x^2y^2\)</span> 이므로 <span class="math inline">\(G\)</span> 는 아벨군일 때 <span class="math inline">\(\phi\)</span> 가 준동형 사상이다. <span class="math inline">\(o(x)=2m\)</span> 이라면 <span class="math inline">\(o(x^m)=2\)</span> 이므로 <span class="math inline">\(G\)</span> 는 계수가 짝수인 원소를 가지면 안된다. 즉 <span class="math inline">\(G\)</span> 는 order 가 홀수인 아벨군이다.</p>
+<p><span class="math inline">\(|G|\)</span> 가 홀수이며 아벨군이라고 하자. <span class="math inline">\(x^2=1_G\)</span> 를 만족하는 <span class="math inline">\(x\)</span> 는 <span class="math inline">\(1_G\)</span> 뿐이므로 단사이다. 따라서 <span class="math inline">\(\phi\)</span> 는 자기동형사상이다.</p>
+</div>
+<p><br></p>
+<div id="exr-artin_2_8_11" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.9</strong></span> <span class="math inline">\(G\)</span> 와 <span class="math inline">\(H\)</span> 는 아래와 같이 정의되는 <span class="math inline">\(GL_2(\mathbb{R})\)</span> 의 부분군이다.</p>
+<p><span class="math display">\[
+G = \left\{ \begin{bmatrix} x &amp; y \\ 0 &amp; 1 \end{bmatrix} : x&gt;0 \right\}, \qquad H = \left\{ \begin{bmatrix} x &amp; 0 \\ 0 &amp; 1 \end{bmatrix} : x&gt;0 \right\}
+\]</span></p>
+<p><span class="math inline">\(G\)</span> 는 <span class="math inline">\(xy\)</span> 좌표평면상에서 <span class="math inline">\(x&gt;0\)</span> 인 반평면의 원소로 표현 될 수 있다. <span class="math inline">\(H\)</span> 의 왼쪽 잉여류와 오른쪽 잉여류가 이 반평면을 어떻게 분할하는지 설명하라.</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(H\)</span> 는 반평면상의 <span class="math inline">\(x\)</span> 축 에 포함되는 원소라고 볼 수 있다. <span class="math inline">\(\begin{bmatrix} x' &amp; y' \\ 0 &amp; 1 \end{bmatrix}\in G\)</span> 에 대해 <span class="math display">\[
+\begin{aligned}
+\begin{bmatrix} x' &amp; y' \\ 0 &amp; 1 \end{bmatrix} \begin{bmatrix} x &amp; 0 \\ 0 &amp; 1 \end{bmatrix}  &amp;= \begin {bmatrix} xx' &amp; y' \\ 0 &amp; 1 \end{bmatrix} \\
+\begin{bmatrix} x &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\begin{bmatrix} x' &amp; y' \\ 0 &amp; 1 \end{bmatrix} &amp;=\begin{bmatrix} xx' &amp; xy' \\ 0 &amp; 1\end{bmatrix}
+\end{aligned}
+\]</span></p>
+<p>이다. <span class="math inline">\(H\)</span> 에 대한 왼쪽 잉여류는 <span class="math inline">\(x\)</span> 축상의 점 즉 <span class="math inline">\(y=0\)</span> 상의 점을 <span class="math inline">\(y=y'\)</span> 상의 점으로 이동시킨다. <span class="math inline">\(H\)</span> 에 대한 오른쪽 잉여류는 원점을 지나며 기울기가 <span class="math inline">\(x'/y'\)</span> 인 직선으로 이동시킨다.</p>
+</div>
+<p><br></p>
+<div id="exr-artin_2_8_12" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.10 (Artin 2.8.12)</strong></span> <span class="math inline">\(S\)</span> 가 군 <span class="math inline">\(G\)</span> 의 부분집합이며 <span class="math inline">\(1_G\in S\)</span> 이고 <span class="math inline">\(S\)</span> 에 대한 왼쪽 잉여류의 집합 <span class="math inline">\(\{aS: a\in G\}\)</span> 가 <span class="math inline">\(G\)</span> 를 분할한다면 <span class="math inline">\(S\)</span> 가 <span class="math inline">\(G\)</span> 의 부분군임을 보여라.</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(x\in S\)</span> 이지만 <span class="math inline">\(x^{-1}\not\in S\)</span> 라고 하자. <span class="math inline">\(1_G \in S\)</span> 이므로 <span class="math inline">\(x^{-1}\in x^{-1}S\)</span> 인데 <span class="math inline">\(x\in S\)</span> 이므로 <span class="math inline">\(1_G\in x^{-1}S\)</span> 이며 이는 왼쪽 잉여류의 집합이 <span class="math inline">\(G\)</span> 를 분할한다는 가정에 위배된다. 따라서 <span class="math inline">\(x\in S\implies x^{-1}\in S\)</span> 이다.</p>
+<p><span class="math inline">\(x,\,y\in S\)</span> 이지만 <span class="math inline">\(xy\not\in S\)</span> 라면 <span class="math inline">\(xy\in (xy)S\)</span> 이다. 그런데 <span class="math inline">\(y^{-1}\in S\)</span> 이므로 <span class="math inline">\(x\in (xy)S\)</span> 이므로 가정에 위배된다. 따라서 <span class="math inline">\(S\)</span> 는 연산에 대해 닫혀 있다. 따라서 <span class="math inline">\(S\le G\)</span> 이다.</p>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="동형사상" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="동형사상"><span class="header-section-number">10.3</span> 동형사상</h2>
+<section id="sec-group_isomorphism" class="level3" data-number="10.3.1">
+<h3 data-number="10.3.1" class="anchored" data-anchor-id="sec-group_isomorphism"><span class="header-section-number">10.3.1</span> 동형사상</h3>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-isomorphism_in_group" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 10.3 (동형사상)</strong></span> 군 <span class="math inline">\(G,\,G'\)</span> 에 대해 <span class="math inline">\(\varphi \in \text{Hom}\, (G,\,G')\)</span> 이 전단사일 때 <span class="math inline">\(\varphi\)</span> 를 <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(G'\)</span> 으로의 <strong>동형사상(isomorphism)</strong> 이라고 한다. <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(G'\)</span> 으로의 동형사상의 집합을 <span class="math inline">\(\text{Iso}\, (G,\,G')\)</span> 로 표기한다. 두 군 <span class="math inline">\(G,\,G'\)</span> 사이에 동형사상이 존재하면 <span class="math inline">\(G\)</span> 와 <span class="math inline">\(G'\)</span> 이 <strong>동형(isomorphic)</strong> 이라고 하며 <span class="math inline">\(G \cong G'\)</span> 이라고 쓴다.</p>
+<p>자기 자신으로의 동형사상을 <strong>자기동형사상(Automorphism)</strong> 이라고 하며 <span class="math inline">\(G\)</span> 에서의 자기동형사상의 집합을 <span class="math inline">\(\text{Aut}\,(G)\)</span> 로 표기한다.</p>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<div id="prp-inverse_of_isomorphism" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 10.9</strong></span> <span class="math inline">\(\varphi \in \text{Iso}(G,G')\)</span> 이면 그 역함수 <span class="math inline">\(\varphi^{-1}\)</span> 에 대해 <span class="math inline">\(\varphi^{-1} \in \text{Iso}(G',G)\)</span> 이다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\varphi^{-1}\)</span> 이 <span class="math inline">\(G'\)</span> 에서 <span class="math inline">\(G\)</span> 로의 전단사 함수이므로 <span class="math inline">\(\varphi^{-1}\in \text{Hom}(G',G)\)</span> 라는 것만 보이면 된다. <span class="math inline">\(x'=\varphi(x),\, y'=\varphi(y)\)</span> 라고 하자. <span class="math inline">\(\varphi(xy)=x'y'\)</span> 이므로 <span class="math inline">\(\varphi^{-1}(x'y')= xy= \varphi^{-1}(x)\varphi^{-1}(y)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<div id="prp-conjugation_automorphism" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 10.10</strong></span> 군 <span class="math inline">\(G\)</span> 에서 임의의 정해진 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(\varphi (x) = gxg^{-1}\)</span> 를 <strong>conjugation by <span class="math inline">\(g\)</span></strong> 라고 한다. 이 때 <span class="math inline">\(\varphi (x)\)</span> 는 자기동형사상이다.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\phi(xy) = gxyg^{-1}= (gxg^{-1})(gyg^{-1})=\phi(x)\phi(y)\)</span> 이므로 <span class="math inline">\(\phi\in \text{Hom}\,(G)\)</span> 이다. 임의의 <span class="math inline">\(y\in G\)</span> 에 대해 <span class="math inline">\(\varphi(g^{-1}yg)= y\)</span> 이므로 <span class="math inline">\(\varphi\)</span> 는 전사이다. 제거규칙에 의해 <span class="math inline">\(gxg^{-1}=gyg^{-1}\)</span> 이면 <span class="math inline">\(x=y\)</span> 이므로 <span class="math inline">\(\varphi\)</span> 는 단사이다. 따라서 <span class="math inline">\(\varphi \in \text{Aut}\, (G)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+</section>
+<section id="연습문제-2" class="level3" data-number="10.3.2">
+<h3 data-number="10.3.2" class="anchored" data-anchor-id="연습문제-2"><span class="header-section-number">10.3.2</span> 연습문제</h3>
+<div id="exr-artin_2_6_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.11 (Artin 2.6.2)</strong></span> <span class="math inline">\(\text{Hom}(\mathbb{Z}^{+})\)</span> 를 기술하시오. 각 준동형사상의 전사, 단사, 전단사 여부를 정하시오.</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\varphi \in \text{Hom}(\mathbb{Z}^+)\)</span> 이면 <span class="math inline">\(\varphi (a+b)=\varphi (a)+ \varphi(b)\)</span> 이므로 선형 함수이어야 한다. 즉 어떤 정수 <span class="math inline">\(a\in \mathbb{Z}\)</span> 에 대해 <span class="math inline">\(\varphi (x) = ax\)</span> 이다. <span class="math inline">\(a=1\)</span> 이면 전단사이며 <span class="math inline">\(a=0\)</span> 이면 상수함수, 나머지는 단사함수이다.</p>
+</div>
+<p><br></p>
+<div id="exr-artin_2_6_7" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.12 (Artin 2.6.7)</strong></span> <span class="math inline">\(H \le G\)</span> 일 때 정해진 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gHg^{-1}= \{ghg^{-1}: h\in H\}\)</span> 을 <strong>conjugate subgroup</strong> 이라고 한다. <span class="math inline">\(gHg^{-1}\le G\)</span> 임을 보이시오.</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(h_1,\,h_2\in H\)</span> 에 대해 <span class="math inline">\((gh_1g^{-1})(gh_2g^{-1})= gh_1h_2g^{-1}\in gHg^{-1}\)</span> 이므로 <span class="math inline">\(gHg^{-1}\)</span> 은 연산에 닫혀 있다. <span class="math inline">\(g1g^{-1}=1\in gHg^{-1}\)</span> 이며 <span class="math inline">\(h\in H\)</span> 에 대해 <span class="math inline">\((ghg^{-1})^{-1}= gh^{-1}g^{-1}\in gHg^{-1}\)</span> 이다. 따라서 <span class="math inline">\(gHg^{-1}\le G\)</span> 이다.</p>
+</div>
+<p><br></p>
+<div id="exr-artin_2_6_8" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.13 (Artin 2.6.8)</strong></span> <span class="math inline">\(\phi : GL_n(\mathbb{R}) \to GL_n(\mathbb{R})\)</span> 이 <span class="math inline">\(\phi (A) = (A^T)^{-1}\)</span> 로 정의될 때 <span class="math inline">\(\phi\)</span> 가 자기동형사상임을 보이시오.</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\phi(AB)= ((AB)^T)^{-1}=(B^TA^T)^{-1} = (A^T)^{-1}(B^T)^{-1}=\phi(A) \phi(B)\)</span> 이므로 <span class="math inline">\(\phi\)</span> 는 준동형사상이다. <span class="math inline">\(\phi(A)=\phi(B)\)</span> 이면 <span class="math inline">\((A^T)^{-1}= (B^T)^{-1}\)</span> 이며 <span class="math inline">\(A=B\)</span> 이므로 단사이다. 임의의 <span class="math inline">\(B\in GL_n(\mathbb{R})\)</span> 에 대해 <span class="math inline">\(B^T(B^{-1})^T = (B^{-1}B)^T = I_n\)</span> 이므로 <span class="math inline">\((B^{-1})^T = (B^T)^{-1}\)</span> 이다. 따라서, <span class="math inline">\(\phi ((B^T)^{-1}) = (((B^{-1})^T)^T)^{-1}=B\)</span> 이므로 <span class="math inline">\(\phi\)</span> 는 전사이다. 따라서 <span class="math inline">\(\phi \in \text{Aut}(GL_n(\mathbb{R}))\)</span> 이다.</p>
+</div>
+<p><br></p>
+<div id="exr-artin_2_6_9" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.14 (Artin 2.6.9)</strong></span> 군 <span class="math inline">\(G\)</span> 와 opposite group (<a href="ch2_01_groups.html#exr-artin_2_2_6" class="quarto-xref">연습문제&nbsp;<span>9.10</span></a>) <span class="math inline">\(G^\circ\)</span> 은 동형임을 보여라</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\phi\in \text{Hom}(G,\,G^\circ)\)</span> 를 <span class="math inline">\(\phi (g)=g^{-1}\)</span> 로 정의하자. <span class="math inline">\(\phi\)</span> 는 전사이며, <span class="math inline">\(g_1,\,g_2\in G\)</span> 에 대해</p>
+<p><span class="math display">\[
+\begin{aligned}
+\phi(g_1g_2) &amp;= (g_1g_2)^{-1} = g_2^{-1}g_1^{-1}= g_1^{-1}\ast g_2^{-1},\\
+\phi(g_1)\ast \phi(g_2) &amp;= g_1^{-1} \ast g_2^{-1}
+\end{aligned}
+\]</span></p>
+<p>이며 <span class="math inline">\(\ker \phi = 1_G\)</span> 이므로 동형이다.</p>
+</div>
+<p><br></p>
+<div id="exr-artin_2_6_10" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.15 (Artin 2.6.10)</strong></span> 모든 자기동형사상을 찾으시오.</p>
+<p>  (<span class="math inline">\(1\)</span>) order 가 10 인 순환군,</p>
+<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(S_3\)</span></p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>우선 다음을 보이자.</p>
+<blockquote class="blockquote">
+<p><strong>명제 1</strong> <span class="math inline">\(\phi \in \text{Aut}(G)\)</span> 일 때 모든 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(o(g)=n\)</span> 이라면 <span class="math inline">\(o(\phi(g))=n\)</span> 이어야 한다</p>
+</blockquote>
+<p><span class="math inline">\(g^n=1_G\)</span> 이므로 <span class="math inline">\(\phi (g^n)=1_G\)</span> 이다. 따라서 <span class="math inline">\(o(\phi (g)) \mid n\)</span> 이어야 한다. <span class="math inline">\(m=o(\phi(g))&lt;n\)</span> 이면 <span class="math inline">\(g^m\ne 1_G\)</span> 에 대해 <span class="math inline">\(\phi(g^m)=1_G\)</span> 이므로 <span class="math inline">\(\phi\)</span> 는 단사가 아니게 된다. 따라서 <span class="math inline">\(o(g) = o(\phi(g))\)</span> 이다.</p>
+<p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(o(g)=10,\, G=\langle g\rangle\)</span> 이라 하자. <span class="math inline">\(\phi \in \text{Hom}(G)\)</span> 라 하자. <span class="math inline">\(0 \le k &lt; 10\)</span> 인 양의 정수 <span class="math inline">\(k\)</span> 에 대해 <span class="math inline">\(\phi (g)=g^k\)</span> 라면</p>
+<p><span class="math display">\[
+\phi (g^m g^n) = g^{(m+n)k}= g^{mk}g^{nk} = \phi(g^m)\phi(g^n)
+\]</span></p>
+<p>이므로 준동형 사상이 정해진다. 앞의 명제에 따라 <span class="math inline">\(\phi(g)\)</span> 가 <span class="math inline">\(g^2,\, g^4,\, g^5,\, g^6,\, g^8\)</span> 이면 앞의 명제에 따라 자기동형사상이 아니다. 남은 가능성은 <span class="math inline">\(\phi(g)\)</span> 가 <span class="math inline">\(g,\,g^3,\,g^7,\,g^9\)</span> 일 때 이다. 즉 10 과 서로소인 <span class="math inline">\(k\)</span> 에 대해 <span class="math inline">\(\phi (g) = g^k\)</span> 일 때 이다. <span class="math inline">\(\phi(g^x) = \phi(g^y)\)</span> 이면 <span class="math inline">\(xk \equiv yk\;(\text{mod}\,10)\)</span> 이므로 <a href="ch2_01_groups.html#prp-modula" class="quarto-xref">명제&nbsp;<span>9.5</span></a> 의 (<span class="math inline">\(4\)</span>) 에서 보였듯이 <span class="math inline">\(x\equiv y\;(\text{mod}\,10)\)</span> 이므로 <span class="math inline">\(\phi\)</span> 는 단사이다. 즉 <span class="math inline">\(\phi\)</span> 는 자기동형사상이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(S_3 = \{1,\,x,\,x^2,\,y,\,xy,\,x^2y\}\)</span>, <span class="math inline">\(x^3=y^2=1\)</span>, <span class="math inline">\(x^2y=yx\)</span> 이다. <span class="math inline">\(o(xy)=o(x^2y)=2\)</span> 이다.</p>
+<p>따라서 <span class="math inline">\(\phi(x)\)</span> 는 <span class="math inline">\(x\)</span> 이거나 <span class="math inline">\(x^2\)</span> 일 수 밖에 없으며, <span class="math inline">\(\phi(y)\)</span> 는 <span class="math inline">\(y\)</span>, <span class="math inline">\(xy\)</span>, <span class="math inline">\(x^2y\)</span> 일 수 있다. 이 여섯가지 경우가 모두 자기동형사상임을 보일 수 있다.</p>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="연습문제-3" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="연습문제-3"><span class="header-section-number">10.4</span> 연습문제</h2>
+<div id="exr-euler_fermat" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 10.16</strong></span> 양의 정수 <span class="math inline">\(n\)</span> 에 대해 오일러-<span class="math inline">\(\phi\)</span> 함수 <span class="math inline">\(\phi(n)\)</span> 은 <span class="math inline">\(\phi(1)=\)</span> 이며 <span class="math inline">\(n\ge 2\)</span> 일 때 <span class="math inline">\(n\)</span> 보다 작은 양의 정수 가운데 <span class="math inline">\(n\)</span> 과 서로소인 양의 정수의 갯수이다.</p>
+<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\gcd(n, a)=1\)</span> 일 때 <span class="math inline">\(a^{\phi(n)} \equiv 1\;(\text{mod}\; n)\)</span> 임을 보여라.</p>
+<p>  (<span class="math inline">\(2\)</span>) (<strong>페르마의 소정리</strong>) <span class="math inline">\(p\)</span> 가 소수이고 <span class="math inline">\(a\)</span> 가 정수일 때 <span class="math inline">\(a^p \equiv a\;(\text{mod}\;p)\)</span> 임을 보여라.</p>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <a href="ch2_01_groups.html#exr-herstein_2_3_15" class="quarto-xref">연습문제&nbsp;<span>9.8</span></a> 의 (<span class="math inline">\(2\)</span>) 에 따라 <span class="math inline">\(K_n = \{[m]: \gcd (m, n)=1\}\)</span> 은 곱셈 연산에 대한 군이다. 이며 <span class="math inline">\(|K_n|=\phi(n)\)</span> 이다. <span class="math inline">\([a]\in K_n\)</span> 이므로 <span class="math inline">\([a]^{\phi(n)} = [1]\)</span> 이며, 따라서 <span class="math inline">\(a^{(\phi(n))} \equiv 1 \;(\text{mod}\; n)\)</span> 이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\phi(p)=p-1\)</span> 이므로 <span class="math inline">\(a^{p-1} \equiv 1\;(\text{mod}\; p)\)</span> 이다. 따라서 <span class="math inline">\(a^p \equiv p\;(\text{mod}\;p)\)</span> 이다.</p>
+</div>
+<p><br></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../src/part2/ch2_01_groups.html" class="pagination-link" aria-label="군의 기초">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군의 기초</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../src/part2/ch2_03_normal_subgroup.html" class="pagination-link" aria-label="정규부분군과 몫군">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">정규부분군과 몫군</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

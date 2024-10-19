@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir : docs
 
 book:
   title: "대수학"
@@ -10,37 +11,37 @@ book:
   
   chapters:
     - index.qmd
-    - part: docs/part1/part1.qmd
+    - part: src/part1/part1.qmd
       chapters:
-        - docs/part1/ch1_01_vectorspace.qmd
-        - docs/part1/ch1_02_linear_map.qmd
-        - docs/part1/ch1_03_determinant.qmd
-        # - docs/part1/ch1_04_gauss_jordan_elimination.qmd
-        # - docs/part1/ch1_05_matrix.qmd
-        - docs/part1/ch1_06_eigenvalue.qmd
-        - docs/part1/ch1_07_innerproduct.qmd
-        - docs/part1/ch1_08_operators_on_innerproduct_space.qmd
-        - docs/part1/ch1_09_spectrum_theorem.qmd
-        - docs/part1/ch1_10_svd.qmd
-    - part: docs/part2/part2.qmd
+        - src/part1/ch1_01_vectorspace.qmd
+        - src/part1/ch1_02_linear_map.qmd
+        - src/part1/ch1_03_determinant.qmd
+        # - src/part1/ch1_04_gauss_jordan_elimination.qmd
+        # - src/part1/ch1_05_matrix.qmd
+        - src/part1/ch1_06_eigenvalue.qmd
+        - src/part1/ch1_07_innerproduct.qmd
+        - src/part1/ch1_08_operators_on_innerproduct_space.qmd
+        - src/part1/ch1_09_spectrum_theorem.qmd
+        - src/part1/ch1_10_svd.qmd
+    - part: src/part2/part2.qmd
       chapters: 
-        - docs/part2/ch2_01_groups.qmd
-        - docs/part2/ch2_02_homomorphisms.qmd
-        - docs/part2/ch2_03_normal_subgroup.qmd
-        - docs/part2/ch2_04_symmetry.qmd
-    - part: docs/part3/part3.qmd
+        - src/part2/ch2_01_groups.qmd
+        - src/part2/ch2_02_homomorphisms.qmd
+        - src/part2/ch2_03_normal_subgroup.qmd
+        - src/part2/ch2_04_symmetry.qmd
+    - part: src/part3/part3.qmd
       chapters:
-        - docs/part3/quotient_space.qmd
-        - docs/part3/dual_space.qmd
-        - docs/part3/bilinear_form.qmd
-        - docs/part3/laplacian_form_of_determinant.qmd
-        - docs/part3/generalized_inverse.qmd
-        - docs/part3/characteristic_polynomial.qmd
-        - docs/part3/generalized_eigenspace.qmd
+        - src/part3/quotient_space.qmd
+        - src/part3/dual_space.qmd
+        - src/part3/bilinear_form.qmd
+        - src/part3/laplacian_form_of_determinant.qmd
+        - src/part3/generalized_inverse.qmd
+        - src/part3/characteristic_polynomial.qmd
+        - src/part3/generalized_eigenspace.qmd
 
 
-        - docs/part3/tensor_product.qmd
-        # - docs/part3/jordan_form.qmd
+        - src/part3/tensor_product.qmd
+        # - src/part3/jordan_form.qmd
     - summary.qmd
     - references.qmd
 
