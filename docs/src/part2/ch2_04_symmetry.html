@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>대수학 - 12&nbsp; Symmetry</title>
+<title>12&nbsp; Symmetry – 대수학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -127,13 +127,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part2/part2.html">II. 군 (Groups)</a></li><li class="breadcrumb-item"><a href="../../src/part2/ch2_04_symmetry.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Symmetry</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -165,7 +165,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part1/part1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -224,7 +224,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part2/part2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">II. 군 (Groups)</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -259,7 +259,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part3/part3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">III. 심화 선형대수학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -399,11 +399,15 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-composition_of_isometries" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 12.1</strong></span> <span class="math inline">\(f,\,g\)</span> 가 <span class="math inline">\(\mathbb{R}^n\)</span> 에서 정의된 isometry 일 때 <span class="math inline">\(f \circ g\)</span> 도 isometry 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\|f(g(x))-f(g(y))\| = \|g(x)-g(y)\| = \|x-y\|\)</span>.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\|f(g(x))-f(g(y))\| = \|g(x)-g(y)\| = \|x-y\|\)</span>. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>거리공간에 대해서는 특히 해석학에서 많이 다루었을 것이다. 여기서는 거리공간중에 유클리드 공간 <span class="math inline">\(\mathbb{R}^n\)</span> 을 중점적으로 다룬다. 유클리드 공간은 <span class="math inline">\(\mathbb{R}\)</span>-내적벡터공간이다. 이제 linear isometry 가 아닌 isometry 의 가장 대표적인 예를 들어보자.</p>
@@ -422,34 +426,47 @@ t_v (x) = x+v
 </div>
 </div>
 </div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-translation_1" class="theorem example">
 <p><span class="theorem-title"><strong>보기 12.1</strong></span> <span class="math inline">\(v \in \mathbb{R}^n,\, v\ne 0\)</span> 에 대한 translation <span class="math inline">\(t_v\)</span> 는 isometry 이지만 linear isometry 는 아니다.</p>
 </div>
+</div>
 <p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-translation_2" class="theorem example">
 <p><span class="theorem-title"><strong>보기 12.2</strong></span> <span class="math inline">\(t_a :\mathbb{R}^n \to \mathbb{R}^n\)</span> 은 전단사함수이다.</p>
 </div>
-<p><br></p>
+</div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-translation_3" class="theorem example">
 <p><span class="theorem-title"><strong>보기 12.3</strong></span> <span class="math inline">\({t_a}^{-1} = t_{-a}\)</span> 이다. <span class="math inline">\((t_a \circ t_{-a})(x) = (t_{-a}\circ t_a)(x) = x\)</span>.</p>
 </div>
+</div>
 <p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-innerproduct_conserving_function" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 12.1</strong></span> <span class="math inline">\(u,\,v\in \mathbb{R}^n\)</span> 일 때 <span class="math inline">\(\langle u,\, u\rangle = \langle u,\, v\rangle = \langle v,\,v \rangle\)</span> 이면 <span class="math inline">\(u=v\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\mathbb{R}^n\)</span> 에서 <span class="math inline">\(\|u-v\|=0\iff u=v\)</span> 이다. <span class="math display">\[
 \langle u-v,\, u-v\rangle = \langle u,\, u\rangle - 2\langle u,\, v\rangle + \langle v,\,v\rangle = 0
 \]</span></p>
 <p>이므로 <span class="math inline">\(\|u-v\|=0\)</span> 이다. 따라서 <span class="math inline">\(u = v\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-innerproduct_conserving_function" class="theorem">
 <p><span class="theorem-title"><strong>정리 12.1</strong></span> <span class="math inline">\(\varphi : \mathbb{R}^n \to \mathbb{R}^n\)</span> 에 대해 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\varphi\)</span> 는 linear isometry 이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\varphi\)</span> 는 <span class="math inline">\(\varphi (0)=0\)</span> 인 isometry 이다.</p>
 <p>  (<span class="math inline">\(3\)</span>) 모든 <span class="math inline">\(u,\,v\in \mathbb{R}^n\)</span> 에 대해 <span class="math inline">\(\langle \varphi (u),\,\varphi (v) \rangle = \langle u,\,v\rangle\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\implies 2\)</span>) <span class="math inline">\(\varphi\)</span> 가 linear isometry 이면 <span class="math inline">\(\|\varphi(u)\| = \|u\|\)</span> 이므로 <span class="math inline">\(\varphi (0) = 0\)</span> 이다.</p>
 <p>(<span class="math inline">\(2 \implies 3\)</span>) 정의에 의해 <span class="math inline">\(\|\varphi (u)\| = \|u\|\)</span> 이다. 또한</p>
@@ -478,28 +495,38 @@ t_v (x) = x+v
 </div>
 <p><br></p>
 <p>우리는 원점을 보존하는 isometry 는 linear isometry 라는 것을 알았다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-factorization_of_isotropy" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 12.2</strong></span> <span class="math inline">\(\mathbb{R}^n \mapsto\mathbb{R}^n\)</span> isometry 는 translation 과 linear isometry 의 합성으로 표현 할 수 있다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>Isometry <span class="math inline">\(f:\mathbb{R}^n \to \mathbb{R}^n\)</span> 를 생각하자. <span class="math inline">\(f(0)=a\)</span> 일 때 <span class="math inline">\(t_{-a}\circ f\)</span> 를 생각하자. <a href="#prp-composition_of_isometries" class="quarto-xref">명제&nbsp;<span>12.1</span></a> 에 의해 <span class="math inline">\(t_{-a}\circ f\)</span> 도 isometry 이며 원점을 보존하므로 <span class="math inline">\(t_{-a}\circ f\)</span> 는 linear isometry 이다. <span class="math inline">\(\varphi = t_{-a}\circ f\)</span> 라 하면 <span class="math inline">\(f = t_{a}\circ \varphi\)</span> 이므로 임의의 isometry 는 translation 과 linear isometry 의 합성이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-composition_of_isometries" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 12.1</strong></span> <span class="math inline">\(t_a\)</span> 가 <span class="math inline">\(a\)</span> 만큼의 translation 이고 <span class="math inline">\(\varphi,\, \psi\)</span> 가 linear isometry 일 때 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>연습문제 12.1</strong></span> <span class="math inline">\(t_a\)</span> 가 <span class="math inline">\(a\)</span> 만큼의 translation 이고 <span class="math inline">\(\varphi,\, \psi\)</span> 가 linear isometry 일 때 다음이 성립함을 보여라.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\varphi \circ \psi\)</span> 도 linear isometry 이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(t_a \circ t_b = t_{a+b}\)</span> 이다.</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\varphi \circ t_a = t_{\varphi (a)} \varphi\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <a href="#prp-composition_of_isometries" class="quarto-xref">명제&nbsp;<span>12.1</span></a> 에 의해 <span class="math inline">\(\varphi \circ \psi\)</span> 도 isometry 이며 <span class="math inline">\((\varphi \circ \psi)(0) = 0\)</span> 이므로 linear isometry 이다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\((t_a\circ t_b)(x) = t_a(x+b)= x+a+b = t_{a+b}(x)\)</span>.</p>
 <p>(<span class="math inline">\(3\)</span>) <span class="math inline">\((\varphi \circ t_a)(x) = \varphi (x+a) = \varphi (x) + \varphi(a) = (t_{\varphi(a)} \circ \varphi) (x)\)</span>.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-group_of_isomeetries" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 12.3</strong></span> <span class="math inline">\(\mathbb{R}^n\)</span> 에 대한 모든 isometry 의 집합은 함수 합성 연산에 대해 군이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(M_n\)</span> 을 <span class="math inline">\(\mathbb{R}^n\)</span> 에서의 isometry 의 집합이라고 하자. <span class="math inline">\(\mathbb{R}^n\)</span> 에서의 translation 과 linear isometry 가 전단사임을 안다. 또한 합성도 isometry 임을 안다. <span class="math inline">\(f=(t_a\circ \varphi)\)</span> 일 때 <span class="math inline">\(f^{-1} = \varphi^{-1}\circ t_{-a} \in M_n\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -508,16 +535,22 @@ t_v (x) = x+v
 <section id="m_n-mapsto-o_n-준동형사상" class="level3" data-number="12.2.2">
 <h3 data-number="12.2.2" class="anchored" data-anchor-id="m_n-mapsto-o_n-준동형사상"><span class="header-section-number">12.2.2</span> <span class="math inline">\(M_n \mapsto O_n\)</span> 준동형사상</h3>
 <p>Isometry <span class="math inline">\(f\)</span> 는 translation <span class="math inline">\(t_a\)</span> 와 linear isomeetry <span class="math inline">\(\varphi\)</span> 의 합성으로 <span class="math inline">\(f=t_a \circ \varphi\)</span> 로 표현 할 수 있다. 이 때 <span class="math inline">\(a=f(0)\)</span> 으로 정해진다. <span class="math inline">\(\mathbb{R}^n\)</span> 에서의 linear isomeetry 의 집합을 <span class="math inline">\(O_n\)</span> 이라 하자. (<span class="math inline">\(O_n\)</span> 은 <span class="math inline">\(n \times n\)</span> 직교행렬의 집합과 동형이라는 것을 안다!!!). 선형대수학에서 배운 지식으로 우리는 이것을 쉽게 보일 수 있다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-linear_isometry_is_a_group" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 12.4</strong></span> <span class="math inline">\(\mathbb{R}^n\)</span> 에서의 linear isometry 의 집합은 군이다.</p>
 </div>
+</div>
 <p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-mn_to_on_homomorphism" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 12.5</strong></span> <span class="math inline">\(\pi : M_n \to O_n\)</span> 을 <span class="math inline">\(\pi (f) = t_{-f(0)}\circ f\)</span> 로 정의할 때 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\pi \in \text{Hom}(M_n,\, O_n)\)</span>.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\ker (\pi)\)</span> 는 <span class="math inline">\(\mathbb{R}^n\)</span> 에서의 translation 의 집합 <span class="math inline">\(T_n\)</span>이다.</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(T_n \trianglelefteq M_n\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(f\in M_n\)</span> 이라면 어떤 <span class="math inline">\(\varphi \in O_n\)</span> 에 대해 <span class="math inline">\(f = t_{f(0)}\circ \varphi\)</span> 이므로 <span class="math inline">\(\pi(f) = \varphi \in O_n\)</span> 이다. <span class="math inline">\(f,\,g\in M_n\)</span> 이며 <span class="math inline">\(\pi(f) = \varphi,\, \pi(g)= \psi\)</span> 라면,</p>
 <p><span class="math display">\[
@@ -580,18 +613,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -623,7 +645,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -631,7 +675,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

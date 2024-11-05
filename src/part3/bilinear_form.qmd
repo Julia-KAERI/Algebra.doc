@@ -25,7 +25,7 @@ $$
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-k_linear_1}
 
@@ -37,14 +37,12 @@ $$
 
 :::
 
-</br>
+</div></br>
 
 내적과 쌍선형 형식은 모두 $U \times U \mapsto \mathbb{F}$ 함수이다. 그러나 쌍선형 형식은 내적과 두가지 면에서 다르다. 우선 $\mathbb{C}$-내적벡터공간에서 정의된 내적 $\langle\,,\,\rangle$ 과 bilinear form $T$ 의 경우 $\langle u,\, cv\rangle = \overline{c}\langle u,\,v\rangle$ 이지만 $T(u,\,cv)= cT(u,\,v)$ 이다. 또한 $\mathbb{R}$-내적벡터공간에서 $\langle u,\,v\rangle = \langle v,\,u\rangle$ 이지만 쌍선형 형식은 일반적으로 $T(u,\,v)\ne T(v,\,u)$ 이다. 
 
 </br>
 
-
-</br>
  
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-arithmatics_for_multilinear_form} 
@@ -60,13 +58,15 @@ $$
 :::
 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-vector_space_of_k_linear_form}
 
 $\mathbb{F}$-벡터공간 $V_1,\ldots,\,V_k$ 에서 정의된 $k$-다중선형형식의 집합 $\mathfrak{M}_k$ 는 @def-arithmatics_for_multilinear_form 에 의해 벡터공간이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -93,14 +93,15 @@ $$ {#eq-operation_in_k_linear_form}
 
 여기서는 일반적인 $k$-다중형식보다는 쌍선형 형식과 $k$-텐서에 대해 집중해서 다루기로 한다. 보통 쌍선형 형식도 서로 다른 $U,\,V$ 에 대해 정해지는 것보다는 2-텐서를(즉 $U=V$ 인 경우) 더 많이 사용한다. 벡터공간 $V$ 에 대한 쌍선형 형식이라고 할 때는 $V$ 에 대한 $2$-텐서 를 의미한다. 이제 @prp-vector_space_of_k_linear_form 로부터 자연스럽게 아래의 결론을 내릴 수 있다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-bilinear_and_k_tensor_are_vector_space}
 
 벡터공간 $V$ 에서 정의된 쌍선형 형식의 집합은 벡터공간이다. 벡터공간 $V$ 에서 정의된 $k$-텐선의 집합 $\mathcal{T}^k(V)$ 는 벡터공간이다.
 
 :::
 
-
-</br>
+</div></br>
 
 
 ### 쌍선형 형식의 행렬 표현 {#sec-matrix_representation_of_bilinear_form}
@@ -117,7 +118,7 @@ $$
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-matrix_representation_of_blinear_form}
 
@@ -129,7 +130,9 @@ $$
 
 :::
 
-::: {.solution}
+</div></br>
+
+::: {.proof}
 $v=\sum_i a_i v_i,\, v'=\sum_j b_j v_j$ 라 하자. 
 
 $$
@@ -141,7 +144,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-bilinear_form_for_column_space}
 
@@ -153,6 +156,8 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.proof}
 trivial.
 :::
@@ -161,7 +166,7 @@ trivial.
 
 위의 두 명제를 가만히 생각해보자. 쌍선형 형식을 행렬로 생각 할 수 있고, 임의의 행렬을 이용하여 쌍선형 형식을 정의 할 수 있다. 행렬과 선형사상의 관계를 밝힐 때 했던 것을 여기서 다시 한 번 해보자.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-isomorphism_between_matrix_and_bilinear}
 
@@ -172,6 +177,8 @@ $$
 $$
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -217,7 +224,7 @@ $$ {#eq-def_alternating_form}
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-k_alternating_form}
 
@@ -234,6 +241,8 @@ $$ {#eq-def_alternating_form_2}
 이다. 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 ($1 \implies 2$) 임의의 두 벡터의 위치를 선택하여 $T(\cdots, v, \cdots, v', \cdots)$ 를 $T(v,\,v)$ 라고 표기하자. 교대형식의 정의에 의해 $T(v,v)=0$ 이다. 
@@ -249,19 +258,23 @@ $$
 
 :::
 
+</br>
 
 즉 교대형식의 정의 @eq-def_alternating_form 과 @eq-def_alternating_form_2 는 동치이다. 
-
 
 </br>
 
 우리는 앞서 $\mathcal{T}^k(V)$ 가 벡터공간임을 보였다. $\mathcal{S}^k(V)$ 와 $\mathcal{A}^k(V)$ 는 $\mathcal{T}^k(V)$ 의 부분집합이기 때문에 당연한 질문에 답해야 한다.
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-symetric_and_alternating_form_are_subspace}
 
 $\mathcal{S}^k(V)$ 와 $\mathcal{A}^k(V)$ 는 $\mathcal{T}^k(V)$ 의 부분공간이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -293,7 +306,7 @@ $\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 모든 $1\le i,\,j\n
 :::
 
 
-</br>
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-alternating_matrix}
 
@@ -301,11 +314,11 @@ $\boldsymbol{A}$ 가 교대행렬이라면 $A_{ii} = - A_{ii}$ 이므로 모든 
 :::
 
 
-</br>
+</div></br>
 
 이제 대칭형식과 교대형식에 대한 행렬표현에 대해 알아보자.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-matrix_form_of_symmetric_form}
 
@@ -316,6 +329,8 @@ $\boldsymbol{A}$ 가 교대행렬이라면 $A_{ii} = - A_{ii}$ 이므로 모든 
 &emsp; ($2$) $[T]_\mathcal{B}$ 는 대칭행렬이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -328,7 +343,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-matrix_form_of_alternating_form}
 
@@ -338,6 +353,8 @@ $$
 
 &emsp; ($2$) $[T]_\mathcal{B}$ 는 교대행렬이다. 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -356,7 +373,7 @@ $$
 이제 벡터공간으로서의 $\mathcal{T}^2(V)$ 와 그 부분공간으로서의 $\mathcal{S}^2(V),\, \mathcal{A}^2(V)$ 의 성질에 대해 알아보자.
 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-symmetric_and_alternating_form_as_subgroups}
 
@@ -369,6 +386,8 @@ $$
 &emsp; ($3$) $\mathcal{T}^2(V) = \mathcal{S}^2(V) \oplus \mathcal{A}^2(V)$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -414,7 +433,7 @@ $$
 
 이제 우리는 반대로 위의 두 조건을 만족하는 $k$-alternating form 은 유일하다는 것을 보일 것이다.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-dimension_of_k_alternating_form}
 
@@ -425,6 +444,8 @@ $$
 $$
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -459,6 +480,8 @@ $$
 
 이로부터 자연스럽게 행렬식의 유일성이 증명된다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#thm-uniqueness_of_determinant}
 
 #### 행렬식의 유일성
@@ -467,8 +490,7 @@ $\phi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))$ 이며 $\phi (\boldsymbol{e}
 
 :::
 
-
-</br>
+</div></br>
 
 ## 이차형식
 
@@ -490,13 +512,15 @@ $\phi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))$ 이며 $\phi (\boldsymbol{e}
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-quadratic_and_bilinear_1}
 
 $T\in \mathcal{S}^2(V)$ 일 때 $\Psi_T(v) = \frac{1}{2}T(v, v)$ 는 이차형식이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -522,6 +546,7 @@ $$
 
 @prp-quadratic_and_bilinear_1 로부터 우리는 대칭 쌍선형형식 대한 이차형식이 존재함을 안다. 이제 좀 더 깊이 알아보자.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-quadratic_and_bilinear_2}
 
@@ -540,6 +565,8 @@ $$
 라고 하자. 이 때 $\mathcal{Q}_V$ 는 $\mathbb{F}$-벡터공간이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -561,13 +588,15 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-quadratic_and_bilinear}
 
 벡터공간 $V$ 에 대해 $\mathcal{S}^2(V)$ 와 $\mathcal{Q}_V$ 는 동형이다. 
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -672,6 +701,8 @@ $$
 
 직교군이라는 이름이 붙었다는 것은 $O(V,\, B_\Psi)$ 가 군이라는 뜻이며 따라서 $GL(V)$ 의 부분군일 것이라는 것을 예상 할 수 있다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-orthogonal_group_is_a_normal_subgroup}
 
 유한차원 벡터공간 $V$ 에 대해 다음이 성립한다.
@@ -681,6 +712,8 @@ $$
 &emsp; ($2$) $SO(V,\, B_\Psi) \trianglelefteq O(V,\, B_\Psi)$.
 
 :::
+
+</div></br>
 
 ::: {proof}
 
@@ -697,7 +730,7 @@ $$
 :::
 
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-orthogonal_group_is_a_normal_subgroup}
 
@@ -713,6 +746,8 @@ $$
 이다.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 

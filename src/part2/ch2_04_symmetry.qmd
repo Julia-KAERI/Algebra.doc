@@ -33,6 +33,7 @@ $$
 :::
 :::
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-composition_of_isometries}
 
@@ -40,10 +41,11 @@ $f,\,g$ 가 $\mathbb{R}^n$ 에서 정의된 isometry 일 때 $f \circ g$ 도 iso
 
 :::
 
+</div></br>
 
 ::: {.proof}
 
-$\|f(g(x))-f(g(y))\| = \|g(x)-g(y)\| = \|x-y\|$. 
+$\|f(g(x))-f(g(y))\| = \|g(x)-g(y)\| = \|x-y\|$. $\square$ 
 
 :::
 
@@ -65,28 +67,33 @@ $$
 :::
 :::
 
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-translation_1}
 
 $v \in \mathbb{R}^n,\, v\ne 0$ 에 대한 translation $t_v$ 는 isometry 이지만 linear isometry 는 아니다.
 :::
 
-</br>
+</div></br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-translation_2}
 
 $t_a :\mathbb{R}^n \to \mathbb{R}^n$ 은 전단사함수이다.
 :::
 
-</br>
+</div></br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-translation_3}
 
 ${t_a}^{-1} = t_{-a}$ 이다. $(t_a \circ t_{-a})(x) = (t_{-a}\circ t_a)(x) = x$. 
 :::
 
-</br>
+</div></br>
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-innerproduct_conserving_function}
 
@@ -94,6 +101,7 @@ $u,\,v\in \mathbb{R}^n$ 일 때 $\langle u,\, u\rangle = \langle u,\, v\rangle =
 
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -106,8 +114,7 @@ $$
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-innerproduct_conserving_function}
 
@@ -120,6 +127,8 @@ $\varphi : \mathbb{R}^n \to \mathbb{R}^n$ 에 대해 다음이 성립한다.
 &emsp; ($3$) 모든 $u,\,v\in \mathbb{R}^n$ 에 대해 $\langle \varphi (u),\,\varphi (v) \rangle = \langle u,\,v\rangle$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -164,11 +173,15 @@ $$
 
 우리는 원점을 보존하는 isometry 는 linear isometry 라는 것을 알았다. 
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-factorization_of_isotropy}
 
 $\mathbb{R}^n \mapsto\mathbb{R}^n$ isometry 는  translation 과 linear isometry 의 합성으로 표현 할 수 있다. 
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -177,11 +190,11 @@ Isometry $f:\mathbb{R}^n \to \mathbb{R}^n$ 를 생각하자. $f(0)=a$ 일 때 $t
 :::
 
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-composition_of_isometries}
 
-$t_a$ 가 $a$ 만큼의 translation 이고 $\varphi,\, \psi$ 가 linear isometry 일 때 다음이 성립한다.
+$t_a$ 가 $a$ 만큼의 translation 이고 $\varphi,\, \psi$ 가 linear isometry 일 때 다음이 성립함을 보여라.
 
 &emsp; ($1$) $\varphi \circ \psi$ 도 linear isometry 이다.
 
@@ -190,6 +203,8 @@ $t_a$ 가 $a$ 만큼의 translation 이고 $\varphi,\, \psi$ 가 linear isometry
 &emsp; ($3$) $\varphi \circ t_a = t_{\varphi (a)} \varphi$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -202,13 +217,15 @@ $t_a$ 가 $a$ 만큼의 translation 이고 $\varphi,\, \psi$ 가 linear isometry
 :::
 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-group_of_isomeetries}
 
 $\mathbb{R}^n$ 에 대한 모든 isometry 의 집합은 함수 합성 연산에 대해 군이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -223,6 +240,8 @@ $M_n$ 을 $\mathbb{R}^n$ 에서의 isometry 의 집합이라고 하자. $\mathbb
 
 Isometry $f$ 는 translation $t_a$ 와 linear isomeetry $\varphi$ 의 합성으로 $f=t_a \circ \varphi$ 로 표현 할 수 있다. 이 때 $a=f(0)$ 으로 정해진다. $\mathbb{R}^n$ 에서의 linear isomeetry 의 집합을 $O_n$ 이라 하자. ($O_n$ 은 $n \times n$ 직교행렬의 집합과 동형이라는 것을 안다!!!). 선형대수학에서 배운 지식으로 우리는 이것을 쉽게 보일 수 있다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-linear_isometry_is_a_group}
 
 $\mathbb{R}^n$ 에서의 linear isometry 의 집합은 군이다.
@@ -230,7 +249,9 @@ $\mathbb{R}^n$ 에서의 linear isometry 의 집합은 군이다.
 :::
 
 
-</br>
+</div></br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-mn_to_on_homomorphism}
 
@@ -243,6 +264,8 @@ $\pi : M_n \to O_n$ 을 $\pi (f) = t_{-f(0)}\circ f$ 로 정의할 때 다음이
 &emsp; ($3$) $T_n \trianglelefteq M_n$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 

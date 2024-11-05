@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>대수학 - 15&nbsp; 다중선형 형식</title>
+<title>15&nbsp; 다중선형 형식 – 대수학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -107,13 +107,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/bilinear_form.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">다중선형 형식</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -145,7 +145,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part1/part1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -204,7 +204,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part2/part2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">II. 군 (Groups)</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -239,7 +239,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part3/part3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">III. 심화 선형대수학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -385,16 +385,17 @@ T (\cdots, v_i+cv_i', \cdots) = T(\cdots,\, v_i ,\cdots) + c T (\cdots,\, v_i',\
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-k_linear_1" class="theorem example">
 <p><span class="theorem-title"><strong>보기 15.1</strong></span> <span class="math inline">\(T\)</span> 가 벡터공간 <span class="math inline">\(V\)</span> 에 대한 <span class="math inline">\(k\)</span>-다중선형형식 일 때 다음이 성립한다.</p>
 <p><span class="math display">\[
 T(\cdots, 0, \cdots ) = 0
 \]</span></p>
 </div>
+</div>
 <p><br></p>
 <p>내적과 쌍선형 형식은 모두 <span class="math inline">\(U \times U \mapsto \mathbb{F}\)</span> 함수이다. 그러나 쌍선형 형식은 내적과 두가지 면에서 다르다. 우선 <span class="math inline">\(\mathbb{C}\)</span>-내적벡터공간에서 정의된 내적 <span class="math inline">\(\langle\,,\,\rangle\)</span> 과 bilinear form <span class="math inline">\(T\)</span> 의 경우 <span class="math inline">\(\langle u,\, cv\rangle = \overline{c}\langle u,\,v\rangle\)</span> 이지만 <span class="math inline">\(T(u,\,cv)= cT(u,\,v)\)</span> 이다. 또한 <span class="math inline">\(\mathbb{R}\)</span>-내적벡터공간에서 <span class="math inline">\(\langle u,\,v\rangle = \langle v,\,u\rangle\)</span> 이지만 쌍선형 형식은 일반적으로 <span class="math inline">\(T(u,\,v)\ne T(v,\,u)\)</span> 이다.</p>
-<p><br></p>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -411,10 +412,13 @@ T(\cdots, 0, \cdots ) = 0
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-vector_space_of_k_linear_form" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 15.1</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V_1,\ldots,\,V_k\)</span> 에서 정의된 <span class="math inline">\(k\)</span>-다중선형형식의 집합 <span class="math inline">\(\mathfrak{M}_k\)</span> 는 <a href="#def-arithmatics_for_multilinear_form" class="quarto-xref">정의&nbsp;<span>15.2</span></a> 에 의해 벡터공간이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>우선 <span class="math inline">\(0_T: \mathfrak{M}_k \to \mathbb{F}\)</span> 를 다음과 같이 정의한다.</p>
 <p><span id="eq-zero_of_k_linear_form"><span class="math display">\[
@@ -430,8 +434,11 @@ T(\cdots, 0, \cdots ) = 0
 </div>
 <p><br></p>
 <p>여기서는 일반적인 <span class="math inline">\(k\)</span>-다중형식보다는 쌍선형 형식과 <span class="math inline">\(k\)</span>-텐서에 대해 집중해서 다루기로 한다. 보통 쌍선형 형식도 서로 다른 <span class="math inline">\(U,\,V\)</span> 에 대해 정해지는 것보다는 2-텐서를(즉 <span class="math inline">\(U=V\)</span> 인 경우) 더 많이 사용한다. 벡터공간 <span class="math inline">\(V\)</span> 에 대한 쌍선형 형식이라고 할 때는 <span class="math inline">\(V\)</span> 에 대한 <span class="math inline">\(2\)</span>-텐서 를 의미한다. 이제 <a href="#prp-vector_space_of_k_linear_form" class="quarto-xref">명제&nbsp;<span>15.1</span></a> 로부터 자연스럽게 아래의 결론을 내릴 수 있다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-bilinear_and_k_tensor_are_vector_space" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 15.2</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 쌍선형 형식의 집합은 벡터공간이다. 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(k\)</span>-텐선의 집합 <span class="math inline">\(\mathcal{T}^k(V)\)</span> 는 벡터공간이다.</p>
+</div>
 </div>
 <p><br></p>
 </section>
@@ -452,15 +459,18 @@ T(\cdots, 0, \cdots ) = 0
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-matrix_representation_of_blinear_form" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 15.3</strong></span> <a href="#def-matrix_representation_of_bilinear_form" class="quarto-xref">정의&nbsp;<span>15.3</span></a> 에서 정의된 <span class="math inline">\([T]_{\mathcal{B}}\)</span> 에 대해 다음이 성립한다.</p>
 <p><span class="math display">\[
 T(v, v') = \left([v]_\mathcal{B}\right)^T [T]_\mathcal{B} [v']_\mathcal{B}.
 \]</span></p>
 </div>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(v=\sum_i a_i v_i,\, v'=\sum_j b_j v_j\)</span> 라 하자.</p>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(v=\sum_i a_i v_i,\, v'=\sum_j b_j v_j\)</span> 라 하자.</p>
 <p><span class="math display">\[
 \begin{aligned}
 T(v, v') &amp;= \sum_{i, j} T(a_i v_i, b_j, v_j) = \sum_{i, j} a_i b_j T(v_i, v_j) = \sum_{i, j} ([v]_{\mathcal{B}})_i ([T]_{\mathcal{B}})_{ij} ([v']_{\mathcal{B}})_j\\
@@ -468,25 +478,31 @@ T(v, v') &amp;= \sum_{i, j} T(a_i v_i, b_j, v_j) = \sum_{i, j} a_i b_j T(v_i, v_
 \end{aligned}
 \]</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-bilinear_form_for_column_space" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 15.4</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 아래와 같이 정의된 <span class="math inline">\(B:\mathcal{M}_n(\mathbb{F}) \times \mathcal{M}_n(\mathbb{F}) \to \mathbb{F}\)</span> 는 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})\)</span> 에 대한 쌍선형 형식이다.</p>
 <p><span class="math display">\[
 B(\boldsymbol{u}, \boldsymbol{v}) = \boldsymbol{u}^T\boldsymbol{A}\boldsymbol{v}.
 \]</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>trivial.</p>
 </div>
 <p><br></p>
 <p>위의 두 명제를 가만히 생각해보자. 쌍선형 형식을 행렬로 생각 할 수 있고, 임의의 행렬을 이용하여 쌍선형 형식을 정의 할 수 있다. 행렬과 선형사상의 관계를 밝힐 때 했던 것을 여기서 다시 한 번 해보자.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-isomorphism_between_matrix_and_bilinear" class="theorem">
 <p><span class="theorem-title"><strong>정리 15.1</strong></span> <span class="math inline">\(n\)</span> 차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B}_V = (v_1,\ldots,\,v_n)\)</span> 을 생각하자. 아래에 정의된 <span class="math inline">\(\Phi_\mathcal{B} : \mathcal{T}^2(V) \to \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 는 동형사상이다.</p>
 <p><span class="math display">\[
 \Phi_\mathcal{B} (T) = [T]_\mathcal{B}.
 \]</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\Phi_\mathcal{B}\)</span> 가 선형사상임을 보이자. <span class="math inline">\(S,\,T\in \mathcal{T}^2(V),\, a\in \mathbb{F}\)</span> 일 때</p>
 <p><span class="math display">\[
@@ -522,7 +538,8 @@ T(\cdots, v, \cdots,v, \cdots) =0
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-k_alternating_form" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 15.5</strong></span> <span class="math inline">\(T\in \mathcal{S}^k(V)\)</span> 에 대해 다음은 동치임을 보여라.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(T\)</span> 는 <span class="math inline">\(k\)</span>-교대형식이다. 즉 <span class="math inline">\(T\in \mathcal{A}^k(V)\)</span> 이다.</p>
@@ -532,6 +549,8 @@ T( \cdots, v_i, \cdots, v_j ,\cdots) = - T(\cdots, v_j, \cdots, v_i, \cdots)
 \tag{15.5}\]</span></span></p>
 <p>이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) 임의의 두 벡터의 위치를 선택하여 <span class="math inline">\(T(\cdots, v, \cdots, v', \cdots)\)</span> 를 <span class="math inline">\(T(v,\,v)\)</span> 라고 표기하자. 교대형식의 정의에 의해 <span class="math inline">\(T(v,v)=0\)</span> 이다. <span class="math display">\[
 \begin{aligned}
@@ -541,12 +560,17 @@ T( \cdots, v_i, \cdots, v_j ,\cdots) = - T(\cdots, v_j, \cdots, v_i, \cdots)
 <p>이므로 <span class="math inline">\(T(v_i, v_j)=-T(v_j, v_i)\)</span> 이다.</p>
 <p>(<span class="math inline">\(2 \implies 1\)</span>) <span class="math inline">\(T(v,v)= -T(v,v)\)</span> 이므로 <span class="math inline">\(T(v,v)=0\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
+<p><br></p>
 <p>즉 교대형식의 정의 <a href="#eq-def_alternating_form" class="quarto-xref">식&nbsp;<span>15.4</span></a> 과 <a href="#eq-def_alternating_form_2" class="quarto-xref">식&nbsp;<span>15.5</span></a> 는 동치이다.</p>
 <p><br></p>
 <p>우리는 앞서 <span class="math inline">\(\mathcal{T}^k(V)\)</span> 가 벡터공간임을 보였다. <span class="math inline">\(\mathcal{S}^k(V)\)</span> 와 <span class="math inline">\(\mathcal{A}^k(V)\)</span> 는 <span class="math inline">\(\mathcal{T}^k(V)\)</span> 의 부분집합이기 때문에 당연한 질문에 답해야 한다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-symetric_and_alternating_form_are_subspace" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 15.6</strong></span> <span class="math inline">\(\mathcal{S}^k(V)\)</span> 와 <span class="math inline">\(\mathcal{A}^k(V)\)</span> 는 <span class="math inline">\(\mathcal{T}^k(V)\)</span> 의 부분공간이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="#eq-zero_of_k_linear_form" class="quarto-xref">식&nbsp;<span>15.1</span></a> 의 <span class="math inline">\(0_M\)</span> 는</p>
 <p><span class="math display">\[
@@ -569,30 +593,38 @@ T( \cdots, v_i, \cdots, v_j ,\cdots) = - T(\cdots, v_j, \cdots, v_i, \cdots)
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-alternating_matrix" class="theorem example">
 <p><span class="theorem-title"><strong>보기 15.2</strong></span> <span class="math inline">\(\boldsymbol{A}\)</span> 가 교대행렬이라면 <span class="math inline">\(A_{ii} = - A_{ii}\)</span> 이므로 모든 대각성분은 <span class="math inline">\(0\)</span> 이다.</p>
 </div>
+</div>
 <p><br></p>
 <p>이제 대칭형식과 교대형식에 대한 행렬표현에 대해 알아보자.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-matrix_form_of_symmetric_form" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 15.7</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 그 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 에 대해 아래 두 명제는 동치이다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(T\in \mathcal{S}^2(V)\)</span> 이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\([T]_\mathcal{B}\)</span> 는 대칭행렬이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(T(v_i, v_j)= ([T]_\mathcal{B})_{ij}\)</span>, <span class="math inline">\(T(v_j, v_i)= ([T]_{\mathcal{B}})_{ji}\)</span> 이다. 따라서, <span class="math display">\[
 T\in \mathcal{S}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= T(v_2, v_1) \iff ([T]_\mathcal{B})_{ij} = ([T]_{\mathcal{B}})_{ji}
 \]</span></p>
 <p>이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-matrix_form_of_alternating_form" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 15.8</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 그 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 에 대해 아래 두 명제는 동치이다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(T\in \mathcal{A}^2(V)\)</span> 이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\([T]_\mathcal{B}\)</span> 는 교대행렬이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(T(v_i, v_j)= ([T]_\mathcal{B})_{ij}\)</span>, <span class="math inline">\(T(v_j, v_i) = ([T]_{\mathcal{B}})_{ji}\)</span> 이다. 따라서, <span class="math display">\[
 T\in \mathcal{A}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= -T(v_2, v_1) \iff ([T]_\mathcal{B})_{ij} = -([T]_{\mathcal{B}})_{ji}
@@ -601,13 +633,16 @@ T\in \mathcal{A}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= -T(v_2, v_1) \
 </div>
 <p><br></p>
 <p>이제 벡터공간으로서의 <span class="math inline">\(\mathcal{T}^2(V)\)</span> 와 그 부분공간으로서의 <span class="math inline">\(\mathcal{S}^2(V),\, \mathcal{A}^2(V)\)</span> 의 성질에 대해 알아보자.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-symmetric_and_alternating_form_as_subgroups" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 15.9</strong></span> 유한차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에 대해 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\mathcal{S}^2(V)\)</span> 과 <span class="math inline">\(\mathcal{A}^2(V)\)</span> 는 <span class="math inline">\(\mathcal{T}^2(V)\)</span> 의 부분공간이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\dim(V)=n\)</span> 일 때 <span class="math inline">\(\dim(\mathcal{S}^2(V)) = \dfrac{n(n+1)}{2}\)</span> 이며 <span class="math inline">\(\dim(\mathcal{A}^2(V)) = \dfrac{n(n-1)}{2}\)</span> 이다.</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\mathcal{T}^2(V) = \mathcal{S}^2(V) \oplus \mathcal{A}^2(V)\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B} = (v_1,\ldots,\,v_n)\)</span> 을 생각하자.</p>
 <p>(<span class="math inline">\(1\)</span>) <a href="#prp-symetric_and_alternating_form_are_subspace" class="quarto-xref">명제&nbsp;<span>15.6</span></a></p>
@@ -634,13 +669,16 @@ T\in \mathcal{A}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= -T(v_2, v_1) \
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\phi (\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_k)=1\)</span></p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\phi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))\)</span></p>
 <p>이제 우리는 반대로 위의 두 조건을 만족하는 <span class="math inline">\(k\)</span>-alternating form 은 유일하다는 것을 보일 것이다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-dimension_of_k_alternating_form" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 15.1</strong></span> <span class="math inline">\(\mathcal{M}_k(\mathbb{F})\)</span> 에 대해 다음이 성립한다.</p>
 <p><span class="math display">\[
 \dim (\mathcal{A}^k (\mathcal{M}_k(\mathbb{F})))=1.
 \]</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>우선 <span class="math inline">\(\dim (\mathcal{A}^k (\mathcal{M}_k(\mathbb{F})))\ne 0\)</span> 임을 보이자. 대칭군을 사용하여,</p>
 <p><span id="eq-first_def_of_det"><span class="math display">\[
@@ -661,8 +699,11 @@ T\in \mathcal{A}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= -T(v_2, v_1) \
 </div>
 <p><br></p>
 <p>이로부터 자연스럽게 행렬식의 유일성이 증명된다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-uniqueness_of_determinant" class="theorem">
 <p><span class="theorem-title"><strong>정리 15.2 (행렬식의 유일성)</strong></span> <span class="math inline">\(\phi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))\)</span> 이며 <span class="math inline">\(\phi (\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_k)=1\)</span> 인 <span class="math inline">\(\phi\)</span> 는 유일하다.</p>
+</div>
 </div>
 <p><br></p>
 </section>
@@ -686,10 +727,13 @@ T\in \mathcal{A}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= -T(v_2, v_1) \
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-quadratic_and_bilinear_1" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 15.10</strong></span> <span class="math inline">\(T\in \mathcal{S}^2(V)\)</span> 일 때 <span class="math inline">\(\Psi_T(v) = \frac{1}{2}T(v, v)\)</span> 는 이차형식이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>우선 조건 (<span class="math inline">\(1\)</span>) 을 만족한다는 것을 보이자. <span class="math display">\[
 \begin{aligned}
@@ -705,6 +749,8 @@ B_\Psi(v, v') &amp;= \Psi_T(v+v') - \Psi(v)-\Psi(v') \\
 </div>
 <p><br></p>
 <p><a href="#prp-quadratic_and_bilinear_1" class="quarto-xref">명제&nbsp;<span>15.10</span></a> 로부터 우리는 대칭 쌍선형형식 대한 이차형식이 존재함을 안다. 이제 좀 더 깊이 알아보자.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-quadratic_and_bilinear_2" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 15.11</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서의 이차형식 전체의 집합을 <span class="math inline">\(\mathcal{Q}_V\)</span> 라고 하자. <span class="math inline">\(0_Q : V \to \mathbb{F}\)</span> 를 다음과 같이 정의한다.</p>
 <p><span class="math display">\[
@@ -716,6 +762,8 @@ B_\Psi(v, v') &amp;= \Psi_T(v+v') - \Psi(v)-\Psi(v') \\
 \]</span></p>
 <p>라고 하자. 이 때 <span class="math inline">\(\mathcal{Q}_V\)</span> 는 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(0_Q \in \mathcal{Q}_V\)</span> 임은 쉽게 보일 수 있다. 또한 임의의 <span class="math inline">\(\Psi\in \mathcal{Q}_V\)</span> 에 대해 <span class="math inline">\(0_Q + \Psi = \Psi+0_Q =\Psi\)</span> 라는 것도 쉽게 보일 수 있다. <span class="math display">\[
 \begin{aligned}
@@ -729,10 +777,13 @@ B_{\Psi + a\Phi} (v, v') &amp;= (\Psi+a\Phi)(v+v') - (\Psi + a\Phi)(v) - (\Psi +
 \]</span></p>
 <p>이므로 <span class="math inline">\(\Psi + a\Phi \in \mathcal{Q}_V\)</span> 이다. 이로부터 <span class="math inline">\(\mathcal{Q}_V\)</span> 가 벡터공간이라는 것을 벡터공간의 정의에 맞추어 증명 할 수 있다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-quadratic_and_bilinear" class="theorem">
 <p><span class="theorem-title"><strong>정리 15.3</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(\mathcal{S}^2(V)\)</span> 와 <span class="math inline">\(\mathcal{Q}_V\)</span> 는 동형이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\Gamma : \mathcal{Q}_V \to \mathcal{S}^2(V)\)</span> 를 <a href="#def-quadratic_form" class="quarto-xref">정의&nbsp;<span>15.6</span></a> 에 따라 <span class="math inline">\(\Gamma (\Psi) = B_\Psi\)</span> 로 정의하자. <a href="#prp-quadratic_and_bilinear_1" class="quarto-xref">명제&nbsp;<span>15.10</span></a> 에서 <span class="math inline">\(T\in \mathcal{S}^2(V)\)</span> 일 때 <span class="math inline">\(\Psi_T(v) = \dfrac{1}{2}T(v, v)\)</span> 는 quadratic form 이며</p>
 <p><span class="math display">\[
@@ -812,11 +863,15 @@ SO(V,\, B_\Psi) = \{ L\in O(V,\, B_\Psi) : \det(L) = 1\}.
 </div>
 <p><br></p>
 <p>직교군이라는 이름이 붙었다는 것은 <span class="math inline">\(O(V,\, B_\Psi)\)</span> 가 군이라는 뜻이며 따라서 <span class="math inline">\(GL(V)\)</span> 의 부분군일 것이라는 것을 예상 할 수 있다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-orthogonal_group_is_a_normal_subgroup" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 15.12</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(O(V, B_\Psi) \le GL(V)\)</span>.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(SO(V,\, B_\Psi) \trianglelefteq O(V,\, B_\Psi)\)</span>.</p>
 </div>
+</div>
+<p><br></p>
 <div class="{proof}">
 <p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(V\)</span> 에서의 항등사상 <span class="math inline">\(I_V\)</span> 가 <span class="math inline">\(I_V\in O(V, \mathcal{B}_\Phi)\)</span> 임은 자명하다. <span class="math inline">\(L_1,\,L_2\in O(V,\,B_\Psi)\)</span> 에 대해 <span class="math inline">\(B(L_1L_2v,\, L_1L_2v')=B(v, v')\)</span> 이므로 <span class="math inline">\(L_1L_2 \in O(V,\, B_\Psi)\)</span> 이다. <span class="math inline">\(L\in O(V,\,B_\Psi)\)</span> 이면,</p>
 <p><span class="math display">\[
@@ -825,7 +880,8 @@ B_\Psi (L^{-1}v,\,L^{-1}v') =  B_\Psi (LL^{-1}v, LL^{-1}v') = B_\Psi (v, v')
 <p>이미로 <span class="math inline">\(L^{-1} \in O(V,\, B_\Psi)\)</span> 이다. 따라서 <span class="math inline">\(O(V,\, B_\Psi) \le GL(V)\)</span> 이다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(SO(V, B_\Psi) \le O(V,B_\Psi)\)</span> 임은 쉽게 보일 수 있다. <span class="math inline">\(L\in O(V, B_\Psi),\, S\in SO(V, B_\Psi)\)</span> 에 대해 <span class="math inline">\(\det(LSL^{-1})=1\)</span> 이므로 <span class="math inline">\(SO(V,\, B_\Psi) \trianglelefteq O(V,\, B_\Psi)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-orthogonal_group_is_a_normal_subgroup" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 15.1</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 그 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 에 대해 다음이 성립한다.</p>
 <p><span class="math display">\[
@@ -836,6 +892,8 @@ O(V,\,B_\Psi) &amp;= \{L \in GL(V) : \Psi (Lv) =  \Psi (v)\} \\
 \]</span></p>
 <p>이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(A,\,B\)</span> 를 다음과 같이 정하자. <span class="math display">\[
 \begin{aligned}
@@ -986,18 +1044,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1029,7 +1076,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1037,7 +1106,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

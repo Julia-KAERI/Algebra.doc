@@ -21,7 +21,7 @@ $a,\,g$ 가 군 $G$ 의 원소일 때 $gag^{-1}$ 을 $g$ 에 의한 $a$ 의 **co
 
 즉 $G$ 의 부분군 $N$ 이 모든 $g\in G$ 에 대해 $gNg^{-1}\subset N$ 이면 $N \trianglelefteq G$ 이다. 우리는 잠시 후 @prp-normal_subgroup_condition 에서 $gNg^{-1} \subset N$ 이면 $gNg^{-1}= N$ 이라는 것을 알게 된다.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-conjugate_subgroup}
 
@@ -29,13 +29,15 @@ $H \le G$ 일 때 $g\in G$ 에 대해 $gHg^{-1}= \{ ghg^{-1}: h\in H\}$ 는 $G$ 
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 $1_G\in H$ 이며 $g1_Gg^{-1}=1_G\in gHg^{-1}$ 이다. $h_1,\,h_2\in H$ 에 대해 $(gh_1g^{-1})(gh_2g^{-1}) = g(h_1h_2)g^{-1}\in gHg$ 이며, $(gh_1g^{-1})^{-1}=gh_1^{-1}g^{-1}\in gHg^{-1}$ 이므로 $gHg^{-1} \le G$ 이다. $\square$
 :::
 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-kernel_and_normal_subgroup}
 
@@ -43,20 +45,26 @@ $\varphi \in \text{Hom}\, (G,\,G')$ 일 때 $\ker \varphi \trianglelefteq G$ 이
 
 :::
 
+</div></br>
+
 ::: {.proof}
 $a \in \ker \varphi$ 이고 $g\in G$ 일 때 $\varphi (gag^{-1})= \varphi (g)1_G \varphi(g^{-1})=1_G'$ 이므로 $gag^{-1}\in \ker \varphi$ 이다. $\square$
 :::
 
-</br>
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-normal_subgroup_and_S3}
 
 $S_3 = \{1, x, x^2, y, xy, x^2y\}$ 를 생각하자. $x^2y=yx$ 를 만족한다. 이 때 $\langle x \rangle \trianglelefteq G$ 이지만 $\langle y \rangle$ 은 $G$ 의 정규부분이 아니다. 예를 들어 $xyx^{-1}= xyx^2 =x^2y \not\in \langle y \rangle$ 이다. 
 :::
 
-</br>
+</div></br>
 
-::: {#exm-center_of_group_is_normal_subgroup}
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-center_of_group}
+
+#### 군의 Center
 
 군 $G$ 에 대해 다음을 만족하는 집합 $Z_G$ 를 $G$ 의 **중심(center)** 라고 한다.
 
@@ -64,13 +72,20 @@ $$
 Z_G = \{ z\in G: \forall g\in G,\, zg = gz \}.
 $$
 
-
-$z\in Z_G$ 일 때 $g\in G$ 에 대해 $gzg^{-1}= zgg^{-1}=z\in Z_G$ 이므로 $Z_G$ 는 $G$ 의 정규부분군 이다.
+:::
 :::
 
 
-</br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
+::: {#exm-center_of_group_is_normal_subgroup}
+
+$z\in Z_G$ 일 때 $g\in G$ 에 대해 $gzg^{-1}= zgg^{-1}=z\in Z_G$ 이므로 $Z_G \trianglelefteq G$ 이다.
+:::
+
+</div>
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 ::: {#prp-normal_subgroup_condition}
 
 $H \le G$ 일 때 다음 명제들은 동치이다.
@@ -82,6 +97,8 @@ $H \le G$ 일 때 다음 명제들은 동치이다.
 &emsp; ($3$) $\forall g\in G,\, gH = Hg$, 
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -96,11 +113,16 @@ $H \le G$ 일 때 다음 명제들은 동치이다.
 
 다음은 별도로 언급할 가치가 있다.
 
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#cor-normal_subgroup_condition}
 
 $H\le G$ 일 때 $H \trianglelefteq G$ 일 필요충분조건은 $H$ 에 대한 왼쪽 잉여군의 집합과 $H$ 에 대한 오른쪽 잉여군의 집합이 같은 것이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -111,7 +133,7 @@ $H$ 에 대한 왼쪽 잉여군의 집합과 $H$ 에 대한 오른쪽 잉여군�
 이제 $L_H = R_H$ 임을 가정하자. $gH\in L_H$ 이면 어떤 $Hg'\in R_H$ 에 대해 $gH = Hg'$ 이다. 그런데 $g\in gH$ 이므로 $g\in Hg'$ 이어야 하며 따라서 $Hg' = Hg$ 이다. 즉 ($3$) 이 성립한다. $\square$
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-subgroup_of_unique_order_is_normal}
 
@@ -119,14 +141,17 @@ $H\le G$ 이며 $H$ 가 $|H|$ order 를 갖는 $G$ 의 유일한 부분군이면
 
 :::
 
+</div></br>
+
 ::: {.proof}
 $g\in G$ 에 대해 $gHg^{-1}\le g$ 이며 $|gHg^{-1}|=|H|$ 이다. 만약 $H$ 가 $|H|$ order 를 갖는 유일한 부분군이라면 모든 $g\in G$ 에 대해 $gHg^{-1}=H$ 이므로 $H \trianglelefteq G$ 이다.
 :::
 
 </br>
 
-### 연습문제
+### 연습문제 {.unnumbered}
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-artin_2_5_2}
 
 #### Artin 2.5.2
@@ -135,6 +160,8 @@ $G$ 의 두 부분군 $H,\,K$ 에 대해 $H\cap K \le H$ 임을 보여라. $K \t
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 두 군의 교집합은 각각의 부분군임은 쉽게 보일 수 있다. 이제 $K \trianglelefteq G,\, H\le G$ 일 때 $(K \cap H) \trianglelefteq H$ 임을 보이자. 임의의 $h\in H,\,k\in K \cap H$ 에 대해 $k\in K \trianglelefteq G$ 이므로 $hkh^{-1}\in K$ 이다. 또한 $k\in H$ 이므로 $hkh^{-1}\in H$ 이다. 따라서 $hkh^{-1}\in K \cap H$ 이므로 $(K \cap H)\trianglelefteq H$ 이다. 
@@ -142,7 +169,7 @@ $G$ 의 두 부분군 $H,\,K$ 에 대해 $H\cap K \le H$ 임을 보여라. $K \t
 :::
 
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_5_6}
 
@@ -151,6 +178,8 @@ $G$ 의 두 부분군 $H,\,K$ 에 대해 $H\cap K \le H$ 임을 보여라. $K \t
 $GL_n(\mathbb{R})$ 의 중심은 무엇인가?
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -166,8 +195,7 @@ $E^{(3)}(i, j, r)S=SE^{(3)}(i, j, r)$ 이어야 하는데 이는 $d_i = d_j$ 이
 
 :::
 
-</br>
-
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_6_4}
 
@@ -177,12 +205,14 @@ $E^{(3)}(i, j, r)S=SE^{(3)}(i, j, r)$ 이어야 하는데 이는 $d_i = d_j$ 이
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $ab = a(ba)a^{-1}$. 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_6_5}
 
@@ -191,6 +221,8 @@ $ab = a(ba)a^{-1}$.
 $2 \times 2$ 행렬 $A=\begin{bmatrix} 3 & \\ & 2\end{bmatrix}$ 와 $B=\left[\begin{array}{rr} 1 & 1 \\ -2 & 4\end{array}\right]$ 는 $GL_2(\mathbb{R})$ 에서 conjugate 인가?
 
 :::
+
+</div></br>
 
 :::{.solution}
 $PAP^{-1}=B$ 를 만족하는 $P = \begin{bmatrix}a & b\\ c& d\end{bmatrix}$ 를 구해보자. 
@@ -219,6 +251,7 @@ $a=0$ 이거나 $d=0$ 이면 $bc=0$ 이므로 $P$ 는 가역이 아니다. 따�
 :::
 
 </br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_6_11}
 #### Artin 2.6.11
@@ -227,14 +260,15 @@ $a=0$ 이거나 $d=0$ 이면 $bc=0$ 이므로 $P$ 는 가역이 아니다. 따�
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 임의의 $g\in G$ 에 대해 $gag^{-1}\in \{1_G,\,a\}$ 이다. $gag^{-1}=1_G$ 이면 $a=1_G$ 이므로 가정에 위배된다. 따라서 $gag^{-1}=a$ 이므로 $ga=ag$ 이다. 
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_8_10}
 
@@ -244,6 +278,8 @@ $a=0$ 이거나 $d=0$ 이면 $bc=0$ 이므로 $P$ 는 가역이 아니다. 따�
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $[G:H]=2$ 인 경우를 보자. $g\in G$ 이며 $g\notin H$ 에 대해 $G$ 의 두 왼쪽 잉여류는 $H$ 와 $gH$ 이며 오른쪽 잉여류는 $H$ 와 $Hg$ 이다. 따라서 $Hg=gH$ 이므로 $H \trianglelefteq G$ 이다.
@@ -251,8 +287,6 @@ $[G:H]=2$ 인 경우를 보자. $g\in G$ 이며 $g\notin H$ 에 대해 $G$ 의 �
 대칭군 $S_3=\{1,\,x,\,x^2,\,y,\,xy,\,x^2y\}$ 를 생각하자. $H=\{1,\,y\} \le S_3$ 이며, $[G:H]=3$ 이다 $xyx^{-1}=xyx^2=x^y \notin H$ 이므로 $H$ 는 $G$ 의 정규부분군이 아니다. 
 
 :::
-
-
 
 </br>
 
@@ -263,7 +297,7 @@ $[G:H]=2$ 인 경우를 보자. $g\in G$ 이며 $g\notin H$ 에 대해 $G$ 의 �
 
 $\varphi \in \text{Hom}(G,G')$ 이며 $H \le G$ 일 때 $\varphi$ 의 정의역을 $H$ 로 제한하는 함수를 $\varphi|_H$ 로 쓰자. 즉 $h\in H$ 에 대해 $\varphi|_H(h) =\varphi(h)$ 이다. 이 때 (당연하게도) $\ker (\varphi|_H) = \ker \varphi \cap H$ 이다. 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-restriction_homomorphsm_1}
 
@@ -271,12 +305,14 @@ $G,\,G'$ 이 유한군이고 $H \le G$ 라고 하자. $\varphi \in \text{Hom}(G,
 
 :::
 
+</div></br>
+
 ::: {.proof}
 @thm-orders_in_group_homomorphism 에 따라 $|\text{im}(\varphi|_H)| {\large \mid} |H|$ 이며 $|\text{im}(\varphi|_H)| {\large \mid} |G'|$ 이어야 한다. 따라서 $\text{im}(\varphi_H) = \{1_G'\}$. $\square$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-image_of_sign_homomorphism}
 
@@ -284,7 +320,9 @@ $G,\,G'$ 이 유한군이고 $H \le G$ 라고 하자. $\varphi \in \text{Hom}(G,
 
 :::
 
-</br>
+</div></br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-restriction_homomorphism_2}
 
@@ -297,6 +335,8 @@ $\varphi \in \text{Hom} (G, G')$ 이고 $K=\ker \varphi$ 라 하자. $H'\le G'$ 
 &emsp; ($3$) $\varphi$ 가 전사이고 $H\trianglelefteq G$ 이면 $H' \trianglelefteq G'$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -315,7 +355,7 @@ $$
 :::
 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-correspondence_theorem_of_groups}
 
@@ -324,19 +364,23 @@ $$
 $\varphi \in \text{Hom}(G,G')$ 이며 전사이고 $K = \ker \varphi$ 라 하자. 이 때 [$K$ 를 포함하는 $G$ 의 부분군의 집합] 과 [$G'$ 의 부분군의 집합] 사이에 일대일 대응이 존재한다.
 :::
 
+</div></br>
+
 ::: {.proof} 
 $\varphi$ 가 전사이므로 $\varphi (\varphi^{-1}(H')) = H'$ 이다. 또한 $H \subset \varphi^{-1}(\varphi(H))$ 이다 ($\varphi$ 가 단사이면 등호가 성립한다). 이제 $\varphi^{-1}(\varphi (H)) \subset H$ 임을 보이자. $x\in \varphi^{-1}(\varphi (H))$ 이면 $\varphi (x) \in \varphi (H)$ 이어야 하며, 따라서 어떤 $h\in H$ 에 대해 $\varphi (x) = \varphi (h)$ 이어야 한다. $h^{-1}x\in K\le H$ 이며 $h\in H$ 이므로 $x \in H$ 이다. 즉 $\varphi^{-1}(\varphi(H)) = H$ 이다. 
 
 $G'$ 의 부분군의 집합을 $P$, $K$ 를 포함하는 $G$ 의 부분군의 집합을 $Q$ 라고 할 때 @prp-restriction_homomorphism_2 에 의해  함수 $\Psi : P \to Q$ 를 $\Psi(H') = \varphi^{-1}(H')$ 으로 정의 할 수 있다. 임의의 $H\in Q$ 에 대해 $\varphi (H) \in P$ 이며 $\varphi^{-1}(\varphi (H)) = H$ 이므로 $\Psi$ 는 전사이다. $\varphi^{-1}(H'_1) \ne \varphi^{-1}(H'_2)$ 이면 $\varphi$ 가 전사이므로 $H'_1\ne H'_2$ 이다. 즉 $\Psi$ 는 단사이다. 따라서 $P$ 와 $Q$ 사이에 일대일 대응이 존재한다.
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#cor-correnspondence_theorem_of_groups}
 
 @thm-correspondence_theorem_of_groups 조건에서 $|\varphi^{-1}(H') | = |H'||K|$ 이다. 
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -351,8 +395,9 @@ $$
 
 </br>
 
-### 연습문제
+### 연습문제 {.unnumbered}
 
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 ::: {#exr-artin_2_10_2}
 
 #### Artin 2.10.2
@@ -365,6 +410,8 @@ $H\le G,\, K\le G$ 일 때 다음을 보여라.
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($1$) $xH \cap yK \ne \varnothing$ 만을 생각한다. $g\in xH \cap yK$ 라면 어떤 $h\in H,\, k\in K$ 에 대해 $g=xh=yk$ 이다. $h=x^{-1}g,\, k = y^{-1}g$ 이다. 따라서 $gH = xH$ 이고 $gK = yK$ 이, 이로부터 $(xH \cap yK) = (gH \cap gK)$ 임을 알 수 있다. 
@@ -374,8 +421,7 @@ $H\le G,\, K\le G$ 일 때 다음을 보여라.
 ($2$) $[G:H]=m$ 이라면 $m$ 개의 $H$ 의 잉여류가 존재하며, $[G:K]=n$ 이라면 $n$ 개의 $H$ 의 잉여류가 존재한다. 또한 $G$ 의 원소는 어떤 $H$ 의 잉여류에 포함되며 어떤 $K$ 의 잉여류에 포함되므로, 어떤 $H\cap K$ 의 잉여류에 포함된다. 따라서 $[G:H \cap K] \le m \times n$ 이다.
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exr-artin_2_10_3}
 
@@ -384,6 +430,8 @@ $H\le G,\, K\le G$ 일 때 다음을 보여라.
 $G$ 와 $G'$ 이 각각 order 12, 6 순환군이며 $x,\,y$ 로 부터 생성된다고 하자. $\varphi : G \to G'$ 이 $\varphi(x^i) = y^i$ 로 정의되었다고 하자. 대응정리로부터 함수의 대응관계를 설명하라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -401,10 +449,9 @@ $$
 
 이며 $\Psi : P \to Q$ 를 $\Psi(H') = \varphi^{-1}(H')$ 으로 정의하면 $\Psi (H'_i)= H_i,\, i=1,\,2,\,3$ 이다.
 
-
 :::
 
-</br>
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exr-artin_2_10_4}
 
@@ -413,6 +460,8 @@ $$
 대응정리에 사용된 표기법을 색각하자. $[G:H] = [G':H']$ 임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -425,7 +474,6 @@ $\varphi \in \text{Hom}(G, G')$ 이 전사이며 $K = \ker (\varphi)$ 라고 하
 :::
 
 </br>
-
 
 ## Product Group
 
@@ -450,19 +498,26 @@ $$
 
 다음은 쉽게 보일 수 있다.
 
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-external_product_of_groups_is_a_group}
 
 @def-external_product_of_groups 에 의해 정의된 $G \times G'$ 은 군이다.
 
 ::: 
 
-</br>
+</div></br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-isomorphic_to_external_product}
 
 $r$ 과 $s$ 가 서로소인 두 정수일 때 계수가 $rs$ 인 순환군은 계수가 $r$, $s$ 인 두 순환군의 external product 와 동형이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -477,7 +532,7 @@ $$
 :::
 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-inner_product_group}
 
@@ -493,6 +548,7 @@ $H\le G,\, K \le G$ 일 때 $f:H \times K \to G$ 를 $f(h, k)=hk$ 로 정의하�
 
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -519,7 +575,7 @@ $$
 이제 $f$ 가 동형사상임을 가정하자. $f$ 가 단사이므로 $H \cap K=\{1_G\}$ 이며, 준동형사상이므로 $hk=kh$ 이다. 전사이므로 $HK=G$ 이다. $g\in G$ 에 대해 $g=hk$ 를 만족하는 $h\in H,\, k\in K$ 가 존재한다. $h'\in H$ 에 대해 $gh'g^{-1}=hkh'(hk)^{-1}=hkh'k^{-1}h^{-1}=hh'kk^{-1}h^{-1}=hh'h^{-1}\in H$ 이므로 $H \trianglelefteq G$ 이다. 같은 방식으로 $K \trianglelefteq G$ 임을 보일 수 있다. $\square$
 :::
 
-</br>
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-multiplicaiton_map_and_homomorphism}
 
@@ -527,18 +583,21 @@ $$
 
 :::
 
-</br>
+</div></br>
 
 ### Counting Principle
 
 군의 부분군 $H,\,K$ 과 그 곱집합 $HK$ 을 통해 군에 대해 중요한 것을 알 수 있다. 이제 몇가지를 알아보도록 하자.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-herstein_lem_2_5_1}
 
 $H\le G,\, K\le G$ 일 때, $HK = KH \iff HK \le G$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 우선 $HK=KH$ 임을 가정하자. $h\in H,\, k\in K$ 에 대해 $hk=k'h'$ 인 $h'\in H,\, K'\in K$ 가 존재한다. $h_1,\,h_2\in H,\, k_1,\,k_2\in K$ 에 대해 $h_2k_1 = k_1'h_2'$ 인 $h_2'\in H,\, k_2'\in K$ 가 존재하며 $h_1k_1h_2k_2 = h_1 h_2'k_2'k_2 \in HK$ 이다. 또한 $(hk)^{-1}=k^{-1}h^{-1}\in KH = HK$ 이므로 $HK\le G$ 이다.
@@ -547,17 +606,19 @@ $H\le G,\, K\le G$ 일 때, $HK = KH \iff HK \le G$ 이다.
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-herstein_thm_2_5_1}
 
-$H,\, K$ 가 $G$ 의 유한부분군일 때 다음이 성립함을 보여라. [$HK\le G$ 일 필요는 없다. 군이 아니더라도 유한집합 $A$ 의 원소의 갯수를 $|A|$ 로 표기하기로 한다.]{.aside}
+$H,\, K$ 가 $G$ 의 유한부분군일 때 다음이 성립함을 보여라. 
 
 $$
 |HK| = \dfrac{|H||K|}{|H \cap K|}.
 $$
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -569,8 +630,9 @@ $x\in H\cap K$ 라고 하자. $hk = (hx)(x^{-1}k)$ 이며 $hx\in H,\, x^{-1}k\in
 
 </br>
 
-### 연습문제
+### 연습문제 {.unnumbered}
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-artin_2_11_3}
 
 #### Artin 2.11.3
@@ -579,13 +641,15 @@ $x\in H\cap K$ 라고 하자. $hk = (hx)(x^{-1}k)$ 이며 $hx\in H,\, x^{-1}k\in
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $A=\langle a\rangle,\, B=\langle b\rangle$ 이 무한순환군이라고 하자. $A\times B= \{(a^m, b^n)\}$ 가 순환군이려면 $A\times B = \langle (a^p, b^q)\rangle$ 이어야 한다. $a^{p+1}b^q\in A\times B$ 이므로 $a^{p+1}b^q = (a^pb^q)^r = a^{pr}b^{qr}$ 을 만족하는 $r\in \mathbb{Z}$ 가 존재해야 하지만 존재할 수 없다. 따라서 $A \times B$ 는 순환군이 아니다.
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_11_4}
 
@@ -601,6 +665,8 @@ $A=\langle a\rangle,\, B=\langle b\rangle$ 이 무한순환군이라고 하자. 
 
 :::
 
+</div></br>
+
 ::: {.solution}
 @prp-inner_product_group 에 따라 $H\cap K = \{1_G\}$, $HK=G$, $H \trianglelefteq G,\, K \trianglelefteq G$ 임을 보이면 된다.
 
@@ -612,7 +678,7 @@ $A=\langle a\rangle,\, B=\langle b\rangle$ 이 무한순환군이라고 하자. 
 :::
 
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_11_5}
 
@@ -621,6 +687,8 @@ $A=\langle a\rangle,\, B=\langle b\rangle$ 이 무한순환군이라고 하자. 
 군 $G_1, \,G_2$ 에 대해 $Z_1,\,Z_2$ 는 각각의 중심이다. 이 때 $G_1\times G_2$ 의 중심은 $Z_1 \times Z_2$ 임을 보여라. 
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -634,7 +702,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_11_6}
 
@@ -644,13 +712,15 @@ $G$ 의 정규부분군중 하나는 order 3 이며 다른 하나는 order 5 이
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 order 3 부분군과 order 5 부분군은 cyclic group 이다. $A=\langle a \rangle$ 를 order 3 부분군, $B=\langle b \rangle$ 를 order 5 부분군이라고 하자. $bab^{-1}$ 은 $a$ 이거나 $a^2$ 이다. $bab^{-1}=a$ 이면 $ab=ba$ 이므로 $AB=BA$ 이며, 따라서 @prp-herstein_lem_2_5_1 에 따라 $AB\le G$ 이다. $bab^{-1}=a^2$ 이면  $a^2b=a^{-1}b=ba$ 이다. 따라서 $AB=BA$ 이며 $AB\le G$ 이다. $AB = \langle ab\rangle$ 이며 $o(ab)=15$ 이다.
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_11_7}
 
@@ -660,13 +730,15 @@ $H \le G$ 이고 $\varphi \in \text{Hom}(G, H)$ 이며 $h\in H$ 에 대해 $\var
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $H \cap K =\{1_G\}$ 이므로 $f$ 는 단사이다. $K \trianglelefteq G$ 이므로 $HK \le G$ 이다. 
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_11_8}
 
@@ -682,6 +754,8 @@ B &= \{ (\varphi,\, \varphi') : \varphi \in \text{Hom}(H, G),\, \varphi' \in \te
 $$ 
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -707,11 +781,15 @@ $$
 
 ### 몫군과 canonical map
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-product_of_cosets_of_normal_subgroup}
 
 $N \trianglelefteq G$ 이고 $a,\, b\in G$ 일 때 $(aN)(bN) = \{an_1bn_2 : n_1,\,n_2\in N\}=abN$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -722,13 +800,15 @@ $b^{-1}n_1b \in N$ 이므로 $n'=b^{-1}nb$ 라 하자. $an_1bn_2 = abb^{-1}n_1bn
 
 이로부터 $N \trianglelefteq G$ 일 때 $N$ 에 의한 cosets 의 집합에 @prp-product_of_cosets_of_normal_subgroup 에서와 같이 $(aN)(bN)=abN$ 이라는 연산을 부여할 수 있다는 것을 즉, 이 연산이 잘 정의된다는 것을 알 수 있다. 이 때 $N$ 에 의한 $G$ 의 cosets 의 집합을 $G/N$ 이라고 하자.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-prouct_group}
 
 $N \trianglelefteq G$ 일 때 $G/N$ 에 @prp-product_of_cosets_of_normal_subgroup 의 연산을 부여하면 $G/N$ 은 군이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -737,8 +817,6 @@ $N\in G/N$ 이며 $g\in G$ 에 대해 $(gN)(N) = gN$ 이므로 $gN$ 이 $G/N$ �
 :::
 
 </br>
-
-
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-quotient_group}
@@ -755,9 +833,7 @@ $$
 :::
 :::
 
-
-
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-canonical_map_for_quotient_group}
 
@@ -765,15 +841,19 @@ $N \trianglelefteq G$ 일 때 함수 $\pi : G\to G/N$ 을 $\pi (g) = gN$ 으로 
 
 :::
 
-</br>
+</div></br>
 
 ### 제 1 동형정리
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-map_with_homomorphism_property}
 
 $G$ 가 군이고, $Y$ 는 연산에 대해 닫혀있는 집합이라고 하자. 각 군에서의 연산을 곱하기로 표현하자. 함수 $\phi : G \to Y$ 가 전사이며, 준동형사상과 같이 모든 $g_1,\,g_2\in G$ 에 대해 $\phi(g_1)\phi(g_2) = \phi(g_1g_2)$ 를 만족한다면 $Y$ 는 군이며 따라서 $\phi \in \text{Hom}(G, Y)$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -790,21 +870,17 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-first_isomorphism_theorem}
 
 #### 제1 동형정리
 
-$\varphi \in \text{Hom}(G,\,G')$ 이 전사이며 $N = \ker \varphi$ 라 하자. 이 때 $G/N$ 과 $G'$ 은 동형이다. 즉 
-
-$$
-G/N \cong G'
-$$
-
-이다.
+$\varphi \in \text{Hom}(G,\,G')$ 이 전사이며 $N = \ker \varphi$ 라 하자. 이 때 $G/N$ 과 $G'$ 은 동형이다. 즉 $G/N \cong G'$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -819,17 +895,19 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#cor-first_isomorphism_theorem}
 
 $\varphi \in \text{Hom}(G,\, G')$ 이며 $N =\ker \varphi$ 이고 $H' = \text{im}\,(\varphi)$ 이면 $G/N \cong H'$ 이다.
 :::
 
+</div></br>
 
-</br>
 
-### 연습문제
+### 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_12_1}
 
@@ -839,13 +917,15 @@ $H\le G$ 가 $G$ 의 정규부분군이 아닐 때 어떤 두 왼쪽 잉여류�
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $L_H$ 를 $H$ 에 의한 $G$ 의 왼쪽 잉여류의 집합이라고 하고 위 명제의 대우명제를 증명한다. 즉. $\forall a,\,b\in G$ 에 대해 $(aH)(bH) \in L_H$ 이면 $H \trianglelefteq G$ 임을 증명하자. 임의의 $a,\,b\in G$ 에 대해 $(aH)(bH)=cH$ 인 $c\in G$ 가 존재한다고 하자. 즉 임의의 $h_1,\,h_2\in H$ 에 대해 $ah_1bh_2 = ch_3$ 를 만족하는 $h_3$ 가 존재하므로 $h_1 b = a^{-1}c h_3 h_2^{-1}$ 이다. 이로부터 $Hb = a^{-1}cH$ 임을 알며 이는 $H$ 에 대한 $G$ 의 왼쪽 잉여류의 집합과 오른쪽 잉여류의 집합이 같다는것을 뜻한다. @cor-normal_subgroup_condition 로부터 $H \trianglelefteq G$ 이다.
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_12_3}
 
@@ -855,6 +935,8 @@ $P$ 가 군 $G$ 의 분할이며 $\forall A,\,B\in P,\, \exists C\in P,\, AB \su
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $A\in P$ 라고 하자. $a\in A$ 라면 $a\in AN,\, a\in NA$ 이므로 $AN\subset A,\, NA\subset A$ 이다. 이제 $N\le G$ 임을 보이자. $NN \subset N$ 이어야 하므로 $N$ 은 연산에 대해 닫혀 있다. $n\in N$ 에 대해 $n^{-1}\in B$ 라 하면 $1_G\in NB$ 이어야 하므로 $B=N$ 이다. 즉 $N \le G$ 이다. $a,\, a'\in A$ 이라 하자. $x\in aN$ 이면 $x=an,\, n\in N$ 
@@ -862,13 +944,15 @@ $A\in P$ 라고 하자. $a\in A$ 라면 $a\in AN,\, a\in NA$ 이므로 $AN\subse
 - to be done -
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_12_4}
 
 $H = \{\pm 1,\, \pm i\}$ 는 $G=\mathbb{C}^\times$ 의 부분군이다. $G$ 에 대한 $H$ 의 잉여류를 기술하라. $G/H$ 는 $G$ 와 동형인가?
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -879,11 +963,9 @@ $H\trianglelefteq G$ 임은 자명하다. $\varphi : \mathbb{C}^\times \to \math
 </br>
 
 
-## 연습문제
+## 연습문제 {.unnumbered}
 
-
-</br>
-
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-herstein_2_6_38}
 
@@ -893,15 +975,15 @@ $G$ 가 유한군이며 아벨군라고 하자. 모든 양의 정수 $n$ 에 대
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 $a,\,b \in G$ 에 대해 $\gcd (o(a), o(b))=1$ 이면 $a, b$ 에 의해 생성되는 부분군은 $ab$ 에 의한 순환군이다. 따라서 $G$ 가 순환군이 아니라면 어떤 $a,\,b\in G$ 에 대해 $a^m \notin \langle b\rangle$ 이며 $\gcd(o(a), o(b)) = d>1$ 이어야 한다. 이 때 $o(ab)= \text{lcm}(o(a), o(b))$ 이며, $x^{o(ab)}=1_G$ 를 만족하는 $x$ 의 갯수는 $a, b$ 에 의한 부분군만 생각하더라도 $o(a)\cdot o(b) > \text{lcm}(o(a), o(b))$ 이다.  
 
-
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_M_1}
 
@@ -911,12 +993,14 @@ $2 \times 2$ 정수행렬 $A$ 는 역행렬도 정수행렬이다. $A$ 의 첫�
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $r=ad-bc$ 라고 하자. $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ 이면 $A^{-1} = \dfrac{1}{r}\begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$ 이다. $A^{-1}$ 가 정수행렬이므로 $r=(ad-bc)$ 가 $a,\,b,\,c,\,d$ 각각을 나누어야 한다. $r$ 은 $a,\,c$ 의 최대공약수의 배수이므로 $r$ 은 $a, c$ 의 최대공약수 이어야 한다. 즉 $r=ad-bc$ 에서 $r$ 은 $a, c$ 의 최대공약수이며 $b, d$ 는 $\gcd(a, c) = \pm (ad-bc)$ 를 만족하게 해야 한다.
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_M_2}
 #### Artin 2.M.2
@@ -929,6 +1013,8 @@ $r=ad-bc$ 라고 하자. $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ 이�
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 ($1$) $o(a)=2$ 이면 $a^2=1_G$ 이다. 모든 $g\in G$ 에 대해 $a\ne a^{-1}$ 이라면 $G$ 는 $1_G$ 를 제외하고는 $\{x,\,x^{-1}\}$ 짝을 포함해야 하므로 $|G|$ 는 홀수 order 를 갖는 군일 수 밖에 없다.
@@ -937,7 +1023,7 @@ $r=ad-bc$ 라고 하자. $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ 이�
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_M_3}
 
@@ -953,6 +1039,8 @@ $|G|=6$ 일 때 아래의 경우에 대해 $G$ 를 분류하시오.
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($1$) Order 6 순환군
@@ -964,8 +1052,7 @@ $|G|=6$ 일 때 아래의 경우에 대해 $G$ 를 분류하시오.
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_M_4}
 
@@ -976,13 +1063,15 @@ $|G|=6$ 일 때 아래의 경우에 대해 $G$ 를 분류하시오.
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 어떤 $m<n$ 에 대해 $s^m=s^n$ 이라면 $s^{(n-m)+k} = s^ms^{-n}s^k = s^k$ 이므로 $S$ 는 유한 반군이다. 모든 $m<n$ 에 대해 $s^m \ne s^n$ 이면 $S$ 는 무한 반군이다.
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_M_5}
 
@@ -991,6 +1080,8 @@ $|G|=6$ 일 때 아래의 경우에 대해 $G$ 를 분류하시오.
 $S$ 가 유한 반군이며 제거 규칙이 성립하면 $S$ 가 군임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1004,8 +1095,7 @@ $$
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_M_9}
 
@@ -1014,6 +1104,8 @@ $$
 $H,\, K \le G$ 이고 $g\in G$ 일 때 $HgK = \{hgk: h\in H,\, k\in K\}$ 를 **double coset** 이라고 한다. Double cosets 는 $G$ 를 분할하는가?
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1033,8 +1125,7 @@ $$
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_M_10}
 
@@ -1043,6 +1134,8 @@ $$
 $H \le G$ 일 때 $HgH = gH \iff H \trianglelefteq G$ 임을 보여라.
 
 ::: 
+
+</div></br>
 
 ::: {.proof}
 
