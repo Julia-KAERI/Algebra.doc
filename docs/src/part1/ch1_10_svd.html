@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; 특이값 분해 – 대수학</title>
+<title>대수학 - 8&nbsp; 특이값 분해</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -107,13 +107,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part1/part1.html">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</a></li><li class="breadcrumb-item"><a href="../../src/part1/ch1_10_svd.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">특이값 분해</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -145,7 +145,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part1/part1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -204,7 +204,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part2/part2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">II. 군 (Groups)</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -239,7 +239,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part3/part3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">III. 심화 선형대수학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -319,18 +319,18 @@ window.Quarto = {
   <li><a href="#positive-positive-definite-행렬과-제곱근-행렬" id="toc-positive-positive-definite-행렬과-제곱근-행렬" class="nav-link active" data-scroll-target="#positive-positive-definite-행렬과-제곱근-행렬"><span class="header-section-number">8.1</span> Positive, Positive definite 행렬과 제곱근 행렬</a>
   <ul class="collapse">
   <li><a href="#non-negative-행렬의-성질" id="toc-non-negative-행렬의-성질" class="nav-link" data-scroll-target="#non-negative-행렬의-성질"><span class="header-section-number">8.1.1</span> Non-negative 행렬의 성질</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
-  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제"><span class="header-section-number">8.2</span> 연습문제</a></li>
-  <li><a href="#특이값-분해의-원리" id="toc-특이값-분해의-원리" class="nav-link" data-scroll-target="#특이값-분해의-원리"><span class="header-section-number">8.3</span> 특이값 분해의 원리</a>
+  <li><a href="#특이값-분해의-원리" id="toc-특이값-분해의-원리" class="nav-link" data-scroll-target="#특이값-분해의-원리"><span class="header-section-number">8.2</span> 특이값 분해의 원리</a>
   <ul class="collapse">
-  <li><a href="#특이값" id="toc-특이값" class="nav-link" data-scroll-target="#특이값"><span class="header-section-number">8.3.1</span> 특이값</a></li>
-  <li><a href="#특이값-분해" id="toc-특이값-분해" class="nav-link" data-scroll-target="#특이값-분해"><span class="header-section-number">8.3.2</span> 특이값 분해</a></li>
+  <li><a href="#특이값" id="toc-특이값" class="nav-link" data-scroll-target="#특이값"><span class="header-section-number">8.2.1</span> 특이값</a></li>
+  <li><a href="#특이값-분해" id="toc-특이값-분해" class="nav-link" data-scroll-target="#특이값-분해"><span class="header-section-number">8.2.2</span> 특이값 분해</a></li>
   </ul></li>
-  <li><a href="#특이값-분해의-활용" id="toc-특이값-분해의-활용" class="nav-link" data-scroll-target="#특이값-분해의-활용"><span class="header-section-number">8.4</span> 특이값 분해의 활용</a>
+  <li><a href="#특이값-분해의-활용" id="toc-특이값-분해의-활용" class="nav-link" data-scroll-target="#특이값-분해의-활용"><span class="header-section-number">8.3</span> 특이값 분해의 활용</a>
   <ul class="collapse">
-  <li><a href="#행렬의-노름" id="toc-행렬의-노름" class="nav-link" data-scroll-target="#행렬의-노름"><span class="header-section-number">8.4.1</span> 행렬의 노름</a></li>
-  <li><a href="#approximation-by-linear-maps-with-lower-dimensional-range" id="toc-approximation-by-linear-maps-with-lower-dimensional-range" class="nav-link" data-scroll-target="#approximation-by-linear-maps-with-lower-dimensional-range"><span class="header-section-number">8.4.2</span> Approximation by Linear Maps with Lower-Dimensional Range</a></li>
-  <li><a href="#극분해" id="toc-극분해" class="nav-link" data-scroll-target="#극분해"><span class="header-section-number">8.4.3</span> 극분해</a></li>
+  <li><a href="#행렬의-노름" id="toc-행렬의-노름" class="nav-link" data-scroll-target="#행렬의-노름"><span class="header-section-number">8.3.1</span> 행렬의 노름</a></li>
+  <li><a href="#approximation-by-linear-maps-with-lower-dimensional-range" id="toc-approximation-by-linear-maps-with-lower-dimensional-range" class="nav-link" data-scroll-target="#approximation-by-linear-maps-with-lower-dimensional-range"><span class="header-section-number">8.3.2</span> Approximation by Linear Maps with Lower-Dimensional Range</a></li>
+  <li><a href="#극분해" id="toc-극분해" class="nav-link" data-scroll-target="#극분해"><span class="header-section-number">8.3.3</span> 극분해</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -388,6 +388,7 @@ window.Quarto = {
 <p><br></p>
 <section id="non-negative-행렬의-성질" class="level3" data-number="8.1.1">
 <h3 data-number="8.1.1" class="anchored" data-anchor-id="non-negative-행렬의-성질"><span class="header-section-number">8.1.1</span> Non-negative 행렬의 성질</h3>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-properties_of_posivive_definite_matrix" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 8.1</strong></span> <span class="math inline">\(\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})\)</span> 에 대해 다음은 동치이다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 는 non-negative 이다.</p>
@@ -397,6 +398,8 @@ window.Quarto = {
 <p>  (<span class="math inline">\(5\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 의 에르미트 제곱근 행렬이 존재한다.</p>
 <p>  (<span class="math inline">\(6\)</span>) <span class="math inline">\(\boldsymbol{A} = \boldsymbol{R}^\ast \boldsymbol{R}\)</span> 인 행렬 <span class="math inline">\(\boldsymbol{R}\)</span> 이 존재한다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 가 non-negative 이므로 정의에 의해 에르미트 행렬이다. <span class="math inline">\(\lambda\)</span> 가 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유값이고 <span class="math inline">\(\boldsymbol{v}\)</span> 가 <span class="math inline">\(\lambda\)</span> 에 대한 고유벡터 일 때, <span class="math inline">\(0 \le \langle \boldsymbol{Av},\, \boldsymbol{v}\rangle = \lambda \|\boldsymbol{v}\|^2\)</span> 이므로 <span class="math inline">\(\lambda \ge 0\)</span> 이다.</p>
 <p>(<span class="math inline">\(2 \implies 3\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 가 에르미트 행렬이므로 스펙트럼 정리에 의해 <span class="math inline">\(\boldsymbol{U}^\ast\boldsymbol{AU}\)</span> 를 대각행렬 <span class="math inline">\(\boldsymbol{D}\)</span> 로 하는 유니타리 행렬 <span class="math inline">\(\boldsymbol{U}\)</span> 가 존재한다. 대각성분이 고유값이므로 <span class="math inline">\(\boldsymbol{D}\)</span> 의 모든 대각성분은 실수이며 음수가 아니다.</p>
@@ -405,10 +408,13 @@ window.Quarto = {
 <p>(<span class="math inline">\(5 \implies 6\)</span>) 앞서 정의한 <span class="math inline">\(\boldsymbol{R}\)</span> 이다.</p>
 <p>(<span class="math inline">\(6 \implies 1\)</span>) <span class="math inline">\(\boldsymbol{A}=\boldsymbol{R}^\ast \boldsymbol{R}\)</span> 이면 <span class="math inline">\(\boldsymbol{A}^\ast = (\boldsymbol{R}^\ast\boldsymbol{R})^\ast = \boldsymbol{R}^\ast \boldsymbol{R}=\boldsymbol{A}\)</span> 이므로 <span class="math inline">\(\boldsymbol{A}\)</span> 는 에르미트 행렬이다. 또한 임의의 <span class="math inline">\(\boldsymbol{v}\in \mathcal{M}_{n }(\mathbb{C})\)</span> 에 대해 <span class="math inline">\(\langle \boldsymbol{v},\, \boldsymbol{A}\boldsymbol{v}\rangle = \langle \boldsymbol{R}^\ast \boldsymbol{R}\boldsymbol{v},\, \boldsymbol{v} \rangle = \|\boldsymbol{Rv}\|^2\ge 0\)</span> 이므로 <span class="math inline">\(\boldsymbol{A}\)</span> 는 non-negative 이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-uniqueness_of_squareroot_matrix" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 8.2</strong></span> non-negative 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 non-nagative 한 제곱근 행렬은 유일하다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>우리는 앞서 non-negative 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 non-negative 한 제곱근 행렬이 존재함을 보였다. 여기서는 이것이 유일함을 보인다. 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 non-negative 한 제곱근 행렬을 <span class="math inline">\(\boldsymbol{R}\)</span> 이라 하자. 스펙트럼 정리에 의해 <span class="math inline">\(\boldsymbol{R}\)</span> 에 대한 고유값 <span class="math inline">\(\eta_1,\ldots,\,\eta_n\)</span> 과 그에 대한 정규 고유 벡터 <span class="math inline">\(\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n\)</span> 이 존재한다. 이 때 <span class="math inline">\(\eta_i \ge 0\)</span> 이다. 임의의 벡터 <span class="math inline">\(\boldsymbol{v} = \sum_i a_i \boldsymbol{u}_i\)</span> 에 대해,</p>
 <p><span class="math display">\[
@@ -436,13 +442,16 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-squareroot_matrix" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 8.3</strong></span> 임의의 <span class="math inline">\(\boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\boldsymbol{B}^\ast \boldsymbol{B}\)</span> 를 생각 할 수 있다. 이 때 <span class="math inline">\(\boldsymbol{B}^\ast \in \mathcal{M}_{n \times m}(\mathbb{F})\)</span> 이다. <span class="math inline">\(\boldsymbol{B}^\ast \boldsymbol{B}\)</span> 는</p>
 <p>  (<span class="math inline">\(1\)</span>) 에르미트이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) non-negative 이다.</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\sqrt{\boldsymbol{B}^\ast \boldsymbol{B}}\)</span> 를 생각 할 수 있다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\((\boldsymbol{B}^\ast\boldsymbol{B})^\ast = \boldsymbol{B}^\ast\boldsymbol{B}\)</span> 이다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\langle \boldsymbol{B}^\ast\boldsymbol{Bv},\,\boldsymbol{v}\rangle = \|\boldsymbol{Bv}\|^2 \ge 0\)</span>.</p>
@@ -450,20 +459,24 @@ window.Quarto = {
 </div>
 <p><br></p>
 </section>
-</section>
-<section id="연습문제" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="연습문제"><span class="header-section-number">8.2</span> 연습문제</h2>
+<section id="연습문제" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_5_A_2" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 8.1 (Axler 5.A.2)</strong></span> <span class="math inline">\(\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 이고 <span class="math inline">\(\boldsymbol{AB}=\boldsymbol{BA}\)</span> 이면 <span class="math inline">\(\ker \boldsymbol{B}\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 불변부분공간이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\boldsymbol{u}\in \ker \boldsymbol{B}\)</span> 라 하자. <span class="math inline">\(\boldsymbol{BAu} =\boldsymbol{ABu} = \boldsymbol{0}\)</span> 이므로 <span class="math inline">\(\boldsymbol{Au}\in \ker \boldsymbol{B}\)</span> 이다.</p>
 </div>
+<p><br></p>
 </section>
-<section id="특이값-분해의-원리" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="특이값-분해의-원리"><span class="header-section-number">8.3</span> 특이값 분해의 원리</h2>
-<section id="특이값" class="level3" data-number="8.3.1">
-<h3 data-number="8.3.1" class="anchored" data-anchor-id="특이값"><span class="header-section-number">8.3.1</span> 특이값</h3>
+</section>
+<section id="특이값-분해의-원리" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="특이값-분해의-원리"><span class="header-section-number">8.2</span> 특이값 분해의 원리</h2>
+<section id="특이값" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="특이값"><span class="header-section-number">8.2.1</span> 특이값</h3>
 <p>우리는 앞에서 정사각 행렬에 대한 특이값 분해를 알아보았다. 이제 일반적인 행렬에 대한 특이값 분해를 보기로 하자. 여기서는 행렬을 주로 다룰 것이며 지금까지와는 다르게 굵은 글씨체로 하지 않겠다.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -477,6 +490,8 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-properties_of_AAast" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 8.4</strong></span> <span class="math inline">\(A\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(A^\ast A\)</span> 는 positive 행렬이다.</p>
@@ -484,38 +499,47 @@ window.Quarto = {
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\text{im}(A^\ast A) = \text{im}(A^\ast)\)</span>.</p>
 <p>  (<span class="math inline">\(4\)</span>) <span class="math inline">\(\text{rank}(A) = \text{rank}(A^\ast) = \text{rank}(A^\ast A)\)</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\((A^\ast A)^\ast = A^\ast A\)</span> 이므로 <span class="math inline">\(A^\ast A\)</span> 는 에르미트 행렬이다. 또한 <span class="math inline">\(\langle A^\ast Au,\, v\rangle = \|Au\|^2\ge 0\)</span> 이므로 <span class="math inline">\(A^\ast A\)</span> 는 positive 이다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(u\in \ker(A^\ast A) \implies \langle A^\ast Au,\, v\rangle = \|Au\|^2=0\)</span> 이므로 <span class="math inline">\(u\in \ker (A)\)</span>. 역으로 <span class="math inline">\(u\in \ker A\)</span> 이면 <span class="math inline">\(Au=0\)</span> 이므로 <span class="math inline">\(A^\ast A=0\)</span> 이며, 따라서 <span class="math inline">\(u\in \ker (A^\ast A)\)</span>. 따라서 <span class="math inline">\(\ker (A^\ast A) = \ker (A)\)</span>.</p>
 <p>(<span class="math inline">\(3\)</span>) <a href="ch1_08_operators_on_innerproduct_space.html#thm-kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> 과 (<span class="math inline">\(2\)</span>) 로부터 <span class="math inline">\(\text{im}(A^\ast A) = (\ker(A^\ast A))^\perp = (\ker (A))^\perp = \text{im}(A^\ast)\)</span> 임을 안다.</p>
-<p>(<span class="math inline">\(4\)</span>) <a href="ch1_08_operators_on_innerproduct_space.html#exr-axler_7_A_5" class="quarto-xref">연습문제&nbsp;<span>6.7</span></a> 로부터 <span class="math inline">\(\text{rank}(A) = \text{rank}(A^\ast)\)</span>. (<span class="math inline">\(3\)</span>) 으로부터 <span class="math inline">\(\text{rank}(A^\ast) = \text{rank}(A^\ast A)\)</span>. <span class="math inline">\(\square\)</span></p>
+<p>(<span class="math inline">\(4\)</span>) <a href="ch1_08_operators_on_innerproduct_space.html#exr-axler_7_A_5" class="quarto-xref">연습문제&nbsp;<span>6.9</span></a> 로부터 <span class="math inline">\(\text{rank}(A) = \text{rank}(A^\ast)\)</span>. (<span class="math inline">\(3\)</span>) 으로부터 <span class="math inline">\(\text{rank}(A^\ast) = \text{rank}(A^\ast A)\)</span>. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-properties_of_singular_value" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 8.5</strong></span> <span class="math inline">\(A\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 일 때 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(A\)</span> 가 단사일 필요충분조건은 <span class="math inline">\(0\)</span> 이 <span class="math inline">\(A\)</span> 의 특이값이 아닌 것이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(A\)</span> 의 0 이 아닌 특이값의 갯수는 반복되는 것도 갯수를 합치면 <span class="math inline">\(\text{rank}(A)\)</span> 와 같다.</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(A\)</span> 가 전사일 필요충분조건은 <span class="math inline">\(A\)</span> 의 특이값의 갯수가 <span class="math inline">\(n\)</span> 인 것이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(A\)</span> 가 단사 <span class="math inline">\(\iff \ker (A) = \{0\} \iff \ker(A^\ast A)= \{0\}\)</span></p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(A\)</span> 가 에르미트 이므로 <span class="math inline">\(\dim (A)\)</span> 는 <span class="math inline">\(A\)</span> 의 <span class="math inline">\(0\)</span> 이 아닌 고유값의 갯수(반복되는 것도 포함하여)와 같다. <a href="#prp-properties_of_AAast" class="quarto-xref">명제&nbsp;<span>8.4</span></a> 의 (<span class="math inline">\(4\)</span>) 에 따라 <span class="math inline">\(A\)</span> 의 특이값의 갯수는 <span class="math inline">\(\text{rank}(A)\)</span> 와 같다.</p>
 <p>(<span class="math inline">\(3\)</span>) (<span class="math inline">\(2\)</span>) 에 의헤 당연하다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-linear_isometry_and_singular_values" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 8.6</strong></span> 정사각 행렬 <span class="math inline">\(\boldsymbol{S}\)</span> 에 대해 다음은 동치이다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{S}\)</span> 는 linear isometry 이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{S}\)</span> 의 특이값이 <span class="math inline">\(1\)</span> 뿐이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) <span class="math inline">\(\boldsymbol{S}\)</span> 가 linear isometry 이면 <span class="math inline">\(\boldsymbol{S}^\ast\boldsymbol{S}=\boldsymbol{I}\)</span> 이며 따라서 <span class="math inline">\(\boldsymbol{S}\)</span> 의 특이값은 <span class="math inline">\(1\)</span> 뿐이다.</p>
 <p>(<span class="math inline">\(2\implies 1\)</span>) <span class="math inline">\(\boldsymbol{S}\)</span> 의 특이값이 <span class="math inline">\(1\)</span> 뿐이면 <span class="math inline">\(\boldsymbol{S}^\ast\boldsymbol{S}\)</span> 의 고유값이 <span class="math inline">\(1\)</span> 뿐이므로 <span class="math inline">\(\boldsymbol{S}^\ast\boldsymbol{S} = \boldsymbol{I}\)</span> 이다. 따라서 <span class="math inline">\(\boldsymbol{S}\)</span> 는 linear isometry 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 </section>
-<section id="특이값-분해" class="level3" data-number="8.3.2">
-<h3 data-number="8.3.2" class="anchored" data-anchor-id="특이값-분해"><span class="header-section-number">8.3.2</span> 특이값 분해</h3>
+<section id="특이값-분해" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="특이값-분해"><span class="header-section-number">8.2.2</span> 특이값 분해</h3>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-for_svd" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 8.7</strong></span> 영행렬이 아닌 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 의 <span class="math inline">\(0\)</span> 이 아닌 특이값 <span class="math inline">\(s_1,\ldots,\,s_M\)</span> 에 대해 <span class="math inline">\(\mathcal{M}_{n}(\mathbb{F})\)</span> 에 속하는 정규직교벡터 <span class="math inline">\(\{\boldsymbol{e}_1,\,\ldots,\,\boldsymbol{e}_n\}\)</span> 와 <span class="math inline">\(\mathcal{M}_m(\mathbb{F})\)</span> 에 속하는 정규직교벡터 <span class="math inline">\(\{\boldsymbol{f}_1,\ldots,\,\boldsymbol{f}_m \}\)</span> 가 존재하여 <span class="math inline">\(\boldsymbol{v}\in \mathcal{M}_n(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -523,6 +547,8 @@ window.Quarto = {
 \]</span></p>
 <p>이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{A}\)</span> 의 특이값의 갯수는 <span class="math inline">\(n\)</span> 개이다. 특이값을 <span class="math inline">\(s_1,\ldots,\,s_n\)</span> 이라고 하고 관례를 따라 <span class="math inline">\(s_1 \ge \cdots\ge s_n\)</span> 이라고 하면 <span class="math inline">\(s_1 \ge \cdots \ge s_M &gt;0\)</span> 이며 <span class="math inline">\(s_{M+1}= \cdots = s_{n}\)</span> 이다. <span class="math inline">\(\boldsymbol{A}^\ast\boldsymbol{A}\)</span> 의 고유값 <span class="math inline">\({s_i}^2\)</span> 에 대한 정규화된 <span class="math inline">\(\boldsymbol{A}^\ast\boldsymbol{A}\)</span> 의 고유벡터를 <span class="math inline">\(\{\boldsymbol{e}_i: i=1,\ldots,\,n\}\)</span> 라고 하자. 그리고 <span class="math inline">\(j=1,\ldots,\,M\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -556,7 +582,10 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<p><br></p>
 <p>왼쪽과 오른쪽이라는 이름은 특이값 분해에 대해 알게되면 자연스럽다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-svd_1" class="theorem">
 <p><span class="theorem-title"><strong>정리 8.1 (1차 특이값 분해)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 가 <span class="math inline">\(M=\text{rank} (\boldsymbol{A}) \ge 1\)</span> 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{B}\in \mathcal{M}_{m \times M}(\mathbb{F})\)</span> 과 대각행렬 <span class="math inline">\(\boldsymbol{D}\in \mathcal{M}_{M \times M}(\mathbb{F})\)</span> 그리고 역시 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{C}=\mathcal{M}_{n \times M}(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -564,6 +593,8 @@ window.Quarto = {
 \]</span></p>
 <p>이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-for_svd" class="quarto-xref">명제&nbsp;<span>8.7</span></a> 을 생각하자. 이제 <span class="math inline">\(\boldsymbol{B} = \begin{bmatrix} \boldsymbol{f}_1 &amp; \cdots &amp; \boldsymbol{f}_M\end{bmatrix}\)</span> 라 하고 <span class="math inline">\(\boldsymbol{D}\)</span> 는 <span class="math inline">\(D_{ij}= s_j\delta_{ij}\)</span> 가 되도록 하며 <span class="math inline">\(\boldsymbol{C} = \begin{bmatrix} \boldsymbol{e}_1 &amp; \cdots \boldsymbol{e}_M \end{bmatrix}\)</span> 라고 하자.</p>
 <p><span class="math display">\[
@@ -573,7 +604,8 @@ window.Quarto = {
 </div>
 <p><br></p>
 <p><a href="#thm-svd_1" class="quarto-xref">정리&nbsp;<span>8.1</span></a> 은 실제 계산에서 잘 사용하지 않으며, 약간 변형된 형태로 많이 사용한다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-svd_2" class="theorem">
 <p><span class="theorem-title"><strong>정리 8.2 (2차 특이값 분해)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 가 <span class="math inline">\(\text{rank} (\boldsymbol{A}) \ge 1\)</span> 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{U}\in \mathcal{M}_{m \times m}(\mathbb{F})\)</span> 과 대각성분이 1이며 나머지 성분은 0 인 직사각행렬 <span class="math inline">\(\boldsymbol{\Sigma}\in \mathcal{M}_{M \times n}(\mathbb{F})\)</span> 그리고 역시 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{V}=\mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -581,6 +613,8 @@ window.Quarto = {
 \]</span></p>
 <p>이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-for_svd" class="quarto-xref">명제&nbsp;<span>8.7</span></a> 를 생각하자. <span class="math inline">\(\boldsymbol{U} = \begin{bmatrix} \boldsymbol{f}_1 &amp; \cdots &amp; \boldsymbol{f}_m\end{bmatrix}\)</span> 라 하고 <span class="math inline">\(\boldsymbol{V}= \begin{bmatrix} \boldsymbol{e}_1 &amp; \cdots \boldsymbol{e}_n\end{bmatrix}\)</span> 라고 하자. (<a href="#thm-svd_1" class="quarto-xref">정리&nbsp;<span>8.1</span></a> 의 <span class="math inline">\(\boldsymbol{B},\, \boldsymbol{D}\)</span> 보다 큰데, 왼쪽 특이벡터와 오른쪽 특이벡터 전체를 사용한다.)</p>
 <p><a href="#thm-svd_1" class="quarto-xref">정리&nbsp;<span>8.1</span></a> 에서 <span class="math inline">\(\boldsymbol{D}\)</span> 는 <span class="math inline">\(M \times M\)</span> 행렬이며 <span class="math inline">\(M \le \text{min}(m, n)\)</span> 이다. <span class="math inline">\(m \times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{\Sigma}\)</span> 을 1행 1열부터 <span class="math inline">\(M\)</span> 행 <span class="math inline">\(M\)</span> 열 까지를 <span class="math inline">\(\boldsymbol{D}\)</span> 와 같은 값을 가지며 나머지는 <span class="math inline">\(0\)</span> 인 행렬로 정의하자. 그렇다면, 임의의 <span class="math inline">\(\boldsymbol{v}\in \mathcal{M}_{n}(\mathbb{F})\)</span> 에 대해</p>
@@ -594,7 +628,8 @@ window.Quarto = {
 <p>이다. 즉 <span class="math inline">\(\boldsymbol{A} = \boldsymbol {U\Sigma V}\)</span> 이다.</p>
 </div>
 <p>많은 경우 <a href="#thm-svd_2" class="quarto-xref">정리&nbsp;<span>8.2</span></a> 의 형태로 특이값 분해를 사용한다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-adjoint_of_svd" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 8.8</strong></span> <span class="math inline">\(\boldsymbol{A} \in \mathcal{M}_{m\times n}(\mathbb{F})\)</span> 의 오른쪽 특이벡터와 왼쪽 특이벡터는 각각 <span class="math inline">\(\boldsymbol{A}^\ast\)</span> 의 왼쪽 특이벡터와 오른쪽 특이벡터이다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 <span class="math inline">\(0\)</span> 이 아닌 특이값 <span class="math inline">\(s_1 \ge \cdots \ge s_M&gt;0\)</span> 을 가질 때 <span class="math inline">\(\boldsymbol{u}\in \mathcal{M}_m(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -602,6 +637,8 @@ window.Quarto = {
 \]</span></p>
 <p>이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{A}= \boldsymbol{U\Sigma V}^\ast\)</span> 이므로 <span class="math inline">\(\boldsymbol{A}^\ast = \boldsymbol{V\Sigma}^\ast \boldsymbol{U}^\ast\)</span> 이다. 그런데 <span class="math inline">\(\boldsymbol{\Sigma}\)</span> 는 대각성분은 실수이며, 대각성분을 제외한 행렬은 모두 <span class="math inline">\(0\)</span> 이므로 <span class="math inline">\(\boldsymbol{\Sigma}^\ast = \boldsymbol{\Sigma}^T\)</span> 이다. 즉 <span class="math inline">\(\boldsymbol{V\Sigma}^T\boldsymbol{U}^\ast\)</span> 는 <span class="math inline">\(\boldsymbol{A}^\ast\)</span> 의 특이값 분해이다. <span class="math inline">\(\boldsymbol{U} = \begin{bmatrix} \boldsymbol{f}_1 &amp; \cdots &amp; \boldsymbol{f}_m\end{bmatrix}\)</span> 이며 <span class="math inline">\(\{\boldsymbol{f}_j\}\)</span> 는 <span class="math inline">\(\mathcal{M}_m(\mathbb{F})\)</span> 의 정규직교기저이므로 <span class="math inline">\(\boldsymbol{u} = \sum_{j=1}^m \langle \boldsymbol{u},\,\boldsymbol{f}_j\rangle \boldsymbol{f}_j\)</span> 이다. 따라서,</p>
 <p><span class="math display">\[
@@ -609,7 +646,8 @@ window.Quarto = {
 \]</span></p>
 <p>이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-inverse_matrix_using_svd" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 8.9</strong></span> <span class="math inline">\(\boldsymbol{A}\)</span> 가 가역행렬이라고 하자. <span class="math inline">\(\boldsymbol{A}= \boldsymbol{U\Sigma V}^\ast\)</span> 일 때</p>
 <p><span class="math display">\[
@@ -620,6 +658,8 @@ window.Quarto = {
 \]</span></p>
 <p>이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{A}\)</span> 가 가역행렬이면 정사각 행렬이며, <a href="#prp-properties_of_singular_value" class="quarto-xref">명제&nbsp;<span>8.5</span></a> 에 따라 <span class="math inline">\(\boldsymbol{\Sigma}\)</span> 는 대각성분이 모두 <span class="math inline">\(0\)</span> 이 아닌 대각행렬이며 따라서 <span class="math inline">\(\boldsymbol{\Sigma\overline{\Sigma}} = \boldsymbol{I}\)</span> 이다. 이를 이용하면</p>
 <p><span class="math display">\[
@@ -630,16 +670,19 @@ window.Quarto = {
 <p><br></p>
 </section>
 </section>
-<section id="특이값-분해의-활용" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="특이값-분해의-활용"><span class="header-section-number">8.4</span> 특이값 분해의 활용</h2>
-<section id="행렬의-노름" class="level3" data-number="8.4.1">
-<h3 data-number="8.4.1" class="anchored" data-anchor-id="행렬의-노름"><span class="header-section-number">8.4.1</span> 행렬의 노름</h3>
+<section id="특이값-분해의-활용" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="특이값-분해의-활용"><span class="header-section-number">8.3</span> 특이값 분해의 활용</h2>
+<section id="행렬의-노름" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="행렬의-노름"><span class="header-section-number">8.3.1</span> 행렬의 노름</h3>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-norm_of_matrix" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 8.10</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 의 가장 큰 특이값을 <span class="math inline">\(s_M\)</span> 이라고 하면 다음이 성립한다.</p>
 <p><span class="math display">\[
 \forall \boldsymbol{v}\in \mathcal{M}_n(\mathbb{F}),\qquad \|\boldsymbol{Av}\| \le s_M \|\boldsymbol{v}\|.
 \]</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="#thm-svd_2" class="quarto-xref">정리&nbsp;<span>8.2</span></a> 의 증명과정에서 <span class="math inline">\(\boldsymbol{Av} = \sum_i s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{f}_i\)</span> 임을 알았다. 이를 이용하면</p>
 <p><span class="math display">\[
@@ -671,6 +714,8 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-anothor_definitions_of_matrix_norm" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 8.11 (노름의 다양한 정의)</strong></span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 다음 네 값은 같다. 즉 행렬의 노름에 대해 4가지 동등한 정의가 존재한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\max \{ \|\boldsymbol{Av}\| : \|\boldsymbol{v}\|=1 \}\)</span></p>
@@ -678,11 +723,14 @@ window.Quarto = {
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 의 최대 특이값.</p>
 <p>  (<span class="math inline">\(4\)</span>) <span class="math inline">\(\max \left\{ \dfrac{\|\boldsymbol{Av}\|}{\|\boldsymbol{v}\|} : \boldsymbol{v} \ne \boldsymbol{0}\right\}\)</span>.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(3\)</span>) 과 (<span class="math inline">\(4\)</span>) 가 같다는 것은 앞에서 설명했다. (<span class="math inline">\(2\)</span>) 에서 <span class="math inline">\(\|\boldsymbol{Av}\|\)</span> 를 최대로 하는 값이 <span class="math inline">\(|\boldsymbol{v}\|&lt;1\)</span> 이면 <span class="math inline">\(\boldsymbol{u}=\dfrac{\boldsymbol{v}}{\|\boldsymbol{v}\|}\)</span> 에 대해 <span class="math inline">\(\|\boldsymbol{u}\|=1\)</span> 이며 <span class="math inline">\(|\boldsymbol{Au}\| &gt; \|\boldsymbol{Av}|\)</span> 이므로 모순된다. 따라서 (<span class="math inline">\(2\)</span>) <span class="math inline">\(\|\boldsymbol{Av}\|\)</span> 를 최대로 하는 <span class="math inline">\(\|\boldsymbol{v}\|\)</span> 는 <span class="math inline">\(\|\boldsymbol{v}\|=1\)</span> 일 때이다. 따라서 (<span class="math inline">\(1\)</span>) 의 값과 (<span class="math inline">\(2\)</span>) 의 값은 같다.</p>
 <p>(<span class="math inline">\(4\)</span>) 의 값에 대해 <span class="math inline">\(\dfrac{\|\boldsymbol{Av}\|}{\|\boldsymbol{v}\|} = \left\|\boldsymbol{A} \left(\dfrac{\boldsymbol{v}}{\|\boldsymbol{v}\|}\right) \right\|\)</span> 이므로 (<span class="math inline">\(1\)</span>) 의 값과 같다. 따라서 위의 네 값은 같다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-properties_of_matrix_norm" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 8.12</strong></span> 행렬의 노름 <span class="math inline">\(\|\cdot \|\)</span> 에 대해 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\|\boldsymbol{A}\|\ge 0\)</span>.</p>
@@ -692,6 +740,8 @@ window.Quarto = {
 <p>  (<span class="math inline">\(5\)</span>) <span class="math inline">\(\|\boldsymbol{A}\| \|\boldsymbol{v}\| \ge \|\boldsymbol{Av}\|\)</span>.</p>
 <p>  (<span class="math inline">\(6\)</span>) <span class="math inline">\(\|\boldsymbol{A^\ast}\| = \| \boldsymbol{A}\|\)</span>.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) 노름의 정의에 의해 자명하다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{A}=0\)</span> 이면 당연히 <span class="math inline">\(\|\boldsymbol{A}\|=0\)</span> 이다. <span class="math inline">\(\|\boldsymbol{A}\|=0\)</span> 이면 모든 <span class="math inline">\(\boldsymbol{v}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{Av}=\boldsymbol{0}\)</span> 이어야 하므로 <span class="math inline">\(\boldsymbol{A}=\boldsymbol{0}\)</span> 이다.</p>
@@ -706,8 +756,8 @@ window.Quarto = {
 </div>
 <p><br></p>
 </section>
-<section id="approximation-by-linear-maps-with-lower-dimensional-range" class="level3" data-number="8.4.2">
-<h3 data-number="8.4.2" class="anchored" data-anchor-id="approximation-by-linear-maps-with-lower-dimensional-range"><span class="header-section-number">8.4.2</span> Approximation by Linear Maps with Lower-Dimensional Range</h3>
+<section id="approximation-by-linear-maps-with-lower-dimensional-range" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="approximation-by-linear-maps-with-lower-dimensional-range"><span class="header-section-number">8.3.2</span> Approximation by Linear Maps with Lower-Dimensional Range</h3>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -722,7 +772,8 @@ window.Quarto = {
 </div>
 </div>
 <p><span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 의 양의 특이값을 <span class="math inline">\(s_1 \ge s_2 \ge \ldots,\ge s_m&gt;0\)</span> 이라고 하자. 이것을 <span class="math inline">\(k&lt;m\)</span> 의 <span class="math inline">\(\text{rank}\)</span> 를 갖는 어떤 선형사상으로 근사(approximation) 하고자 하며, 가장 좋은 근사인 선형사상을 <span class="math inline">\(L_k\)</span> 라고 하자. 이 때 특이값 분해를 사용 할 수 있다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-approximation_using_svd" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 8.13</strong></span> <span class="math inline">\(\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 가 양의 특이값 <span class="math inline">\(s_1 \ge s_2 \ge \ldots \ge s_m&gt;0\)</span> 을 갖는다고 하자. <span class="math inline">\(k \le m\)</span> 에 대해 다음이 성립한다.</p>
 <p><span class="math display">\[
@@ -730,6 +781,8 @@ window.Quarto = {
 \]</span></p>
 <p>또한 <span class="math inline">\(\|\boldsymbol{A}-\boldsymbol{B}\| = s_{k+1}\)</span> 을 만족하는 그 <span class="math inline">\(\text{rank}\)</span> 가 <span class="math inline">\(k\)</span> 보다 작은 행렬이 존재한다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="#thm-svd_2" class="quarto-xref">정리&nbsp;<span>8.2</span></a> 를 생각하자. <span class="math inline">\(\boldsymbol{v}\in \mathcal{M}_n(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\boldsymbol{A}=\boldsymbol{U\Sigma V}^\ast\)</span> 이다. 이 때 <span class="math inline">\(\boldsymbol{V}_k = \begin{bmatrix} \boldsymbol{e}_1 &amp; \cdots &amp; \boldsymbol{e}_k &amp; 0 &amp; \cdots &amp; 0\end{bmatrix}\)</span> 라고 하고 <span class="math inline">\(\boldsymbol{A}_k = \boldsymbol{U\Sigma V}_k^\ast\)</span> 라고 하자.</p>
 <p><span class="math display">\[
@@ -769,11 +822,14 @@ a_1 \boldsymbol{Be}_1 + \cdots + a_{k+1}\boldsymbol{Be}_{k+1} = \boldsymbol{0}
 </div>
 <p><br></p>
 </section>
-<section id="극분해" class="level3" data-number="8.4.3">
-<h3 data-number="8.4.3" class="anchored" data-anchor-id="극분해"><span class="header-section-number">8.4.3</span> 극분해</h3>
+<section id="극분해" class="level3" data-number="8.3.3">
+<h3 data-number="8.3.3" class="anchored" data-anchor-id="극분해"><span class="header-section-number">8.3.3</span> 극분해</h3>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-polar_decomposition" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 8.14</strong></span> 정사각행렬 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 는 어떤 유니타리 행렬 <span class="math inline">\(\boldsymbol{U}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{A}=\boldsymbol{S}\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="#thm-svd_2" class="quarto-xref">정리&nbsp;<span>8.2</span></a> 형식의 특이값 분해 <span class="math inline">\(\boldsymbol{A}= \boldsymbol{U\Sigma V}^\ast\)</span> 를 사용한다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 정사각 행렬이므로 <span class="math inline">\(\boldsymbol{U},\,\boldsymbol{\Sigma},\, \boldsymbol{V}\)</span> 모두 정사각 행렬이다. <span class="math inline">\(\boldsymbol{\Sigma}\)</span> 는 실수 성분의 대각행렬이다. <span class="math inline">\(\boldsymbol{A}^\ast\boldsymbol{A} = \boldsymbol{V}\boldsymbol{\Sigma}^2\boldsymbol{V}^\ast\)</span> 이므로, <span class="math inline">\(\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}} = \boldsymbol{V\Sigma V}^\ast\)</span> 이다. 따라서 <span class="math inline">\(\boldsymbol{S}=\boldsymbol{UV}^\ast\)</span> 라고 하면 <span class="math inline">\(\boldsymbol{A} = \boldsymbol{S}\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -831,7 +887,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -863,29 +930,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -893,7 +938,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

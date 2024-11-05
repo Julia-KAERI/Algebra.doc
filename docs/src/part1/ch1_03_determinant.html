@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; 가우스 조단 소거법과 행렬식 – 대수학</title>
+<title>대수학 - 3&nbsp; 가우스 조단 소거법과 행렬식</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -107,13 +107,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part1/part1.html">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</a></li><li class="breadcrumb-item"><a href="../../src/part1/ch1_03_determinant.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">가우스 조단 소거법과 행렬식</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -145,7 +145,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part1/part1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -204,7 +204,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part2/part2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">II. 군 (Groups)</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -239,7 +239,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part3/part3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">III. 심화 선형대수학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -352,7 +352,7 @@ window.Quarto = {
   <li><a href="#sec-reduced_row_echelon_form_of_inverse_matrix" id="toc-sec-reduced_row_echelon_form_of_inverse_matrix" class="nav-link" data-scroll-target="#sec-reduced_row_echelon_form_of_inverse_matrix"><span class="header-section-number">3.6.4</span> 가역행렬의 행 간소 사다리꼴, 역행렬 과 행렬식</a></li>
   <li><a href="#sec-triangular_matrix" id="toc-sec-triangular_matrix" class="nav-link" data-scroll-target="#sec-triangular_matrix"><span class="header-section-number">3.6.5</span> 삼각행렬의 성질</a></li>
   </ul></li>
-  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제"><span class="header-section-number">3.7</span> 연습문제</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul>
 </nav>
     </div>
@@ -406,10 +406,13 @@ window.Quarto = {
 \boldsymbol{A}'_{i:} = \boldsymbol{A}_{i:} + r \boldsymbol{A}_{j:},\qquad \boldsymbol{A}'_{j:} = \boldsymbol{A}_{j:}
 \]</span></p>
 <p>이다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-elementary_row_operation" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 3.1</strong></span> 기본행 연산은 행렬에 대한 선형 연산이며, 가역연산이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>기본행 연산은 <span class="math inline">\(E:\mathcal{M}_{m \times n}(\mathbb{F}) \mapsto \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 함수로서 <span class="math inline">\(\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span>, <span class="math inline">\(c\in \mathbb{F}\)</span> 에 대해 <span class="math inline">\(E(\boldsymbol{A}+c\boldsymbol{B}) = E(\boldsymbol{A}) + cE(\boldsymbol{B})\)</span> 이다. <span class="math inline">\(\left(E^{(1)}(i, j)\right)^{-1} = E^{(1)}(i, j)\)</span> 이며, <span class="math inline">\(\left(E^{(2)}(i, t)\right)^{-1} = E^{(2)}(i, 1/t)\)</span> 이고 <span class="math inline">\(\left(E^{(3)}(i, j, r)\right)^{-1} = E^{(3)}(i, j, -r)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -451,13 +454,15 @@ window.Quarto = {
 <p><span class="math display">\[
 (\boldsymbol{E}_N \cdots \boldsymbol{E}_1)\boldsymbol{Au} = (\boldsymbol{E}_N \cdots \boldsymbol{E}_1) \boldsymbol{v} \iff \boldsymbol{Au} =\boldsymbol{v}
 \]</span></p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-infinite_number_of_operations" class="theorem example">
 <p><span class="theorem-title"><strong>보기 3.1</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 에서의 유한개의 가역연산자 <span class="math inline">\(T_1,\ldots,\,T_n \in \mathcal{L}(V)\)</span> 와 <span class="math inline">\(S\in \mathcal{L}\)</span> 에 대해</p>
 <p><span class="math display">\[
 (T_1 \circ \cdots \circ T_n \circ S)(u) = (T_1 \circ \cdots \circ T)(v) \iff S(u)= v
 \]</span></p>
 <p>이다. 그러나 무한개의 가역연산자의 경우를 생각하자. 항등연산자 <span class="math inline">\(I\)</span> 에 대해 <span class="math inline">\(T_k = \dfrac{1}{k}I\)</span>, <span class="math inline">\(k=1,\,2,\ldots\)</span> 라면 <span class="math inline">\((T_1 \circ \cdots)(u)=0\)</span> 이다. 즉 유한개의 가역연산의 합성은 가역연산이지만 무한개의 가역연산의 합성은 가역연산이라는 것을 보장 할 수 없다.</p>
+</div>
 </div>
 <p><br></p>
 </section>
@@ -489,11 +494,14 @@ window.Quarto = {
 \boldsymbol{A}_1 = \begin{bmatrix} \underline{2} &amp; 2 &amp; 0 \\0 &amp; 0 &amp; 0 \\ 0 &amp; \underline{1} &amp; 0\end{bmatrix} , \qquad\boldsymbol{A}_2 = \begin{bmatrix} 0 &amp; 0 &amp; \underline{3} \\ \underline{2} &amp; 0 &amp; 2\end{bmatrix}.
 \]</span></p>
 </div>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-echelon_matrix" class="theorem example">
 <p><span class="theorem-title"><strong>보기 3.3</strong></span> 다음 행렬은 사다리꼴 행렬이다.</p>
 <p><span class="math display">\[
 \begin{bmatrix} 1 &amp; 0 &amp; 2 &amp; -1 \\ 0 &amp; 2 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 3 &amp; 1\end{bmatrix} ,\qquad \begin{bmatrix}0 &amp; 1 &amp; 2  \\ 0 &amp; 0 &amp; 3  \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0\end{bmatrix}.
 \]</span></p>
+</div>
 </div>
 <p><br></p>
 <p>행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <span class="math inline">\(i\)</span> 행 <span class="math inline">\(j\)</span> 열 성분을 <span class="math inline">\(A_{ij}\)</span> 라고 쓴다. 이 때 <span class="math inline">\(i\)</span> 를 <em>행 인덱스</em>, <span class="math inline">\(j\)</span> 를 <em>열 인덱스</em>라 하자. 이제 모든 행렬은 기본 행 연산을 통해 행 사다리꼴 행렬로 변형될 수 있다는 것을 보이고자 한다. 우선 <span class="math inline">\(l(\boldsymbol{A}, j)\)</span> 는 <span class="math inline">\(\boldsymbol{A}_{:j}\)</span> 의 선행성분의 열인덱스라고 정의하고 <span class="math inline">\(k\)</span> 행에 대해 다음 두 과정을 생각하자.</p>
@@ -513,17 +521,22 @@ window.Quarto = {
 </div>
 <p><br></p>
 <p>차례로 <span class="math inline">\(1,\,2,\ldots,\, k-1\)</span> 행에 대해 각각의 행에서의 피보팅과 열소거를 수행한 결과의 행렬을 <span class="math inline">\(\boldsymbol{A}_{k-1}\)</span> 라고 하자. <span class="math inline">\(k\)</span> 행부터 마지막 <span class="math inline">\(m\)</span> 행까지가 모두 영벡터가 아니라면 피보팅이 가능하며, 피보팅 이후에는 <span class="math inline">\(k\)</span> 행이 영벡터가 아니게 된다. 열소거 까지 수행하면 <span class="math inline">\(p&gt;k\)</span> 행에 대해 <span class="math inline">\(l(\boldsymbol{A}_k, k) &lt; l (\boldsymbol{A}_{k}, p)\)</span> 이다. 즉 <span class="math inline">\(1\)</span> 행부터 <span class="math inline">\(j\)</span> 행 까지는 사다리꼴 행렬이다. 이것은 <span class="math inline">\(m-1\)</span> 행까지 피보팅과 열소거를 수행하거나, 나머지 행벡터가 모두 영벡터가 될 때 까지 계속하면 전체 행렬이 사다리꼴 행렬이 된다. 모든 과정은 유한번의 기본 행 연산으로 이루어지므로 우리는 다음을 알 수 있다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-echolon_matrix" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 3.2</strong></span> 행렬은 유한번의 기본행연산을 통해 행 사다리꼴 행렬이 될 수 있다.</p>
 </div>
-<div id="exr-echelon_form1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 3.1</strong></span> <span class="math inline">\(m \times n\)</span> 인 사다리꼴 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 를 생각하자. <span class="math inline">\(m&gt;n\)</span> 일 때 <span class="math inline">\(n\)</span> 보다 큰 행의 성분은 모두 <span class="math inline">\(0\)</span> 이다.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 가 사다리꼴 행렬이면 <span class="math inline">\(l(\boldsymbol{A}, i) \ge i\)</span> 인데 <span class="math inline">\(i&gt;n\)</span> 이면 <span class="math inline">\(n\)</span> 보다 큰 열은 존재하지 않는다. 따라서 이 열의 성분은 모두 <span class="math inline">\(0\)</span> 이다.</p>
 </div>
 <p><br></p>
-<p>:::</p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-echelon_form1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 3.1</strong></span> <span class="math inline">\(m \times n\)</span> 인 사다리꼴 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 를 생각하자. <span class="math inline">\(m&gt;n\)</span> 일 때 <span class="math inline">\(n\)</span> 보다 큰 행의 성분은 모두 <span class="math inline">\(0\)</span> 임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 가 사다리꼴 행렬이면 <span class="math inline">\(l(\boldsymbol{A}, i) \ge i\)</span> 인데 <span class="math inline">\(i&gt;n\)</span> 이면 <span class="math inline">\(n\)</span> 보다 큰 열은 존재하지 않는다. 따라서 이 열의 성분은 모두 <span class="math inline">\(0\)</span> 이다.</p>
+</div>
 <p><br></p>
 </section>
 <section id="sec-reduced_raw_echelon_matrix" class="level3" data-number="3.2.2">
@@ -563,8 +576,11 @@ window.Quarto = {
 <p><br></p>
 <p>행 사다리꼴 행렬에 대해서와 같이 1행부터 차례로 수행하며, 마지막 행까지 수행하거나(마지막 행에서는 피보팅을 할 필요가 없다), 어떤 행에 대해 수행했을 때, 그 행의 아래의 행이 모두 영벡터이면 이 과정이 종료된다. 행 사다리꼴 행렬에 비하면 [선행 1] 과정이 추가되었고, [열소거] 과정이 변경되었다. 행 사다리꼴 행렬에서 <span class="math inline">\(k\)</span> 행에 대한 열소거는 <span class="math inline">\(k\)</span> 행보다 아래 행에 대해 수행하지만, 행 간소 사다리꼴 행렬에서는 <span class="math inline">\(k\)</span> 행을 제외한 전체 행에 대해 수행한다. 이 결과로 나오는 행렬은 행 간소 사다리꼴 행렬의 정의를 만족한다.</p>
 <p>위의 모든 과정이 행 기본 연산에 의해 수행되기 때문에 우리는 다음을 증명하였다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-reduced_echelon_matrix" class="theorem">
 <p><span class="theorem-title"><strong>정리 3.1</strong></span> 모든 행렬은 유한번의 행 기본 연산에 의해 행 간소 사다리꼴 행렬이 된다.</p>
+</div>
 </div>
 <p><br></p>
 <div class="callout callout-style-simple callout-warning no-icon callout-titled">
@@ -631,7 +647,8 @@ window.Quarto = {
 \sigma = \begin{pmatrix} 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5  \\ 2 &amp; 3 &amp; 1 &amp; 5 &amp; 4\end{pmatrix}
 \]</span></p>
 <p>를 보자. <span class="math inline">\(1,\,2,\,3\)</span> 은 <span class="math inline">\(1,\,2,\,3\)</span> 내에서 <span class="math inline">\(4,\,5\)</span> 는 <span class="math inline">\(4,\,5\)</span> 내에서 순환됨을 알 수 있다. 이것은 합성순열처럼 <span class="math inline">\((1, 2, 3) (4, 5)\)</span> 로 쓸 수 있다. 하나의 <span class="math inline">\((\cdots)\)</span> 안에 <span class="math inline">\(k\)</span> 개의 숫자가 있을 때 <span class="math inline">\(k\)</span>-<strong>cycle</strong> 이라고 하며 각각의 <span class="math inline">\(k\)</span>-cycle 들을 cycle 이라고 한다. <span class="math inline">\((1, 3, 2, 4)\)</span> 는 4-cycle 이다. <span class="math inline">\(k=2\)</span> 일 경우는 특별히 <strong>호환 (transposition)</strong> 이라 한다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-basic_properties_of_permutation" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 3.3</strong></span> <span class="math inline">\(S_n\)</span> 에 대해 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\sigma \in S_n \implies \sigma^{-1} \in S_n\)</span>,</p>
@@ -642,6 +659,8 @@ window.Quarto = {
 <p>  (<span class="math inline">\(6\)</span>) <span class="math inline">\(\sigma\)</span> 가 호환이면 <span class="math inline">\(\sigma^2 = i_d\)</span> 이다.</p>
 <p>  (<span class="math inline">\(7\)</span>) <span class="math inline">\(\sigma\)</span> 가 <span class="math inline">\(k\)</span>-cycle 이면 <span class="math inline">\(\sigma^k = i_d\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>), (<span class="math inline">\(2\)</span>), (<span class="math inline">\(3\)</span>) 의 증명은 쉬우므로 생략한다.</p>
 <p>(<span class="math inline">\(4\)</span>) <span class="math inline">\(\sigma\in S_n\)</span> 이면 <span class="math inline">\(\sigma\)</span> 는 전단사 함수이므로 <span class="math inline">\(\sigma^{-1}\)</span> 이 존재하며 <span class="math inline">\(S_n\)</span> 의 정의에 의해 <span class="math inline">\(\sigma^{-1}\in S_n\)</span> 이다. <span class="math inline">\(\sigma = (\sigma^{-1})^{-1}\)</span> 이므로, 즉 모든 <span class="math inline">\(\sigma \in S_n\)</span> 은 어떤 <span class="math inline">\(\tau\in S_n\)</span> 에 대해 <span class="math inline">\(\sigma=\tau^{-1}\)</span> 이므로 증명된다.</p>
@@ -658,21 +677,31 @@ window.Quarto = {
 <section id="순열의-분해" class="level3" data-number="3.3.2">
 <h3 data-number="3.3.2" class="anchored" data-anchor-id="순열의-분해"><span class="header-section-number">3.3.2</span> 순열의 분해</h3>
 <p>두 cycle <span class="math inline">\(\sigma_1,\, \sigma_2 \in S_n\)</span> 에 대해 <span class="math inline">\(\sigma_1,\,\sigma_2\)</span> 에 겹치는 정수가 없을 때 두 cycle 을 <strong>disjoint</strong> 하다고 한다. 모든 순열은 disjoint 한 cycle 의 합성으로 표현 할 수 있다는 것은 쉽게 알 수 있다. 또한 <span class="math inline">\(\sigma,\, \tau\)</span> 가 disjoint 한 두 cycle 일 때 <span class="math inline">\(\sigma \circ \tau = \tau \circ \sigma\)</span> 임을 쉽게 예상 할 수 있다. 그러나 서로 disjoint 하지 않은 두 cycle 에 대해서는 교환법칙이 성립하지 않을 수 있다.</p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-non_disjoint_cycle_product" class="theorem example">
 <p><span class="theorem-title"><strong>보기 3.4</strong></span> <span class="math inline">\(\sigma = (1, 3, 2),\, \tau = (2, 4)\)</span> 라 하자. <span class="math inline">\(2\)</span> 가 <span class="math inline">\(\sigma,\,\tau\)</span> 에 모두 포함되므로 <span class="math inline">\(\sigma\)</span> 와 <span class="math inline">\(\tau\)</span> 는 disjoint 하지 않다. <span class="math inline">\((\sigma \circ\tau) (2) = 4\)</span> 이지만 <span class="math inline">\((\tau \circ \sigma)(2) = 1\)</span> 이다. 즉 이 경우에는 <span class="math inline">\(\sigma \circ \tau \ne \tau \circ \sigma\)</span> 이다.</p>
 </div>
-<p>순열 <span class="math inline">\(\sigma \in S_n\)</span> 은 disjoint cycles 의 곱으로 표현 할 수 있다. 그리고 이 곱은 교환법칙이 성립하므로 곱의 순서와는 무관하다. 순서를 고려하지 않을 때, 순열을 disjoint cycles 로 나누는 것을 <strong>순열의 분해</strong>라고 한다. 이제 순열의 분해에 대해 몇가지를 증명하자.</p>
+</div>
 <p><br></p>
+<p>순열 <span class="math inline">\(\sigma \in S_n\)</span> 은 disjoint cycles 의 곱으로 표현 할 수 있다. 그리고 이 곱은 교환법칙이 성립하므로 곱의 순서와는 무관하다. 순서를 고려하지 않을 때, 순열을 disjoint cycles 로 나누는 것을 <strong>순열의 분해</strong>라고 한다. 이제 순열의 분해에 대해 몇가지를 증명하자.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-uniqueness_discomposition_of_permutation" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 3.4</strong></span> 순열의 분해는 유일하다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\sigma \in S_n\)</span> 이 <span class="math inline">\(\sigma_1 \cdots \sigma_m\)</span> 과 <span class="math inline">\(\tau_1\cdots \tau_n\)</span> 으로 분해된다고 하자. 즉 <span class="math inline">\(\sigma_1,\ldots,\,\sigma_m\)</span> 은 서로 disjoint 하고 <span class="math inline">\(\tau_1,\ldots,\,\tau_n\)</span> 도 서로 disjoint 하다. <span class="math inline">\(i \in \sigma_1\)</span> 이면 <span class="math inline">\(i\in \tau_k\)</span> 가 존재해야 한다. 그리고 <span class="math inline">\(\sigma(i)\in \sigma_1,\, \sigma(i)\in \tau_k\)</span> 이어야 하며 (이 논리를 계속 따라가면), 따라서 <span class="math inline">\(\sigma_1 = \tau_k\)</span> 이어야 한다. 즉 모든 <span class="math inline">\(\sigma_j,\,i=1,\ldots,\,m\)</span> 에 대해 어떤 <span class="math inline">\(\tau_p,\, p=1,\ldots,\,m\)</span> 가 존재하여 <span class="math inline">\(\sigma_j = \tau_p\)</span> 이어야 한다. 역으로 모든 <span class="math inline">\(\tau_p\)</span> 에 대해 어떤 <span class="math inline">\(\sigma_j\)</span> 가 존재하여 <span class="math inline">\(\tau_p = \sigma_j\)</span> 이어야 한다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-decomposition_to_transposition" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 3.5</strong></span> 모든 순열은 호환(transposition) 의 합성으로 표현 할 수 있다. 이 호환의 합성은 유일하지 않다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>우리는 앞서 모든 순열이 disjoint cycles 의 합성으로 분해된다는 것을 보았다. 따라서 임의의 <span class="math inline">\(k\)</span>-cycle 이 호환의 합성으로 표현될 수 있다는 것을 아래와 같이 보이면 된다. <span class="math display">\[
 \begin{aligned}
@@ -693,10 +722,13 @@ window.Quarto = {
 &amp;= (1,\, 5)(3,\, 4)(2,\, 4)(1,\, 2)(2,\, 3).
 \end{aligned}
 \]</span></p>
-<p>그러나 순열을 호환의 합성으로 표현했을 때 호환의 갯수가 짝수개인지 홀수개인지는 불변이며 이것을 증명하고자 한다.</p>
+그러나 순열을 호환의 합성으로 표현했을 때 호환의 갯수가 짝수개인지 홀수개인지는 불변이며 이것을 증명하고자 한다. <br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-sgn_of_permutaion" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 3.1</strong></span> 호환 <span class="math inline">\(\tau_1,\ldots,\,\tau_m \in S_n\)</span> 이 <span class="math inline">\(\tau_m \cdots \tau_1=i_d\)</span> 이면 <span class="math inline">\(m\)</span> 은 항상 짝수이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\sigma =\tau_m \cdots \tau_1\)</span> 이라 하자. <span class="math inline">\(\tau_1,\ldots,\,\tau_m\)</span> 가운데 나타나는 자연수중 하나인 <span class="math inline">\(p\)</span> 를 선택하자 <span class="math inline">\(p\)</span> 가 나오는 <span class="math inline">\(\tau\)</span> 의 가장 작은 인덱스 <span class="math inline">\(j\)</span> 는 <span class="math inline">\(m\)</span> 이 아닌데 만약 <span class="math inline">\(p\)</span> 가 <span class="math inline">\(m\)</span> 에만 나온다면 <span class="math inline">\(\sigma (p) \ne p\)</span> 이기 때문이다. 즉 <span class="math inline">\(j\le m-1\)</span> 이다. 이 때 가능한 <span class="math inline">\(\tau_{j+1}\circ \tau_j\)</span> 는 아래의 네가지 형태중 하나이다.</p>
 <p><span class="math display">\[
@@ -709,10 +741,13 @@ window.Quarto = {
 \]</span></p>
 <p>즉 전체 <span class="math inline">\(\sigma\)</span> 의 입장에서 보면, <span class="math inline">\(\tau_{j+1}\circ \tau_j\)</span> 에 의해 <span class="math inline">\(p\)</span> 가 없어지면서 <span class="math inline">\(2\)</span> 개의 호한이 사라지거나, 호환의 갯수를 유지하면서 한칸 왼쪽으로 가는 순열과 같아진다. 계속 왼쪽으로 보내는 것을 반복하면 언젠가는 가장 왼쪽의 <span class="math inline">\(\tau_m\)</span> 위치에 오게되는데 이렇게 되면 앞서의 이유로 <span class="math inline">\(\sigma \ne i_d\)</span> 이다. 즉 언젠가는 <span class="math inline">\(2\)</span> 개의 호환이 사라져야 한다. <span class="math inline">\(\tau_1,\ldots,\,\tau_m\)</span> 에 나타나는 모든 자연수가 사라져야 하므로 <span class="math inline">\(\sigma = i_d\)</span> 가 되려면 <span class="math inline">\(m\)</span> 은 짝수여야 한다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-permutation_even_odd" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 3.6</strong></span> 순열을 분해했을 때의 호환의 갯수의 짝수/홀수 여부는 순열을 어떻게 분해하더라도 불변이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\sigma\in S_n\)</span> 이 <span class="math inline">\(\sigma = \tau_m\cdots \tau_1 = \tau'_n \cdots \tau'_1\)</span> 이라 하자. 우리가 보이고 싶은 것은 <span class="math inline">\(n\)</span> 이 짝수이면 <span class="math inline">\(m\)</span> 도 짝수, <span class="math inline">\(n\)</span> 이 홀수이면 <span class="math inline">\(m\)</span> 도 홀수라는 것이다. 이것은 <span class="math inline">\(m+n\)</span> 이 항상 짝수라는 것과 동치이다. 여기서 <span class="math inline">\(\tau_i,\,\tau'_j\)</span> 는 모두 호환이며 호환의 역원은 자기 자신이므로,</p>
 <p><span class="math display">\[
@@ -739,6 +774,7 @@ window.Quarto = {
 </div>
 <p><br></p>
 <p><span class="math inline">\(\text{sgn}\)</span> 함수에 대한 몇가지 성질을 보자.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-sgn_of_permutation" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 3.7</strong></span> <span class="math inline">\(\sigma,\, \tau \in S_n\)</span> 에 대해 다음이 성립한다.</p>
 <ol type="1">
@@ -746,11 +782,13 @@ window.Quarto = {
 <li><span class="math inline">\(\text{sgn}(\sigma) = \text{sgn}(\tau)\,\text{sgn}(\sigma)\,\text{sgn}(\tau)\)</span>.</li>
 </ol>
 </div>
+</div>
+<p><br></p>
 <p>증명은 쉬우므로 생략한다.</p>
 <p><br></p>
 </section>
 </section>
-<section id="sec-determinant_definition_using_symmetric_group" class="level2 page-columns page-full" data-number="3.4">
+<section id="sec-determinant_definition_using_symmetric_group" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="sec-determinant_definition_using_symmetric_group"><span class="header-section-number">3.4</span> 대칭군을 이용한 행렬식</h2>
 <p>행렬식을 도입하는 방법은 몇가지가 있다. 여기서는 우선 대칭군을 이용하여 행렬식을 도입하기로 한다.</p>
 <section id="행렬식의-정의" class="level3" data-number="3.4.1">
@@ -773,8 +811,9 @@ window.Quarto = {
 </div>
 <p><br></p>
 </section>
-<section id="det-함수의-기본적인-성질" class="level3 page-columns page-full" data-number="3.4.2">
+<section id="det-함수의-기본적인-성질" class="level3" data-number="3.4.2">
 <h3 data-number="3.4.2" class="anchored" data-anchor-id="det-함수의-기본적인-성질"><span class="header-section-number">3.4.2</span> <span class="math inline">\(\det\)</span> 함수의 기본적인 성질</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-determinant_of_identity" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 3.2</strong></span> 단위 벡터 <span class="math inline">\(\hat{\boldsymbol{e}}_i \in \mathcal{M}_{1 \times n}(\mathbb{F}),\, i=1,\ldots,\,n\)</span> 를</p>
 <p><span class="math display">\[
@@ -785,13 +824,16 @@ window.Quarto = {
 \]</span></p>
 <p>임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(e_{ij} = (\hat{\boldsymbol{e}}_i)_j = \delta_{ij}\)</span> 라 하면, <span class="math display">\[
 \sum_{\sigma\in S_n} \text{sgn}(\sigma) \prod_{i=1}^n e_{i\sigma(i)} = \sum_{\sigma\in S_n} \text{sgn}(\sigma) \prod_{i=1}^n \delta_{i\sigma(i)} = \text{sgn}(i_d)=1
 \;\square
 \]</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-determinant_change_of_order" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 3.3</strong></span> 정해진 <span class="math inline">\(\tau \in S_n\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -799,6 +841,8 @@ window.Quarto = {
 \]</span></p>
 <p>임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\text{sgn}(\tau \circ \tau^{-1})=1\)</span> 이므로 임의의 <span class="math inline">\(\sigma\in S_n\)</span> 에 대해 <span class="math inline">\(\text{sgn}(\sigma) = \text{sgn}(\tau) \,\text{sgn}(\sigma \circ \tau^{-1})\)</span> 임을 이용한다. 우선 정의에 의해 <span class="math display">\[
 \begin{aligned}
@@ -818,31 +862,38 @@ window.Quarto = {
 \det (\boldsymbol{a}_{\tau(1)},\ldots,\boldsymbol{a}_{\tau(n)}) =\text{sgn}(\tau) \,\det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_n)
 \]</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
-<div id="prp-altermating_form_of_determinant" class="theorem proposition page-columns page-full">
-<div class="page-columns page-full"><p><span class="theorem-title"><strong>명제 3.8</strong></span> <span class="math inline">\(i\ne j\)</span> 에 대해 <span class="math inline">\(i\)</span> 번째 벡터와 <span class="math inline">\(j\)</span> 번째 벡터를 바꿨을 때, 다음이 성립한다.  <span class="math display">\[
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-altermating_form_of_determinant" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 3.8</strong></span> <span class="math inline">\(i\ne j\)</span> 에 대해 <span class="math inline">\(i\)</span> 번째 벡터와 <span class="math inline">\(j\)</span> 번째 벡터를 바꿨을 때, 다음이 성립한다. <span class="math display">\[
 \det(\boldsymbol{a}_1,\ldots,\boldsymbol{a}_i,\ldots,\,\boldsymbol{a}_j,\ldots,\boldsymbol{a}_n) = - \det(\boldsymbol{a}_1,\ldots,\boldsymbol{a}_j,\ldots,\,\boldsymbol{a}_i,\ldots,\boldsymbol{a}_n)
-\]</span></p><div class="no-row-height column-margin column-container"><span class="margin-aside"><a href="#prp-altermating_form_of_determinant" class="quarto-xref">명제&nbsp;<span>3.8</span></a> 의 성질을 만족하는 <span class="math inline">\(V^n \mapsto \mathbb{F}\)</span> 함수를 <a href="../../src/part3/bilinear_form.html#def-alternating_form">alternating bilinear form</a> 이라고 한다.</span></div></div>
+\]</span></p>
 <p>또한 <span class="math inline">\(\boldsymbol{a}_i = \boldsymbol{a}_j\)</span> 이면, 행렬식이 <span class="math inline">\(0\)</span> 이다. 즉,</p>
 <p><span class="math display">\[
 \det (\ldots,\boldsymbol{a},\ldots,\boldsymbol{a},\ldots) =  0
 \]</span></p>
 <p>이 성립한다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>호환 <span class="math inline">\(\tau = (i,\,j)\)</span> 를 생각하면 <span class="math inline">\(\text{sgn}(\tau) =  -1\)</span> 이므로 첫번째 식을 증명한다. <span class="math inline">\(\boldsymbol{a}_i = \boldsymbol{a}_j\)</span> 이면 <span class="math inline">\(\det (\ldots,\boldsymbol{a},\ldots,\,\boldsymbol{a},\ldots) = - \det (\ldots,\boldsymbol{a},\ldots,\,\boldsymbol{a},\ldots)\)</span> 이므로 행렬식이 <span class="math inline">\(0\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
+<p><a href="#prp-altermating_form_of_determinant" class="quarto-xref">명제&nbsp;<span>3.8</span></a> 의 성질을 만족하는 <span class="math inline">\(V^n \mapsto \mathbb{F}\)</span> 함수를 <a href="../../src/part3/bilinear_form.html#def-alternating_form">alternating bilinear form</a> 이라고 한다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-bilinearity_of_determinant" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 3.9</strong></span> <span class="math inline">\(\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n\in \mathcal{M}_{1\times n}(\mathbb{F})\)</span>, <span class="math inline">\(c \in \mathbb{F}\)</span> 와 임의의 <span class="math inline">\(1\le j \le n\)</span> 에서의 <span class="math inline">\(\boldsymbol{a}'_j \in \mathbb{F}^{1\times n}\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>명제 3.9</strong></span> <span class="math inline">\(\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n\in \mathcal{M}_{1\times n}(\mathbb{F})\)</span>, <span class="math inline">\(c \in \mathbb{F}\)</span> 와 임의의 <span class="math inline">\(1\le j \le n\)</span> 에서의 <span class="math inline">\(\boldsymbol{a}'_j \in \mathbb{F}^{1\times n}\)</span> 에 대해 다음이 성립한다.</p>
 <p><span class="math display">\[
 \begin{aligned}
 \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_j + &amp;c\boldsymbol{a}'_j, \ldots,\boldsymbol{a}_n) =\\
-&amp; \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_j,\ldots,\boldsymbol{a}_n) + c \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}'_j,\ldots,\boldsymbol{a}_n)
+&amp; \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_j,\ldots,\boldsymbol{a}_n) + c \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}'_j,\ldots,\boldsymbol{a}_n).
 \end{aligned}
 \]</span></p>
-<p>이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math display">\[
 \begin{aligned}
@@ -856,15 +907,19 @@ window.Quarto = {
 </div>
 <p><br></p>
 <p>이를 이용하면 다음을 쉽게 보일 수 있다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-determinant_scala_multiple" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 3.10</strong></span> <span class="math display">\[
-\det (c_1 \boldsymbol{a}_1, \ldots, c_n \boldsymbol{a}_n) = c_1 \cdots c_n \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_n)
-\]</span></p>
+<p><span class="theorem-title"><strong>명제 3.10</strong></span> <span class="math inline">\(\det (c_1 \boldsymbol{a}_1, \ldots, c_n \boldsymbol{a}_n) = c_1 \cdots c_n \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_n)\)</span></p>
 </div>
-<p><br></p>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-linear_dependency_and_determinant" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 3.11 (선형종속과 행렬식)</strong></span> <span class="math inline">\(\boldsymbol{a}_1,\ldots,\boldsymbol{a}_n\in \mathcal{M}_{1\times n}(\mathbb{F})\)</span> 가 선형종속이면 <span class="math inline">\(\det(\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n)=0\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>마지막 <span class="math inline">\(\boldsymbol{a}_n\)</span> 이 다른 벡터들의 선형결합이라고 하자. <span class="math inline">\(\boldsymbol{a}_n = \sum_i^{n-1} c_i \boldsymbol{a}_i\)</span> 라면, <a href="#prp-altermating_form_of_determinant" class="quarto-xref">명제&nbsp;<span>3.8</span></a>, <a href="#prp-bilinearity_of_determinant" class="quarto-xref">명제&nbsp;<span>3.9</span></a> 를 이용하여 다음을 보일 수 있다.</p>
 <p><span class="math display">\[
@@ -879,7 +934,7 @@ window.Quarto = {
 </div>
 <p><br></p>
 </section>
-<section id="sec-determinant" class="level3 page-columns page-full" data-number="3.4.3">
+<section id="sec-determinant" class="level3" data-number="3.4.3">
 <h3 data-number="3.4.3" class="anchored" data-anchor-id="sec-determinant"><span class="header-section-number">3.4.3</span> 행렬식</h3>
 <p>이제 <span class="math inline">\(\mathcal{M}_{1 \times n}(\mathbb{F})\)</span> 에 속하는 행벡터 <span class="math inline">\(n\)</span> 개에 대한 함수를 <span class="math inline">\(\mathcal{M}_{n \times n}(\mathbb{F})\)</span> 행렬의 각 행벡터에 대한 함수로 생각하자. 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <span class="math inline">\(i\)</span> 번째 행을 <span class="math inline">\(\boldsymbol{A}_{i:}\)</span> 라고 하자. 이 때 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 행렬식 <span class="math inline">\(\det(\boldsymbol{A})\)</span> 를 <span class="math inline">\(\det (\boldsymbol{A}_{1:},\ldots,\boldsymbol{A}_{n:})\)</span> 로 정의한다.</p>
 <div class="callout callout-style-simple callout-note no-icon">
@@ -897,7 +952,8 @@ window.Quarto = {
 </div>
 </div>
 <p>이제 앞서의 증명들로부터 <span class="math inline">\(n\times n\)</span> 행렬에 대한 행렬식 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 다음이 성립함을 쉽게 보일 수 있다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-elementary_row_operation_and_determinant" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 3.12 (행 기본 연산과 행렬식)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 라고 하자. <a href="#def-elementary_row_operation" class="quarto-xref">정의&nbsp;<span>3.1</span></a> 에서 정의된 행 기본연산 <span class="math inline">\(E^{(1)},\, E^{(2)},\, E^{(3)}\)</span> 에 대해 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\det(\boldsymbol{I}_n) = 1\)</span></p>
@@ -905,6 +961,8 @@ window.Quarto = {
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\det\left(E^{(2)}(i, t)\boldsymbol{A}\right) = t\det(\boldsymbol{A})\)</span>.</p>
 <p>  (<span class="math inline">\(4\)</span>) <span class="math inline">\(\det \left( E^{(3)}(i,j, r)\boldsymbol{A} \right) = \det(\boldsymbol{A})\)</span>.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <a href="#exr-determinant_of_identity" class="quarto-xref">연습문제&nbsp;<span>3.2</span></a></p>
 <p>(<span class="math inline">\(2\)</span>) <a href="#prp-altermating_form_of_determinant" class="quarto-xref">명제&nbsp;<span>3.8</span></a></p>
@@ -929,25 +987,28 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-transpose_matrix" class="theorem example">
 <p><span class="theorem-title"><strong>보기 3.5 (전치행렬의 성질)</strong></span> <span class="math inline">\(\boldsymbol{A}\)</span> 가 <span class="math inline">\(m \times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{B}\)</span> 가 <span class="math inline">\(n \times l\)</span> 행렬이며 <span class="math inline">\(\lambda \in \mathbb{F}\)</span> 일 때 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\left(\boldsymbol{A}^{T}\right)^{T} = \boldsymbol{A}\)</span>,</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\((\lambda \boldsymbol{A})^T = \lambda (\boldsymbol{A})^T\)</span></p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\((\boldsymbol{AB})^T = \boldsymbol{B}^T\boldsymbol{A}^T\)</span></p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(\text{3}\)</span>) 만을 증명한다.</p>
+<p>쉽게 증명 할 수 있으므로 (<span class="math inline">\(\text{3}\)</span>) 만을 증명한다.</p>
 <p><span class="math display">\[
 \begin{aligned}
 \left(\left( \boldsymbol{AB} \right)^T \right)_{ij} = (\boldsymbol{AB})_{ji} = \sum_{k=1}^n A_{jk} B_{ki} = \sum_{k=1}^n \left( \boldsymbol{B}^T\right)_{ik}\left(\boldsymbol{A}^T\right)_{kj} = (\boldsymbol{B}^T\boldsymbol{A}^T)_{ij}
 \end{aligned}
-\]</span> <span class="math inline">\(\square\)</span></p>
+\]</span></p>
+</div>
 </div>
 <p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-determinant_of_transpose" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 3.13</strong></span> <span class="math inline">\(n\times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 <span class="math inline">\(\det (\boldsymbol{A}^T) = \det (\boldsymbol{A})\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>전치행렬 <span class="math inline">\(\boldsymbol{A}^T\)</span> 의 행렬식은 <span class="math display">\[
 \begin{aligned}
@@ -967,25 +1028,36 @@ window.Quarto = {
 </div>
 <p><br></p>
 <p>이제 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 행들 <span class="math inline">\(\{\boldsymbol{A}_{1:},\ldots,\,\boldsymbol{A}_{n:}\}\)</span> 에 대한 <a href="#prp-elementary_row_operation_and_determinant" class="quarto-xref">명제&nbsp;<span>3.12</span></a> 가 열들 <span class="math inline">\(\{\boldsymbol{A}_{:1},\ldots,\boldsymbol{A}_{:n}\}\)</span> 에 대해서도 똑같이 성립한다는 것은 쉽게 보일 수 있다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-elementary_column_operation_and_determinant" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 3.14 (행렬의 열에 대한 연산과 행렬식)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 라고 하자.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 의 두 열을 바꾸었을 때의 행렬식은 원래의 행렬식에 <span class="math inline">\(-1\)</span> 을 곱한 값이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 의 한 열에 상수 <span class="math inline">\(c\)</span> 를 곱한 행렬의 행렬식은 원래의 행렬식에 <span class="math inline">\(c\)</span> 를 곱한 값이다.</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 의 <span class="math inline">\(i\)</span> 번째 열에 <span class="math inline">\(c \times\)</span> [<span class="math inline">\(j\)</span> 번째 열] 을 더한 행렬의 행렬식은 원래 행렬식과 같다.</p>
 </div>
+</div>
 <p><br></p>
 <p>이제 행렬식과 정사각 행렬의 성질에 관한 중요한 명제를 제시한다. 증명은 이미 우리가 했다.</p>
-<div id="prp-zero_determinant_of_linear_dependency" class="theorem proposition page-columns page-full">
-<div class="page-columns page-full"><p><span class="theorem-title"><strong>명제 3.15</strong></span> 정사각행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 행벡터가 선형 종속일 경우 그 행렬식은 <span class="math inline">\(0\)</span> 이다. <span class="math inline">\(\boldsymbol{A}\)</span> 의 열벡터가 선형 종속이어도 그 행렬식은 <span class="math inline">\(0\)</span> 이다. </p><div class="no-row-height column-margin column-container"><span class="margin-aside">이 명제의 역, 즉 행렬식이 <span class="math inline">\(0\)</span> 경우 행벡터와 열벡터가 선형독립인 것은 이후에 보이게 된다. (<a href="#prp-determinant_of_invertible_matrix" class="quarto-xref">명제&nbsp;<span>3.25</span></a>)</span></div></div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-zero_determinant_of_linear_dependency" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 3.15</strong></span> 정사각행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 행벡터가 선형 종속일 경우 그 행렬식은 <span class="math inline">\(0\)</span> 이다. <span class="math inline">\(\boldsymbol{A}\)</span> 의 열벡터가 선형 종속이어도 그 행렬식은 <span class="math inline">\(0\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-linear_dependency_and_determinant" class="quarto-xref">명제&nbsp;<span>3.11</span></a></p>
 </div>
 <p><br></p>
+<p>이 명제의 역, 즉 행렬식이 <span class="math inline">\(0\)</span> 경우 행벡터와 열벡터가 선형독립인 것은 이후 (<a href="#prp-determinant_of_invertible_matrix" class="quarto-xref">명제&nbsp;<span>3.26</span></a>) 에 보이게 된다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-determinant_product_of_matrix" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 3.16</strong></span> <span class="math inline">\(n \times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A},\,\boldsymbol{B}\)</span> 에 대해 <span class="math inline">\(\det (\boldsymbol{AB})= \det(\boldsymbol{A})\det (\boldsymbol{B})\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>행렬 <span class="math inline">\(\boldsymbol{AB}\)</span> 의 <span class="math inline">\(j\)</span> 번째 행 <span class="math inline">\((\boldsymbol{AB})_{j:}\)</span> 는 다음과 같이 표현 할 수 있다. <span class="math display">\[
 \begin{aligned}
@@ -1012,9 +1084,13 @@ window.Quarto = {
 </div>
 <p><br></p>
 <p>아직 우리는 가역행렬과 행렬식의 관계에 대해 알아보지 않았다. 다음 장에서 보이겠지만 어떤 정사각 행렬의 행렬식이 <span class="math inline">\(0\)</span> 이 아니라는 것과 그 행렬이 가역행렬이라는 것은 동치이다. 즉 가역행렬의 행렬식은 <span class="math inline">\(0\)</span> 이 아니라는 것을 잠시동안 우리가 알고 있다고 가정하자. 그렇다면 아래의 유용한 성질을 알게 된다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="cor-derterminant_of_inverse_matrix" class="theorem corollary">
 <p><span class="theorem-title"><strong>따름정리 3.1</strong></span> <span class="math inline">\(n\times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 가 가역행렬일 때 <span class="math inline">\(\det (\boldsymbol{A}^{-1}) = \dfrac{1}{\det (\boldsymbol{A})}\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{AA}^{-1}=\boldsymbol{I}\)</span> 이며 <span class="math inline">\(\det (\boldsymbol{I})=1\)</span> 이므로,</p>
 <p><span class="math display">\[
@@ -1058,12 +1134,10 @@ window.Quarto = {
 <section id="sec-basic_properties_of_matrix" class="level3" data-number="3.5.2">
 <h3 data-number="3.5.2" class="anchored" data-anchor-id="sec-basic_properties_of_matrix"><span class="header-section-number">3.5.2</span> 행렬에 대한 몇가지 기본적인 성질들</h3>
 <p>이제 행렬의 몇가지 기본적인 성질들을 보이려고 한다. 이것들은 유용하긴 하지만 Theorem 이나 Lemma, Proposition 등의 좀 거창인 이름을 붙일 정도는 아니기 때문에 <strong>보기</strong> 로 돌린다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-multiplication_of_diagonal_matrix" class="theorem example">
-<p><span class="theorem-title"><strong>보기 3.6</strong></span> 대각행렬의 곱은 대각행렬이다. 상 삼각 행렬의 곱은 상 삼각 행렬이다. 하 삼각 행렬의 곱은 하 삼각 행렬이다.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{D},\,\boldsymbol{F}\)</span> 가 모두 <span class="math inline">\(n \times n\)</span> 대각행렬이라 하자. <span class="math inline">\(D_{ij} = d_i \delta_{ij},\, F_{ij} = f_i \delta_{ij}\)</span> 이므로,</p>
+<p><span class="theorem-title"><strong>보기 3.6 (대각행렬, 상삼각행렬, 하삼각행렬의 곱)</strong></span> 대각행렬의 곱은 대각행렬이다. 상 삼각 행렬의 곱은 상 삼각 행렬이다. 하 삼각 행렬의 곱은 하 삼각 행렬이다. <span class="math inline">\(\boldsymbol{D},\,\boldsymbol{F}\)</span> 가 모두 <span class="math inline">\(n \times n\)</span> 대각행렬이라 하자. <span class="math inline">\(D_{ij} = d_i \delta_{ij},\, F_{ij} = f_i \delta_{ij}\)</span> 이므로,</p>
 <p><span class="math display">\[
 (\boldsymbol{DF})_{ij} = \sum_k D_{ik}F_{kj} = \sum_k d_i \delta_{ik} f_j \delta_{kj} = d_i f_i \delta_{ij}
 \]</span></p>
@@ -1072,22 +1146,22 @@ window.Quarto = {
 <p><span class="math display">\[
 (\boldsymbol{UV})_{ij} = \sum_k U_{ik}V_{kj} = \sum_{k\ge i, k \le j} U_{ik}V_{kj}
 \]</span></p>
-<p>이다. 그런데 <span class="math inline">\(i&gt;j\)</span> 이면 <span class="math inline">\(i \le k \le j\)</span> 인 <span class="math inline">\(k\)</span> 가 존재하지 않으므로 <span class="math inline">\((\boldsymbol{UV})_{ij} =0\)</span> 이다. 즉 <span class="math inline">\(\boldsymbol{UV}\)</span> 는 상 삼각 행렬이다. 하삼각 행렬의 곱이 하삼각행렬이라는 것은 비슷한 방법으로 보일 수 있다. <span class="math inline">\(\square\)</span></p>
+<p>이다. 그런데 <span class="math inline">\(i&gt;j\)</span> 이면 <span class="math inline">\(i \le k \le j\)</span> 인 <span class="math inline">\(k\)</span> 가 존재하지 않으므로 <span class="math inline">\((\boldsymbol{UV})_{ij} =0\)</span> 이다. 즉 <span class="math inline">\(\boldsymbol{UV}\)</span> 는 상 삼각 행렬이다. 하삼각 행렬의 곱이 하삼각행렬이라는 것은 비슷한 방법으로 보일 수 있다.</p>
+</div>
 </div>
 <p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-determinant_of_upper_lower_triangular_matrix" class="theorem example">
 <p><span class="theorem-title"><strong>보기 3.7</strong></span> 대각 행렬, 상 삼각 행렬과 하삼각 행렬의 행렬식은 그 대각성분의 곱과 같다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 대각행렬, 상 삼각 행렬 혹은 하 삼각 행렬일 때,</p>
 <p><span class="math display">\[
 \det (\boldsymbol{A}) = \prod_{i=1}^n A_{ii}
 \]</span></p>
-<p>이다.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(n\times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 가 상삼각 행렬 이라 하자. <span class="math inline">\(i&gt;j\)</span> 이면 <span class="math inline">\(A_{ij}=0\)</span> 이다. <span class="math display">\[
+<p>임을 보이자. <span class="math inline">\(n\times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 가 상삼각 행렬 이라 하자. <span class="math inline">\(i&gt;j\)</span> 이면 <span class="math inline">\(A_{ij}=0\)</span> 이다. <span class="math display">\[
 \det (\boldsymbol{A}) = \sum_{\sigma \in S_n} \text{sgn}(\sigma) \prod_{i=1}^n A_{i \sigma(i)}
 \]</span> 에서 <span class="math inline">\(\displaystyle \prod_{i=1}^n A_{i\sigma(i)} \ne 0\)</span> 이려면 모든 <span class="math inline">\(i=1,\ldots,\,n\)</span> 에 대해 <span class="math inline">\(\sigma(i)\ge i\)</span> 이어야 한다. 그런데 가능한 경우는 <span class="math inline">\(\sigma(1) = 1,\, \sigma(2) = 2,\ldots\)</span> 일 수 밖에 없으며 따라서, <span class="math display">\[
 \det (\boldsymbol{A}) = \text{sgn}(i_d) A_{11} \cdots A_{nn} = \prod_{i=1}^n A_{ii}
 \]</span> 이다. <span class="math inline">\(\boldsymbol{B}\)</span> 가 하 삼각 행렬이면 <span class="math inline">\(\boldsymbol{B}^T\)</span> 는 상 삼각 행렬이므로 역시 행렬식은 대각성분의 곱이다. 대각행렬은 상삼각행렬이며 하 삼각 행렬이므로 역시 그 행렬식은 대각성분의 곱이다. <span class="math inline">\(\square\)</span></p>
+</div>
 </div>
 <p><br></p>
 </section>
@@ -1121,10 +1195,13 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-determinant_of_block_matrix" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 3.17 (블록대각행렬의 행렬식)</strong></span> <span class="math inline">\(\boldsymbol{B} \in \mathcal{M}_{m \times m}(\mathbb{F}),\, \boldsymbol{D}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 블록 정사각 행렬 <span class="math inline">\(\boldsymbol{A}= \begin{bmatrix} \boldsymbol{B}&amp; \boldsymbol{0} \\ \boldsymbol{0} &amp; \boldsymbol{D}\end{bmatrix} \in \mathcal{M}_{(m+n)\times (m+n)}(\mathbb{F})\)</span> 의 행렬식이 <span class="math inline">\(\det (\boldsymbol{A}) = \det(\boldsymbol{B}) \det(\boldsymbol{D})\)</span> 임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>행렬식의 정의에 의해 <span class="math display">\[
 \begin{aligned}
@@ -1144,7 +1221,8 @@ window.Quarto = {
 \]</span></p>
 <p>이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-determinant_of_bloc_triangular_matrix" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 3.18 (블록 삼각행렬의 행렬식)</strong></span> <span class="math inline">\(\boldsymbol{B}\in \mathcal{M}_{m \times m}(\mathbb{F}),\, \boldsymbol{D}\in \mathcal{M}_{n\times n}(\mathbb{F}),\, \boldsymbol{C}=\mathcal{M}_{n \times m}(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -1152,6 +1230,8 @@ window.Quarto = {
 \]</span></p>
 <p>임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\boldsymbol{B}\)</span> 가 가역행렬이 아니라면 가우스 소거법으로 <span class="math inline">\(1\)</span> 행부터 <span class="math inline">\(m\)</span> 행 까지 중에 <span class="math inline">\(0\)</span> 으로만 이루어지 행을 만들 수 있으며 따라서 행렬식은 <span class="math inline">\(0\)</span> 이다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 가역행렬이라면</p>
 <p><span class="math display">\[
@@ -1159,17 +1239,22 @@ window.Quarto = {
 \]</span></p>
 <p>첫번째 행렬은 하삼각행렬이므로 행렬식은 대각성분의 곱인 <span class="math inline">\(1\)</span> 이다. <a href="#prp-determinant_of_block_matrix" class="quarto-xref">명제&nbsp;<span>3.17</span></a> 을 보라.</p>
 </div>
-<p><br></p>
-<div id="exm-inverse_matrix" class="theorem example">
-<p><span class="theorem-title"><strong>보기 3.8 (역행열의 성질)</strong></span> <span class="math inline">\(\boldsymbol{A},\,\boldsymbol{B}\)</span> 가 가역행렬이고 <span class="math inline">\(\lambda \in \mathbb{F}\)</span> 일 때 다음이 성립한다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-inverse_matrix" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 3.19 (역행열의 성질)</strong></span> <span class="math inline">\(\boldsymbol{A},\,\boldsymbol{B}\)</span> 가 가역행렬이고 <span class="math inline">\(\lambda \in \mathbb{F}\)</span> 일 때 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\left(\boldsymbol{A}^{-1}\right)^{-1} = \boldsymbol{A}\)</span>,</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\((\lambda\boldsymbol{A})^{-1} = \dfrac{1}{\lambda} \boldsymbol{A}^{-1}\)</span>,</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\((\boldsymbol{AB})^{-1} = \boldsymbol{B}^{-1}\boldsymbol{A}^{-1}\)</span>,</p>
 </div>
+</div>
 <p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="cor-derterminant_is_invariant_under_similar_transformation" class="theorem corollary">
 <p><span class="theorem-title"><strong>따름정리 3.2</strong></span> 정사각 행렬에 대한 행렬식은 닮음 변환에 대해 불변이다. 즉 <span class="math inline">\(\boldsymbol{A},\, \boldsymbol{P} \in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 이고 <span class="math inline">\(\boldsymbol{P}\)</span> 가 가역일 때 <span class="math inline">\(\det (\boldsymbol{P}^{-1}\boldsymbol{AP}) = \det (\boldsymbol{A})\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\det (\boldsymbol{P}^{-1}\boldsymbol{AP}) = \det (\boldsymbol{P}^{-1})\det (\boldsymbol{A})\det (\boldsymbol{P}) = 1. \qquad \square\)</span></p>
 </div>
@@ -1195,9 +1280,11 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-column_space_row_space" class="theorem example">
-<p><span class="theorem-title"><strong>보기 3.9</strong></span> <span class="math inline">\(\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 이라면 <span class="math inline">\(\boldsymbol{A}\)</span> 의 행공간은 <span class="math inline">\(\mathcal{M}_{1 \times n}(\mathbb{F})\)</span> 의 부분공간이며 <span class="math inline">\(\boldsymbol{A}\)</span> 의 열공간은 <span class="math inline">\(\mathcal{M}_{m}(\mathbb{F})\)</span> 의 부분공간이다.</p>
+<p><span class="theorem-title"><strong>보기 3.8</strong></span> <span class="math inline">\(\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 이라면 <span class="math inline">\(\boldsymbol{A}\)</span> 의 행공간은 <span class="math inline">\(\mathcal{M}_{1 \times n}(\mathbb{F})\)</span> 의 부분공간이며 <span class="math inline">\(\boldsymbol{A}\)</span> 의 열공간은 <span class="math inline">\(\mathcal{M}_{m}(\mathbb{F})\)</span> 의 부분공간이다.</p>
+</div>
 </div>
 <p><br></p>
 <p>선형사상에서 <span class="math inline">\(\ker,\, \text{im},\, \text{nullity},\, \text{rank}\)</span> 를 정의했듯이 행렬에 대해서도 정의 할 수 있다.</p>
@@ -1221,10 +1308,13 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-rank_of_matrix" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 3.19</strong></span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 <span class="math inline">\(\text{im}(\boldsymbol{A})\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 열공간이다.</p>
+<p><span class="theorem-title"><strong>명제 3.20</strong></span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 <span class="math inline">\(\text{im}(\boldsymbol{A})\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 열공간이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{A} = \begin{bmatrix} \boldsymbol{A}_{:1} &amp; \cdots &amp; \boldsymbol{A}_{:n}\end{bmatrix}\)</span> 이고 <span class="math inline">\(\boldsymbol{x} = \begin{bmatrix} x_1  &amp; \cdots &amp; x_n\end{bmatrix}^T\)</span> 라 하면,</p>
 <p><span class="math display">\[
@@ -1234,6 +1324,8 @@ window.Quarto = {
 </div>
 <p><br></p>
 <p>우리는 앞서 가역 연산자는 기저를 다른 기저로 바꾸는 연산자라는 것을 알았다(<a href="ch1_02_linear_map.html#cor-basis_transformation" class="quarto-xref">따름정리&nbsp;<span>2.4</span></a>). 이제 가역변환에 의해 변하는 것과 변하지 않는 것을 알아보자.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-same_range_reduced_echelon_form" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 3.2</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 어떤 가역 변환 <span class="math inline">\(\boldsymbol{S}\)</span> 를 수행했을 때</p>
 <p><span class="math display">\[
@@ -1244,13 +1336,17 @@ window.Quarto = {
 \]</span></p>
 <p>이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{S}\)</span> 가 가역행렬이므로 <span class="math inline">\(\boldsymbol{Av}=\boldsymbol{0} \iff \boldsymbol{SAv}=\boldsymbol{0}\)</span> 이다. 따라서 <span class="math inline">\(\ker \boldsymbol{A} = \ker (\boldsymbol{SA})\)</span> 이다. 따라서 선형사상의 기본정리(<a href="ch1_02_linear_map.html#thm-rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a>) 에 의해 <span class="math inline">\(\dim (\text{im} (\boldsymbol{A})) = \dim (\text{im} (\boldsymbol{SA}))\)</span> 이므로 <span class="math inline">\(\text{rank} (\boldsymbol{A}) = \text{rank} (\boldsymbol{SA})\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 가 유한번의 기본 행 연산을 통해 행 간소 사다리꼴 <span class="math inline">\(\boldsymbol{A}'\)</span> 이 되었다면 <span class="math inline">\(\boldsymbol{A}'\)</span> 을 <span class="math inline">\(\boldsymbol{A}\)</span> 의 행 간소 사다리꼴 형태라고 부르겠다. 행렬과 행 간소 사다리꼴 형태에 대해 다음이 성립한다.</p>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-rank_of_reduced_echelon_form" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 3.20</strong></span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 와 행 간소 사다리꼴 형태 <span class="math inline">\(\boldsymbol{A}'\)</span> 에 대해 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 3.21</strong></span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 와 행 간소 사다리꼴 형태 <span class="math inline">\(\boldsymbol{A}'\)</span> 에 대해 다음이 성립한다.</p>
 <p><span class="math display">\[
 \begin{aligned}
 \ker (\boldsymbol{A}) &amp;= \ker (\boldsymbol{A}'), \\
@@ -1258,6 +1354,8 @@ window.Quarto = {
 \end{aligned}
 \]</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>모든 행 기본 연산 행렬은 가역행렬이므로 <span class="math inline">\(\boldsymbol{A}'\)</span> 은 가역행렬과 <span class="math inline">\(\boldsymbol{A}\)</span> 의 곱이다. 따라서 <a href="#lem-same_range_reduced_echelon_form" class="quarto-xref">보조정리&nbsp;<span>3.2</span></a> 에 의해 위의 식이 성립한다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -1267,47 +1365,63 @@ window.Quarto = {
 \begin{bmatrix} 0 &amp; \underline{1} &amp; 2 &amp; 0 &amp; 0 &amp; 3 &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; \underline{1} &amp; 0 &amp; 0 &amp; 3 \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; \underline{1} &amp; 2 &amp; 3 \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{bmatrix}
 \]</span></p>
 <p>행 간소 사다리꼴 행렬의 열벡터는 선행 1 성분을 포함하는 열과 포함하지 않는 열이 있다. 선행 1 성분을 포함하는 열은 1 성분을 제외한 성분이 모두 <span class="math inline">\(0\)</span> 이며, 영벡터를 포함하여 선행 1 성분을 포함하지 않는 열은 그 앞 열들의 선형결합이다. 따라서 우리는 다음을 알 수 있다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-dimension_of_row_space" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 3.21</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 과 그 행 간소 사다리꼴 행렬 <span class="math inline">\(\boldsymbol{A}'\)</span> 에 대해 다음이 성립한다. <span class="math display">\[
+<p><span class="theorem-title"><strong>명제 3.22</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 과 그 행 간소 사다리꼴 행렬 <span class="math inline">\(\boldsymbol{A}'\)</span> 에 대해 다음이 성립한다. <span class="math display">\[
 \text{rank} (\boldsymbol{A}) =\text{rank} (\boldsymbol{A}') = [\text{선행 1 성분의 개수}]
 \]</span></p>
+</div>
 </div>
 <p><br></p>
 </section>
 <section id="sec-rank_of_matrix" class="level3" data-number="3.6.2">
 <h3 data-number="3.6.2" class="anchored" data-anchor-id="sec-rank_of_matrix"><span class="header-section-number">3.6.2</span> 행렬의 rank</h3>
 <p><a href="#def-column_space_row_space" class="quarto-xref">정의&nbsp;<span>3.11</span></a> 에서 정의했듯이 <span class="math inline">\(m\times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에서 <span class="math inline">\(\text{span}(\boldsymbol{A}_{1:},\ldots,\boldsymbol{A}_{:m})\)</span> 을 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 행공간 이라 한다. 행렬의 행 기본 연산이 모두 행벡터들 사이의 선형결합이라는 것을 이해한다면, 아래 명제는 쉽게 이해 할 수 있다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-invariance_of_rowspace_by_row_operation" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 3.22</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 의 행공간은 행 기본연산에 의해 변하지 않는다.</p>
+<p><span class="theorem-title"><strong>명제 3.23</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 의 행공간은 행 기본연산에 의해 변하지 않는다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{A}\)</span> 가 행 기본 연산에 의해 변환된 행렬을 <span class="math inline">\(\boldsymbol{A}'\)</span> 이라 하자. 우리는 <span class="math inline">\(\text{rank}(\boldsymbol{A})=\text{rank}(\boldsymbol{A}')\)</span> 임을 알고 있다. <span class="math inline">\(\boldsymbol{a}\)</span> 가 <span class="math inline">\(\boldsymbol{A}'\)</span> 의 행공간에 포함된다면 모든 <span class="math inline">\(\boldsymbol{A}_{j:}\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 행공간에 포함되므로 <span class="math inline">\(\boldsymbol{a}\)</span> 역시 <span class="math inline">\(\boldsymbol{A}\)</span> 의 행공간에 포함된다. 즉 <span class="math inline">\(\boldsymbol{A}'\)</span> 은 <span class="math inline">\(\boldsymbol{A}\)</span> 의 부분공간이다. 그런데 두 행공간의 차원이 같으므로 두 행공간은 같다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>따라서 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 행공간과 그 행 간소 사다리꼴 형태 <span class="math inline">\(\boldsymbol{A}'\)</span> 의 행공간은 일치한다.</p>
-<p>또하나의 중요한 사실은 행 간소 사다리꼴에서 <span class="math inline">\(0\)</span> 행을 제외한 행들은 모두 선형 독립이다. 영벡터가 아닌 행벡터는 모두 선행 1 성분을 가지고 있으며, 선행 1 성분이 있는 열은 선행 1 성분을 제외하면 모두 <span class="math inline">\(0\)</span> 이므로 영벡터가 아닌 행벡터는 선형 독립임을 알 수 있다. 즉</p>
+<p>또하나의 중요한 사실은 행 간소 사다리꼴에서 <span class="math inline">\(0\)</span> 행을 제외한 행들은 모두 선형 독립이다. 영벡터가 아닌 행벡터는 모두 선행 1 성분을 가지고 있으며, 선행 1 성분이 있는 열은 선행 1 성분을 제외하면 모두 <span class="math inline">\(0\)</span> 이므로 영벡터가 아닌 행벡터는 선형 독립임을 알 수 있다. 즉 다음 명제가 성립한다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-dimension_of_row_space" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 3.23</strong></span> <span class="math inline">\(\boldsymbol{A}\)</span> 의 행 간소 사다리꼴 형태를 <span class="math inline">\(\boldsymbol{A'}\)</span> 이라고 할 때 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 3.24</strong></span> <span class="math inline">\(\boldsymbol{A}\)</span> 의 행 간소 사다리꼴 형태를 <span class="math inline">\(\boldsymbol{A'}\)</span> 이라고 할 때 다음이 성립한다.</p>
 <p><span class="math display">\[
 \boldsymbol{A} \text{ 의 행공간의 차원} = \boldsymbol{A'} \text{ 의 행공간의 차원 } = [\text{선행 1 성분의 개수}].
 \]</span></p>
 </div>
+</div>
 <p><br></p>
-<p><a href="#prp-dimension_of_row_space" class="quarto-xref">명제&nbsp;<span>3.23</span></a> 를 생각하면 다음과 같은 결론을 얻는다.</p>
+<p><a href="#prp-dimension_of_row_space" class="quarto-xref">명제&nbsp;<span>3.24</span></a> 를 생각하면 다음과 같은 결론을 얻는다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-dimension_of_matrix" class="theorem">
 <p><span class="theorem-title"><strong>정리 3.2</strong></span> <span class="math inline">\(m\times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 다음이 성립한다. <span class="math display">\[
 \text{rank}(\boldsymbol{A}) = \boldsymbol{A} \text{ 의 행공간의 차원 } = \boldsymbol{A} \text{ 의 열공간의 차원 }
 \]</span></p>
+</div>
 </div>
 <p><br></p>
 </section>
 <section id="sec-uniqueness_of_reduced_row_echelon_form" class="level3" data-number="3.6.3">
 <h3 data-number="3.6.3" class="anchored" data-anchor-id="sec-uniqueness_of_reduced_row_echelon_form"><span class="header-section-number">3.6.3</span> 행 간소 사다리꼴의 유일성</h3>
 <p>행렬의 행 간소 사다리꼴은 유일할까? 우리가 행렬을 행 간소 사다리꼴로 바꾸는 일관된 과정을 거쳤지만 다른 과정도 존재할 수 있다. 이제 어떤 방법으로른 행 간소 사다리꼴로 만들었다면 그 형태는 유일하다는 것을 보이고자 한다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-uniqueness_of_reduced_echelon_form" class="theorem">
 <p><span class="theorem-title"><strong>정리 3.3</strong></span> 행렬의 행 간소 사다리꼴은 유일하다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 두 행간소 사다리꼴 형태를 <span class="math inline">\(\boldsymbol{S}\)</span> 와 <span class="math inline">\(\boldsymbol{T}\)</span> 라 하자.</p>
 <p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(\text{rank}(\boldsymbol{S}) = \text{rank}(\boldsymbol{T})\)</span> 이며 이 값은 <span class="math inline">\(\boldsymbol{S}\)</span> 와 <span class="math inline">\(\boldsymbol{T}\)</span> 의 <span class="math inline">\(0\)</span> 행이 아닌 행의 갯수이므로 <span class="math inline">\(\boldsymbol{S}\)</span> 와 <span class="math inline">\(\boldsymbol{T}\)</span> 는 같은 수의 <span class="math inline">\(0\)</span> 행이 아닌 행을 가져야 한다. <span class="math inline">\(1\)</span> 행부터 <span class="math inline">\(l\)</span> 행까지가 <span class="math inline">\(0\)</span> 행이 아니라고 가정하자.</p>
@@ -1326,21 +1440,26 @@ window.Quarto = {
 </section>
 <section id="sec-reduced_row_echelon_form_of_inverse_matrix" class="level3" data-number="3.6.4">
 <h3 data-number="3.6.4" class="anchored" data-anchor-id="sec-reduced_row_echelon_form_of_inverse_matrix"><span class="header-section-number">3.6.4</span> 가역행렬의 행 간소 사다리꼴, 역행렬 과 행렬식</h3>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-reduced_echelon_form_of_invertible_matrix" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 3.24</strong></span> 가역행렬의 행 간소 사다리꼴 형태는 항등행렬이다. 또한 가역행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 가 기본행렬의 곱 <span class="math inline">\(\boldsymbol{E}\)</span> 에 의해 항등행렬 이 되었다고 할때 <span class="math inline">\(\boldsymbol{E}\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 역행렬이다.</p>
+<p><span class="theorem-title"><strong>명제 3.25</strong></span> 가역행렬의 행 간소 사다리꼴 형태는 항등행렬이다. 또한 가역행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 가 기본행렬의 곱 <span class="math inline">\(\boldsymbol{E}\)</span> 에 의해 항등행렬 이 되었다고 할때 <span class="math inline">\(\boldsymbol{E}\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 역행렬이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 가 기본행렬의 곱 <span class="math inline">\(\boldsymbol{E}\)</span> 에 의해 행 간소 사다리꼴 <span class="math inline">\(\boldsymbol{A}'\)</span> 으로 변화하였다고 하자. <a href="#prp-rank_of_matrix" class="quarto-xref">명제&nbsp;<span>3.19</span></a> 에 따라 가역행렬이라면 <span class="math inline">\(\text{nullity} (\boldsymbol{A})=0\)</span> 이므로 <span class="math inline">\(\boldsymbol{A}'\)</span> 에 <span class="math inline">\(0\)</span> 으로만 이루어진 행이 없어야 한다. 행 간소 사다리꼴이므로 <span class="math inline">\(i\)</span> 행에서 첫번째 <span class="math inline">\(1\)</span> 의 위치를 <span class="math inline">\(l_i\)</span> 라 하면 <span class="math inline">\(l_i \ge i (i=1,\ldots, n)\)</span> 이다. 또한 <span class="math inline">\(\boldsymbol{A}\)</span> 가 정사각 행렬이며 <span class="math inline">\(0\)</span> 행이 없어야 하므로 <span class="math inline">\(l_n \le n\)</span> 이다. 이 두가지로부터 <span class="math inline">\(l_i = i,\, i = 1,\ldots, n\)</span> 임을 알 수 있으며 이런 행 간소 사다리꼴은 항등행렬 <span class="math inline">\(\boldsymbol{I}_n\)</span> 뿐이다. 즉 <span class="math inline">\(\boldsymbol{EA}=\boldsymbol{I}_n\)</span> 이므로 <span class="math inline">\(\boldsymbol{E}=\boldsymbol{A}^{-1}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 가 기본행렬의 곱 <span class="math inline">\(\boldsymbol{E}\)</span> 에 의해 행 간소 사다리꼴 <span class="math inline">\(\boldsymbol{A}'\)</span> 으로 변화하였다고 하자. <a href="#prp-rank_of_matrix" class="quarto-xref">명제&nbsp;<span>3.20</span></a> 에 따라 가역행렬이라면 <span class="math inline">\(\text{nullity} (\boldsymbol{A})=0\)</span> 이므로 <span class="math inline">\(\boldsymbol{A}'\)</span> 에 <span class="math inline">\(0\)</span> 으로만 이루어진 행이 없어야 한다. 행 간소 사다리꼴이므로 <span class="math inline">\(i\)</span> 행에서 첫번째 <span class="math inline">\(1\)</span> 의 위치를 <span class="math inline">\(l_i\)</span> 라 하면 <span class="math inline">\(l_i \ge i (i=1,\ldots, n)\)</span> 이다. 또한 <span class="math inline">\(\boldsymbol{A}\)</span> 가 정사각 행렬이며 <span class="math inline">\(0\)</span> 행이 없어야 하므로 <span class="math inline">\(l_n \le n\)</span> 이다. 이 두가지로부터 <span class="math inline">\(l_i = i,\, i = 1,\ldots, n\)</span> 임을 알 수 있으며 이런 행 간소 사다리꼴은 항등행렬 <span class="math inline">\(\boldsymbol{I}_n\)</span> 뿐이다. 즉 <span class="math inline">\(\boldsymbol{EA}=\boldsymbol{I}_n\)</span> 이므로 <span class="math inline">\(\boldsymbol{E}=\boldsymbol{A}^{-1}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>우리는 앞서 <a href="#prp-zero_determinant_of_linear_dependency" class="quarto-xref">명제&nbsp;<span>3.15</span></a> 에서 행렬의 행벡터들이 선형종속이면, 혹은 열벡터들이 선형 종속이면 행렬식이 0 이 됨을 보였다. 이제 그 역에 대해서도 보일 수 있다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-determinant_of_invertible_matrix" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 3.25</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 다음은 동치이다.</p>
-<ol type="1">
-<li><p><span class="math inline">\(\boldsymbol{A}\)</span> 는 가역행렬이다.</p></li>
-<li><p><span class="math inline">\(\det (\boldsymbol{A}) \ne 0\)</span>.</p></li>
-</ol>
+<p><span class="theorem-title"><strong>명제 3.26</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 다음은 동치이다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 는 가역행렬이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\det (\boldsymbol{A}) \ne 0\)</span>.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{A}\)</span> 가 기본 행 연산 <span class="math inline">\(\boldsymbol{E}_1,\ldots,\,\boldsymbol{E}_N\)</span> 을 통해 행 간소 사다리꼴 <span class="math inline">\(\boldsymbol{A}'\)</span> 이 되었다고 하자. 즉, <span class="math display">\[
 \det (\boldsymbol{A}') = \det (\boldsymbol{E}_N) \cdots \det (\boldsymbol{E}_1) \det (\boldsymbol{A})
@@ -1356,12 +1475,15 @@ window.Quarto = {
 </section>
 <section id="sec-triangular_matrix" class="level3" data-number="3.6.5">
 <h3 data-number="3.6.5" class="anchored" data-anchor-id="sec-triangular_matrix"><span class="header-section-number">3.6.5</span> 삼각행렬의 성질</h3>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-properties_of_upper_triangular-matrix" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 3.26</strong></span> 상삼각행렬은 다음과 같은 성질을 가진다.</p>
-<p>  (<span class="math inline">\(1\)</span>) 상삼각행렬의 곱은 상삼각행렬인다.</p>
-<p>  (<span class="math inline">\(2\)</span>) 상삼각행렬이 가역가역행렬이라는 것과 모든 대각성분이 <span class="math inline">\(0\)</span> 이 아니라는 것은 동치이다.</p>
-<p>  (<span class="math inline">\(3\)</span>) 상삼각행렬의 역행렬은 상삼각행렬이다.</p>
+<p><span class="theorem-title"><strong>명제 3.27</strong></span> 상삼각행렬은 다음과 같은 성질을 가진다.</p>
+<p> (<span class="math inline">\(1\)</span>) 상삼각행렬의 곱은 상삼각행렬인다.</p>
+<p> (<span class="math inline">\(2\)</span>) 상삼각행렬이 가역가역행렬이라는 것과 모든 대각성분이 <span class="math inline">\(0\)</span> 이 아니라는 것은 동치이다.</p>
+<p> (<span class="math inline">\(3\)</span>) 상삼각행렬의 역행렬은 상삼각행렬이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <a href="#exm-multiplication_of_diagonal_matrix" class="quarto-xref">보기&nbsp;<span>3.6</span></a> 에서 보였다.</p>
 <p>(<span class="math inline">\(2\)</span>) <a href="#exm-determinant_of_upper_lower_triangular_matrix" class="quarto-xref">보기&nbsp;<span>3.7</span></a> 에서 보였다.</p>
@@ -1373,20 +1495,26 @@ window.Quarto = {
 </div>
 <p><br></p>
 <p>상삼각행렬의 전치행렬이 하삼각행렬이므로 하삼각행렬에 대해서도 다음을 알 수 있다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-properties_of_lower_triangular-matrix" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 3.27</strong></span> 하삼각행렬은 다음과 같은 성질을 가진다.</p>
+<p><span class="theorem-title"><strong>명제 3.28</strong></span> 하삼각행렬은 다음과 같은 성질을 가진다.</p>
 <p>  (<span class="math inline">\(1\)</span>) 하삼각행렬의 곱은 하삼각행렬인다.</p>
 <p>  (<span class="math inline">\(2\)</span>) 하삼각행렬이 가역가역행렬이라는 것과 모든 대각성분이 <span class="math inline">\(0\)</span> 이 아니라는 것은 동치이다.</p>
 <p>  (<span class="math inline">\(3\)</span>) 하삼각행렬의 역행렬은 하삼각행렬이다.</p>
 </div>
+</div>
 <p><br></p>
 </section>
 </section>
-<section id="연습문제" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="연습문제"><span class="header-section-number">3.7</span> 연습문제</h2>
+<section id="연습문제" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h2>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-determinant_with_standard_vector" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 3.4</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 의 첫번째 행이 <span class="math inline">\(c\boldsymbol{e}_1\)</span>, 즉 첫번째 열이 <span class="math inline">\(c\)</span> 이며 나머지 열은 <span class="math inline">\(0\)</span> 이라면 <span class="math inline">\(\boldsymbol{A}\)</span> 의 행렬식은 <span class="math inline">\(\boldsymbol{A}\)</span> 에서 <span class="math inline">\(1\)</span> 행과 <span class="math inline">\(1\)</span> 열을 제외한 <span class="math inline">\((n-1)\times (n-1)\)</span> 행렬의 행렬식과 같다는 것을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>행렬식의 정의를 보자.</p>
 <p><span class="math display">\[
@@ -1402,7 +1530,8 @@ window.Quarto = {
 \]</span></p>
 <p>이다. 임의의 <span class="math inline">\(\sigma\in S_n\)</span> 에서 <span class="math inline">\(\sigma(1) = 1\)</span> 로 고정시켰을 만을 생각하자. 그렇다면 <span class="math inline">\(\sigma\)</span> 는 <span class="math inline">\(2\)</span> 에서 <span class="math inline">\(n\)</span> 까지의 자연수에 대한 순환과 같으므로 <span class="math inline">\(\boldsymbol{A}\)</span> 에서 <span class="math inline">\(1\)</span> 행과 <span class="math inline">\(1\)</span> 열을 제외한 부분행렬을 <span class="math inline">\(\boldsymbol{A}_1\)</span> 이라고 하면 <span class="math inline">\(\det (\boldsymbol{A}) = c\det(\boldsymbol{A}_1)\)</span> 이다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-determinant_of_vandermond_matrix" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 3.5 (Vandermond 행렬의 행렬식)</strong></span> <span class="math inline">\(t_0,\,\ldots,\,t_n \in \mathbb{F}\)</span> 에 대해 아래와 같이 정의된 행렬을 Vandermond 행렬 이라고 한다.</p>
 <p><span id="eq-vandermond_matrix"><span class="math display">\[
@@ -1413,6 +1542,8 @@ window.Quarto = {
 \det(V) = \prod_{0 \le i &lt; j \le n} (t_j-t_i)
 \tag{3.2}\]</span></span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>행렬식의 정의를 보면 행렬식은 각 열에서 행-인덱스가 겹치지 않게 고른 것들을 <span class="math inline">\(1\)</span> 혹은 <span class="math inline">\(-1\)</span> 을 곱해 합한것이라는 것을 알 수 있다. 각 <span class="math inline">\(j\)</span> 열은 <span class="math inline">\(t_i\)</span> 에 대한 <span class="math inline">\(j-1\)</span> 차 항이므로 <span class="math inline">\(\det(\boldsymbol{V})\)</span> 는 <span class="math inline">\(t_0^{p_0}t_1^{p_1}\cdots t_n^{p_n}\)</span> 의 선형합이며 <span class="math inline">\(p_0+\cdots + p_n = \dfrac{n(n+1)}{2}\)</span> 임을 알 수 있다.</p>
 <p>또한 <span class="math inline">\(1\le i,\,j \le n\)</span> 가운데 둘중 하나만이라도 같으면 행렬식은 <span class="math inline">\(0\)</span> 이 된다.</p>
@@ -1465,7 +1596,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1497,29 +1639,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1527,7 +1647,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

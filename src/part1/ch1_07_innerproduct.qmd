@@ -37,6 +37,8 @@ $\mathbb{F}$-벡터공간 $V$ 에서 정의된 $\phi : V \times V \to \mathbb{F}
 
 대표적인 내적 벡터 공간으로는 다음과 같은 것들이 있다.
 
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-innerproduct_R1_C1}
 $\mathbb{C}^1$, 즉 1차원 복소벡터공간에서의 내적을
 
@@ -53,7 +55,9 @@ $$
 로 정의할 수 있다.
 :::
 
-</br>
+</div></br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-euclidean_innerproduct}
 
@@ -62,7 +66,9 @@ $$
 $\mathbb{R}^n$ 에서 $x = (x_1,\ldots,\,x_n)$, $y=(y_1,\ldots,\,y_n)\in \mathbb{R}^n$ 의 내적을 $\langle x,\, y \rangle =  \sum_{i=1}^n x_i y_i$ 로 정의할 수 있으며 이렇게 내적이 정의된 공간을 **유클리드 공간 (Euclidean sapce)** 이라고 한다. 
 :::
 
-</br>
+</div></br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-innerproduct_definded_by_intergration_in_R}
 
@@ -77,28 +83,28 @@ $$
 \langle f,\,g \rangle = \displaystyle \int_0^1 \overline{f(x)}g(x)\, dx.
 $$
 
-
 :::
 
+</div></br>
 
-</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-basic_properties_of_inner_product}
 
 $V$ 가 $\mathbb{F}$-내적벡터공간이며 $u,\,v,\,w \in V,\, c \in \mathbb{F}$ 일 때 다음이 성립한다.
 
-&emsp; ($1$) 정해진 $u\in V$ 에 대해 $T(v) = \langle v,\,u \rangle$ 는 선형사상이다.
+&emsp;($1$) 정해진 $u\in V$ 에 대해 $T(v) = \langle v,\,u \rangle$ 는 선형사상이다.
 
-&emsp; ($2$) $\langle 0,\, u\rangle = 0 = \langle u,\,0\rangle$.
+&emsp;($2$) $\langle 0,\, u\rangle = 0 = \langle u,\,0\rangle$.
 
-&emsp; ($3$) $\langle u,\, v+w \rangle = \langle u,\, v\rangle + \langle u,\, w \rangle$.
+&emsp;($3$) $\langle u,\, v+w \rangle = \langle u,\, v\rangle + \langle u,\, w \rangle$.
 
-&emsp; ($4$) $\langle u,\,c v\rangle = \overline{c} \langle u,\, v \rangle$.
+&emsp;($4$) $\langle u,\,c v\rangle = \overline{c} \langle u,\, v \rangle$.
 
-&emsp; ($5$) $\langle u,\, v \rangle = \overline{\langle v,\, u\rangle}$.
+&emsp;($5$) $\langle u,\, v \rangle = \overline{\langle v,\, u\rangle}$.
 :::
 
-</br>
+</div></br>
 
 
 ::: {.callout-note appearance="simple" icon="false"}
@@ -112,12 +118,14 @@ $V$ 가 $\mathbb{F}$-내적벡터공간이며 $u,\,v,\,w \in V,\, c \in \mathbb{
 
 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-orthogonal_linearity}
 내적벡터 공간 $V$ 에서의 영벡터가 아닌 벡터의 집합 $\{v_1,\ldots,\,v_n\}$ 이 직교하는 벡터의 집합이면 선형 독립이다.
 :::
- 
+
+</div></br>
+
 ::: {.proof}
 $\sum_i c_i v_i = 0_V$ 이라 하자. 선택된 $v_j$ 에 내적을 취하면,
 
@@ -132,9 +140,13 @@ $$
 
 이로부터 다음 명제가 자연스럽게 나온다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#cor-number_of_orthogonal_vectors}
 유한차원 내적벡터공간에서 직교하는 벡터의 갯수는 그 차원보다 많을 수 없다.
 :::
+
+</div></br>
 
 :::{.proof}
 @lem-number_of_basis 를 보라.
@@ -172,6 +184,7 @@ $$
 
 벡터공간에서의 내적과 마찬가지로 노름 역시 공간에 부여된 특정 조건을 만족하는 함수이다. 내적벡터공간은 그 자체로 거리공간인데 이것은 내적에 의해 노름과 거리함수가 자연스럽게 정의되기 때문이다. 참고로 노름공간은 거리함수가 부여된 벡터공간이지만 엄밀한 의미에서의 거리공간은 벡터공간이 아닐 수도 있으며, 단지 적절한 거리함수가 정의된 집합이면 거리공간이다. 여기서는 거리함수가 부여된 벡터공간인 노름공간만을 
 
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-norm_space_1}
 
@@ -193,17 +206,21 @@ $$
 
 :::
 
-</br>
+</div></br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-innerproduct_norm}
 
 내적 백터공간 $V$ 의 두 벡터 $u,\,v$ 에 대해 다음이 성립한다. 
 
-&emsp; ($1$)  $\langle u,\,v \rangle = 0 \implies \langle u + v, u+v\rangle = \langle u, u\rangle^2 + \langle v, v\rangle^2$.
+&emsp;($1$)  $\langle u,\,v \rangle = 0 \implies \langle u + v, u+v\rangle = \langle u, u\rangle^2 + \langle v, v\rangle^2$.
 
-&emsp; ($2$) $|\langle u,\,v \rangle | \le \sqrt{\langle u, u\rangle \langle v,v \rangle}$.
+&emsp;($2$) $|\langle u,\,v \rangle | \le \sqrt{\langle u, u\rangle \langle v,v \rangle}$.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -224,7 +241,7 @@ $$
 
 위에서는 임시변통으로 $\langle v, v\rangle = \|v\|^2$ 라고 했지만 이렇게 정의된 함수는 실제로 거리함수이다. 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-norm_of_innerproduct_space}
 
@@ -233,6 +250,8 @@ $$
 $\mathbb{F}$-내적벡터공간에서 $\sqrt{\langle v,\, v\rangle}$ 은 거리함수이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -270,7 +289,7 @@ $$
 
 실제로 내적벡터공간은 거리공간이지만 내적 없이 거리함수만 정의된 공간도 있다. 여기서는 주 관심사가 내적벡터공간이기 때문에 노름 혹은 거리함수를 말할 때는 내적에 의해 정의된 $\|v\| = \sqrt{\langle v, v \rangle}$ 만을 의미한다. 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-norm_in_innerproduct_space}
 
@@ -285,6 +304,8 @@ $$
 &emsp; ($4$) 평행사변형 공식 : $\|u+v\|^2+\|u-v\|^2 = 2\|u\|^2+2\|v\|^2$.
 :::
 
+</div></br>
+
 ::: {.proof}
 ($1$), ($2$), ($3$) 은 이미 보였다. ($4$) 는 쉽게 보일 수 있다.
 $\square$
@@ -294,7 +315,7 @@ $\square$
 
 ## 정규직교기저
 
-### 기저와 내적
+### 기저와 내적 
 
 내적벡터공간 $V$ 의 기저 $\{h_i\}$ 를 생각하자. 두 벡터 $u=\sum_i u_i h_i,\, v= \sum_j v_j h_j$ 의 내적은 다음과 같다.
 
@@ -333,18 +354,21 @@ $$ {#eq-innerproduct}
 
 ### 정규직교벡터의 성질
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 ::: {#prp-properties_of_orthonormal_vectors}
 
 $\{e_1,\ldots,\,e_m\}$ 이 $\mathbb{F}$-내적벡터공간 $V$ 에서의 정규직교벡터일 때 다음이 성립한다.
 
 
-&emsp; ($1$) $\{e_1,\ldots,\,e_m\}$ 은 선형독립이다.
+&emsp;($1$) $\{e_1,\ldots,\,e_m\}$ 은 선형독립이다.
 
-&emsp; ($2$) $a_1,\ldots,\,a_m\in \mathbb{F}$ 일 때 $\|a_1e_1 + \cdots + a_me_m \|^2 = |a_1|^2 + \cdots + |a_m|^2$ 이다.
+&emsp;($2$) $a_1,\ldots,\,a_m\in \mathbb{F}$ 일 때 $\|a_1e_1 + \cdots + a_me_m \|^2 = |a_1|^2 + \cdots + |a_m|^2$ 이다.
 
-&emsp; ($3$) (**베셀 부등식 (Bessel's inequality)**) $v\in V$ 일 때 $|\langle v,\,e_1\rangle + \cdots + \langle v,\,e_m\rangle|^2 \le \|v\|^2$ 
+&emsp;($3$) (**베셀 부등식 (Bessel's inequality)**) $v\in V$ 일 때 $|\langle v,\,e_1\rangle + \cdots + \langle v,\,e_m\rangle|^2 \le \|v\|^2$ 
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -447,7 +471,6 @@ $$
 
 ## 그람-슈미트 과정과 정규직교기저 {#sec-gram_schmidt}
 
-
 ### 벡터에 대한 정사영 (Projection)
 
 두 벡터의 내적이 $0$ 일 때 두 벡터는 직교한다(be perpendicular)고 하며, 한 벡터가 다른 벡터의 스칼라곱일 때 두 벡터가 **평행하다(be parallel)** 고 한다. 내적벡터공간 $V$ 의 두 벡터 $u,\,v$ 가 주어졌다고 하자. 이 때 $v$ 의 $v$ 에 대한 사영연산자 $\text{Proj}_u v$ 를 아래와 같이 정의하자.
@@ -481,16 +504,17 @@ $$
 
 :::
 
-
 </br>
 
 이제 이렇게 해서 얻은 $\{e_1,\ldots,\,e_m\}$ 이 정규직교벡터의 집합이라는 것을 보이자.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-gram_schmidt}
 위 과정을 통해 얻은 $\{e_1,\ldots,\,e_m\}$ 은 orthonomal 하다. 즉, $\langle e_i,\, e_j\rangle = \delta_{ij}$ 이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 $e_k = \dfrac{u_k}{\|u_k\|}$ 로 정의되었으므로 $\|e_k\|^2=1$ 이다. 따라서 $i\ne j$ 일 때 $\langle e_i,\, e_j\rangle = 0$ 임을 보이면 된다. 수학적 귀납법을 통해 보일 것이며 우선 $\langle u_2,\,u_1\rangle = 0$ 임을 보이자.
@@ -522,10 +546,13 @@ $$
 
 이제 우리는 다음의 중요한 결론을 얻는다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#thm-orthonormal_basis}
 $V$ 가 유한차원 내적벡터공간이며 $\mathcal{B}_V= (v_i)$ 가 $V$ 의 기저일 때 $\mathcal{B}_V$ 로부터 정규직교기저를 얻을 수 있다.
 :::
 
+</div></br>
 
 ::: {.proof}
 $\mathcal{B}_V$ 는 선형독립이므로 Gram-Schmidt 과정을 통해 얻은 정규직교벡터는 $V$ 의 정규직교기저이다. $\square$
@@ -536,8 +563,7 @@ $\mathcal{B}_V$ 는 선형독립이므로 Gram-Schmidt 과정을 통해 얻은 �
 
 그람-슈미트 과정은 내적벡터공간에 기저가 주어지면 이 기저의 선형결합으로 정규직교기저를 얻을 수 있음을 보장한다. 우리는 앞서 @thm-uppertriangular_matrix_complex_field 에서 유한차원 $\mathbb{C}$-벡터공간에서의 모든 연산자는 어떤 기저에서 상삼각 행렬로 표현된다는 것을 보였다. 유한차원 $\mathbb{C}$-내적벡터공간에서는 정규직교기저에대해 상삼각 행렬로 표현되는 것을 보이자.
 
-</br>
-
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-schure}
 
@@ -545,6 +571,8 @@ $\mathcal{B}_V$ 는 선형독립이므로 Gram-Schmidt 과정을 통해 얻은 �
 
 유한차원 $\mathbb{C}$-내적벡터공간 $V$ 에서 정의된 연산자 $T\in \mathcal{L}(V)$ 는 어떤 정규직교기저에서 상삼각행렬로 표현된다.
 :::
+
+</div></br>
 
 ::: {.proof}
 $V$ 를 $n$ 차원 $\mathbb{C}$-내적벡터공간이라 하자. @thm-uppertriangular_matrix_complex_field 에서 $T\in \mathcal{L}(V)$ 는 어떤 기저 에서 상삼각행렬로 표현된다는 것을 보였다. 이 기저를 $\mathcal{B}_V = \{v_1,\ldots,\,v_n\}$ 이라 하고, 그람-슈미트 과정을 통해 얻은 정규직교기저를 $\{e_1,\ldots,\,e_n\}$ 이라 하자. 즉 $e_i \in \text{span}(v_1,\ldots,\,v_i)$ 이다. 그렇다면, 그람 슈미트 과정으로부터
@@ -570,7 +598,7 @@ $$
 
 :::
 
-<br>
+<br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-Reisz_representaion_theorem}
 ### Riesz 의 표현 정리 (Reisz Representation theorem)
@@ -583,6 +611,8 @@ $$
 
 이다. 또한 선형 범함수를 내적으로 표현할 수 있도록 해 주는 벡터 $u$ 는 유일하다. 
 :::
+
+</div></br>
 
 ::: {.proof}
 $\{e_1,\ldots,\,e_n\}$ 이 $V$ 의 정규직교기저라 하자. 그렇다면,
@@ -610,12 +640,11 @@ Reitz 의 표현정리는 유한차원 내적벡터공간에서만 성립하며 
 
 우리는 앞서 @prp-norm_of_innerproduct_space 에서 내적벡터공간에는 자연스러운 거리함수가 존재한다는 것을 보였다. 즉 내적공간은 거리공간이다. 그렇다면 어떤 조건에서 거리공간은 내적공간이 될 수 있을까를 말해주는 것이 조르당-폰 노이만 정리이다. 결론적으로 말하자면 거리공간에 사다리꼴 공식이 성립한다면 내적공간이 되며 이것을 조르당-폰 노이만 정리라고 한다. 우선 실벡터 공간에 대해서 보이고 이후 복소벡터 공간에서 보이도록 하자. 다만 이것의 증명을 위해서는 연속에 대한 해석학적인 지식이 필요하다.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-jordan_von_neumann_1}
 
 $\mathbb{R}$-거리 공간 $V$ 에서 함수 $\phi : V \times V \to [0, \infty)$ 를 다음과 같이 정의하자.
-
 
 $$
 \phi (u, v)= \dfrac{\|u+v\|^2-\|u-v\|^2}{4}. 
@@ -629,8 +658,9 @@ $$
 
 :::
 
-::: {.proof}
+</div></br>
 
+::: {.proof}
 
 평행사변형 공식으로 부터
 
@@ -656,7 +686,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-jordan_von_neumann_2}
 
@@ -666,6 +696,8 @@ $$
 \phi (cu, v) =  c\phi (u, v).
 $$
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -686,8 +718,6 @@ $$
 &=c\phi (u, v)+ \phi (u, v)= (c+1)\phi(u, v).
 \end{aligned}
 $$
-
-
 
 이제 $c\in S \implies c-1\in S$ 임을 다음과 같이 보일 수 있다.
 
@@ -713,7 +743,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-jordan_von_neumann_theorem}
 
@@ -721,11 +751,13 @@ $$
 
 $\mathbb{R}$-거리벡터공간 $V$ 에 대해 다음은 동치이다.
 
-&emsp; ($1$) $V$ 는 $\mathbb{R}$-내적벡터공간이다.
+&emsp;($1$) $V$ 는 $\mathbb{R}$-내적벡터공간이다.
 
-&emsp; ($2$) 모든 $u,\,v\in V$ 에 대해 평행사변형 공식이 성립한다.
+&emsp;($2$) 모든 $u,\,v\in V$ 에 대해 평행사변형 공식이 성립한다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -740,6 +772,7 @@ $\mathbb{R}$-거리벡터공간 $V$ 에 대해 다음은 동치이다.
 
 이제 복소벡터공간에서 증명하자. 
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-jordan_von_neumann_3}
 
@@ -756,6 +789,8 @@ $$
 $$
 :::
 
+</div></br>
+
 ::: {.proof}
 
 $\psi$ 를 실수부 $\psi_R$ 과 허수부 $\psi_I$ 로 분리하자. 즉
@@ -768,7 +803,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-jordan_von_neumann_4}
 
@@ -780,9 +815,10 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.proof}
 @lem-jordan_von_neumann_3 의 증명과 같이 $\psi_R$ 과 $\psi_I$ 를 정의하자. $\psi_R(cu, v) = c\psi_R (u, v)$ 는 실벡터 거리공간에서의 경우와 마찬가지이다. $\psi_I (u, v) = \psi _I (u, iv)$ 이므로 $\psi_I (cu, v) = c\psi_I (u, v)$ 이다. 따라서 $\psi (cu, v) =  c\psi (u, v)$ 이다. $\square$
-
 
 :::
 
@@ -790,6 +826,7 @@ $$
 
 이제 우리는 다음과 같은 결론을 내릴 수 있다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-jordan_von_neumann_theorem2}
 
@@ -797,17 +834,17 @@ $$
 
 $\mathbb{C}$-거리벡터공간 $V$ 에 대해 다음은 동치이다.
 
-&emsp; ($1$) $V$ 는 $\mathbb{C}$-내적벡터공간이다.
+&emsp;($1$) $V$ 는 $\mathbb{C}$-내적벡터공간이다.
 
-&emsp; ($2$) 모든 $u,\,v\in V$ 에 대해 평행사변형 공식이 성립한다.
+&emsp;($2$) 모든 $u,\,v\in V$ 에 대해 평행사변형 공식이 성립한다.
 
 :::
 
-
-</br>
+</div></br>
 
 이제 우리는 $\mathbb{F}$-벡터공간에서 내적과 노름의 관계에 대해 알게 되었다. 즉 내적벡터공간은 노름공간이며, 노름공간에서 정의된 거리함수가 평행사변형 공식을 만족하면 내적을 정의 할 수 있다. $\mathbb{F}^n$ 에 대해서는 다음을 보자.
 
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-L1_not_innerproduct_space}
 
@@ -822,10 +859,9 @@ $$
 
 이므로 조르당-폰 노이만 정리를 만족하기 위해서는 $p=2$ 이어야 한다.
 
-
 :::
 
-</br>
+</div></br>
 
 ## 직교 여공간 (Orthogonal complement) 과 Orthogonal projection
 
@@ -844,23 +880,25 @@ $$
 ::: 
 :::
 
-</br>
-
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-orthogonal_complement_is_a_vector_space}
+
 벡터공간 $V$ 의 부분집합 $U$ 에 대해 다음이 성립한다.
 
-&emsp; ($1$) $\{0_V\}^\perp = V$, $V^\perp = \{0_V\}$,
+&emsp;($1$) $\{0_V\}^\perp = V$, $V^\perp = \{0_V\}$,
 
-&emsp; ($2$) $U^\perp$ 는 $V$ 의 부분벡터공간이다.
+&emsp;($2$) $U^\perp$ 는 $V$ 의 부분벡터공간이다.
 
-&emsp; ($3$) $U \cap U^\perp  \subset \{0_V\}$,
+&emsp;($3$) $U \cap U^\perp  \subset \{0_V\}$,
 
-&emsp; ($4$) $U\subset W \implies W^\perp \subset U^\perp$,
+&emsp;($4$) $U\subset W \implies W^\perp \subset U^\perp$,
 
-&emsp; ($5$) $U^\perp = \langle U\rangle^\perp$.
+&emsp;($5$) $U^\perp = \langle U\rangle^\perp$.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -878,12 +916,15 @@ $$
 
 우리는 다음을 보일 수 있다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-generated_subspace_and_orthogonal_compliment}
 
 벡터공간 $V$ 와 유한차원 부분공간 $U$ 에 대해 $V = U \oplus U^\perp$ 이다.
 
 :::
 
+</div></br>
 
 ::: {.proof}
 $U$ 의 정규직교기저를 찾아 $\{e_1,\ldots,\,e_n\}$ 이라 하자. $v\in V$ 에 대해 $u=\sum_{i=1}^n \langle v,\, e_i\rangle$, $w=v-u$ 라고 하면 $j=1,\ldots,\,n$ 에 대해
@@ -893,8 +934,6 @@ $$
 $$
 
 이므로 $w\in U^\perp$ 이다. @prp-orthogonal_complement_is_a_vector_space 의 ($3$) 에 따라 $U\cap U^\perp = \{0_V\}$ 이므로 @prp-condition_for_direct_sum 에 따라 $V=U \oplus U^\perp$ 이다.
-
-
 
 :::
 
@@ -939,7 +978,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-uniqueness_of_orthogonal_decomposition}
 
@@ -947,12 +986,14 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.proof}
 @prp-generated_subspace_and_orthogonal_compliment 에 따라 $V=U\oplus U^\perp$ 이다. 이제 $U$ 의 정규직교기저 $\{e_1,\ldots,\,e_n\}$ 과 $U^\perp$ 의 정규직교 기저 $\{f_1,\ldots,\,f_m\}$ 에 대해 $u = \sum_i a_i e_i + \sum_j b_j f_j$ 를 만족하는 $a_i,\, b_j$ 가 존재한다. $u= \sum_i a_i e_i$ 이며 $w=\sum_j b_j f_j$ 이다. 이 때 $u,\,w$ 가 유일하게 정해진다는 것은 자명하다. $\square$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#cor-dimension_relation_of_orthogonal_complement}
 
@@ -964,8 +1005,7 @@ $V$ 가 유한차원 벡터공간일 때 $U\le V$ 에 대해 다음이 성립한
 
 :::
 
-
-</br>
+</div></br>
 
 ### Orthogonal projection
 
@@ -982,13 +1022,15 @@ $V$ 가 유한차원 벡터공간일 때 $U\le V$ 에 대해 다음이 성립한
 
 예를 들어 $T\in \mathcal{L}(\mathbb{R}^2)$ 이 $T(x,\,y) = (x, 0)$ 으로 정의되었다고 하자. $T$ 는 선형사상이며 $T^2(x,\,y)$$= (x,\,0)$$= T(x,\,y)$ 이므로 $T$ 는 projection 이다. 이처럼 projectiion 은 우리가 기하학적으로 생각하는 그 projection 을 추상화 한 것이다.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-range_of_projection}
 
 $\text{im}(P)$ 는 $P$-불변 부분 공간이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -1013,7 +1055,7 @@ $u\in \text{im}(P)$ 이면 $P(v)=u$ 인 $v\in V$ 가 존재하며, $P(u)=P^2(v) 
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-properties_of_orghogonal_projection}
 $U$ 가 $V$ 의 유한차원 부분벡터공간 일 때 다음이 성립한다. 증명은 쉬우므로 생략한다.
@@ -1031,7 +1073,7 @@ $U$ 가 $V$ 의 유한차원 부분벡터공간 일 때 다음이 성립한다. 
 &emsp; ($6$) $\|P_U (v) \| \le \|v\|$.
 :::
 
-</br>
+</div></br>
 
 ### 부분공간까지의 거리
 
@@ -1043,7 +1085,7 @@ $$
 
 로 정의된다.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-distance_to_subspace}
 $V$ 가 유한차원 내적벡터공간이고 $v\in V$, 이며 $U$ 가 $V$ 의 부분공간일 때, $v$ 에서 $U$ 까지의 거리는 $v$ 에서 $P_U (v)$ 까지의 거리와 같다. 즉, 
@@ -1054,6 +1096,8 @@ $$
 
 이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -1071,7 +1115,9 @@ $$
 
 </br>
 
-## 연습문제
+## 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_A_5}
 #### Axler 6.A.5
@@ -1080,12 +1126,14 @@ $T\in \mathcal{L}(V)$ 이며 모든 $v\in V$ 에 대해 $\|T(v)\|\le \|v\|$ 이�
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $(T-\sqrt{2}I)(v)=0_V$ 라 하자. $v\ne 0_V$ 이면 $\|\sqrt{2}I(v)\|=\sqrt{2}\|v\| > \|v\| \ge \|T(v)\|$ 이므로 성립하지 않는다. $\ker (T-\sqrt{2}I)=\{0_V\}$ 이므로 가역이다.
 ::: 
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_A_6}
 #### Axler 6.A.6
@@ -1093,6 +1141,7 @@ $(T-\sqrt{2}I)(v)=0_V$ 라 하자. $v\ne 0_V$ 이면 $\|\sqrt{2}I(v)\|=\sqrt{2}\
 $u,\,v\in V$ 일 때 $\langle u,\,v\rangle=0$ 일 필요충분조건은 모든 $a\in \mathbb{F}$ 에 대해 $\|u\| \le\|u+av\|$ 임을 보여라.
 
 :::
+</div></br>
 
 ::: {.solution}
 $\langle u,\,v\rangle =0$ 이면 $\|u+av\|^2-\|u\|^2 = |a|^2\|v\|^2 \ge 0$ 이다.  따라서 $\|u+av\| \ge \|u\|$ 이다.
@@ -1113,7 +1162,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_A_9}
 
@@ -1126,6 +1175,7 @@ $$
 $$
 
 :::
+</div><./br>
 
 ::: {.solution}
 
@@ -1141,8 +1191,7 @@ $$
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_A_11}
 
@@ -1156,6 +1205,8 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $x,\,y\in \mathbb{R}^4$ 이며 $x=(\sqrt{a},\,\sqrt{b},\,\sqrt{c},\,\sqrt{d})$, $y=(1/\sqrt{a},\,1/\sqrt{b},\,1/\sqrt{c}\,1/\sqrt{d})$ 라 하면, $|\langle x,\,y\rangle|^2 \le \|a\|^2\|b\|^2$ 이므로, 
@@ -1166,7 +1217,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_A_18}
 
@@ -1176,31 +1227,35 @@ $p>0$ 라고 하자. $\mathbb{R}^2$ 에서 노름이 $\|(x,\,y)\| = (x^p+y^p)^{1
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $u=(1, 0), v=(0, 1)$ 이라 하자. $\|u+v\|^2+\|u-v\|^2 = 2\|u\|^2+2\|v\|^2$ 이므로, $2 + (1+(-1)^p)^{2/p}= 4$ 이어야 한다. 즉 $1+(-1)^p = 2^{2/p}$ 이어야 하며, 이를 만족하는 $p$ 는 $2$ 뿐이다.
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler-6_A_19_20}
 
 내적벡터공간에서 내적을 노름의 합으로 표현 할 수 있다. 
 
-&emsp; ($1$) 내적이 정의된 실벡터공간 $V$ 에서 $u,\,v\in V$ 에 대해 다음이 성랍함을 보여라.
+&emsp;($1$) 내적이 정의된 실벡터공간 $V$ 에서 $u,\,v\in V$ 에 대해 다음이 성랍함을 보여라.
 
 $$
 \langle u,\,v \rangle = \dfrac{1}{4} \left[\|u+v\|^2 - \|u-v\|^2\right].
 $$
 
-&emsp; ($2$) 내적이 정의된 복소벡터공간 $V$ $u,\,v\in V$ 에 대해 다음이 성랍함을 보여라.
+&emsp;($2$) 내적이 정의된 복소벡터공간 $V$ $u,\,v\in V$ 에 대해 다음이 성랍함을 보여라.
 
 $$
 \langle u,\, v\rangle = \dfrac{1}{4} \left[\| u+v\|^2 - \|u-v\|^2 + i \|u+iv\|^2 - i \|u-iv\|^2 \right].
 $$
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1229,13 +1284,15 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-operator_orthogonal_to_every_vector}
 
 내적 $\mathbb{F}$-벡터공간에서 정의된 연산자 $T\in \mathcal{L}(V)$ 가 모든 $v\in V$ 에 대해 $\langle Tv,\,v\rangle = 0$ 이면 $T=0$ 임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1258,8 +1315,7 @@ $$
 
 :::
 
-</br>
-
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_A_22}
 $a_1,\ldots,\,a_n\in\mathbb{R}$ 에 대해 다음이 성립함을 보이시오.
@@ -1269,6 +1325,8 @@ $$
 $$
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1281,7 +1339,7 @@ $$
 이다. 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_A_27}
 
@@ -1295,6 +1353,8 @@ $$
 임을 보이고 필요하다면 이것을 이용하시오.
 
 :::
+
+</div></br>
 
 ::: {.solution} 
 
@@ -1318,7 +1378,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_B_4}
 
@@ -1338,6 +1398,8 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 계산해 보면 
@@ -1355,8 +1417,7 @@ $$
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_B_10}
 
@@ -1369,6 +1430,8 @@ $$
 를 만족하는 정규직교벡터의 집합 $\{e_1,\ldots,\,e_m\}$ 은 모두 $2^m$ 가지임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1395,13 +1458,15 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_B_11}
 
 벡터 공간 $V$ 에 두가지의 내적 ${\langle \cdot ,\cdot \rangle}_1$ 과 ${\langle \cdot,  \cdot \rangle}_2$ 가 부여되며 $\langle v, w\rangle_1 = 0 \iff \langle v, w\rangle_2=0$ 가 성립한다면 모든 $v,\,w\in V$ 에 대해 어떤 상수 $c$ 가 존재하여 $\langle v, w \rangle_1 = c\langle v, w \rangle_2$ 이어야 함을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1411,14 +1476,15 @@ $$
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_B_12}
 
 유한차원 벡터공간 $V$ 에 두가지의 내적 ${\langle \cdot , \cdot \rangle}_1$ 과 ${\langle \cdot,  \cdot \rangle}_2$ 가 부여되었다고 하자. 각각의 내적에 대한 노름 $\| \cdot \|_1$ 과 $\|\cdot \|_2$ 을 생각 할 수 있다. 이 때 어떤 양수 $c$ 가 존재하여 모든 $v\in V$ 에 대해 $\|v\|_1 \le c\|v\|_2$ 가 성립함을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1444,13 +1510,15 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_B_13}
 
 내적벡터공간 $V$ 에 대해 $\{v_1,\ldots,\,v_m\}\in V$ 는 선형독립이다. 모든 $i=1,\ldots,m$ 에 대해 $\langle w, v_i\rangle >0$ 인 $w\in V$ 가 존재함을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1479,8 +1547,7 @@ $$
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_B_14}
 
@@ -1493,6 +1560,8 @@ $$
 을 만족한다고 하자. 이 때 $\{v_1,\ldots,\,v_n\}$ 은 $V$ 의 기저임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1519,8 +1588,7 @@ $$
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_B_15}
 
@@ -1534,13 +1602,15 @@ $\phi \in \mathcal{L}(C_{[-1, 1]}, \mathbb{R})$ 이 $\phi (f) = 0$ 으로 정의
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 *to be done.*
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_C_2}
 
@@ -1548,13 +1618,15 @@ $U$ 가 $V$ 의 유한차원 부분공간일 때 $U^\perp = \{0_V\} \iff U=V$ �
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $U^\perp = \{0_V\}$ 이면 $U$ 의 정규직교기저 $\mathcal{B}=\{e_1,\ldots,\,e_m\}$ 에 대해 $v\in V \implies v \in \text{span}(\mathcal{B})$ 이므로 $U=V$ 이다. $U=V$ 라면 $U^\perp \{0_V\}$ 임은 자명하다.
 
 :::
 
-</br>  
+</br>  <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_C_5}
 
@@ -1562,14 +1634,15 @@ $V$ 는 유한차원 내적벡터공간이고 $U\le V$ 라고 하자. $P_{U^\per
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $v\in V$ 에 대해 $v=u+w,\, u\in U,\, w\in U^\perp$ 가 유일하게 정해지며 $P_U (v) = u$ 이고, $P_{U^\perp}=w$ 이다. 따라서 $P_{U^\perp} + P_U = I$ 이다.
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_C_6}
 
@@ -1577,13 +1650,15 @@ $U, W\le V$ 이고 $V$ 가 유한차원 벡터공간일 때 $P_U P_W=0$ 일 필�
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $P_UP_W=0$ 이면 $W \le U^\perp$ 이므로 모든 $u\in U,\, w\in W$ 에 대해 $\langle u,\,w \rangle = 0$ 이다. 
 모든 $u\in U,\, w\in W$ 에 대해 $\langle u,\, w\rangle =0$ 이면 $P_UP_W=0$ 임은 자명하다. 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_C_7}
 
@@ -1591,13 +1666,15 @@ $P_UP_W=0$ 이면 $W \le U^\perp$ 이므로 모든 $u\in U,\, w\in W$ 에 대해
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $\ker (P)$ 와 $\text{im}(P)$ 가 직교하므로 @thm-rank_nullity 에 의해 $\ker (P) \cap \text{im}(P) =\{0_V\}$ 이다. 또한 $\text{im}(P_U)=U$ 이므로 $U=\text{im}(P)$ 라 놓으며 조건을 만족한다.
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_C_8}
 
@@ -1605,12 +1682,13 @@ $\ker (P)$ 와 $\text{im}(P)$ 가 직교하므로 @thm-rank_nullity 에 의해 $
 
 :::
 
+</div></br>
 ::: {.solution}
 
 $U = \text{im}(P)$.
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_6_C_9}
 
@@ -1621,6 +1699,8 @@ $U$ 가 $V$ 의 유한차원 부분공간이며 $T\in \mathcal{L}(V)$ 일 때 �
 &emsp; ($2$) $P_U T P_U = T P_U$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 

@@ -30,28 +30,30 @@ $$
 
 
 </br>
-
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 ::: {#exm-zero_map}
 
-함수 $L:U \to V$ 가 모든 $u\in U$ 에 대해 $L(u)=0_V$ 일 때 이 $L$ 를 **영사상(zero map)** 이라 부르며 $0(u)$ 와 같이 표기한다. 영사상이 선형사상임을 보여라.
+함수 $L:U \to V$ 가 모든 $u\in U$ 에 대해 $L(u)=0_V$ 일 때 이 $L$ 를 **영사상(zero map)** 이라 부르며 $0(u)$ 와 같이 표기한다. 영사상이 선형사상이다.
 
 :::
 
-</br>
-
+</div></br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 ::: {#exm-T_zero}
-$L\in \mathcal{L}(U,\,V)$ 일 때 $L(0_U) = 0_V$ 임을 보여라.
+$L\in \mathcal{L}(U,\,V)$ 일 때 $L(0_U) = 0_V$ 이다.
 :::
 
-</br>
+</div></br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-negative_map}
 
-$L\in \mathcal{L}(U,\,V)$ 에 대해 $L(u)=v$ 이면 $L(-u)=-v$ 임을 보여라.
+$L\in \mathcal{L}(U,\,V)$ 에 대해 $L(u)=v$ 이면 $L(-u)=-v$ 이다.
 
 :::
 
-</br>
+</div></br>
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-operator}
@@ -61,20 +63,18 @@ $L\in \mathcal{L}(U,\,V)$ 에 대해 $L(u)=v$ 이면 $L(-u)=-v$ 임을 보여라
 :::
 
 </br>
-
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 ::: {#exm-derivative_integral_as_operator}
 
 실수 전체 구간에서 무한번 미분 가능한 $\mathbb{R} \mapsto \mathbb{R}$ 실함수의 집합을 $C_\mathbb{R}^{\infty}$ 라고 한다. $C_\mathbb{R}^\infty$ 는 $\mathbb{R}$-벡터공간임을 쉽게 보일 수 있다. $f\in C_\mathbb{R}^{\infty}$ 에 대한 미분연산자를 $\mathcal{D}$ 라고 하자. 즉 $(\mathcal{Df})(x)= f'(x)$ 이다. $f,\,g\in C_\mathbb{R}^\infty,\, c\in \mathbb{R}$ 에 대해 $\mathcal{D}(f+cg) = f'+cg'\in C_\mathbb{R}^\infty$ 이므로 $\mathcal{D} \in \mathcal{L}(C_\mathbb{R}^\infty)$ 이다. 또한 $\mathcal{I}:C_\mathbb{R}^\infty \to C^\infty$ 를 $(\mathcal{I}f)(x)=\int_{0}^x f(x)\,dx$ 로 정의하자. $\mathcal{I}\in \mathcal{L}(C_\mathbb{R}^\infty)$ 임을 알 수 있다.
 
 :::
 
-
-
-</br>
+</div></br>
 
 보통 두 집합 $A,\,B$ 사이의 함수 $f:A\to B$ 가 정의된다는 것은 모든 $a\in A$ 에 대해 $f(a) \in B$ 가 잘 정의된다는 것을 뜻한다. 그러나 벡터공간에서 정의된 선형 사상은 모든 벡터에 대해 알 필요 없이 기저에 대해서만 함수값을 알면 그 함수가 정의된다. 다음 명제는 그것을 증명한다.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-linearmap_basis}
 
@@ -86,6 +86,8 @@ $$
 
 를 만족하는 선형사상 $L:U \to V$ 는 존재하며 유일하다.
 :::
+
+</div></br>
 
 ::: {.proof}
 $u\in U$ 는 $\{u_1,\ldots,u_n\}$ 의 선형결합으로 유일하게 표현된다. $u= a_1 u_1 + \cdots + a_n u_n$ 와 $\{v_1,\ldots,\,v_n\}\subset V$ 에 대해 함수 $L:U \to V$ 를 다음과 같이 정의하자.
@@ -114,8 +116,7 @@ $$
 이다. 즉 $L=K$ 이므로 주어진 조건을 만족하는 선형사상은 유일하다. $\square$
 :::
 
-</br>
-
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-identity_operator}
 
@@ -128,7 +129,7 @@ $I_U\in \mathcal{L}(U)$ 일 때 모든 $u\in u$ 에 대해 $I_U(u) = u$ 이면 $
 
 :::
 
-</br>
+</div></br>
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-restriction}
@@ -168,12 +169,15 @@ $$
 
 우리는 이것으로부터 간단하게 선형사상의 아주 중요한 성질을 알 수 있다.
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 ::: {#prp-LUV_vector_space}
 
 #### $\mathcal{L}(U,\,V)$ 는 벡터공간이다 
 
 $U,\,V$ 가 $\mathbb{F}$-벡터공간일 때, 위에서 정의된 선형사상의 합과 스칼라곱에 의해 $\mathcal{L}(U,\,V)$ 는 $\mathbb{F}$-벡터공간이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 $L,\,K\in \mathcal{L}(U,\,V)$, $a,\,b\in \mathbb{F}$ 라 하자. $u_1,\,u_i \in U$ 에 대해 $L(u_1) = v_1$, $L(u_2) = v_2$, $K(u_1) = v'_1$, $K(u_2) = v'_2$ 라 하자.
@@ -192,9 +196,7 @@ $$
 
 :::
 
-
 </br>
-
 
 ### 선형사상의 합성
 
@@ -207,11 +209,11 @@ $$
 이다. 
 
 </br>
-
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 ::: {#prp-product_map}
 선형사상의 합성도 선형사상이다.
 :::
-
+</div></br>
 
 ::: {.proof}
 $\mathbb{F}$-벡터공간 $U,\,V,\,W$ 와 $c\in \mathbb{F}$ 를 생각하자. $L \in \mathcal{L}(U,\,V),\, K\in\mathcal{L}(V,\,W)$ 에 대해 
@@ -225,7 +227,7 @@ $$
 이므로 $L\circ K\in \mathcal{L}(U, W)$ 이다. $\square$
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-product_map}
 
@@ -239,6 +241,8 @@ L\circ (K_1 +K_2) &= L \circ K_1 + L \circ K_2
 $$
 
 :::
+
+</div></br>
 
 ::: {.proof}
 증명은 생략한다.
@@ -452,13 +456,15 @@ $$
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-ker_range_subspace}
 
-$L\in \mathcal{L}(U,\,V)$ 일 때, $\ker (L)$ 는 $U$ 의 부분공간이며 $\text{im} (L)$ 는 $V$ 의 부분공간이다.
+$L\in \mathcal{L}(U,\,V)$ 일 때, $\ker (L) \le U$ 이며 $\text{im} (L) \le V$ 의 부분공간이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 $\ker (L) \subset U$ 임은 자명하다. $L(0_U)=0_V$ 이므로 $0_U \in \ker (L)$ 이다. $u_1,\,u_2\in \ker (L),\, c \in \mathbb{F}$ 일 때, 
@@ -499,6 +505,8 @@ $$
 
 ### Rank-nullity 정리
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#thm-rank_nullity}
 
 #### Rank-nullity 정리
@@ -506,10 +514,12 @@ $$
 유한차원 벡터공간 $U,\,V$ 에서의 선형사상 $L\in \mathcal{L}(U,\,V)$ 에 대해 다음이 성립한다.
 
 $$
-\dim (U) = \text{nullity} (L) + \text{rank}(L)
+\dim (U) = \text{nullity} (L) + \text{rank}(L).
 $$
 
 :::
+
+</div></br>
 
 ::: {.proof}
 $\ker (L)$ 는 $U$ 의 부분공간이다(@lem-ker_range_subspace). $\text{nullity}(L)=m$ 이라 하고 $\ker (L)$ 의 기저를 $(u_1,\ldots,u_m )$ 이라 하자. 이 기저를 확장하여 $U$ 의 기저를 이루는 벡터 $(u_1,\ldots,\,u_m,\,w_1,\ldots,w_n)$ 를 구할 수 있다(@lem-basis_expansion). 그렇다면 $\dim (U) = m + n$ 이다. 이제 $\text{rank}(L)=n$ 임을 보이면 된다.
@@ -528,10 +538,12 @@ $$
 
 아래의 명제는 위의 증명과정에서 보였지만 별도로 언급할 가치가 있다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 ::: {#cor-range_independence}
 선형사상 $L\in \mathcal{L}(U,\,V)$ 에 대해 $\{u_1,\ldots,\,u_m\}\subset U$ 가 선형독립이며 $L(u_i)\ne 0_V\, (i=1,\ldots,\,m)$ 이라 하자. 이 때 $\{L(u_1),\ldots,\, L(u_m)\}$ 은 선형독립이다.
 :::
 
+</div>
 
 </br>
 
@@ -559,7 +571,7 @@ $L\in \mathcal{L}(U,\,V)$ 에 대한 역사상은 $T^{-1}$ 로 표기하며, 역
 원래 집합 $A$ 에서 집합 $B$ 로의 함수 $f:A \to B$ 에 대해 $f$ 가 가역함수라는 것은 $f$ 가 전단사 함수라는 뜻과 동일하고 동형사상은 훨씬 강한 제약조건을 요구하는 함수이지만 벡터공간과 선형사상의 특징으로 인해 벡터공간에서의 선형사상에서는 가역사상과 동형사상이 동치이다.
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-condition_of_injectivity}
 
@@ -567,13 +579,15 @@ $L\in \mathcal{L}(U,\,V)$ 에 대한 역사상은 $T^{-1}$ 로 표기하며, 역
 
 :::
 
+</div></br>
+
 ::: {.proof}
 $L$ 이 단사라 하자. $L(u)=0_V$ 인 $u$ 는 $0_U$ 뿐이므로 $\ker (L) = \{0_U\}$ 이다. 따라서 $\text{nullity} (L) = 0$ 이다. 
 
 $\text{nullity}(L)=0$ 이면 $\ker (L)=\{0_U\}$ 이다. $L(u_1)=L(u_2)$ $\implies$ $L(u_1-u_2)=0_V$ 이므로 $u_1 =u_2$ 이다. 즉 $L$ 는 단사이다. $\square$
 :::
 
-<br>
+<br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-same_dim_vs}
 두 유한차원 벡터공간 $U,\,V$ 에 대해 다음은 동치이다.
@@ -584,6 +598,7 @@ $\text{nullity}(L)=0$ 이면 $\ker (L)=\{0_U\}$ 이다. $L(u_1)=L(u_2)$ $\implie
 
 :::
 
+</div></br>
 
 ::: {.proof}
 $m=\dim (U),\, n = \dim (V)$ 이며 $(u_i),\,(v_j)$ 가 각각의 기저라 하자. 
@@ -602,25 +617,27 @@ $$
 
 </br>
 
-
-</br>
-
 이로부터 자연스럽게 아래의 결론이 나온다.
 
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#cor-isomorphism_U_F}
 $n$ 차원 $\mathbb{F}$-벡터공간 $U$ 와 $\mathcal{M}_{n}(\mathbb{F})$, $\mathcal{M}_{1 \times n}(\mathbb{F})$ 은 동형이다.
 
 :::
 
-</br>
+</div></br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-linearity_of_inverse_map}
 
 $L\in \mathcal{L}(U,\,V)$ 가 동형사상일 때 $L^{-1}$ 도 동형사상이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -635,7 +652,7 @@ $$
 이다. 즉 $L^{-1}$ 은 선형사상이다. $(L^{-1})^{-1}=L$ 이므로 $L^{-1}$ 도 동형사상이다. $\square$ 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-basis-tranformations}
 
@@ -648,6 +665,8 @@ $L\in \mathcal{L}(V,\,W)$ 에 대해 다음 두 조건은 동치이다.
 &emsp; ($2$) $L$ 는 $V$ 의 기저를 $W$ 의 기저로 변환한다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -669,6 +688,7 @@ $$
 
 이므로 $[-]_{\mathcal{B}_U,\mathcal{B}_V}$ 는 선형사상이다. 즉 우리는 다음을 증명했다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-MM_linearmap}
 
@@ -676,15 +696,17 @@ $\mathbb{F}$ 에서 정의된 유한차원 벡터공간 $U,\,V$ 와 그 순서�
 
 :::
 
-</br> 
+</div></br> 
 
 이제 우리는 어쩌면 선형대수학의 가장 중요한 결론을 내야 할 시간이 왔다.
 
-
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-isomorphic}
 $n$ 차원 벡터공간 $U$ 와 $m$ 차원 벡터공간 $V$ 에 대해 $\mathcal{L}(U,\,V)$ 는 $\mathcal{M}_{m\times n}(\mathbb{F})$ 와 동형이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 $U,\,V$ 의 기저를 각각 $\mathcal{B}_U = (u_i),\,\mathcal{B}_V = (v_j)$ 라 할 때 $\Phi: \mathcal{L}(U,\,V) \to \mathcal{M}_{m \times n}(\mathbb{F})$ 를 $\Phi(L) = [L]_{\mathcal{B}_U, \mathcal{B}_V}$ 로 정의한다. @lem-MM_linearmap 으로부터 $\Phi$ 는 선형사상임을 안다. $\ker (\Phi) = \{0_U\}$ 이므로 단사(injective)이다. 모든 $\mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 상응하는 $L$ 가 존재하므로 전사(surjective)이다. 즉 $\Phi$ 는 동형사상이다. $\square$
@@ -695,17 +717,19 @@ $U,\,V$ 의 기저를 각각 $\mathcal{B}_U = (u_i),\,\mathcal{B}_V = (v_j)$ 라
 
 위의 정리와 @prp-same_dim_vs 로부터 다음을 알 수 있다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#cor-dimension_of_LUV}
 
 유한차원 벡터공간 $U,\,V$ 에 대해 다음이 성립한다.
 
 $$
-\dim (\mathcal{L}(U, V)) = \dim (\mathcal{M}_{\dim (V) \times \dim (U)}(\mathbb{F})) = \dim (V)\times \dim (U)
+\dim (\mathcal{L}(U, V)) = \dim (\mathcal{M}_{\dim (V) \times \dim (U)}(\mathbb{F})) = \dim (V)\times \dim (U).
 $$
 
 :::
 
-</br>
+</div></br>
 
 다시 한번 유한 차원 $\mathbb{F}$-벡터공간에 대한 선형연산자의 집합 $\mathcal{L}(U, V)$ 를 생각해보자. $n = \dim U$, $m = \dim V$ 일 때
 
@@ -726,6 +750,7 @@ $$
 
 ### 선형연산자의 기본정리
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 ::: {#thm-fundamental_theorem_linaar_map}
 
 #### 선형 연산자의 기본 정리
@@ -739,6 +764,8 @@ $$
 &emsp; ($3$) $L$ 는 전사이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 함수가 가역이면 전단사이고, 전단사 이면 가역이다. 따라서 $L$ 가 전사라는 것과 단사라는 것이 동치임을 보이면 된다. Rank-nullity 정리(@thm-rank_nullity)로부터
@@ -763,9 +790,9 @@ $$
 
 </br>
 
-
-
 위의 명제로부터 자연스럽게 아래의 명제가 성립한다는 것을 알 수 있다.
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#cor-basis_transformation}
 
@@ -776,7 +803,7 @@ $$
 &emsp; ($2$) $\{v_1,\ldots,\,v_m\}$ 이 $V$ 의 기저일 때, $\{L(v_1),\ldots,\,L(v_m)\}$ 도 $V$ 의 기저이다.
 :::
 
-</br>
+</div></br>
 
 ### 곱공간
 
@@ -824,16 +851,18 @@ $v\in V_1 \times \cdots \times V_m$ 일 때 $v$ 는 $(v_1,\ldots,\,v_m)$ 이며 
 
 우리는 다음 명제를 쉽게 증명할 수 있다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-product_space}
 곱공간은 벡터공간이다.
 :::
 
-</br>
+</div></br>
 
 
 우리는 $\mathbb{F}$ 가 벡터공간임을 안다. 위의 @def-product_space 의 정의에 따라 곱공간 $\mathbb{F}^n$ 을 벡터공간으로 볼 수 있다. 실제로 우리가 수학 및 여러 다양한 분야에서 사용하는 $\mathbb{F}^n$ 은 벡터공간으로서의 $\mathbb{F}^n$ 이며 실제로는 앞으로 배울 내적이 정의된 내적벡터공간으로서의 $\mathbb{F}^n$ 이다.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-dimension_of_product_space}
 
@@ -845,14 +874,15 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 $(v^{(i)}_1,\ldots,\,v^{(i)}_{m_i})$ 를 $V_i$ 의 기저라고 하면 $\dim (V_i)=m_i$ 이다. $v\in V_1 \times \cdots \times V_m$ 의 $i$ 번째 성분을 기술하는데 $m_i$ 개의 기저벡터가 필요하므로 $V_1 \times \cdots \times V_m$ 를 기술하는 데는 $\dim V_1 + \cdots + \dim V_m$ 개의 벡터가 필요하다. $\square$ 
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-map_product_space}
 
@@ -863,15 +893,19 @@ $$
 $$
 :::
 
+</div></br>
+
 ::: {.proof}
 $U = U_1 \times \cdots \times U_m$ 에 대해 $u,\,u'\in U,\, c \in \mathbb{F}$ 일 때 $\phi (u+c u') = \phi(u) + c\phi (u')$ 인 것을 쉽게 보일 수 있다. $\square$
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-product_space_and_direct_sum}
 위에서 정의된 $\Phi$ 가 단사인 것의 필요충분조건은 $U_1+ \cdots +U_m$ 이 [직합(direct sum)](#직합) 인 것이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -887,7 +921,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-directsum_condition}
 유한차원 벡터공간 $U$ 의 부분공간 $U_1,\ldots,\,U_m$ 에 대해 $U_1 + \cdots + U_m$ 이 직합일 필요충분조건은
@@ -898,6 +932,8 @@ $$
 이다.
 :::
 
+</div></br>
+
 ::: {.proof}
 @prp-map_product_space 에서 정의된 $\Phi$ 를 생각한다. @prp-product_space_and_direct_sum 에 의해 $U_1+\cdots + U_m$ 이 직합일 필요충분조건이 $\Phi$ 가 단사인 것이며, $U_1 \times \cdots \times U_m$ 과 $U_1 + \cdots + U_m$ 이 유한차원 벡터공간이므로 $\Phi$ 가 단사인 것의 필요충분조건은 
 $$
@@ -905,8 +941,6 @@ $$
 $$
 이다. $\square$
 :::
-
-</br>
 
 </br>
 
@@ -986,17 +1020,19 @@ $K=P^{-1}\circ L \circ P$ 라면 그 행렬표현도 $[K] = [P^{-1}][L][P]$ 일 
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-basis_transoframtion_by_similarity_transformation}
 $\boldsymbol{P}$ 가 가역행렬일 때 $\boldsymbol{P}$ 의 각 열은 표준기저가 이 변환에 의해 변환된 새로운 기저이다.
 :::
 
+</div></br>
+
 ::: {.proof}
 표준기저 $\{\boldsymbol{e}_i\}$ 에 대해 $\boldsymbol{Pe}_i = \boldsymbol{P}_{:i}$ 이다. $\boldsymbol{P}$ 가 가역행렬이므로 열벡터의 집합은 선형독립이다. $\square$ 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-similarity_equivalence}
 
@@ -1010,19 +1046,20 @@ $\boldsymbol{P}$ 가 가역행렬일 때 $\boldsymbol{P}$ 의 각 열은 표준�
 
 :::
 
-
-</br>
+</div></br>
 
 선형사상의 기저 변환은 선형대수학에서 매우 중요하다. 예를 들어 선형사상이 어떤 기저에서 대각성분을 제외한 성분이 $0$ 이 된다면, 이 선형사상에 대해 매우 다루기 쉬워진다. 벡터공간의 기저를 바꾸는 것은 그 표현만 바뀌는 것일 뿐 벡터공간 자체가 바뀌는 것은 아니기 때문에 이 기저의 변환을 원할 때 원하는 만큼 사용 할 수 있다.
 
 </br>
 
-## 연습문제
-
+## 연습문제 {.unnumbered}
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-linear_map_1}
 
 $V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(V, W)$ 이다. $V$ 의 어떤 부분공간 $U$ 는 $U \cap \ker (L)=\{0\}$ 이며 $\text{im}\,(L)=\{L(u) : u \in U\}$ 임을 보이시오.
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1030,8 +1067,7 @@ $\ker (L)$ 의 기저 $(v_1,\ldots,\,v_m)$ 을 확장하여 $V$ 의 기저 $(v_1
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-dimension_and_injectivity_surjectivity}
 $U,\,V$ 가 유한차원 벡터공간일 때 다음을 보여라.
@@ -1041,6 +1077,8 @@ $U,\,V$ 가 유한차원 벡터공간일 때 다음을 보여라.
 &emsp; ($2$) $U \mapsto V$ 로의 전사인 선형사상이 존재할 필요충분조건은 $\dim(U) \ge \dim (V)$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 ($1$) $L\in \mathcal{L}(U,\,V)$ 라고 하자. $\dim(V) \ge \text{rank}\,(L) = \dim(U)-\text{nullity}\, (L)$ 임을 안다. $L$ 이 단사이면 $\text{nullity}\,(L)=0$ 이므로 $\dim(V) \ge \dim (U)$ 이다. $n=\dim (V)\ge \dim (U)=m$ 이라고 하자. $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 과 $U$ 의 기저 $(u_1,\ldots,\,u_m)$ 에 대해 $L(u_i)=v_i$, $i=1,\ldots,\,m$ 는 단사인 선형사상이다.
@@ -1054,7 +1092,7 @@ $$
 는 전사인 선형사상이다. 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-inverse_image_of_linear_map}
 
@@ -1066,6 +1104,8 @@ $L\in \mathcal{L}(U,\,V)$ 이며 어떤 $u\in U$ 에 대해 $L(u)=v$ 일 때 다
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($1$) $A = \{u+x: x\in \ker (L)\}$ 라 하자.  $y \in A$ 에 대해 $L(y) = v$ 이므로 $A \subset L^{-1}(\{v\})$ 이다. $y\in U - A$ 에 대해 $y-u\not\in \ker{L}$ 이므로 $L(y)\ne v$ 이다. 따라서 $L^{-1}(\{v\}) = A$ 이다.
@@ -1074,7 +1114,7 @@ $L\in \mathcal{L}(U,\,V)$ 이며 어떤 $u\in U$ 에 대해 $L(u)=v$ 일 때 다
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_3_B_24}
 
@@ -1085,6 +1125,8 @@ $W$ 가 유한차원 벡터공간이고 $L,\,K\in \mathcal{L}(V, W)$ 일 때 다
 &emsp; ($2$) $K= S L$ 가 되도록 하는 어떤 $S\in \mathcal{L}(W)$ 가 존재한다.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1104,7 +1146,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_3_B_25}
 
@@ -1115,6 +1157,8 @@ $V$ 가 유한차원벡터공간이고 $L,\,K\in \mathcal{L}(V,W)$ 일 때 다�
 &emsp; ($2$) $L = KS$ 가 되도록 하는 어떤 $S\in \mathcal{L}(V)$ 가 존재한다.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1130,7 +1174,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_3_B_28}
 
@@ -1143,6 +1187,8 @@ $$
 을 만족함을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1168,7 +1214,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_3_B_29}
 
@@ -1182,6 +1228,8 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $U=\{au:a\in \mathbb{F}\}$ 라고 하자. $\ker (\varphi) \cap U=\{0_V\}$ 이므로 $\ker (\varphi) + U = \ker (\varphi)\oplus U$ 이다. $\varphi \ne 0$ 이므로 $\text{rank}(\varphi)=1$ 이며 따라서 $u$ 의 스칼라곱이 아닌 벡터는 모두 $\ker (\varphi)$ 에 포함된다. 즉 $V = \ker (\varphi)\oplus U$ 이다.
@@ -1189,7 +1237,7 @@ $U=\{au:a\in \mathbb{F}\}$ 라고 하자. $\ker (\varphi) \cap U=\{0_V\}$ 이므
 :::
 
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_3_B_30}
 
@@ -1197,14 +1245,15 @@ $\varphi_1,\,\varphi_2 \in \mathcal{L}(V,\mathbb{F})$ 이며 $\ker (\varphi_1) =
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $u\notin \ker (\varphi_2) \iff u \not\in \ker (\varphi_2)$ 이며 @exr-axler_3_B_29 에 의해 $\text{im}(\varphi_1) =  \text{im}(\varphi_2) = \{au\}$ 이다. 따라서 $\varphi_1 = c\varphi_2$ 를 만족하는 $c\in \mathbb{F}$ 가 존재한다. 
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_3_8_9}
 
@@ -1212,20 +1261,22 @@ $u\notin \ker (\varphi_2) \iff u \not\in \ker (\varphi_2)$ 이며 @exr-axler_3_B
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $K,\,L$ 이 전사이면 $KL$ 도 전사이다. $KL$ 이 전사이면 $K, L$ 도 각각 전사이다. 유한차원 벡터공간에서의 연산자므로 전사이면 전단사이다.
 
 :::
 
-</br>
-
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_3_8_10}
 
 유한차원 벡터공간 $U$ 에서 정의된 연산자 $K, L\in \mathcal{L}(U)$ 에 대해 $KL=I$ 일 필요충분조건은 $LK=I$ 인것임을 보이시오.
 :::
 
+</div></br>
 
 ::: {.solution}
 
@@ -1234,13 +1285,15 @@ $K,\,L$ 이 전사이면 $KL$ 도 전사이다. $KL$ 이 전사이면 $K, L$ 도
 ($\,\Longleftarrow\,$) $K,\,L$ 을 바꿔서 위의 증명을 그대로 쓸 수 있다.
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_3_8_11}
 
 유한차원 벡터공간 $U$ 에 대해 $R, S, T = \mathcal{L}(U)$ 일 때 $RST=I$ 이면 $S$ 는 가역이며 $S^{-1}= TR$ 임을 보여라. $U$ 가 유한차원이라는 조건이 없다면 성립하지 않을 수도 있음을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1256,12 +1309,11 @@ T & = I
 \end{aligned}
 $$
 
-
 라고 하면 $RST=I$ 이지만 $S$ 는 전사가 아니다.
 
 ::: 
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_3_D_3}
 
@@ -1273,6 +1325,8 @@ $V$ 가 유한차원 벡터공간이고 $U \le V$ 이며 $S\in \mathcal{L}(U, V)
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($1 \implies 2$) $U$ 의 기저 $\{ u_1,\ldots,\,u_m \}$ 에 대해 $S(u_i) = v_i$ 라고 하자. $S$ 가 동형이므로 $\{v_1,\ldots,\,v_m \}$ 도 선형 독립이다. $\{u_1,\ldots,\,u_m\}$ 을 확장하여 $V$ 의 기저 $\{u_1,\ldots,\,u_m,\,u_{m+1}, \ldots, v_n\}$ 을 구성 할 수 있으며, $\{v_1,\ldots,\,v_m\}$ 을 확장하여 $V$ 의 기저 $\{v_1,\ldots,\,v_m,\,v_{m+1}, \ldots, v_m\}$ 을 구성 할 수 있다. 이 때 $T\in \mathcal{L}(V)$ 를 $T(u_i) = v_i$ $(i=1,\ldots,\,m)$ 으로 정의하면 된다.
@@ -1280,7 +1334,7 @@ $V$ 가 유한차원 벡터공간이고 $U \le V$ 이며 $S\in \mathcal{L}(U, V)
 ($2 \implies 1$) $T$ 가 가역이므로 $T$ 는 단사이다. $S$ 가 단사가 아니라면 $T$ 도 단사가 아니므로 $S$ 는 단사이다. 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_3_D_4}
 
@@ -1292,6 +1346,8 @@ $W$ 가 유한차원벡터공간이며 $L,\,K\in \mathcal{L}(V, W)$ 일 때 다�
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($1 \implies 2$) @exr-axler_3_B_24 로 부터 $K = S_1L$, $L = S_2K$ 를 만족하는 $S_1,\,S_2\in \mathcal{L}(W)$ 가 존재하며 $K = S_1S_2K$ 이므로 $S_1S_2$ 는 가역이다. 따라서 $S_1,\,S_2$ 각각 가역이다.
@@ -1300,7 +1356,7 @@ $W$ 가 유한차원벡터공간이며 $L,\,K\in \mathcal{L}(V, W)$ 일 때 다�
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_3_D_5}
 
@@ -1311,6 +1367,8 @@ $V$ 가 유한차원 벡터공간이며 $L,\,K\in \mathcal{L}(V, W)$ 일 때 다
 &emsp; ($2$) $L = KS$ 를 만족하는 가역연산자 $S\in \mathcal{L}(V)$ 가 존재한다.
 :::
 
+</div></br>
+
 ::: {.solution}
 ($1 \implies 2$) @exr-axler_3_B_25 로부터 $L = KS_2$, $K = LS_1$ 이 되도록 하는 $S_1,\,S_2\in \mathcal{L}(V)$ 가 존재함을 안다. $L = L S_1S_2$ 이므로 $S_1S_2$ 는 가역이다. 따라서 $S_1, S_2$ 는 각각 가역이다.
 
@@ -1318,7 +1376,7 @@ $V$ 가 유한차원 벡터공간이며 $L,\,K\in \mathcal{L}(V, W)$ 일 때 다
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_3_D_6}
 
@@ -1330,6 +1388,8 @@ $V, W$ 가 유한차원 벡터공간이며 $L,\,K\in \mathcal{L}(V, W)$ 일 때 
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($1 \implies 2$) $\ker (L)$ 을 $\ker (K)$ 로 변환하는 연산자 $R\in \mathcal{L}(V)$ 가 존재한다. 즉 $\ker (K) =  \ker (KR)$ 이다. @exr-axler_3_D_4 에 의해 $L = SKR$ 을 만족하는 $\in \mathcal{L}(W)$ 가 존재한다.
@@ -1338,13 +1398,15 @@ $V, W$ 가 유한차원 벡터공간이며 $L,\,K\in \mathcal{L}(V, W)$ 일 때 
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_3_D_16}
 
 유한차원 벡터공간 $V$ 에 대해 $L\in \mathcal{L}(V)$ 이 모든 $S\in \mathcal{L}(V)$ 에 대해 $SL=LS$ 이면 $L$ 은 항등사상 $I$ 의 스칼라곱임을 보여라. 즉 어떤 스칼라 $c$ 에 대해 $L=cI$ 임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 을 생각한다. $S_j (v_k) = \delta_{jk}v_k$ 는 선형연산자이다. 그리고 $L(v_i) = \sum_{k=1}^n A_{ki} v_k$ 라고 하자. 

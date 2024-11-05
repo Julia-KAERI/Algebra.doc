@@ -2,3 +2,41 @@
 
 이 교재는 Julia 를 이용한 수치해석 교재라는 큰 틀 안에서 기획되었습니다. 원래는 교재의 한두 챕터였지만 수치해석을 위한 일관된 선형 대수 교재에 대한 필요성을 느껴 별도의 교재로 쓰게 되었습니다. 이 교재의 목적은 스펙트럼 정리와 특이값 분해까지 최단거리, 최단시간으로 끝내는 것입니다. 이를 위해 일반적인 선형대수 교재들에 포함된 것이 빠지거나 뒤로 밀려 나기도 했습니다. 일단 특이값 분해까지 끝내고 나서 필요한 것들을 보충하도록 구성했습니다.
 
+명제는  다음과 같이 표기한다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-example}
+
+자연수는 무한집합이다.
+:::
+
+
+</div>
+
+</br>
+
+예제(example) 은 다음과 같이 표기한다.
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-example}
+
+예제 
+:::
+
+</div>
+
+</br>
+
+연습문제는 다음과 같이 표기한다.
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-example}
+
+연습문제
+
+:::
+
+</div>

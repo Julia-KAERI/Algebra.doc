@@ -40,7 +40,7 @@ $$
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-divisor}
 
@@ -54,6 +54,7 @@ $$
 
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -84,12 +85,16 @@ $a,\,b\in\mathbb{Z}$ 에 대해 $\gcd (a,\,b)=1$ 일 때 $a,\,b$ 는 **서로소
 
 </br>
 
+다음 명제는 @prp-divisor 에 의해 자명하다.
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-relatively_prime}
 
 $a,\,b\in \mathbb{Z}$ 가 서로소이면 $ma+nb=1$ 을 만족하는 $m,\,n\in \mathbb{Z}$ 가 존재한다.
 :::
 
-</br>
+</div></br>
 
 
 ::: {.callout-note appearance="simple" icon="false"}
@@ -101,7 +106,7 @@ $a,\,b\in \mathbb{Z}$ 가 서로소이면 $ma+nb=1$ 을 만족하는 $m,\,n\in \
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-prime_number_equivalence}
 
@@ -113,6 +118,8 @@ $a,\,b\in \mathbb{Z}$ 가 서로소이면 $ma+nb=1$ 을 만족하는 $m,\,n\in \
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 $p$ 가 소수임을 가정하자. $\gcd(p, n) = d \ne 1$ 이라면 $d\mid p$ 이므로 $d=p$ 이다. 따라서 $p \mid n$ 이다. 즉 $p$ 가 소수이면 $\gcd (p, n)=1$ 이거나 $p \mid n$ 이다.
@@ -121,7 +128,7 @@ $p$ 가 소수가 아니라면 $1<d<p,\, d\mid p$ 인 양의정수 $d$ 가 존�
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-relatively_prime_2}
 
@@ -129,13 +136,15 @@ $a$ 와 $b$ 가 서로소이고 $a\mid bc$ 이면 $a\mid c$ 이다.
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 @prp-relatively_prime 에 의해 $ma+nb=1$ 을 만족하는 $m,\,n\in \mathbb{Z}$ 가 존재한다. $mac+nbc=c$ 이며 $a\mid mac$ 이고 가정에 의해 $a\mid mbc$ 이므로 $a \mid c$ 이다. $\square$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#cor-relatively_prime}
 
@@ -143,20 +152,23 @@ $a$ 와 $b$ 가 서로소이고 $a\mid bc$ 이면 $a\mid c$ 이다.
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 $p$ 가 소수이므로 $p \nmid a$ 라면 @prp-prime_number_equivalence 에 의해 $\gcd (p,\,a)=1$ 이다. $mp+na=1$ 을 만족하는 $m,\,n\in \mathbb{Z}$ 가 존재한다. $mpb + nab = b$ 이며 $p \mid nab$ 이므로 $p\mid b$ 이다. $\square$ 
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-prime_number_factorization}
 
 $1$ 보다 큰 양의 정수 $a$ 는 소수의 곱으로 유일하게 표현된다. 즉 $a\in \mathbb{Z}_+$ 은 어떤 소수 $p_1,\ldots,\,p_m$, ($p_1< \cdots <p_m$) 에 대해 $a=p_1^{n_1} \cdots p_m^{n_m}$ 이며 $p_1,\ldots,\,p_m$ 과 $n_1,\ldots,\,n_m$ 은 유일하게 정해진다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 우선 $a$ 가 소수의 곱으로 표현된다는 것을 induction 을 통해 증명한다. $a=2$ 는 소수이므로 자명하다. $a<n$ 에 대해 가정하자. $a=n$ 일 때 $a$ 가 소수이면 더 이상 증명할 거이 없다. $a$ 가 소수가 아니라면 어떤 $a$ 보다 작은 두 양수의 곱으로 표현될 수 있으며 가정에 의해 두 양수는 소수의 곱으로 표현되므로 $a$ 도 소수의 곱으로 표현된다. 
@@ -188,10 +200,7 @@ $1$ 보다 큰 양의 정수 $a$ 는 소수의 곱으로 유일하게 표현된�
 :::
 :::
 
-</br>
-
-
-
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-modula}
 
@@ -205,9 +214,9 @@ $1$ 보다 큰 양의 정수 $a$ 는 소수의 곱으로 유일하게 표현된�
 
 &emsp; ($4$) $ab \equiv ac \;(\text{mod}\; n)$ 이고 $a$ 와 $n$ 이 서로소이면 $b \equiv c \;(\text{mod}\;n)$ 이다.
 
-
 :::
 
+</div></br>
 
 ::: {.proof}
 ($1$) $n \mid (a-a)$ 와 $n \mid (a-b) \implies n \mid (b-a)$ 임은 자명하다. $n\mid (a-b)$ 이고 $n \mid (b-c)$ 라 하자. $a-b=k_1n,\, b-c = k_2n$ 이라 하면 $a-c = (k_1 + k_2)n$ 이므로 $n \mid (a-c)$ 이다. 따라서 congruence modulo $n$ 관계는 동치관계이다.
@@ -216,8 +225,7 @@ $1$ 보다 큰 양의 정수 $a$ 는 소수의 곱으로 유일하게 표현된�
 
 ($3$) $n \mid (a-b),\, n \mid (c-d)$ 이면 $n \mid ((a-b)+ (c-d))$ 이므로 $n \mid ((a+c)- (b+d))$ 이다. 즉 $a+c \equiv b+d \; (\text{mod}\; n)$ 이다. 또한 $n \mid ((a-b)c + (c-d)b)$ 이므로 $n \mid (ac-bd)$ 이다. 
 
-($4$) $n \mid a(b-c)$ 이고 $n$ 과 $a$ 가 서로소 이므로 @prp-relatively_prime 에 의해 $n \mid (b-c)$ 이다. 
-
+($4$) $n \mid a(b-c)$ 이고 $n$ 과 $a$ 가 서로소 이므로 @prp-relatively_prime 에 의해 $n \mid (b-c)$ 이다.  $\square$
 
 :::
 
@@ -236,6 +244,7 @@ $$
 로 정의한다. 
 
 </br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-operation_of_congruence_class_1}
 
@@ -243,12 +252,15 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 $a,\,b\in [i],\, c,\,d\in [j]$ 라 하자. @prp-modula 에서 보인 대로 $a+c \equiv b+d \;(\text{mod}\; n)$ 이며 $ac \equiv bd \;(\text{mod}\;n)$ 이므로 잘 정의된다. $\square$
 
 :::
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-operation_of_congruence_class_2}
 
@@ -269,6 +281,8 @@ $a,\,b\in [i],\, c,\,d\in [j]$ 라 하자. @prp-modula 에서 보인 대로 $a+c
 &emsp; ($7$) $[1][i]=[i]$.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -291,7 +305,9 @@ $a,\,b\in [i],\, c,\,d\in [j]$ 라 하자. @prp-modula 에서 보인 대로 $a+c
 
 </br>
 
-### 연습문제
+### 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-herstein_1_3_3}
 
@@ -299,8 +315,9 @@ $a,\,b\in [i],\, c,\,d\in [j]$ 라 하자. @prp-modula 에서 보인 대로 $a+c
 
 $a,\,b\in \mathbb{Z}$ 일 때 어떤 정수 $d$ 가 (1) $a\mid d,\, b\mid d$ 이며 $\forall x\in \mathbb{Z},\, (a \mid x)\land (b \mid y)\implies (d \mid x)$ 이면 $d$ 를 $a$ 와 $b$ 의 **최소공배수 (least common multiplier)** 라 하고 $\text{lcm}(a,\,b)$ 라 쓴다. 최소공배수가 존재하며 $a$ 와 $b$ 가 양의 정수일 때 $\text{lcm}(a,\,b) = ab/\gcd(a,\,b)$ 임을 보이시오.
 
-
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -312,7 +329,7 @@ $g=\gcd(a,\,b),\, l= \text{lcm}(a,\,b)$ 라 하자. $g\mid a,\, g\mid b$ 이므�
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-herstein_1_3_4}
 
@@ -322,13 +339,15 @@ $a\mid x,\, b\mid x$ 이고 $\gcd (a,\,b)=1$ 이면 $(ab)\mid x$ 임을 보이�
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $\gcd (a,\,b)=1$ 이므로 $ma+nb=1$ 인 정수 $m,\,n$ 이 존재한다. 따라서 $max + nbx = x$ 이다. $b \mid x$ 이므로 $(ab)\mid max$ 이며 $a\mid x$ 이므로 $(ab) \mid nbx$ 이다. 따라서 $(ab)\mid x$ 이다. 
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-Herstein_1_3_9}
 
@@ -338,6 +357,7 @@ $n>1$ 이 소수인 것의 필요충분조건은 임의의 정수 $a$ 에 대해
 
 :::
 
+</div></br>
 
 ::: {.solution}
 
@@ -345,7 +365,7 @@ $\gcd(a,\,n) = m > 1$ 이라면 $m \mid n$ 이어야 하므로 $m = n$ 이다.
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-herstein_1_3_13}
 
@@ -354,6 +374,8 @@ $\gcd(a,\,n) = m > 1$ 이라면 $m \mid n$ 이어야 하므로 $m = n$ 이다.
 @def-modula 와 @prp-modula 에서 정의된 equvalence class 의 집합을 $J_n$ 이라 하자. 즉 $J_n = \{[0],\ldots,\,[n-1]\}$ 이다. $\gcd (a,\,n)=1$ 이라면 $[a][b]=1$ 를 만족하는 $[b]\in J_n$ 이 존재함을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -408,7 +430,8 @@ $\gcd(a, n)=1$ 이므로 $pa+qn=1$ 을 만족하는 $p,\,q\in \mathbb{Z}$ 가 �
 </br>
 
 군의 연산이 특별히 덧셈의 성질을 갖지 않을 때는 $ab$ 와 같이 쓰기로 하자. 또한 $(G,\, \cdot)$ 의 이항연산도 $ab$ 와 같이 쓰기로 하자.
-</br>
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-uniqueness_of_identity_and_inverse}
 
@@ -421,6 +444,8 @@ $G$ 가 군 일 때
 &emsp; ($3$) $G$ 의 항등원의 역원은 자기 자신이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -436,7 +461,7 @@ $G$ 가 군 일 때
 
 $g$ 가 군 $G$ 의 원소일 때 $g$ 를 $n$ 번 연산한 것을 $g^n$ 이라고 쓴다. 즉 $gggg = g^4$ 이다. 더불어 $g^0 =1_G$ 로 정하자. 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-cancelation_law}
 
@@ -445,6 +470,8 @@ $g$ 가 군 $G$ 의 원소일 때 $g$ 를 $n$ 번 연산한 것을 $g^n$ 이라�
 $a,\,b,\,c\in G$ 일 때 $ac=bc$ 이면 $a=b$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 $a=acc^{-1}=bcc^{-1}=b$ 이다.
@@ -489,11 +516,12 @@ $\forall a,\,b\in G$ 에 대해 $ab=ba$ 일 때 $G$ 를 **가환군** 혹은 **�
 
 우리는 앞서 [대칭군](../part1/ch1_03_determinant.qmd#def-symmetric_group) $S_n$ 에 대해 알아보았다. 대칭군은 아주 중요한 군이기 때문에 다시 언급할 가치가 있다. $S_n$ 은 유한군이며 가환군이 아니라는 것을 알 수 있을 것이다.
 
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 ::: {#exm-S3}
 앞으로 자주 사용될 군중의 하나는 $S_3$ 이다. $S_3 = \{e, (1, 2), (1, 3), (2, 3), (1,2, 3), (1, 3, 2) \}$ 이며 이 때 $x=(1, 2, 3)$, $y=(1,2)$ 으로 정하자. $x^2 = (1, 3, 2),\, x^3 = e$ 이며, $xy=(1, 3)$, $x^2y=(2, 3)$ 이므로 $S_3 = \{e, x, x^2, y, xy, x^2y\}$ 로 쓸 수 있으며 $x^2y=yx$ 의 관계를 만족한다. 항등원을 $1$ 이라 표기하면 $S_3 = \{1, x, x^2, y, xy, x^2y\}$ 이다.
 :::
 
-</br>
+</div></br>
 
 우리는 @prp-permutation_even_odd 에서 대칭군이 호환(transposition) 의 합성으로 표현될 때 그 갯수는 변하더라도 갯수가 짝수인지 홀수인지는 변하지 않는다는 것을 보였으며 그것이 짝수일 때 **짝순열**, 홀수일 때 **홀순열** 이라고 부른다는 것을 안다. 특히 짝순열의 집합은 군을 이루며 그것을 **교대군 (Alternating group)** 이라고 하고 $A_n$ 이라고 쓴다. 
 
@@ -527,8 +555,7 @@ $H$ 가 $G$ 의 부분집합이며 $H$ 스스로 군일 때 $H$ 를 $G$ 의 **�
 :::
 :::
 
-</br>
-
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-subgroup}
 
@@ -542,13 +569,15 @@ $H$ 가 군 $G$ 의 부분집합이며 다음을 만족하면 $H$ 는 $G$ 의 �
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 @def-groups 를 생각해보라..
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-intersection_of_subgroups}
 
@@ -556,10 +585,11 @@ $H$ 와 $K$ 가 $G$ 의 부분군일 때 $H \cap K$ 역시 $G$ 의 부분군이�
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 $x,\,y \in H \cap K$ 라면 $xy\in H \cap K$ 이다. $1\in H\cap K$ 이다. $x\in H\cap K$ 라면 $x^{-1}\in H\cap K$ 이다. $\square$
-
 
 :::
 
@@ -576,13 +606,16 @@ $$
 
 이다. 
 
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-Za}
 
 $\mathbb{Z}a$ 가 덧셈에 대해 $\mathbb{Z}^+$ 의 부분군이다. 따라서 $(\mathbb{Z}a,+)$ 라고 쓸 수 있다.
 
 :::
 
-</br>
+</div></br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-subgroup_of_Zplus}
 
@@ -590,13 +623,15 @@ $S$ 가 $\mathbb{Z}^{+}$ 의 부분군이려면 $S=\{0\}$ 이거나 $\mathbb{Z}a
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 $\{0\}\le \mathbb{Z}^+$ 임은 자명하다. $S$ 가 $0$ 이외의 $x$ 를 포함한다고 하자. $S$ 가 군이므로 $|x|\in S$ 이며 $S$ 는 양의 정수를 포함한다. 따라서 $S$ 에 포함된 가장 작은 양의정수 $a$ 가 존재한다. 군의 연산이 덧셈이므로 $\mathbb{Z}a\subset S$ 이다. 만약 $b>0,\, b\not\in \mathbb{Z}a$ 라고 하자. $b=ma+r$ 인 양의 정수 $m$ 과 $0\le r < a$ 인 양의정수 $r$ 이 존재하며 당연히 $r\in S$ 인데 $a$ 가 $S$ 에 포함된 가장 작은 양의정수라는 가정에 모순된다. 따라서 $S=\mathbb{Z}a$ 이다. $\square$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-additive_groups_generated_by_two_integers}
 
@@ -610,21 +645,22 @@ $S$ 는 덧셈 연산에 대해 $\mathbb{Z}^+$ 의 부분군이다.
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 $(m_1 a+ n_1 b) + (m_2 a + n_2 b) = (m_1+m_2)a+ (n_1 +n_2)b\in S$ 이므로 $S$ 는 덧셈에 대해 닫혀 있다. $0a + 0b = 0 \in S$ 이므로 $S$ 는 덧셈에 대한 항등원을 포함한다. $(ma + nb) + ((-m)a+(-n)b)=0$ 이므로 $S$ 는 모든 원소의 역원을 포함한다. 따라서 $S \le \mathbb{Z}^+$ 이다. $\square$
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#cor-additive_groups_generated_by_two_integers}
 $\mathbb{Z}a+ \mathbb{Z}b$ 가 $\mathbb{Z}^+$ 의 부분군이며 nontrivial 하므로 @prp-subgroup_of_Zplus 에 의해 어떤 양의 정수 $c$ 에 대해 $\mathbb{Z}a+\mathbb{Z}b = \mathbb{Z}c$ 이다.
 :::
+</div>
 
-
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-gcd_in_groups}
 
@@ -632,18 +668,21 @@ $\mathbb{Z}a + \mathbb{Z}b = \mathbb{Z}c$ 일 때 $c=\gcd (a,\,b)$ 이다.
 
 :::
 
+</div></br>
+
 ::: {.proof}
 @prp-divisor 를 보라.
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-common_multiplier}
 
 $0$ 이 아닌 정수 $a,\,b$ 에 대해 $\mathbb{Z}a \cap \mathbb{Z}b$ 는 어떤 양의 정수 $m$ 에 대해 $\mathbb{Z}a \cap \mathbb{Z}b = \mathbb{Z}m$ 이며 $m = \text{lcm}(a, b)$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -664,13 +703,15 @@ $0$ 이 아닌 정수 $a,\,b$ 에 대해 $\mathbb{Z}a \cap \mathbb{Z}b$ 는 어�
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-order_of_finite_cyclic_group}
 
 $G=\langle g \rangle$ 일 때 $|G|= o(g)$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 $G=\langle g\rangle = \{g^0=1_G,\ldots,\,g^{n-1}\}$. $\square$ 
@@ -679,8 +720,9 @@ $G=\langle g\rangle = \{g^0=1_G,\ldots,\,g^{n-1}\}$. $\square$
 
 </br>
 
-### 연습문제
+### 연습문제 {.unnumbered}
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-artin_2_2_3}
 
 #### Artin 2.2.3
@@ -693,6 +735,8 @@ $x,\,y,\,z,\,w$ 가 군 $G$ 의 원소일 때 다음을 보이시오.
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($1$) $y=x^{-1}w^{-1}z$.
@@ -701,13 +745,15 @@ $x,\,y,\,z,\,w$ 가 군 $G$ 의 원소일 때 다음을 보이시오.
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-herstein_2_3_4}
 #### Herstein 2.3.4
 
 $G$ 가 군이며 모든 $a,\,b\in G$ 에 대해 연속적인 세 정수 $i$ 에 대해 $(ab)^i = a^ib^i$ 이면 $G$ 가 아벨군임을 보여라
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -730,7 +776,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-herstein_2_3_14}
 
@@ -740,13 +786,15 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 제거규칙, 즉 $ac=bc\implies a=b$ 가 성립하면 $a\ne b \implies ac \ne bc$ 이다. $G$ 가 유한집합이므로 임의의 정해진 $a\in G$ 에 대해 $aG=\{ay: y\in G\}=G$ 이어야 하며, 따라서 어떤 $x\in G$ 에 대해 $ax=a$ 이다. $axa=a^2$ 이므로 $xa=a$ 이다. 임의의 $b\in G$ 에 대해 $axb=ab$ 이므로 $xb=b$ 이며 $bxb=b^2$ 이므로 $bx=b$ 이다. 즉 이 $x$ 가 $G$ 에서의 항등원이다. 이제 항등원을 $1$ 로 표기하자. $aG=G$ 이므로 $az=1$ 인 $z$ 가 존재하며 $zaz=z$ 이므로 $za=1$ 이다. 즉 $a$ 에 대한 역원이 존재한다. 따라서 $G$ 는 군이다. 
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-herstein_2_3_15}
 
@@ -760,16 +808,17 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($1$) $J_p$ 는 유한집함이다. $[a][c] = [b][c]$ 라 하자. $p \mid (a-b)c$ 인데 $p \nmid c$ 이므로 $p \mid ab$ 이다. 즉 $[a][c]=[b][c] \implies [a]=[b]$ 이므로 $J_p$ 는 군이다. 
 
 ($2$) $K_n = \{[m]: \gcd(n,\,m)=1\}$ 이라 하자. $\gcd(n, 1)=1$ 이므로 $[1]\in K_n$ 이다. $[a],\, [b]\in K_n$ 일 때 $\gcd(ab,n)=1$ 이며 $[a][b]=[ab]$ 이므로 $[a][b]\in K_n$ 이다. 곱연산의 결합법칙이 성립함은 자명하메 $[a][c]=[b][c]$ 이면 $n \mid (a-b)c$ 인데 $n \nmid c$ 이므로 $n mid (a-b)$ 이다. 따라서 $[a]=[b]$ 이므로 제거규칙이 성립한다. 따라서 @exr-herstein_2_3_14 에 따라 $K_n$ 은 곱셈에 대한 군이다. 
 
-
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_2_5}
 #### Artin 2.2.5
@@ -777,6 +826,8 @@ $$
 $H \le G$ 일 때 $H$ 의 항등원은 $G$ 의 항등원과 같아야 한다. 누군가는 $H$ 의 항등원이 $G$ 의 항등원과 다를 것을 원할 수도 있다. 어쨌든 $H$ 가 항등원을 갖는다면 $G$ 와 같아야 함을 보여라. 이것이 역원에 대해서도 성립함을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -786,7 +837,7 @@ $a\in H,\, a \ne 1_H$ 라 하자. $G$ 에서 $a^{-1}=x$ 라 하고 $H$ 에서 $a
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_2_6}
 
@@ -796,14 +847,15 @@ $G$ 가 군일 때 $G$ 에서의 연산 $ab$ 에 대해 $G$ 와 같은 원소를
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $(a \ast b) \ast c = (ba)\ast c = cba = a \ast (cb) = a \ast (b \ast c)$ 이다. 따라서 연산의 결합법칙이 성립한다. 연산의 닫힘음 쉽게 보일 수 있으며 $1_G$ 가 $G^\circ$ 의 항등원이며, $G$ 에서의 역원이 $G^\circ$ 에서의 역원가 같음은 쉽게 보일 수 있다.
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_3_2}
 #### Artin 2.3.2
@@ -812,13 +864,15 @@ $a,\,b$ 가 양의 정수이며 그 합이 소수 $p$ 일 때 $a,\,b$ 는 서로
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 어떤 양의 정수 $m$ 이 $m \mid a,\, m \mid b$ 이면 $m \mid (a+b)$ 이다. 
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_3_3}
 
@@ -831,6 +885,8 @@ $a,\,b$ 가 양의 정수이며 그 합이 소수 $p$ 일 때 $a,\,b$ 는 서로
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($1$) $d \mid a_i,\, i=1,\ldots,\,n$ 이며 $\forall m\in \mathbb{Z},\, m\mid a_i,\, i=1,\ldots,\,m$ 에 대해 $m \mid d$ 인 수를 $\{a_1,\ldots,\,a_n\}$ 의 최대공약수라 하고 $\gcd (a_1,\ldots,\,a_n)$ 이라 쓰기로 하자.
@@ -839,11 +895,9 @@ $G= \mathbb{Z}a_1 + \cdots + \mathbb{Z} a_n$ 를 생각 할 수 있다. Inductio
 
 ($2$) $G_d = \mathbb{Z}(a_1/d) + \cdots + \mathbb{Z}(a_n/d) = \mathbb{Z}$ 이다. 
 
-
-
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_4_1}
 
@@ -853,12 +907,14 @@ $a,\,b$ 가 군 $G$ 의 원소이며 $o(a)=7$ 이고 $a^3b=ba^3$ 이라면 $ab=b
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $b^{-1}a^3b = a^3$ 이다. $(b^{-1}a^3b)^5 = b^{-1}a^{15}b = b^{-1}ab$ 이며, $(a^3)^5 = a$ 이므로 $b^{-1}ab=a$ 이다.
 :::  
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_4_3}
 
@@ -868,6 +924,7 @@ $a,\,b$ 가 군 $G$ 의 원소라면 $o(ab)=o(ba)$ 임을 보이시오.
 
 :::
 
+</div></br>
 
 ::: {.solution}
 
@@ -883,7 +940,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_4_4}
 
@@ -892,6 +949,8 @@ $$
 진 부분군이 존재하지 않는 군 $G$ 를 기술하시오.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -903,7 +962,7 @@ $o(g)=\infty$ 이면 임의의 1보다 큰 양의 정수 $n$ 에 대해 $\langle
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_4_5}
 
@@ -912,14 +971,15 @@ $o(g)=\infty$ 이면 임의의 1보다 큰 양의 정수 $n$ 에 대해 $\langle
 순환군의 부분군은 순환군임을 보여라. 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $G=\langle g \rangle$ 이라 하자. $g^m,\, g^n\in H \le G$ 이면 임의의 정수 $\alpha,\, \beta$ 에 대해 $g^{\alpha m +\beta n}\in H$ 이며 @prp-gcd_in_groups 에서 보았듯이 $d=\gcd (m,\,n)$ 에 대해 $\langle g^d \rangle \le H$ 이므로 순환군의 부분군은 순환군이다.
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_4_7}
 
@@ -929,13 +989,15 @@ $x,\,y$ 는 군 $G$ 의 원소이며 $o(x)=o(y)=o(xy)=2$ 이다. 이 때 $H=\{1,
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 차수가 $2$ 인 군의 원소는 스스로의 역원이다. $xy=(xy)^{-1}=y^{-1}x^{-1}=yx$ 이므로, $x(xy)=y$, $(xy)x=y$, $y(xy)=x$, $(xy)y = x$ 이다. 따라서 $H$ 는 군이며, 추가로 아벨군이다.
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_4_8}
 
@@ -948,6 +1010,8 @@ $x,\,y$ 는 군 $G$ 의 원소이며 $o(x)=o(y)=o(xy)=2$ 이다. 이 때 $H=\{1,
 &emsp; ($2$) $E^{(3  )}$ 가 $SL_n(\mathbb{R})$ 을 생성함을 보이시오. $2\times 2$ 의 경우를 우선 보이시오.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -984,7 +1048,7 @@ $\boldsymbol{B}$ 의 첫번째 행에 대해 두번째 열부터 같은 열의 $
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_4_10}
 
@@ -994,13 +1058,15 @@ $\boldsymbol{B}$ 의 첫번째 행에 대해 두번째 열부터 같은 열의 $
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $GR_2(\mathbb{R})$ 에서 $A=\left[\begin{array}{rr} -1 & 1 \\ 0 &1 \end{array}\right],\, B=\left[\begin{array}{rr} -1 & 0 \\ 0 & 1\end{array}\right]$ 의 경우 $A^2=B^2=I_2$ 이지만 $AB=\left[\begin{array}{rr} 1 & 1 \\ 0 & 1\end{array}\right]$ 이며 $(AB)^n = \begin{bmatrix} 1 & n \\ 0 & 1 \end{bmatrix}$ 이다. 즉 $o(A)=o(B)=2$ 이지만 $o(AB)=\infty$ 이다.
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-artin_2_4_11}
 
@@ -1014,6 +1080,8 @@ $GR_2(\mathbb{R})$ 에서 $A=\left[\begin{array}{rr} -1 & 1 \\ 0 &1 \end{array}\
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($1$) @prp-decomposition_to_transposition 에서 보였다.
@@ -1021,7 +1089,6 @@ $GR_2(\mathbb{R})$ 에서 $A=\left[\begin{array}{rr} -1 & 1 \\ 0 &1 \end{array}\
 ($2$) $(a,\,b)(b, c) = (a,\,b,\,c)$, $(a,\,b)(c,\,d)=(a,\,b,\,c)(b,\,c,\,d)$ 이므로 임의의 두 호환의 곱은 $3$-cycles 의 곱으로 표현 할 수 있다. $A_n$ 의 모든 원소는 은 짝수개의 호환의 곱으로 표현 할 수 있으므로 $3$-cycles 가 $A_n$ 을 생성한다.
 
 :::
-
 
 </br>
 

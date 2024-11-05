@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; 내적 – 대수학</title>
+<title>대수학 - 5&nbsp; 내적</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -127,13 +127,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part1/part1.html">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</a></li><li class="breadcrumb-item"><a href="../../src/part1/ch1_07_innerproduct.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">내적</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -165,7 +165,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part1/part1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -224,7 +224,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part2/part2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">II. 군 (Groups)</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -259,7 +259,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part3/part3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">III. 심화 선형대수학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -357,7 +357,7 @@ window.Quarto = {
   <li><a href="#orthogonal-projection" id="toc-orthogonal-projection" class="nav-link" data-scroll-target="#orthogonal-projection"><span class="header-section-number">5.5.1</span> Orthogonal projection</a></li>
   <li><a href="#부분공간까지의-거리" id="toc-부분공간까지의-거리" class="nav-link" data-scroll-target="#부분공간까지의-거리"><span class="header-section-number">5.5.2</span> 부분공간까지의 거리</a></li>
   </ul></li>
-  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제"><span class="header-section-number">5.6</span> 연습문제</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul>
 </nav>
     </div>
@@ -407,6 +407,7 @@ window.Quarto = {
 </div><div class="no-row-height column-margin column-container"><span class="margin-aside callout-margin-content callout-margin-content-simple"><span class="math inline">\(x,\,y \in \mathbb{R}\)</span> 에 대해 복소수 <span class="math inline">\(z=x+iy\)</span> 의 켤레복소수 <span class="math inline">\(\overline{z}\)</span> 는 <span class="math inline">\(x-iy\)</span> 이다. 즉 <span class="math inline">\(\overline{x+iy}= x-iy\)</span> 이다.</span><span class="margin-aside callout-margin-content callout-margin-content-simple"><span class="math inline">\(^\ast\)</span> 물리학, 특히 양자역학에서는 소위 디렉 브라켓 기호를 사용하여 <span class="math inline">\(\langle u,\, v\rangle\)</span> 을 <span class="math inline">\(\langle v\,|\,u\rangle\)</span> 로 표기한다. <span class="math inline">\(u,\,v\)</span> 의 순서가 바뀌거 중간에 <span class="math inline">\(\mid\)</span> 가 삽입되는 것에 주의하라.</span></div>
 <p><br></p>
 <p>대표적인 내적 벡터 공간으로는 다음과 같은 것들이 있다.</p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-innerproduct_R1_C1" class="theorem example">
 <p><span class="theorem-title"><strong>보기 5.1</strong></span> <span class="math inline">\(\mathbb{C}^1\)</span>, 즉 1차원 복소벡터공간에서의 내적을</p>
 <p><span class="math display">\[
@@ -418,11 +419,15 @@ window.Quarto = {
 \]</span></p>
 <p>로 정의할 수 있다.</p>
 </div>
+</div>
 <p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-euclidean_innerproduct" class="theorem example">
 <p><span class="theorem-title"><strong>보기 5.2 (유클리드 공간)</strong></span> <span class="math inline">\(\mathbb{R}^n\)</span> 에서 <span class="math inline">\(x = (x_1,\ldots,\,x_n)\)</span>, <span class="math inline">\(y=(y_1,\ldots,\,y_n)\in \mathbb{R}^n\)</span> 의 내적을 <span class="math inline">\(\langle x,\, y \rangle =  \sum_{i=1}^n x_i y_i\)</span> 로 정의할 수 있으며 이렇게 내적이 정의된 공간을 <strong>유클리드 공간 (Euclidean sapce)</strong> 이라고 한다.</p>
 </div>
+</div>
 <p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-innerproduct_definded_by_intergration_in_R" class="theorem example">
 <p><span class="theorem-title"><strong>보기 5.3</strong></span> <span class="math inline">\([0,\,1]\)</span> 구간에서 연속인 실함수로 이루어진 벡터공간에서의 내적을 아래와 같이 정의 할 수 있다. <span class="math display">\[
 \langle f,\,g \rangle = \displaystyle \int_0^1 f(x)g(x)\, dx.
@@ -432,14 +437,17 @@ window.Quarto = {
 \langle f,\,g \rangle = \displaystyle \int_0^1 \overline{f(x)}g(x)\, dx.
 \]</span></p>
 </div>
+</div>
 <p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-basic_properties_of_inner_product" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.1</strong></span> <span class="math inline">\(V\)</span> 가 <span class="math inline">\(\mathbb{F}\)</span>-내적벡터공간이며 <span class="math inline">\(u,\,v,\,w \in V,\, c \in \mathbb{F}\)</span> 일 때 다음이 성립한다.</p>
-<p>  (<span class="math inline">\(1\)</span>) 정해진 <span class="math inline">\(u\in V\)</span> 에 대해 <span class="math inline">\(T(v) = \langle v,\,u \rangle\)</span> 는 선형사상이다.</p>
-<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\langle 0,\, u\rangle = 0 = \langle u,\,0\rangle\)</span>.</p>
-<p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\langle u,\, v+w \rangle = \langle u,\, v\rangle + \langle u,\, w \rangle\)</span>.</p>
-<p>  (<span class="math inline">\(4\)</span>) <span class="math inline">\(\langle u,\,c v\rangle = \overline{c} \langle u,\, v \rangle\)</span>.</p>
-<p>  (<span class="math inline">\(5\)</span>) <span class="math inline">\(\langle u,\, v \rangle = \overline{\langle v,\, u\rangle}\)</span>.</p>
+<p> (<span class="math inline">\(1\)</span>) 정해진 <span class="math inline">\(u\in V\)</span> 에 대해 <span class="math inline">\(T(v) = \langle v,\,u \rangle\)</span> 는 선형사상이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\langle 0,\, u\rangle = 0 = \langle u,\,0\rangle\)</span>.</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\langle u,\, v+w \rangle = \langle u,\, v\rangle + \langle u,\, w \rangle\)</span>.</p>
+<p> (<span class="math inline">\(4\)</span>) <span class="math inline">\(\langle u,\,c v\rangle = \overline{c} \langle u,\, v \rangle\)</span>.</p>
+<p> (<span class="math inline">\(5\)</span>) <span class="math inline">\(\langle u,\, v \rangle = \overline{\langle v,\, u\rangle}\)</span>.</p>
+</div>
 </div>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
@@ -454,10 +462,13 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-orthogonal_linearity" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.2</strong></span> 내적벡터 공간 <span class="math inline">\(V\)</span> 에서의 영벡터가 아닌 벡터의 집합 <span class="math inline">\(\{v_1,\ldots,\,v_n\}\)</span> 이 직교하는 벡터의 집합이면 선형 독립이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\sum_i c_i v_i = 0_V\)</span> 이라 하자. 선택된 <span class="math inline">\(v_j\)</span> 에 내적을 취하면,</p>
 <p><span class="math display">\[
@@ -467,9 +478,13 @@ window.Quarto = {
 </div>
 <p><br></p>
 <p>이로부터 다음 명제가 자연스럽게 나온다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="cor-number_of_orthogonal_vectors" class="theorem corollary">
 <p><span class="theorem-title"><strong>따름정리 5.1</strong></span> 유한차원 내적벡터공간에서 직교하는 벡터의 갯수는 그 차원보다 많을 수 없다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="ch1_01_vectorspace.html#lem-number_of_basis" class="quarto-xref">보조정리&nbsp;<span>1.2</span></a> 를 보라.</p>
 </div>
@@ -497,6 +512,8 @@ d(u, v) = \|u-v\|
 </div>
 <p><br></p>
 <p>벡터공간에서의 내적과 마찬가지로 노름 역시 공간에 부여된 특정 조건을 만족하는 함수이다. 내적벡터공간은 그 자체로 거리공간인데 이것은 내적에 의해 노름과 거리함수가 자연스럽게 정의되기 때문이다. 참고로 노름공간은 거리함수가 부여된 벡터공간이지만 엄밀한 의미에서의 거리공간은 벡터공간이 아닐 수도 있으며, 단지 적절한 거리함수가 정의된 집합이면 거리공간이다. 여기서는 거리함수가 부여된 벡터공간인 노름공간만을</p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-norm_space_1" class="theorem example">
 <p><span class="theorem-title"><strong>보기 5.4 (<span class="math inline">\(L_p\)</span> 노름)</strong></span> <span class="math inline">\(V=\mathbb{R}^n\)</span> 에 대해 <span class="math inline">\(v=(v_1,\ldots,\,v_n)\)</span> 일 때 <span class="math inline">\(p\in \mathbb{Z}_+\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -508,12 +525,16 @@ d(u, v) = \|u-v\|
 \]</span></p>
 <p>역시 노름이며 <span class="math inline">\(L_\infty\)</span> 노름이라고 한다. <span class="math inline">\(L_p\)</span> 노름과 <span class="math inline">\(L_\infty\)</span> 노름이 <a href="#def-norm" class="quarto-xref">정의&nbsp;<span>5.3</span></a> 의 조건을 만족한다는 것을 보이는 것은 독자에게 맡긴다. <span class="math inline">\(L_p\)</span> 노름에서 <span class="math inline">\(\|u+v\|_p\le \|u\|_p+\|v\|_p\)</span> 를 <a href="https://en.wikipedia.org/wiki/Minkowski_inequality">민코프스키 부등식</a> 이라고 한다.</p>
 </div>
+</div>
 <p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-innerproduct_norm" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.3</strong></span> 내적 백터공간 <span class="math inline">\(V\)</span> 의 두 벡터 <span class="math inline">\(u,\,v\)</span> 에 대해 다음이 성립한다.</p>
-<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\langle u,\,v \rangle = 0 \implies \langle u + v, u+v\rangle = \langle u, u\rangle^2 + \langle v, v\rangle^2\)</span>.</p>
-<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(|\langle u,\,v \rangle | \le \sqrt{\langle u, u\rangle \langle v,v \rangle}\)</span>.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\langle u,\,v \rangle = 0 \implies \langle u + v, u+v\rangle = \langle u, u\rangle^2 + \langle v, v\rangle^2\)</span>.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(|\langle u,\,v \rangle | \le \sqrt{\langle u, u\rangle \langle v,v \rangle}\)</span>.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>뒤에 사용하겠지만 일단은 임시방편으로 <span class="math inline">\(\langle v, v\rangle = \|v\|^2\)</span> 라고 하자. <a href="#def-innerproduct" class="quarto-xref">정의&nbsp;<span>5.1</span></a> 에 의해 <span class="math inline">\(\|v\|\ge 0\)</span> 이며 <span class="math inline">\(\|v\|=0 \iff v=0\)</span> 임을 알 수 있다. (<span class="math inline">\(1\)</span>) 은 쉽게 보일 수 있다. (<span class="math inline">\(2\)</span>) <span class="math inline">\(v=0\)</span> 일 때는 자명하다. 이제 <span class="math inline">\(v\ne 0\)</span> 일 경우만을 생각하자. <span class="math inline">\(w=\|v\|^2 u - \langle u,\, v\rangle v\)</span> 라고 하면, <span class="math inline">\(\|w\|^2\ge 0\)</span> 이므로,</p>
 <p><span class="math display">\[
@@ -526,10 +547,13 @@ d(u, v) = \|u-v\|
 </div>
 <p><br></p>
 <p>위에서는 임시변통으로 <span class="math inline">\(\langle v, v\rangle = \|v\|^2\)</span> 라고 했지만 이렇게 정의된 함수는 실제로 거리함수이다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-norm_of_innerproduct_space" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.4 (내적 공간의 노름)</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-내적벡터공간에서 <span class="math inline">\(\sqrt{\langle v,\, v\rangle}\)</span> 은 거리함수이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="#def-innerproduct" class="quarto-xref">정의&nbsp;<span>5.1</span></a> 에서의 (<span class="math inline">\(1\)</span>), (<span class="math inline">\(2\)</span>) 로부터 <a href="#def-norm" class="quarto-xref">정의&nbsp;<span>5.3</span></a> 의 (<span class="math inline">\(1\)</span>), (<span class="math inline">\(2\)</span>) 가 성립함을 알 수 있다. <a href="#def-innerproduct" class="quarto-xref">정의&nbsp;<span>5.1</span></a> 의 (<span class="math inline">\(4\)</span>) 로 부터 <span class="math inline">\(\|cv\|^2= |c|^2 \|v\|^2\)</span> 라는 것을 알 수 있으며 <span class="math inline">\(\|cv\|\ge 0\)</span> 이므로 <span class="math inline">\(\|cv\| = |c|\|v\|\)</span> 이다.</p>
 <p>이제 (<span class="math inline">\(4\)</span>) 를 보이자.</p>
@@ -552,7 +576,8 @@ d(u, v) = \|u-v\|
 </div>
 <p><br></p>
 <p>실제로 내적벡터공간은 거리공간이지만 내적 없이 거리함수만 정의된 공간도 있다. 여기서는 주 관심사가 내적벡터공간이기 때문에 노름 혹은 거리함수를 말할 때는 내적에 의해 정의된 <span class="math inline">\(\|v\| = \sqrt{\langle v, v \rangle}\)</span> 만을 의미한다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-norm_in_innerproduct_space" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.5</strong></span> 내적 백터공간 <span class="math inline">\(V\)</span> 의 두 벡터 <span class="math inline">\(u,\,v\)</span> 에 대해 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) 피타고라스 정리 : <span class="math inline">\(\langle u,\,v \rangle = 0 \implies \|u + v\|^2 = \|u\|^2 + \|v\|^2\)</span>.</p>
@@ -560,6 +585,8 @@ d(u, v) = \|u-v\|
 <p>  (<span class="math inline">\(3\)</span>) 삼각부등식 : <span class="math inline">\(\|u+v\| \le \|u\|+ \|v\|\)</span>.</p>
 <p>  (<span class="math inline">\(4\)</span>) 평행사변형 공식 : <span class="math inline">\(\|u+v\|^2+\|u-v\|^2 = 2\|u\|^2+2\|v\|^2\)</span>.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>), (<span class="math inline">\(2\)</span>), (<span class="math inline">\(3\)</span>) 은 이미 보였다. (<span class="math inline">\(4\)</span>) 는 쉽게 보일 수 있다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -600,12 +627,15 @@ d(u, v) = \|u-v\|
 </section>
 <section id="정규직교벡터의-성질" class="level3" data-number="5.2.3">
 <h3 data-number="5.2.3" class="anchored" data-anchor-id="정규직교벡터의-성질"><span class="header-section-number">5.2.3</span> 정규직교벡터의 성질</h3>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-properties_of_orthonormal_vectors" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.6</strong></span> <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 이 <span class="math inline">\(\mathbb{F}\)</span>-내적벡터공간 <span class="math inline">\(V\)</span> 에서의 정규직교벡터일 때 다음이 성립한다.</p>
-<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 은 선형독립이다.</p>
-<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(a_1,\ldots,\,a_m\in \mathbb{F}\)</span> 일 때 <span class="math inline">\(\|a_1e_1 + \cdots + a_me_m \|^2 = |a_1|^2 + \cdots + |a_m|^2\)</span> 이다.</p>
-<p>  (<span class="math inline">\(3\)</span>) (<strong>베셀 부등식 (Bessel’s inequality)</strong>) <span class="math inline">\(v\in V\)</span> 일 때 <span class="math inline">\(|\langle v,\,e_1\rangle + \cdots + \langle v,\,e_m\rangle|^2 \le \|v\|^2\)</span></p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 은 선형독립이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(a_1,\ldots,\,a_m\in \mathbb{F}\)</span> 일 때 <span class="math inline">\(\|a_1e_1 + \cdots + a_me_m \|^2 = |a_1|^2 + \cdots + |a_m|^2\)</span> 이다.</p>
+<p> (<span class="math inline">\(3\)</span>) (<strong>베셀 부등식 (Bessel’s inequality)</strong>) <span class="math inline">\(v\in V\)</span> 일 때 <span class="math inline">\(|\langle v,\,e_1\rangle + \cdots + \langle v,\,e_m\rangle|^2 \le \|v\|^2\)</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(c_1,\ldots,\,c_m\in \mathbb{F}\)</span> 에 대해 <span class="math inline">\(c_1e_1 + \cdots +c_me_m=0_V\)</span> 이라고 하자. <span class="math inline">\(0 = \langle 0_V,\,e_j\rangle =c_j\)</span> 이므로 <span class="math inline">\(c_1=\cdots = c_m=0\)</span> 이다. 따라서 <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 은 선형독립이다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(v=a_1e_1+\cdots+a_me_m\)</span> 이라고하자. <span class="math inline">\(\|a_1e_1+\cdots + a_me_m\|^2 = \|v\|^2 = \langle v,\, v\rangle\)</span> 이며,</p>
@@ -707,10 +737,13 @@ u_k = v_{k} - \sum_{j=1}^{k-1} \text{Proj}_{e_j} v_k = v_k-\sum_{j=1}^{k-1} \lef
 </div>
 <p><br></p>
 <p>이제 이렇게 해서 얻은 <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 이 정규직교벡터의 집합이라는 것을 보이자.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-gram_schmidt" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 5.1</strong></span> 위 과정을 통해 얻은 <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 은 orthonomal 하다. 즉, <span class="math inline">\(\langle e_i,\, e_j\rangle = \delta_{ij}\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(e_k = \dfrac{u_k}{\|u_k\|}\)</span> 로 정의되었으므로 <span class="math inline">\(\|e_k\|^2=1\)</span> 이다. 따라서 <span class="math inline">\(i\ne j\)</span> 일 때 <span class="math inline">\(\langle e_i,\, e_j\rangle = 0\)</span> 임을 보이면 된다. 수학적 귀납법을 통해 보일 것이며 우선 <span class="math inline">\(\langle u_2,\,u_1\rangle = 0\)</span> 임을 보이자.</p>
 <p><span class="math display">\[
@@ -732,18 +765,25 @@ u_k = v_{k} - \sum_{j=1}^{k-1} \text{Proj}_{e_j} v_k = v_k-\sum_{j=1}^{k-1} \lef
 </div>
 <p><br></p>
 <p>이제 우리는 다음의 중요한 결론을 얻는다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-orthonormal_basis" class="theorem">
 <p><span class="theorem-title"><strong>정리 5.1</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 내적벡터공간이며 <span class="math inline">\(\mathcal{B}_V= (v_i)\)</span> 가 <span class="math inline">\(V\)</span> 의 기저일 때 <span class="math inline">\(\mathcal{B}_V\)</span> 로부터 정규직교기저를 얻을 수 있다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\mathcal{B}_V\)</span> 는 선형독립이므로 Gram-Schmidt 과정을 통해 얻은 정규직교벡터는 <span class="math inline">\(V\)</span> 의 정규직교기저이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>그람-슈미트 과정은 내적벡터공간에 기저가 주어지면 이 기저의 선형결합으로 정규직교기저를 얻을 수 있음을 보장한다. 우리는 앞서 <a href="ch1_06_eigenvalue.html#thm-uppertriangular_matrix_complex_field" class="quarto-xref">정리&nbsp;<span>4.3</span></a> 에서 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-벡터공간에서의 모든 연산자는 어떤 기저에서 상삼각 행렬로 표현된다는 것을 보였다. 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-내적벡터공간에서는 정규직교기저에대해 상삼각 행렬로 표현되는 것을 보이자.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-schure" class="theorem">
 <p><span class="theorem-title"><strong>정리 5.2 (슈어 정리 (Schur’s Theorem))</strong></span> 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-내적벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 는 어떤 정규직교기저에서 상삼각행렬로 표현된다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(V\)</span> 를 <span class="math inline">\(n\)</span> 차원 <span class="math inline">\(\mathbb{C}\)</span>-내적벡터공간이라 하자. <a href="ch1_06_eigenvalue.html#thm-uppertriangular_matrix_complex_field" class="quarto-xref">정리&nbsp;<span>4.3</span></a> 에서 <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 는 어떤 기저 에서 상삼각행렬로 표현된다는 것을 보였다. 이 기저를 <span class="math inline">\(\mathcal{B}_V = \{v_1,\ldots,\,v_n\}\)</span> 이라 하고, 그람-슈미트 과정을 통해 얻은 정규직교기저를 <span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 이라 하자. 즉 <span class="math inline">\(e_i \in \text{span}(v_1,\ldots,\,v_i)\)</span> 이다. 그렇다면, 그람 슈미트 과정으로부터</p>
 <p><span class="math display">\[
@@ -769,7 +809,8 @@ T(v_i) \in \text{span}(v_1,\ldots,\,v_i) = \text{span}(e_1,\ldots,\,e_i)
 <p>내적벡터공간에서 항상 정규직교기저를 구할 수 있으며, 정규직교기저에서 여러 계산이 편해지기 때문에 정규직교기저를 가정하고 문제를 푸는 경우가 많다.</p>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-Reisz_representaion_theorem" class="theorem">
 <p><span class="theorem-title"><strong>정리 5.3 (Riesz 의 표현 정리 (Reisz Representation theorem))</strong></span> 유한차원 내적벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 선형 범함수 <span class="math inline">\(\varphi\)</span> 는 어떤 벡터 <span class="math inline">\(u\in V\)</span> 에 대한 내적으로 표현 될 수 있다. 즉,</p>
 <p><span class="math display">\[
@@ -777,6 +818,8 @@ T(v_i) \in \text{span}(v_1,\ldots,\,v_i) = \text{span}(e_1,\ldots,\,e_i)
 \]</span></p>
 <p>이다. 또한 선형 범함수를 내적으로 표현할 수 있도록 해 주는 벡터 <span class="math inline">\(u\)</span> 는 유일하다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 이 <span class="math inline">\(V\)</span> 의 정규직교기저라 하자. 그렇다면,</p>
 <p><span class="math display">\[
@@ -804,7 +847,8 @@ T(v_i) \in \text{span}(v_1,\ldots,\,v_i) = \text{span}(e_1,\ldots,\,e_i)
 <section id="sec-jordan_von_neumann_theorem" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="sec-jordan_von_neumann_theorem"><span class="header-section-number">5.4</span> 조르당-폰 노이만 정리</h2>
 <p>우리는 앞서 <a href="#prp-norm_of_innerproduct_space" class="quarto-xref">명제&nbsp;<span>5.4</span></a> 에서 내적벡터공간에는 자연스러운 거리함수가 존재한다는 것을 보였다. 즉 내적공간은 거리공간이다. 그렇다면 어떤 조건에서 거리공간은 내적공간이 될 수 있을까를 말해주는 것이 조르당-폰 노이만 정리이다. 결론적으로 말하자면 거리공간에 사다리꼴 공식이 성립한다면 내적공간이 되며 이것을 조르당-폰 노이만 정리라고 한다. 우선 실벡터 공간에 대해서 보이고 이후 복소벡터 공간에서 보이도록 하자. 다만 이것의 증명을 위해서는 연속에 대한 해석학적인 지식이 필요하다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-jordan_von_neumann_1" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 5.2</strong></span> <span class="math inline">\(\mathbb{R}\)</span>-거리 공간 <span class="math inline">\(V\)</span> 에서 함수 <span class="math inline">\(\phi : V \times V \to [0, \infty)\)</span> 를 다음과 같이 정의하자.</p>
 <p><span id="eq-innerproduct_from_norm_in_R"><span class="math display">\[
@@ -815,6 +859,8 @@ T(v_i) \in \text{span}(v_1,\ldots,\,v_i) = \text{span}(e_1,\ldots,\,e_i)
 \phi(u+u', v)= \phi(u, v) + \phi(u', v)
 \]</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>평행사변형 공식으로 부터</p>
 <p><span class="math display">\[
@@ -834,13 +880,16 @@ T(v_i) \in \text{span}(v_1,\ldots,\,v_i) = \text{span}(e_1,\ldots,\,e_i)
 \]</span></p>
 <p>이므로 <span class="math inline">\(\phi (u+u',v) = \phi(u,v)+\phi(u', v)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-jordan_von_neumann_2" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 5.3</strong></span> <a href="#lem-jordan_von_neumann_1" class="quarto-xref">보조정리&nbsp;<span>5.2</span></a> 과 같은 조건에서 <span class="math inline">\(u,\,v\in V,\, c\in \mathbb{R}\)</span> 일 때 다음이 성립한다.</p>
 <p><span class="math display">\[
 \phi (cu, v) =  c\phi (u, v).
 \]</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(S= \{c\in \mathbb{R}: \phi (cu,v)=c\phi (u, v)\}\)</span> 일 때 <span class="math inline">\(S=\mathbb{R}\)</span> 임을 보이자. 우선 <span class="math inline">\(0,\, 1\in S\)</span> 임은 자명하다. 또한</p>
 <p><span class="math display">\[
@@ -870,18 +919,23 @@ g(x)-g(x_0) = \phi(xu, v) - \phi (x_0u, v) = \phi((x-x_0)u, v)
 \]</span></p>
 <p>이므로 <span class="math inline">\(\displaystyle \lim_{x \to x_0} g(x) = g(x_0)\)</span> 이다. 즉 <span class="math inline">\(g\)</span> 도 연속함수이다. <span class="math inline">\(\mathbb{Q}\)</span> 는 <span class="math inline">\(\mathbb{R}\)</span> 에 대해 조밀한 부분집합이며 모든 <span class="math inline">\(x\in \mathbb{Q}\)</span> 에 대해 <span class="math inline">\(f(x)=g(x)\)</span> 이므로 모든 <span class="math inline">\(x\in \mathbb{R}\)</span> 에 대해 <span class="math inline">\(f(x) = g(x)\)</span> 이다. (<span class="citation" data-cites="Rudin1976">Rudin (<a href="../../references.html#ref-Rudin1976" role="doc-biblioref">1976</a>)</span>, Chapter 4, Exercises 4) <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-jordan_von_neumann_theorem" class="theorem">
 <p><span class="theorem-title"><strong>정리 5.4 (실벡터공간에서의 조르당-폰 노이만 정리)</strong></span> <span class="math inline">\(\mathbb{R}\)</span>-거리벡터공간 <span class="math inline">\(V\)</span> 에 대해 다음은 동치이다.</p>
-<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(V\)</span> 는 <span class="math inline">\(\mathbb{R}\)</span>-내적벡터공간이다.</p>
-<p>  (<span class="math inline">\(2\)</span>) 모든 <span class="math inline">\(u,\,v\in V\)</span> 에 대해 평행사변형 공식이 성립한다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(V\)</span> 는 <span class="math inline">\(\mathbb{R}\)</span>-내적벡터공간이다.</p>
+<p> (<span class="math inline">\(2\)</span>) 모든 <span class="math inline">\(u,\,v\in V\)</span> 에 대해 평행사변형 공식이 성립한다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) 는 <a href="#prp-norm_in_innerproduct_space" class="quarto-xref">명제&nbsp;<span>5.5</span></a> 에서 보였다.</p>
 <p>(<span class="math inline">\(2 \implies 1\)</span>) <a href="#eq-innerproduct_from_norm_in_R" class="quarto-xref">식&nbsp;<span>5.2</span></a> 가 <a href="#def-innerproduct" class="quarto-xref">정의&nbsp;<span>5.1</span></a> 를 만족한다는 것은 <a href="#lem-jordan_von_neumann_1" class="quarto-xref">보조정리&nbsp;<span>5.2</span></a> 과 <a href="#lem-jordan_von_neumann_2" class="quarto-xref">보조정리&nbsp;<span>5.3</span></a> 를 이용하여 보일 수 있다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>이제 복소벡터공간에서 증명하자.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-jordan_von_neumann_3" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 5.4</strong></span> <span class="math inline">\(\mathbb{C}\)</span>-거리공간 <span class="math inline">\(V\)</span> 에서 함수 <span class="math inline">\(\psi : V \times V \to \mathbb{C}\)</span> 를 다음과 같이 정의한다.</p>
 <p><span id="eq-innerproduct_from_norm_in_C"><span class="math display">\[
@@ -892,6 +946,8 @@ g(x)-g(x_0) = \phi(xu, v) - \phi (x_0u, v) = \phi((x-x_0)u, v)
 \psi(u+u', v)= \psi(u, v) + \psi(u', v)
 \]</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\psi\)</span> 를 실수부 <span class="math inline">\(\psi_R\)</span> 과 허수부 <span class="math inline">\(\psi_I\)</span> 로 분리하자. 즉</p>
 <p><span class="math display">\[
@@ -899,25 +955,33 @@ g(x)-g(x_0) = \phi(xu, v) - \phi (x_0u, v) = \phi((x-x_0)u, v)
 \]</span></p>
 <p>로 놓으면 <span class="math inline">\(\psi(u, v) = \psi_R(u, v)+ i\psi_I (u, v)\)</span> 이다. <span class="math inline">\(\psi_R(u+u',v)= \psi_R(u,v) + \psi_R(u',v)\)</span> 인것은 <a href="#lem-jordan_von_neumann_1" class="quarto-xref">보조정리&nbsp;<span>5.2</span></a> 에서 보였다. <span class="math inline">\(\psi_I(u, v) = \psi_R(u, iv)\)</span> 이므로 <span class="math inline">\(\psi_I(u+u',v)= \psi_I(u,v) + \psi_I(u',v)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-jordan_von_neumann_4" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 5.5</strong></span> <span class="math inline">\(\mathbb{C}\)</span>-거리공간 <span class="math inline">\(V\)</span> 에서 <a href="#lem-jordan_von_neumann_3" class="quarto-xref">보조정리&nbsp;<span>5.4</span></a> 에서 정의된 함수 <span class="math inline">\(\psi\)</span> (<a href="#eq-innerproduct_from_norm_in_C" class="quarto-xref">식&nbsp;<span>5.3</span></a>) 는 <span class="math inline">\(c \in \mathbb{F}\)</span> 에 대해 다음을 만족한다.</p>
 <p><span class="math display">\[
 \psi (cu, v) = c\psi(u, v).
 \]</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="#lem-jordan_von_neumann_3" class="quarto-xref">보조정리&nbsp;<span>5.4</span></a> 의 증명과 같이 <span class="math inline">\(\psi_R\)</span> 과 <span class="math inline">\(\psi_I\)</span> 를 정의하자. <span class="math inline">\(\psi_R(cu, v) = c\psi_R (u, v)\)</span> 는 실벡터 거리공간에서의 경우와 마찬가지이다. <span class="math inline">\(\psi_I (u, v) = \psi _I (u, iv)\)</span> 이므로 <span class="math inline">\(\psi_I (cu, v) = c\psi_I (u, v)\)</span> 이다. 따라서 <span class="math inline">\(\psi (cu, v) =  c\psi (u, v)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>이제 우리는 다음과 같은 결론을 내릴 수 있다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-jordan_von_neumann_theorem2" class="theorem">
 <p><span class="theorem-title"><strong>정리 5.5 (복소벡터공간에서의 조르당-폰 노이만 정리)</strong></span> <span class="math inline">\(\mathbb{C}\)</span>-거리벡터공간 <span class="math inline">\(V\)</span> 에 대해 다음은 동치이다.</p>
-<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(V\)</span> 는 <span class="math inline">\(\mathbb{C}\)</span>-내적벡터공간이다.</p>
-<p>  (<span class="math inline">\(2\)</span>) 모든 <span class="math inline">\(u,\,v\in V\)</span> 에 대해 평행사변형 공식이 성립한다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(V\)</span> 는 <span class="math inline">\(\mathbb{C}\)</span>-내적벡터공간이다.</p>
+<p> (<span class="math inline">\(2\)</span>) 모든 <span class="math inline">\(u,\,v\in V\)</span> 에 대해 평행사변형 공식이 성립한다.</p>
+</div>
 </div>
 <p><br></p>
 <p>이제 우리는 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간에서 내적과 노름의 관계에 대해 알게 되었다. 즉 내적벡터공간은 노름공간이며, 노름공간에서 정의된 거리함수가 평행사변형 공식을 만족하면 내적을 정의 할 수 있다. <span class="math inline">\(\mathbb{F}^n\)</span> 에 대해서는 다음을 보자.</p>
+<br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-L1_not_innerproduct_space" class="theorem example">
 <p><span class="theorem-title"><strong>보기 5.5</strong></span> <a href="#exm-norm_space_1" class="quarto-xref">보기&nbsp;<span>5.4</span></a> 에서 정의된 <span class="math inline">\(L_p\)</span> 노름은 <span class="math inline">\(p\ne 2\)</span> 일 경우를 제외하면 내적을 정의 할 수 없다. <span class="math inline">\(V=\mathbb{C}^n\)</span> 에 대해 <span class="math inline">\(u=(1, 0, \ldots, 0)\)</span>, <span class="math inline">\(v=(0, 1, 0, \ldots,\,0)\)</span> 이라고 하자.</p>
 <p><span class="math display">\[
@@ -927,6 +991,7 @@ g(x)-g(x_0) = \phi(xu, v) - \phi (x_0u, v) = \phi((x-x_0)u, v)
 \end{aligned}
 \]</span></p>
 <p>이므로 조르당-폰 노이만 정리를 만족하기 위해서는 <span class="math inline">\(p=2\)</span> 이어야 한다.</p>
+</div>
 </div>
 <p><br></p>
 </section>
@@ -948,15 +1013,18 @@ U^\perp = \{ v\in V : \langle v,\, u\rangle = 0 \text{ for every }u\in U\}
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-orthogonal_complement_is_a_vector_space" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.7</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 의 부분집합 <span class="math inline">\(U\)</span> 에 대해 다음이 성립한다.</p>
-<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\{0_V\}^\perp = V\)</span>, <span class="math inline">\(V^\perp = \{0_V\}\)</span>,</p>
-<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(U^\perp\)</span> 는 <span class="math inline">\(V\)</span> 의 부분벡터공간이다.</p>
-<p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(U \cap U^\perp  \subset \{0_V\}\)</span>,</p>
-<p>  (<span class="math inline">\(4\)</span>) <span class="math inline">\(U\subset W \implies W^\perp \subset U^\perp\)</span>,</p>
-<p>  (<span class="math inline">\(5\)</span>) <span class="math inline">\(U^\perp = \langle U\rangle^\perp\)</span>.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\{0_V\}^\perp = V\)</span>, <span class="math inline">\(V^\perp = \{0_V\}\)</span>,</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(U^\perp\)</span> 는 <span class="math inline">\(V\)</span> 의 부분벡터공간이다.</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(U \cap U^\perp  \subset \{0_V\}\)</span>,</p>
+<p> (<span class="math inline">\(4\)</span>) <span class="math inline">\(U\subset W \implies W^\perp \subset U^\perp\)</span>,</p>
+<p> (<span class="math inline">\(5\)</span>) <span class="math inline">\(U^\perp = \langle U\rangle^\perp\)</span>.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>), (<span class="math inline">\(2\)</span>) 는 생략한다.</p>
 <p>(<span class="math inline">\(3\)</span>) <span class="math inline">\(v\in U \cap U^\perp\)</span> 이면 <span class="math inline">\(\langle v,\, v\rangle = 0\)</span> 이므로 <span class="math inline">\(v=0_V\)</span> 일 수 밖에 없다.</p>
@@ -965,9 +1033,13 @@ U^\perp = \{ v\in V : \langle v,\, u\rangle = 0 \text{ for every }u\in U\}
 </div>
 <p><br></p>
 <p>우리는 다음을 보일 수 있다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-generated_subspace_and_orthogonal_compliment" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.8</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 와 유한차원 부분공간 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\(V = U \oplus U^\perp\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(U\)</span> 의 정규직교기저를 찾아 <span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 이라 하자. <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(u=\sum_{i=1}^n \langle v,\, e_i\rangle\)</span>, <span class="math inline">\(w=v-u\)</span> 라고 하면 <span class="math inline">\(j=1,\ldots,\,n\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -1007,18 +1079,23 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-uniqueness_of_orthogonal_decomposition" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.9</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(v\in V\)</span> 는 어떤 <span class="math inline">\(u\in U\)</span> 와 <span class="math inline">\(w\in U^\perp\)</span> 에 대해 <span class="math inline">\(v = u+w\)</span> 로 나타낼 수 있으며, 이를 만족하는 <span class="math inline">\(u,\,w\)</span> 는 유일하다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-generated_subspace_and_orthogonal_compliment" class="quarto-xref">명제&nbsp;<span>5.8</span></a> 에 따라 <span class="math inline">\(V=U\oplus U^\perp\)</span> 이다. 이제 <span class="math inline">\(U\)</span> 의 정규직교기저 <span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 과 <span class="math inline">\(U^\perp\)</span> 의 정규직교 기저 <span class="math inline">\(\{f_1,\ldots,\,f_m\}\)</span> 에 대해 <span class="math inline">\(u = \sum_i a_i e_i + \sum_j b_j f_j\)</span> 를 만족하는 <span class="math inline">\(a_i,\, b_j\)</span> 가 존재한다. <span class="math inline">\(u= \sum_i a_i e_i\)</span> 이며 <span class="math inline">\(w=\sum_j b_j f_j\)</span> 이다. 이 때 <span class="math inline">\(u,\,w\)</span> 가 유일하게 정해진다는 것은 자명하다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="cor-dimension_relation_of_orthogonal_complement" class="theorem corollary">
 <p><span class="theorem-title"><strong>따름정리 5.2</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 벡터공간일 때 <span class="math inline">\(U\le V\)</span> 에 대해 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\dim (V) = \dim(U) + \dim(U^\perp)\)</span>.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\((U^\perp)^\perp = U\)</span>.</p>
+</div>
 </div>
 <p><br></p>
 <section id="orthogonal-projection" class="level3" data-number="5.5.1">
@@ -1036,10 +1113,13 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 </div>
 </div>
 <p>예를 들어 <span class="math inline">\(T\in \mathcal{L}(\mathbb{R}^2)\)</span> 이 <span class="math inline">\(T(x,\,y) = (x, 0)\)</span> 으로 정의되었다고 하자. <span class="math inline">\(T\)</span> 는 선형사상이며 <span class="math inline">\(T^2(x,\,y)\)</span><span class="math inline">\(= (x,\,0)\)</span><span class="math inline">\(= T(x,\,y)\)</span> 이므로 <span class="math inline">\(T\)</span> 는 projection 이다. 이처럼 projectiion 은 우리가 기하학적으로 생각하는 그 projection 을 추상화 한 것이다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-range_of_projection" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.10</strong></span> <span class="math inline">\(\text{im}(P)\)</span> 는 <span class="math inline">\(P\)</span>-불변 부분 공간이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(u\in \text{im}(P)\)</span> 이면 <span class="math inline">\(P(v)=u\)</span> 인 <span class="math inline">\(v\in V\)</span> 가 존재하며, <span class="math inline">\(P(u)=P^2(v) = P(v) = u\)</span> 이므로 <span class="math inline">\(\text{im}(P)\)</span> 는 <span class="math inline">\(P\)</span> 불변 부분 공간이다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -1058,7 +1138,8 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-properties_of_orghogonal_projection" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.11</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 유한차원 부분벡터공간 일 때 다음이 성립한다. 증명은 쉬우므로 생략한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(u \in U \implies P_U (u) = u\)</span>.</p>
@@ -1067,6 +1148,7 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 <p>  (<span class="math inline">\(4\)</span>) <span class="math inline">\(v-P_U (v) \in U^\perp\)</span>.</p>
 <p>  (<span class="math inline">\(5\)</span>) <span class="math inline">\(P_U^2 = P_U\)</span>.</p>
 <p>  (<span class="math inline">\(6\)</span>) <span class="math inline">\(\|P_U (v) \| \le \|v\|\)</span>.</p>
+</div>
 </div>
 <p><br></p>
 </section>
@@ -1077,7 +1159,8 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 \|v-U\| = \min \{\|v-u\|,\, u\in U\}
 \]</span></p>
 <p>로 정의된다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-distance_to_subspace" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.12</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 내적벡터공간이고 <span class="math inline">\(v\in V\)</span>, 이며 <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 부분공간일 때, <span class="math inline">\(v\)</span> 에서 <span class="math inline">\(U\)</span> 까지의 거리는 <span class="math inline">\(v\)</span> 에서 <span class="math inline">\(P_U (v)\)</span> 까지의 거리와 같다. 즉,</p>
 <p><span class="math display">\[
@@ -1085,6 +1168,8 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 \]</span></p>
 <p>이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>임의의 <span class="math inline">\(u\in U\)</span> 에 대해 <span class="math inline">\(\|v-P_U (v)\| \le \|v-u\|\)</span> 임을 보이면 된다. <span class="math inline">\(\|P_Uv - u\| \ge 0\)</span> 이므로,</p>
 <p><span class="math display">\[
@@ -1098,18 +1183,24 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 <p><br></p>
 </section>
 </section>
-<section id="연습문제" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="연습문제"><span class="header-section-number">5.6</span> 연습문제</h2>
+<section id="연습문제" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h2>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_A_5" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.1 (Axler 6.A.5)</strong></span> <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 이며 모든 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\|T(v)\|\le \|v\|\)</span> 이다. 이 때 <span class="math inline">\(T-\sqrt{2}I\)</span> 는 가역임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((T-\sqrt{2}I)(v)=0_V\)</span> 라 하자. <span class="math inline">\(v\ne 0_V\)</span> 이면 <span class="math inline">\(\|\sqrt{2}I(v)\|=\sqrt{2}\|v\| &gt; \|v\| \ge \|T(v)\|\)</span> 이므로 성립하지 않는다. <span class="math inline">\(\ker (T-\sqrt{2}I)=\{0_V\}\)</span> 이므로 가역이다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_A_6" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.2 (Axler 6.A.6)</strong></span> <span class="math inline">\(u,\,v\in V\)</span> 일 때 <span class="math inline">\(\langle u,\,v\rangle=0\)</span> 일 필요충분조건은 모든 <span class="math inline">\(a\in \mathbb{F}\)</span> 에 대해 <span class="math inline">\(\|u\| \le\|u+av\|\)</span> 임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\langle u,\,v\rangle =0\)</span> 이면 <span class="math inline">\(\|u+av\|^2-\|u\|^2 = |a|^2\|v\|^2 \ge 0\)</span> 이다. 따라서 <span class="math inline">\(\|u+av\| \ge \|u\|\)</span> 이다.</p>
 <p>모든 <span class="math inline">\(a\in \mathbb{F}\)</span> 에 대해 <span class="math inline">\(\|u\|\le \|u+av\|\)</span> 라고 하자.</p>
@@ -1122,13 +1213,16 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 \]</span></p>
 <p>이어야 하는데 <span class="math inline">\(t &gt; \|v\|\)</span> 이면 위배된다. 따라서 <span class="math inline">\(\langle u,\,v\rangle = 0\)</span> 이어야 한다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_A_9" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.3 (Axler 6.A.9)</strong></span> <span class="math inline">\(u,\,v\in V\)</span> 이고 <span class="math inline">\(\|u\|\le 1\)</span> 이며 <span class="math inline">\(\|v\|\le 1\)</span> 이면 다음이 성립함을 보여라.</p>
 <p><span class="math display">\[
 \sqrt{1-\|u\|^2}\sqrt{1-\|v\|^2} \le 1-|\langle u,\,v\rangle |.
 \]</span></p>
 </div>
+</div>
+<p>&lt;./br&gt;</p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>우선 <span class="math inline">\(\|u\|^2+\|v\|^2 \ge 2\|u\|\|v\|\)</span> 임을 안다. 또한 <span class="math inline">\(\|u\|\|v\| \ge |\langle u,\,v\rangle|\)</span> 임을 안다.</p>
 <p><span class="math display">\[
@@ -1139,38 +1233,47 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 \end{aligned}
 \]</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_A_11" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.4 (Axler 6.A.11)</strong></span> 양수 <span class="math inline">\(a,\,b,\,c,\,d\)</span> 에 대해 다음이 성립함을 보여라.</p>
 <p><span class="math display">\[
 16 \le (a+b+c+d) \left( \dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}+\dfrac{1}{d} \right)
 \]</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(x,\,y\in \mathbb{R}^4\)</span> 이며 <span class="math inline">\(x=(\sqrt{a},\,\sqrt{b},\,\sqrt{c},\,\sqrt{d})\)</span>, <span class="math inline">\(y=(1/\sqrt{a},\,1/\sqrt{b},\,1/\sqrt{c}\,1/\sqrt{d})\)</span> 라 하면, <span class="math inline">\(|\langle x,\,y\rangle|^2 \le \|a\|^2\|b\|^2\)</span> 이므로,</p>
 <p><span class="math display">\[
 4^2=16 \le  (a+b+c+d) \left( \dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}+\dfrac{1}{d} \right).
 \]</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_A_18" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.5 (Axler 6.A.18)</strong></span> <span class="math inline">\(p&gt;0\)</span> 라고 하자. <span class="math inline">\(\mathbb{R}^2\)</span> 에서 노름이 <span class="math inline">\(\|(x,\,y)\| = (x^p+y^p)^{1/p}\)</span> 가 되도록 하는 노름은 <span class="math inline">\(p=2\)</span> 일 때만 존재함을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(u=(1, 0), v=(0, 1)\)</span> 이라 하자. <span class="math inline">\(\|u+v\|^2+\|u-v\|^2 = 2\|u\|^2+2\|v\|^2\)</span> 이므로, <span class="math inline">\(2 + (1+(-1)^p)^{2/p}= 4\)</span> 이어야 한다. 즉 <span class="math inline">\(1+(-1)^p = 2^{2/p}\)</span> 이어야 하며, 이를 만족하는 <span class="math inline">\(p\)</span> 는 <span class="math inline">\(2\)</span> 뿐이다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler-6_A_19_20" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.6</strong></span> 내적벡터공간에서 내적을 노름의 합으로 표현 할 수 있다.</p>
-<p>  (<span class="math inline">\(1\)</span>) 내적이 정의된 실벡터공간 <span class="math inline">\(V\)</span> 에서 <span class="math inline">\(u,\,v\in V\)</span> 에 대해 다음이 성랍함을 보여라.</p>
+<p> (<span class="math inline">\(1\)</span>) 내적이 정의된 실벡터공간 <span class="math inline">\(V\)</span> 에서 <span class="math inline">\(u,\,v\in V\)</span> 에 대해 다음이 성랍함을 보여라.</p>
 <p><span class="math display">\[
 \langle u,\,v \rangle = \dfrac{1}{4} \left[\|u+v\|^2 - \|u-v\|^2\right].
 \]</span></p>
-<p>  (<span class="math inline">\(2\)</span>) 내적이 정의된 복소벡터공간 <span class="math inline">\(V\)</span> <span class="math inline">\(u,\,v\in V\)</span> 에 대해 다음이 성랍함을 보여라.</p>
+<p> (<span class="math inline">\(2\)</span>) 내적이 정의된 복소벡터공간 <span class="math inline">\(V\)</span> <span class="math inline">\(u,\,v\in V\)</span> 에 대해 다음이 성랍함을 보여라.</p>
 <p><span class="math display">\[
 \langle u,\, v\rangle = \dfrac{1}{4} \left[\| u+v\|^2 - \|u-v\|^2 + i \|u+iv\|^2 - i \|u-iv\|^2 \right].
 \]</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) 실벡터 공간에서 <span class="math inline">\(\langle u,\,v\rangle = \langle v,\, u\rangle\)</span> 이다. 따라서,</p>
 <p><span class="math display">\[
@@ -1191,10 +1294,13 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 \end{aligned}
 \]</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-operator_orthogonal_to_every_vector" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.7</strong></span> 내적 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간에서 정의된 연산자 <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 가 모든 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\langle Tv,\,v\rangle = 0\)</span> 이면 <span class="math inline">\(T=0\)</span> 임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(T\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(0\)</span> 라는 것은 모든 <span class="math inline">\(u,\,v \in V\)</span> 에 대해 <span class="math inline">\(\langle Tu,\,v\rangle =0\)</span> 인것과 동치이다. <span class="math inline">\(\mathbb{F}=\mathbb{R}\)</span> 일 경우,</p>
 <p><span class="math display">\[
@@ -1209,13 +1315,16 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 \]</span></p>
 <p>이므로 <span class="math inline">\(\langle Tu,\, v\rangle =0\)</span> 이다. 따라서 <span class="math inline">\(T=0\)</span> 이다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_A_22" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.8</strong></span> <span class="math inline">\(a_1,\ldots,\,a_n\in\mathbb{R}\)</span> 에 대해 다음이 성립함을 보이시오.</p>
 <p><span class="math display">\[
 \left(\dfrac{\sum_{i=1}^n a_n}{n}\right)^2 \le \dfrac{\sum_{i=1}^n a_n^2}{n}
 \]</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(u,\,v\in \mathbb{R}^n\)</span> 을 <span class="math inline">\(u=(a_1,\ldots,\,a_n)\)</span>, <span class="math inline">\(v=(1,\ldots,\,1)\)</span> 이라 하자. <span class="math inline">\(\langle u,\,v\rangle = \sum a_n\)</span>, <span class="math inline">\(\|u\|\|v\| = \sqrt{n}\left(\sum a_n^2\right)\)</span> 이며 코시-슈바르츠 부등식에 따라 <span class="math inline">\(|\langle u, v \rangle | \le \|u\|\)</span> 이므로,</p>
 <p><span class="math display">\[
@@ -1223,7 +1332,8 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 \]</span></p>
 <p>이다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_A_27" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.9 (Alxer 6.A.27, 28)</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 의 부분집합 <span class="math inline">\(C\)</span> 가 <span class="math inline">\(u,\,v\in C \implies \frac{1}{2}(u+v)\in C\)</span> 를 만족한다고 하자. 이 때 임의의 <span class="math inline">\(w\in V\)</span> 에 대해 <span class="math inline">\(\|w-v\|\)</span> 를 최소로 하는 <span class="math inline">\(u\in C\)</span> 가 많아야 하나만 존재한다는 것을 보여라. 이것을 보이기 위해 우선 <span class="math inline">\(u,\,v,\,w\in V\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -1231,6 +1341,8 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 \]</span></p>
 <p>임을 보이고 필요하다면 이것을 이용하시오.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>평행사변형 공식 <span class="math inline">\(\|u+v\|^2 +\|u-v\|^2 = 2\|u\|^2+2\|v\|^2\)</span> 를 이용한다.</p>
 <p><span class="math display">\[
@@ -1246,7 +1358,8 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 \]</span></p>
 <p>이며 등호는 <span class="math inline">\(u=v\)</span> 일 때만 성립한다는 것을 알 수 있다. <span class="math inline">\(v_1,\,v_2\)</span> 가 <span class="math inline">\(\|w-v\|\)</span> 를 최소화 하는 두 벡터이고 <span class="math inline">\(u\ne v\)</span> 라면 위 식에 위배된다. 따라서 <span class="math inline">\(u=v\)</span> 이어야 한다. 즉 <span class="math inline">\(\|w-v\|\)</span> 를 최소화 하는 <span class="math inline">\(C\)</span> 의 벡터는 많아야 하나만 존재 할 수 있다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_B_4" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.10</strong></span> <span class="math inline">\([-\pi,\,\pi]\)</span> 구간에서 연속인 <span class="math inline">\(\mathbb{R}\mapsto\mathbb{R}\)</span> 함수의 집합 <span class="math inline">\(C_{[-\pi,\pi]}\)</span> 는 벡터공간이며 여기에 내적을 다음과 같이 부여하면 내적벡터공간이 된다.</p>
 <p><span class="math display">\[
@@ -1258,6 +1371,8 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 \]</span></p>
 <p>는 <span class="math inline">\(C_{[-\pi,\,\pi]}\)</span> 에서의 정규직교벡터의 집합임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>계산해 보면</p>
 <p><span class="math display">\[
@@ -1270,7 +1385,8 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 \]</span></p>
 <p>이다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_B_10" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.11</strong></span> 내적벡터공간 <span class="math inline">\(V\)</span> 에서 선형독립인 <span class="math inline">\(\{v_1,\ldots,\,v_m\}\)</span> 를 생각하자. 이 때,</p>
 <p><span class="math display">\[
@@ -1278,6 +1394,8 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 \]</span></p>
 <p>를 만족하는 정규직교벡터의 집합 <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 은 모두 <span class="math inline">\(2^m\)</span> 가지임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>Induction 을 통해 보이자. <span class="math inline">\(m=1\)</span> 일 경우 <span class="math inline">\(\text{span}(v_1)= \text{span}(e_1),\, \|e_1\|=1\)</span> 인 <span class="math inline">\(e_1\)</span> 은 <span class="math inline">\(\pm v_1 /\|v_1\|\)</span> 뿐이다. <span class="math inline">\(m=n\)</span> 일 때 성립함을 가정하자. 선형 독립인 <span class="math inline">\(\{v_1,\ldots,\,v_{n+1}\}\)</span> 을 생각한다. 가정에 의해</p>
 <p><span class="math display">\[
@@ -1293,18 +1411,24 @@ e_{n+1} = \dfrac{1}{c_{n+1}} \left(v_{n+1} - \sum_{k=1}^n \langle v_{n+1}, e_k\r
 \]</span></p>
 <p>이며 <span class="math inline">\(\|e_{n+1}\|=1\)</span> 이므로 2가지로 정해진다. 정해진 <span class="math inline">\(\{e_1,\ldots,e_n\}\)</span> 에 대해 <span class="math inline">\(\{e_1,\ldots,\,e_{n+1}\}\)</span> 이 2가지로 정해지므로 가능한 정규직교벡터의 갯수는 <span class="math inline">\(2^{n+1}\)</span> 이 된다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_B_11" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.12</strong></span> 벡터 공간 <span class="math inline">\(V\)</span> 에 두가지의 내적 <span class="math inline">\({\langle \cdot ,\cdot \rangle}_1\)</span> 과 <span class="math inline">\({\langle \cdot,  \cdot \rangle}_2\)</span> 가 부여되며 <span class="math inline">\(\langle v, w\rangle_1 = 0 \iff \langle v, w\rangle_2=0\)</span> 가 성립한다면 모든 <span class="math inline">\(v,\,w\in V\)</span> 에 대해 어떤 상수 <span class="math inline">\(c\)</span> 가 존재하여 <span class="math inline">\(\langle v, w \rangle_1 = c\langle v, w \rangle_2\)</span> 이어야 함을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>영벡터가 아닌 <span class="math inline">\(w\in V\)</span> 를 고정하고 <span class="math inline">\(\phi_w (v) = \langle v,w\rangle_1,\, \psi_w(v) = \langle v, w\rangle_2\)</span> 라고 하자. <span class="math inline">\(\phi_w,\,\psi_w \in \mathcal{L}(V, \mathbb{F})\)</span> 이다. <span class="math inline">\(\ker (\phi_w) = \ker (\psi_w)\)</span> 이면 <a href="ch1_02_linear_map.html#exr-axler_3_B_30" class="quarto-xref">연습문제&nbsp;<span>2.8</span></a> 에서 보였듯이 어떤 <span class="math inline">\(c_w\in \mathbb{F}\)</span> 에 대해서 <span class="math inline">\(\phi_w (v) = c_w\psi_w (v)\)</span> 이다. 역시 영벡터가 아닌 <span class="math inline">\(u\in V\)</span> 를 고정하고 <span class="math inline">\(\phi_u(v)= \langle v, u\rangle_1\)</span>, <span class="math inline">\(\psi_u(v)= \langle v, u \rangle_2\)</span> 라고 하자. <span class="math inline">\(w\)</span> 를 고정했을 때와 같이 어떤 <span class="math inline">\(c_w\in\mathbb{F}\)</span> 에 대해 <span class="math inline">\(\phi _u (v) = c_u \psi_u (v)\)</span> 이다.</p>
 <p>내적의 정의에 의해 <span class="math inline">\(\phi_w(w)&gt;0, \psi_w(w)&gt;0\)</span> 이므로 <span class="math inline">\(c_w\)</span> 는 양의 실수이다. 같은 이유로 <span class="math inline">\(c_u\)</span> 도 양의 실수이다. 또한 내적의 정의로부터 <span class="math inline">\(\phi_u(w) = \overline{\phi_w(u)}\)</span> 이고 <span class="math inline">\(\psi_u (w)= \overline{\psi_w(u)}\)</span> 인데 전자로부터 <span class="math inline">\(c_u \psi_u (w) = c_w\overline{\psi_w(u)}\)</span> 이므로 <span class="math inline">\(c_u = c_w\)</span> 이다. <span class="math inline">\(c=c_w\)</span> 라고 하자. <span class="math inline">\(u, w\)</span> 는 영벡터가 아닌 임의의 <span class="math inline">\(V\)</span> 의 벡터이므로 <span class="math inline">\(\langle v, w \rangle_1 = c\langle v, w \rangle_2\)</span> 이다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_B_12" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.13</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 두가지의 내적 <span class="math inline">\({\langle \cdot , \cdot \rangle}_1\)</span> 과 <span class="math inline">\({\langle \cdot,  \cdot \rangle}_2\)</span> 가 부여되었다고 하자. 각각의 내적에 대한 노름 <span class="math inline">\(\| \cdot \|_1\)</span> 과 <span class="math inline">\(\|\cdot \|_2\)</span> 을 생각 할 수 있다. 이 때 어떤 양수 <span class="math inline">\(c\)</span> 가 존재하여 모든 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\|v\|_1 \le c\|v\|_2\)</span> 가 성립함을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((u_1,\ldots,\,u_n)\)</span> 을 <span class="math inline">\(\langle \cdot, \cdot \rangle_2\)</span> 에서의 정규직교기저라고 하고 <span class="math inline">\(M= \max\{{\|u_i\|_1} : i=1,\ldots,n\}\)</span> 이라고 하자. <span class="math inline">\(v=\sum_{i=1}^n a_i u_i\)</span> 라면 <span class="math inline">\(\|v\|_2 = \sqrt{\sum_{i=1}^n |a_i|^2}\)</span> 이며,</p>
 <p><span class="math display">\[
@@ -1320,10 +1444,13 @@ e_{n+1} = \dfrac{1}{c_{n+1}} \left(v_{n+1} - \sum_{k=1}^n \langle v_{n+1}, e_k\r
 \]</span></p>
 <p>이므로 <span class="math inline">\(\|v_1\|_1 \le M \|v_1\|_2\)</span> 가 성립한다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_B_13" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.14</strong></span> 내적벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(\{v_1,\ldots,\,v_m\}\in V\)</span> 는 선형독립이다. 모든 <span class="math inline">\(i=1,\ldots,m\)</span> 에 대해 <span class="math inline">\(\langle w, v_i\rangle &gt;0\)</span> 인 <span class="math inline">\(w\in V\)</span> 가 존재함을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>그람 슈미트 방법을 통해 <span class="math inline">\(\{v_1,\ldots,\,v_m\}\)</span> 로부터 정규직교벡터 <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 을 얻을 수 있으며 이 벡터들은 다음의 성질을 만족한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\langle e_i, e_j \rangle = \delta_{ij}\)</span>,</p>
@@ -1338,7 +1465,8 @@ e_{n+1} = \dfrac{1}{c_{n+1}} \left(v_{n+1} - \sum_{k=1}^n \langle v_{n+1}, e_k\r
 \]</span></p>
 <p>이므로 <span class="math inline">\(\langle e_{n+1}, v_{n+1}\rangle &gt;0\)</span> 이다. 따라서 적절한 <span class="math inline">\(c\)</span> 값을 통해 <span class="math inline">\(\langle w, v_{n+1}\rangle &gt;0\)</span> 이 되도록 할 수 있다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_B_14" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.15</strong></span> <span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 이 <span class="math inline">\(V\)</span> 의 정규직교기저이며 <span class="math inline">\(\{v_1,\ldots,\,v_n\} \subset V\)</span> 는</p>
 <p><span class="math display">\[
@@ -1346,6 +1474,8 @@ e_{n+1} = \dfrac{1}{c_{n+1}} \left(v_{n+1} - \sum_{k=1}^n \langle v_{n+1}, e_k\r
 \]</span></p>
 <p>을 만족한다고 하자. 이 때 <span class="math inline">\(\{v_1,\ldots,\,v_n\}\)</span> 은 <span class="math inline">\(V\)</span> 의 기저임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(u_1,\ldots,\,u_n\in V\)</span> 일 때 <span class="math inline">\(\|u_1+u_2\| \le \|u_1\| + \|u_2\|\)</span> 로부터</p>
 <p><span class="math display">\[
@@ -1361,7 +1491,8 @@ e_{n+1} = \dfrac{1}{c_{n+1}} \left(v_{n+1} - \sum_{k=1}^n \langle v_{n+1}, e_k\r
 \]</span></p>
 <p>이다. (<span class="math inline">\(1\)</span>) 과 (<span class="math inline">\(2\)</span>) 로부터 <span class="math inline">\(c_1 = \cdots = c_n = 0\)</span> 임을 안다. 즉 <span class="math inline">\(\{v_1,\ldots,\,v_n\}\)</span> 은 선형독립이며, <span class="math inline">\(\dim (V)=n\)</span> 이므로 기저이다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_B_15" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.16</strong></span> <span class="math inline">\(C_{[-1, 1]}\)</span> 은 <span class="math inline">\([-1,\,1]\)</span> 구간에서 연속인 실함수의 집합이며 여기서의 내적 <span class="math inline">\(\langle f,\, g \rangle\)</span> 은 다음과 같이 정의되었다.</p>
 <p><span class="math display">\[
@@ -1369,50 +1500,68 @@ e_{n+1} = \dfrac{1}{c_{n+1}} \left(v_{n+1} - \sum_{k=1}^n \langle v_{n+1}, e_k\r
 \]</span></p>
 <p><span class="math inline">\(\phi \in \mathcal{L}(C_{[-1, 1]}, \mathbb{R})\)</span> 이 <span class="math inline">\(\phi (f) = 0\)</span> 으로 정의 되었을 때 모든 <span class="math inline">\(f\in C_{[-1, 1]}\)</span> 에 대해 <span class="math inline">\(\phi (f)= \langle f,\, g\rangle\)</span> 을 만족하는 <span class="math inline">\(g\in C_{[-1, 1]}\)</span> 은 존재하지 않는다는 것을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><em>to be done.</em></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_C_2" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.17</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 유한차원 부분공간일 때 <span class="math inline">\(U^\perp = \{0_V\} \iff U=V\)</span> 임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(U^\perp = \{0_V\}\)</span> 이면 <span class="math inline">\(U\)</span> 의 정규직교기저 <span class="math inline">\(\mathcal{B}=\{e_1,\ldots,\,e_m\}\)</span> 에 대해 <span class="math inline">\(v\in V \implies v \in \text{span}(\mathcal{B})\)</span> 이므로 <span class="math inline">\(U=V\)</span> 이다. <span class="math inline">\(U=V\)</span> 라면 <span class="math inline">\(U^\perp \{0_V\}\)</span> 임은 자명하다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_C_5" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.18</strong></span> <span class="math inline">\(V\)</span> 는 유한차원 내적벡터공간이고 <span class="math inline">\(U\le V\)</span> 라고 하자. <span class="math inline">\(P_{U^\perp} =  I - P_U\)</span> 임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(v=u+w,\, u\in U,\, w\in U^\perp\)</span> 가 유일하게 정해지며 <span class="math inline">\(P_U (v) = u\)</span> 이고, <span class="math inline">\(P_{U^\perp}=w\)</span> 이다. 따라서 <span class="math inline">\(P_{U^\perp} + P_U = I\)</span> 이다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_C_6" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.19</strong></span> <span class="math inline">\(U, W\le V\)</span> 이고 <span class="math inline">\(V\)</span> 가 유한차원 벡터공간일 때 <span class="math inline">\(P_U P_W=0\)</span> 일 필요충분조건은 모든 <span class="math inline">\(u\in U,\, w\in W\)</span> 에 대해 <span class="math inline">\(\langle u,\,w\rangle = 0\)</span> 인 것임임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(P_UP_W=0\)</span> 이면 <span class="math inline">\(W \le U^\perp\)</span> 이므로 모든 <span class="math inline">\(u\in U,\, w\in W\)</span> 에 대해 <span class="math inline">\(\langle u,\,w \rangle = 0\)</span> 이다. 모든 <span class="math inline">\(u\in U,\, w\in W\)</span> 에 대해 <span class="math inline">\(\langle u,\, w\rangle =0\)</span> 이면 <span class="math inline">\(P_UP_W=0\)</span> 임은 자명하다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_C_7" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.20</strong></span> 유한차원 내적공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(P^2=P\)</span> 이며 <span class="math inline">\(\ker (P)\)</span> 의 모든 벡터는 <span class="math inline">\(\text{im}(P)\)</span> 의 모든 벡터에 대해 직교한다고 하자. 그렇다면 어떤 <span class="math inline">\(U\le V\)</span> 에 대해 <span class="math inline">\(P=P_U\)</span> 임을 보이시오.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\ker (P)\)</span> 와 <span class="math inline">\(\text{im}(P)\)</span> 가 직교하므로 <a href="ch1_02_linear_map.html#thm-rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a> 에 의해 <span class="math inline">\(\ker (P) \cap \text{im}(P) =\{0_V\}\)</span> 이다. 또한 <span class="math inline">\(\text{im}(P_U)=U\)</span> 이므로 <span class="math inline">\(U=\text{im}(P)\)</span> 라 놓으며 조건을 만족한다.</p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_C_8" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.21</strong></span> 유한차원 내적 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 projection <span class="math inline">\(P\)</span> 가 모든 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\|P(v)\| \le \|v\|\)</span> 라고 하자. <span class="math inline">\(P=P_U\)</span> 인 어떤 <span class="math inline">\(U\le V\)</span> 가 존재함을 보여라.</p>
 </div>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(U = \text{im}(P)\)</span>.</p>
 </div>
-<p><br></p>
+<p><br> ::: {.solution}</p>
+<p><span class="math inline">\(U = \text{im}(P)\)</span>. :::</p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_C_9" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.22</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 유한차원 부분공간이며 <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 일 때 다음이 동치임을 보여라.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(U\)</span> 는 <span class="math inline">\(T\)</span>-불변 부분공간이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(P_U T P_U = T P_U\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(U\)</span> 가 <span class="math inline">\(T\)</span> 불변부분공간이라고 하자. <span class="math inline">\(v \in V\)</span> 에 대해 <span class="math inline">\(P_Uv = u \in U\)</span> 라 하자. <span class="math inline">\(P_UTP_U(v) = P_UT(u)=T(u)\)</span> 이며 <span class="math inline">\(TP_U(v)= T(u)\)</span> 이므로 <span class="math inline">\(P_UTP_U = TP_U\)</span> 이다.</p>
 <p><span class="math inline">\(U\)</span> 가 <span class="math inline">\(T\)</span> 불변부분공간이 아니라고 하자. <span class="math inline">\(u\in U\)</span> 에 대해 <span class="math inline">\(Tu\not\in U\)</span> 라 하자. 어떤 <span class="math inline">\(w'\in U^\perp\)</span> 에 대해 <span class="math inline">\(v=u+w\)</span> 라면 <span class="math inline">\(P_UTP_U(v) = P_UT(u) \in U\)</span> 이지만 <span class="math inline">\(TP_U(v)= T(u)\not\in U\)</span> 이므로 <span class="math inline">\(P_U TP_U \ne TP_U\)</span> 이다.</p>
@@ -1463,7 +1612,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1495,29 +1655,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1525,7 +1663,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

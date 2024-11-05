@@ -42,13 +42,14 @@ $$
 
 이다.
 
-
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-elementary_row_operation}
 
 기본행 연산은 행렬에 대한 선형 연산이며, 가역연산이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -111,8 +112,7 @@ $$
 (\boldsymbol{E}_N \cdots \boldsymbol{E}_1)\boldsymbol{Au} = (\boldsymbol{E}_N \cdots \boldsymbol{E}_1) \boldsymbol{v} \iff \boldsymbol{Au} =\boldsymbol{v}
 $$
 
-
-</br>
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-infinite_number_of_operations}
 
@@ -127,8 +127,7 @@ $$
 
 :::
 
-</br>
-
+</div></br>
 
 
 ## 행 사다리꼴 행렬과 행 간소 사다리꼴 행렬
@@ -163,6 +162,8 @@ $$
 
 :::
 
+</br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-echelon_matrix}
 다음 행렬은 사다리꼴 행렬이다.
@@ -172,7 +173,7 @@ $$
 $$ 
 :::
 
-</br>
+</div></br>
 
 
 행렬 $\boldsymbol{A}$ 의 $i$ 행 $j$ 열 성분을 $A_{ij}$ 라고 쓴다. 이 때 $i$ 를 *행 인덱스*, $j$ 를 *열 인덱스*라 하자. 이제 모든 행렬은 기본 행 연산을 통해 행 사다리꼴 행렬로 변형될 수 있다는 것을 보이고자 한다. 우선 $l(\boldsymbol{A}, j)$ 는 $\boldsymbol{A}_{:j}$ 의 선행성분의 열인덱스라고 정의하고 $k$ 행에 대해 다음 두 과정을 생각하자.
@@ -193,32 +194,30 @@ $$
 
 차례로 $1,\,2,\ldots,\, k-1$ 행에 대해 각각의 행에서의 피보팅과 열소거를 수행한 결과의 행렬을 $\boldsymbol{A}_{k-1}$ 라고 하자. $k$ 행부터 마지막 $m$ 행까지가 모두 영벡터가 아니라면 피보팅이 가능하며, 피보팅 이후에는 $k$ 행이 영벡터가 아니게 된다. 열소거 까지 수행하면 $p>k$ 행에 대해 $l(\boldsymbol{A}_k, k) < l (\boldsymbol{A}_{k}, p)$ 이다. 즉 $1$ 행부터 $j$ 행 까지는 사다리꼴 행렬이다. 이것은 $m-1$ 행까지 피보팅과 열소거를 수행하거나, 나머지 행벡터가 모두 영벡터가 될 때 까지 계속하면 전체 행렬이 사다리꼴 행렬이 된다. 모든 과정은 유한번의 기본 행 연산으로 이루어지므로 우리는 다음을 알 수 있다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-echolon_matrix}
 행렬은 유한번의 기본행연산을 통해 행 사다리꼴 행렬이 될 수 있다.
 :::
 
+</div></br>
 
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-echelon_form1}
-$m \times n$ 인 사다리꼴 행렬 $\boldsymbol{A}$ 를 생각하자. $m>n$ 일 때 $n$ 보다 큰 행의 성분은 모두 $0$ 이다.
+$m \times n$ 인 사다리꼴 행렬 $\boldsymbol{A}$ 를 생각하자. $m>n$ 일 때 $n$ 보다 큰 행의 성분은 모두 $0$ 임을 보여라.
 :::
 
-::: {.proof}
+</div></br>
+
+::: {.solution}
 행렬 $\boldsymbol{A}$ 가 사다리꼴 행렬이면 $l(\boldsymbol{A}, i) \ge i$ 인데 $i>n$ 이면 $n$ 보다 큰 열은 존재하지 않는다. 따라서 이 열의 성분은 모두 $0$ 이다.
 :::
 
 </br>
 
-
-:::
-
-
-</br>
-
 ### 행 간소 사다리꼴 행렬 {#sec-reduced_raw_echelon_matrix}
-
-
 
 행 간소 사다리꼴 행렬(row-reduced echelon form matrix)은 행 사다리꼴 행렬의 조건에 더해진다.
 
@@ -260,11 +259,13 @@ $m \times n$ 인 사다리꼴 행렬 $\boldsymbol{A}$ 를 생각하자. $m>n$ �
 
 위의 모든 과정이 행 기본 연산에 의해 수행되기 때문에 우리는 다음을 증명하였다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#thm-reduced_echelon_matrix}
 모든 행렬은 유한번의 행 기본 연산에 의해 행 간소 사다리꼴 행렬이 된다. 
 :::
 
-</br>
+</div></br>
 
 ::: {.callout-warning appearance="simple" icon="false"}
 #### 행 간소 사다리꼴의 유일성
@@ -341,7 +342,7 @@ $$
 
 를 보자. $1,\,2,\,3$ 은 $1,\,2,\,3$ 내에서 $4,\,5$ 는 $4,\,5$ 내에서 순환됨을 알 수 있다. 이것은 합성순열처럼 $(1, 2, 3) (4, 5)$ 로 쓸 수 있다. 하나의 $(\cdots)$ 안에 $k$ 개의 숫자가 있을 때 $k$-**cycle** 이라고 하며 각각의 $k$-cycle 들을 cycle 이라고 한다. $(1, 3, 2, 4)$ 는 4-cycle 이다. $k=2$ 일 경우는 특별히 **호환 (transposition)** 이라 한다. 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-basic_properties_of_permutation}
 
@@ -363,6 +364,7 @@ $S_n$ 에 대해 다음이 성립한다.
 
 :::
 
+</div></br>
 
 ::: {.proof}
 ($1$), ($2$), ($3$) 의 증명은 쉬우므로 생략한다.
@@ -388,28 +390,35 @@ $$
 
 두 cycle $\sigma_1,\, \sigma_2 \in S_n$ 에 대해 $\sigma_1,\,\sigma_2$ 에 겹치는 정수가 없을 때 두 cycle 을 **disjoint** 하다고 한다. 모든 순열은 disjoint 한 cycle 의 합성으로 표현 할 수 있다는 것은 쉽게 알 수 있다. 또한 $\sigma,\, \tau$ 가 disjoint 한 두 cycle 일 때 $\sigma \circ \tau = \tau \circ \sigma$ 임을 쉽게 예상 할 수 있다. 그러나 서로 disjoint 하지 않은 두 cycle 에 대해서는 교환법칙이 성립하지 않을 수 있다.
 
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-non_disjoint_cycle_product}
 $\sigma = (1, 3, 2),\, \tau = (2, 4)$ 라 하자. $2$ 가 $\sigma,\,\tau$ 에 모두 포함되므로 $\sigma$ 와 $\tau$ 는 disjoint 하지 않다. $(\sigma \circ\tau) (2) = 4$ 이지만 $(\tau \circ \sigma)(2) = 1$ 이다. 즉 이 경우에는 $\sigma \circ \tau \ne \tau \circ \sigma$ 이다.
 :::
 
+</div></br>
+
 순열 $\sigma \in S_n$ 은 disjoint cycles 의 곱으로 표현 할 수 있다. 그리고 이 곱은 교환법칙이 성립하므로 곱의 순서와는 무관하다. 순서를 고려하지 않을 때, 순열을 disjoint cycles 로 나누는 것을 **순열의 분해**라고 한다. 이제 순열의 분해에 대해 몇가지를 증명하자.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-uniqueness_discomposition_of_permutation}
 순열의 분해는 유일하다.
 :::
 
+</div></br>
 
 ::: {.proof}
 $\sigma \in S_n$ 이 $\sigma_1 \cdots \sigma_m$ 과 $\tau_1\cdots \tau_n$ 으로 분해된다고 하자. 즉 $\sigma_1,\ldots,\,\sigma_m$ 은 서로 disjoint 하고 $\tau_1,\ldots,\,\tau_n$ 도 서로 disjoint 하다. $i \in \sigma_1$ 이면 $i\in \tau_k$ 가 존재해야 한다. 그리고 $\sigma(i)\in \sigma_1,\, \sigma(i)\in \tau_k$ 이어야 하며 (이 논리를 계속 따라가면), 따라서 $\sigma_1 = \tau_k$ 이어야 한다. 즉 모든 $\sigma_j,\,i=1,\ldots,\,m$ 에 대해 어떤 $\tau_p,\, p=1,\ldots,\,m$ 가 존재하여 $\sigma_j = \tau_p$ 이어야 한다. 역으로 모든 $\tau_p$ 에 대해 어떤 $\sigma_j$ 가 존재하여 $\tau_p = \sigma_j$ 이어야 한다. $\square$
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-decomposition_to_transposition}
 모든 순열은 호환(transposition) 의 합성으로 표현 할 수 있다. 이 호환의 합성은 유일하지 않다.
 :::
+
+</div></br>
 
 ::: {.proof}
 우리는 앞서 모든 순열이 disjoint cycles 의 합성으로 분해된다는 것을 보았다. 따라서 임의의 $k$-cycle 이 호환의 합성으로 표현될 수 있다는 것을 아래와 같이 보이면 된다.
@@ -438,10 +447,13 @@ $$
 $$
 
 그러나 순열을 호환의 합성으로 표현했을 때 호환의 갯수가 짝수개인지 홀수개인지는 불변이며 이것을 증명하고자 한다.
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-sgn_of_permutaion}
 호환 $\tau_1,\ldots,\,\tau_m \in S_n$ 이 $\tau_m \cdots \tau_1=i_d$ 이면 $m$ 은 항상 짝수이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 $\sigma =\tau_m \cdots \tau_1$ 이라 하자. $\tau_1,\ldots,\,\tau_m$ 가운데 나타나는 자연수중 하나인 $p$ 를 선택하자 $p$ 가 나오는 $\tau$ 의 가장 작은 인덱스 $j$ 는 $m$ 이 아닌데 만약 $p$ 가 $m$ 에만 나온다면 $\sigma (p) \ne p$ 이기 때문이다. 즉 $j\le m-1$ 이다. 이 때 가능한 $\tau_{j+1}\circ \tau_j$ 는 아래의 네가지 형태중 하나이다.
@@ -458,11 +470,13 @@ $$
 즉 전체 $\sigma$ 의 입장에서 보면, $\tau_{j+1}\circ \tau_j$ 에 의해 $p$ 가 없어지면서 $2$ 개의 호한이 사라지거나, 호환의 갯수를 유지하면서 한칸 왼쪽으로 가는 순열과 같아진다. 계속 왼쪽으로 보내는 것을 반복하면 언젠가는 가장 왼쪽의 $\tau_m$ 위치에 오게되는데 이렇게 되면 앞서의 이유로 $\sigma \ne i_d$ 이다. 즉 언젠가는 $2$ 개의 호환이 사라져야 한다. $\tau_1,\ldots,\,\tau_m$ 에 나타나는 모든 자연수가 사라져야 하므로 $\sigma = i_d$ 가 되려면 $m$ 은 짝수여야 한다. $\square$
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-permutation_even_odd}
 순열을 분해했을 때의 호환의 갯수의 짝수/홀수 여부는 순열을 어떻게 분해하더라도 불변이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -500,6 +514,7 @@ $$
 
 $\text{sgn}$ 함수에 대한 몇가지 성질을 보자.
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-sgn_of_permutation}
 $\sigma,\, \tau \in S_n$ 에 대해 다음이 성립한다.
@@ -508,10 +523,11 @@ $\sigma,\, \tau \in S_n$ 에 대해 다음이 성립한다.
 2. $\text{sgn}(\sigma) = \text{sgn}(\tau)\,\text{sgn}(\sigma)\,\text{sgn}(\tau)$.
 :::
 
+</div></br>
+
 증명은 쉬우므로 생략한다.
 
 </br>
-
 
 ## 대칭군을 이용한 행렬식 {#sec-determinant_definition_using_symmetric_group}
 
@@ -537,7 +553,7 @@ $$
 
 ### $\det$ 함수의 기본적인 성질
 
-
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-determinant_of_identity}
 
 단위 벡터 $\hat{\boldsymbol{e}}_i \in \mathcal{M}_{1 \times n}(\mathbb{F}),\, i=1,\ldots,\,n$ 를 
@@ -554,6 +570,8 @@ $$
 임을 보여라.
 :::
 
+</div></br>
+
 ::: {.solution}
 $e_{ij} = (\hat{\boldsymbol{e}}_i)_j = \delta_{ij}$ 라 하면, 
 $$
@@ -562,7 +580,7 @@ $$
 $$
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-determinant_change_of_order}
 
@@ -574,6 +592,8 @@ $$
 
 임을 보여라.
 :::
+
+</div></br>
 
 ::: {.solution}
 $\text{sgn}(\tau \circ \tau^{-1})=1$ 이므로 임의의 $\sigma\in S_n$ 에 대해  $\text{sgn}(\sigma) = \text{sgn}(\tau) \,\text{sgn}(\sigma \circ \tau^{-1})$ 임을 이용한다. 우선 정의에 의해
@@ -603,10 +623,10 @@ $$
 이다. $\square$
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-altermating_form_of_determinant}
-$i\ne j$ 에 대해 $i$ 번째 벡터와 $j$ 번째 벡터를 바꿨을 때, 다음이 성립한다. [@prp-altermating_form_of_determinant 의 성질을 만족하는 $V^n \mapsto \mathbb{F}$ 함수를 [alternating bilinear form](../part3/bilinear_form.qmd#def-alternating_form) 이라고 한다.]{.aside}
+$i\ne j$ 에 대해 $i$ 번째 벡터와 $j$ 번째 벡터를 바꿨을 때, 다음이 성립한다. 
 $$
 \det(\boldsymbol{a}_1,\ldots,\boldsymbol{a}_i,\ldots,\,\boldsymbol{a}_j,\ldots,\boldsymbol{a}_n) = - \det(\boldsymbol{a}_1,\ldots,\boldsymbol{a}_j,\ldots,\,\boldsymbol{a}_i,\ldots,\boldsymbol{a}_n)
 $$
@@ -620,6 +640,7 @@ $$
 이 성립한다. 
 :::
 
+</div></br>
 
 ::: {.proof}
 호환 $\tau = (i,\,j)$ 를 생각하면 $\text{sgn}(\tau) =  -1$ 이므로 첫번째 식을 증명한다. $\boldsymbol{a}_i = \boldsymbol{a}_j$ 이면 $\det (\ldots,\boldsymbol{a},\ldots,\,\boldsymbol{a},\ldots) = - \det (\ldots,\boldsymbol{a},\ldots,\,\boldsymbol{a},\ldots)$ 이므로 행렬식이 $0$ 이다. $\square$
@@ -627,18 +648,25 @@ $$
 
 </br>
 
+@prp-altermating_form_of_determinant 의 성질을 만족하는 $V^n \mapsto \mathbb{F}$ 함수를 [alternating bilinear form](../part3/bilinear_form.qmd#def-alternating_form) 이라고 한다.
+
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-bilinearity_of_determinant}
-$\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n\in \mathcal{M}_{1\times n}(\mathbb{F})$, $c \in \mathbb{F}$ 와 임의의 $1\le j \le n$ 에서의 $\boldsymbol{a}'_j \in \mathbb{F}^{1\times n}$ 에 대해
+$\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n\in \mathcal{M}_{1\times n}(\mathbb{F})$, $c \in \mathbb{F}$ 와 임의의 $1\le j \le n$ 에서의 $\boldsymbol{a}'_j \in \mathbb{F}^{1\times n}$ 에 대해 다음이 성립한다.
 
 $$
 \begin{aligned}
 \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_j + &c\boldsymbol{a}'_j, \ldots,\boldsymbol{a}_n) =\\ 
-& \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_j,\ldots,\boldsymbol{a}_n) + c \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}'_j,\ldots,\boldsymbol{a}_n)
+& \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_j,\ldots,\boldsymbol{a}_n) + c \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}'_j,\ldots,\boldsymbol{a}_n).
 \end{aligned}
 $$
-
-이다.
 :::
+
+</div></br>
+
+
 
 ::: {.proof}
 $$
@@ -656,13 +684,14 @@ $$
 
 이를 이용하면 다음을 쉽게 보일 수 있다. 
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-determinant_scala_multiple}
-$$
-\det (c_1 \boldsymbol{a}_1, \ldots, c_n \boldsymbol{a}_n) = c_1 \cdots c_n \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_n)
-$$
+$\det (c_1 \boldsymbol{a}_1, \ldots, c_n \boldsymbol{a}_n) = c_1 \cdots c_n \det (\boldsymbol{a}_1,\ldots,\boldsymbol{a}_n)$
 :::
 
-</br>
+</div></br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-linear_dependency_and_determinant}
 
@@ -671,6 +700,8 @@ $$
 $\boldsymbol{a}_1,\ldots,\boldsymbol{a}_n\in \mathcal{M}_{1\times n}(\mathbb{F})$ 가 선형종속이면 $\det(\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n)=0$ 이다. 
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -711,7 +742,7 @@ $$
 
 이제 앞서의 증명들로부터 $n\times n$ 행렬에 대한 행렬식 $\boldsymbol{A}$ 에 대해 다음이 성립함을 쉽게 보일 수 있다.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-elementary_row_operation_and_determinant}
 #### 행 기본 연산과 행렬식
@@ -727,6 +758,8 @@ $\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 라고 하자. @def-elem
 &emsp; ($4$) $\det \left( E^{(3)}(i,j, r)\boldsymbol{A} \right) = \det(\boldsymbol{A})$.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -763,7 +796,7 @@ $$
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-transpose_matrix}
 
@@ -776,27 +809,28 @@ $\boldsymbol{A}$ 가 $m \times n$ 행렬 $\boldsymbol{B}$ 가 $n \times l$ 행�
 &emsp; ($2$) $(\lambda \boldsymbol{A})^T = \lambda (\boldsymbol{A})^T$
 
 &emsp; ($3$) $(\boldsymbol{AB})^T = \boldsymbol{B}^T\boldsymbol{A}^T$
-:::
 
-::: {.proof} 
 
-($\text{3}$) 만을 증명한다.
+쉽게 증명 할 수 있으므로 ($\text{3}$) 만을 증명한다.
 
 $$
 \begin{aligned}
 \left(\left( \boldsymbol{AB} \right)^T \right)_{ij} = (\boldsymbol{AB})_{ji} = \sum_{k=1}^n A_{jk} B_{ki} = \sum_{k=1}^n \left( \boldsymbol{B}^T\right)_{ik}\left(\boldsymbol{A}^T\right)_{kj} = (\boldsymbol{B}^T\boldsymbol{A}^T)_{ij}
 \end{aligned}
 $$
-$\square$
+
 
 :::
 
-</br>
+</div></br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-determinant_of_transpose}
 $n\times n$ 행렬 $\boldsymbol{A}$ 에 대해 $\det (\boldsymbol{A}^T) = \det (\boldsymbol{A})$ 이다.
 
 :::
+</div></br>
 
 ::: {.proof}
 전치행렬 $\boldsymbol{A}^T$ 의 행렬식은 
@@ -825,7 +859,7 @@ $$
 
 이제 행렬 $\boldsymbol{A}$ 의 행들 $\{\boldsymbol{A}_{1:},\ldots,\,\boldsymbol{A}_{n:}\}$ 에 대한 @prp-elementary_row_operation_and_determinant 가 열들 $\{\boldsymbol{A}_{:1},\ldots,\boldsymbol{A}_{:n}\}$ 에 대해서도 똑같이 성립한다는 것은 쉽게 보일 수 있다. 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-elementary_column_operation_and_determinant}
 
@@ -841,28 +875,34 @@ $\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 라고 하자.
 
 :::
 
-
-
-</br>
+</div></br>
 
 이제 행렬식과 정사각 행렬의 성질에 관한 중요한 명제를 제시한다. 증명은 이미 우리가 했다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-zero_determinant_of_linear_dependency}
-정사각행렬 $\boldsymbol{A}$ 의 행벡터가 선형 종속일 경우 그 행렬식은 $0$ 이다. $\boldsymbol{A}$ 의 열벡터가 선형 종속이어도 그 행렬식은 $0$ 이다. [이 명제의 역, 즉 행렬식이 $0$ 경우 행벡터와 열벡터가 선형독립인 것은 이후에 보이게 된다. (@prp-determinant_of_invertible_matrix)]{.aside}
+정사각행렬 $\boldsymbol{A}$ 의 행벡터가 선형 종속일 경우 그 행렬식은 $0$ 이다. $\boldsymbol{A}$ 의 열벡터가 선형 종속이어도 그 행렬식은 $0$ 이다. 
 :::
+
+</div></br>
 
 ::: {.proof}
 
 @prp-linear_dependency_and_determinant
 
 :::
-
 </br>
+
+이 명제의 역, 즉 행렬식이 $0$ 경우 행벡터와 열벡터가 선형독립인 것은 이후 (@prp-determinant_of_invertible_matrix) 에 보이게 된다.
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-determinant_product_of_matrix}
 $n \times n$ 행렬 $\boldsymbol{A},\,\boldsymbol{B}$ 에 대해 $\det (\boldsymbol{AB})= \det(\boldsymbol{A})\det (\boldsymbol{B})$ 이다.
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -901,9 +941,13 @@ $$
 
 아직 우리는 가역행렬과 행렬식의 관계에 대해 알아보지 않았다. 다음 장에서 보이겠지만 어떤 정사각 행렬의 행렬식이 $0$ 이 아니라는 것과 그 행렬이 가역행렬이라는 것은 동치이다. 즉 가역행렬의 행렬식은 $0$ 이 아니라는 것을 잠시동안 우리가 알고 있다고 가정하자. 그렇다면 아래의 유용한 성질을 알게 된다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#cor-derterminant_of_inverse_matrix}
 $n\times n$ 행렬 $\boldsymbol{A}$ 가 가역행렬일 때 $\det (\boldsymbol{A}^{-1}) = \dfrac{1}{\det (\boldsymbol{A})}$ 이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 $\boldsymbol{AA}^{-1}=\boldsymbol{I}$ 이며 $\det (\boldsymbol{I})=1$ 이므로,
@@ -918,13 +962,9 @@ $$
 
 </br>
 
-
-
 ## 다양한 행렬의 행렬식
 
 ### 기본적인 행렬과 행렬식
-
-
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-basic_matrix_notation}
@@ -955,16 +995,13 @@ $$
 
 이제 행렬의 몇가지 기본적인 성질들을 보이려고 한다. 이것들은 유용하긴 하지만 Theorem 이나 Lemma, Proposition 등의 좀 거창인 이름을 붙일 정도는 아니기 때문에 **보기** 로 돌린다.
 
-</br>
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-multiplication_of_diagonal_matrix}
 
-대각행렬의 곱은 대각행렬이다. 상 삼각 행렬의 곱은 상 삼각 행렬이다. 하 삼각 행렬의 곱은 하 삼각 행렬이다.
+#### 대각행렬, 상삼각행렬, 하삼각행렬의 곱
 
-:::
-
-::: {.proof}
-$\boldsymbol{D},\,\boldsymbol{F}$ 가 모두 $n \times n$ 대각행렬이라 하자. $D_{ij} = d_i \delta_{ij},\, F_{ij} = f_i \delta_{ij}$ 이므로, 
+대각행렬의 곱은 대각행렬이다. 상 삼각 행렬의 곱은 상 삼각 행렬이다. 하 삼각 행렬의 곱은 하 삼각 행렬이다. $\boldsymbol{D},\,\boldsymbol{F}$ 가 모두 $n \times n$ 대각행렬이라 하자. $D_{ij} = d_i \delta_{ij},\, F_{ij} = f_i \delta_{ij}$ 이므로, 
 
 $$
 (\boldsymbol{DF})_{ij} = \sum_k D_{ik}F_{kj} = \sum_k d_i \delta_{ik} f_j \delta_{kj} = d_i f_i \delta_{ij} 
@@ -978,11 +1015,13 @@ $$
 (\boldsymbol{UV})_{ij} = \sum_k U_{ik}V_{kj} = \sum_{k\ge i, k \le j} U_{ik}V_{kj}
 $$
 
-이다. 그런데 $i>j$ 이면 $i \le k \le j$ 인 $k$ 가 존재하지 않으므로 $(\boldsymbol{UV})_{ij} =0$ 이다. 즉 $\boldsymbol{UV}$ 는 상 삼각 행렬이다. 하삼각 행렬의 곱이 하삼각행렬이라는 것은 비슷한 방법으로 보일 수 있다. $\square$
+이다. 그런데 $i>j$ 이면 $i \le k \le j$ 인 $k$ 가 존재하지 않으므로 $(\boldsymbol{UV})_{ij} =0$ 이다. 즉 $\boldsymbol{UV}$ 는 상 삼각 행렬이다. 하삼각 행렬의 곱이 하삼각행렬이라는 것은 비슷한 방법으로 보일 수 있다. 
 
 :::
 
-</br>
+</div></br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-determinant_of_upper_lower_triangular_matrix}
 
@@ -992,11 +1031,7 @@ $$
 \det (\boldsymbol{A}) = \prod_{i=1}^n A_{ii}
 $$
 
-이다.
-:::
-
-::: {.proof}
-$n\times n$ 행렬 $\boldsymbol{A}$ 가 상삼각 행렬 이라 하자. $i>j$ 이면 $A_{ij}=0$ 이다.
+임을 보이자. $n\times n$ 행렬 $\boldsymbol{A}$ 가 상삼각 행렬 이라 하자. $i>j$ 이면 $A_{ij}=0$ 이다.
 $$
 \det (\boldsymbol{A}) = \sum_{\sigma \in S_n} \text{sgn}(\sigma) \prod_{i=1}^n A_{i \sigma(i)}
 $$
@@ -1008,7 +1043,8 @@ $$
 
 :::
 
-</br>
+</div></br>
+
 
 ### 블록 행렬의 행렬식
 
@@ -1047,7 +1083,7 @@ $$
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-determinant_of_block_matrix}
 
@@ -1056,6 +1092,8 @@ $$
 $\boldsymbol{B} \in \mathcal{M}_{m \times m}(\mathbb{F}),\, \boldsymbol{D}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 블록 정사각 행렬 $\boldsymbol{A}= \begin{bmatrix} \boldsymbol{B}& \boldsymbol{0} \\ \boldsymbol{0} & \boldsymbol{D}\end{bmatrix} \in \mathcal{M}_{(m+n)\times (m+n)}(\mathbb{F})$ 의 행렬식이 $\det (\boldsymbol{A}) = \det(\boldsymbol{B}) \det(\boldsymbol{D})$ 임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -1085,9 +1123,7 @@ $$
 
 :::
 
-
-</br>
-
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-determinant_of_bloc_triangular_matrix}
 
@@ -1102,6 +1138,8 @@ $$
 임을 보여라. 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $\boldsymbol{B}$ 가 가역행렬이 아니라면 가우스 소거법으로 $1$ 행부터 $m$ 행 까지 중에 $0$ 으로만 이루어지 행을 만들 수 있으며 따라서 행렬식은 $0$ 이다. $\boldsymbol{A}$ 가 가역행렬이라면 
@@ -1114,10 +1152,9 @@ $$
 
 :::
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-</br>
-
-::: {#exm-inverse_matrix}
+::: {#prp-inverse_matrix}
 
 #### 역행열의 성질
 
@@ -1130,14 +1167,16 @@ $\boldsymbol{A},\,\boldsymbol{B}$ 가 가역행렬이고 $\lambda \in \mathbb{F}
 &emsp; ($3$) $(\boldsymbol{AB})^{-1} = \boldsymbol{B}^{-1}\boldsymbol{A}^{-1}$,
 :::
 
-</br>
+</div></br>
 
-
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 ::: {#cor-derterminant_is_invariant_under_similar_transformation}
 
 정사각 행렬에 대한 행렬식은 닮음 변환에 대해 불변이다. 즉 $\boldsymbol{A},\, \boldsymbol{P} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 이고 $\boldsymbol{P}$ 가 가역일 때 $\det (\boldsymbol{P}^{-1}\boldsymbol{AP}) = \det (\boldsymbol{A})$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -1166,7 +1205,7 @@ $\det (\boldsymbol{P}^{-1}\boldsymbol{AP}) = \det (\boldsymbol{P}^{-1})\det (\bo
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-column_space_row_space}
 
@@ -1174,8 +1213,7 @@ $\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$ 이라면 $\boldsymbol
 
 :::
 
-
-</br>
+</div></br>
 
 선형사상에서 $\ker,\, \text{im},\, \text{nullity},\, \text{rank}$ 를 정의했듯이 행렬에 대해서도 정의 할 수 있다.
 
@@ -1198,12 +1236,15 @@ $$
 :::
 
 </br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-rank_of_matrix}
 
 행렬 $\boldsymbol{A}$ 에 대해 $\text{im}(\boldsymbol{A})$ 는 $\boldsymbol{A}$ 의 열공간이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 $\boldsymbol{A} = \begin{bmatrix} \boldsymbol{A}_{:1} & \cdots & \boldsymbol{A}_{:n}\end{bmatrix}$ 이고 $\boldsymbol{x} = \begin{bmatrix} x_1  & \cdots & x_n\end{bmatrix}^T$ 라 하면, 
@@ -1219,6 +1260,7 @@ $$
 
 우리는 앞서 가역 연산자는 기저를 다른 기저로 바꾸는 연산자라는 것을 알았다(@cor-basis_transformation). 이제 가역변환에 의해 변하는 것과 변하지 않는 것을 알아보자.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-same_range_reduced_echelon_form}
 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 어떤 가역 변환 $\boldsymbol{S}$ 를 수행했을 때 
@@ -1233,6 +1275,8 @@ $$
 이다.
 :::
 
+</div></br>
+
 ::: {.proof}
 
 $\boldsymbol{S}$ 가 가역행렬이므로 $\boldsymbol{Av}=\boldsymbol{0} \iff \boldsymbol{SAv}=\boldsymbol{0}$ 이다. 따라서 $\ker \boldsymbol{A} = \ker (\boldsymbol{SA})$ 이다. 따라서 선형사상의 기본정리(@thm-rank_nullity) 에 의해 $\dim (\text{im} (\boldsymbol{A})) = \dim (\text{im} (\boldsymbol{SA}))$ 이므로 $\text{rank} (\boldsymbol{A}) = \text{rank} (\boldsymbol{SA})$ 이다. $\square$ 
@@ -1244,6 +1288,8 @@ $\boldsymbol{S}$ 가 가역행렬이므로 $\boldsymbol{Av}=\boldsymbol{0} \iff 
 
 행렬 $\boldsymbol{A}$ 가 유한번의 기본 행 연산을 통해 행 간소 사다리꼴 $\boldsymbol{A}'$ 이 되었다면 $\boldsymbol{A}'$ 을 $\boldsymbol{A}$ 의 행 간소 사다리꼴 형태라고 부르겠다. 행렬과 행 간소 사다리꼴 형태에 대해 다음이 성립한다.
 
+</bf><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-rank_of_reduced_echelon_form}
 행렬 $\boldsymbol{A}$ 와 행 간소 사다리꼴 형태 $\boldsymbol{A}'$ 에 대해 다음이 성립한다. 
 
@@ -1254,6 +1300,8 @@ $$
 \end{aligned}
 $$
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -1270,6 +1318,8 @@ $$
 
 행 간소 사다리꼴 행렬의 열벡터는 선행 1 성분을 포함하는 열과 포함하지 않는 열이 있다. 선행 1 성분을 포함하는 열은 1 성분을 제외한 성분이 모두 $0$ 이며, 영벡터를 포함하여 선행 1 성분을 포함하지 않는 열은 그 앞 열들의 선형결합이다. 따라서 우리는 다음을 알 수 있다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-dimension_of_row_space}
 
 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 과 그 행 간소 사다리꼴 행렬 $\boldsymbol{A}'$ 에 대해 다음이 성립한다.
@@ -1279,16 +1329,19 @@ $$
 
 :::
 
-</br>
+</div></br>
 
 ### 행렬의 rank {#sec-rank_of_matrix}
 
 @def-column_space_row_space 에서 정의했듯이 $m\times n$ 행렬 $\boldsymbol{A}$ 에서 $\text{span}(\boldsymbol{A}_{1:},\ldots,\boldsymbol{A}_{:m})$ 을 행렬 $\boldsymbol{A}$ 의 행공간 이라 한다. 행렬의 행 기본 연산이 모두 행벡터들 사이의 선형결합이라는 것을 이해한다면, 아래 명제는 쉽게 이해 할 수 있다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-invariance_of_rowspace_by_row_operation}
 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 의 행공간은 행 기본연산에 의해 변하지 않는다.
 :::
+
+</div></br>
 
 ::: {.proof}
 $\boldsymbol{A}$ 가 행 기본 연산에 의해 변환된 행렬을 $\boldsymbol{A}'$ 이라 하자. 우리는 $\text{rank}(\boldsymbol{A})=\text{rank}(\boldsymbol{A}')$ 임을 알고 있다. $\boldsymbol{a}$ 가 $\boldsymbol{A}'$ 의 행공간에 포함된다면 모든 $\boldsymbol{A}_{j:}$ 는 $\boldsymbol{A}$ 의 행공간에 포함되므로 $\boldsymbol{a}$ 역시 $\boldsymbol{A}$ 의 행공간에 포함된다. 즉 $\boldsymbol{A}'$ 은 $\boldsymbol{A}$ 의 부분공간이다. 그런데 두 행공간의 차원이 같으므로 두 행공간은 같다. $\square$
@@ -1299,7 +1352,9 @@ $\boldsymbol{A}$ 가 행 기본 연산에 의해 변환된 행렬을 $\boldsymbo
 
 따라서 행렬 $\boldsymbol{A}$ 의 행공간과 그 행 간소 사다리꼴 형태 $\boldsymbol{A}'$ 의 행공간은 일치한다. 
 
-또하나의 중요한 사실은 행 간소 사다리꼴에서 $0$ 행을 제외한 행들은 모두 선형 독립이다. 영벡터가 아닌 행벡터는 모두 선행 1 성분을 가지고 있으며, 선행 1 성분이 있는 열은 선행 1 성분을 제외하면 모두 $0$ 이므로 영벡터가 아닌 행벡터는 선형 독립임을 알 수 있다. 즉
+또하나의 중요한 사실은 행 간소 사다리꼴에서 $0$ 행을 제외한 행들은 모두 선형 독립이다. 영벡터가 아닌 행벡터는 모두 선행 1 성분을 가지고 있으며, 선행 1 성분이 있는 열은 선행 1 성분을 제외하면 모두 $0$ 이므로 영벡터가 아닌 행벡터는 선형 독립임을 알 수 있다. 즉 다음 명제가 성립한다.
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-dimension_of_row_space}
 $\boldsymbol{A}$ 의 행 간소 사다리꼴 형태를 $\boldsymbol{A'}$ 이라고 할 때 다음이 성립한다.
@@ -1309,9 +1364,11 @@ $$
 $$
 :::
 
-</br>
+</div></br>
 
 @prp-dimension_of_row_space 를 생각하면 다음과 같은 결론을 얻는다.
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-dimension_of_matrix}
 
@@ -1321,18 +1378,19 @@ $$
 $$
 :::
 
-
-</br>
+</div></br>
 
 ### 행 간소 사다리꼴의 유일성 {#sec-uniqueness_of_reduced_row_echelon_form}
 
 행렬의 행 간소 사다리꼴은 유일할까? 우리가 행렬을 행 간소 사다리꼴로 바꾸는 일관된 과정을 거쳤지만 다른 과정도 존재할 수 있다. 이제 어떤 방법으로른 행 간소 사다리꼴로 만들었다면 그 형태는 유일하다는 것을 보이고자 한다. 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-uniqueness_of_reduced_echelon_form}
 행렬의 행 간소 사다리꼴은 유일하다.
 :::
+
+</div></br>
 
 ::: {.proof}
 행렬 $\boldsymbol{A}$ 의 두 행간소 사다리꼴 형태를 $\boldsymbol{S}$ 와 $\boldsymbol{T}$ 라 하자. 
@@ -1363,12 +1421,15 @@ $$
 
 ### 가역행렬의 행 간소 사다리꼴, 역행렬 과 행렬식 {#sec-reduced_row_echelon_form_of_inverse_matrix}
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-reduced_echelon_form_of_invertible_matrix}
 
 가역행렬의 행 간소 사다리꼴 형태는 항등행렬이다. 또한 가역행렬 $\boldsymbol{A}$ 가  기본행렬의 곱 $\boldsymbol{E}$ 에 의해 항등행렬 이 되었다고 할때 $\boldsymbol{E}$ 는 $\boldsymbol{A}$ 의 역행렬이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 기본행렬의 곱 $\boldsymbol{E}$ 에 의해 행 간소 사다리꼴 $\boldsymbol{A}'$ 으로 변화하였다고 하자. @prp-rank_of_matrix 에 따라 가역행렬이라면 $\text{nullity} (\boldsymbol{A})=0$ 이므로 $\boldsymbol{A}'$ 에 $0$ 으로만 이루어진 행이 없어야 한다. 행 간소 사다리꼴이므로 $i$ 행에서 첫번째 $1$ 의 위치를 $l_i$ 라 하면 $l_i \ge i (i=1,\ldots, n)$ 이다. 또한 $\boldsymbol{A}$ 가 정사각 행렬이며 $0$ 행이 없어야 하므로 $l_n \le n$ 이다. 이 두가지로부터 $l_i = i,\, i = 1,\ldots, n$ 임을 알 수 있으며 이런 행 간소 사다리꼴은 항등행렬 $\boldsymbol{I}_n$ 뿐이다. 즉 $\boldsymbol{EA}=\boldsymbol{I}_n$ 
@@ -1380,13 +1441,17 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 기본행렬의 곱
 
 우리는 앞서 @prp-zero_determinant_of_linear_dependency 에서 행렬의 행벡터들이 선형종속이면, 혹은 열벡터들이 선형 종속이면 행렬식이 0 이 됨을 보였다. 이제 그 역에 대해서도 보일 수 있다. 
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-determinant_of_invertible_matrix}
 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음은 동치이다.
 
-1. $\boldsymbol{A}$ 는 가역행렬이다.
+&emsp;($1$) $\boldsymbol{A}$ 는 가역행렬이다.
 
-2. $\det (\boldsymbol{A}) \ne 0$.
+&emsp;($2$) $\det (\boldsymbol{A}) \ne 0$.
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -1411,17 +1476,21 @@ $\boldsymbol{A}$ 가 가역행렬인 경우 그 행 간소 사다리꼴이 단�
 
 ### 삼각행렬의 성질 {#sec-triangular_matrix}
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-properties_of_upper_triangular-matrix}
 
 상삼각행렬은 다음과 같은 성질을 가진다.
 
-&emsp; ($1$) 상삼각행렬의 곱은 상삼각행렬인다.
+&emsp;($1$) 상삼각행렬의 곱은 상삼각행렬인다.
 
-&emsp; ($2$) 상삼각행렬이 가역가역행렬이라는 것과 모든 대각성분이 $0$ 이 아니라는 것은 동치이다.
+&emsp;($2$) 상삼각행렬이 가역가역행렬이라는 것과 모든 대각성분이 $0$ 이 아니라는 것은 동치이다.
 
-&emsp; ($3$) 상삼각행렬의 역행렬은 상삼각행렬이다.
+&emsp;($3$) 상삼각행렬의 역행렬은 상삼각행렬이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -1443,6 +1512,8 @@ $$
 
 상삼각행렬의 전치행렬이 하삼각행렬이므로 하삼각행렬에 대해서도 다음을 알 수 있다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-properties_of_lower_triangular-matrix}
 
 하삼각행렬은 다음과 같은 성질을 가진다.
@@ -1455,18 +1526,19 @@ $$
 
 :::
 
-</br>
+</div></br>
 
-## 연습문제
+## 연습문제 {.unnumbered}
 
-
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-determinant_with_standard_vector}
 
 $\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 의 첫번째 행이 $c\boldsymbol{e}_1$, 즉 첫번째 열이 $c$ 이며 나머지 열은 $0$ 이라면 $\boldsymbol{A}$ 의 행렬식은 $\boldsymbol{A}$ 에서 $1$ 행과 $1$ 열을 제외한 $(n-1)\times (n-1)$ 행렬의 행렬식과 같다는 것을 보여라.
 
-
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1490,7 +1562,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-determinant_of_vandermond_matrix}
 
@@ -1508,8 +1580,9 @@ $$
 \det(V) = \prod_{0 \le i < j \le n} (t_j-t_i)
 $$ {#eq-determinant_of_vandermond_matrix}
 
-
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -1528,6 +1601,5 @@ $$
 $$
 
 여기서 $\boldsymbol{V}$ 의 대각성분의 곱을 보자. 대각성분의 순열은 항등순열이므로 $\text{sgn}$ 값은 $1$ 이다. 즉, $\det(\boldsymbol{V})$ 에서 $t_1 t_2^2 \cdots t_n^n$ 의 계수는 $1$ 이다. 그리고 $\cdot \prod_{1 \le i < j \le n}(t_j-t_i)$ 에서 $(t_j-t_i)$ 중 앞에 있는 것들의 곱을 모으면 $t_1 t_2^2 \cdots t_n^n$ 이다. 즉 $c=1$ 이다. $\square$
-
 
 :::

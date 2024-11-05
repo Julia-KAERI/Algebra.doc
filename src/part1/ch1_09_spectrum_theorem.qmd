@@ -25,18 +25,23 @@ crossref:
 
 다음은 자연스럽다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-hermitian_is_normal}
 
 에르미트 행렬은 정규 행렬이다. 
 
 :::
 
-</br>
+</div></br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-condition_of_normal_matrix}
 
 $\boldsymbol{A}$ 가 정규행렬일 필요충분인 조건은 모든 $\boldsymbol{v}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\|\boldsymbol{Av}\| = \|\boldsymbol{A}^\ast \boldsymbol{v}\|$ 이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 $$
@@ -50,12 +55,13 @@ $$
 
 :::
 
-</br>
-
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-eigenvectors_or_normal_matrix_and_adjoint}
 $\boldsymbol{A}$ 가 정규행렬이면 $\boldsymbol{A}$ 와 $\boldsymbol{A}^\ast$ 는 같은 고유벡터를 가진다.
 :::
+
+</div></br>
 
 ::: {.proof}
 $\boldsymbol{A}$ 가 정규행렬이면, $\boldsymbol{A}-\lambda \boldsymbol{I}$ 도 정규행렬임을 보일 수 있다.
@@ -78,11 +84,13 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-orthogonality_of_normal_matrix}
 정규행렬 $\boldsymbol{A}$ 의 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.
 :::
+
+</div></br>
 
 ::: {.proof}
 $\lambda_1,\,\lambda_2$ 가 서로 다른 $\boldsymbol{A}$ 의 고유값이고 이에 대한 고유벡터가 $\boldsymbol{v}_1,\,\boldsymbol{v}_2$ 라 하자.
@@ -96,13 +104,15 @@ $$
 이며 $\lambda_1 \ne \lambda_2$ 이므로 $\langle \boldsymbol{v}_1,\,\boldsymbol{v}_2\rangle = 0$ 이다. $\square$
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-diagonality_of_norma_matrix}
 
 정규행렬의 상삼각행렬꼴은 대각행렬이다.
 
 :::
+
+</div></br>
 
 ::: {.proof} 
 
@@ -131,19 +141,22 @@ $$
 
 ## 복소수체($\mathbb{C}$) 에서 정의된 행렬에 대한 스펙트럼 정리
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#thm-spectrum_theorem_for_complex_vector_space}
 
 #### 복소수체에서 정의된 행렬에 대한 스펙트럼 정리
 
 $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 행렬에 대해 다음 세 명제는 동치이다.
 
-&emsp; ($1$) $\boldsymbol{A}$ 는 정규행렬이다.
+&emsp;($1$) $\boldsymbol{A}$ 는 정규행렬이다.
 
-&emsp; ($2$) $\boldsymbol{A}$ 는 unitary 변환에 의해 대각행렬로 표현된다.
+&emsp;($2$) $\boldsymbol{A}$ 는 unitary 변환에 의해 대각행렬로 표현된다.
 
-&emsp; ($3$) $\boldsymbol{A}$ 의 고유벡터로 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저를 구성 할 수 있다.
+&emsp;($3$) $\boldsymbol{A}$ 의 고유벡터로 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저를 구성 할 수 있다.
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -190,15 +203,15 @@ $$
 정규행렬은 고유벡터로 이루어진 정규직교기저가 존재하며, 따라서 이 기저에서 대각행렬로 변환된다는 좋은 성질을 가진다. 에르미트 행렬은 정규행렬이므로 이 성질을 공유하며 더하여 고유값이 항상 실수이다.
 :::
 
-</br>
-
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-hermitian_normal}
 
-복소 정사각 행렬 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 이 정규행렬이며 그 고유값이 모두 실수이면 $\boldsymbol{A}$ 는 에르미트 행렬이다.
+복소 정사각 행렬 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 이 정규행렬이며 그 고유값이 모두 실수이면 $\boldsymbol{A}$ 는 에르미트 행렬임을 보여라.
 
 :::
 
+</div></br>
 ::: {.solution}
 
 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 이 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저이고 $\boldsymbol{e}_i$ 의 고유값은 $\lambda_i$ 라 하자. @prp-hermite_tvv 에서 보았듯이 임의의 $\boldsymbol{u} \in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \boldsymbol{Au},\boldsymbol{u}\rangle$ 이 실수이면 $\boldsymbol{A}$ 는 에르미트 행렬이다. $\boldsymbol{u}= \sum_i^n u_i \boldsymbol{e}_i$ 라 하면,
@@ -221,7 +234,7 @@ $$
 
 실수체에서 정의된 행렬 $\boldsymbol{A}$ 가 에르미트 행렬이면 대칭행렬이며, 대칭행렬이면 에르미트 행렬이다. 실수체에서 정의된 스펙트럼 정리를 증명하기 위해서는 몇가지 미리 증명해야 할 것이 있다.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-invirtible_deformation}
 
@@ -234,6 +247,7 @@ $$
 은 가역행렬이다.
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -266,7 +280,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-factorization_of_polinomial}
 $n$ 차 실계수 다항식 $p(x)$ 는 1차식들과 2차식의 곱들로, 2차식의 경우 $f(x)$ 라 했을 때 $f(x)=0$ 을 만족하는 실수가 존재하지 않도록 아래와 같이 분해된다.
@@ -278,6 +292,7 @@ $$
 이 때, $c,\,\lambda_1,\ldots,\,\lambda_m,\,b_1,\ldots,\,b_M,\,c_1,\ldots,\,c_M$ 은 실수이며, $i=1,\ldots,\,M$ 에 대해 $b_i^2<4c$ 이다.
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -301,9 +316,13 @@ $$
 
 ### 실수체에서 정의된 행렬에 대한 스펙트럼 정리
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#lem-hermitian_real_matrix_eigenvalue}
 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬이면 고유값을 가진다.
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -326,19 +345,21 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-self_adjoint_matrix_and_invariable_space}
 
 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬 이고 $U\le \mathcal{M}_n(\mathbb{R})$ 가 $\boldsymbol{A}$ 에 대한 불변부분공간일 때,
 
-($1$) $U^\perp$ 도 $\boldsymbol{A}$에 대한 불변부분공간이다.
+&emsp;($1$) $U^\perp$ 도 $\boldsymbol{A}$에 대한 불변부분공간이다.
 
-($2$) $\boldsymbol{A}|_U$ 도 대칭행렬 이다.
+&emsp;($2$) $\boldsymbol{A}|_U$ 도 대칭행렬 이다.
 
-($3$) $\boldsymbol{A}|_{U^\perp}$ 도 대칭행렬 이다.
+&emsp;($3$) $\boldsymbol{A}|_{U^\perp}$ 도 대칭행렬 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 ($1$) $\boldsymbol{u}\in U,\, \boldsymbol{v}\in U^\perp$ 라 하자. $\boldsymbol{Au}\in U$ 이며 $\boldsymbol{A}$ 가 에르미트 행렬이므로,
@@ -379,22 +400,27 @@ $U$ 에 대한 정규직교기저 $\mathcal{B}_\parallel$ 와 $U^\perp$ 에 대�
 
 </br> -->
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#lem-matrix_under_two_invariant_subspace}
 
 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 가 대칭행렬이고 $U,\,V \le \mathcal{M}_{n}(\mathbb{R})$ 가 $\boldsymbol{A}$ 에 대한 불변부분공간이며 $\mathcal{M}_{n }(\mathbb{R})= U \oplus V$ 이면 $\boldsymbol{A}$ 는 어떤 직교변환에 의해 블럭대각행렬이 된다.
 :::
+
+</div></br>
 
 ::: {.proof}
 
 $\boldsymbol{u}\in U$ 이면 $\boldsymbol{Au}\in U$ 이고 $\boldsymbol{v}\in V$ 이면 $\boldsymbol{Av}\in V$ 이다. $\mathcal{M}_{n }(\mathbb{R}) = U \oplus V$ 이므로 $U$ 의 정규직교기저 $\{\boldsymbol{e}_i\}$ 와 $V$ 의 정규직교기저 $\{\boldsymbol{f}_j\}$ 에 대해 $\{\boldsymbol{e}_i\}\cup \{\boldsymbol{f}_j\}$ 는 $\mathcal{M}_{n }(\mathbb{R})$ 의 기저이며 이 기저로의 직교변환에 대해 $\boldsymbol{A}$ 는 블럭대각행렬이 된다. $\square$ 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-symmetric_matrix_digoalization} 
 $\boldsymbol{A}$ 가 대칭행렬이면 어떤 직교 변환에 의해 대각행렬이 된다.
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -404,7 +430,7 @@ $\boldsymbol{A}$ 가 $n \times n$ 대칭 행렬일 때 고유값이 항상 존�
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-spectrum_theorem_for_real_vector_space}
 
@@ -412,14 +438,15 @@ $\boldsymbol{A}$ 가 $n \times n$ 대칭 행렬일 때 고유값이 항상 존�
 
 $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{R})$ 행렬에 대해 다음 세 명제는 동치이다.
 
-&emsp; ($1$) $\boldsymbol{A}$ 는 대칭행렬이다.
+&emsp;($1$) $\boldsymbol{A}$ 는 대칭행렬이다.
 
-&emsp; ($2$) $\boldsymbol{A}$ 는 직교변환에 의해 대각행렬로 표현된다.
+&emsp;($2$) $\boldsymbol{A}$ 는 직교변환에 의해 대각행렬로 표현된다.
 
-&emsp; ($3$) $\boldsymbol{A}$ 의 고유벡터로 $\mathcal{M}_{n }(\mathbb{R})$ 의 정규직교기저를 구성 할 수 있다.
+&emsp;($3$) $\boldsymbol{A}$ 의 고유벡터로 $\mathcal{M}_{n }(\mathbb{R})$ 의 정규직교기저를 구성 할 수 있다.
 
 :::
 
+</div></br>
 
 ::: {.proof}
 ($1\implies 2$) 는 앞에서 보였다.
@@ -444,13 +471,18 @@ $$
 
 </br>
 
-## 연습문제
+## 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_A_10}
 
 $n\ge 2$ 에 대해 $n\times n$ 정규행렬의 집합은 $\mathcal{M}_{n \times n}(\mathbb{F})$ 의 부분공간이 되지 않음을 보여라.
 
 :::
+
+</div></br>
+
 
 ::: {.solution}
 $\boldsymbol{A},\,\boldsymbol{B} \in \mathcal{M}_{n\times n} (\mathbb{F})$ 의 정규행렬이라고 하자. $c\in \mathbb{F}$ 에 대해
@@ -462,8 +494,7 @@ $$
 이므로 $\boldsymbol{A}+c\boldsymbol{B}$ 가 정규행렬이 되지 않는다.
 ::: 
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_A_12}
 
@@ -471,13 +502,15 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 정규행렬이고 
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $3$ 을 고유값으로 가지고 크기가 $1$ 인 벡터를 $\boldsymbol{u}_1$ 이라 하고 $4$ 를 유값으로 가지고 크기가 $1$ 인 벡터를 $\boldsymbol{u}_2$ 라고 하자. 서로 다른 고유값을 가진 정규벡터의 고유벡터이므로 $\boldsymbol{u}_1$ 과 $\boldsymbol{u}_2$ 는 직교한다. $\boldsymbol{u}=\boldsymbol{u}_1+\boldsymbol{u}_2$ 라고 하면, $\|\boldsymbol{u}\|=2$ 이며, $\|\boldsymbol{Au}\|^2 = 5$ 이다. 
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_A_15}
 
@@ -494,6 +527,8 @@ $$
 &emsp; ($2$) $T$ 가 정규연산자일 필요충분조건은 $u,\,x$ 가 선형종속인 것이다.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -538,7 +573,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_A_16}
 
@@ -549,6 +584,8 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 정규연산자일 
 &emsp; ($2$) 양의 정수 $k$ 에 대해 $\ker (\boldsymbol{A}^k) = \ker (\boldsymbol{A})$ 이며 $\text{im}(\boldsymbol{A}^k) = \text{im}(\boldsymbol{A})$.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -597,13 +634,15 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_A_18}
 
 $\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 표준기저 $(\boldsymbol{e}_1, \ldots,\,\boldsymbol{e}_n)$ 에 대해 $\|\boldsymbol{Ae}_i\| = \|\boldsymbol{A}^\ast \boldsymbol{e}_i\|$ $(i=1,\ldots,\,n)$ 이면 $\boldsymbol{A}$ 가 정규행렬인가? 
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -613,13 +652,15 @@ $\boldsymbol{A}= \left[\begin{array}{rr} 1 & -1 \\ 1 & -1\end{array}\right]$ 에
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_B_1}
 
 대칭행렬이 아니면서 행렬의 고유벡터로 이루어진 기저를 갖도록 하는 정사각행렬이 존재하는가?
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -633,13 +674,14 @@ $\boldsymbol{A} = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatri
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_B_4}
 
 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때 $\boldsymbol{A}$ 가 정규행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 $\mathcal{M}_n(\mathbb{C})$ 는 모든 $\boldsymbol{A}$ 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -647,12 +689,14 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때 $\boldsymbol{A}
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_B_5}
 
 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 일 때 $\boldsymbol{A}$ 가 대칭행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 $\mathcal{M}_n(\mathbb{R})$ 는 모든 $\boldsymbol{A}$ 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.
 :::
+
+</div></br>
 
 ::: {.solution}
 

@@ -20,19 +20,41 @@ $$
 
 우선 고정된 $v$ 에 대해 $\phi (u) = \langle Lu,\,v\rangle$ 는 선형 범함수(@exr-adjoint_operator_1) 이며 @thm-Reisz_representaion_theorem 에 의해 $\phi(u) = \langle u, w\rangle$ 인 $w\in U$ 가 유일하게 존재한다. 이제 함수 $L^\ast : V \to U$ 를 $L^\ast( v)= w$ 인 함수로 생각 할 수 있다. (뭔가 이상한가? 이상해야 하는데..) 이 $L^\ast$ 를 $L$ 에 대한 adjoint function 이라고 한다.
 
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
 ::: {#exr-adjoint_operator_1}
 
 $L\in \mathcal{L}(U, V)$ 일 때 고정된 $v\in V$ 에 대해 $\phi (u) = \langle L(u),\,v\rangle$ 이 선형범함수임을 보여라.
 
 :::
 
-</br>
+</div></br>
+
+::: {.solution}
+
+$u_1,\,u_2\in U,\, c\in \mathbb{F}$ 에 대해 다음이 성립한다.
+$$
+\begin{aligned}
+\phi(u_1+cu_2) = \langle L(u_1+cu_2),\, v\rangle  = \langle L(u_1),\,v\rangle + c\langle L(u_2),\,v\rangle = \phi(u_1)+c\phi(u_2).
+\end{aligned}
+$$
+
+따라서 $\phi$ 는 선형범함수이다. 
+
+:::
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-adjoint_transformation}
 
 위에서 정의된 $L\in \mathcal{L}(U,\,V)$ 에 대한 adjoint function $L^\ast$ 는 선형사상이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -59,7 +81,7 @@ $$
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-adjoint_matrix}
 
@@ -70,6 +92,8 @@ $$
 $$
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -103,13 +127,15 @@ $$
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-adjoint_matrix}
 정규직교기저에서 정의된 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $\boldsymbol{v}\in\mathcal{M}_{m }(\mathbb{F})$, $\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\langle \boldsymbol{Au},\, \boldsymbol{v} \rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{v} \rangle$ 임을 보여라.
 :::
 
-::: {.proof}
+</div></br>
+
+::: {.solution}
 
 $\mathcal{M}_{n \times n}(\mathbb{F})$ 의 정규직교기저 $\{\boldsymbol{e}_i\}$ 와 $\mathcal{M}_{m }(\mathbb{F})$ 의 정규직교기저 $\{\boldsymbol{f}_j\}$ 를 생각하자. $\boldsymbol{u}=\sum_i u_i \boldsymbol{e}_i$, $\boldsymbol{v}= \sum_j v_j \boldsymbol{f}_j$ 라고 하면,
 $$
@@ -124,8 +150,7 @@ $$
 
 :::
 
-</br>
-
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-properties_of_adjoint_operator}
 
@@ -143,6 +168,8 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 ($1$) 에서 ($4$) 는 생략한다. 
@@ -157,7 +184,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-kernel_image_of_adjoint_operator}
 #### Adjoint 의 kernel 과 치역
@@ -172,6 +199,8 @@ $L\in \mathcal{L}(U,\,V)$ 일 때 다음이 성립한다.
 
 &emsp; ($4$) $\text{im} (L) = (\ker (L^\ast))^\perp$.
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -209,7 +238,7 @@ $L\in \mathcal{L}(V)$ 에 대해 $L^\ast = L$ 일 때 $L$ 을 **에르미트 연
 
 $\boldsymbol{A}$ 가 에르미트 행렬일 경우 $(\boldsymbol{A}^\ast)_{ij} = \overline{A_{ji}} = A_{ij}$ 를 만족한다. 대칭행렬의 경우에는 $A_{ij} = A_{ji}$ 이다. 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-peroperties_hermitian_operator}
 
@@ -224,10 +253,11 @@ $\boldsymbol{A}$ 가 에르미트 행렬일 경우 $(\boldsymbol{A}^\ast)_{ij} =
 &emsp; ($3$) 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.
 :::
 
+</div></br>
+
 ::: {.proof}
 
 ($1$) $\langle L(v_1),\, v_2\rangle = \langle v_1,\, L^\ast (v_2) \rangle = \langle v_1,\, L(v_2)\rangle$.
-
 
 ($2$) 고유벡터 $v\in V$ 에 대한 고유값을 $\lambda$ 라 하자. 
 
@@ -246,10 +276,9 @@ $$
 \end{aligned}
 $$
 
-
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-hermite_tvv}
 
@@ -261,6 +290,7 @@ $$
 
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -284,7 +314,6 @@ $$
 이므로 $\langle L(u),\, u\rangle$ 는 실수이다. $\square$
 :::
 
-
 </br>
 
 ## Linear Isometry {#sec-linear_isometry}
@@ -307,7 +336,7 @@ $$
 많은 선형대수학 교재에서 linear isometry 를 isometry 라고 소개한다. 정확한 의미의 isometry 는 거리공간에서 거리를 보존하는 함수이며 여기에 대해서는 [Isometry](../part2/ch2_04_symmetry.qmd#sec-isometry) 에서 다루기로 한다. 
 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-properties_of_isometry}
 
@@ -323,6 +352,7 @@ $$
 
 :::
 
+</div></br>
 
 ::: {.proof}
 ($1\implies 2$) 다음 두 식을 생각하자.
@@ -379,13 +409,16 @@ $$
 
 :::
 
-</br>
 
-::: {#exm-cojugate_of_isometry}
-$\boldsymbol{S}$ 가 linear isometry 이면 $\boldsymbol{S}^\ast$ 도 linear isometry 이다.
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-cojugate_of_isometry}
+$\boldsymbol{S}$ 가 linear isometry 이면 $\boldsymbol{S}^\ast$ 도 linear isometry 임을 보여라.
 :::
 
-::: {.proof}
+</div></br>
+
+::: {.solution}
 
 @prp-properties_of_isometry 에서 보였듯이 $\boldsymbol{S}$ 가 linear isometry 이면 $\boldsymbol{S}^\ast = \boldsymbol{S}^{-1}$ 이다. 따라서
 $$
@@ -395,14 +428,13 @@ $$
 이므로 $\boldsymbol{S}^\ast$ 도 linear isometry 이다. $\square$
 :::
 
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-</br>
-
-
-::: {#exm-product_of_isometries}
-$\boldsymbol{S},\,\boldsymbol{T}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 linear isometry 이면 $\boldsymbol{ST}$ 도 linear isometry 이다.
+::: {#exr-product_of_isometries}
+$\boldsymbol{S},\,\boldsymbol{T}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 linear isometry 이면 $\boldsymbol{ST}$ 도 linear isometry 임을 보여라.
 :::
 
+</div></br>
 
 ::: {.solution}
 
@@ -435,18 +467,19 @@ $\mathbb{C}$-벡터공간에서 정의된 linear isometry 를 **유니타리 연
 :::
 :::
 
-
-
-
 </br>
 
 ### Isometry 와 정규직교기저
 
 정규직교기저간의 기저 변환과 isometry 에 대한 두가지를 보인다.
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-isometry_orthonormal_basis}
 $\boldsymbol{S}$ 가 linear isometry 일 때 $\boldsymbol{S}$ 의 각 열벡터의 집합은 정규직교기저이며, 정규직교기저를 각 열벡터로 갖는 행렬은 linear isometry 이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -465,12 +498,14 @@ $$
 이다. 즉 $\boldsymbol{S}^\ast \boldsymbol{S}=\boldsymbol{I}$ 이므로 $\boldsymbol{S}$ 는 linear isometry 이다. $\square$
 
 :::
-</br>
 
-::: {#prp-2}
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-transform_between_orthonormal_basis_is_linear_isometry}
 정규직교기저간의 변환행렬은 linear isometry 이다.
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -494,12 +529,14 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-determinant_of_isometry}
 
-직교행렬의 행렬식은 $1$ 혹은 $-1$ 이다. Unitary 행렬의 행렬식은 크기가 $1$ 인 복소수이다.
+직교행렬의 행렬식은 $1$ 혹은 $-1$ 이다. Unitary 행렬의 행렬식은 크기가 $1$ 인 복소수임을 보여라.
 :::
+
+</div></br>
 
 ::: {.solution}
 $\det(\boldsymbol{S}^\ast \boldsymbol{S})=\det(\boldsymbol{S}^\ast) \det(\boldsymbol{S}) = \det(\boldsymbol{I})=1$ 임을 이용한다. 직교행렬이라면, 즉 실행렬이라면 $\boldsymbol{S}^\ast = \boldsymbol{S}^T$ 이며 $\det (\boldsymbol{S}^T) = \det (\boldsymbol{S})$ 이므로 $(\det(\boldsymbol{S})))^2=1$ 이다. 따라서 $\det (\boldsymbol{S})= \pm 1$ 이다. Unitary 행렬이라면, 즉 복소행렬이라면 $\det(\boldsymbol{S}^\ast) = \overline{\det (\boldsymbol{S}^T)} = \overline{\det (\boldsymbol{S})}$ 이다. 즉 $|\det (\boldsymbol{S})|^2=1$ 이다. $\square$ 
@@ -516,11 +553,15 @@ $n$ 차원 벡터공간 $V$ 에서 정의된 연산자 $T$ 와 정규직교기�
 
 ## 연습문제
 
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
 ::: {#exr-axler_7_A_2}
 
 $\lambda$ 가 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 의 고유값이라면 $\overline{\lambda}$ 는 $\boldsymbol{A}^\ast$ 의 고유값임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -534,7 +575,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_A_3}
 
@@ -542,23 +583,27 @@ $\boldsymbol{A}=\mathcal{M}_{n \times n}(\mathbb{F})$ 이며 $U\le \mathcal{M}_n
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 모든 $\boldsymbol{u}\in U$, $\boldsymbol{w}\in U^\perp$ 에 대해 $\langle \boldsymbol{Au}, \boldsymbol{w}\rangle = 0$ 이면 $\langle \boldsymbol{u}, \boldsymbol{A}^\ast \boldsymbol{w}\rangle = 0 = \langle \boldsymbol{A}^\ast \boldsymbol{w}, \boldsymbol{u} \rangle$ 이다. 
 :::
 
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_A_4}
 
 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음을 보여라.
 
-&emsp; ($1$) $\boldsymbol{A}$ 가 단사일 필요충분조건은 $\boldsymbol{A}^\ast$ 가 전사인 것이다.
+&emsp;($1$) $\boldsymbol{A}$ 가 단사일 필요충분조건은 $\boldsymbol{A}^\ast$ 가 전사인 것이다.
 
-&emsp; ($2$) $\boldsymbol{A}$ 가 전사일 필요충분조건은 $\boldsymbol{A}^\ast$ 가 단사인 것이다.
+&emsp;($2$) $\boldsymbol{A}$ 가 전사일 필요충분조건은 $\boldsymbol{A}^\ast$ 가 단사인 것이다.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -566,7 +611,7 @@ $(\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}$ 이므로 둘중 하나만 보이�
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_A_5}
 
@@ -578,6 +623,8 @@ $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음을 �
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
 ($1$)  @thm-rank_nullity 에 의해 $m=\text{nullity}(\boldsymbol{A}^\ast) + \text{rank}(\boldsymbol{A}^\ast)$ 이며 @thm-kernel_image_of_adjoint_operator 에 의해 $\text{nullity} (\boldsymbol{A}) = n-\text{rank}(\boldsymbol{A}^\ast)$ 이므로 ($1$) 이 성립한다.
@@ -586,7 +633,7 @@ $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음을 �
 ($2$) $\text{ker} (\boldsymbol{A}^\ast) = (\text{im} (\boldsymbol{A}))^\perp$ 이므로 $\text{nullity}(\boldsymbol{A}^\ast) = m - \text{rank}(\boldsymbol{A})$ 이다. ($1$) 에 $\text{nullity} (\boldsymbol{A}) = n-\text{rank}(\boldsymbol{A}^\ast)$ 과 함께 대입하면 ($2$) 를 얻는다.
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_A_7}
 
@@ -594,18 +641,22 @@ $\boldsymbol{A},\, \boldsymbol{B} \in \mathcal{M}_{n \times n} (\mathbb{F})$ 가
 
 :::
 
+</div></br>
+
 ::: {.solution} 
 $(\boldsymbol{AB})^\ast = \boldsymbol{AB} \iff \boldsymbol{B}^\ast \boldsymbol{A}^\ast = \boldsymbol{AB} \iff \boldsymbol{BA}= \boldsymbol{AB}$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_A_8_9}
 
 $\mathcal{M}_{m \times n}(\mathbb{R})$ 에서의 에르미트 행렬의 집합은 벡터공간을 이룸을 보여라. $\mathcal{M}_{m \times n}(\mathbb{C})$ 에서의 에르미트 행렬의 집합은 벡터공간을 이루지 않음을 보여라. 
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -617,17 +668,17 @@ $$
 
 는 에르미트 행렬이 아니다.
 
-
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_A_11}
 
 Projection $\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\boldsymbol{P}=\boldsymbol{P}_U$ 인 $U\le \mathcal{M}_{n}(\mathbb{F})$ 가 존재할 필요충분조건은 $\boldsymbol{P}$ 가 에르미트 행렬임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 

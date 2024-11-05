@@ -34,6 +34,8 @@ crossref:
 
 ### Non-negative 행렬의 성질
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-properties_of_posivive_definite_matrix}
 
 $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 동치이다.
@@ -52,6 +54,8 @@ $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 �
 
 ::: 
 
+</div></br>
+
 ::: {.proof}
 ($1 \implies 2$) $\boldsymbol{A}$ 가 non-negative 이므로 정의에 의해 에르미트 행렬이다. $\lambda$ 가 $\boldsymbol{A}$ 의 고유값이고 $\boldsymbol{v}$ 가 $\lambda$ 에 대한 고유벡터 일 때, $0 \le \langle \boldsymbol{Av},\, \boldsymbol{v}\rangle = \lambda \|\boldsymbol{v}\|^2$ 이므로 $\lambda \ge 0$ 이다.
 
@@ -67,15 +71,15 @@ $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 �
 
 :::
 
-
-</br>
-
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-uniqueness_of_squareroot_matrix}
 
 non-negative 행렬 $\boldsymbol{A}$ 의 non-nagative 한 제곱근 행렬은 유일하다.
 
 :::
+
+</div></br>
 
 :::{.proof}
 우리는 앞서 non-negative 행렬 $\boldsymbol{A}$ 에 대한 non-negative 한 제곱근 행렬이 존재함을 보였다. 여기서는 이것이 유일함을 보인다. 행렬 $\boldsymbol{A}$ 에 대한 non-negative 한 제곱근 행렬을 $\boldsymbol{R}$ 이라 하자. 스펙트럼 정리에 의해 $\boldsymbol{R}$ 에 대한 고유값 $\eta_1,\ldots,\,\eta_n$ 과 그에 대한 정규 고유 벡터 $\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n$ 이 존재한다. 이 때 $\eta_i \ge 0$ 이다. 임의의 벡터 $\boldsymbol{v} = \sum_i a_i \boldsymbol{u}_i$ 에 대해,
@@ -109,7 +113,7 @@ $\boldsymbol{A}$ 가 non-negative 행렬일 때 $\boldsymbol{A}$ 의 non-negativ
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-squareroot_matrix}
 
@@ -123,6 +127,8 @@ $\boldsymbol{A}$ 가 non-negative 행렬일 때 $\boldsymbol{A}$ 의 non-negativ
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 ($1$) $(\boldsymbol{B}^\ast\boldsymbol{B})^\ast = \boldsymbol{B}^\ast\boldsymbol{B}$ 이다.
@@ -135,8 +141,9 @@ $\boldsymbol{A}$ 가 non-negative 행렬일 때 $\boldsymbol{A}$ 의 non-negativ
 </br>
 
 
-## 연습문제
+### 연습문제 {.unnumbered}
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 ::: {#exr-axler_5_A_2}
 
 #### Axler 5.A.2
@@ -144,12 +151,15 @@ $\boldsymbol{A}$ 가 non-negative 행렬일 때 $\boldsymbol{A}$ 의 non-negativ
 $\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이고 $\boldsymbol{AB}=\boldsymbol{BA}$ 이면 $\ker \boldsymbol{B}$ 는 $\boldsymbol{A}$ 의 불변부분공간이다.
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $\boldsymbol{u}\in \ker \boldsymbol{B}$ 라 하자. $\boldsymbol{BAu} =\boldsymbol{ABu} = \boldsymbol{0}$ 이므로 $\boldsymbol{Au}\in \ker \boldsymbol{B}$ 이다.  
 
 :::
 
+</br>
 
 ## 특이값 분해의 원리
 
@@ -167,6 +177,8 @@ $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\sqrt{A^\ast A}$ 의 고
 :::
 :::
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-properties_of_AAast}
 
 $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한다.
@@ -181,6 +193,8 @@ $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한다.
  
 :::
 
+</div></br>
+
 ::: {.proof}
 
 ($1$) $(A^\ast A)^\ast = A^\ast A$ 이므로 $A^\ast A$ 는 에르미트 행렬이다. 또한 $\langle A^\ast Au,\, v\rangle = \|Au\|^2\ge 0$ 이므로 $A^\ast A$ 는 positive 이다.
@@ -193,7 +207,7 @@ $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한다.
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-properties_of_singular_value}
 
@@ -207,6 +221,8 @@ $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 ($1$) $A$ 가 단사 $\iff \ker (A) = \{0\} \iff \ker(A^\ast A)= \{0\}$ 
@@ -217,11 +233,9 @@ $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
 
 :::
 
-
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-linear_isometry_and_singular_values}
-
 
 정사각 행렬 $\boldsymbol{S}$ 에 대해 다음은 동치이다.
 
@@ -230,6 +244,8 @@ $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
 &emsp; ($2$) $\boldsymbol{S}$ 의 특이값이 $1$ 뿐이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -244,6 +260,7 @@ $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
 
 ### 특이값 분해
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-for_svd}
 
@@ -256,6 +273,8 @@ $$
 이다. 
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -301,8 +320,12 @@ $$
 :::
 :::
 
+</br>
+
 왼쪽과 오른쪽이라는 이름은 특이값 분해에 대해 알게되면 자연스럽다.
 
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-svd_1}
 
@@ -317,6 +340,7 @@ $$
 이다.
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -334,7 +358,7 @@ $$
 
 @thm-svd_1 은 실제 계산에서 잘 사용하지 않으며, 약간 변형된 형태로 많이 사용한다.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-svd_2}
 
@@ -349,6 +373,8 @@ $$
 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -371,7 +397,7 @@ $$
 
 많은 경우 @thm-svd_2 의 형태로 특이값 분해를 사용한다.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-adjoint_of_svd}
 
@@ -385,6 +411,7 @@ $$
 
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -399,7 +426,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-inverse_matrix_using_svd}
 
@@ -417,6 +444,8 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 $\boldsymbol{A}$ 가 가역행렬이면 정사각 행렬이며, @prp-properties_of_singular_value 에 따라 $\boldsymbol{\Sigma}$ 는 대각성분이 모두 $0$ 이 아닌 대각행렬이며 따라서 $\boldsymbol{\Sigma\overline{\Sigma}} = \boldsymbol{I}$ 이다. 이를 이용하면
@@ -430,12 +459,13 @@ $$
 :::
 
 
-
 </br>
 
 ## 특이값 분해의 활용
 
 ### 행렬의 노름
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-norm_of_matrix}
 
@@ -446,6 +476,7 @@ $$
 $$
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -489,6 +520,7 @@ $$
 :::
 :::
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-anothor_definitions_of_matrix_norm}
 
@@ -506,6 +538,8 @@ $$
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 ($3$) 과 ($4$) 가 같다는 것은 앞에서 설명했다. ($2$) 에서 $\|\boldsymbol{Av}\|$ 를 최대로 하는 값이 $|\boldsymbol{v}\|<1$ 이면 $\boldsymbol{u}=\dfrac{\boldsymbol{v}}{\|\boldsymbol{v}\|}$ 에 대해 $\|\boldsymbol{u}\|=1$ 이며 $|\boldsymbol{Au}\| > \|\boldsymbol{Av}|$ 이므로 모순된다. 따라서 ($2$) $\|\boldsymbol{Av}\|$ 를 최대로 하는 $\|\boldsymbol{v}\|$ 는 $\|\boldsymbol{v}\|=1$ 일 때이다. 따라서 ($1$) 의 값과 ($2$) 의 값은 같다.
@@ -514,9 +548,7 @@ $$
 
 :::
 
-
-
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-properties_of_matrix_norm}
 
@@ -536,6 +568,7 @@ $$
 
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -561,8 +594,6 @@ $$
 
 </br>
 
-
-
 ### Approximation by Linear Maps with Lower-Dimensional Range
 
 ::: {.callout-caution icon="false"}
@@ -576,7 +607,7 @@ $$
 
 $L\in \mathcal{L}(U,\,V)$ 의 양의 특이값을 $s_1 \ge s_2 \ge \ldots,\ge s_m>0$ 이라고 하자. 이것을 $k<m$ 의 $\text{rank}$ 를 갖는 어떤 선형사상으로 근사(approximation) 하고자 하며, 가장 좋은 근사인 선형사상을 $L_k$ 라고 하자. 이 때 특이값 분해를 사용 할 수 있다.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-approximation_using_svd}
 
@@ -589,6 +620,8 @@ $$
 또한 $\|\boldsymbol{A}-\boldsymbol{B}\| = s_{k+1}$ 을 만족하는 그 $\text{rank}$ 가 $k$ 보다 작은 행렬이 존재한다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -651,12 +684,15 @@ $$
 
 ### 극분해
 
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-polar_decomposition}
 
 정사각행렬 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 는 어떤 유니타리 행렬 $\boldsymbol{U}$ 에 대해 $\boldsymbol{A}=\boldsymbol{S}\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}$ 이다.
 
 :::
 
+</div></br>
 
 ::: {.proof}
 
