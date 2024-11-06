@@ -9,7 +9,7 @@ crossref:
 ## 아핀 부분집합과 몫공간
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-affine_subset}
+::: {#def-part3_affine_subset}
 
 #### 부분공간의 평행이동
 
@@ -26,7 +26,7 @@ $$
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-quotient_space}
+::: {#def-part3_quotient_space}
 
 #### 몫공간
 $U$ 가 $V$ 의 부분공간일 때 **몫공간 (quotient space)** $V/U$ 는 $U$ 가 평행이동한 부분집합의 집합이다. 즉,
@@ -43,9 +43,9 @@ $$
 
 공간이라는 이름을 붙이는 이유는 뒤에 보이겠지만 적절하게 합과 스칼라곱을 정의하면 $V/U$ 가 벡터공간이 되기 때문이다.
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-affine_subset}
+::: {#thm-part3_affine_subset}
 
 #### 몫공간의 성질
 
@@ -57,6 +57,8 @@ $v_1,\,v_2 \in V$ 와 $U\le V$ 에 대해 다음이 성립한다.
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 $v_1 - v_2 = u\in U$ 이면 $v_1+U = v_2+U$ 임은 자명하다. 이제 $v_1-v_2\notin U$ 일 때 $x\in (v_1+U)\cap (v_2+U)$ 라고 하자. $x=v_1+u_1 = v_2+u_2$ 이므로 $v_1-v_2 = u_2-u_1 \in U$ 인데 이는 $v_1-v_2\not\in U$ 인 가정에 모순된다. $\square$
@@ -67,7 +69,7 @@ $v_1 - v_2 = u\in U$ 이면 $v_1+U = v_2+U$ 임은 자명하다. 이제 $v_1-v_2
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-addition_and_scalar_multiplication_in_quotient_space}
+::: {#def-part3_addition_and_scalar_multiplication_in_quotient_space}
 
 #### 몫공간에서의 합과 스칼라곱
 
@@ -84,11 +86,13 @@ $$
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-quotient_sapce}
+::: {#prp-part3_quotient_sapce}
  $V/U$ 는 벡터공간이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 우선 $v_1,\,v_2$ 가 $v_1-v _2 \in U$ 이면 $v_1 + U =v_2 + U$ 임은 쉽게 보일 수 있다. 또한 $U \in V/U$  이며 $(v + U) + U = v + U$ 이므로 $U$ 는 $V/U$ 의 항등원이다. 나머지 벡터공간의 성질은 쉽게 보일 수 있다. $\square$
@@ -99,7 +103,7 @@ $$
 ## 몫사상
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-quotient_map}
+::: {#def-part3_quotient_map}
 
 #### 몫사상 (Quotient map)
 
@@ -111,12 +115,13 @@ $$
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-
-::: {#prp-quotient_map}
+::: {#prp-part3_quotient_map}
 몫사상 $\pi_U$ 는 선형사상이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 몫사상임을 보이기 위해서는 $v_1,\,v_2 \in V$, $\lambda \in \mathbb{F}$ 일 때 $\pi_U (v_1+ \lambda v_2)= \pi_U (v_1) + \lambda \pi_U (v_2)$ 임을 보이면 된다.
@@ -130,9 +135,9 @@ $$
 $\square$
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-dim_quotient_space}
+::: {#thm-part3_dim_quotient_space}
 
 $V$ 가 유한차원벡터공간이고 $U$ 가 $V$ 의 부분공간일 때
 
@@ -143,6 +148,7 @@ $$
 이다.
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -153,7 +159,7 @@ $\ker (\pi_U) = U$ 이다. $\square$
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-tilde_map}
+::: {#def-part3_tilde_map}
 
 #### $\tilde{T}$
 
@@ -165,35 +171,41 @@ $$
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-tilde_T_linear_map}
+::: {#prp-part3_tilde_T_linear_map}
  $\tilde{T}$ 는 선형사상이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 우선 $\ker (T)$ 가 $V$ 의 부분공간이므로 $V/\ker (T)$ 가 정의된다. $\tilde{T}$ 가 잘 정의된 함수임을 보이려면 $v_1 +\ker (T) = v_2 + \ker (T)$ 인 $v_1,\,v_2$ 에 대해 $T(v_1) = T(v_2)$ 임을 보이면 되는데 이는 쉽게 보일 수 있다. 또한 $\tilde{T}$ 가 선형사상임을 보이는 것도 쉽다. $\square$
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-properties_of_tilde_T}
+::: {#prp-part3_properties_of_tilde_T}
 $\tilde{T}$ 에 대해 다음이 성립한다.
 
-1. $\tilde{T}$ 는 단사이다.  
+&emsp;($1$) $\tilde{T}$ 는 단사이다.  
 
-2. $\text{im}\, \tilde{T} = \text{im} \, T$
+&emsp;($2$) $\text{im}\, \tilde{T} = \text{im} \, T$
 
-3. $V/\ker (T)$ 는 $\text{im}\, T$ 와 동형이다.
+&emsp;($3$) $V/\ker (T)$ 는 $\text{im}\, T$ 와 동형이다.
 :::
+
+</div></br>
 
 (증명은 쉽다.)
 
 </br>
 
-## 연습문제
+## 연습문제 {.unnumbered}
 
-::: {#exr-axler4_3E_9}
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-part3_axler4_3E_9}
 
 #### Axler4 3E.9
 
@@ -205,7 +217,9 @@ $A$ 가 $\mathbb{F}$-벡터공간 $V$ 의 부분집합이며 공집합이 아닐
 
 :::
 
-::: {.proof}
+</div></br>
+
+::: {.solution}
 
 ($1 \implies 2$) $U\le V,\, v\in V$ 에 대해 $A=v+U$ 라고 하자. $x=v+u_1,\,y=v+u_2$ 라고 하면
 

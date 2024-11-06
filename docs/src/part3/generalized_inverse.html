@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>17&nbsp; 일반화된 역행렬과 유사역행렬 – 대수학</title>
+<title>대수학 - 17&nbsp; 일반화된 역행렬과 유사역행렬</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -107,13 +107,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/generalized_inverse.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -145,7 +145,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part1/part1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -204,7 +204,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part2/part2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">II. 군 (Groups)</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -239,7 +239,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part3/part3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">III. 심화 선형대수학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -377,25 +377,31 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-generalized_inverse" class="theorem definition">
+<div id="def-part3_generalized_inverse" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 17.1 (일반화된 역행렬)</strong></span> 행렬 <span class="math inline">\(A \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(AGA=A\)</span> 를 만족하는 행렬 <span class="math inline">\(G \in \mathcal{M}_{n \times m}(\mathbb{F})\)</span> 를 <span class="math inline">\(A\)</span> 에 대한 <strong>일반화된 역행렬(generalized inverse matrix)</strong> 라고 한다. <span class="math inline">\(A\)</span> 의 일반화된 역행렬을 <span class="math inline">\(A^{-}\)</span> 로 표기한다.</p>
 </div>
 </div>
 </div>
 </div>
-<p><br></p>
-<div id="prp-generalized_inverse_of_invertible_matrix" class="theorem proposition">
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-part3_generalized_inverse_of_invertible_matrix" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.1</strong></span> <span class="math inline">\(A\)</span> 가 가역행렬이면 <span class="math inline">\(G=A^{-1}\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(A\)</span> 가 가역행렬이면 <span class="math inline">\(m=n\)</span> 이다. <span class="math display">\[
 AGA = A \implies AGAA^{-1} = AA^{-1} \implies AG= I_n \qquad \square
 \]</span></p>
 </div>
-<p><br></p>
-<div id="prp-gim_1" class="theorem proposition">
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-part3_gim_1" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.2</strong></span> <span class="math inline">\(AA^-\)</span> 는 와 <span class="math inline">\(A^-A\)</span> 는 projection 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>어떤 정사각 행렬 <span class="math inline">\(M\)</span> 이 <span class="math inline">\(M^2=M\)</span> 을 만족할 때 projection 이라고 한다.</p>
 <p><span class="math display">\[
@@ -406,24 +412,30 @@ AGA = A \implies AGAA^{-1} = AA^{-1} \implies AG= I_n \qquad \square
 \]</span></p>
 <p>따라서 <span class="math inline">\(AA^-\)</span> 와 <span class="math inline">\(A^-A\)</span> 는 projection 이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
-<div id="prp-gim_2" class="theorem proposition">
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-part3_gim_2" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.3</strong></span> <span class="math inline">\(A\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 이고 <span class="math inline">\(G=A^-\)</span> 일 때 임의의 <span class="math inline">\(y\in \mathcal{M}_m(\mathbb{F})\)</span> 에 대해 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(Ax=y\)</span> 가 해 <span class="math inline">\(x\in \mathcal{M}_n(\mathbb{F})\)</span> 를 가질 필요충분조건은 <span class="math inline">\(AGy = y\)</span> 이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(Ax=y\)</span> 가 해를 가지고 있을 때 <span class="math inline">\(x_1\in \mathcal{M}_n(\mathbb{F})\)</span> 가 해일 필요충분조건은 <span class="math inline">\(x_1\)</span> 이 어떤 <span class="math inline">\(z\in \mathcal{M}_n(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(x_1=Gy+(I-GA)z\)</span> 일 때이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(y\in \text{im}(AG)\)</span> 이면 <span class="math inline">\(AG\)</span> 가 projection 이므로 <span class="math inline">\(AGy = y\)</span> 이다. 따라서 <span class="math inline">\(x=Gy\)</span> 는 <span class="math inline">\(Ax=y\)</span> 의 해이다. 역으로 <span class="math inline">\(Ax=y\)</span> 이면 <span class="math inline">\(GAx=Gy\)</span> 이며 <span class="math inline">\(AGAx=AGy=AGy\)</span> 이다. 여기서 <span class="math inline">\(AGA=A\)</span> 이므로 <span class="math inline">\(y=AGy\)</span> 이다</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(AGy=y\)</span> 이면 <span class="math inline">\(Ax_1 = AGy - Az - AGAz = AGy\)</span> 이다. 따라서 <span class="math inline">\(Ax=y\)</span> 가 해를 가지고 있을 때 <span class="math inline">\(x_1=Gy+(I-GA)z\)</span> 는 <span class="math inline">\(Ax=y\)</span> 의 해이다. 역으로 <span class="math inline">\(Ax=y\)</span> 가 해를 가지고 있다고 가정하고 <span class="math inline">\(z=x\)</span> 로 놓자. <span class="math inline">\(x_1=Gy + (I-GA)x = x\)</span> 이므로 <span class="math inline">\(Ax=y\)</span> 의 해이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
-<div id="thm-gim_abcd" class="theorem">
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-part3_gim_abcd" class="theorem">
 <p><span class="theorem-title"><strong>정리 17.1</strong></span> <span class="math inline">\(A\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 가 <span class="math inline">\(r=\text{rank}(A)\)</span> 일 때 적절한 행교환 <span class="math inline">\(P_1\)</span> 과 열교환 <span class="math inline">\(P_2\)</span>, 가역행렬 <span class="math inline">\(R\in \mathcal{M}_{r \times r}(\mathbb{F})\)</span> 과, 어떤 <span class="math inline">\(B=\mathcal{M}_{r\times (n-r)}(\mathbb{F})\)</span>, <span class="math inline">\(C=\mathcal{M}_{(m-r)\times r}(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
 P_1AP_2=\begin{bmatrix} R &amp; B \\ C &amp; CR^{-1}B \end{bmatrix}
 \]</span></p>
 <p>이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(A\)</span> 를 행교환 <span class="math inline">\(P_1\)</span> 을 통해 <span class="math inline">\(1\)</span> 행부터 <span class="math inline">\(r\)</span> 행까지가 선형독립이 되도록 할 수 있다. 또한 열교환 <span class="math inline">\(P_2\)</span> 를 통해 선형독립인 <span class="math inline">\(1\)</span> 행부터 <span class="math inline">\(r\)</span> 행까지 가운데 <span class="math inline">\(1\)</span> 열부터 <span class="math inline">\(r\)</span> 열까지를 선형독립이 되도록 할 수 있다. 이렇게 변한 행렬을 <span class="math inline">\(A_1 = P_1 A P_2\)</span> 이라 하자. <span class="math inline">\(A_1\)</span> 에 대해 <span class="math inline">\(1\)</span> 행 <span class="math inline">\(1\)</span> 열부터 <span class="math inline">\(r\)</span> 행 <span class="math inline">\(r\)</span> 열 까지를 <span class="math inline">\(R\)</span> 이라고 하고 여기에 맞추어 <span class="math inline">\(A_1\)</span> 을 다음과 같이 블럭행렬로 표현 할 수 있다.</p>
 <p><span class="math display">\[
@@ -431,10 +443,13 @@ A_1 = \begin{bmatrix} R &amp; B \\ C &amp; D \end{bmatrix}
 \]</span></p>
 <p><span class="math inline">\(r+1\)</span> 행부터 <span class="math inline">\(m\)</span> 행까지는 <span class="math inline">\(1\)</span> 행부터 <span class="math inline">\(r\)</span> 행까지의 선형결합으로 표현 할 수 있다. 즉 <span class="math inline">\(LR = C,\, LB = D\)</span> 를 만족하는 행렬 <span class="math inline">\(L\)</span> 이 존재한다. 그런데 <span class="math inline">\(R\)</span> 이 가역행렬이므로 <span class="math inline">\(L=CR^{-1}\)</span> 이며, 따라서 <span class="math inline">\(D=CR^{-1}B\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
-<div id="thm-gim" class="theorem">
-<p><span class="theorem-title"><strong>정리 17.2</strong></span> <a href="#thm-gim_abcd" class="quarto-xref">정리&nbsp;<span>17.1</span></a> 의 notation 에 대해 <span class="math inline">\(G_0 = \begin{bmatrix} R^{-1} &amp; 0 \\ 0 &amp; 0 \end{bmatrix} \in \mathcal{M}_{n \times m}(\mathbb{F})\)</span> 를 생각하자. 이 때 <span class="math inline">\(G=P_2G_0 {P_1}\)</span> 이 <span class="math inline">\(A\)</span> 의 일반화된 역행렬이다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-part3_gim" class="theorem">
+<p><span class="theorem-title"><strong>정리 17.2</strong></span> <a href="#thm-part3_gim_abcd" class="quarto-xref">정리&nbsp;<span>17.1</span></a> 의 notation 에 대해 <span class="math inline">\(G_0 = \begin{bmatrix} R^{-1} &amp; 0 \\ 0 &amp; 0 \end{bmatrix} \in \mathcal{M}_{n \times m}(\mathbb{F})\)</span> 를 생각하자. 이 때 <span class="math inline">\(G=P_2G_0 {P_1}\)</span> 이 <span class="math inline">\(A\)</span> 의 일반화된 역행렬이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math display">\[
 \begin{aligned}
@@ -446,7 +461,7 @@ AGA &amp;= \left({P_1}^{-1}\begin{bmatrix}R &amp; B \\ C &amp; CR^{-1}B\end{bmat
 \]</span></p>
 </div>
 <p><br></p>
-<p><a href="#thm-gim" class="quarto-xref">정리&nbsp;<span>17.2</span></a> 은 일반적인 행렬에 대해 최소한 하나의 일반화된 역행렬이 존재한다는 것을 보장한다.</p>
+<p><a href="#thm-part3_gim" class="quarto-xref">정리&nbsp;<span>17.2</span></a> 은 일반적인 행렬에 대해 최소한 하나의 일반화된 역행렬이 존재한다는 것을 보장한다.</p>
 <p><br></p>
 </section>
 </section>
@@ -460,7 +475,7 @@ AGA &amp;= \left({P_1}^{-1}\begin{bmatrix}R &amp; B \\ C &amp; CR^{-1}B\end{bmat
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-penrose_inverse" class="theorem definition">
+<div id="def-part3_penrose_inverse" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 17.2 (펜로즈 역행렬)</strong></span> 행렬 <span class="math inline">\(A \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 다음의 네 조건을 만족하는 <span class="math inline">\(G\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 를 <span class="math inline">\(A\)</span> 에 대한 <strong>펜로즈 역행렬(Penrose inverse matrix)</strong>, <strong>무어-펜로즈 역행렬(Moore-Penrose inverse matrix)</strong> 혹은 <strong>유사 역행렬(pseudoinverse matrix)</strong> 라고 <span class="math inline">\(A^+\)</span> 로 표기한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(AGA = A\)</span>.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(GAG = G\)</span>.</p>
@@ -471,10 +486,13 @@ AGA &amp;= \left({P_1}^{-1}\begin{bmatrix}R &amp; B \\ C &amp; CR^{-1}B\end{bmat
 </div>
 </div>
 <p>(<span class="math inline">\(1\)</span>) 은 <span class="math inline">\(G=A^-\)</span> 를 의미하며 (<span class="math inline">\(2\)</span>) 는 <span class="math inline">\(A=G^-\)</span> 를 의미한다. (<span class="math inline">\(3\)</span>) 은 <span class="math inline">\(AG\)</span> 가 에르미트 행렬이며 projection 임을 의미하며 <span class="math inline">\(4\)</span> 는 <span class="math inline">\(GA\)</span> 가 에르미트 행렬이며 projection 임을 의미한다. 즉 펜로즈 역행렬은 일반화된 역행렬보다 조건이 좀 더 까다롭다. 또한 펜로즈 역행렬은 여러가지 좋은 성질을 가지고 있다.</p>
-<p><br></p>
-<div id="prp-uniqueness_of_penrose_inverse" class="theorem proposition">
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-part3_uniqueness_of_penrose_inverse" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.4</strong></span> 펜로즈 역행렬은 유일하다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(A\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대한 펜로즈 역행렬 <span class="math inline">\(G_1,\,G_2\)</span> 를 생각하자.</p>
 <p><span class="math display">\[
@@ -495,15 +513,18 @@ G_1 = G_1AG_1 = G_1(AG_1) = G_1AG_2 = (G_1A)G_2  = G_2AG_2 = G_2
 \]</span></p>
 <p>이다. 즉 펜로즈 역행렬은 유일하다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
-<div id="prp-penrose_inverse_for_diagonal_matrix" class="theorem proposition">
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-part3_penrose_inverse_for_diagonal_matrix" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.5</strong></span> <span class="math inline">\(D \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 가 대각성분이 아닌 성분이 모두 <span class="math inline">\(0\)</span> 인 일반화된 대각행렬일 때 <span class="math inline">\(D\)</span> 의 펜로즈 역행렬 <span class="math inline">\(D^{+} \in \mathcal{M}_{n \times m}(\mathbb{F})\)</span> 는 다음과 같다.</p>
 <p><span class="math display">\[
 (D^+)_{ij} = \left\{\begin{array}{ll} 1/D_{ij} \qquad &amp;\text{if } i=j \text{ and } D_{ij} \neq 0\\0 &amp;\text{otherwise}.  \end{array}\right.
 \]</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#def-penrose_inverse" class="quarto-xref">정의&nbsp;<span>17.2</span></a> 의 각 조건을 만족함을 보이자.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#def-part3_penrose_inverse" class="quarto-xref">정의&nbsp;<span>17.2</span></a> 의 각 조건을 만족함을 보이자.</p>
 <p>우선 <span class="math inline">\((DD^+)_{ij} = \sum_k D_{ik}D^{+}_{kj}= D_{ij}\delta_{ij}\)</span> 이며 <span class="math inline">\((D^+D)= D_{ij}\delta_{ij}\)</span> 이다.</p>
 <p>(<span class="math inline">\(1\)</span>) <span class="math inline">\((DD^+D)_{ij} = \sum_{k,l} D_{ik}D^+{kl}D_{lj} = D_{ii}D^+{ii}D_{ii} \delta_{ij}= D_{ij}\delta_{ij}\)</span></p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\((D^+DD^+)_{ij} = \sum_{k,l} D^+_{ik}D{kl}D^+_{lj} = D^+_{ii}D_{ii}D^+_{ii} \delta_{ij}= D^+_{ij}\delta_{ij}\)</span></p>
@@ -514,11 +535,15 @@ G_1 = G_1AG_1 = G_1(AG_1) = G_1AG_2 = (G_1A)G_2  = G_2AG_2 = G_2
 </section>
 <section id="펜로즈-역행렬과-특이값-분해" class="level3" data-number="17.2.2">
 <h3 data-number="17.2.2" class="anchored" data-anchor-id="펜로즈-역행렬과-특이값-분해"><span class="header-section-number">17.2.2</span> 펜로즈 역행렬과 특이값 분해</h3>
-<div id="thm-psudo_invserse" class="theorem">
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-part3_psudo_invserse" class="theorem">
 <p><span class="theorem-title"><strong>정리 17.3</strong></span> 특이값 분해 <span class="math inline">\(A = U \Sigma V^\ast\)</span> 에 대해 <span class="math inline">\(A^+ = V\Sigma^+U^\ast\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#def-penrose_inverse" class="quarto-xref">정의&nbsp;<span>17.2</span></a> 의 각 조건을 만족함을 보이자.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#def-part3_penrose_inverse" class="quarto-xref">정의&nbsp;<span>17.2</span></a> 의 각 조건을 만족함을 보이자.</p>
 <p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(AA^+A= (U\Sigma V^\ast) (V\Sigma^+ U^\ast) (U \Sigma V^\ast)= U(\Sigma \Sigma^+ \Sigma)V^\ast = U\Sigma V^\ast = A\)</span>.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(A^+AA^+ = (V\Sigma^+ U^\ast)(U\Sigma V^\ast) (V\Sigma^+ U^\ast) = V\Sigma^+\Sigma \Sigma^+ U^\ast = A^+\)</span>.</p>
 <p>(<span class="math inline">\(3\)</span>) <span class="math inline">\(AA^+ =  (U\Sigma V^\ast) (V\Sigma^+ U^\ast) = U\Sigma \Sigma^+ U^\ast = (U\Sigma \Sigma^+ U^\ast)^\ast = (AA^+)^\ast\)</span> 이므로 에르미트 행렬이다. 또한 <span class="math inline">\((AA^+)^2 = AA^+\)</span> 이므로 projecion 이다.</p>
@@ -528,17 +553,22 @@ G_1 = G_1AG_1 = G_1(AG_1) = G_1AG_2 = (G_1A)G_2  = G_2AG_2 = G_2
 </section>
 <section id="펜로즈-역행렬의-항등식" class="level3" data-number="17.2.3">
 <h3 data-number="17.2.3" class="anchored" data-anchor-id="펜로즈-역행렬의-항등식"><span class="header-section-number">17.2.3</span> 펜로즈 역행렬의 항등식</h3>
-<div id="exr-penrose_inverse_and_adjoint" class="theorem exercise">
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-part3_penrose_inverse_and_adjoint" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 17.1</strong></span> <span class="math inline">\((A^\ast)^+ = (A^+)^\ast\)</span> 임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>특이값 분해 <span class="math inline">\(A=U\Sigma V^\ast\)</span> 에 대해</p>
 <p><span class="math display">\[
 (A^\ast)^+ = (V\Sigma U^\ast)^+ = U \Sigma^+ V^\ast = (V \Sigma^+ U^\ast)^\ast = (A^+)^\ast. \qquad\square
 \]</span></p>
 </div>
-<p><br></p>
-<div id="exr-basic_properties_of_penrose_inverse_1" class="theorem exercise">
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-part3_basic_properties_of_penrose_inverse_1" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 17.2</strong></span> 행렬 <span class="math inline">\(A\)</span> 와 그 펜로즈 역행럴 <span class="math inline">\(A^+\)</span> 에 대해 다음이 성립함을 보여라.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(A^+ = A^+ {A^+}^\ast A^\ast\)</span>.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(A^+ = A^\ast {A^+}^\ast A^+\)</span>.</p>
@@ -547,6 +577,8 @@ G_1 = G_1AG_1 = G_1(AG_1) = G_1AG_2 = (G_1A)G_2  = G_2AG_2 = G_2
 <p>  (<span class="math inline">\(5\)</span>) <span class="math inline">\(A^\ast = A^\ast A A^+\)</span>.</p>
 <p>  (<span class="math inline">\(6\)</span>) <span class="math inline">\(A^\ast = A^+ A A^\ast\)</span>.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(AA^+\)</span> 와 <span class="math inline">\(A^+A\)</span> 가 에르미트 행렬임을 이용한다.</p>
 <p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(A^+= A^+(AA^+)=A^+(AA^+)^\ast = A{A^+}^\ast A^\ast\)</span>.</p>
@@ -556,13 +588,16 @@ G_1 = G_1AG_1 = G_1(AG_1) = G_1AG_2 = (G_1A)G_2  = G_2AG_2 = G_2
 <p>(<span class="math inline">\(5\)</span>) (<span class="math inline">\(3\)</span>) 을 이용한다. <span class="math inline">\(A^\ast = ({A^+}^\ast A^\ast A)^\ast= A^\ast A A^+\)</span>.</p>
 <p>(<span class="math inline">\(6\)</span>) (<span class="math inline">\(4\)</span>) 를 이용한다. <span class="math inline">\(A^\ast = (AA^\ast {A^+}^\ast)^\ast = A^+AA^\ast\)</span>. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
-<div id="prp-basic_properties_of_penrose_inverse_2" class="theorem proposition">
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-part3_basic_properties_of_penrose_inverse_2" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.6</strong></span> <span class="math inline">\(A\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(A^+ = A^\ast (AA^\ast)^+ = (A^\ast A)^+ A^\ast\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) 우선 <span class="math inline">\(A^+ = A^\ast (AA^\ast)^+\)</span> 를 보인다. <span class="math inline">\(D = A^\ast(AA^\ast)^+\)</span> 라 하자. <span class="math inline">\(D\)</span> 가 <a href="#def-penrose_inverse" class="quarto-xref">정의&nbsp;<span>17.2</span></a> 를 따르는 <span class="math inline">\(A\)</span> 의 펜로즈 역행렬임을 보인다.</p>
-<p>(<span class="math inline">\(1-1\)</span>) <span id="eq-prp_basic_properties_of_penrose_inverse_2_1"><span class="math display">\[
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) 우선 <span class="math inline">\(A^+ = A^\ast (AA^\ast)^+\)</span> 를 보인다. <span class="math inline">\(D = A^\ast(AA^\ast)^+\)</span> 라 하자. <span class="math inline">\(D\)</span> 가 <a href="#def-part3_penrose_inverse" class="quarto-xref">정의&nbsp;<span>17.2</span></a> 를 따르는 <span class="math inline">\(A\)</span> 의 펜로즈 역행렬임을 보인다.</p>
+<p>(<span class="math inline">\(1-1\)</span>) <span id="eq-part3_prp_basic_properties_of_penrose_inverse_2_1"><span class="math display">\[
 \begin{aligned}
 AA^\ast = (AA^\ast)(AA^\ast)^+(AA^\ast) &amp;\iff AA^\ast = ADAA^\ast \iff (I-AD)AA^\ast = 0
 \end{aligned}
@@ -571,7 +606,7 @@ AA^\ast = (AA^\ast)(AA^\ast)^+(AA^\ast) &amp;\iff AA^\ast = ADAA^\ast \iff (I-AD
 <p><span class="math display">\[
 XAA^\ast = 0 \implies XAA^\ast X^\ast = 0 \implies (XA)(XA)^\ast = 0
 \]</span></p>
-<p>이므로 <span class="math inline">\(XA=0\)</span> 이다. 즉 <a href="#eq-prp_basic_properties_of_penrose_inverse_2_1" class="quarto-xref">식&nbsp;<span>17.1</span></a> 에 대해 <span class="math inline">\((I-AD)A=0 \implies ADA=A\)</span>.</p>
+<p>이므로 <span class="math inline">\(XA=0\)</span> 이다. 즉 <a href="#eq-part3_prp_basic_properties_of_penrose_inverse_2_1" class="quarto-xref">식&nbsp;<span>17.1</span></a> 에 대해 <span class="math inline">\((I-AD)A=0 \implies ADA=A\)</span>.</p>
 <p>(<span class="math inline">\(1-2\)</span>) 같은 방법으로</p>
 <p><span class="math display">\[
 (AA^\ast)^+ = (AA^\ast)^+(AA^\ast)(AA^\ast)^+ \implies A^\ast(AA^\ast)^+ = [A^\ast(AA^\ast)^+]A[A^\ast(AA^\ast)^+] \implies D=DAD
@@ -603,9 +638,13 @@ A^\ast A = (A^\ast A)(A^\ast A)^+ (A^\ast A) \iff A^\ast A =  A^\ast A D A \iff 
 <section id="행렬곱의-펜로즈-역행렬" class="level3" data-number="17.2.4">
 <h3 data-number="17.2.4" class="anchored" data-anchor-id="행렬곱의-펜로즈-역행렬"><span class="header-section-number">17.2.4</span> 행렬곱의 펜로즈 역행렬</h3>
 <p>역행렬과는 달리 일반적으로 <span class="math inline">\((AB)^+ \ne B^+ A^+\)</span> 이다. 그러나 특별한 경우에 등식이 성립한다.</p>
-<div id="prp-product_of_penrose_inverse" class="theorem proposition">
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-part3_product_of_penrose_inverse" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.7</strong></span> <span class="math inline">\(A\in \mathcal{M}_{m \times n}(\mathbb{F}),\, B\in \mathcal{M}_{n \times k}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(A\)</span> 의 모든 열벡터가 northonormal 하면 <span class="math inline">\((AB)^+ = B^+ A^+\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(A\)</span> 의 모든 열벡터가 orthonormal 하면 <span class="math inline">\(\text{rank}(A) = n\)</span> 이이며 <span class="math inline">\(m \le n\)</span> 이다. <span class="math inline">\(A^\ast A = I_m\)</span> 이므로 <span class="math inline">\(A^+ = A^\ast\)</span> 이다. <span class="math inline">\(C=AB\)</span>, <span class="math inline">\(D=B^+A^+ = B^+A^\ast\)</span> 라고 하면,</p>
 <p><span class="math display">\[
@@ -618,13 +657,16 @@ DCD &amp;= B^+ A^\ast AB B^+A^\ast = B^+ A^\ast = D, \\
 \]</span></p>
 <p>따라서 <span class="math inline">\(C^+=D\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
-<div id="prp-product_of_penrose_inverse" class="theorem proposition">
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-part3_product_of_penrose_inverse" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.8</strong></span> <span class="math inline">\(A\in \mathcal{M}_{m \times n}(\mathbb{F}),\, B\in \mathcal{M}_{n \times k}(\mathbb{F})\)</span> 에 <span class="math inline">\(\text{rank}(A) = \text{rank}(B) = n\)</span> 일 때 <span class="math inline">\((AB)^+ = B^+ A^+\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(n=\text{rank} (A) \le \min(m,\,n)\)</span> 이므로 <span class="math inline">\(m\ge n\)</span> 이어야 한다. <span class="math inline">\(n=\text{rank}(B) = \min (k, n)\)</span> 이므로 <span class="math inline">\(k \ge n\)</span> 이어야 한다.</p>
-<p>$</p>
+<p>… to be continued …</p>
 </div>
 
 
@@ -667,7 +709,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -699,29 +752,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -729,7 +760,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>20&nbsp; 텐서곱 – 대수학</title>
+<title>대수학 - 20&nbsp; 텐서곱</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -107,13 +107,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/tensor_product.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">텐서곱</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -145,7 +145,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part1/part1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -204,7 +204,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part2/part2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">II. 군 (Groups)</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -239,7 +239,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part3/part3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">III. 심화 선형대수학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -347,9 +347,13 @@ window.Quarto = {
 <section id="쌍선형-형식" class="level2" data-number="20.1">
 <h2 data-number="20.1" class="anchored" data-anchor-id="쌍선형-형식"><span class="header-section-number">20.1</span> 쌍선형 형식</h2>
 <p>두 벡터공간을 곱하는 것에 대해 우리는 곱공간 <span class="math inline">\(U \times V\)</span> 를 안다. 여기서는 <span class="math inline">\(U \otimes V\)</span> 로 표기되는 두 벡터공간의 텐서곱에 대해 알아보고자 한다. 이를 위해 <a href="bilinear_form.html#def-k_linear_form" class="quarto-xref">정의&nbsp;<span>15.1</span></a> 에서의 쌍선형 형식을 이용한다. 여기서는 쌍선형 형식을 많이 쓰기 때문에 <span class="math inline">\(\mathcal{T}^2(U, V)\)</span> 를 <span class="math inline">\(\mathfrak{B}(U,\,V)\)</span> 로 표기하기로 한다. <a href="bilinear_form.html#prp-vector_space_of_k_linear_form" class="quarto-xref">명제&nbsp;<span>15.1</span></a> 로부터 다음을 안다.</p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-part_3_bilinear_form_is_vector_space" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 20.1</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U\times V\)</span> 에서 정의된 쌍선형 형식의 집합 <span class="math inline">\(\mathfrak{B}(U,\,V)\)</span> 는 벡터공간이다.</p>
 </div>
+</div>
+<p><br></p>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-part3_bilinear_functional" class="theorem example">
@@ -363,10 +367,13 @@ window.Quarto = {
 </ol>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-part3_dimension_of_bilinear_functional" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 20.2</strong></span> 유한차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U,\,V\)</span> 에 대해 <span class="math inline">\(\dim(\mathfrak{B}(U,\,V)) = \dim(U) \times \dim(V)\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\mathcal{B}_U=(e_1,\ldots,\,e_m)\)</span> 이 <span class="math inline">\(U\)</span> 의 기저이고 <span class="math inline">\(\mathcal{B}_V=(f_1,\ldots,\,f_n)\)</span> 이 <span class="math inline">\(V\)</span> 의 기저라고 하자. 또한 <span class="math inline">\(\Phi : \mathfrak{B}(U,\,V) \to \mathcal{M}(\mathbb{F})_{m \times n}\)</span> 을</p>
 <p><span class="math display">\[
@@ -401,14 +408,18 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-part3_dimension_of_tensor_product" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 20.3</strong></span> <span class="math inline">\(U,\,V\)</span> 가 유한차원 벡터공간일 때 <span class="math inline">\(\dim(U \otimes V) = \dim(U) \times \dim (V)\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>유한차원 벡터공간일 때 <span class="math inline">\(\dim(U^\ast) = \dim (U)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-part3_bilinearity_of_tensor_product" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 20.4</strong></span> <span class="math inline">\(u,\, u_1,\,u_2\in U\)</span>, <span class="math inline">\(v,\,v_1,\,v_2\in V\)</span>, <span class="math inline">\(c\in \mathbb{F}\)</span> 에 대해 다음이 성립한다.</p>
 <p><span class="math display">\[
@@ -418,6 +429,8 @@ u \otimes (v_1 + v_2) &amp;= u \otimes v_1 + u \otimes v_2.
 \end{aligned}
 \]</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\phi\in U^\ast,\, \psi \in V^\ast\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -429,12 +442,15 @@ u \otimes (v_1 + v_2) &amp;= u \otimes v_1 + u \otimes v_2.
 <p>즉 <span class="math inline">\((u_1+u_2)\otimes v = u_1 \otimes v + u_2 \otimes v\)</span> 이다. 같은 방법으로 <span class="math inline">\(u \otimes (v_1 + v_2) = u \otimes v_1 + u \otimes v_2\)</span> 임을 보일 수 있다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p>위의 <a href="#prp-part3_bilinearity_of_tensor_product" class="quarto-xref">명제&nbsp;<span>20.4</span></a> 는 <span class="math inline">\(u \otimes v\)</span> 가 쌍선형 형식임을 보여준다.</p>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-part3_basis_of_tensor_product" class="theorem">
 <p><span class="theorem-title"><strong>정리 20.1</strong></span> <span class="math inline">\(\mathcal{B}_U = (e_1,\ldots,\,e_m),\, \mathcal{B}_V=(f_1,\ldots,\,f_n)\)</span> 이 각각 벡터공간 <span class="math inline">\(U,\,V\)</span> 의 부분집합이고 <span class="math inline">\(\mathcal{B} = \{e_i \otimes f_j : i=1,\ldots,\,m,\, j=1,\ldots,\,n\}\)</span> 일 때 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\mathcal{B}_U,\,\mathcal{B}_V\)</span> 가 각각 선형독립이면 <span class="math inline">\(\mathcal{B}\)</span> 도 <span class="math inline">\(U\otimes V\)</span> 에서 선형독립이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\mathcal{B}_U,\,\mathcal{B}_V\)</span> 각각 <span class="math inline">\(U,\, V\)</span> 의 기저이면 <span class="math inline">\(\mathcal{B}\)</span> 는 <span class="math inline">\(U \otimes V\)</span> 의 기저이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(\mathcal{B}_U\)</span> 가 선형독립이면 <span class="math inline">\(\phi_k(e_i)= \delta_{ik}\)</span> 가 되도록 하는 <span class="math inline">\(\phi_k\in U^\ast,\, k=1,\ldots,\,m\)</span> 이 존재한다. 마찬가지로 <span class="math inline">\(\psi_l(f_j) = \delta_{jl}\)</span> 가 되도록 하는 <span class="math inline">\(\psi_l\in V^\ast,\, l=1,\ldots,\,m\)</span> 이 존재한다.</p>
 <p>이제</p>
@@ -444,24 +460,30 @@ u \otimes (v_1 + v_2) &amp;= u \otimes v_1 + u \otimes v_2.
 <p>이 되도록 하는 <span class="math inline">\(\{a_{kl}\}\)</span> 을 찾아보자. <span class="math inline">\((\phi_k \otimes \psi_l)(e_i, f_j)= \delta_{ik}\delta_{jl}\)</span> 이므로 모든 <span class="math inline">\(\{e_i\},\,\{f_j\}\)</span> 에 대해 <span class="math inline">\(0\)</span> 이 되려면 모든 <span class="math inline">\(a_{kl}=0\)</span> 이어야 한다. 즉 <span class="math inline">\(\mathcal{B}\)</span> 는 선형독립이다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\mathcal{B}\)</span> 원소의 갯수는 <span class="math inline">\(m \times n\)</span> 이므로 <span class="math inline">\(\mathcal{B}\)</span> 는 <span class="math inline">\(U \times V\)</span> 의 기저이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
-<div id="exr-axler_4th_9D_3" class="theorem exercise">
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-part3_axler_4th_9D_3" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 20.1</strong></span> <span class="math inline">\(\{u_1,\ldots,\,u_m\}\)</span> 이 <span class="math inline">\(U\)</span> 에서의 선형독립이며 <span class="math inline">\(\{v_1,\ldots,\,v_m\}\subset V\)</span> 가</p>
 <p><span class="math display">\[
 u_1 \otimes v_1 + \cdots + u_m \otimes v_m = 0
 \]</span></p>
 <p>을 만족한다면 <span class="math inline">\(v_1=\cdots = v_m=0\)</span> 임을 보여라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\phi_k(u_i)=\delta_{ik}\)</span> 일 때 임의의 <span class="math inline">\(\psi \in V^\ast\)</span> 에 대해</p>
 <p><span class="math display">\[(u_1 \otimes v_1 + \cdots + u_m \otimes v_m)(\phi_1,\,\psi)=0
 \]</span></p>
 <p>이어야 하므로 <span class="math inline">\(v_1=0\)</span> 이어야 한다. 같은 방법으로 <span class="math inline">\(v_1=\cdots = v_m=0\)</span> 임을 보일 수 있다.</p>
 </div>
-<p><br></p>
-<div id="exr-axler_4th_9D_4" class="theorem exercise">
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-part3_axler_4th_9D_4" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 20.2</strong></span> <span class="math inline">\(\dim (U)&gt;1,\, \dim(V)&gt;1\)</span> 일 때 <span class="math inline">\(X=\{u\otimes v : (u,\,v)\in U\times V\}\)</span> 는 <span class="math inline">\(U \otimes V\)</span> 의 부분공간이 아님을 보이시오.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>선형 독립인 <span class="math inline">\(u_1,\,u_2\in U,\,v_1,\,v_2\in V\)</span> 를 생각하자. <span class="math inline">\(X  \le  (U \otimes V)\)</span> 이려면 <span class="math inline">\(u_1 \otimes v_1 + u_2 \otimes v_2 = u \otimes v\)</span> 인 <span class="math inline">\(u\in U,\, v\in V\)</span> 가 존재해야 한다. <span class="math inline">\(\phi_k (u_i)= \delta_{ik},\,k=1,\,2\)</span> 를 만족하는 <span class="math inline">\(\phi_k\in U^\ast\)</span> 와 <span class="math inline">\(\psi_l (v_j)= \delta_{jl},\, l=1,\,2\)</span> 을 만족하는 <span class="math inline">\(\psi_l \in V^\ast\)</span> 를 생각 할 수 있다.</p>
 <p><span class="math display">\[
@@ -504,7 +526,8 @@ u_1 \otimes v_1 + \cdots + u_m \otimes v_m = 0
 </ol>
 </div>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-part3_bilinear_map_to_linear_map" class="theorem">
 <p><span class="theorem-title"><strong>정리 20.2</strong></span> 유한차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U,\,V,\,W\)</span> 를 생각하자.</p>
 <p>(<span class="math inline">\(1\)</span>) 쌍선형 사상 <span class="math inline">\(\Gamma: U\times V \to W\)</span> 에 대해 다음을 만족하는 선형사상 <span class="math inline">\(\hat{\Gamma}: U \otimes W \to U\)</span> 가 유일하게 존재한다.</p>
@@ -516,6 +539,8 @@ u_1 \otimes v_1 + \cdots + u_m \otimes v_m = 0
 \forall (u,\,v)\in (U, V),\qquad L^\# (u,\,v)= L(u \otimes v)
 \]</span></p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\((e_1,\ldots,\,e_m)\)</span> 이 <span class="math inline">\(U\)</span> 의 기저이고 <span class="math inline">\((f_1,\ldots,\,f_n)\)</span> 이 <span class="math inline">\(V\)</span> 의 기저라고 하자.</p>
 <p>(<span class="math inline">\(1\)</span>) <a href="../part1/ch1_02_linear_map.html#prp-linearmap_basis" class="quarto-xref">명제&nbsp;<span>2.1</span></a> 과 <a href="#thm-part3_basis_of_tensor_product" class="quarto-xref">정리&nbsp;<span>20.1</span></a> (<span class="math inline">\(2\)</span>) 에 의해 다음을 만족하는 선형사상 <span class="math inline">\(\hat{\Gamma}(U \otimes V) \to W\)</span> 가 존재한다.</p>
@@ -571,7 +596,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -603,29 +639,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -633,7 +647,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

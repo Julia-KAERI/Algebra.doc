@@ -38,7 +38,8 @@ crossref:
 
 ::: {.callout-note appearance="minimal"}
 
-::: {#def-minor_of_matrix}
+::: {#def-part3_minor_of_matrix}
+
 #### Minor
 
 $n \times n$ 정사각 행렬 $\boldsymbol{A}$ 에 대해 $i$ 번째 행과 $j$ 번째 열을 제거한 $(n-1)\times (n-1)$ 행렬의 행렬식을 $\boldsymbol{A}$ 에 대한 $(i,\,j)$-minor 라고 부르고 $M_{ij}$ 혹은 $M_{ij}(\boldsymbol{A})$ 라고 쓴다. 
@@ -49,7 +50,7 @@ $n \times n$ 정사각 행렬 $\boldsymbol{A}$ 에 대해 $i$ 번째 행과 $j$ 
 </br>
 
 ::: {.callout-note appearance="minimal"}
-::: {#def-minor_expansion}
+::: {#def-part3_minor_expansion}
 
 #### 라플라스 전개
 
@@ -57,13 +58,13 @@ $n\times n$ 행렬 $\boldsymbol{A}$ 에 대한 $(i,\,j)$-minor 를 $M_{ij}$ 라�
 
 $$
 D^j(\boldsymbol{A}) :=   \sum_{i=1}^n (-1)^{i+j} A_{ij}M_{ij}.
-$$ {#eq-laplace_expansion_for_column}
+$$ {#eq-part3_laplace_expansion_for_column}
 
 같은 방법으로 **$i$-번째 행에 대해 라플라스 전개** $D_i:\mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}$ 를 아래와 같이 정의한다.
 
 $$
 D_i(\boldsymbol{A}) :=   \sum_{j=1}^n (-1)^{i+j} A_{ij}M_{ij}.
-$$ {#eq-laplace_expansion_for_row}
+$$ {#eq-part3_laplace_expansion_for_row}
 
 :::
 
@@ -73,11 +74,14 @@ $$ {#eq-laplace_expansion_for_row}
 
 우리는 이제 $D_j(\boldsymbol{A})=D_i(\boldsymbol{A})=\det(\boldsymbol{A})$ 임을 보일 것이다. 우선 행렬식의 조건 1. 은 충족한다. 
 
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-laplace_expansion_and_k_laternating_form_0}
+::: {#lem-part3_laplace_expansion_and_k_laternating_form_0}
 
 $D_i(\boldsymbol{A}^T) = D^i (\boldsymbol{A})$ 이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -91,13 +95,15 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-laplace_expansion_and_k_laternating_form_1}
+::: {#lem-part3_laplace_expansion_and_k_laternating_form_1}
 
 $D_i(\boldsymbol{I}_n)=D^j(\boldsymbol{I}_n)=1$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -113,13 +119,15 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-laplace_expansion_and_k_laternating_form_2}
+::: {#lem-part3_laplace_expansion_and_k_laternating_form_2}
 
 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대한 $D_i(\boldsymbol{A})$ 는 $n$-교대형식이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -161,22 +169,24 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-laplacian_expansion_and_determinant}
 
-@def-minor_expansion 의 @eq-laplace_expansion_for_row 와 @eq-laplace_expansion_for_column 은 모두 행렬식의 정의와 같다.
+@def-part3_minor_expansion 의 @eq-part3_laplace_expansion_for_row 와 @eq-part3_laplace_expansion_for_column 은 모두 행렬식의 정의와 같다.
 :::
+
+</div></br>
 
 ::: {.proof}
 
-@lem-laplace_expansion_and_k_laternating_form_1 과 @lem-laplace_expansion_and_k_laternating_form_2 에 의해 $D_i(\boldsymbol{A})$ 는 행렬식이다. 따라서 $D_i(\boldsymbol{A})=D_i(\boldsymbol{A}^T)$ 와 같다. 그런데 @lem-laplace_expansion_and_k_laternating_form_0 에 의해 $D_i(\boldsymbol{A}^T)=D^i(\boldsymbol{A}^T)$ 이다. $\square$
+@lem-part3_laplace_expansion_and_k_laternating_form_1 과 @lem-part3_laplace_expansion_and_k_laternating_form_2 에 의해 $D_i(\boldsymbol{A})$ 는 행렬식이다. 따라서 $D_i(\boldsymbol{A})=D_i(\boldsymbol{A}^T)$ 와 같다. 그런데 @lem-part3_laplace_expansion_and_k_laternating_form_0 에 의해 $D_i(\boldsymbol{A}^T)=D^i(\boldsymbol{A}^T)$ 이다. $\square$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-determinant_of_cartan_matrix}
+::: {#exr-part3_determinant_of_cartan_matrix}
 
 #### 카르탕 행렬 (Cartan matrix)
 $n\ge 1$ 에 대해 $\boldsymbol{A}_n\in \mathcal{M}_{n\times n}(\mathbb{F})$, $n \ge 2$ 에 대해 $\boldsymbol{B}_n\in \mathcal{M}_{n\times n}(\mathbb{F})$, $n\ge 4$ 에 대해 $\boldsymbol{D}_n \in \mathcal{M}_{n\times n}(\mathbb{F})$ 를 각각 아래와 같이 정의한다.
@@ -191,6 +201,8 @@ $$
 
 각 행렬의 행렬식을 구하라.
 :::
+
+</div></br>
 
 ::: {.solution}
 

@@ -11,7 +11,10 @@ crossref:
 
 ## 쌍선형 형식
 
-두 벡터공간을 곱하는 것에 대해 우리는 곱공간 $U \times V$ 를 안다. 여기서는 $U \otimes V$ 로 표기되는 두 벡터공간의 텐서곱에 대해 알아보고자 한다. 이를 위해 @def-k_linear_form 에서의 쌍선형 형식을 이용한다.  여기서는 쌍선형 형식을 많이 쓰기 때문에 $\mathcal{T}^2(U, V)$ 를 $\mathfrak{B}(U,\,V)$ 로 표기하기로 한다. @prp-vector_space_of_k_linear_form 로부터 다음을 안다.
+두 벡터공간을 곱하는 것에 대해 우리는 곱공간 $U \times V$ 를 안다. 여기서는 $U \otimes V$ 로 표기되는 두 벡터공간의 텐서곱에 대해 알아보고자 한다. 이를 위해 @def-k_linear_form 에서의 쌍선형 형식을 이용한다.  여기서는 쌍선형 형식을 많이 쓰기 때문에 $\mathcal{T}^2(U, V)$ 를 $\mathfrak{B}(U,\,V)$ 로 표기하기로 한다. 
+@prp-vector_space_of_k_linear_form 로부터 다음을 안다.
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-part_3_bilinear_form_is_vector_space}
 
@@ -19,7 +22,7 @@ $\mathbb{F}$-벡터공간 $U\times V$ 에서 정의된 쌍선형 형식의 집�
 
 :::
 
-
+</div></br>
 
 </br>
 
@@ -47,13 +50,15 @@ $\mathbb{F}$-벡터공간 $U\times V$ 에서 정의된 쌍선형 형식의 집�
 
 </div>
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-part3_dimension_of_bilinear_functional}
 
 유한차원 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $\dim(\mathfrak{B}(U,\,V)) = \dim(U) \times \dim(V)$ 이다. 
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -99,7 +104,7 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-part3_dimension_of_tensor_product}
 
@@ -107,13 +112,15 @@ $U,\,V$ 가 유한차원 벡터공간일 때 $\dim(U \otimes V) = \dim(U) \times
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
 유한차원 벡터공간일 때 $\dim(U^\ast) = \dim (U)$ 이다. $\square$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-part3_bilinearity_of_tensor_product}
 
@@ -126,8 +133,9 @@ u \otimes (v_1 + v_2) &= u \otimes v_1 + u \otimes v_2.
 \end{aligned}
 $$
 
-
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -147,7 +155,7 @@ $$
 위의 @prp-part3_bilinearity_of_tensor_product 는 $u \otimes v$ 가 쌍선형 형식임을 보여준다.
 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-part3_basis_of_tensor_product}
 
@@ -157,8 +165,9 @@ $\mathcal{B}_U = (e_1,\ldots,\,e_m),\, \mathcal{B}_V=(f_1,\ldots,\,f_n)$ 이 각
 
 &emsp; ($2$) $\mathcal{B}_U,\,\mathcal{B}_V$ 각각 $U,\, V$ 의 기저이면 $\mathcal{B}$ 는 $U \otimes V$ 의 기저이다.
 
-
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -176,9 +185,9 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_4th_9D_3}
+::: {#exr-part3_axler_4th_9D_3}
 
 $\{u_1,\ldots,\,u_m\}$ 이 $U$ 에서의 선형독립이며 $\{v_1,\ldots,\,v_m\}\subset V$ 가
 
@@ -189,6 +198,8 @@ $$
 을 만족한다면 $v_1=\cdots = v_m=0$ 임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -201,13 +212,15 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_4th_9D_4}
+::: {#exr-part3_axler_4th_9D_4}
 
 $\dim (U)>1,\, \dim(V)>1$ 일 때 $X=\{u\otimes v : (u,\,v)\in U\times V\}$ 는 $U \otimes V$ 의 부분공간이 아님을 보이시오.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -269,7 +282,7 @@ $\Gamma$ 를 $U\times V$ 에서 $W$ 로의 **쌍선형 사상(bilinear map)** �
 
 </div>
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-part3_bilinear_map_to_linear_map}
 
@@ -288,6 +301,8 @@ $$
 \forall (u,\,v)\in (U, V),\qquad L^\# (u,\,v)= L(u \otimes v)
 $$
 :::
+
+</div></br>
 
 ::: {.proof}
 

@@ -777,9 +777,7 @@ $$
 
 :::
 
-
-
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-metix_representation_of_orthogonal_group}
 
@@ -800,7 +798,7 @@ $v,\,v'\in V$ 에 대해 $[v]_\mathcal{B}=\boldsymbol{v},\, [v']_\mathcal{B}=\bo
 
 :::
 
-</br>
+</div></br>
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-orthogonal_group_on_symmetric_matrix} 
@@ -817,21 +815,15 @@ $$
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-determinant_of_O_n_J}
 
-대칭행렬 $\boldsymbol{J}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 가역일 때 $\boldsymbol{A}\in O_n^\boldsymbol{J}(\mathbb{F})$ 의 행렬식은 $\pm 1$ 이다.
+대칭행렬 $\boldsymbol{J}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 가역일 때 $\boldsymbol{A}\in O_n^\boldsymbol{J}(\mathbb{F})$ 의 행렬식은 $\det(\boldsymbol{A}^T\boldsymbol{JA}) = \boldsymbol{J}$ 이며 $\det (\boldsymbol{A}^T) = \det (\boldsymbol{A})$ 이므로 $\det (\boldsymbol{A})= \pm 1$ 이다.
 
 :::
 
-::: {.solution}
-
-$\det(\boldsymbol{A}^T\boldsymbol{JA}) = \boldsymbol{J}$ 이며 $\det (\boldsymbol{A}^T) = \det (\boldsymbol{A})$ 이므로 $\det (\boldsymbol{A})= \pm 1$ 이다.
-
-:::
-
-</br>
+</div></br>
 
 ### 심플렉틱 군
 
@@ -850,6 +842,9 @@ $$
 :::
 :::
 
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-metix_representation_of_symplectic_group}
 
 유한차원 벡터공간 $V$ 와 $B\in\mathcal{A}^2(\mathbb{F})$ 를 생각하자. $V$ 의 기저 $\mathcal{B}$ 에 대해 다음은 동치이다.
@@ -858,6 +853,8 @@ $$
 
 &emsp; ($2$) $([L]_\mathcal{B})^T[B]_\mathcal{B}([L]_\mathcal{B}) =[B]_\mathcal{B}$.
 :::
+
+</div></br>
 
 ::: {.proof}
 $v,\,v'\in V$ 에 대해 $[v]_\mathcal{B}=\boldsymbol{v},\, [v']_\mathcal{B}=\boldsymbol{v}'$ 이라 하고 $[L]_\mathcal{B}=\boldsymbol{L},\, [B]_\mathcal{B}= \boldsymbol{B}$ 라고 하자.
@@ -889,6 +886,7 @@ $\mathcal{M}_{2 \times 2}(\mathbb{R})$ 에서 정의된 $\boldsymbol{J} = \begin
 :::
 
 </br>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-O_11}
 
@@ -900,5 +898,6 @@ $\mathcal{M}_{2 \times 2}(\mathbb{R})$ 에서 정의된 $\boldsymbol{J} = \begin
 
 ::: 
 
+</div>
 
 

@@ -21,25 +21,25 @@ $\mathbb{F}$-벡터공간 $V$ 에 대해 $\mathcal{L}(V,\,\mathbb{F})$ 에 속�
 :::
 :::
 
-</br>
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-linear_functional_1}
+::: {#exm-part3_linear_functional_1}
 $\varphi : \mathbb{R}^3 \to  \mathbb{R}$ 을 임의의 $a,\,b,\,c\in \mathbb{R}$ 에 대해 $\varphi (x, y, z) = ax + by + cz$ 라 하면 $\varphi \in (\mathbb{R}^3)^\ast$ 이다.
 
 ::: 
 
+</div>
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-</br>
-
-::: {#exm-linear_functional_2}
+::: {#exm-part3_linear_functional_2}
 
 $n$ 차 다항식 이하의 다항식의 집합 $\mathbb{F}_n[t]$ 는 $\mathbb{F}$ 벡터공간이다. $f\in \mathbb{F}_n[t]$ 와 $c \in \mathbb{F}$ 에 대해 $\varphi (f)=f(c)$ 는 $(\mathbb{F}_n[t])^\ast$ 에 속하는 선형 범함수이다.
 
 :::
 
-</br>
+</div></br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-linear_functional_3}
+::: {#exm-part3_linear_functional_3}
 
 $[a,\,b]$ 구간에서 연속인 실함수의 집합 $C_{[a,\,b]}$ 는 $\mathbb{R}$-벡터공간이다. 이 때 $\psi : C_{[a,\,b]} \to \mathbb{R}$ 을 다음과 같이 정의한다.
 
@@ -51,9 +51,11 @@ $$
 
 :::
 
-</br> 
+</div></br> 
 
-::: {#prp-linear_functional_4}
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-part3_linear_functional_4}
 
 유한차원 $\mathbb{F}$-벡터공간 $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 에 대해 아래와 같이 정의된 $\varphi_i :V \to \mathbb{F}$ 는 $V$ 에서의 선형범함수이다.
 
@@ -62,6 +64,8 @@ $$
 $$
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -73,18 +77,23 @@ $$
 
 유한차원 벡터공간 $V$ 에 대해 $V^\ast$ 의 차원을 정의 할 수 있다.
 
-::: {#prp-dim_of_dual_space}
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-part3_dim_of_dual_space}
+
 유한차원 벡터공간 $V$ 에 대해 $\dim (V^\ast) = \dim (V)$ 이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 @cor-dimension_of_LUV 에 의해 $\dim (V^\ast) = \dim (\mathcal{L}(V,\,\mathbb{F})) = \dim (V)$. $\square$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-dual_basis}
+::: {#prp-part3_dual_basis}
 
 유한차원 벡터공간 $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 에 대해 범함수 $\varphi_1,\ldots,\,\varphi_n \in V^\ast$ 를 다음과 같이 정의하자.
 
@@ -95,9 +104,11 @@ $$
 이 때 $\{\varphi_1,\ldots,\,\varphi_n\}$ 은 $V^\ast$ 의 기저이다.
 :::
 
+</div></br>
+
 ::: {.proof}
 
-@prp-linear_functional_4 로부터 $\varphi(v_i) \in V^\ast$ 이다. 이제 $\dim V^\ast = \dim V = n$ 이므로 $\{\varphi_1,\ldots,\varphi_n\}$ 이 선형독립임을 보이면 된다.
+@prp-part3_linear_functional_4 로부터 $\varphi(v_i) \in V^\ast$ 이다. 이제 $\dim V^\ast = \dim V = n$ 이므로 $\{\varphi_1,\ldots,\varphi_n\}$ 이 선형독립임을 보이면 된다.
 
 $$
 \begin{aligned}
@@ -110,7 +121,7 @@ $\square$
 :::
 
 
-@prp-dual_basis 은 $n$ 차원 $\mathbb{F}$-벡터공간 $V$ 의 모든 선형 범함수는 $(\varphi_i,\ldots,\,\varphi_n)$ 의 선형결합으로 표현할 수 있다는 것을 의미한다.
+@prp-part3_dual_basis 은 $n$ 차원 $\mathbb{F}$-벡터공간 $V$ 의 모든 선형 범함수는 $(\varphi_i,\ldots,\,\varphi_n)$ 의 선형결합으로 표현할 수 있다는 것을 의미한다.
 
 </br>
 
@@ -118,16 +129,18 @@ $\square$
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-dual_basis}
+::: {#def-part3_dual_basis}
 
 #### 쌍대 기저 (Dual basis)
 
-@prp-dual_basis 의 $(\varphi_1,\ldots,\,\varphi_n)$ 을 $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 에 대한 **쌍대 기저(dual basis)** 라 한다. 
+@prp-part3_dual_basis 의 $(\varphi_1,\ldots,\,\varphi_n)$ 을 $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 에 대한 **쌍대 기저(dual basis)** 라 한다. 
  
 :::
 :::
 
-::: {#prp-dual_basis_and_vector}
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-part3_dual_basis_and_vector}
 
 유한차원 벡터공간 $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 와 그 쌍대기저 $(\varphi_1,\ldots,\,\varphi_n)$ 를 생각하자. $v\in V$ 일 때 다음이 성립한다.
 
@@ -136,6 +149,8 @@ v=\varphi_1(v)v_1 +\cdots + \varphi_n (v)v_n.
 $$
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -149,7 +164,7 @@ $v=\sum_i a_iv_i$ 일 $\varphi_j(v) = \sum_i \varphi_j (av_i) = a_j$ 이다. $\s
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-dual_map}
+::: {#def-part3_dual_map}
 #### 쌍대 사상(Dual map)
 
 $L\in \mathcal{L}(U,\, V)$ 와 $\varphi \in V^\ast$ 에 대해 아래와 같이 정의된 $L^T \in \mathcal{L}(V^\ast,\, U^\ast)$ 를 $L$ 의 **쌍대 사상(dual map)** 이라 한다.
@@ -161,11 +176,13 @@ $$
 :::
 ::: 
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-dual_map}
-@def-dual_map 에서 정의된 $L^T$ 은 선형사상이다.
+::: {#prp-part3_dual_map}
+@def-part3_dual_map 에서 정의된 $L^T$ 은 선형사상이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 $\varphi,\,\psi \in V^\ast,\, c \in \mathbb{F}$ 일 때,
@@ -181,7 +198,9 @@ $$
 
 이제 쌍대 사상의 중요한 성질을 알아보자.
 
-::: {#thm-dual-map}
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-part3_dual_map}
 
 $K,\,L \in \mathcal{L}(U,\,V)$ 일 때 쌍대사상 $K^T ,\,L^T$ 은 다음 성질을 만족한다.
 
@@ -193,6 +212,8 @@ $K,\,L \in \mathcal{L}(U,\,V)$ 일 때 쌍대사상 $K^T ,\,L^T$ 은 다음 성�
 
 &emsp; ($3$) $(K\circ L)^T = L^T \circ K^T$
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -220,7 +241,7 @@ $$
 ## Annihilator
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-annihilator}
+::: {#def-part3_annihilator}
 #### Annihilator
 
 $U$ 가 벡터공간 $V$ 의 부분집합 일 때, 아래와 같이 정의되는 집합을 **annihilator** of $U$ 라 하고 $U^0$ 라 쓴다.
@@ -233,9 +254,13 @@ $$
 
 </br>
 
-::: {#prp-annihilator}
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-part3_annihilator}
 이 때, $U^0$ 는 $V^\ast$ 의 부분공간이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 영함수 $0\in V^\ast$ 은 $U^0$ 에 속함은 자명하다. $\varphi,\,\psi \in U^0$ 이고 $u\in U,\,\lambda \in \mathbb{F}$ 일 때,
@@ -249,9 +274,9 @@ $$
 이므로 $U^0$ 는 $V^\ast$ 의 부분공간이다. $\square$
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-dim_of_annihilator}
+::: {#thm-part3_dim_of_annihilator}
 
 $V$ 가 유한차원 벡터공간이고 $U$ 가 $V$ 의 부분공간일 때
 
@@ -261,6 +286,8 @@ $$
 
 이다.
 :::
+
+</div></br>
 
 ::: {.proof}
 $U$ 가 $V$ 의 부분공간이므로 $i_U\in \mathcal{L}(U,\,V)$ 를
@@ -299,9 +326,9 @@ $$
 이므로 $\text{im}(i_U^T) = U^\ast$ 이다. 즉 $\text{rank} (i_U^T) = \dim (U^\ast) = \dim (U)$ 이므로 주어진 식이 성립한다. $\square$
 :::
 
-</br>
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-ker_Tprime}
+::: {#thm-part3_ker_Tprime}
 $U,\, V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(U,\,V)$ 일 때, 다음이 성립한다.
 
 &emsp; ($1$) $\ker (L^T) = \left(\text{im}(L)\right)^0$
@@ -310,6 +337,7 @@ $U,\, V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(U,\,V)$ 일 때, 
 
 :::
 
+</div></br>
 
 ::: {.proof}
 
@@ -335,13 +363,16 @@ $$
 $\square$
 
 :::
-</br>
 
-::: {#lem-injective_dual_map}
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#lem-part3_injective_dual_map}
 
 유한차원 벡터공간 $U,\,V$ 에 대해 $L\in \mathcal{L}(U,\,V)$ 가 전사인 것의 필요충분조건은 $L^T$ 이 단사인 것이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -354,9 +385,10 @@ L \text{ 가 전사} & \iff \text{im} (L) = V  \\
 \end{aligned}
 $$
 :::
-</br>
 
-::: {#lem-rank_Tprime}
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#lem-part3_rank_Tprime}
 
 $U,\,V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(U,\,V)$ 일 때 다음이 성립한다.
 
@@ -365,6 +397,8 @@ $U,\,V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(U,\,V)$ 일 때 �
 &emsp; ($2$) $\text{im} (L^T) = (\ker (L))^0$
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -394,13 +428,15 @@ $$
 이므로 $\text{im} (L^T) = (\ker (L))^0$ 이다. $\square$
 :::
 
-</br>
+</br></br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-tprime_surjective}
+::: {#lem-part3_tprime_surjective}
 
 $U,\,V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(U,\,V)$ 일 때 $L$ 가 단사일 필요충분조건은 $L^T$ 이 전사이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 $$
@@ -441,26 +477,32 @@ $$
 
 이므로 $\boldsymbol{B}=\boldsymbol{A}^T$ 임을 알 수 있다. 즉 우리는 다음을 보였다.
 
-::: {#prp-transpose_of_matrix}
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-part3_transpose_of_matrix}
 
 벡터공간 $U,\,V$ 와 그 기저 $\mathcal{B}_U = (u_1,\ldots,\,u_n),\, \mathcal{B}_V = (v_1,\ldots,\,v_m)$ 에 대한 선형사상 $L\in \mathcal{L}(U, V)$ 의 행렬표현 $\boldsymbol{A}=[L]_{\mathcal{B}_U, \mathcal{B}_V}$ 의 전치행렬 $\boldsymbol{A}^T$ 는 $\mathcal{B}_U$ 와 $\mathcal{B}_V$ 의 쌍대기저에 대한 쌍대사상 $L^T\in \mathcal{L}(V^\ast, U^\ast)$ 의 행렬표현이다.
 
 :::
 
-</br>
+</div></br>
 
 
 이것이 $L\in \mathcal{L}(U,\,V)$ 에 대한 쌍대사상을 $L^T$ 로 표현한 이유이다. 우리는 자연스럽게 다음의 결론에 도달한다. 
 
-::: {#thm-dimension_of_matrix_by_transpose}
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-part3_dimension_of_matrix_by_transpose}
 
 행렬 $\boldsymbol{A}$ 의 행공간의 차원과 열공간의 차원은 같다.
 
 :::
 
+</div></br>
+
 ::: {.proof}
 
-@prp-transpose_of_matrix 의 표기법을 그대로 사용한다. $\boldsymbol{A}$ 의 열공간의 차원은 $\text{rank}(L)$ 와 같다. @lem-rank_Tprime 에 따라 $\text{rank}(L^T)$ 과도 같다. 이것은 $\boldsymbol{A}^T$ 의 열공간의 차원과 같고 또한 $\boldsymbol{A}$ 의 행공간의 차원과 같다. $\square$ 
+@prp-part3_transpose_of_matrix 의 표기법을 그대로 사용한다. $\boldsymbol{A}$ 의 열공간의 차원은 $\text{rank}(L)$ 와 같다. @lem-part3_rank_Tprime 에 따라 $\text{rank}(L^T)$ 과도 같다. 이것은 $\boldsymbol{A}^T$ 의 열공간의 차원과 같고 또한 $\boldsymbol{A}$ 의 행공간의 차원과 같다. $\square$ 
 :::
 
 결국 우리는 @thm-dimension_of_matrix 과 같은 내용을 다른 방법으로 증명하였다. 
@@ -472,7 +514,7 @@ $$
 우리는 벡터공간 $V$ 에 대해 $V^\ast = \mathcal{L}(V, \mathbb{F})$ 인 벡터공간을 알아보았다. 그렇다면 $\mathcal{L}(V^\ast, \mathbb{F})$ 도 생각 할 수 있을것이다. 그런데 이것은 뜻밖에 매우 중요하다.
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-double_dual} 
+::: {#def-part3_double_dual} 
 #### 이중 쌍대 공간
 
 $\mathbb{F}$-벡터공간 $V$ 의 쌍대공간 $V^\ast$ 에 대한 쌍대공간 $\mathcal{L}(V^\ast, \mathbb{F})$ 를 $V$ 에 대한 **이중 쌍대 공간 (double dual space)** 이라 하고 ${V^\ast}{}^\ast$ 라 쓴다.
@@ -480,10 +522,9 @@ $\mathbb{F}$-벡터공간 $V$ 의 쌍대공간 $V^\ast$ 에 대한 쌍대공간 
 :::
 :::
 
-</br>
+</br></br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-
-::: {#thm-isomorphsm_to_dual_space}
+::: {#thm-part3_isomorphsm_to_dual_space}
 
 유한차원 벡터공간 $V$ 의 이중쌍대공간 $V^\ast{}^\ast$ 에 대해 $\Psi : V \to V^\ast{}^\ast$ 를 다음과 같이 정의하자.
 
@@ -500,6 +541,8 @@ $$
 &emsp; ($3$) $V$ 의 기저 $\{v_i\}$ 에 대해 $\Psi (v_i) = (v_i^\ast)^\ast$ 이다.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -528,21 +571,25 @@ $$
 
 </br>
 
-유한차원 벡터공간 $V$ 에 대해 $V$ 와 $V'$ 은 동형지만 동형사상은 보통 $V$ 의 기저를 정하고 난후 찾을 수 있다. 그러나 $V$ 와 $V^\ast{}^\ast$ 사이의 동형사상은 @thm-isomorphsm_to_dual_space 의 ($3$) 에서 보였듯이 매우 직접적이고 자연스럽다. 
+유한차원 벡터공간 $V$ 에 대해 $V$ 와 $V'$ 은 동형지만 동형사상은 보통 $V$ 의 기저를 정하고 난후 찾을 수 있다. 그러나 $V$ 와 $V^\ast{}^\ast$ 사이의 동형사상은 @thm-part3_isomorphsm_to_dual_space 의 ($3$) 에서 보였듯이 매우 직접적이고 자연스럽다. 
 
 
 
 </br>
 
 
-## 연습문제
+## 연습문제 {.unnumbered}
 
-::: {#exr-axler4_3F_1}
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-part3_axler4_3F_1}
 
 #### Axler4 3F.1
 모든 선형 범함수는 0 사상이거나 전사함수임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -550,14 +597,16 @@ $\varphi \in \mathcal{L}(V)$ 가 $0$ 사상이 아니라고 하자. $\varphi(v) 
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-alxer4-3F_3}
+::: {#exr-part3_alxer4-3F_3}
 
 #### Axler4 3F.3
 $V$ 가 유한차원 벡터공간이고 $v\in V,\, v \ne 0_V$ 라고 하자. 이 때 $\varphi\in V^\ast$, $\varphi(v) = 1$ 인 $\varphi$ 가 존재함을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -565,24 +614,26 @@ $v$ 를 포함하는 기저를 만들고 이 기저에 대한 쌍대기저를 �
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler4_3F_4}
+::: {#exr-part3_axler4_3F_4}
 
 #### Axle4 3F.4
 
 $V$ 가 유한차원 벡터공간이며 $U\le V,\, U  \ne V$ 라고 하자. $0$ 사상이 아니면서 $\forall u\in U,\, \varphi (u)=0$ 을 만족하는 $\varphi \in V^\ast$ 가 존재함을 보여라.
 
 :::
+</div></br>
+
 ::: {.solution}
 
 $v\in V-U$ 를 선택하여 $v$ 를 첫번째 원소로 하는 기저를 구성하고 쌍대기저를 만들면 된다.
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler4_3F_5}
+::: {#exr-part3_axler4_3F_5}
 
 #### Axler4 3F.5
 
@@ -594,8 +645,9 @@ $$
 
 를 만족시킨다. 즉 $\varphi_1,\ldots\,\varphi_m : U \to \mathbb{F}$ 이 정의된다. 이 때 $\varphi_1,\ldots,\,\varphi_m$ 이 범함수 임을 보여라.
 
-
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -603,9 +655,9 @@ $u_1,\,u_2\in U,\, c\in \mathbb{F}$ 에 대해 $L(u_1+cu_2) = L(u_1)+cL(u_2)$ �
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler4_3F_6}
+::: {#exr-part3_axler4_3F_6}
 
 #### Axler4 3F.6
 
@@ -613,21 +665,24 @@ $\mathbb{F}$-벡터공간 $V$ 에 대해 $\varphi,\, \beta \in V^\ast$ 라고 �
 
 :::
 
+</div></br>
+
 ::: {.solution}
 $\Longleftarrow$ 는 자명하므로 $\implies$ 만 보인다. $\beta$ 가 0 사상일 경우에 $c=0$ 이므로 $\beta$ 가 $0$ 사상이 아닌 경우만 생각한다. $\beta$ 가 영사상이 아니면 $\text{rank}(\beta)=1$ 이며, 따라서 어떤 $v_0\in V$ 에 대해 $\beta(v_0) \ne 0$ 이다. $v_0 \notin \ker \beta$ 이므로 $v_0 \not\in \ker \varphi$ 이며 따라서 $\varphi (v_0) \ne 0$ 이다. $c_0 = \beta(v_0)/\varphi(v_0)$ 라고 하고 이 $c_0$ 에 대해 $\psi := \beta - c_0 \varphi$ 라고 하자. $\psi(v_0)=0$ 이다.
 
 이제 $v$ 가 $v_0$ 와 선형독립이며 $\beta (v)\ne 0$ 이라면 $c_1\beta(v_1) + c_2 \beta(v_2)=0$ 이라는 조건으로 부터 $c_1=c_2=0$ 를 얻는데 이는 $\text{rank}(\beta)=1$ 이라는 조건에 위배된다. 다라서 $v_0$ 와 선형독립인 모든 $v\in V$ 는 $\ker \beta$ 에 포함되며 마찬가지로 $\ker \varphi$ 에 포함된다. 
 
-
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler3_3F_5}
+::: {#exr-part3_axler3_3F_5}
 
 $V_1,\ldots,\,V_m$ 이 벡터공간일 때 $(V_1\times \cdots \times V_m)^\ast$ 과 $V_1^\ast \times \cdots \times V_m^\ast$ 가 동형임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -642,9 +697,9 @@ $$
  *-- to be done --*
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axlr_3_F_6}
+::: {#exr-part3_axler_3_F_6}
 
 유한차원 $\mathbb{F}$-벡터공간 $V$ 에 대해 $v_1,\ldots,\,v_m\in V$ 라고 하자. $\Gamma \in \mathcal{L}(V^\ast,\, \mathbb{F}^m)$ 을 다음과 같이 정의한다.
 
@@ -659,6 +714,8 @@ $$
 &emsp; ($2$) $\{v_1,\ldots,\,v_m\}$ 이 선형독립일 필요충분조건은 $\Gamma$ 가 전사인 것이다.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -678,11 +735,9 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-
-
-::: {#exr-axler-3_F_9}
+::: {#exr-part3_axler-3_F_9}
 
 $(v_1,\ldots,\,v_n)$ 이 $V$ 의 기저이며 $\{\varphi_1,\ldots,\,\varphi_n\}$ 이 이에 대한 쌍대 기저라고 하자. $\psi\in V'$ 에 대해
 
@@ -693,9 +748,11 @@ $$
 임을 보여라.
 :::
 
+</div></br>
+
 ::: {.solution}
 
-@prp-dual_basis 에 의해 $\psi$ 는 $\{\varphi_1,\ldots,\,\varphi_n\}$ 의 선형 결합이다. $\psi = \sum_i c_i \varphi_i$ 라고 하면
+@prp-part3_dual_basis 에 의해 $\psi$ 는 $\{\varphi_1,\ldots,\,\varphi_n\}$ 의 선형 결합이다. $\psi = \sum_i c_i \varphi_i$ 라고 하면
 
 $$
 \psi(v_j) = \sum_{i=1}^n c_i \varphi_i (v_j) = c_j
@@ -705,13 +762,15 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_3_F_11}
+::: {#exr-part3_axler_3_F_11}
 
 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $\boldsymbol{A}\ne \boldsymbol{0}$ 일 때 $\text{rank}(\boldsymbol{A})=1$ 일 필요충분조건은 어떤 $\boldsymbol{c}\in \mathcal{M}_{m}(\mathbb{F})$, $\boldsymbol{d}\in \mathcal{M}_n(\mathbb{F})$ 가 존재하여 $(\boldsymbol{A})_{ij} = (\boldsymbol{c})_i (\boldsymbol{d})_j$ 를 만족하는 것임을 보이시오.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -721,13 +780,15 @@ $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $\boldsymbol{A}\ne \bo
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_3_F_12}
+::: {#exr-part3_axler_3_F_12}
 
 $V$ 에서의 항등사상의 쌍대사상은 $V^\ast$ 에서의 항등사상임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -735,13 +796,15 @@ $V$ 에서의 항등사상의 쌍대사상은 $V^\ast$ 에서의 항등사상임
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_3_F_13}
+::: {#exr-part3_axler_3_F_13}
 
 $T\in \mathcal{L}(\mathbb{R}^3, \mathbb{R}^2)$ 가 $T(x, y, z) = (4x+5y+6z, 7x+8y+9z)$ 로 정의되었다고 하자. $\varphi_1,\,\varphi_2$ 가 $\mathbb{R}^2$ 에서의 표준기저에 대한 쌍대기저이며 $\psi_1,\,\psi_2,\,\psi_3$ 는 $\mathbb{R}^3$ 에서의 표준기저에 대한 쌍대기저라고 하자. 이 때 $T^T(\varphi_1)$ 과 $T^T(\varphi_2)$ 를 $\psi_1,\,\psi_2,\,\psi_3$ 의 선형결합으로 표현하라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -764,13 +827,15 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_3_F_15}
+::: {#exr-part3_axler_3_F_15}
 
 유한차원 벡터공간 $V$ 에 대해 $T\in \mathcal{L}(U, V)$ 라고 하자. 이때 $T^T=0 \iff T=0$ 임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -781,13 +846,15 @@ $V$ 의 기저 $\{v_1,\ldots,\,v_m\}$ 에 대한 쌍대기저 $\{\varphi_1,\ldot
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_3_F_16}
+::: {#exr-part3_axler_3_F_16}
 
 유한차원 벡터공간 $U,\,V$ 를 생각하자. $\Phi:\mathcal{L}(U, V) \to \mathcal{L}(V^\ast, U^\ast)$ 가 $f(T)=T^T$ 로 정의된다 $\Phi$ 는 동형사상임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -803,17 +870,19 @@ $$
 \end{aligned}
 $$
 
-이므로 $\Phi$ 는 동형사상이다. $\mathcal{L}(U, V)$ 와 $\mathcal{L}(V^\ast, U^\ast)$ 가 모두 유한차원 이므로 $\ker (\Phi)=0$ 임을 보이면 되는데 이미 @exr-axler_3_F_15 에서 보였다. 
+이므로 $\Phi$ 는 동형사상이다. $\mathcal{L}(U, V)$ 와 $\mathcal{L}(V^\ast, U^\ast)$ 가 모두 유한차원 이므로 $\ker (\Phi)=0$ 임을 보이면 되는데 이미 @exr-part3_axler_3_F_15 에서 보였다. 
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_3_F_18}
+::: {#exr-part3_axler_3_F_18}
 
 유한차원 벡터공간 $V$ 에 대해 $U \subset V$ 일 때 $U=\{0_V\} \iff U^0 = V^\ast$ 임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -821,27 +890,31 @@ $U=\{0_V\}$ 를 가정하자. 모든 $\varphi \in V^\ast$ 에 대해 $\varphi (0
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_3_F_19}
+::: {#exr-part3_axler_3_F_19}
 
 유한차원 벡터공간 $V$ 에 대해 $U\le V$ 라고 하자. 이 때 $U=V \iff U^0=\{0_V\}$ 임을 보여라.
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
-trivial. see @exr-axler_3_F_18
+trivial. see @exr-part3_axler_3_F_18
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_3_F_20}
+::: {#exr-part3_axler_3_F_20}
 
 벡터공간 $V$ 에 대해 $U\le V,\, W\le V$ 일 때 $U \subset W \implies W^0 \subset U^0$ 임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -851,13 +924,15 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-:::{#exr-axler_3_F_21}
+:::{#exr-part3_axler_3_F_21}
 
 유한차원 벡터공간 $V$ 에 대해 $U\le V,\,W\le V$ 라고 하자. $W^0 \subset U^0 \implies U \subset W$ 임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 
@@ -868,13 +943,15 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_3_F_22}
+::: {#exr-part3_axler_3_F_22}
 
 $U\le V,\, W\le V$ 일 때 $(U+W)^0 = U^0 \cap W^0$ 임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.proof}
 
@@ -885,17 +962,19 @@ $\psi \in (U+W)^0$ 이면 모든 $u\in U,\, w\in W$ 에 대해 $\psi(u+w)=0$ 이
 :::
 
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_3_F_23}
+::: {#exr-part3_axler_3_F_23}
 
 $V$ 가 유한차원 벡터공간이고 $U\le V,\,W\le V$ 일 때 $(U\cap W)^0 = U^0 + W^0$ 임을 보여라.
 
 :::
 
+</div></br>
+
 ::: {.solution}
 
-@exr-axler_3_F_22 로 부터 $\dim(U^0 \cap W^0) = \dim (U+W)^0$ 임을 안다. 따라서,
+@exr-part3_axler_3_F_22 로 부터 $\dim(U^0 \cap W^0) = \dim (U+W)^0$ 임을 안다. 따라서,
 
 $$
 \begin{aligned}
@@ -912,9 +991,9 @@ $$
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-3_F_25}
+::: {#exr-part3_alxer_3_F_25}
 
 유한차원 벡터공간 $V$ 에 대해 $U \le V$ 일 때 $U'$ 을 다음과 같이 정의하자.
 
@@ -925,6 +1004,8 @@ $$
 $U=U'$ 임을 보여라.
 :::
 
+</div></br>
+
 ::: {.solution}
 
 $U^0$ 의 정의에 의해 $U \subset U'$ 이다. 이제 $U'\le V$ 임을 보이자. $0_V\in U'$ 은 자명하며, $u_1,\,u_2\in U',\, c\in \mathbb{F}$ 과 $\varphi\in U^0$ 에 대해 $\varphi (u_1 +cu_2)= \varphi (u_1)+ c\varphi (u_2)=0$ 이므로 $U' \le V$ 이다.
@@ -934,9 +1015,9 @@ $U$ 의 기저 $(u_1,\ldots,\,u_m)$ 을 확장하여 $(u_1,\ldots,\,u_m,\,v_1,\l
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-3-F_26}
+::: {#exr-part3_axler_3-F_26}
 
 유한차원 벡터공간 $V$ 에 대해 $\Delta \le V^\ast$ 에 대해 $\Delta'$ 을 다음과 같이 정의하자.
 
@@ -947,6 +1028,8 @@ $$
 $\Delta = \Delta'$ 임을 보여라.
 
 :::
+
+</div></br>
 
 ::: {.solution}
 

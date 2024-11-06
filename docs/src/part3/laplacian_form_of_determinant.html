@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>16&nbsp; 행렬식의 라플라시안 형식 – 대수학</title>
+<title>대수학 - 16&nbsp; 행렬식의 라플라시안 형식</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -107,13 +107,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/laplacian_form_of_determinant.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -145,7 +145,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part1/part1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -204,7 +204,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part2/part2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">II. 군 (Groups)</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -239,7 +239,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part3/part3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">III. 심화 선형대수학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -385,7 +385,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-minor_of_matrix" class="theorem definition">
+<div id="def-part3_minor_of_matrix" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 16.1 (Minor)</strong></span> <span class="math inline">\(n \times n\)</span> 정사각 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 <span class="math inline">\(i\)</span> 번째 행과 <span class="math inline">\(j\)</span> 번째 열을 제거한 <span class="math inline">\((n-1)\times (n-1)\)</span> 행렬의 행렬식을 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 <span class="math inline">\((i,\,j)\)</span>-minor 라고 부르고 <span class="math inline">\(M_{ij}\)</span> 혹은 <span class="math inline">\(M_{ij}(\boldsymbol{A})\)</span> 라고 쓴다.</p>
 </div>
 </div>
@@ -398,13 +398,13 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-minor_expansion" class="theorem definition">
+<div id="def-part3_minor_expansion" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 16.2 (라플라스 전개)</strong></span> <span class="math inline">\(n\times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 <span class="math inline">\((i,\,j)\)</span>-minor 를 <span class="math inline">\(M_{ij}\)</span> 라고 할 때 아래 함수 <span class="math inline">\(D^{j}:\mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}\)</span> 를 <strong><span class="math inline">\(j\)</span>-번째 열에 대한 라플라스 전개</strong>라고 한다.</p>
-<p><span id="eq-laplace_expansion_for_column"><span class="math display">\[
+<p><span id="eq-part3_laplace_expansion_for_column"><span class="math display">\[
 D^j(\boldsymbol{A}) :=   \sum_{i=1}^n (-1)^{i+j} A_{ij}M_{ij}.
 \tag{16.1}\]</span></span></p>
 <p>같은 방법으로 <strong><span class="math inline">\(i\)</span>-번째 행에 대해 라플라스 전개</strong> <span class="math inline">\(D_i:\mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}\)</span> 를 아래와 같이 정의한다.</p>
-<p><span id="eq-laplace_expansion_for_row"><span class="math display">\[
+<p><span id="eq-part3_laplace_expansion_for_row"><span class="math display">\[
 D_i(\boldsymbol{A}) :=   \sum_{j=1}^n (-1)^{i+j} A_{ij}M_{ij}.
 \tag{16.2}\]</span></span></p>
 </div>
@@ -413,9 +413,13 @@ D_i(\boldsymbol{A}) :=   \sum_{j=1}^n (-1)^{i+j} A_{ij}M_{ij}.
 </div>
 <p><br></p>
 <p>우리는 이제 <span class="math inline">\(D_j(\boldsymbol{A})=D_i(\boldsymbol{A})=\det(\boldsymbol{A})\)</span> 임을 보일 것이다. 우선 행렬식의 조건 1. 은 충족한다.</p>
-<div id="lem-laplace_expansion_and_k_laternating_form_0" class="theorem lemma">
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="lem-part3_laplace_expansion_and_k_laternating_form_0" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 16.1</strong></span> <span class="math inline">\(D_i(\boldsymbol{A}^T) = D^i (\boldsymbol{A})\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{A}\)</span> 의 <span class="math inline">\((i, j)\)</span>-monor 를 <span class="math inline">\(M_{ij}(\boldsymbol{A})\)</span> 라고 쓰기로 하자. 우리는 이미 <span class="math inline">\(\det(\boldsymbol{A}^T) = \det(\boldsymbol{A})\)</span> 임을 안다. 그리고 <span class="math inline">\(\boldsymbol{A}\)</span> 에서 <span class="math inline">\(i\)</span> 번째 행과 <span class="math inline">\(j\)</span> 번째 열을 제외한 행렬의 전치행렬은 <span class="math inline">\(\boldsymbol{A}^T\)</span> 에서 <span class="math inline">\(j\)</span> 번째 행과 <span class="math inline">\(i\)</span> 번째 열을 제외한 행렬이라는 것도 쉽계 알 수 있다. 따라서 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <span class="math inline">\((i,j)\)</span>-minor 는 <span class="math inline">\(\boldsymbol{A}^T\)</span> 의 <span class="math inline">\((j, i)\)</span>-minor 와 같다. 즉 <span class="math inline">\(M_{ij}(\boldsymbol{A}) = M_{ji}(\boldsymbol{A}^T)\)</span> 이다. 이로부터</p>
 <p><span class="math display">\[
@@ -423,10 +427,13 @@ D_i(\boldsymbol{A}^T) = \sum_{j=1}^n (-1) (\boldsymbol{A}^T)_{ij} M_{ij}(\boldsy
 \]</span></p>
 <p>임을 안다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
-<div id="lem-laplace_expansion_and_k_laternating_form_1" class="theorem lemma">
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="lem-part3_laplace_expansion_and_k_laternating_form_1" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 16.2</strong></span> <span class="math inline">\(D_i(\boldsymbol{I}_n)=D^j(\boldsymbol{I}_n)=1\)</span> 이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>정해진 <span class="math inline">\(i\)</span> 번째 행에서 <span class="math inline">\(0\)</span> 이 아닌 값은 <span class="math inline">\(i\)</span> 열 밖에 없다. 따라서</p>
 <p><span class="math display">\[
@@ -436,10 +443,13 @@ D_i(\boldsymbol{I}_n) = (-1)^{2i} M_{ii}
 \]</span></p>
 <p>이며 <span class="math inline">\(M_{ii}\)</span> 는 <span class="math inline">\(\det(\boldsymbol{I}_{n-1}) =1\)</span> 이므로 <span class="math inline">\(D_i(\boldsymbol{I}_n)=1\)</span> 이다. <span class="math inline">\(D^j(\boldsymbol{I}_n)\)</span> 도 같은 방법으로 <span class="math inline">\(1\)</span> 임을 보일 수 있다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
-<div id="lem-laplace_expansion_and_k_laternating_form_2" class="theorem lemma">
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="lem-part3_laplace_expansion_and_k_laternating_form_2" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 16.3</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대한 <span class="math inline">\(D_i(\boldsymbol{A})\)</span> 는 <span class="math inline">\(n\)</span>-교대형식이다.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>우선 <span class="math inline">\(D_i(\boldsymbol{A})\)</span> 가 <span class="math inline">\(n\)</span>-다중선형형식임을 보이자. <span class="math inline">\(k\)</span> 번째 열만 <span class="math inline">\(\boldsymbol{A}_{:k}\)</span> 와 <span class="math inline">\(\boldsymbol{A}'_{:k}\)</span> 로 다른 두 행렬 <span class="math inline">\(\boldsymbol{A},\, \boldsymbol{A}'\)</span> 을 생각하자. <span class="math inline">\(\boldsymbol{B}\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 와 <span class="math inline">\(\boldsymbol{A}'\)</span> 과는 <span class="math inline">\(k\)</span> 번째 열을 제외하면 모두 같고 <span class="math inline">\(\boldsymbol{B}_{:k}= \boldsymbol{A}_{:k} + c\boldsymbol{A}'_{:k}\)</span> 라고 하자.</p>
 <p><span class="math display">\[
@@ -466,15 +476,19 @@ D_i(\boldsymbol{A}) = (-1)^{i+k} A_{ik}M_{ik} +(-1)^{i+2m-k-1}A_{ik}M_{ik} = 0
 \]</span></p>
 <p>이다. 즉 <span class="math inline">\(D_i(\boldsymbol{A})\)</span> 는 <span class="math inline">\(n\)</span>-교대형식이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-laplacian_expansion_and_determinant" class="theorem">
-<p><span class="theorem-title"><strong>정리 16.1</strong></span> <a href="#def-minor_expansion" class="quarto-xref">정의&nbsp;<span>16.2</span></a> 의 <a href="#eq-laplace_expansion_for_row" class="quarto-xref">식&nbsp;<span>16.2</span></a> 와 <a href="#eq-laplace_expansion_for_column" class="quarto-xref">식&nbsp;<span>16.1</span></a> 은 모두 행렬식의 정의와 같다.</p>
+<p><span class="theorem-title"><strong>정리 16.1</strong></span> <a href="#def-part3_minor_expansion" class="quarto-xref">정의&nbsp;<span>16.2</span></a> 의 <a href="#eq-part3_laplace_expansion_for_row" class="quarto-xref">식&nbsp;<span>16.2</span></a> 와 <a href="#eq-part3_laplace_expansion_for_column" class="quarto-xref">식&nbsp;<span>16.1</span></a> 은 모두 행렬식의 정의와 같다.</p>
 </div>
-<div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#lem-laplace_expansion_and_k_laternating_form_1" class="quarto-xref">보조정리&nbsp;<span>16.2</span></a> 과 <a href="#lem-laplace_expansion_and_k_laternating_form_2" class="quarto-xref">보조정리&nbsp;<span>16.3</span></a> 에 의해 <span class="math inline">\(D_i(\boldsymbol{A})\)</span> 는 행렬식이다. 따라서 <span class="math inline">\(D_i(\boldsymbol{A})=D_i(\boldsymbol{A}^T)\)</span> 와 같다. 그런데 <a href="#lem-laplace_expansion_and_k_laternating_form_0" class="quarto-xref">보조정리&nbsp;<span>16.1</span></a> 에 의해 <span class="math inline">\(D_i(\boldsymbol{A}^T)=D^i(\boldsymbol{A}^T)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<div id="exr-determinant_of_cartan_matrix" class="theorem exercise">
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#lem-part3_laplace_expansion_and_k_laternating_form_1" class="quarto-xref">보조정리&nbsp;<span>16.2</span></a> 과 <a href="#lem-part3_laplace_expansion_and_k_laternating_form_2" class="quarto-xref">보조정리&nbsp;<span>16.3</span></a> 에 의해 <span class="math inline">\(D_i(\boldsymbol{A})\)</span> 는 행렬식이다. 따라서 <span class="math inline">\(D_i(\boldsymbol{A})=D_i(\boldsymbol{A}^T)\)</span> 와 같다. 그런데 <a href="#lem-part3_laplace_expansion_and_k_laternating_form_0" class="quarto-xref">보조정리&nbsp;<span>16.1</span></a> 에 의해 <span class="math inline">\(D_i(\boldsymbol{A}^T)=D^i(\boldsymbol{A}^T)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-part3_determinant_of_cartan_matrix" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.1 (카르탕 행렬 (Cartan matrix))</strong></span> <span class="math inline">\(n\ge 1\)</span> 에 대해 <span class="math inline">\(\boldsymbol{A}_n\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span>, <span class="math inline">\(n \ge 2\)</span> 에 대해 <span class="math inline">\(\boldsymbol{B}_n\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span>, <span class="math inline">\(n\ge 4\)</span> 에 대해 <span class="math inline">\(\boldsymbol{D}_n \in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 를 각각 아래와 같이 정의한다.</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -485,6 +499,8 @@ D_i(\boldsymbol{A}) = (-1)^{i+k} A_{ik}M_{ik} +(-1)^{i+2m-k-1}A_{ik}M_{ik} = 0
 \]</span></p>
 <p>각 행렬의 행렬식을 구하라.</p>
 </div>
+</div>
+<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\boldsymbol{A}_1 = \begin{bmatrix}2\end{bmatrix}\)</span>, <span class="math inline">\(\boldsymbol{A}_2 = \begin{bmatrix} 2 &amp; -1 \\ -1 &amp; 2\end{bmatrix}\)</span>, <span class="math inline">\(\boldsymbol{A}_3 = \begin{bmatrix} 2 &amp; -1 &amp; 0 \\ -1 &amp; 2 &amp; -1 \\ 0 &amp; -1 &amp; 2\end{bmatrix}\)</span> 로</p>
 <p><span class="math display">\[
@@ -563,7 +579,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -595,29 +622,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -625,7 +630,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
