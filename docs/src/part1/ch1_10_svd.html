@@ -325,6 +325,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#특이값" id="toc-특이값" class="nav-link" data-scroll-target="#특이값"><span class="header-section-number">8.2.1</span> 특이값</a></li>
   <li><a href="#특이값-분해" id="toc-특이값-분해" class="nav-link" data-scroll-target="#특이값-분해"><span class="header-section-number">8.2.2</span> 특이값 분해</a></li>
+  <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
   </ul></li>
   <li><a href="#특이값-분해의-활용" id="toc-특이값-분해의-활용" class="nav-link" data-scroll-target="#특이값-분해의-활용"><span class="header-section-number">8.3</span> 특이값 분해의 활용</a>
   <ul class="collapse">
@@ -366,7 +367,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-pisitive_definite_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.1 (Positive Definite 행렬 와 제곱근 행렬)</strong></span> 에르미트 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 이 임의의 벡터 <span class="math inline">\(\boldsymbol{v}\)</span> 에 대해,<span class="math inline">\(\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle &gt; 0\)</span> 일 때 <span class="math inline">\(\boldsymbol{A}\)</span> 를 <strong>positve</strong> 혹은 <strong>positive definite</strong> 라 하고 <span class="math inline">\(\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle \ge 0\)</span> 일 때 <span class="math inline">\(\boldsymbol{A}\)</span> 를 <strong>non-negative</strong> 혹은 <strong>positive semidefinite</strong> 라 한다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 positive 이거나 positive definite 일 때 <span class="math inline">\(\boldsymbol{A}=\boldsymbol{R}^2\)</span> 인 행렬 <span class="math inline">\(\boldsymbol{R}\)</span> 이 존재하면 <span class="math inline">\(\boldsymbol{R}\)</span> 을 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <strong>제곱근 행렬</strong>이고 하고 <span class="math inline">\(\sqrt{\boldsymbol{A}}\)</span> 라고 쓴다. 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 제곱근 행렬이 존재 할 때 <span class="math inline">\(\boldsymbol{A}\)</span> 가 제곱근 행렬을 가진다라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 8.1 (Positive Definite 행렬 와 제곱근 행렬)</strong></span> 에르미트 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 이 임의의 벡터 <span class="math inline">\(\boldsymbol{v}\)</span> 에 대해 <span class="math inline">\(\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle &gt; 0\)</span> 일 때 <span class="math inline">\(\boldsymbol{A}\)</span> 를 <strong>positve</strong> 혹은 <strong>positive definite</strong> 라 하고 <span class="math inline">\(\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle \ge 0\)</span> 일 때 <span class="math inline">\(\boldsymbol{A}\)</span> 를 <strong>non-negative</strong> 혹은 <strong>positive semidefinite</strong> 라 한다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 positive 이거나 positive definite 일 때 <span class="math inline">\(\boldsymbol{A}=\boldsymbol{R}^2\)</span> 인 행렬 <span class="math inline">\(\boldsymbol{R}\)</span> 이 존재하면 <span class="math inline">\(\boldsymbol{R}\)</span> 을 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <strong>제곱근 행렬</strong> 이라고 하고 <span class="math inline">\(\sqrt{\boldsymbol{A}}\)</span> 라고 쓴다. 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 제곱근 행렬이 존재 할 때 <span class="math inline">\(\boldsymbol{A}\)</span> 가 제곱근 행렬을 가진다라고 한다.</p>
 </div>
 </div>
 </div>
@@ -429,19 +430,6 @@ window.Quarto = {
 \]</span></p>
 <p>이며, 따라서 <span class="math inline">\(i=1,\ldots,\,n\)</span> 에 대해 <span class="math inline">\(\eta_i = \sqrt{\lambda}\)</span> 이어야 한다. 즉 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터는 <span class="math inline">\(\boldsymbol{R}\)</span> 의 고유벡터이어야 하며, 따라서 유일하다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div id="def-square_root_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.2 (<span class="math inline">\(\sqrt{\boldsymbol{A}}\)</span>)</strong></span> <span class="math inline">\(\boldsymbol{A}\)</span> 가 non-negative 행렬일 때 <span class="math inline">\(\boldsymbol{A}\)</span> 의 non-negative 한 제곱근 행렬을 <span class="math inline">\(\sqrt{\boldsymbol{A}}\)</span> 라고 쓴다.</p>
-</div>
-</div>
-</div>
-</div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-squareroot_matrix" class="theorem proposition">
@@ -485,7 +473,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-singular_value_of_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.3 (특이값)</strong></span> <span class="math inline">\(A\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\sqrt{A^\ast A}\)</span> 의 고유값을 <strong>특이값(singular value)</strong> 라 한다. <span class="math inline">\(\sqrt{A^\ast A}\)</span> 가 positive 이므로 당연히 모든 특이값은 <span class="math inline">\(0\)</span> 이 아닌 실수이다. 특이값을 열거할때는 보통 가장 큰 값부터 내림차순으로 열거한다. 따라서 특이값 <span class="math inline">\(s_1,\ldots,\,s_n\)</span> 이라고 하면 <span class="math inline">\(s_1 \ge s_2 \ge \cdots \ge s_n\)</span> 을 의미한다.</p>
+<p><span class="theorem-title"><strong>정의 8.2 (특이값)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}\)</span> 의 고유값을 <strong>특이값(singular value)</strong> 라 한다. 특이값을 열거할때는 보통 가장 큰 값부터 내림차순으로 열거한다. 따라서 특이값 <span class="math inline">\(s_1,\ldots,\,s_n\)</span> 이라고 하면 <span class="math inline">\(s_1 \ge s_2 \ge \cdots \ge s_n\)</span> 을 의미한다.</p>
 </div>
 </div>
 </div>
@@ -503,7 +491,7 @@ window.Quarto = {
 <p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\((A^\ast A)^\ast = A^\ast A\)</span> 이므로 <span class="math inline">\(A^\ast A\)</span> 는 에르미트 행렬이다. 또한 <span class="math inline">\(\langle A^\ast Au,\, v\rangle = \|Au\|^2\ge 0\)</span> 이므로 <span class="math inline">\(A^\ast A\)</span> 는 positive 이다.</p>
-<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(u\in \ker(A^\ast A) \implies \langle A^\ast Au,\, v\rangle = \|Au\|^2=0\)</span> 이므로 <span class="math inline">\(u\in \ker (A)\)</span>. 역으로 <span class="math inline">\(u\in \ker A\)</span> 이면 <span class="math inline">\(Au=0\)</span> 이므로 <span class="math inline">\(A^\ast A=0\)</span> 이며, 따라서 <span class="math inline">\(u\in \ker (A^\ast A)\)</span>. 따라서 <span class="math inline">\(\ker (A^\ast A) = \ker (A)\)</span>.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(u\in \ker(A^\ast A) \implies \langle A^\ast Au,\, v\rangle = \|Au\|^2=0\)</span> 이므로 <span class="math inline">\(u\in \ker (A)\)</span>. 역으로 <span class="math inline">\(u\in \ker A\)</span> 이면 <span class="math inline">\(Au=0\)</span> 이므로 <span class="math inline">\(A^\ast A u=0\)</span> 이며, 따라서 <span class="math inline">\(u\in \ker (A^\ast A)\)</span>. 따라서 <span class="math inline">\(\ker (A^\ast A) = \ker (A)\)</span>.</p>
 <p>(<span class="math inline">\(3\)</span>) <a href="ch1_08_operators_on_innerproduct_space.html#thm-kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> 과 (<span class="math inline">\(2\)</span>) 로부터 <span class="math inline">\(\text{im}(A^\ast A) = (\ker(A^\ast A))^\perp = (\ker (A))^\perp = \text{im}(A^\ast)\)</span> 임을 안다.</p>
 <p>(<span class="math inline">\(4\)</span>) <a href="ch1_08_operators_on_innerproduct_space.html#exr-axler_7_A_5" class="quarto-xref">연습문제&nbsp;<span>6.9</span></a> 로부터 <span class="math inline">\(\text{rank}(A) = \text{rank}(A^\ast)\)</span>. (<span class="math inline">\(3\)</span>) 으로부터 <span class="math inline">\(\text{rank}(A^\ast) = \text{rank}(A^\ast A)\)</span>. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -550,7 +538,7 @@ window.Quarto = {
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{A}\)</span> 의 특이값의 갯수는 <span class="math inline">\(n\)</span> 개이다. 특이값을 <span class="math inline">\(s_1,\ldots,\,s_n\)</span> 이라고 하고 관례를 따라 <span class="math inline">\(s_1 \ge \cdots\ge s_n\)</span> 이라고 하면 <span class="math inline">\(s_1 \ge \cdots \ge s_M &gt;0\)</span> 이며 <span class="math inline">\(s_{M+1}= \cdots = s_{n}\)</span> 이다. <span class="math inline">\(\boldsymbol{A}^\ast\boldsymbol{A}\)</span> 의 고유값 <span class="math inline">\({s_i}^2\)</span> 에 대한 정규화된 <span class="math inline">\(\boldsymbol{A}^\ast\boldsymbol{A}\)</span> 의 고유벡터를 <span class="math inline">\(\{\boldsymbol{e}_i: i=1,\ldots,\,n\}\)</span> 라고 하자. 그리고 <span class="math inline">\(j=1,\ldots,\,M\)</span> 에 대해</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{A}\)</span> 의 특이값의 갯수는 <span class="math inline">\(n\)</span> 개이다. 특이값을 <span class="math inline">\(s_1,\ldots,\,s_n\)</span> 이라고 하고 관례를 따라 <span class="math inline">\(s_1 \ge \cdots\ge s_n\)</span> 이라고 하면 <span class="math inline">\(s_1 \ge \cdots \ge s_M &gt;0\)</span> 이며 <span class="math inline">\(s_{M+1}= \cdots = s_{n}=0\)</span> 이다. <span class="math inline">\(\boldsymbol{A}^\ast\boldsymbol{A}\)</span> 의 고유값 <span class="math inline">\({s_i}^2\)</span> 에 대한 정규화된 <span class="math inline">\(\boldsymbol{A}^\ast\boldsymbol{A}\)</span> 의 고유벡터를 <span class="math inline">\(\{\boldsymbol{e}_i: i=1,\ldots,\,n\}\)</span> 라고 하자. 그리고 <span class="math inline">\(j=1,\ldots,\,M\)</span> 에 대해</p>
 <p><span class="math display">\[
 \boldsymbol{f}_j = \dfrac{\boldsymbol{Ae}_j}{s_j},\qquad j=1,\ldots,\,M
 \]</span></p>
@@ -577,7 +565,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-eigenvector_for_signular_value" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.4 (특이벡터)</strong></span> <a href="#prp-for_svd" class="quarto-xref">명제&nbsp;<span>8.7</span></a> 에서 정의된 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})\)</span> 의 정규직교기저벡터 <span class="math inline">\(\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\)</span> 를 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 <strong>오른쪽 특이벡터 (right singular vectors)</strong> 라고 한다. 또한 <span class="math inline">\(\mathcal{M}_m(\mathbb{F})\)</span> 의 정규직교기저벡터 <span class="math inline">\(\boldsymbol{f}_1,\ldots,\,\boldsymbol{f}_m\)</span> 을 <strong>왼쪽 특이 벡터(left singular vectors)</strong> 라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 8.3 (특이벡터)</strong></span> <a href="#prp-for_svd" class="quarto-xref">명제&nbsp;<span>8.7</span></a> 에서 정의된 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})\)</span> 의 정규직교기저벡터 <span class="math inline">\(\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\)</span> 를 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 <strong>오른쪽 특이벡터 (right singular vectors)</strong> 라고 한다. 또한 <span class="math inline">\(\mathcal{M}_m(\mathbb{F})\)</span> 의 정규직교기저벡터 <span class="math inline">\(\boldsymbol{f}_1,\ldots,\,\boldsymbol{f}_m\)</span> 을 <strong>왼쪽 특이 벡터(left singular vectors)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
@@ -607,7 +595,7 @@ window.Quarto = {
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-svd_2" class="theorem">
-<p><span class="theorem-title"><strong>정리 8.2 (2차 특이값 분해)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 가 <span class="math inline">\(\text{rank} (\boldsymbol{A}) \ge 1\)</span> 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{U}\in \mathcal{M}_{m \times m}(\mathbb{F})\)</span> 과 대각성분이 1이며 나머지 성분은 0 인 직사각행렬 <span class="math inline">\(\boldsymbol{\Sigma}\in \mathcal{M}_{M \times n}(\mathbb{F})\)</span> 그리고 역시 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{V}=\mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>정리 8.2 (2차 특이값 분해)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 가 <span class="math inline">\(\text{rank} (\boldsymbol{A}) \ge 1\)</span> 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{U}\in \mathcal{M}_{m \times m}(\mathbb{F})\)</span> 과 대각성분이 1이며 나머지 성분은 0 인 직사각행렬 <span class="math inline">\(\boldsymbol{\Sigma}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 그리고 역시 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{V}=\mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
 \boldsymbol{A} = \boldsymbol{U\Sigma V}^\ast
 \]</span></p>
@@ -625,7 +613,7 @@ window.Quarto = {
 \boldsymbol{U} \begin{bmatrix} s_1\langle \boldsymbol{v},\,\boldsymbol{e}_1\rangle \\ \vdots \\ s_M\langle \boldsymbol{v},\, \boldsymbol{e}_M\rangle \\ 0 \cdot \langle \boldsymbol{v},\, \boldsymbol{e}_{M+1}\rangle \\ \vdots \\ 0 \cdot  \langle \boldsymbol{v},\,\boldsymbol{e}_n \rangle \end{bmatrix} = \sum_{i=1}^M s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{f}_i = \boldsymbol{Av}
 \end{aligned}
 \]</span></p>
-<p>이다. 즉 <span class="math inline">\(\boldsymbol{A} = \boldsymbol {U\Sigma V}\)</span> 이다.</p>
+<p>이다. 즉 <span class="math inline">\(\boldsymbol{A} = \boldsymbol {U\Sigma V}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p>많은 경우 <a href="#thm-svd_2" class="quarto-xref">정리&nbsp;<span>8.2</span></a> 의 형태로 특이값 분해를 사용한다.</p>
 <br>
@@ -669,6 +657,101 @@ window.Quarto = {
 </div>
 <p><br></p>
 </section>
+<section id="연습문제-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler4_7_E_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 8.2 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이다. <span class="math inline">\(L=0\)</span> 인 것의 필요충분 조건은 <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 인 것임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(L=0\)</span> 이면 <span class="math inline">\(L^\ast L=0\)</span> 이므로 <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 이다. <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 이면 <a href="#prp-properties_of_singular_value" class="quarto-xref">명제&nbsp;<span>8.5</span></a> (<span class="math inline">\(2\)</span>) 에 의해 <span class="math inline">\(\text{rank}(L)=0\)</span> 이므로 <span class="math inline">\(L=0\)</span> 이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler4_7_E_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 8.3 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이며 <span class="math inline">\(s&gt;0\)</span> 이다. <span class="math inline">\(s\)</span> 가 <span class="math inline">\(L\)</span> 의 특이값일 필요충분조건은 어떤 nonzero vector <span class="math inline">\(v\in V,\, w\in W\)</span> 에 대해 <span class="math inline">\(Lv=sw\)</span> 이며 <span class="math inline">\(L^\ast w = sv\)</span> 임을 보여라. (이런 조건을 만족하는 <span class="math inline">\(v,\,w\)</span> 를 <strong>슈미트 쌍(Schmidt pair)</strong> 라고 한다.)</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(s\)</span> 가 <span class="math inline">\(L\)</span> 의 특이값이라고 가정하자. <a href="#prp-for_svd" class="quarto-xref">명제&nbsp;<span>8.7</span></a> 에서 <span class="math inline">\(v=e_j,\, w=f_j\)</span> 라고 잡으면 <span class="math inline">\(Lv = sw\)</span> 이다. 또한 <span class="math inline">\(s^2 v = L^\ast L v = sL^\ast w\)</span> 이므로 <span class="math inline">\(L^\ast w = sv\)</span> 이다.</p>
+<p><span class="math inline">\(Lv=sw\)</span> 이며 <span class="math inline">\(L^\ast w=sv\)</span> 라면 <span class="math inline">\(L^\ast L v= s^2 v\)</span> 이므로 <span class="math inline">\(s\)</span> 는 <span class="math inline">\(L\)</span> 의 특이값이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler4_7_E_3" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 8.4 (Axler4th 7.E.3)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 이다. <span class="math inline">\(L\)</span> 의 고유값은 <span class="math inline">\(0\)</span> 이며 특이값은 <span class="math inline">\(0,\,5\)</span> 인 예를 들어라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\begin{bmatrix}0 &amp;0 \\5 &amp; 0\end{bmatrix}\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler4_7_E_4" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 8.5 (Axler4th 7.E.4)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1\)</span> 이 <span class="math inline">\(L\)</span> 의 가장 큰 특이값이며 <span class="math inline">\(s_n\)</span> 이 가장 작은 특이값이라고 하자.</p>
+<p><span class="math display">\[
+\{\|Lv\| : v\in V,\, \|v\|=1\}=[s_n,\,s_1]
+\]</span></p>
+<p>임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(L^\ast L \in \mathcal{L}(V)\)</span> 의 고유기저 <span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 와 특이값 <span class="math inline">\(s_1,\ldots,\,s_n\)</span> 에 대해 <span class="math inline">\(v=\sum_{j=1}^n \langle v,\,e_j\rangle e_j\)</span> 라고 하면 <span class="math display">\[
+\|Lv\|^2 =\langle L^\ast L v,v\rangle = \sum_{j=1}^n s_j^2 |\langle v,\,e_j\rangle|^2
+\]</span></p>
+<p>이다. <span class="math inline">\(\sum_{j=1}^n |\langle v,\,e_j\rangle|^2 = \|v\|^2=1\)</span> 이므로 문제가 성립한다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler4_7_E_5" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 8.6 (Axler4th 7.E.5)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 가 <span class="math inline">\(T(x,\,y) = (-4y,\,x)\)</span> 로 정의되었다. <span class="math inline">\(L\)</span> 의 특이값을 구하라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>표준기저에 대한 행렬형태는 <span class="math inline">\(\begin{bmatrix} 0 &amp; -4 \\ 1 &amp; 0 \end{bmatrix}\)</span> 이므로 특이값은 <span class="math inline">\(1\)</span> 과 <span class="math inline">\(4\)</span> 이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler4_7_E_7" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 8.7 (Axler4th 7.E.7)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 에르미트 이거나 <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span> 이고 <span class="math inline">\(L\)</span> 이 정규행렬이라고 하자. <span class="math inline">\(\lambda_1,\ldots,\,\lambda_n\)</span> 이 <span class="math inline">\(L\)</span> 의 고유값이며 고유공간의 차원에 맞추어 중복되어 있다. <span class="math inline">\(L\)</span> 의 특이값은 <span class="math inline">\(|\lambda_1|,\ldots,\,|\lambda_n|\)</span> 임을 보여라.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>주어진 조건의 연산자는 모두 고유값 분해가 가능하며 차이는 에르미트 행렬은 고유값이 실수이며, 정규행렬은 복소수이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler4_7_E_8" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 8.8 (Axler4th 7.E.8)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1,\ldots,\,s_m\)</span> 이 <span class="math inline">\(s_1\ge \cdots \ge s_m &gt; 0\)</span> 이며 <span class="math inline">\(e_1,\ldots,\,e_m\)</span> 은 <span class="math inline">\(V\)</span> 의 정규직교벡터이고 <span class="math inline">\(f_1,\ldots,\,f_m\)</span> 은 <span class="math inline">\(W\)</span> 의 정규직교벡터이며 <span class="math inline">\(v\in V\)</span> 에 대해</p>
+<p><span class="math display">\[
+Lv = s_1 \langle v,\,e_1\rangle f_1 + \cdots + s_n \langle v,\,e_n\rangle f_n
+\]</span></p>
+<p>이라고 하자.</p>
+<p> (<span class="math inline">\(a\)</span>) <span class="math inline">\(f_1,\ldots,\,f_m\)</span> 은 <span class="math inline">\(\text{im}(L)\)</span> 의 정규직교기저임을 보여라.</p>
+<p> (<span class="math inline">\(b\)</span>) <span class="math inline">\(e_1,\ldots,\,e_m\)</span> 은 <span class="math inline">\((\ker(L))^\perp\)</span> 의 정규직교기저임을 보여라.</p>
+<p> (<span class="math inline">\(c\)</span>) <span class="math inline">\(s_1,\ldots,\,s_m\)</span> 은 <span class="math inline">\(T\)</span> 의 양수인 특이값임을 보여라.</p>
+<p> (<span class="math inline">\(d\)</span>) <span class="math inline">\(k \in \{1,\ldots,m\}\)</span> 이면 <span class="math inline">\(e_k\)</span> 는 <span class="math inline">\(L^\ast L\)</span> 의 고유벡터로 그 고유값이 <span class="math inline">\(s_k^2\)</span> 임을 보여라.</p>
+<p> (<span class="math inline">\(e\)</span>) 모든 <span class="math inline">\(w\in W\)</span> 에 대해 다음이 성립함을 보여라.</p>
+<p><span class="math display">\[
+LL^\ast w = s_1^2 \langle w,\,f_1\rangle f_1 + \cdots + s_m^2 \langle w,\,f_m\rangle f_m.
+\]</span></p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(Lv\)</span> 가 정규직교벡터 <span class="math inline">\(\{f_1,\ldots,\,f_n\}\)</span> 의 선형결합이므로 <span class="math inline">\(f_1,\ldots,\,f_m\)</span> 은 <span class="math inline">\(\text{im}\)</span> 의 정규직교기저이다.</p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(\{e_1,\ldots,\,e_m,\,e_{m+1},\ldots,\,e_M\}\)</span> 이 <span class="math inline">\(V\)</span> 의 정규직교기저라고 하면 <span class="math inline">\(k&gt;m\)</span> 에 대해 <span class="math inline">\(Le_k = 0\)</span> 이므로 <span class="math inline">\(\{e_{m+1},\ldots,\,e_M\}\)</span> 이 <span class="math inline">\(\ker(L)\)</span> 의 정규직교기저이다. 따라서 <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 이 <span class="math inline">\((\ker(L))^\perp\)</span> 의 정규직교기저이다.</p>
+<p>(<span class="math inline">\(c\)</span>)</p>
+</div>
+<p><br></p>
+</section>
 </section>
 <section id="특이값-분해의-활용" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="특이값-분해의-활용"><span class="header-section-number">8.3</span> 특이값 분해의 활용</h2>
@@ -706,7 +789,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-norm_of_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.5 (행렬의 노름)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 의 노름 <span class="math inline">\(\|\boldsymbol{A}\|\)</span> 는 다음과 같이 정의된다.</p>
+<p><span class="theorem-title"><strong>정의 8.4 (행렬의 노름)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 의 노름 <span class="math inline">\(\|\boldsymbol{A}\|\)</span> 는 다음과 같이 정의된다.</p>
 <p><span class="math display">\[
 \|\boldsymbol{A}\| := \max \{ \|\boldsymbol{Av}\| : \|\boldsymbol{v}\|=1\}
 \]</span></p>
@@ -841,7 +924,7 @@ a_1 \boldsymbol{Be}_1 + \cdots + a_{k+1}\boldsymbol{Be}_{k+1} = \boldsymbol{0}
 </div>
 <div class="callout-body-container">
 <div id="def-polar_decomposition" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.6 (행렬의 극분해)</strong></span> <a href="#prp-polar_decomposition" class="quarto-xref">명제&nbsp;<span>8.14</span></a> 에 따라 정사각 행렬을 유니타리 행렬과 non-negative 행렬의 곱으로 표현하는 것을 행렬의 <strong>극분해(polar decomposition)</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 8.5 (행렬의 극분해)</strong></span> <a href="#prp-polar_decomposition" class="quarto-xref">명제&nbsp;<span>8.14</span></a> 에 따라 정사각 행렬을 유니타리 행렬과 non-negative 행렬의 곱으로 표현하는 것을 행렬의 <strong>극분해(polar decomposition)</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>

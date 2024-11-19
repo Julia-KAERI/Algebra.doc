@@ -13,7 +13,7 @@ crossref:
 
 #### Positive Definite 행렬 와 제곱근 행렬
 
-에르미트 행렬 $\boldsymbol{A}$ 이 임의의 벡터 $\boldsymbol{v}$ 에 대해,$\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle > 0$ 일 때 $\boldsymbol{A}$ 를 **positve** 혹은 **positive definite** 라 하고 $\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle \ge 0$ 일 때 $\boldsymbol{A}$ 를 **non-negative** 혹은 **positive semidefinite** 라 한다. $\boldsymbol{A}$ 가 positive 이거나 positive definite 일 때  $\boldsymbol{A}=\boldsymbol{R}^2$ 인 행렬 $\boldsymbol{R}$ 이 존재하면 $\boldsymbol{R}$ 을 $\boldsymbol{A}$ 의 **제곱근 행렬**이고 하고 $\sqrt{\boldsymbol{A}}$ 라고 쓴다. 행렬 $\boldsymbol{A}$ 의 제곱근 행렬이 존재 할 때 $\boldsymbol{A}$ 가 제곱근 행렬을 가진다라고 한다.
+에르미트 행렬 $\boldsymbol{A}$ 이 임의의 벡터 $\boldsymbol{v}$ 에 대해 $\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle > 0$ 일 때 $\boldsymbol{A}$ 를 **positve** 혹은 **positive definite** 라 하고 $\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle \ge 0$ 일 때 $\boldsymbol{A}$ 를 **non-negative** 혹은 **positive semidefinite** 라 한다. $\boldsymbol{A}$ 가 positive 이거나 positive definite 일 때  $\boldsymbol{A}=\boldsymbol{R}^2$ 인 행렬 $\boldsymbol{R}$ 이 존재하면 $\boldsymbol{R}$ 을 $\boldsymbol{A}$ 의 **제곱근 행렬** 이라고 하고 $\sqrt{\boldsymbol{A}}$ 라고 쓴다. 행렬 $\boldsymbol{A}$ 의 제곱근 행렬이 존재 할 때 $\boldsymbol{A}$ 가 제곱근 행렬을 가진다라고 한다.
 
 :::
 :::
@@ -101,18 +101,6 @@ $$
 
 :::
 
-</br>
-
-::: {.callout-note appearance="minimal" icon="false"}
-::: {#def-square_root_matrix}
-
-#### $\sqrt{\boldsymbol{A}}$
-
-$\boldsymbol{A}$ 가 non-negative 행렬일 때 $\boldsymbol{A}$ 의 non-negative 한 제곱근 행렬을 $\sqrt{\boldsymbol{A}}$ 라고 쓴다.
-
-:::
-:::
-
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-squareroot_matrix}
@@ -172,7 +160,7 @@ $\boldsymbol{u}\in \ker \boldsymbol{B}$ 라 하자. $\boldsymbol{BAu} =\boldsymb
 ::: {#def-singular_value_of_matrix}
 
 #### 특이값
-$A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\sqrt{A^\ast A}$ 의 고유값을 **특이값(singular value)** 라 한다. $\sqrt{A^\ast A}$ 가 positive 이므로 당연히 모든 특이값은 $0$ 이 아닌 실수이다. 특이값을 열거할때는 보통 가장 큰 값부터 내림차순으로 열거한다. 따라서 특이값 $s_1,\ldots,\,s_n$ 이라고 하면 $s_1 \ge s_2 \ge \cdots \ge s_n$ 을 의미한다.
+$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 의 고유값을 **특이값(singular value)** 라 한다. 특이값을 열거할때는 보통 가장 큰 값부터 내림차순으로 열거한다. 따라서 특이값 $s_1,\ldots,\,s_n$ 이라고 하면 $s_1 \ge s_2 \ge \cdots \ge s_n$ 을 의미한다.
 
 :::
 :::
@@ -199,7 +187,7 @@ $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한다.
 
 ($1$) $(A^\ast A)^\ast = A^\ast A$ 이므로 $A^\ast A$ 는 에르미트 행렬이다. 또한 $\langle A^\ast Au,\, v\rangle = \|Au\|^2\ge 0$ 이므로 $A^\ast A$ 는 positive 이다.
 
-($2$) $u\in \ker(A^\ast A) \implies \langle A^\ast Au,\, v\rangle = \|Au\|^2=0$ 이므로 $u\in \ker (A)$. 역으로 $u\in \ker A$ 이면 $Au=0$ 이므로 $A^\ast A=0$ 이며, 따라서 $u\in \ker (A^\ast A)$. 따라서 $\ker (A^\ast A) = \ker (A)$.
+($2$) $u\in \ker(A^\ast A) \implies \langle A^\ast Au,\, v\rangle = \|Au\|^2=0$ 이므로 $u\in \ker (A)$. 역으로 $u\in \ker A$ 이면 $Au=0$ 이므로 $A^\ast A u=0$ 이며, 따라서 $u\in \ker (A^\ast A)$. 따라서 $\ker (A^\ast A) = \ker (A)$.
 
 ($3$) @thm-kernel_image_of_adjoint_operator 과 ($2$) 로부터 $\text{im}(A^\ast A) = (\ker(A^\ast A))^\perp = (\ker (A))^\perp = \text{im}(A^\ast)$ 임을 안다. 
 
@@ -278,7 +266,7 @@ $$
 
 ::: {.proof}
 
-$\boldsymbol{A}$ 의 특이값의 갯수는 $n$ 개이다. 특이값을 $s_1,\ldots,\,s_n$ 이라고 하고 관례를 따라 $s_1 \ge \cdots\ge s_n$ 이라고 하면 $s_1 \ge \cdots \ge s_M >0$ 이며 $s_{M+1}= \cdots = s_{n}$ 이다. $\boldsymbol{A}^\ast\boldsymbol{A}$ 의 고유값 ${s_i}^2$ 에 대한 정규화된 $\boldsymbol{A}^\ast\boldsymbol{A}$ 의 고유벡터를 $\{\boldsymbol{e}_i: i=1,\ldots,\,n\}$ 라고 하자. 그리고 $j=1,\ldots,\,M$ 에 대해 
+$\boldsymbol{A}$ 의 특이값의 갯수는 $n$ 개이다. 특이값을 $s_1,\ldots,\,s_n$ 이라고 하고 관례를 따라 $s_1 \ge \cdots\ge s_n$ 이라고 하면 $s_1 \ge \cdots \ge s_M >0$ 이며 $s_{M+1}= \cdots = s_{n}=0$ 이다. $\boldsymbol{A}^\ast\boldsymbol{A}$ 의 고유값 ${s_i}^2$ 에 대한 정규화된 $\boldsymbol{A}^\ast\boldsymbol{A}$ 의 고유벡터를 $\{\boldsymbol{e}_i: i=1,\ldots,\,n\}$ 라고 하자. 그리고 $j=1,\ldots,\,M$ 에 대해 
 
 $$
 \boldsymbol{f}_j = \dfrac{\boldsymbol{Ae}_j}{s_j},\qquad j=1,\ldots,\,M
@@ -364,7 +352,7 @@ $$
 
 #### 2차 특이값 분해
 
-$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 $\text{rank} (\boldsymbol{A}) \ge 1$ 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 $\boldsymbol{U}\in \mathcal{M}_{m \times m}(\mathbb{F})$ 과 대각성분이 1이며 나머지 성분은 0 인 직사각행렬 $\boldsymbol{\Sigma}\in \mathcal{M}_{M \times n}(\mathbb{F})$ 그리고 역시 서로 직교하는 열벡터로 구성된 $\boldsymbol{V}=\mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 
+$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 $\text{rank} (\boldsymbol{A}) \ge 1$ 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 $\boldsymbol{U}\in \mathcal{M}_{m \times m}(\mathbb{F})$ 과 대각성분이 1이며 나머지 성분은 0 인 직사각행렬 $\boldsymbol{\Sigma}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 그리고 역시 서로 직교하는 열벡터로 구성된 $\boldsymbol{V}=\mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 
 
 $$
 \boldsymbol{A} = \boldsymbol{U\Sigma V}^\ast
@@ -390,7 +378,7 @@ $$
 \end{aligned}
 $$
 
-이다. 즉 $\boldsymbol{A} = \boldsymbol {U\Sigma V}$ 이다. 
+이다. 즉 $\boldsymbol{A} = \boldsymbol {U\Sigma V}$ 이다. $\square$
 
 :::
 
@@ -458,6 +446,172 @@ $$
 
 :::
 
+</br>
+
+### 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+::: {#exr-axler4_7_E_1}
+
+#### Axler4th 7.E.1
+
+$L\in \mathcal{L}(V,\,W)$ 이다. $L=0$ 인 것의 필요충분 조건은 $L$ 의 모든 특이값이 $0$ 인 것임을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$L=0$ 이면 $L^\ast L=0$ 이므로 $L$ 의 모든 특이값이 $0$ 이다. $L$ 의 모든 특이값이 $0$ 이면 @prp-properties_of_singular_value ($2$) 에 의해 $\text{rank}(L)=0$ 이므로 $L=0$ 이다.
+
+:::
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4_7_E_2}
+
+#### Axler4th 7.E.1
+
+$L\in \mathcal{L}(V,\,W)$ 이며 $s>0$ 이다. $s$ 가 $L$ 의 특이값일 필요충분조건은 어떤 nonzero vector $v\in V,\, w\in W$ 에 대해 $Lv=sw$ 이며 $L^\ast w = sv$ 임을 보여라. (이런 조건을 만족하는 $v,\,w$ 를 **슈미트 쌍(Schmidt pair)** 라고 한다.)
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$s$ 가 $L$ 의 특이값이라고 가정하자. @prp-for_svd 에서 $v=e_j,\, w=f_j$ 라고 잡으면 $Lv = sw$ 이다. 또한 $s^2 v = L^\ast L v = sL^\ast w$ 이므로 $L^\ast w = sv$ 이다.
+
+$Lv=sw$ 이며 $L^\ast w=sv$ 라면 $L^\ast L v= s^2 v$ 이므로 $s$ 는 $L$ 의 특이값이다.
+:::
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4_7_E_3}
+
+#### Axler4th 7.E.3
+
+$L\in \mathcal{L}(\mathbb{C}^2)$ 이다. $L$ 의 고유값은 $0$ 이며 특이값은 $0,\,5$ 인 예를 들어라. 
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$\begin{bmatrix}0 &0 \\5 & 0\end{bmatrix}$
+:::
+
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4_7_E_4}
+
+#### Axler4th 7.E.4
+
+$L\in \mathcal{L}(V,\,W)$ 이고 $s_1$ 이 $L$ 의 가장 큰 특이값이며 $s_n$ 이 가장 작은 특이값이라고 하자. 
+
+$$
+\{\|Lv\| : v\in V,\, \|v\|=1\}=[s_n,\,s_1]
+$$
+
+임을 보여라.
+:::
+
+</div></br>
+
+::: {.solution}
+
+$L^\ast L \in \mathcal{L}(V)$ 의 고유기저 $\{e_1,\ldots,\,e_n\}$ 와 특이값 $s_1,\ldots,\,s_n$ 에 대해 $v=\sum_{j=1}^n \langle v,\,e_j\rangle e_j$ 라고 하면 
+$$
+\|Lv\|^2 =\langle L^\ast L v,v\rangle = \sum_{j=1}^n s_j^2 |\langle v,\,e_j\rangle|^2
+$$
+
+이다. $\sum_{j=1}^n |\langle v,\,e_j\rangle|^2 = \|v\|^2=1$ 이므로 문제가 성립한다. 
+
+:::
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4_7_E_5}
+
+#### Axler4th 7.E.5
+
+$L\in \mathcal{L}(\mathbb{C}^2)$ 가 $T(x,\,y) = (-4y,\,x)$ 로 정의되었다. $L$ 의 특이값을 구하라.
+:::
+
+</div></br>
+
+::: {.solution}
+
+표준기저에 대한 행렬형태는 $\begin{bmatrix} 0 & -4 \\ 1 & 0 \end{bmatrix}$ 이므로 특이값은 $1$ 과 $4$ 이다.
+
+:::
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4_7_E_7}
+
+#### Axler4th 7.E.7
+
+$L\in \mathcal{L}(V)$ 가 에르미트 이거나 $\mathbb{F}=\mathbb{C}$ 이고 $L$ 이 정규행렬이라고 하자. $\lambda_1,\ldots,\,\lambda_n$ 이 $L$ 의 고유값이며 고유공간의 차원에 맞추어 중복되어 있다. $L$ 의 특이값은 $|\lambda_1|,\ldots,\,|\lambda_n|$ 임을 보여라.
+:::
+
+</div></br>
+
+::: {.solution}
+
+주어진 조건의 연산자는 모두 고유값 분해가 가능하며 차이는 에르미트 행렬은 고유값이 실수이며, 정규행렬은 복소수이다. 
+
+:::
+
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4_7_E_8}
+
+#### Axler4th 7.E.8
+
+$L\in \mathcal{L}(V,\,W)$ 이고 $s_1,\ldots,\,s_m$ 이 $s_1\ge \cdots \ge s_m > 0$ 이며 $e_1,\ldots,\,e_m$ 은 $V$ 의 정규직교벡터이고 $f_1,\ldots,\,f_m$ 은 $W$ 의 정규직교벡터이며 $v\in V$ 에 대해
+
+$$
+Lv = s_1 \langle v,\,e_1\rangle f_1 + \cdots + s_n \langle v,\,e_n\rangle f_n
+$$
+
+이라고 하자.
+
+&emsp;($a$) $f_1,\ldots,\,f_m$ 은 $\text{im}(L)$ 의 정규직교기저임을 보여라.
+
+&emsp;($b$) $e_1,\ldots,\,e_m$ 은 $(\ker(L))^\perp$ 의 정규직교기저임을 보여라.
+
+&emsp;($c$) $s_1,\ldots,\,s_m$ 은 $T$ 의 양수인 특이값임을 보여라.
+
+&emsp;($d$) $k \in \{1,\ldots,m\}$ 이면 $e_k$ 는 $L^\ast L$ 의 고유벡터로 그 고유값이 $s_k^2$ 임을 보여라.
+
+&emsp;($e$) 모든 $w\in W$ 에 대해 다음이 성립함을 보여라.
+
+$$
+LL^\ast w = s_1^2 \langle w,\,f_1\rangle f_1 + \cdots + s_m^2 \langle w,\,f_m\rangle f_m.
+$$
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+($a$) $Lv$ 가 정규직교벡터 $\{f_1,\ldots,\,f_n\}$ 의 선형결합이므로 $f_1,\ldots,\,f_m$ 은 $\text{im}$ 의 정규직교기저이다.
+
+($b$) $\{e_1,\ldots,\,e_m,\,e_{m+1},\ldots,\,e_M\}$ 이 $V$ 의 정규직교기저라고 하면 $k>m$ 에 대해 $Le_k = 0$ 이므로 $\{e_{m+1},\ldots,\,e_M\}$ 이 $\ker(L)$ 의 정규직교기저이다. 따라서 $\{e_1,\ldots,\,e_m\}$ 이 $(\ker(L))^\perp$ 의 정규직교기저이다.
+
+($c$)
+:::
 
 </br>
 
