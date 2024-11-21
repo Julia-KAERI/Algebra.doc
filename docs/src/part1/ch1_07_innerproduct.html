@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>대수학 - 5&nbsp; 내적</title>
+<title>5&nbsp; 내적 – 대수학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -127,13 +127,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part1/part1.html">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</a></li><li class="breadcrumb-item"><a href="../../src/part1/ch1_07_innerproduct.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">내적</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -165,7 +165,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part1/part1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -224,7 +224,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part2/part2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">II. 군 (Groups)</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -259,7 +259,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part3/part3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">III. 심화 선형대수학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -354,10 +354,15 @@ window.Quarto = {
   <li><a href="#sec-jordan_von_neumann_theorem" id="toc-sec-jordan_von_neumann_theorem" class="nav-link" data-scroll-target="#sec-jordan_von_neumann_theorem"><span class="header-section-number">5.4</span> 조르당-폰 노이만 정리</a></li>
   <li><a href="#직교-여공간-orthogonal-complement-과-orthogonal-projection" id="toc-직교-여공간-orthogonal-complement-과-orthogonal-projection" class="nav-link" data-scroll-target="#직교-여공간-orthogonal-complement-과-orthogonal-projection"><span class="header-section-number">5.5</span> 직교 여공간 (Orthogonal complement) 과 Orthogonal projection</a>
   <ul class="collapse">
-  <li><a href="#orthogonal-projection" id="toc-orthogonal-projection" class="nav-link" data-scroll-target="#orthogonal-projection"><span class="header-section-number">5.5.1</span> Orthogonal projection</a></li>
-  <li><a href="#부분공간까지의-거리" id="toc-부분공간까지의-거리" class="nav-link" data-scroll-target="#부분공간까지의-거리"><span class="header-section-number">5.5.2</span> 부분공간까지의 거리</a></li>
+  <li><a href="#sec-part1_orthogonal_projection" id="toc-sec-part1_orthogonal_projection" class="nav-link" data-scroll-target="#sec-part1_orthogonal_projection"><span class="header-section-number">5.5.1</span> Orthogonal projection</a></li>
   </ul></li>
+  <li><a href="#최소화문제와-의사역행렬" id="toc-최소화문제와-의사역행렬" class="nav-link" data-scroll-target="#최소화문제와-의사역행렬"><span class="header-section-number">5.6</span> 최소화문제와 의사역행렬</a>
+  <ul class="collapse">
+  <li><a href="#sec-part1_minimization_problems" id="toc-sec-part1_minimization_problems" class="nav-link" data-scroll-target="#sec-part1_minimization_problems"><span class="header-section-number">5.6.1</span> 최소화 문제</a></li>
+  <li><a href="#sec-part1_pseudoinverse" id="toc-sec-part1_pseudoinverse" class="nav-link" data-scroll-target="#sec-part1_pseudoinverse"><span class="header-section-number">5.6.2</span> 의사 역사상</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
+  </ul></li>
+  <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
   </ul>
 </nav>
     </div>
@@ -383,6 +388,14 @@ window.Quarto = {
 </header>
 
 
+<div class="hidden">
+<p>% %</p>
+%
+<p><span class="math display">\[
+\DeclarePairedDelimiters{\set}{\{}{\}}
+\DeclareMathOperator*{\argmax}{argmax}
+\]</span></p>
+</div>
 <section id="내적-inner-product-과-노름-norm" class="level2 page-columns page-full" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="내적-inner-product-과-노름-norm"><span class="header-section-number">5.1</span> 내적 (Inner product) 과 노름 (norm)</h2>
 <div class="callout callout-style-simple callout-note no-icon">
@@ -811,7 +824,7 @@ T(v_i) \in \text{span}(v_1,\ldots,\,v_i) = \text{span}(e_1,\ldots,\,e_i)
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-Reisz_representaion_theorem" class="theorem">
+<div id="thm-reisz_representaion_theorem" class="theorem">
 <p><span class="theorem-title"><strong>정리 5.3 (Riesz 의 표현 정리 (Reisz Representation theorem))</strong></span> 유한차원 내적벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 선형 범함수 <span class="math inline">\(\varphi\)</span> 는 어떤 벡터 <span class="math inline">\(u\in V\)</span> 에 대한 내적으로 표현 될 수 있다. 즉,</p>
 <p><span class="math display">\[
 \varphi (v) = \langle v,\, u\rangle
@@ -847,7 +860,7 @@ T(v_i) \in \text{span}(v_1,\ldots,\,v_i) = \text{span}(e_1,\ldots,\,e_i)
 <section id="sec-jordan_von_neumann_theorem" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="sec-jordan_von_neumann_theorem"><span class="header-section-number">5.4</span> 조르당-폰 노이만 정리</h2>
 <p>우리는 앞서 <a href="#prp-norm_of_innerproduct_space" class="quarto-xref">명제&nbsp;<span>5.4</span></a> 에서 내적벡터공간에는 자연스러운 거리함수가 존재한다는 것을 보였다. 즉 내적공간은 거리공간이다. 그렇다면 어떤 조건에서 거리공간은 내적공간이 될 수 있을까를 말해주는 것이 조르당-폰 노이만 정리이다. 결론적으로 말하자면 거리공간에 사다리꼴 공식이 성립한다면 내적공간이 되며 이것을 조르당-폰 노이만 정리라고 한다. 우선 실벡터 공간에 대해서 보이고 이후 복소벡터 공간에서 보이도록 하자. 다만 이것의 증명을 위해서는 연속에 대한 해석학적인 지식이 필요하다.</p>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-jordan_von_neumann_1" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 5.2</strong></span> <span class="math inline">\(\mathbb{R}\)</span>-거리 공간 <span class="math inline">\(V\)</span> 에서 함수 <span class="math inline">\(\phi : V \times V \to [0, \infty)\)</span> 를 다음과 같이 정의하자.</p>
@@ -880,7 +893,7 @@ T(v_i) \in \text{span}(v_1,\ldots,\,v_i) = \text{span}(e_1,\ldots,\,e_i)
 \]</span></p>
 <p>이므로 <span class="math inline">\(\phi (u+u',v) = \phi(u,v)+\phi(u', v)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-jordan_von_neumann_2" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 5.3</strong></span> <a href="#lem-jordan_von_neumann_1" class="quarto-xref">보조정리&nbsp;<span>5.2</span></a> 과 같은 조건에서 <span class="math inline">\(u,\,v\in V,\, c\in \mathbb{R}\)</span> 일 때 다음이 성립한다.</p>
@@ -934,7 +947,7 @@ g(x)-g(x_0) = \phi(xu, v) - \phi (x_0u, v) = \phi((x-x_0)u, v)
 </div>
 <p><br></p>
 <p>이제 복소벡터공간에서 증명하자.</p>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-jordan_von_neumann_3" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 5.4</strong></span> <span class="math inline">\(\mathbb{C}\)</span>-거리공간 <span class="math inline">\(V\)</span> 에서 함수 <span class="math inline">\(\psi : V \times V \to \mathbb{C}\)</span> 를 다음과 같이 정의한다.</p>
@@ -955,7 +968,7 @@ g(x)-g(x_0) = \phi(xu, v) - \phi (x_0u, v) = \phi((x-x_0)u, v)
 \]</span></p>
 <p>로 놓으면 <span class="math inline">\(\psi(u, v) = \psi_R(u, v)+ i\psi_I (u, v)\)</span> 이다. <span class="math inline">\(\psi_R(u+u',v)= \psi_R(u,v) + \psi_R(u',v)\)</span> 인것은 <a href="#lem-jordan_von_neumann_1" class="quarto-xref">보조정리&nbsp;<span>5.2</span></a> 에서 보였다. <span class="math inline">\(\psi_I(u, v) = \psi_R(u, iv)\)</span> 이므로 <span class="math inline">\(\psi_I(u+u',v)= \psi_I(u,v) + \psi_I(u',v)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-jordan_von_neumann_4" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 5.5</strong></span> <span class="math inline">\(\mathbb{C}\)</span>-거리공간 <span class="math inline">\(V\)</span> 에서 <a href="#lem-jordan_von_neumann_3" class="quarto-xref">보조정리&nbsp;<span>5.4</span></a> 에서 정의된 함수 <span class="math inline">\(\psi\)</span> (<a href="#eq-innerproduct_from_norm_in_C" class="quarto-xref">식&nbsp;<span>5.3</span></a>) 는 <span class="math inline">\(c \in \mathbb{F}\)</span> 에 대해 다음을 만족한다.</p>
@@ -1003,7 +1016,7 @@ g(x)-g(x_0) = \phi(xu, v) - \phi (x_0u, v) = \phi((x-x_0)u, v)
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-orthogonal_complement" class="theorem definition">
+<div id="def-part1_orthogonal_complement" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 5.5 (직교 여공간)</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 의 부분집합 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\(U\)</span> 전체 원소에 대해 수직인 벡터의 집합은 벡터공간을 이루며 이를 <span class="math inline">\(U\)</span> 에 대한 <strong>직교 여공간 (orthogonal complement)</strong> 이라 하고 <span class="math inline">\(U^\perp\)</span> 라 쓴다. 즉,</p>
 <p><span class="math display">\[
 U^\perp = \{ v\in V : \langle v,\, u\rangle = 0 \text{ for every }u\in U\}
@@ -1048,13 +1061,9 @@ U^\perp = \{ v\in V : \langle v,\, u\rangle = 0 \text{ for every }u\in U\}
 <p>이므로 <span class="math inline">\(w\in U^\perp\)</span> 이다. <a href="#prp-orthogonal_complement_is_a_vector_space" class="quarto-xref">명제&nbsp;<span>5.7</span></a> 의 (<span class="math inline">\(3\)</span>) 에 따라 <span class="math inline">\(U\cap U^\perp = \{0_V\}\)</span> 이므로 <a href="ch1_01_vectorspace.html#prp-condition_for_direct_sum" class="quarto-xref">명제&nbsp;<span>1.4</span></a> 에 따라 <span class="math inline">\(V=U \oplus U^\perp\)</span> 이다.</p>
 </div>
 <p><br></p>
-<div class="callout callout-style-simple callout-warning no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>위의 <a href="#prp-generated_subspace_and_orthogonal_compliment" class="quarto-xref">명제&nbsp;<span>5.8</span></a> 는 <span class="math inline">\(U\)</span> 가 무한차원 벡터공간일 때 성립하지 않는 수 있다는 것을 보일 수 있다. <span class="math inline">\([-1,\,1]\)</span> 구간에서 연속인 함수의 집합 <span class="math inline">\(C_{[-1, 1]}\)</span> 는 벡터공간이며 내적을</p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-part1_orthogonal_space_in_infinite_dimensional_vector_space" class="theorem example">
+<p><span class="theorem-title"><strong>보기 5.6 (무한차원 벡터공간에서의 직교여공간)</strong></span> 위의 <a href="#prp-generated_subspace_and_orthogonal_compliment" class="quarto-xref">명제&nbsp;<span>5.8</span></a> 는 <span class="math inline">\(U\)</span> 가 무한차원 벡터공간일 때 성립하지 않는 수 있다는 것을 보일 수 있다. <span class="math inline">\([-1,\,1]\)</span> 구간에서 연속인 함수의 집합 <span class="math inline">\(C_{[-1, 1]}\)</span> 는 벡터공간이며 내적을</p>
 <p><span class="math display">\[
 \langle f,\, g\rangle = \int_{-1}^1 f(x)\, g(x) \, dx
 \]</span></p>
@@ -1068,18 +1077,21 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 \]</span></p>
 <p><span class="math inline">\(f_n(0)=0\)</span> 이며 <span class="math inline">\(f_n(x)\)</span> 는 <span class="math inline">\([-1,\,1]\)</span> 에서 연속인 함수이다. 즉 <span class="math inline">\(f_n \in U\)</span> 이다. 그렇다면</p>
 <p><span class="math display">\[
-\
-\int_{-1}^1 f_n(x)\, g(x)\, dx = \int_{-1}^{-\frac{1}{n}} g^2(x)\, dx +\int_{\frac{1}{n}}^1 g^2(x)\, dx + \dfrac{g\left(\frac{1}{n}\right)}{\frac{1}{n}} \int_{0}^{\frac{1}{n}}xg(x)\, dx - \dfrac{g\left(-\frac{1}{n}\right)}{\frac{1}{n}}\int_{-\frac{1}{n}}^0 xg(x)\, dx
+\begin{aligned}
+\int_{-1}^1 f_n(x)\, g(x)\, dx &amp;= \int_{-1}^{-\frac{1}{n}} g^2(x)\, dx + \int_{\frac{1}{n}}^1 g^2(x)\, dx \\[0.3em]
+&amp;+ \dfrac{g\left(\frac{1}{n}\right)}{\frac{1}{n}} \int_{0}^{\frac{1}{n}}xg(x)\, dx - \dfrac{g\left(-\frac{1}{n}\right)}{\frac{1}{n}}\int_{-\frac{1}{n}}^0 xg(x)\, dx
+\end{aligned}
 \]</span></p>
 <p>이다. 적분에 대한 평균값 정리에 의해 <span class="math inline">\(\int_{0}^{1/n}xg(x) \, dx = n x_1 g(x_1)\)</span> 을 만족하는 <span class="math inline">\(x_1\in \left(0, \frac{1}{n}\right)\)</span> 이 존재하며, <span class="math inline">\(\int_{-1/n}^0 xg(x)\,dx = -nx_2 g(x_2)\)</span> 를 만족하는 <span class="math inline">\(x_2\in \left(-\frac{1}{n}, 0\right)\)</span> 이 존재한다. 따라서,</p>
 <p><span class="math display">\[
-\int_{-1}^1 f_n (x)\, g(x)\, dx =\ \int_{-1}^{-\frac{1}{n}} g^2(x)\, dx +\int_{\frac{1}{n}}^1 g^2(x)\, dx + g\left(\frac{1}{n}\right) x_1 g(x_1) + g\left(-\frac{1}{n}\right)x_2 g(x_2)
+\begin{aligned}
+\int_{-1}^1 f_n (x)\, g(x)\, dx &amp;= \int_{-1}^{-\frac{1}{n}} g^2(x)\, dx +\int_{\frac{1}{n}}^1 g^2(x)\, dx + g\left(\frac{1}{n}\right) x_1 g(x_1) + g\left(-\frac{1}{n}\right)x_2 g(x_2)
+\end{aligned}
 \]</span></p>
 <p>이다. <span class="math inline">\(n \to \infty\)</span> 극한에서 <span class="math inline">\(\displaystyle \int_{-1}^1 f_n (x) g(x) \, dx = \int_1^1 g^2(x) \, dx=0\)</span> 이어야 하며 이를 만족하는 <span class="math inline">\(g(x) = 0\)</span> 뿐이다.</p>
 </div>
 </div>
-</div>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-uniqueness_of_orthogonal_decomposition" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.9</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(v\in V\)</span> 는 어떤 <span class="math inline">\(u\in U\)</span> 와 <span class="math inline">\(w\in U^\perp\)</span> 에 대해 <span class="math inline">\(v = u+w\)</span> 로 나타낼 수 있으며, 이를 만족하는 <span class="math inline">\(u,\,w\)</span> 는 유일하다.</p>
@@ -1098,8 +1110,8 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 </div>
 </div>
 <p><br></p>
-<section id="orthogonal-projection" class="level3" data-number="5.5.1">
-<h3 data-number="5.5.1" class="anchored" data-anchor-id="orthogonal-projection"><span class="header-section-number">5.5.1</span> Orthogonal projection</h3>
+<section id="sec-part1_orthogonal_projection" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="sec-part1_orthogonal_projection"><span class="header-section-number">5.5.1</span> Orthogonal projection</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1148,18 +1160,36 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 <p>  (<span class="math inline">\(4\)</span>) <span class="math inline">\(v-P_U (v) \in U^\perp\)</span>.</p>
 <p>  (<span class="math inline">\(5\)</span>) <span class="math inline">\(P_U^2 = P_U\)</span>.</p>
 <p>  (<span class="math inline">\(6\)</span>) <span class="math inline">\(\|P_U (v) \| \le \|v\|\)</span>.</p>
+<p>  (<span class="math inline">\(7\)</span>) <span class="math inline">\(e_1,\ldots,\,e_m\)</span> 이 <span class="math inline">\(U\)</span> 의 정규직교기저이고 <span class="math inline">\(v\in V\)</span> 이면 다음이 성립한다.</p>
+<p><span class="math display">\[
+P_U(v) = \langle v,\,e_1\rangle e_1 + \cdots + \langle v,\,e_m \rangle e_m.
+\]</span></p>
 </div>
 </div>
 <p><br></p>
 </section>
-<section id="부분공간까지의-거리" class="level3" data-number="5.5.2">
-<h3 data-number="5.5.2" class="anchored" data-anchor-id="부분공간까지의-거리"><span class="header-section-number">5.5.2</span> 부분공간까지의 거리</h3>
-<p><span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 부분공간일 때 <span class="math inline">\(v\in V\)</span> 로부터 <span class="math inline">\(U\)</span> 까지의 거리 <span class="math inline">\(\|v-U\|\)</span> 는</p>
+</section>
+<section id="최소화문제와-의사역행렬" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="최소화문제와-의사역행렬"><span class="header-section-number">5.6</span> 최소화문제와 의사역행렬</h2>
+<section id="sec-part1_minimization_problems" class="level3" data-number="5.6.1">
+<h3 data-number="5.6.1" class="anchored" data-anchor-id="sec-part1_minimization_problems"><span class="header-section-number">5.6.1</span> 최소화 문제</h3>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-part1_distance_to_subspace" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 5.8 (부분공간 까지의 거리)</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 부분공간일 때 <span class="math inline">\(v\in V\)</span> 로부터 <span class="math inline">\(U\)</span> 까지의 거리 <span class="math inline">\(\|v-U\|\)</span> 는</p>
 <p><span class="math display">\[
-\|v-U\| = \min \{\|v-u\|,\, u\in U\}
+\|v-U\| := \min \{\|v-u\|,\, u\in U\}
 \]</span></p>
 <p>로 정의된다.</p>
-<br>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-distance_to_subspace" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.12</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 내적벡터공간이고 <span class="math inline">\(v\in V\)</span>, 이며 <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 부분공간일 때, <span class="math inline">\(v\)</span> 에서 <span class="math inline">\(U\)</span> 까지의 거리는 <span class="math inline">\(v\)</span> 에서 <span class="math inline">\(P_U (v)\)</span> 까지의 거리와 같다. 즉,</p>
@@ -1181,10 +1211,147 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 <p>이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-part1_approximation_of_sin_function" class="theorem example">
+<p><span class="theorem-title"><strong>보기 5.7 (사인 함수의 다항식 근사)</strong></span> <span class="math inline">\([-\pi,\, \pi]\)</span> 구간에서 <span class="math inline">\(\sin\)</span> 함수를 실계수 다항식으로 근사한다고 하자. 정해진 차수의 다항식 <span class="math inline">\(p(x)\)</span> 에 대해</p>
+<p><span class="math display">\[
+\int_{-\pi}^\pi \left| \sin x - p(x)\right|^2\, dx
+\]</span></p>
+<p>를 최소화하도록 <span class="math inline">\(p(x)\)</span> 의 계수를 정하는 것도 한가지 방법이다. 이제 <span class="math inline">\(C[-\pi,\, \pi]\)</span> 를 <span class="math inline">\([-\pi,\,\pi]\)</span> 구간에서의 연속인 실함수의 집합으로 정의하면 <span class="math inline">\(C:=C[-\pi,\, \pi]\)</span> 는 벡터공간이며 <span class="math inline">\(f,\,g\in \in C\)</span> 일 때 <span class="math inline">\(C\)</span> 에서의 내적을 아래와 같이 정의 할 수 있다는 것을 안다. (<a href="#exm-innerproduct_definded_by_intergration_in_R" class="quarto-xref">보기&nbsp;<span>5.3</span></a>)</p>
+<p><span class="math display">\[
+\langle f,\, g\rangle := \int_{-\pi}^{\pi} f(x)\,g(x)\, dx
+\]</span></p>
+<p><span class="math inline">\(\sin \in C[-\pi,\, \pi]\)</span> 이다. 이제 <span class="math inline">\(p(x)\)</span> 를 5차 이하의 다항식으로 제한하자. 그리고 5차 이하의 차수를 갖는 다항식의 집합 <span class="math inline">\(\mathbb{R}_5[x]\)</span> 에 대해 <span class="math inline">\(\mathbb{R}_5[x]\le C[-\pi,\, \pi]\)</span> 이다. <span class="math inline">\(\{1,\,x,\,x^2,\,x^3,\,x^4,\,x^5\}\)</span> 가 <span class="math inline">\(\mathbb{R}_5[x]\)</span> 의 기저이며 그람-슈미트 과정을 이용하여 <span class="math inline">\(\mathbb{R}_5[x]\)</span> 에서의 정규직교기저를 구할 수 있다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="sec-part1_pseudoinverse" class="level3" data-number="5.6.2">
+<h3 data-number="5.6.2" class="anchored" data-anchor-id="sec-part1_pseudoinverse"><span class="header-section-number">5.6.2</span> 의사 역사상</h3>
+<p><span class="math inline">\(L \in \mathcal{L}(V,\,W)\)</span>, <span class="math inline">\(b\in W\)</span> 이 주어졌을 때 방정식</p>
+<p><span class="math display">\[
+Lx = b
+\]</span></p>
+<p>를 만족하는 <span class="math inline">\(x\in V\)</span> 를 찾는 문제는 선형방정식 혹은 선형 시스템을 푸는 문제이다. <span class="math inline">\(\dim (V) \ne \dim (W)\)</span> 라면 정사각 행렬이 아니기 때문에 역행렬을 이용하여 풀 수 없으며, 따라서 해가 많이 존재하거나, 아니면 해가 아예 존재하지 않을 수도 있다. 이 경우 <span class="math inline">\(\|Lx-b\|\)</span> 를 최소화 하는 <span class="math inline">\(x\in V\)</span> 의 값을 구하는 문제가 유용한 경우가 많다.</p>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-part1_pseudoinverse_1" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 5.13</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 일 때 <span class="math inline">\(L|_{(\ker (L))^\perp}\)</span> 는 <span class="math inline">\((\ker L)^\perp \mapsto \text{im}(L)\)</span> 동형사상이다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(L|_{(\ker (L))^\perp}\)</span> 가 <span class="math inline">\((\ker (L))^\perp \mapsto \text{im}(L)\)</span> 전단사 임을 보이면 된다. <span class="math inline">\(v\in \ker \left(L|_{(\ker (L))^\perp}\right)\)</span> 이면 <span class="math inline">\(v\in (\ker (L))^\perp \cap \ker (L)\)</span> 이므로 <span class="math inline">\(v=0\)</span> 이다. 즉 <span class="math inline">\(L|_{(\ker (L))^\perp}\)</span> 는 단사이다.</p>
+<p>또한 <span class="math inline">\(\text{im}\left( L|_{(\ker (L))^\perp}\right) \subset \text{im}(L)\)</span> 임은 자명하다. <span class="math inline">\(w\in \text{im}(L)\)</span> 이면 <span class="math inline">\(w = Lv\)</span> 인 <span class="math inline">\(v\in \mathcal{M}_{n}(\mathbb{F})\)</span> 가 존재하며 <a href="#prp-generated_subspace_and_orthogonal_compliment" class="quarto-xref">명제&nbsp;<span>5.8</span></a> 에 따라 어떤 <span class="math inline">\(x\in\ker L,\, (\ker L)^\perp\)</span> 에 대해 <span class="math inline">\(v=x+y\)</span> 이다. 이 때 <span class="math inline">\(L|_{(\ker (L))^\perp} y = w\)</span> 이므로 <span class="math inline">\(w\in \text{im}\left( L|_{(\ker (L))^\perp}\right)\)</span> 이며 따라서 <span class="math inline">\(\text{im}\left( L|_{(\ker (L))^\perp}\right) = \text{im}(L)\)</span> 이다. 즉 <span class="math inline">\(L\in \mathcal{M}_{m\times n}(\mathbb{F})\)</span> 전사이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<p><a href="#prp-part1_pseudoinverse_1" class="quarto-xref">명제&nbsp;<span>5.13</span></a> 를 행렬의 입장에서 보자. <span class="math inline">\(V=(\ker L)^\perp \oplus (\ker L)\)</span> 이며 <span class="math inline">\(W=(\text{im}(L))\oplus (\text{im}(L))^\perp\)</span> 이다. <span class="math inline">\((\ker L)^\perp\)</span> 의 기저 <span class="math inline">\(\mathcal{B}_{V+} = (e_1,\ldots,\,e_n)\)</span> 을 확장하여 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B}_V=(e_1,\ldots,\,e_n,\,e_{n+1},\ldots,\,e_N)\)</span> 를 구성 할 수 있다. <span class="math inline">\(\mathcal{B}_{W+}=(f_1,\ldots,\,f_n)\)</span> 이 <span class="math inline">\(\text{im}(L)\)</span> 의 기저이며 이를 확장하여 <span class="math inline">\(W\)</span> 의 기저 <span class="math inline">\(\mathcal{B}_W=(f_1,\ldots,\,f_n,\,f_{n+1},\ldots,\,f_{M})\)</span> 을 구성 할 수 있다. 그렇다면 이 기저에 대한 <span class="math inline">\(L\)</span> 의 행렬표현은 다음과 같다.</p>
+<p><span class="math display">\[
+[L]_{\mathcal{B}_V,\mathcal{B}_W} = \begin{bmatrix} [L]_{\mathcal{B}_{V+}, \mathcal{B}_{W+}} &amp; \boldsymbol{0} \\ \boldsymbol{0} &amp; \boldsymbol{0}\end{bmatrix} .
+\]</span></p>
+<p>이 때 <span class="math inline">\([L]_{\mathcal{B}_{V+}, \mathcal{B}_{W+}}\)</span> 는 <span class="math inline">\(n \times n\)</span> 가역행렬이다.</p>
+<p><br></p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-part1_pseudo_inverse" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 5.9 (의사역행렬)</strong></span> <span class="math inline">\(L\in \mathcal{M}_{m \times n}\)</span> 에 대해 다음과 같이 정의된 <span class="math inline">\(L^+\in \mathcal{M}_{n \times n}\)</span> 을 <span class="math inline">\(L\)</span> 의 <strong>무어 펜로즈 역행렬 (Moorre-Penrose inverse matrix)</strong> 혹은 <strong>의사역행렬 (pseudo inverse matrix)</strong> 라고 한다.</p>
+<p><span class="math display">\[
+L^+ w = \left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1} P_{\text{im}(L)} w.
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="lem-part1_pseudoinverse_2" class="theorem lemma">
+<p><span class="theorem-title"><strong>보조정리 5.6</strong></span> 위의 <a href="#def-part1_pseudo_inverse" class="quarto-xref">정의&nbsp;<span>5.9</span></a> 에서</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(w\in (\text{im}(L))^\perp\)</span> 이면 <span class="math inline">\(L^+w = 0_V\)</span> 이고,</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(w\in \text{im}(L)\)</span> 이면 <span class="math inline">\(Ly = w\)</span> 를 만족하는 <span class="math inline">\(y\in (\ker L)^\perp\)</span> 는 <span class="math inline">\(y=L^+w\)</span> 가 유일하다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(w\in (\text{im}(L))^\perp\)</span> 이면 <span class="math inline">\(P_{\text{im}(L)}w=0_W\)</span> 이므로 <span class="math inline">\(L^+w=0_V\)</span> 이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(w\in \text{im}(L)\)</span> 이면 <span class="math inline">\(P_{\text{im}(L)}w=w\)</span> 이다. <span class="math inline">\(V = (\ker L) \oplus (\ker L)^\perp\)</span> 이므로 모든 <span class="math inline">\(x\in \ker L\)</span> 과 어떤 유일한 <span class="math inline">\(y\in (\ker L)^\perp\)</span> 에 대해 <span class="math inline">\(w=L(x+y)\)</span> 이며 <span class="math inline">\(\left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1}w=y\)</span> 이므로 <span class="math inline">\(LL^+w = Ly = w\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="lem-part1_pseudoinverse_3" class="theorem lemma">
+<p><span class="theorem-title"><strong>보조정리 5.7</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 일 때 다음이 성립한다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 이 가역사상이면 <span class="math inline">\(L^+=L^{-1}\)</span> 이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(LL^+=P_{\text{im}(L)}\)</span> 이다.</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(L^+L = P_{(\ker (L))^\perp}\)</span> 이다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 이 가역사상이면 <span class="math inline">\(\ker L = \{0_V\}\)</span> 이므로 <span class="math inline">\((\ker L)^\perp = V\)</span> 이고 <span class="math inline">\(P_{\text{im}(L)} = P_W = I\)</span> 이다. 따라서 <span class="math inline">\(L^+ = L^{-1}\)</span> 이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(w\in \text{im}(L)\)</span> 이면 <a href="#lem-part1_pseudoinverse_2" class="quarto-xref">보조정리&nbsp;<span>5.6</span></a> (<span class="math inline">\(2\)</span>) 에서 보였듯이 <span class="math inline">\(LL^+w = w\)</span> 이다. <span class="math inline">\(w\in (\text{im}(L))^\perp\)</span> 이면 역시 <a href="#lem-part1_pseudoinverse_2" class="quarto-xref">보조정리&nbsp;<span>5.6</span></a> (<span class="math inline">\(2\)</span>) 에서 보였듯이 <span class="math inline">\(LL^+w=0_W\)</span> 이다. 즉 <span class="math inline">\(LL^+ = P_{\text{im}(L)}\)</span> 이다.</p>
+<p>(<span class="math inline">\(3\)</span>) <span class="math inline">\(v\in (\ker L)^\perp\)</span> 라면 <span class="math inline">\(Lv =w\in \text{im}(L)\)</span> 이며 <span class="math inline">\(L^+ Lv = v\)</span> 이다. <span class="math inline">\(v\in \ker L\)</span> 이면 <span class="math inline">\(L^+Lv=0_V\)</span> 이므로 <span class="math inline">\(L^+L = P_{(\ker L)^\perp}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<p>이로부터 우리는 다음을 쉽게 보일 수 있다. 그리고 왜 <span class="math inline">\(L^+\)</span> 가 <span class="math inline">\(L\)</span> 의 의사 역행렬인지 알 수 있다.</p>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-part1_pseudoinverse" class="theorem">
+<p><span class="theorem-title"><strong>정리 5.6</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 일 때 다음이 성립한다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 이 전사이면 <span class="math inline">\(LL^+=I_W\)</span> 이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 이 단사이면 <span class="math inline">\(L^+L=I_V\)</span> 이다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><em>trivial</em></p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-part1_pseudoinverse_2" class="theorem">
+<p><span class="theorem-title"><strong>정리 5.7</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(b\in W\)</span> 라고 하자.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(x\in V\)</span> 일 때 <span class="math inline">\(\|L(L^+b)-b\| \le \|Lx-b\|\)</span> 이며 등호는 <span class="math inline">\(x\in L^+b +\ker L\)</span> 일 때만 성립한다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(x\in L^+ b+\ker L\)</span> 이면 <span class="math inline">\(\|L^+b\|\le \|x\|\)</span> 이며 등호는 <span class="math inline">\(x=L^+b\)</span> 일 때만 성립한다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(x\in V\)</span> 에 대해 <span class="math inline">\(Lx-b = (Lx - LL^+b) + (LL^+b -b)\)</span> 이다. <a href="#lem-part1_pseudoinverse_3" class="quarto-xref">보조정리&nbsp;<span>5.7</span></a> (<span class="math inline">\(2\)</span>) 에 따라 <span class="math inline">\((Lx-LL^+b) \in \text{im} (L)\)</span> 이며 <span class="math inline">\((LL^+b - b)\in (\text{im}L)^\perp\)</span> 이다. 따라서</p>
+<p><span class="math display">\[
+\|Lx-b\| = \|(Lx - LL^+b) + (LL^+b -b)\| = \|Lx-LL^+b\| + \|LL^+b - b\|
+\]</span></p>
+<p>이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(x\in L^+b + \ker L\)</span> 이면 <span class="math inline">\(x-L^+b \in \ker L\)</span> 이다. <span class="math inline">\(x=(x-L^+b) +L^+b\)</span> 이며 <span class="math inline">\(L^+\)</span> 의 정의에 의해 <span class="math inline">\(L^+b \in (\ker L)^\perp\)</span> 이므로</p>
+<p><span class="math display">\[
+\|x\| = \|(x-L^+b) +L^+b\| = \|x-L^+b\| +\|L^+b\|
+\]</span></p>
+<p>이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+최소화 문제의 해
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>원래의 우리는 주어진 <span class="math inline">\(L \in \mathcal{L}(V,\,W)\)</span> 과 <span class="math inline">\(b\in W\)</span> 에 대해 <span class="math inline">\(\|Lx-b\|\)</span> 를 최소화 하는 <span class="math inline">\(x\)</span> 를 찾고자 했다. <a href="#thm-part1_pseudoinverse_2" class="quarto-xref">정리&nbsp;<span>5.7</span></a> 로부터 우리는 <span class="math inline">\(x=L^+b\)</span> 일 때 최소가 됨을 알았다.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="연습문제" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
+<p><br></p>
 </section>
 </section>
-<section id="연습문제" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h2>
+<section id="연습문제-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h2>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_6_A_5" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.1 (Axler 6.A.5)</strong></span> <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 이며 모든 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\|T(v)\|\le \|v\|\)</span> 이다. 이 때 <span class="math inline">\(T-\sqrt{2}I\)</span> 는 가역임을 보여라.</p>
@@ -1612,18 +1779,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1655,7 +1811,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1663,7 +1841,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

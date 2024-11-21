@@ -6,6 +6,9 @@ crossref:
   chapters: true
 ---
 
+
+{{< include ../../latexmacros.qmd >}}
+
 </br>
 
 ## Adjoint 연산자와 행렬
@@ -16,10 +19,9 @@ $L\in \mathcal{L}(U,\,V)$ 에 대해 다음의 성질을 만족하는 $L^\ast : 
 
 $$
 \langle L (u),\,v \rangle = \langle u,\, L^\ast (v) \rangle.
-$$
+$$ {#eq-adjoint_function}
 
-우선 고정된 $v$ 에 대해 $\phi (u) = \langle Lu,\,v\rangle$ 는 선형 범함수(@exr-adjoint_operator_1) 이며 @thm-Reisz_representaion_theorem 에 의해 $\phi(u) = \langle u, w\rangle$ 인 $w\in U$ 가 유일하게 존재한다. 이제 함수 $L^\ast : V \to U$ 를 $L^\ast( v)= w$ 인 함수로 생각 할 수 있다. (뭔가 이상한가? 이상해야 하는데..) 이 $L^\ast$ 를 $L$ 에 대한 adjoint function 이라고 한다.
-
+우선 고정된 $v$ 에 대해 $\phi (u) = \langle Lu,\,v\rangle$ 는 선형 범함수(@exr-adjoint_operator_1) 이며 @thm-reisz_representaion_theorem 에 의해 $\phi(u) = \langle u, w\rangle$ 인 $w\in U$ 가 유일하게 존재한다. 이제 함수 $L^\ast : V \to U$ 를 $L^\ast( v)= w$ 인 함수로 생각 할 수 있다. (뭔가 이상한가? 이상해야 하는데..) 이 $L^\ast$ 를 $L$ 에 대한 adjoint function 이라고 한다.
 
 </br>
 
@@ -43,10 +45,11 @@ $$
 $$
 
 따라서 $\phi$ 는 선형범함수이다. 
-
 :::
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-adjoint_transformation}
 
@@ -69,7 +72,7 @@ $$
 :::
 
 
-즉 $L\in \mathcal{L}(U, V)$ 이면 $L^\ast \in \mathcal{L}(U, V)$ 이다. 이제 $L^\ast$ 를 $L$ 에 대한 adjoint transformation 이라고 한다. 여기서 한가지 짚어야 할 것이 있다. 우리는 리츠의 표현정리(@thm-Reisz_representaion_theorem) 를 이용하였는데 이 정리는 유한차원 벡터공간에서만 성립한다. 실제로 adjoint 는 유한차원 벡터공간에서만 유일하게 정해지며, 무한차원벡터공간에서는 유일하지 않을 수 있다$^1$.[$^1$ K. Hoffman, R. Kunze, *Linear Algebra*, 2nd Ed. pp 295]{.aside} 
+즉 $L\in \mathcal{L}(U, V)$ 이면 $L^\ast \in \mathcal{L}(U, V)$ 이다. 이제 $L^\ast$ 를 $L$ 에 대한 adjoint transformation 이라고 한다. 여기서 한가지 짚어야 할 것이 있다. 우리는 리츠의 표현정리(@thm-reisz_representaion_theorem) 를 이용하였는데 이 정리는 유한차원 벡터공간에서만 성립한다. 실제로 adjoint 는 유한차원 벡터공간에서만 유일하게 정해지며, 무한차원벡터공간에서는 유일하지 않을 수 있다$^1$.[$^1$ K. Hoffman, R. Kunze, *Linear Algebra*, 2nd Ed. pp 295]{.aside} 
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-adjoint}
@@ -81,7 +84,9 @@ $$
 :::
 :::
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-adjoint_matrix}
 
@@ -89,7 +94,7 @@ $L\in \mathcal{L}(U,\,V)$ 이며 $\mathcal{B}_U=(e_1,\ldots,\,e_n)$, $\mathcal{B
 
 $$
 (\boldsymbol{A}^\ast)_{ij} = \overline{(\boldsymbol{A})_{ji}}.
-$$
+$$ {#eq-adjoint_matrix}
 
 :::
 
@@ -127,7 +132,9 @@ $$
 :::
 :::
 
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-adjoint_matrix}
 정규직교기저에서 정의된 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $\boldsymbol{v}\in\mathcal{M}_{m }(\mathbb{F})$, $\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\langle \boldsymbol{Au},\, \boldsymbol{v} \rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{v} \rangle$ 임을 보여라.
@@ -150,13 +157,15 @@ $$
 
 :::
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-properties_of_adjoint_operator}
 
 다음이 성립한다.
 
-&emsp; ($1$) $S,\, T\in \mathcal{L}(U,\,V)$ 일 때 $(S+T)^\ast = S^\ast + T^\ast$ 이다.
+&emsp; ($1$) $L,\, M\in \mathcal{L}(U,\,V)$ 일 때 $(L+M)^\ast = L^\ast + M^\ast$ 이다.
 
 &emsp; ($2$) $L \in \mathcal{L}(U,\,V)$, $\lambda \in \mathbb{F}$ 일 때 $(\lambda L)^\ast = \overline{\lambda}L^\ast$.
 
@@ -164,7 +173,7 @@ $$
 
 &emsp; ($4$) 항등연산자 $I\in \mathcal{L}(V)$ 에 대해 $I^\ast =I$.
 
-&emsp; ($5$) $S\in \mathcal{L}(U, V),\, T\in \mathcal{L}(V,\,W)$ 에 대해 $(TS)^\ast = S^\ast T^\ast$ 이다.
+&emsp; ($5$) $M\in \mathcal{L}(U, V),\, L\in \mathcal{L}(V,\,W)$ 에 대해 $(LM)^\ast = M^\ast L^\ast$ 이다.
 
 :::
 
@@ -174,17 +183,19 @@ $$
 
 ($1$) 에서 ($4$) 는 생략한다. 
 
-$\langle TS(u),\,w\rangle = \langle u,\, (TS)^\ast (w)\rangle$ 이다. 또한
+$\langle LM(u),\,w\rangle = \langle u,\, (LM)^\ast (w)\rangle$ 이다. 또한
 $$
-\langle TS(u),\,w\rangle = \langle S(u),\, T^\ast(w)\rangle = \langle u,\, S^\ast T^\ast (w)\rangle
+\langle LM(u),\,w\rangle = \langle M(u),\, L^\ast(w)\rangle = \langle u,\, M^\ast L^\ast (w)\rangle
 $$
 
-이므로 $(TS)^\ast = S^\ast T^\ast$ 이다. $\square$
+이므로 $(LM)^\ast = M^\ast L^\ast$ 이다. $\square$
 
 
 :::
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-kernel_image_of_adjoint_operator}
 #### Adjoint 의 kernel 과 치역
@@ -278,7 +289,9 @@ $$
 
 :::
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-hermite_tvv}
 
@@ -321,13 +334,14 @@ $$
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-linear_isometry}
-행렬 $\boldsymbol{S} \in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 임의의 $\boldsymbol{v} \in \mathcal{M}_{n }(\mathbb{F})$ 에 대해
+
+내적벡터공간 $V$ 에서 정의된 연산지 $S\in \mathcal{L}(V)$ 가 각각의 $v\in V$ 에 대해
 
 $$
-\|\boldsymbol{Sv}\|^2 = \|\boldsymbol{v}\|^2
+\|S(v)\|^2 = \|v\|^2
 $$
 
-일 때 $\boldsymbol{S}$ 를 **linear isometry** 라 한다. 즉 Linear isometry는 거리를 보존시키는 선형 변환을 나타내는 행렬이다.
+일 때 $S$ 를 **linear isometry** 라 한다. 즉 Linear isometry는 거리를 보존시키는 선형 변환을 의미한다.
 
 :::
 :::
@@ -340,15 +354,15 @@ $$
 
 ::: {#prp-properties_of_isometry}
 
-행렬 $\boldsymbol{S}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음은 동치이다.  
+연산지 $S\in \mathcal{L}(V)$ 에 대해 다음은 동치이다.  
 
-&emsp; ($1$) $\boldsymbol{S}$ 는 linear isometry이다.
+&emsp; ($1$) $S$ 는 linear isometry이다.
 
-&emsp; ($2$) $\langle \boldsymbol{Su},\, \boldsymbol{Sv}\rangle = \langle \boldsymbol{u},\,\boldsymbol{v}\rangle$
+&emsp; ($2$) $\langle S(u),\, S(v)\rangle = \langle u,\,v\rangle$
 
-&emsp; ($3$) 정규직교벡터의 집합 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n \}$ 에 대해 $\{ \boldsymbol{Se}_1,\ldots,\,\boldsymbol{Se}_n\}$ 도 정규직교벡터의 집합이다.
+&emsp; ($3$) 정규직교벡터의 집합 $\{e_1,\ldots,\,e_n \}$ 에 대해 $\{ S(e_1),\ldots,\,S(e_n)\}$ 도 정규직교벡터의 집합이다.
 
-&emsp; ($4$) $\boldsymbol{S}^\ast = \boldsymbol{S}^{-1}$ 이다.
+&emsp; ($4$) $S^\ast = S^{-1}$ 이다.
 
 :::
 
@@ -358,96 +372,98 @@ $$
 ($1\implies 2$) 다음 두 식을 생각하자.
 
 $$
-\|\boldsymbol{Su}-\boldsymbol{Sv}\|^2 = \|\boldsymbol{S}(\boldsymbol{u}-\boldsymbol{v})\|^2=\|\boldsymbol{u}-\boldsymbol{v}\|^2 = \|\boldsymbol{u}\|^2 + \|\boldsymbol{v}\|^2 - \langle\boldsymbol{u},\,\boldsymbol{v}\rangle - \langle\boldsymbol{v},\,\boldsymbol{u}\rangle
+\|Su-Sv\|^2 = \|S(u-v)\|^2=\|u-v\|^2 = \|u\|^2 + \|v\|^2 - \langle u,\,v\rangle - \langle v ,\,u\rangle
 $$
 
 이다. 또한
 $$
 \begin{aligned}
-\|\boldsymbol{Su}-\boldsymbol{Sv}\|^2 &=  \|\boldsymbol{Su}\|^2 + \| \boldsymbol{Sv}\|^2 - \langle \boldsymbol{Su},\, \boldsymbol{Sv} \rangle - \langle \boldsymbol{Sv},\, \boldsymbol{Su} \rangle \\
-&=\|\boldsymbol{u}\|^2 + \|\boldsymbol{v}\|^2 - \langle\boldsymbol{Su},\,\boldsymbol{Sv}\rangle - \langle\boldsymbol{Sv},\,\boldsymbol{Su}\rangle
+\|S(u)-S(v)\|^2 &=  \|S(u)\|^2 + \| S(v) \|^2 - \langle S(u),\, S(v) \rangle - \langle S(v),\, S(u) \rangle \\
+&=\|u\|^2 + \|v\|^2 - \langle S(u),\,S(v) \rangle - \langle S(v),\, S(u) \rangle
 \end{aligned}
 $$
 
 이다. 이로부터 다음 결과를 얻을 수 있다.
 $$
-\langle\boldsymbol{u},\,\boldsymbol{v}\rangle + \langle\boldsymbol{v},\,\boldsymbol{u}\rangle = \langle\boldsymbol{Su},\,\boldsymbol{Sv}\rangle + \langle\boldsymbol{Sv},\,\boldsymbol{Su}\rangle \tag{1} 
+\langle u,\, v\rangle + \langle v,\,u\rangle = \langle S(u),\, Sv\rangle + \langle S(v),\,S(u)\rangle \tag{1} 
 $$
 
-$\mathbb{F}=\mathbb{R}$ 이라면 $\langle\boldsymbol{u},\,\boldsymbol{v}\rangle = \langle\boldsymbol{v},\,\boldsymbol{u}\rangle$, $\langle\boldsymbol{Su},\,\boldsymbol{Sv}\rangle = \langle\boldsymbol{Sv},\,\boldsymbol{Su}\rangle$ 이므로 $\langle\boldsymbol{u},\,\boldsymbol{v}\rangle = \langle\boldsymbol{Su},\,\boldsymbol{Sv}\rangle$ 이다.
+$\mathbb{F}=\mathbb{R}$ 이라면 $\langle x,\,y\rangle = \langle y,\,x\rangle$ 이므로 $\langle u,\,v\rangle = \langle S(u),\,S(v)\rangle$ 이다. 
 
 $\mathbb{F}=\mathbb{C}$ 라면 다음을 더 생각하자.
 
 $$
 \begin{aligned}
-\|\boldsymbol{Su}-i\boldsymbol{Sv}\|^2 & = \|\boldsymbol{S}(\boldsymbol{u}-i\boldsymbol{v})\|^2=\|\boldsymbol{u}-i\boldsymbol{v}\|^2 \\
-&= \|\boldsymbol{u}\|^2 + \|\boldsymbol{v}\|^2 + i\langle\boldsymbol{u},\,\boldsymbol{v}\rangle -i \langle\boldsymbol{v},\,\boldsymbol{u}\rangle
+\|S(u)-iS(v)\|^2 & = \|S (u-iv)\|^2=\|u-i v\|^2 \\
+&= \|u\|^2 + \|v\|^2 + i\langle u,\, v\rangle -i \langle v,\,u\rangle
 \end{aligned}
 $$
 
 또한
 $$
 \begin{aligned}
-\|\boldsymbol{Su}-i\boldsymbol{Sv}\|^2 &=  \|\boldsymbol{Su}\|^2 + \| \boldsymbol{Sv}\|^2 + i\langle \boldsymbol{Su},\, \boldsymbol{Sv} \rangle -i \langle \boldsymbol{Sv},\, \boldsymbol{Su} \rangle \\
-&=\|\boldsymbol{u}\|^2 - \|\boldsymbol{v}\|^2 + i\langle\boldsymbol{Su},\,\boldsymbol{Sv}\rangle -i \langle\boldsymbol{Sv},\,\boldsymbol{Su}\rangle
+\|Su -i Sv \|^2 &=  \|Su \|^2 + \| Sv \|^2 + i\langle S(u),\, S(v) \rangle -i \langle S(v),\, S(u) \rangle \\
+&=\|u\|^2 - \|v\|^2 + i\langle S(u),\,S(v)\rangle -i \langle S(v),\,S(u)\rangle
 \end{aligned}
 $$
 
 이다. 이로부터 다음 결과를 얻는다.
 $$
-\langle\boldsymbol{u},\,\boldsymbol{v}\rangle - \langle\boldsymbol{v},\,\boldsymbol{u}\rangle = \langle\boldsymbol{Su},\,\boldsymbol{Sv}\rangle - \langle\boldsymbol{Sv},\,\boldsymbol{Su}\rangle\tag{2}
+\langle u,\, v \rangle - \langle v,\,u \rangle = \langle S(u),\,S(v)\rangle - \langle S(v),\,S(u)\rangle\tag{2}
 $$
 
-식 ($1$), ($2$) 로부터 $\langle\boldsymbol{u},\,\boldsymbol{v}\rangle = \langle\boldsymbol{Su},\,\boldsymbol{Sv}\rangle$ 임을 알 수 있다.
+식 ($1$), ($2$) 로부터 $\langle u,\,v \rangle = \langle S(u),\,S(v)\rangle$ 임을 알 수 있다.
 
 
-($2\implies 3$) $\langle \boldsymbol{e}_i, \boldsymbol{e}_i\rangle = \delta_{ij}$ 이므로 ($2$) 에 의해 $\langle \boldsymbol{Se}_i, \boldsymbol{Se}_j \rangle = \langle \boldsymbol{e}_i, \boldsymbol{e}_i\rangle = \delta_{ij}$ 이다.
+($2\implies 3$) $\langle e_i, e_i\rangle = \delta_{ij}$ 이므로 ($2$) 에 의해 $\langle S(e_i), S(e_j) \rangle = \langle e_i ,\,e_j\rangle = \delta_{ij}$ 이다.
 
-($3 \implies 4$) $(\boldsymbol{S}^\ast\boldsymbol{S})_{ij}= \langle \boldsymbol{S}^\ast \boldsymbol{Se}_j,\, \boldsymbol{e}_i\rangle = \langle \boldsymbol{Se}_j,\,\boldsymbol{Se}_i\rangle = \delta_{ij}$ 이므로 $\boldsymbol{S}^\ast\boldsymbol{S}=\boldsymbol{I}_n$ 이다.
+($3 \implies 4$) $(S^\ast S)_{ij}= \langle S^\ast Se_j,\, e_i\rangle = \langle S(e_j),\,S(e_i)\rangle = \delta_{ij}$ 이므로 $S^\ast S=I$ 이다.
 
-($4 \implies 1$) $\|\boldsymbol{v}\|^2 = \langle \boldsymbol{Iv},\,\boldsymbol{v} \rangle =  \langle \boldsymbol{S}^\ast\boldsymbol{Sv},\,\boldsymbol{v} \rangle = \|\boldsymbol{Sv}\|^2$.   $\square$
+($4 \implies 1$) $\|v\|^2 = \langle Iv,\,v \rangle =  \langle S^\ast S(v),\,v \rangle = \|S(v)\|^2$.   $\square$
 
 :::
 
 
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-cojugate_of_isometry}
-$\boldsymbol{S}$ 가 linear isometry 이면 $\boldsymbol{S}^\ast$ 도 linear isometry 임을 보여라.
+$S\in \mathcal{L}(V)$ 가 linear isometry 이면 $S^\ast$ 도 linear isometry 임을 보여라.
 :::
 
 </div></br>
 
 ::: {.solution}
 
-@prp-properties_of_isometry 에서 보였듯이 $\boldsymbol{S}$ 가 linear isometry 이면 $\boldsymbol{S}^\ast = \boldsymbol{S}^{-1}$ 이다. 따라서
+@prp-properties_of_isometry 에서 보였듯이 $S$ 가 linear isometry 이면 $S^\ast =S^{-1}$ 이다. 따라서
 $$
-\|\boldsymbol{S}^\ast \boldsymbol{u}\|^2 = \langle \boldsymbol{S}^\ast\boldsymbol{u},\, \boldsymbol{S}^\ast\boldsymbol{u}\rangle = \langle \boldsymbol{u} | \boldsymbol{SS}^\ast \boldsymbol{u}\rangle = \|\boldsymbol{u}\|^2
+\|S^\ast u\|^2 = \langle S^\ast u,\, S^\ast u\rangle = \langle u | SS^\ast (u)\rangle = \|u\|^2
 $$
 
-이므로 $\boldsymbol{S}^\ast$ 도 linear isometry 이다. $\square$
+이므로 $S^\ast$ 도 linear isometry 이다. $\square$
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-product_of_isometries}
-$\boldsymbol{S},\,\boldsymbol{T}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 linear isometry 이면 $\boldsymbol{ST}$ 도 linear isometry 임을 보여라.
+$S,\,T\in\mathcal{L}(V)$ 이 linear isometry 이면 $ST$ 도 linear isometry 임을 보여라.
 :::
 
 </div></br>
 
 ::: {.solution}
 
-@prp-properties_of_isometry 에 의해 $\boldsymbol{S}^{-1}=\boldsymbol{S}^\ast$ 이면 $\boldsymbol{S}$ 가 linear isometry 인 것을 이용한다.
+@prp-properties_of_isometry 에 의해 $S^{-1}=S^\ast$ 이면 $S$ 가 linear isometry 인 것을 이용한다.
 $$
-(\boldsymbol{ST})^{-1}= \boldsymbol{T}^{-1}\boldsymbol{S}^{-1}= \boldsymbol{T}^\ast \boldsymbol{S}^\ast = (\boldsymbol{ST})^\ast
+(ST)^{-1}= T^{-1}S^{-1}=T^\ast S^\ast = (ST)^\ast
 $$
 
 :::
 
 </br>
 
-### Unitary and Orthogonal Operator/Matrix
+### 유니타리 행렬과 직교 행렬 {#sec-part1_unitary_matrix_and_orthogonal_matrix}
 
 ::: {.callout-caution}
 

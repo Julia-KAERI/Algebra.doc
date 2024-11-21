@@ -6,6 +6,8 @@ crossref:
   chapters: true
 ---
 
+{{< include ../../latexmacros.qmd >}}
+
 ## Positive, Positive definite 행렬과 제곱근 행렬
 
 ::: {.callout-note appearance="simple" icon="false"}
@@ -169,15 +171,15 @@ $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\sqrt{\bold
 
 ::: {#prp-properties_of_AAast}
 
-$A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한다.
+$\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한다.
 
-&emsp; ($1$) $A^\ast A$ 는 positive 행렬이다.
+&emsp; ($1$) $\bf{A}^\ast \bf{A}$ 는 positive 행렬이다.
 
-&emsp; ($2$) $\ker (A^\ast A) = \ker (A)$.
+&emsp; ($2$) $\ker (\bf{A}^\ast \bf{A}) = \ker (\bf{A})$.
 
-&emsp; ($3$) $\text{im}(A^\ast A) = \text{im}(A^\ast)$.
+&emsp; ($3$) $\text{im}(\bf{A}^\ast \bf{A}) = \text{im}(\bf{A}^\ast)$.
 
-&emsp; ($4$) $\text{rank}(A) = \text{rank}(A^\ast) = \text{rank}(A^\ast A)$
+&emsp; ($4$) $\text{rank}(\bf{A}) = \text{rank}(\bf{A}^\ast) = \text{rank}(\bf{A}^\ast \bf{A})$
  
 :::
 
@@ -185,13 +187,13 @@ $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한다.
 
 ::: {.proof}
 
-($1$) $(A^\ast A)^\ast = A^\ast A$ 이므로 $A^\ast A$ 는 에르미트 행렬이다. 또한 $\langle A^\ast Au,\, v\rangle = \|Au\|^2\ge 0$ 이므로 $A^\ast A$ 는 positive 이다.
+($1$) $(\bf{A}^\ast \bf{A})^\ast = \bf{A}^\ast \bf{A}$ 이므로 $\bf{A}^\ast \bf{A}$ 는 에르미트 행렬이다. 또한 $\langle \bf{A}^\ast \bf{Au},\, \bf{v}\rangle = \|\bf{Au}\|^2\ge 0$ 이므로 $\bf{A}^\ast \bf{A}$ 는 positive 이다.
 
-($2$) $u\in \ker(A^\ast A) \implies \langle A^\ast Au,\, v\rangle = \|Au\|^2=0$ 이므로 $u\in \ker (A)$. 역으로 $u\in \ker A$ 이면 $Au=0$ 이므로 $A^\ast A u=0$ 이며, 따라서 $u\in \ker (A^\ast A)$. 따라서 $\ker (A^\ast A) = \ker (A)$.
+($2$) $u\in \ker(\bf{A}^\ast \bf{A}) \implies \langle \bf{A}^\ast \bf{Au},\, \bf{v}\rangle = \|\bf{Au}\|^2=0$ 이므로 $\bf{u}\in \ker (\bf{A})$. 역으로 $\bf{u}\in \ker \bf{A}$ 이면 $\bf{Au}=\bf{0}$ 이므로 $\bf{A}^\ast \bf{A u}=0$ 이며, 따라서 $\bf{u}\in \ker (\bf{A}^\ast \bf{A})$. 따라서 $\ker (\bf{A}^\ast \bf{A}) = \ker (\bf{A})$.
 
-($3$) @thm-kernel_image_of_adjoint_operator 과 ($2$) 로부터 $\text{im}(A^\ast A) = (\ker(A^\ast A))^\perp = (\ker (A))^\perp = \text{im}(A^\ast)$ 임을 안다. 
+($3$) @thm-kernel_image_of_adjoint_operator 과 ($2$) 로부터 $\text{im}(\bf{A}^\ast \bf{A}) = (\ker(\bf{A}^\ast \bf{A}))^\perp = (\ker (\bf{A}))^\perp = \text{im}(\bf{A}^\ast)$ 임을 안다. 
 
-($4$) @exr-axler_7_A_5 로부터 $\text{rank}(A) = \text{rank}(A^\ast)$. ($3$) 으로부터 $\text{rank}(A^\ast) = \text{rank}(A^\ast A)$. $\square$
+($4$) @exr-axler_7_A_5 로부터 $\text{rank}(\bf{A}) = \text{rank}(\bf{A}^\ast)$. ($3$) 으로부터 $\text{rank}(\bf{A}^\ast) = \text{rank}(\bf{A}^\ast \bf{A})$. $\square$
 
 :::
 
@@ -199,13 +201,13 @@ $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한다.
 
 ::: {#prp-properties_of_singular_value}
 
-$A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
+$\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
 
-&emsp; ($1$) $A$ 가 단사일 필요충분조건은 $0$ 이 $A$ 의 특이값이 아닌 것이다.
+&emsp; ($1$) $\bf{A}$ 가 단사일 필요충분조건은 $0$ 이 $\bf{A}$ 의 특이값이 아닌 것이다.
 
-&emsp; ($2$) $A$ 의 0 이 아닌 특이값의 갯수는 반복되는 것도 갯수를 합치면 $\text{rank}(A)$ 와 같다. 
+&emsp; ($2$) $\bf{A}$ 의 0 이 아닌 특이값의 갯수는 반복되는 것도 갯수를 합치면 $\text{rank}(\bf{A})$ 와 같다. 
 
-&emsp; ($3$) $A$ 가 전사일 필요충분조건은 $A$ 의 특이값의 갯수가 $n$ 인 것이다. 
+&emsp; ($3$) $\bf{A}$ 가 전사일 필요충분조건은 $\bf{A}$ 의 특이값의 갯수가 $n$ 인 것이다. 
 
 :::
 
@@ -213,9 +215,9 @@ $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
 
 ::: {.proof}
 
-($1$) $A$ 가 단사 $\iff \ker (A) = \{0\} \iff \ker(A^\ast A)= \{0\}$ 
+($1$) $\bf{A}$ 가 단사 $\iff \ker (\bf{A}) = \{0\} \iff \ker(\bf{A}^\ast \bf{A})= \{0\}$ 
 
-($2$) $A$ 가 에르미트 이므로 $\dim (A)$ 는 $A$ 의 $0$ 이 아닌 고유값의 갯수(반복되는 것도 포함하여)와 같다. @prp-properties_of_AAast 의 ($4$) 에 따라 $A$ 의 특이값의 갯수는 $\text{rank}(A)$ 와 같다.
+($2$) $\bf{A}$ 가 에르미트 이므로 $\dim (\bf{A})$ 는 $\bf{A}$ 의 $0$ 이 아닌 고유값의 갯수(반복되는 것도 포함하여)와 같다. @prp-properties_of_AAast 의 ($4$) 에 따라 $\bf{A}$ 의 특이값의 갯수는 $\text{rank}(\bf{A})$ 와 같다.
 
 ($3$) ($2$) 에 의헤 당연하다. $\square$
 
@@ -590,7 +592,7 @@ $$
 
 &emsp;($b$) $e_1,\ldots,\,e_m$ 은 $(\ker(L))^\perp$ 의 정규직교기저임을 보여라.
 
-&emsp;($c$) $s_1,\ldots,\,s_m$ 은 $T$ 의 양수인 특이값임을 보여라.
+&emsp;($c$) $s_1,\ldots,\,s_m$ 은 $L$ 의 양수인 특이값임을 보여라.
 
 &emsp;($d$) $k \in \{1,\ldots,m\}$ 이면 $e_k$ 는 $L^\ast L$ 의 고유벡터로 그 고유값이 $s_k^2$ 임을 보여라.
 
@@ -606,11 +608,19 @@ $$
 
 ::: {.solution}
 
-($a$) $Lv$ 가 정규직교벡터 $\{f_1,\ldots,\,f_n\}$ 의 선형결합이므로 $f_1,\ldots,\,f_m$ 은 $\text{im}$ 의 정규직교기저이다.
+($a$) $Lv$ 가 정규직교벡터 $\{f_1,\ldots,\,f_m\}$ 의 선형결합이므로 $f_1,\ldots,\,f_m$ 은 $\text{im}(L)$ 의 정규직교기저이다.
 
-($b$) $\{e_1,\ldots,\,e_m,\,e_{m+1},\ldots,\,e_M\}$ 이 $V$ 의 정규직교기저라고 하면 $k>m$ 에 대해 $Le_k = 0$ 이므로 $\{e_{m+1},\ldots,\,e_M\}$ 이 $\ker(L)$ 의 정규직교기저이다. 따라서 $\{e_1,\ldots,\,e_m\}$ 이 $(\ker(L))^\perp$ 의 정규직교기저이다.
+($b$) $\{e_1,\ldots,\,e_m,\,e_{m+1},\ldots,\,e_M\}$ 이 $V$ 의 정규직교기저라고 하면 $k>m$ 에 대해 $L(e_k) = 0$ 이므로 $\{e_{m+1},\ldots,\,e_M\}$ 이 $\ker(L)$ 의 정규직교기저이다. 따라서 $\{e_1,\ldots,\,e_m\}$ 이 $(\ker(L))^\perp$ 의 정규직교기저이다.
 
-($c$)
+($c$) $\langle L^\ast L (e_i),\,e_j\rangle = \langle L(e_i),\, L(e_j)\rangle = s_{i}^2 \delta_{ij}$ 이므로 $s_i^2$ 는 $L^\ast L$ 의 고유벡터 $e_i$ 에 대한 고유값이다. 따라서 $s_i$ 는 $L$ 의 양수인 특이값이다.
+
+($d$) ($c$) 에서 보였다.
+
+($e$) $\{f_1,\ldots,\,f_m,\,f_{m+1},\ldots,\,f_M\}$ 이 $W$ 의 정규직교기저라고 하자. $w\in W$ 는 $w=\sum_{j=1}^M c_j f_j$ 로 표현 할 수 있다. 
+
+$$
+\langle L^\ast L e_i,\, w\rangle = \sum_{j=1}^M \overline{c_j} s_i \langle f_i,\,
+$$
 :::
 
 </br>

@@ -7,9 +7,15 @@ crossref:
 ---
 
 
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
 여기서는 복수체와 실수체에서의 스펙트럼 정리를 알아본다. 아마 선형대수학에서 가장 중요한 것을 꼽으라면 스펙트럼 정리일 것이다. 
 
-## 정규행렬 
+</br>
+
+## 정규행렬 {#sec-normal_operator}
 
 </br>
 
@@ -17,7 +23,7 @@ crossref:
 ::: {#def-normal_matrix}
 ### 정규 행렬
 
-정사각 행렬 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 $\boldsymbol{AA}^\ast = \boldsymbol{A}^\ast \boldsymbol{A}$ 일 때 $\boldsymbol{A}$ 를 **정규 행렬(normal matrix)** 라 한다. 정규행렬이 나타내는 연산자를 **정규 연산자(normal operator)** 라 한다.
+내적벡터공간에서 정의된 $L\in \mathcal{L}(U,\,V)$ 가 $LL^\ast = L^\ast L$ 일 때 $L$ 을 **정규연산자(normal operator)** 라고 한다. 마찬가지로 정사각 행렬 $\boldsymbol{L}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 $\boldsymbol{LL}^\ast = \boldsymbol{L}^\ast \boldsymbol{L}$ 일 때 $\boldsymbol{L}$ 을 **정규 행렬(normal matrix)** 라 한다. 
 :::
 :::
 
@@ -33,7 +39,10 @@ crossref:
 
 :::
 
-</div></br>
+</div>
+
+</br>
+
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-condition_of_normal_matrix}
