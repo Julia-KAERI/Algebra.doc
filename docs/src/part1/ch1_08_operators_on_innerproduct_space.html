@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -327,7 +347,7 @@ window.Quarto = {
   <li><a href="#isometry-와-정규직교기저" id="toc-isometry-와-정규직교기저" class="nav-link" data-scroll-target="#isometry-와-정규직교기저"><span class="header-section-number">6.3.2</span> Isometry 와 정규직교기저</a></li>
   <li><a href="#linear-isometry-와-행렬의-변환" id="toc-linear-isometry-와-행렬의-변환" class="nav-link" data-scroll-target="#linear-isometry-와-행렬의-변환"><span class="header-section-number">6.3.3</span> Linear Isometry 와 행렬의 변환</a></li>
   </ul></li>
-  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제"><span class="header-section-number">6.4</span> 연습문제</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul>
 </nav>
     </div>
@@ -370,7 +390,7 @@ window.Quarto = {
 <p><span id="eq-adjoint_function"><span class="math display">\[
 \langle L (u),\,v \rangle = \langle u,\, L^\ast (v) \rangle.
 \tag{6.1}\]</span></span></p>
-<p>우선 고정된 <span class="math inline">\(v\)</span> 에 대해 <span class="math inline">\(\phi (u) = \langle Lu,\,v\rangle\)</span> 는 선형 범함수(<a href="#exr-adjoint_operator_1" class="quarto-xref">연습문제&nbsp;<span>6.1</span></a>) 이며 <a href="ch1_07_innerproduct.html#thm-reisz_representaion_theorem" class="quarto-xref">정리&nbsp;<span>5.3</span></a> 에 의해 <span class="math inline">\(\phi(u) = \langle u, w\rangle\)</span> 인 <span class="math inline">\(w\in U\)</span> 가 유일하게 존재한다. 이제 함수 <span class="math inline">\(L^\ast : V \to U\)</span> 를 <span class="math inline">\(L^\ast( v)= w\)</span> 인 함수로 생각 할 수 있다. (뭔가 이상한가? 이상해야 하는데..) 이 <span class="math inline">\(L^\ast\)</span> 를 <span class="math inline">\(L\)</span> 에 대한 adjoint function 이라고 한다.</p>
+<p>우선 고정된 <span class="math inline">\(v\)</span> 에 대해 <span class="math inline">\(\phi (u) = \langle Lu,\,v\rangle\)</span> 는 선형 범함수(<a href="#exr-adjoint_operator_1" class="quarto-xref">연습문제&nbsp;<span>6.1</span></a>) 이며 <a href="ch1_07_innerproduct.html#thm-part1_reisz_representation_theorem_1" class="quarto-xref">정리&nbsp;<span>5.3</span></a> 에 의해 <span class="math inline">\(\phi(u) = \langle u, w\rangle\)</span> 인 <span class="math inline">\(w\in U\)</span> 가 유일하게 존재한다. 이제 함수 <span class="math inline">\(L^\ast : V \to U\)</span> 를 <span class="math inline">\(L^\ast( v)= w\)</span> 인 함수로 생각 할 수 있다. (뭔가 이상한가? 이상해야 하는데..) 이 <span class="math inline">\(L^\ast\)</span> 를 <span class="math inline">\(L\)</span> 에 대한 adjoint function 이라고 한다.</p>
 <p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-adjoint_operator_1" class="theorem exercise">
@@ -402,14 +422,26 @@ window.Quarto = {
 \end{aligned}
 \]</span></p>
 </div>
-<div class="page-columns page-full"><p>즉 <span class="math inline">\(L\in \mathcal{L}(U, V)\)</span> 이면 <span class="math inline">\(L^\ast \in \mathcal{L}(U, V)\)</span> 이다. 이제 <span class="math inline">\(L^\ast\)</span> 를 <span class="math inline">\(L\)</span> 에 대한 adjoint transformation 이라고 한다. 여기서 한가지 짚어야 할 것이 있다. 우리는 리츠의 표현정리(<a href="ch1_07_innerproduct.html#thm-reisz_representaion_theorem" class="quarto-xref">정리&nbsp;<span>5.3</span></a>) 를 이용하였는데 이 정리는 유한차원 벡터공간에서만 성립한다. 실제로 adjoint 는 유한차원 벡터공간에서만 유일하게 정해지며, 무한차원벡터공간에서는 유일하지 않을 수 있다<span class="math inline">\(^1\)</span>.</p><div class="no-row-height column-margin column-container"><span class="margin-aside"><span class="math inline">\(^1\)</span> K. Hoffman, R. Kunze, <em>Linear Algebra</em>, 2nd Ed. pp 295</span></div></div>
+<p>즉 <span class="math inline">\(L\in \mathcal{L}(U, V)\)</span> 이면 <span class="math inline">\(L^\ast \in \mathcal{L}(U, V)\)</span> 이다. 이제 <span class="math inline">\(L^\ast\)</span> 를 <span class="math inline">\(L\)</span> 에 대한 adjoint transformation 이라고 한다.</p>
+<p><br></p>
+<div class="callout callout-style-simple callout-warning no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>여기서 한가지 짚어야 할 것이 있다. 우리는 리츠의 표현정리(<a href="ch1_07_innerproduct.html#thm-part1_reisz_representation_theorem_1" class="quarto-xref">정리&nbsp;<span>5.3</span></a>) 를 이용하였는데 이 정리는 유한차원 벡터공간에서만 성립한다. 실제로 adjoint 는 유한차원 벡터공간에서만 유일하게 정해지며, 무한차원벡터공간에서는 유일하지 않을 수 있다(<span class="citation" data-cites="Hoffman1971">Hoffman and Kunze (<a href="../../references.html#ref-Hoffman1971" role="doc-biblioref">1971</a>)</span> . pp 295)</p>
+</div>
+</div>
+</div>
+<p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-adjoint" class="theorem definition">
+<div id="def-part1_adjoint" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 6.1 (Adjoint)</strong></span> 내적벡터공간 <span class="math inline">\(U,\,V\)</span> 에서 정의된 <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에 대해 <span class="math inline">\(\langle L(u),\, v\rangle = \langle u,\,L^\ast(v)\rangle\)</span> 을 만족하는 <span class="math inline">\(L^\ast \in \mathcal{L}(V,\,U)\)</span> 가 존재하며 <span class="math inline">\(L^\ast\)</span> 를 <span class="math inline">\(L\)</span> 의 <strong>adjoint</strong> 라고 한다.</p>
 </div>
 </div>
@@ -418,7 +450,7 @@ window.Quarto = {
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-adjoint_matrix" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 6.2</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 이며 <span class="math inline">\(\mathcal{B}_U=(e_1,\ldots,\,e_n)\)</span>, <span class="math inline">\(\mathcal{B}_V=(f_1,\ldots,\,f_n\)\)</span> 이 각각 <span class="math inline">\(U,\,V\)</span> 에서의 정규직교기저라고 하자. <span class="math inline">\(\boldsymbol{A} = [L]_{\mathcal{B}_U,\mathcal{B}_V}\)</span>, <span class="math inline">\(\boldsymbol{A}^\ast = [L^\ast]_{\mathcal{B}_V,\mathcal{B}_U}\)</span> 라면 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 6.2</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 이며 <span class="math inline">\(\mathcal{B}_U=(e_1,\ldots,\,e_n)\)</span>, <span class="math inline">\(\mathcal{B}_V=(f_1,\ldots,\,f_n)\)</span> 이 각각 <span class="math inline">\(U,\,V\)</span> 에서의 정규직교기저라고 하자. <span class="math inline">\(\boldsymbol{A} = [L]_{\mathcal{B}_U,\mathcal{B}_V}\)</span>, <span class="math inline">\(\boldsymbol{A}^\ast = [L^\ast]_{\mathcal{B}_V,\mathcal{B}_U}\)</span> 라면 다음이 성립한다.</p>
 <p><span id="eq-adjoint_matrix"><span class="math display">\[
 (\boldsymbol{A}^\ast)_{ij} = \overline{(\boldsymbol{A})_{ji}}.
 \tag{6.2}\]</span></span></p>
@@ -569,7 +601,7 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 &amp;= \langle (L-L^\ast)(u),\, u\rangle
 \end{aligned}
 \]</span></p>
-<p>임을 안다. <a href="ch1_07_innerproduct.html#exr-operator_orthogonal_to_every_vector" class="quarto-xref">연습문제&nbsp;<span>5.7</span></a> 로 부터 <span class="math inline">\(L=L^\ast\)</span> 임을 알 수 있다. 즉 <span class="math inline">\(L\)</span> 는 에르미트 연산자이다.</p>
+<p>임을 안다. <a href="ch1_07_innerproduct.html#exr-operator_orthogonal_to_every_vector" class="quarto-xref">연습문제&nbsp;<span>5.24</span></a> 로 부터 <span class="math inline">\(L=L^\ast\)</span> 임을 알 수 있다. 즉 <span class="math inline">\(L\)</span> 는 에르미트 연산자이다.</p>
 <p>(<span class="math inline">\(2 \implies 1\)</span>) <span class="math inline">\(L\)</span> 이 에르미트 연산자라고 하자.</p>
 <p><span class="math display">\[
 \langle L(u),\, u\rangle - \overline{\langle L(u),\, u\rangle} = \langle L(u),\, u\rangle - \langle L^\ast(u),\, u\rangle =0
@@ -761,12 +793,12 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 <p><br></p>
 </section>
 </section>
-<section id="연습문제" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="연습문제"><span class="header-section-number">6.4</span> 연습문제</h2>
+<section id="연습문제" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h2>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_7_A_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.6</strong></span> <span class="math inline">\(\lambda\)</span> 가 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 의 고유값이라면 <span class="math inline">\(\overline{\lambda}\)</span> 는 <span class="math inline">\(\boldsymbol{A}^\ast\)</span> 의 고유값임을 보여라.</p>
+<div id="exr-axler4_7_A_3" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.6 (Axler4th 7.A.3)</strong></span> <span class="math inline">\(\lambda\)</span> 가 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 의 고유값이라면 <span class="math inline">\(\overline{\lambda}\)</span> 는 <span class="math inline">\(\boldsymbol{A}^\ast\)</span> 의 고유값임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -777,20 +809,44 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 \]</span></p>
 <p>를 얻는다. 즉 <span class="math inline">\(\boldsymbol{A}-c\boldsymbol{I}_n\)</span> 이 가역일 필요충분조건은 <span class="math inline">\(\boldsymbol{A}^\ast -\overline{c}\boldsymbol{I}_n\)</span> 이 가역인 것이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_7_A_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.7</strong></span> <span class="math inline">\(\boldsymbol{A}=\mathcal{M}_{n \times n}(\mathbb{F})\)</span> 이며 <span class="math inline">\(U\le \mathcal{M}_n(\mathbb{F})\)</span> 라고 하자. <span class="math inline">\(U\)</span> 가 <span class="math inline">\(\boldsymbol{A}\)</span>-불변 일 필요충분조건은 <span class="math inline">\(\boldsymbol{U}^\perp\)</span> 가 <span class="math inline">\(\boldsymbol{A}^\ast\)</span>-불변인것임을 보여라.</p>
+<div id="exr-axler4_7_A_4" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.7 (Axler4th 7.A.4)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(U\le V\)</span> 라고 하자. 이 때 <span class="math inline">\(U\)</span> 가 <span class="math inline">\(L\)</span>-불변일 필요충분조건은 <span class="math inline">\(U^\perp\)</span> 가 <span class="math inline">\(L^\ast\)</span>-불변인 것임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>모든 <span class="math inline">\(\boldsymbol{u}\in U\)</span>, <span class="math inline">\(\boldsymbol{w}\in U^\perp\)</span> 에 대해 <span class="math inline">\(\langle \boldsymbol{Au}, \boldsymbol{w}\rangle = 0\)</span> 이면 <span class="math inline">\(\langle \boldsymbol{u}, \boldsymbol{A}^\ast \boldsymbol{w}\rangle = 0 = \langle \boldsymbol{A}^\ast \boldsymbol{w}, \boldsymbol{u} \rangle\)</span> 이다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>모든 <span class="math inline">\(u\in U,\, w\in U^\perp\)</span> 에 대해 <span class="math inline">\(\langle Lu,\,w\rangle = 0\)</span> 이면 <span class="math inline">\(\langle u,\, L^\ast w\rangle =0\)</span> 이다.</p>
 </div>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_7_A_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.8</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 다음을 보여라.</p>
+<div id="exr-axler4_7_A_5" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.8 (Axler4th 7.A.5)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이다. <span class="math inline">\((e_1,\ldots,\,e_n)\)</span> 이 <span class="math inline">\(V\)</span> 의 정규직교기저이고 <span class="math inline">\((f_1,\ldots,\,f_m)\)</span> 이 <span class="math inline">\(W\)</span> 의 정규직교기저일 때 다음이 성립함을 보여라.</p>
+<p><span class="math display">\[
+\|Le_1\|^2 + \cdots + \|Le_n\|^2 = \|L^\ast f_1\|^2 + \cdots \|L^\ast f_m\|^2
+\]</span></p>
+</div>
+</div>
+<p><br></p>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(Le_i = \sum_{j=1}^m A_{ji}f_j\)</span> 라면</p>
+<p><span class="math display">\[
+\|Le_1\|^2 + \cdots + \|Le_n\|^2 = \sum_{i=1}^n \sum_{j=1}^n |A_{ij}|^2
+\]</span></p>
+<p>이다. 또한 <span class="math inline">\(\langle Le_i,\,f_j\rangle = A_{ji}= \langle e_i,\, L^\ast f_j\rangle\)</span> 이므로</p>
+<p><span class="math display">\[
+L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
+\]</span></p>
+<p>이며, 따라서</p>
+<p><span class="math display">\[
+\|L^\ast f_1\|^2 + \cdots + \|L^\ast f_m\|^2 = \sum_{i=1}^n \sum_{j=1}^m \left|\overline{A_{ji}}\right|^2 = \sum_{i=1}^n \sum_{j=1}^n |A_{ij}|^2 = \|Le_1\|^2 + \cdots + \|Le_n\|^2
+\]</span></p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler4_7_A_6" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.9 (Axler4th 7.A.6)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 다음을 보여라.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 가 단사일 필요충분조건은 <span class="math inline">\(\boldsymbol{A}^\ast\)</span> 가 전사인 것이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 가 전사일 필요충분조건은 <span class="math inline">\(\boldsymbol{A}^\ast\)</span> 가 단사인 것이다.</p>
 </div>
@@ -799,10 +855,10 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}\)</span> 이므로 둘중 하나만 보이면 된다. (<span class="math inline">\(1\)</span>) 은 <a href="#thm-kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> (<span class="math inline">\(3\)</span>) 으로부터 쉽게 보일 수 있다.</p>
 </div>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_7_A_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.9</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 다음을 보여라.</p>
+<div id="exr-axler4th_7_A_7" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.10 (Axler4th 7.A.7)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 다음을 보여라.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\text{nullity}(\boldsymbol{A}^\ast) = \text{nullity}(\boldsymbol{A}) + m - n\)</span>,</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\text{rank}(\boldsymbol{A}^\ast) = \text{rank}(\boldsymbol{A})\)</span>.</p>
 </div>
@@ -812,10 +868,10 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <a href="ch1_02_linear_map.html#thm-rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a> 에 의해 <span class="math inline">\(m=\text{nullity}(\boldsymbol{A}^\ast) + \text{rank}(\boldsymbol{A}^\ast)\)</span> 이며 <a href="#thm-kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> 에 의해 <span class="math inline">\(\text{nullity} (\boldsymbol{A}) = n-\text{rank}(\boldsymbol{A}^\ast)\)</span> 이므로 (<span class="math inline">\(1\)</span>) 이 성립한다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\text{ker} (\boldsymbol{A}^\ast) = (\text{im} (\boldsymbol{A}))^\perp\)</span> 이므로 <span class="math inline">\(\text{nullity}(\boldsymbol{A}^\ast) = m - \text{rank}(\boldsymbol{A})\)</span> 이다. (<span class="math inline">\(1\)</span>) 에 <span class="math inline">\(\text{nullity} (\boldsymbol{A}) = n-\text{rank}(\boldsymbol{A}^\ast)\)</span> 과 함께 대입하면 (<span class="math inline">\(2\)</span>) 를 얻는다.</p>
 </div>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_7_A_7" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.10</strong></span> <span class="math inline">\(\boldsymbol{A},\, \boldsymbol{B} \in \mathcal{M}_{n \times n} (\mathbb{F})\)</span> 가 에르미트 행렬이라고 하자. <span class="math inline">\(\boldsymbol{AB}\)</span> 가 에르미트 행렬일 필요충분조건은 <span class="math inline">\(\boldsymbol{AB}=\boldsymbol{BA}\)</span> 임을 보여라.</p>
+<div id="exr-axler4th_7_A_9" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.11 (Axler4th 7.A.9)</strong></span> <span class="math inline">\(\boldsymbol{A},\, \boldsymbol{B} \in \mathcal{M}_{n \times n} (\mathbb{F})\)</span> 가 에르미트 행렬이라고 하자. <span class="math inline">\(\boldsymbol{AB}\)</span> 가 에르미트 행렬일 필요충분조건은 <span class="math inline">\(\boldsymbol{AB}=\boldsymbol{BA}\)</span> 임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -825,7 +881,7 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_7_A_8_9" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.11</strong></span> <span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{R})\)</span> 에서의 에르미트 행렬의 집합은 벡터공간을 이룸을 보여라. <span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{C})\)</span> 에서의 에르미트 행렬의 집합은 벡터공간을 이루지 않음을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 6.12</strong></span> <span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{R})\)</span> 에서의 에르미트 행렬의 집합은 벡터공간을 이룸을 보여라. <span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{C})\)</span> 에서의 에르미트 행렬의 집합은 벡터공간을 이루지 않음을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -839,7 +895,7 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_7_A_11" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.12</strong></span> Projection <span class="math inline">\(\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\boldsymbol{P}=\boldsymbol{P}_U\)</span> 인 <span class="math inline">\(U\le \mathcal{M}_{n}(\mathbb{F})\)</span> 가 존재할 필요충분조건은 <span class="math inline">\(\boldsymbol{P}\)</span> 가 에르미트 행렬임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 6.13</strong></span> Projection <span class="math inline">\(\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\boldsymbol{P}=\boldsymbol{P}_U\)</span> 인 <span class="math inline">\(U\le \mathcal{M}_{n}(\mathbb{F})\)</span> 가 존재할 필요충분조건은 <span class="math inline">\(\boldsymbol{P}\)</span> 가 에르미트 행렬임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -853,6 +909,11 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Hoffman1971" class="csl-entry" role="listitem">
+Hoffman, K., and R. A. Kunze. 1971. <em>Linear Algebra</em>. Prentice-Hall. <a href="https://books.google.co.kr/books?id=I4kQAQAAIAAJ">https://books.google.co.kr/books?id=I4kQAQAAIAAJ</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

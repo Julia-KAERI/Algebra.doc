@@ -21,7 +21,7 @@ $$
 \langle L (u),\,v \rangle = \langle u,\, L^\ast (v) \rangle.
 $$ {#eq-adjoint_function}
 
-우선 고정된 $v$ 에 대해 $\phi (u) = \langle Lu,\,v\rangle$ 는 선형 범함수(@exr-adjoint_operator_1) 이며 @thm-reisz_representaion_theorem 에 의해 $\phi(u) = \langle u, w\rangle$ 인 $w\in U$ 가 유일하게 존재한다. 이제 함수 $L^\ast : V \to U$ 를 $L^\ast( v)= w$ 인 함수로 생각 할 수 있다. (뭔가 이상한가? 이상해야 하는데..) 이 $L^\ast$ 를 $L$ 에 대한 adjoint function 이라고 한다.
+우선 고정된 $v$ 에 대해 $\phi (u) = \langle Lu,\,v\rangle$ 는 선형 범함수(@exr-adjoint_operator_1) 이며 @thm-part1_reisz_representation_theorem_1 에 의해 $\phi(u) = \langle u, w\rangle$ 인 $w\in U$ 가 유일하게 존재한다. 이제 함수 $L^\ast : V \to U$ 를 $L^\ast( v)= w$ 인 함수로 생각 할 수 있다. (뭔가 이상한가? 이상해야 하는데..) 이 $L^\ast$ 를 $L$ 에 대한 adjoint function 이라고 한다.
 
 </br>
 
@@ -72,10 +72,21 @@ $$
 :::
 
 
-즉 $L\in \mathcal{L}(U, V)$ 이면 $L^\ast \in \mathcal{L}(U, V)$ 이다. 이제 $L^\ast$ 를 $L$ 에 대한 adjoint transformation 이라고 한다. 여기서 한가지 짚어야 할 것이 있다. 우리는 리츠의 표현정리(@thm-reisz_representaion_theorem) 를 이용하였는데 이 정리는 유한차원 벡터공간에서만 성립한다. 실제로 adjoint 는 유한차원 벡터공간에서만 유일하게 정해지며, 무한차원벡터공간에서는 유일하지 않을 수 있다$^1$.[$^1$ K. Hoffman, R. Kunze, *Linear Algebra*, 2nd Ed. pp 295]{.aside} 
+즉 $L\in \mathcal{L}(U, V)$ 이면 $L^\ast \in \mathcal{L}(U, V)$ 이다. 이제 $L^\ast$ 를 $L$ 에 대한 adjoint transformation 이라고 한다. 
+
+</br>
+
+::: {.callout-warning appearance="minimal"}
+
+여기서 한가지 짚어야 할 것이 있다. 우리는 리츠의 표현정리(@thm-part1_reisz_representation_theorem_1) 를 이용하였는데 이 정리는 유한차원 벡터공간에서만 성립한다. 실제로 adjoint 는 유한차원 벡터공간에서만 유일하게 정해지며, 무한차원벡터공간에서는 유일하지 않을 수 있다(@Hoffman1971 . pp 295)
+
+:::
+
+</br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-adjoint}
+
+::: {#def-part1_adjoint}
 
 #### Adjoint
 
@@ -90,7 +101,7 @@ $$
 
 ::: {#prp-adjoint_matrix}
 
-$L\in \mathcal{L}(U,\,V)$ 이며 $\mathcal{B}_U=(e_1,\ldots,\,e_n)$, $\mathcal{B}_V=(f_1,\ldots,\,f_n\)$ 이 각각 $U,\,V$ 에서의 정규직교기저라고 하자. $\boldsymbol{A} = [L]_{\mathcal{B}_U,\mathcal{B}_V}$, $\boldsymbol{A}^\ast = [L^\ast]_{\mathcal{B}_V,\mathcal{B}_U}$ 라면 다음이 성립한다.
+$L\in \mathcal{L}(U,\,V)$ 이며 $\mathcal{B}_U=(e_1,\ldots,\,e_n)$, $\mathcal{B}_V=(f_1,\ldots,\,f_n)$ 이 각각 $U,\,V$ 에서의 정규직교기저라고 하자. $\boldsymbol{A} = [L]_{\mathcal{B}_U,\mathcal{B}_V}$, $\boldsymbol{A}^\ast = [L^\ast]_{\mathcal{B}_V,\mathcal{B}_U}$ 라면 다음이 성립한다.
 
 $$
 (\boldsymbol{A}^\ast)_{ij} = \overline{(\boldsymbol{A})_{ji}}.
@@ -567,11 +578,13 @@ $n$ 차원 벡터공간 $V$ 에서 정의된 연산자 $T$ 와 정규직교기�
 
 </br>
 
-## 연습문제
+## 연습문제 {.unnumbered}
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_7_A_2}
+::: {#exr-axler4_7_A_3}
+
+#### Axler4th 7.A.3
 
 $\lambda$ 가 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 의 고유값이라면 $\overline{\lambda}$ 는 $\boldsymbol{A}^\ast$ 의 고유값임을 보여라.
 
@@ -591,11 +604,39 @@ $$
 
 :::
 
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br>
 
-::: {#exr-axler_7_A_3}
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-$\boldsymbol{A}=\mathcal{M}_{n \times n}(\mathbb{F})$ 이며 $U\le \mathcal{M}_n(\mathbb{F})$ 라고 하자. $U$ 가 $\boldsymbol{A}$-불변 일 필요충분조건은 $\boldsymbol{U}^\perp$ 가 $\boldsymbol{A}^\ast$-불변인것임을 보여라.
+::: {#exr-axler4_7_A_4}
+
+#### Axler4th 7.A.4
+
+$L\in \mathcal{L}(V)$ 이고 $U\le V$ 라고 하자. 이 때 $U$ 가 $L$-불변일 필요충분조건은 $U^\perp$ 가 $L^\ast$-불변인 것임을 보여라.
+:::
+
+</div></br>
+
+::: {.solution}
+
+모든 $u\in U,\, w\in U^\perp$ 에 대해 $\langle Lu,\,w\rangle = 0$ 이면 $\langle u,\, L^\ast w\rangle =0$ 이다. 
+
+:::
+
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4_7_A_5}
+
+#### Axler4th 7.A.5
+
+$L\in \mathcal{L}(V,\,W)$ 이다. $(e_1,\ldots,\,e_n)$ 이 $V$ 의 정규직교기저이고 $(f_1,\ldots,\,f_m)$ 이 $W$ 의 정규직교기저일 때 다음이 성립함을 보여라.
+
+$$
+\|Le_1\|^2 + \cdots + \|Le_n\|^2 = \|L^\ast f_1\|^2 + \cdots \|L^\ast f_m\|^2
+$$
 
 :::
 
@@ -603,13 +644,33 @@ $\boldsymbol{A}=\mathcal{M}_{n \times n}(\mathbb{F})$ 이며 $U\le \mathcal{M}_n
 
 ::: {.solution}
 
-모든 $\boldsymbol{u}\in U$, $\boldsymbol{w}\in U^\perp$ 에 대해 $\langle \boldsymbol{Au}, \boldsymbol{w}\rangle = 0$ 이면 $\langle \boldsymbol{u}, \boldsymbol{A}^\ast \boldsymbol{w}\rangle = 0 = \langle \boldsymbol{A}^\ast \boldsymbol{w}, \boldsymbol{u} \rangle$ 이다. 
+$Le_i = \sum_{j=1}^m A_{ji}f_j$ 라면 
+
+$$
+\|Le_1\|^2 + \cdots + \|Le_n\|^2 = \sum_{i=1}^n \sum_{j=1}^n |A_{ij}|^2
+$$
+
+이다. 또한 $\langle Le_i,\,f_j\rangle = A_{ji}= \langle e_i,\, L^\ast f_j\rangle$ 이므로
+
+$$
+L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
+$$
+
+이며, 따라서
+
+$$
+\|L^\ast f_1\|^2 + \cdots + \|L^\ast f_m\|^2 = \sum_{i=1}^n \sum_{j=1}^m \left|\overline{A_{ji}}\right|^2 = \sum_{i=1}^n \sum_{j=1}^n |A_{ij}|^2 = \|Le_1\|^2 + \cdots + \|Le_n\|^2
+$$
+
 :::
 
+</br>
 
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_7_A_4}
+::: {#exr-axler4_7_A_6}
+
+#### Axler4th 7.A.6
 
 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음을 보여라.
 
@@ -627,9 +688,13 @@ $(\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}$ 이므로 둘중 하나만 보이�
 
 :::
 
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br>
 
-::: {#exr-axler_7_A_5}
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4th_7_A_7}
+
+#### Axler4th 7.A.7
 
 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음을 보여라.
 
@@ -649,9 +714,13 @@ $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음을 �
 ($2$) $\text{ker} (\boldsymbol{A}^\ast) = (\text{im} (\boldsymbol{A}))^\perp$ 이므로 $\text{nullity}(\boldsymbol{A}^\ast) = m - \text{rank}(\boldsymbol{A})$ 이다. ($1$) 에 $\text{nullity} (\boldsymbol{A}) = n-\text{rank}(\boldsymbol{A}^\ast)$ 과 함께 대입하면 ($2$) 를 얻는다.
 :::
 
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br>
 
-::: {#exr-axler_7_A_7}
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4th_7_A_9}
+
+#### Axler4th 7.A.9
 
 $\boldsymbol{A},\, \boldsymbol{B} \in \mathcal{M}_{n \times n} (\mathbb{F})$ 가 에르미트 행렬이라고 하자. $\boldsymbol{AB}$ 가 에르미트 행렬일 필요충분조건은 $\boldsymbol{AB}=\boldsymbol{BA}$ 임을 보여라.
 

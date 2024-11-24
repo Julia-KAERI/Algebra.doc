@@ -15,10 +15,11 @@ crossref:
 
 </br>
 
-## 정규행렬 {#sec-normal_operator}
+## 정규연산자와 정규행렬
 
 </br>
 
+### 정규 연산자와 행렬 {#sec-normal_operator}
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-normal_matrix}
 ### 정규 행렬
@@ -35,7 +36,7 @@ crossref:
 
 ::: {#prp-hermitian_is_normal}
 
-에르미트 행렬은 정규 행렬이다. 
+에르미트 연산자는 정규연산자이다. 또한 에르미트 행렬은 정규 행렬이다. 
 
 :::
 
@@ -66,34 +67,64 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-eigenvectors_or_normal_matrix_and_adjoint}
-$\boldsymbol{A}$ 가 정규행렬이면 $\boldsymbol{A}$ 와 $\boldsymbol{A}^\ast$ 는 같은 고유벡터를 가진다.
+::: {#prp-part1_properties_of_normal_operator}
+
+$\F$-벡터공간 $L\in \mathcal{L}(V)$ 가 정규연산자일 때 다음이 성립한다.
+
+&emsp;($a$) $\ker (L) = \ker (L^\ast)$.
+
+&emsp;($b$) $\text{im}(L) = \text{im} (L^\ast)$.
+
+&emsp;($c$) $V = \ker (L) \oplus \text{im}(L)$.
+
+&emsp;($d$) $c\in \mathbb{F}$ 일 때 $L-c I$ 도 정규연산자이다.
+
 :::
 
 </div></br>
 
 ::: {.proof}
-$\boldsymbol{A}$ 가 정규행렬이면, $\boldsymbol{A}-\lambda \boldsymbol{I}$ 도 정규행렬임을 보일 수 있다.
+
+전체적으로 @thm-kernel_image_of_adjoint_operator 를 참고하라.
+
+($a$) @prp-condition_of_normal_matrix
+
+($b$) $\text{im}(L) = (\ker (L^\ast))^\perp = (\ker (L))^\perp = \text{im}(L^\ast)$.
+
+($c$) $V=(\ker (L)) \oplus (\ker (L))^\perp = (\ker (L)) \oplus (\ker (L^\ast))^\perp = \ker (L)\oplus \text{im}(L)$
+
+($d$) 
 
 $$
 \begin{aligned}
-(\boldsymbol{A}-\lambda \boldsymbol{I})^\ast & (\boldsymbol{A}-\lambda \boldsymbol{I}) -(\boldsymbol{A}-\lambda \boldsymbol{I}) (\boldsymbol{A}-\lambda \boldsymbol{I})^\ast \\
-&= \boldsymbol{A}^\ast \boldsymbol{A} -\lambda \boldsymbol{A}^\ast -\overline{\lambda}\boldsymbol{A} +|\lambda|^2 \boldsymbol{I} - \boldsymbol{AA}^\ast +\lambda \boldsymbol{A}^\ast + \overline{\lambda}\boldsymbol{A} -|\lambda|^2\boldsymbol{I} \\
-&= \boldsymbol{0}.
+(L-cI)(L-cI)^\ast &= (L-cI)(L^\ast - \overline{c}I) = LL^\ast - \overline{c}L + cL^\ast -|c|^2 \\[0.3em]
+&=L^\ast L  - \overline{c}L + cL^\ast -|c|^2 = (L-cI)^\ast (L-cI)
 \end{aligned}
 $$
 
-따라서 $\lambda$ 와 $\boldsymbol{v}$ 가 $\boldsymbol{A}$ 의 고유값과 고유벡터라 하면 @prp-condition_of_normal_matrix 에 의해
 
-$$
-0 = \| (\boldsymbol{A}-\lambda \boldsymbol{I})\boldsymbol{v}\| = \| (\boldsymbol{A}^\ast -\overline{\lambda}\boldsymbol{I})\boldsymbol{v}\|
-$$
-
-이다. 즉 정규행렬 $\boldsymbol{A}$ 에 대해 $\boldsymbol{v}$ 가 고유값 $\lambda$ 를 갖는 고유벡터이면 $\boldsymbol{v}$ 는 $\boldsymbol{A}^\ast$  에 대해 $\overline{\lambda}$ 를 고유값으로 갖는 고유벡터이다. $\square$
 
 :::
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-eigenvectors_or_normal_matrix_and_adjoint}
+$L$ 이 정규연산자이면 $L^\ast$ 와 같은 고유벡터를 가지며 이에 대한 고유값은 서로 복소 공액이다. 
+:::
+
+</div>
+
+</br>
+
+::: {.proof}
+$L-cI$ 가 정규연산자이므로 @prp-condition_of_normal_matrix 로부터 $0 = \|(L-cI)v\| = \|(L-cI)^\ast v\|$. $\square$ 
+
+:::
+
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-orthogonality_of_normal_matrix}
 정규행렬 $\boldsymbol{A}$ 의 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.
@@ -145,6 +176,301 @@ $$
 
 인데 $j=1$ 인 경우에서 $A_{12}=0$ 임을 보였으므로 $A_{23}= \cdots = A_{2n}=0$ 임을 안다. 이것을 계속 반복해보면 $\boldsymbol{A}$ 가 대각행렬임을 알 수 있다. $\square$ 
 :::
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-part1_normal_operator_and_two_hermite_operator}
+
+$\C$ 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 에 대해 다음은 동치이다.
+
+&emsp;($1$) $L$ 은 정규연산자이다.
+
+&emsp;($2$) 어떤 서로 commute 한 에르미트 연산자 $A,\,B \in \mathcal{L}(V)$ 에 대해 $L=A+iB$ 이다.
+
+:::
+
+</div></br>
+
+::: {.proof}
+
+($1\implies 2$) $L$ 이 정규연산자라고 하자. $A:=\dfrac{L+L^\ast}{2},\, B:= \dfrac{L-L^\ast}{2i}$ 라고 하면 $L = A+iB$ 이며 $A,\,B$ 는 에르미트 연산자이다. 또한
+
+$$
+\begin{aligned}
+AB-BA &= \dfrac{LL-LL^\ast + L^\ast L - L^\ast L^\ast - LL + L^\ast L - LL^\ast + L^\ast L^\ast}{4i} \\[0.3em]
+&= \dfrac{L^\ast L - LL^\ast}{2i} = 0
+\end{aligned}
+$$
+
+이므로 $A$ 와 $B$ 는 commute 하다.
+
+($2\implies 1$) $LL^\ast - L^\ast L = (A+iB)(A-iB)- (A-iB)(A+iB)= i(BA-AB)=0$ 이므로 $L$ 은 정규연산자이다. $\square$
+
+:::
+
+</br>
+
+### 연습문제 {.unnumbered}
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4_7_A_18}
+
+#### Axler4th 7.A.18
+
+$n\ge 2$ 에 대해 $n\times n$ 정규행렬의 집합은 $\mathcal{M}_{n \times n}(\mathbb{F})$ 의 부분공간이 되지 않음을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+$\boldsymbol{A},\,\boldsymbol{B} \in \mathcal{M}_{n\times n} (\mathbb{F})$ 의 정규행렬이라고 하자. $c\in \mathbb{F}$ 에 대해
+
+$$
+(\boldsymbol{A}+c\boldsymbol{B})(\boldsymbol{A}+c\boldsymbol{B})^\ast - (\boldsymbol{A}+c\boldsymbol{B})^\ast(\boldsymbol{A}+c\boldsymbol{B}) = \overline{c}(\boldsymbol{AB}^\ast - \boldsymbol{B}^\ast \boldsymbol{A})+c(\boldsymbol{BA}^\ast - \boldsymbol{A}^\ast\boldsymbol{B})
+$$
+
+이므로 $\boldsymbol{A}+c\boldsymbol{B}$ 가 정규행렬이 되지 않는다.
+::: 
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler_7_A_19}
+
+#### Axler4th 7.A.19
+
+$L\in \mathcal{L}(V)$ 이고 모든 $v\in V$ 에 대해 $\|L^\ast v\|\le \|Lv\|$ 이면 $L$ 이 정규연산자임을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+@prp-condition_of_normal_matrix ... to be done
+
+
+:::
+
+
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler_7_A_12}
+
+$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 정규행렬이고 $3$ 과 $4$ 를 고유값으로 가진다고 하자. 이 때 $\boldsymbol{u}\in \mathcal{M}_n(\mathbb{F})$, $\|\boldsymbol{u}\|=\sqrt{2}$, $\|\boldsymbol{Au}\|=5$ 인 $\boldsymbol{u}$ 가 존재함을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$3$ 을 고유값으로 가지고 크기가 $1$ 인 벡터를 $\boldsymbol{u}_1$ 이라 하고 $4$ 를 유값으로 가지고 크기가 $1$ 인 벡터를 $\boldsymbol{u}_2$ 라고 하자. 서로 다른 고유값을 가진 정규벡터의 고유벡터이므로 $\boldsymbol{u}_1$ 과 $\boldsymbol{u}_2$ 는 직교한다. $\boldsymbol{u}=\boldsymbol{u}_1+\boldsymbol{u}_2$ 라고 하면, $\|\boldsymbol{u}\|=2$ 이며, $\|\boldsymbol{Au}\|^2 = 5$ 이다. 
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler_7_A_15}
+
+$\mathbb{F}$-내적벡터공간 $V$ 와 $u,\,x\in V$ 에 대해 $T\in \mathcal{L}(V)$ 를 
+
+$$
+T(v) = \langle v,\, u\rangle x
+$$
+
+로 정의하자. 이 때 다음이 성립함을 보여라.
+
+&emsp; ($1$) $\mathbb{F}=\mathbb{R}$ 일 때 $T$ 가 에르미트 연산자일 필요충분조건은 $u,\,x$ 가 선형종속인 것이다.
+
+&emsp; ($2$) $T$ 가 정규연산자일 필요충분조건은 $u,\,x$ 가 선형종속인 것이다.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+ $v,\,w\in V$ 에 대해 $\langle T^\ast(v), w\rangle = \langle v, T(w)\rangle$ 이다. 따라서,
+
+$$
+\langle T^\ast (v),\, w\rangle = \langle u, w\rangle \langle v, x\rangle
+$$
+
+로부터 $T^\ast (v) = \langle v, x\rangle u$ 임을 안다. 
+
+($1$) $T$ 가 에르미트 연산자라면 $T=T^\ast$ 이어야 하므로, 
+
+$$
+0=(T-T^\ast)(v) = \langle v, u\rangle x - \langle v, x\rangle u
+$$
+
+으로부터 $x= \dfrac{\langle v, u\rangle}{\langle v, x\rangle}u$ 이어야 한다. 즉 $u$ 와 $x$ 는 선형 종속이어야 한다. 이제 $u$ 와 $x$ 가 선형종속이라고 하자. 즉 $u=cx,\, c\in \mathbb{R}$ 이라고 하자.
+
+$$
+(T-T^\ast)(v) = c\langle v, x\rangle x - c \langle v, x \rangle x = 0 
+$$
+
+이므로 $T=T^\ast$ 이다.
+
+($2$) $T$ 가 정규연산자라고 하자. $TT^\ast - T^\ast T=0$ 이므로, 
+
+$$
+\begin{aligned}
+0 &= (TT^\ast - T^\ast T)(v) = T(\langle v, x \rangle u) - T^\ast (\langle v, u\rangle x)  \\
+& = \langle v, x \rangle \|u\|^2 x - \langle v, u\rangle \|x\|^2 u
+\end{aligned}
+$$
+
+이다. 즉 $x = \dfrac{\langle v, x\rangle \|u\|^2}{\langle v, u\rangle \|x\|^2} u$ 이어야 하므로 선형종속이다. 이제 $u=cx,\, c\in \mathbb{F}$ 라고 하자.  
+
+$$
+(TT^\ast - T^\ast T)(v) = T(c\langle v, x \rangle x) - T^\ast (c\langle v, x\rangle x) =  c^2\langle v, x \rangle^2 x - c^2\langle v, x \rangle^2 x = 0
+$$
+
+이므로 $T$ 는 정규연산자이다. 
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler_7_A_16}
+
+$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 정규연산자일 때 다음을 보이시오.
+
+&emsp; ($1$) $\text{im}(\boldsymbol{A}) = \text{im}(\boldsymbol{A}^\ast)$.
+
+&emsp; ($2$) 양의 정수 $k$ 에 대해 $\ker (\boldsymbol{A}^k) = \ker (\boldsymbol{A})$ 이며 $\text{im}(\boldsymbol{A}^k) = \text{im}(\boldsymbol{A})$.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+($1$) @prp-condition_of_normal_matrix 로부터 $v\in \ker (\boldsymbol{A})$ 이면 $0=\|\boldsymbol{Av}\|=\|\boldsymbol{A}^\ast \boldsymbol{v}\|$ 이므로 $\boldsymbol{v} \in \ker (\boldsymbol{A}^\ast)$ 임을 안다. $(\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}$ 이므로 $\ker (\boldsymbol{A})= \ker(\boldsymbol{A}^\ast)$ 이다. 또한 @thm-kernel_image_of_adjoint_operator 로부터
+
+$$
+\text{im}(\boldsymbol{A}) = (\ker (\boldsymbol{A}^\ast))^\perp = (\ker (\boldsymbol{A}))^\perp = \text{im}(\boldsymbol{A}^\ast)
+$$
+
+임을 안다. 
+
+($2$) $k$ 에 대한 induction 을 사용한다. $\ker (\boldsymbol{A})\subseteq \ker(\boldsymbol{A}^k)$ 임은 자명하므로 $\ker(\boldsymbol{A}^k) \subseteq  \ker(\boldsymbol{A})$ 만 보이면 된다. $\boldsymbol{A}$ 가 정규행렬이라면 양의 정수 $k$ 에 대해 $(\boldsymbol{A}^\ast)^k\boldsymbol{A}^k = (\boldsymbol{A}^\ast\boldsymbol{A})^k$ 임은 쉽게 보일 수 있다. 또한
+
+$$
+\begin{aligned}
+\|\boldsymbol{A}^2\boldsymbol{v}\|= \langle \boldsymbol{A}^2 \boldsymbol{v}, \boldsymbol{A}^2 \boldsymbol{v} \rangle = \langle \boldsymbol{A}^\ast \boldsymbol{Av},\boldsymbol{A}^\ast \boldsymbol{Av}\rangle  = \|\boldsymbol{A}^\ast \boldsymbol{Av}\|^2
+\end{aligned}
+$$
+
+이므로 $\ker (\boldsymbol{A}^2) = \ker (\boldsymbol{A}^\ast \boldsymbol{A})$ 이며, 
+
+$$
+\boldsymbol{v}\in \ker (\boldsymbol{A}^\ast\boldsymbol{A}) \implies \langle \boldsymbol{A}^\ast \boldsymbol{Av}, \boldsymbol{v}\rangle = 0 \implies \|\boldsymbol{Av}\|^2=0
+$$
+
+이므로 $\ker (\boldsymbol{A}^2)\subseteq \ker(\boldsymbol{A})$ 임을 안다. $\ker(\boldsymbol{A}) \subseteq \ker(\boldsymbol{A}^2)$ 임은 자명하므로 $\ker(\boldsymbol{A}) = \ker(\boldsymbol{A}^2)$ 이다. 이제 $\ker(\boldsymbol{A}^k) =  \ker(\boldsymbol{A})$ 임을 가정하자.
+
+$$
+\boldsymbol{v}\in \ker (\boldsymbol{A}^{k+1}) \implies \boldsymbol{A}^k(\boldsymbol{A}\boldsymbol{v}) = \boldsymbol{0} \implies \boldsymbol{Av} \in \ker (\boldsymbol{A}^k) \implies \boldsymbol{Av} \in \ker (\boldsymbol{A})
+$$
+
+이므로 $\boldsymbol{v}\in \ker(\boldsymbol{A}^2) = \ker(\boldsymbol{A})$ 이다. 
+
+이제 $\text{im}(\boldsymbol{A}^k) = \text{im}(\boldsymbol{A})$ 임을 보이자. 우리는 앞서 $\ker (\boldsymbol{A}) = \ker (\boldsymbol{A}^\ast)$ 임을 보였다. $\boldsymbol{A}$ 가 정규행렬이라면 $\boldsymbol{A}^\ast$ 도 정규행렬이므로 
+
+$$
+\ker (\boldsymbol{A}^k) = \ker (\boldsymbol{A}) =\ker (\boldsymbol{A}^\ast) = \ker ((\boldsymbol{A}^\ast)^k) =  \ker ((\boldsymbol{A}^k)^\ast)
+$$
+
+이다. 따라서
+$$
+\text{im}(\boldsymbol{A}^k) = (\ker ((\boldsymbol{A}^k)^\ast))^\perp = (\ker (\boldsymbol{A}^\ast)) = \text{im}(\boldsymbol{A})
+$$
+
+이다. 
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler_7_A_18}
+
+$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 표준기저 $(\boldsymbol{e}_1, \ldots,\,\boldsymbol{e}_n)$ 에 대해 $\|\boldsymbol{Ae}_i\| = \|\boldsymbol{A}^\ast \boldsymbol{e}_i\|$ $(i=1,\ldots,\,n)$ 이면 $\boldsymbol{A}$ 가 정규행렬인가? 
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+(<u>*이게 맞다면 텍스트에 명제로 나왔겠지?*</u>) 
+
+$\boldsymbol{A}= \left[\begin{array}{rr} 1 & -1 \\ 1 & -1\end{array}\right]$ 에 대해 $\|\boldsymbol{Ae}_1\| = \|\boldsymbol{Ae}_2\| = \sqrt{2}$ 이지만 $\boldsymbol{AA}^\ast - \boldsymbol{A}^\ast\boldsymbol{A} = \left[\begin{array}{rr} 0 & 4 \\ 4 & 0\end{array}\right] \ne \boldsymbol{0}$ 이다. 
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler_7_B_1}
+
+대칭행렬이 아니면서 행렬의 고유벡터로 이루어진 기저를 갖도록 하는 정사각행렬이 존재하는가?
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$\boldsymbol{A} = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatrix}$ 는 $\boldsymbol{Ae}_1 = \boldsymbol{e}_1$, $\boldsymbol{A}(\boldsymbol{e}_1 + \boldsymbol{e}_2) = 2(\boldsymbol{e}_1 + \boldsymbol{e}_2)$, $\boldsymbol{Ae}_3 = 3\boldsymbol{e}_3$ 인데 대칭행렬이 아니다. 
+
+:::
+
+::: {.callout-tip appearance="minimal" icon="false"}
+
+스펙트럼 정리가 이야기하는 것은 복소수체에서의 정규행렬, 실수체에서의 대칭행렬의 경우 행렬의 고유벡터로 정규직교기저를 구성할 수 있다는 것이다. 위의 문제의 경우는 대칭행렬이 아니므로 고유벡터로 정규직교기저를 구성할 수 없지만 기저는 구성 할 수 있다는 것이다.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler_7_B_4}
+
+$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때 $\boldsymbol{A}$ 가 정규행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 $\mathcal{M}_n(\mathbb{C})$ 는 모든 $\boldsymbol{A}$ 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.
+:::
+
+</div></br>
+
+::: {.solution}
+
+@thm-spectrum_theorem_for_complex_vector_space 
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler_7_B_5}
+
+$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 일 때 $\boldsymbol{A}$ 가 대칭행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 $\mathcal{M}_n(\mathbb{R})$ 는 모든 $\boldsymbol{A}$ 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.
+:::
+
+</div></br>
+
+::: {.solution}
+
+@thm-spectrum_theorem_for_real_vector_space
+
+:::
+
+
 
 </br>
 
@@ -393,22 +719,6 @@ $$
 
 </br>
 
-<!-- ::: {#lem-invariant_subspace_and_block_diagonal_form}
-
-유한차원 벡터공간 $U$ 가 $\mathbb{F}^{n }$ 의 $\boldsymbol{A}\in \mathbb{F}^{n \times n}$ 에 대한 불변부분공간일 때 $\boldsymbol{A}$ 는 어떤 블록대각행렬과 닮았다.
-
-:::
-
-::: {.proof}
-$U$ 에 대한 정규직교기저 $\mathcal{B}_\parallel$ 와 $U^\perp$ 에 대한 정규직교기저 $\mathcal{B}_\perp$ 에 대해 $\mathcal{B} = \mathcal{B}_\parallel \cup \mathcal{B}_\perp$ 는 정규직교기저이다. 이 때 $\dim U = m$ 이면, $\dim U^\perp = n-m$ 이다. 이 정규직교 기저로 $\boldsymbol{A}$ 를 닮음변환하면 $m\times m$ 행렬과 $(n-m)\times (n-m)$ 행렬로 블록대각화된다. $\square$
-
-:::
-
-
-참고 : [직교 여공간과 직합](#직교-여공간과-직합)
-
-</br> -->
-
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-matrix_under_two_invariant_subspace}
@@ -481,234 +791,3 @@ $$
 </br>
 
 ## 연습문제 {.unnumbered}
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-axler_7_A_10}
-
-$n\ge 2$ 에 대해 $n\times n$ 정규행렬의 집합은 $\mathcal{M}_{n \times n}(\mathbb{F})$ 의 부분공간이 되지 않음을 보여라.
-
-:::
-
-</div></br>
-
-
-::: {.solution}
-$\boldsymbol{A},\,\boldsymbol{B} \in \mathcal{M}_{n\times n} (\mathbb{F})$ 의 정규행렬이라고 하자. $c\in \mathbb{F}$ 에 대해
-
-$$
-(\boldsymbol{A}+c\boldsymbol{B})(\boldsymbol{A}+c\boldsymbol{B})^\ast - (\boldsymbol{A}+c\boldsymbol{B})^\ast(\boldsymbol{A}+c\boldsymbol{B}) = \overline{c}(\boldsymbol{AB}^\ast - \boldsymbol{B}^\ast \boldsymbol{A})+c(\boldsymbol{BA}^\ast - \boldsymbol{A}^\ast\boldsymbol{B})
-$$
-
-이므로 $\boldsymbol{A}+c\boldsymbol{B}$ 가 정규행렬이 되지 않는다.
-::: 
-
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-axler_7_A_12}
-
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 정규행렬이고 $3$ 과 $4$ 를 고유값으로 가진다고 하자. 이 때 $\boldsymbol{u}\in \mathcal{M}_n(\mathbb{F})$, $\|\boldsymbol{u}\|=\sqrt{2}$, $\|\boldsymbol{Au}\|=5$ 인 $\boldsymbol{u}$ 가 존재함을 보여라.
-
-:::
-
-</div></br>
-
-::: {.solution}
-
-$3$ 을 고유값으로 가지고 크기가 $1$ 인 벡터를 $\boldsymbol{u}_1$ 이라 하고 $4$ 를 유값으로 가지고 크기가 $1$ 인 벡터를 $\boldsymbol{u}_2$ 라고 하자. 서로 다른 고유값을 가진 정규벡터의 고유벡터이므로 $\boldsymbol{u}_1$ 과 $\boldsymbol{u}_2$ 는 직교한다. $\boldsymbol{u}=\boldsymbol{u}_1+\boldsymbol{u}_2$ 라고 하면, $\|\boldsymbol{u}\|=2$ 이며, $\|\boldsymbol{Au}\|^2 = 5$ 이다. 
-
-:::
-
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-axler_7_A_15}
-
-$\mathbb{F}$-내적벡터공간 $V$ 와 $u,\,x\in V$ 에 대해 $T\in \mathcal{L}(V)$ 를 
-
-$$
-T(v) = \langle v,\, u\rangle x
-$$
-
-로 정의하자. 이 때 다음이 성립함을 보여라.
-
-&emsp; ($1$) $\mathbb{F}=\mathbb{R}$ 일 때 $T$ 가 에르미트 연산자일 필요충분조건은 $u,\,x$ 가 선형종속인 것이다.
-
-&emsp; ($2$) $T$ 가 정규연산자일 필요충분조건은 $u,\,x$ 가 선형종속인 것이다.
-
-:::
-
-</div></br>
-
-::: {.solution}
-
- $v,\,w\in V$ 에 대해 $\langle T^\ast(v), w\rangle = \langle v, T(w)\rangle$ 이다. 따라서,
-
-$$
-\langle T^\ast (v),\, w\rangle = \langle u, w\rangle \langle v, x\rangle
-$$
-
-로부터 $T^\ast (v) = \langle v, x\rangle u$ 임을 안다. 
-
-($1$) $T$ 가 에르미트 연산자라면 $T=T^\ast$ 이어야 하므로, 
-
-$$
-0=(T-T^\ast)(v) = \langle v, u\rangle x - \langle v, x\rangle u
-$$
-
-으로부터 $x= \dfrac{\langle v, u\rangle}{\langle v, x\rangle}u$ 이어야 한다. 즉 $u$ 와 $x$ 는 선형 종속이어야 한다. 이제 $u$ 와 $x$ 가 선형종속이라고 하자. 즉 $u=cx,\, c\in \mathbb{R}$ 이라고 하자.
-
-$$
-(T-T^\ast)(v) = c\langle v, x\rangle x - c \langle v, x \rangle x = 0 
-$$
-
-이므로 $T=T^\ast$ 이다.
-
-($2$) $T$ 가 정규연산자라고 하자. $TT^\ast - T^\ast T=0$ 이므로, 
-
-$$
-\begin{aligned}
-0 &= (TT^\ast - T^\ast T)(v) = T(\langle v, x \rangle u) - T^\ast (\langle v, u\rangle x)  \\
-& = \langle v, x \rangle \|u\|^2 x - \langle v, u\rangle \|x\|^2 u
-\end{aligned}
-$$
-
-이다. 즉 $x = \dfrac{\langle v, x\rangle \|u\|^2}{\langle v, u\rangle \|x\|^2} u$ 이어야 하므로 선형종속이다. 이제 $u=cx,\, c\in \mathbb{F}$ 라고 하자.  
-
-$$
-(TT^\ast - T^\ast T)(v) = T(c\langle v, x \rangle x) - T^\ast (c\langle v, x\rangle x) =  c^2\langle v, x \rangle^2 x - c^2\langle v, x \rangle^2 x = 0
-$$
-
-이므로 $T$ 는 정규연산자이다. 
-
-:::
-
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-axler_7_A_16}
-
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 정규연산자일 때 다음을 보이시오.
-
-&emsp; ($1$) $\text{im}(\boldsymbol{A}) = \text{im}(\boldsymbol{A}^\ast)$.
-
-&emsp; ($2$) 양의 정수 $k$ 에 대해 $\ker (\boldsymbol{A}^k) = \ker (\boldsymbol{A})$ 이며 $\text{im}(\boldsymbol{A}^k) = \text{im}(\boldsymbol{A})$.
-
-:::
-
-</div></br>
-
-::: {.solution}
-
-($1$) @prp-condition_of_normal_matrix 로부터 $v\in \ker (\boldsymbol{A})$ 이면 $0=\|\boldsymbol{Av}\|=\|\boldsymbol{A}^\ast \boldsymbol{v}\|$ 이므로 $\boldsymbol{v} \in \ker (\boldsymbol{A}^\ast)$ 임을 안다. $(\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}$ 이므로 $\ker (\boldsymbol{A})= \ker(\boldsymbol{A}^\ast)$ 이다. 또한 @thm-kernel_image_of_adjoint_operator 로부터
-
-$$
-\text{im}(\boldsymbol{A}) = (\ker (\boldsymbol{A}^\ast))^\perp = (\ker (\boldsymbol{A}))^\perp = \text{im}(\boldsymbol{A}^\ast)
-$$
-
-임을 안다. 
-
-($2$) $k$ 에 대한 induction 을 사용한다. $\ker (\boldsymbol{A})\subseteq \ker(\boldsymbol{A}^k)$ 임은 자명하므로 $\ker(\boldsymbol{A}^k) \subseteq  \ker(\boldsymbol{A})$ 만 보이면 된다. $\boldsymbol{A}$ 가 정규행렬이라면 양의 정수 $k$ 에 대해 $(\boldsymbol{A}^\ast)^k\boldsymbol{A}^k = (\boldsymbol{A}^\ast\boldsymbol{A})^k$ 임은 쉽게 보일 수 있다. 또한
-
-$$
-\begin{aligned}
-\|\boldsymbol{A}^2\boldsymbol{v}\|= \langle \boldsymbol{A}^2 \boldsymbol{v}, \boldsymbol{A}^2 \boldsymbol{v} \rangle = \langle \boldsymbol{A}^\ast \boldsymbol{Av},\boldsymbol{A}^\ast \boldsymbol{Av}\rangle  = \|\boldsymbol{A}^\ast \boldsymbol{Av}\|^2
-\end{aligned}
-$$
-
-이므로 $\ker (\boldsymbol{A}^2) = \ker (\boldsymbol{A}^\ast \boldsymbol{A})$ 이며, 
-
-$$
-\boldsymbol{v}\in \ker (\boldsymbol{A}^\ast\boldsymbol{A}) \implies \langle \boldsymbol{A}^\ast \boldsymbol{Av}, \boldsymbol{v}\rangle = 0 \implies \|\boldsymbol{Av}\|^2=0
-$$
-
-이므로 $\ker (\boldsymbol{A}^2)\subseteq \ker(\boldsymbol{A})$ 임을 안다. $\ker(\boldsymbol{A}) \subseteq \ker(\boldsymbol{A}^2)$ 임은 자명하므로 $\ker(\boldsymbol{A}) = \ker(\boldsymbol{A}^2)$ 이다. 이제 $\ker(\boldsymbol{A}^k) =  \ker(\boldsymbol{A})$ 임을 가정하자.
-
-$$
-\boldsymbol{v}\in \ker (\boldsymbol{A}^{k+1}) \implies \boldsymbol{A}^k(\boldsymbol{A}\boldsymbol{v}) = \boldsymbol{0} \implies \boldsymbol{Av} \in \ker (\boldsymbol{A}^k) \implies \boldsymbol{Av} \in \ker (\boldsymbol{A})
-$$
-
-이므로 $\boldsymbol{v}\in \ker(\boldsymbol{A}^2) = \ker(\boldsymbol{A})$ 이다. 
-
-이제 $\text{im}(\boldsymbol{A}^k) = \text{im}(\boldsymbol{A})$ 임을 보이자. 우리는 앞서 $\ker (\boldsymbol{A}) = \ker (\boldsymbol{A}^\ast)$ 임을 보였다. $\boldsymbol{A}$ 가 정규행렬이라면 $\boldsymbol{A}^\ast$ 도 정규행렬이므로 
-
-$$
-\ker (\boldsymbol{A}^k) = \ker (\boldsymbol{A}) =\ker (\boldsymbol{A}^\ast) = \ker ((\boldsymbol{A}^\ast)^k) =  \ker ((\boldsymbol{A}^k)^\ast)
-$$
-
-이다. 따라서
-$$
-\text{im}(\boldsymbol{A}^k) = (\ker ((\boldsymbol{A}^k)^\ast))^\perp = (\ker (\boldsymbol{A}^\ast)) = \text{im}(\boldsymbol{A})
-$$
-
-이다. 
-
-:::
-
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-axler_7_A_18}
-
-$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 표준기저 $(\boldsymbol{e}_1, \ldots,\,\boldsymbol{e}_n)$ 에 대해 $\|\boldsymbol{Ae}_i\| = \|\boldsymbol{A}^\ast \boldsymbol{e}_i\|$ $(i=1,\ldots,\,n)$ 이면 $\boldsymbol{A}$ 가 정규행렬인가? 
-
-:::
-
-</div></br>
-
-::: {.solution}
-
-(<u>*이게 맞다면 텍스트에 명제로 나왔겠지?*</u>) 
-
-$\boldsymbol{A}= \left[\begin{array}{rr} 1 & -1 \\ 1 & -1\end{array}\right]$ 에 대해 $\|\boldsymbol{Ae}_1\| = \|\boldsymbol{Ae}_2\| = \sqrt{2}$ 이지만 $\boldsymbol{AA}^\ast - \boldsymbol{A}^\ast\boldsymbol{A} = \left[\begin{array}{rr} 0 & 4 \\ 4 & 0\end{array}\right] \ne \boldsymbol{0}$ 이다. 
-
-:::
-
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-axler_7_B_1}
-
-대칭행렬이 아니면서 행렬의 고유벡터로 이루어진 기저를 갖도록 하는 정사각행렬이 존재하는가?
-
-:::
-
-</div></br>
-
-::: {.solution}
-
-$\boldsymbol{A} = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatrix}$ 는 $\boldsymbol{Ae}_1 = \boldsymbol{e}_1$, $\boldsymbol{A}(\boldsymbol{e}_1 + \boldsymbol{e}_2) = 2(\boldsymbol{e}_1 + \boldsymbol{e}_2)$, $\boldsymbol{Ae}_3 = 3\boldsymbol{e}_3$ 인데 대칭행렬이 아니다. 
-
-:::
-
-::: {.callout-tip appearance="minimal" icon="false"}
-
-스펙트럼 정리가 이야기하는 것은 복소수체에서의 정규행렬, 실수체에서의 대칭행렬의 경우 행렬의 고유벡터로 정규직교기저를 구성할 수 있다는 것이다. 위의 문제의 경우는 대칭행렬이 아니므로 고유벡터로 정규직교기저를 구성할 수 없지만 기저는 구성 할 수 있다는 것이다.
-
-:::
-
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-axler_7_B_4}
-
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때 $\boldsymbol{A}$ 가 정규행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 $\mathcal{M}_n(\mathbb{C})$ 는 모든 $\boldsymbol{A}$ 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.
-:::
-
-</div></br>
-
-::: {.solution}
-
-@thm-spectrum_theorem_for_complex_vector_space 
-
-:::
-
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-axler_7_B_5}
-
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 일 때 $\boldsymbol{A}$ 가 대칭행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 $\mathcal{M}_n(\mathbb{R})$ 는 모든 $\boldsymbol{A}$ 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.
-:::
-
-</div></br>
-
-::: {.solution}
-
-@thm-spectrum_theorem_for_real_vector_space
-
-:::
