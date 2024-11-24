@@ -252,13 +252,36 @@ $L\in \mathcal{L}(V)$ 이고 모든 $v\in V$ 에 대해 $\|L^\ast v\|\le \|Lv\|$
 
 ::: {.solution}
 
-@prp-condition_of_normal_matrix ... to be done
-
+.. to be done ..
 
 :::
 
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler_7_A_20}
+
+#### Axler4th 7.A.20
+
+$P\in \mathcal{L}(V)$ 가 $P^2=P$ 일 때 다음이 동치인 것을 보여라.
+
+&emsp;($a$) $P$ 는 에르미트이다.
+
+&emsp;($b$) $P$ 는 정규연산자이다.
+
+&emsp;($c$) 어떤 $U\le V$ 에 대해 $P = P_U$ 이다.
+
+:::
+
+</div></br>
+
+::: {.solution}
 
 
+
+
+:::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
