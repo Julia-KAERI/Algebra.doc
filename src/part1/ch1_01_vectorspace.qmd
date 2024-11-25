@@ -942,8 +942,10 @@ $$
 
 </br>
 
-## 연습문제
+## 연습문제 {.unnumbered}
+
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
 ::: {#exr-union_of_two_subspaces}
 
 벡터공간 $V$ 의 두 부분공간 $U_1$, $U_2$ 에 대해 $(U_1 \cup U_2) \le V$ 일 필요충분조건은 $U_1 \le U_2$ 이거나 $U_2 \le U_1$ 인 것을 보여라.

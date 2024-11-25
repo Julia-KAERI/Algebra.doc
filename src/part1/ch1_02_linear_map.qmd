@@ -6,6 +6,10 @@ crossref:
   chapters: true
 ---
 
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
 우리는 앞서 벡터공간과 기저, 차원에 대해 알아보았다. 이제 벡터공간에 대한 함수가운데 가장 기본적이며 중요한 함수인 선형사상에 대해 알아보려 한다.
 
 </br>
@@ -18,19 +22,19 @@ crossref:
 ::: {#def-linear_map}
 #### 선형사상/선형변환
 
-$\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 정의된 함수 $L: U \to V$ 이 모든 $u_1,\,u_2\in U,\, c\in \mathbb{F}$ 에서 다음을 만족하면 $L$ 을 $U$ 에서 $V$ 로의 **선형 사상(linear map)** 혹은 **선형 변환 (linear transformation)** 이라 한다. 
+$\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 정의된 함수 $L: U \to V$ 이 모든 $u_1,\,u_2\in U,\, c\in \mathbb{F}$ 에 대해 
 
 $$
 L(u_1+ c u_2) = L(u_1) + c L(u_2).
-$$
+$$ {#eq-def_linear_map}
 
-또한 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $U\mapsto V$ 인 선형사상의 집합을 $\mathcal{L}(U,\,V)$ 라고 쓴다.
+이면  $L$ 을 $U$ 에서 $V$ 로의 **선형 사상(linear map)** 혹은 **선형 변환 (linear transformation)** 이라 한다. 그리고 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $U\mapsto V$ 인 선형사상의 집합을 $\mathcal{L}(U,\,V)$ 라고 쓴다.
 :::
 :::
-
 
 </br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-zero_map}
 
 함수 $L:U \to V$ 가 모든 $u\in U$ 에 대해 $L(u)=0_V$ 일 때 이 $L$ 를 **영사상(zero map)** 이라 부르며 $0(u)$ 와 같이 표기한다. 영사상이 선형사상이다.
@@ -38,7 +42,9 @@ $$
 :::
 
 </div></br>
+
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-T_zero}
 $L\in \mathcal{L}(U,\,V)$ 일 때 $L(0_U) = 0_V$ 이다.
 :::
@@ -58,12 +64,14 @@ $L\in \mathcal{L}(U,\,V)$ 에 대해 $L(u)=v$ 이면 $L(-u)=-v$ 이다.
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-operator}
 #### 연산자
+
 자기 자신으로의 선형변환은 특별히 **선형 연산자(Linear operator)** 혹은 **연산자(Operator)** 라 하며 벡터공간 $V$ 에서의 선형 연산자의 집합을 $\mathcal{L}(V)$ 라 쓴다.
 :::
 :::
 
 </br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-derivative_integral_as_operator}
 
 실수 전체 구간에서 무한번 미분 가능한 $\mathbb{R} \mapsto \mathbb{R}$ 실함수의 집합을 $C_\mathbb{R}^{\infty}$ 라고 한다. $C_\mathbb{R}^\infty$ 는 $\mathbb{R}$-벡터공간임을 쉽게 보일 수 있다. $f\in C_\mathbb{R}^{\infty}$ 에 대한 미분연산자를 $\mathcal{D}$ 라고 하자. 즉 $(\mathcal{Df})(x)= f'(x)$ 이다. $f,\,g\in C_\mathbb{R}^\infty,\, c\in \mathbb{R}$ 에 대해 $\mathcal{D}(f+cg) = f'+cg'\in C_\mathbb{R}^\infty$ 이므로 $\mathcal{D} \in \mathcal{L}(C_\mathbb{R}^\infty)$ 이다. 또한 $\mathcal{I}:C_\mathbb{R}^\infty \to C^\infty$ 를 $(\mathcal{I}f)(x)=\int_{0}^x f(x)\,dx$ 로 정의하자. $\mathcal{I}\in \mathcal{L}(C_\mathbb{R}^\infty)$ 임을 알 수 있다.
@@ -121,7 +129,7 @@ $$
 ::: {#exm-identity_operator}
 
 #### 항등사상
-$I_U\in \mathcal{L}(U)$ 일 때 모든 $u\in u$ 에 대해 $I_U(u) = u$ 이면 $I_U$ 를 벡터공간 $U$ 에서의 **항등 사상 (identity operator)** 이라고 한다. 항등사상은 선형사상임을 보여라. 또한 $L\in \mathcal{L}(U)$ 일 때 다음 두 명제가 동치이다.
+$I_U\in \mathcal{L}(U)$ 일 때 모든 $u\in u$ 에 대해 $I_U(u) = u$ 이면 $I_U$ 를 벡터공간 $U$ 에서의 **항등 사상 (identity operator)** 이라고 한다. 항등사상은 선형사상임은 자명하다. 또한 $L\in \mathcal{L}(U)$ 일 때 다음 두 명제가 동치이다.
 
 &emsp; ($1$) $L$ 은 항등사상이다.
 
@@ -1053,7 +1061,9 @@ $\boldsymbol{P}$ 가 가역행렬일 때 $\boldsymbol{P}$ 의 각 열은 표준�
 </br>
 
 ## 연습문제 {.unnumbered}
+
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
 ::: {#exr-linear_map_1}
 
 $V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(V, W)$ 이다. $V$ 의 어떤 부분공간 $U$ 는 $U \cap \ker (L)=\{0\}$ 이며 $\text{im}\,(L)=\{L(u) : u \in U\}$ 임을 보이시오.
@@ -1070,6 +1080,7 @@ $\ker (L)$ 의 기저 $(v_1,\ldots,\,v_m)$ 을 확장하여 $V$ 의 기저 $(v_1
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-dimension_and_injectivity_surjectivity}
+
 $U,\,V$ 가 유한차원 벡터공간일 때 다음을 보여라.
 
 &emsp; ($1$) $U \mapsto V$ 로의 단사인 선형사상이 존재할 필요충분조건은 $\dim(U)\le \dim(V)$ 이다.

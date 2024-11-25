@@ -372,6 +372,15 @@ window.Quarto = {
 </header>
 
 
+<div class="hidden">
+<p>% %</p>
+%
+<p><span class="math display">\[
+\DeclarePairedDelimiters{\set}{\{}{\}}
+\DeclareMathOperator*{\argmax}{argmax}
+\]</span></p>
+</div>
+<p><br></p>
 <p>우리는 앞서 벡터공간과 기저, 차원에 대해 알아보았다. 이제 벡터공간에 대한 함수가운데 가장 기본적이며 중요한 함수인 선형사상에 대해 알아보려 한다.</p>
 <p><br></p>
 <section id="선형사상의-정의과-기본적인-성질" class="level2" data-number="2.1">
@@ -385,11 +394,11 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-linear_map" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 2.1 (선형사상/선형변환)</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U,\,V\)</span> 에 대해 정의된 함수 <span class="math inline">\(L: U \to V\)</span> 이 모든 <span class="math inline">\(u_1,\,u_2\in U,\, c\in \mathbb{F}\)</span> 에서 다음을 만족하면 <span class="math inline">\(L\)</span> 을 <span class="math inline">\(U\)</span> 에서 <span class="math inline">\(V\)</span> 로의 <strong>선형 사상(linear map)</strong> 혹은 <strong>선형 변환 (linear transformation)</strong> 이라 한다.</p>
-<p><span class="math display">\[
+<p><span class="theorem-title"><strong>정의 2.1 (선형사상/선형변환)</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U,\,V\)</span> 에 대해 정의된 함수 <span class="math inline">\(L: U \to V\)</span> 이 모든 <span class="math inline">\(u_1,\,u_2\in U,\, c\in \mathbb{F}\)</span> 에 대해</p>
+<p><span id="eq-def_linear_map"><span class="math display">\[
 L(u_1+ c u_2) = L(u_1) + c L(u_2).
-\]</span></p>
-<p>또한 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U,\,V\)</span> 에 대해 <span class="math inline">\(U\mapsto V\)</span> 인 선형사상의 집합을 <span class="math inline">\(\mathcal{L}(U,\,V)\)</span> 라고 쓴다.</p>
+\tag{2.1}\]</span></span></p>
+<p>이면 <span class="math inline">\(L\)</span> 을 <span class="math inline">\(U\)</span> 에서 <span class="math inline">\(V\)</span> 로의 <strong>선형 사상(linear map)</strong> 혹은 <strong>선형 변환 (linear transformation)</strong> 이라 한다. 그리고 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U,\,V\)</span> 에 대해 <span class="math inline">\(U\mapsto V\)</span> 인 선형사상의 집합을 <span class="math inline">\(\mathcal{L}(U,\,V)\)</span> 라고 쓴다.</p>
 </div>
 </div>
 </div>
@@ -400,7 +409,7 @@ L(u_1+ c u_2) = L(u_1) + c L(u_2).
 <p><span class="theorem-title"><strong>보기 2.1</strong></span> 함수 <span class="math inline">\(L:U \to V\)</span> 가 모든 <span class="math inline">\(u\in U\)</span> 에 대해 <span class="math inline">\(L(u)=0_V\)</span> 일 때 이 <span class="math inline">\(L\)</span> 를 <strong>영사상(zero map)</strong> 이라 부르며 <span class="math inline">\(0(u)\)</span> 와 같이 표기한다. 영사상이 선형사상이다.</p>
 </div>
 </div>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-T_zero" class="theorem example">
 <p><span class="theorem-title"><strong>보기 2.2</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 일 때 <span class="math inline">\(L(0_U) = 0_V\)</span> 이다.</p>
@@ -467,7 +476,7 @@ K(a_1u_1 + \cdots + a_n u_n) = a_1 v_1 + \cdots + a_n v_n
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-identity_operator" class="theorem example">
-<p><span class="theorem-title"><strong>보기 2.5 (항등사상)</strong></span> <span class="math inline">\(I_U\in \mathcal{L}(U)\)</span> 일 때 모든 <span class="math inline">\(u\in u\)</span> 에 대해 <span class="math inline">\(I_U(u) = u\)</span> 이면 <span class="math inline">\(I_U\)</span> 를 벡터공간 <span class="math inline">\(U\)</span> 에서의 <strong>항등 사상 (identity operator)</strong> 이라고 한다. 항등사상은 선형사상임을 보여라. 또한 <span class="math inline">\(L\in \mathcal{L}(U)\)</span> 일 때 다음 두 명제가 동치이다.</p>
+<p><span class="theorem-title"><strong>보기 2.5 (항등사상)</strong></span> <span class="math inline">\(I_U\in \mathcal{L}(U)\)</span> 일 때 모든 <span class="math inline">\(u\in u\)</span> 에 대해 <span class="math inline">\(I_U(u) = u\)</span> 이면 <span class="math inline">\(I_U\)</span> 를 벡터공간 <span class="math inline">\(U\)</span> 에서의 <strong>항등 사상 (identity operator)</strong> 이라고 한다. 항등사상은 선형사상임은 자명하다. 또한 <span class="math inline">\(L\in \mathcal{L}(U)\)</span> 일 때 다음 두 명제가 동치이다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 은 항등사상이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(U\)</span> 의 기저 <span class="math inline">\(\{u_i\}\)</span> 에 대해 <span class="math inline">\(L(u_i) = u_i,\, i=1,\,2,\ldots\)</span> 이다.</p>
 </div>
@@ -630,7 +639,7 @@ L(u) &amp;= T \left( \sum_{j=1}^n a_j u_j \right) = \sum_{j=1}^n a_j L(u_j) = \s
 <p><span class="theorem-title"><strong>정의 2.5</strong></span> <span class="math inline">\(m \times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 와 <span class="math inline">\(n \times l\)</span> 행렬 <span class="math inline">\(\boldsymbol{B}\)</span> 의 곱 <span class="math inline">\(\boldsymbol{AB}\)</span> 는 다음과 같이 정의된다.</p>
 <p><span id="eq-multiplication_of_matrix"><span class="math display">\[
 (\boldsymbol{AB})_{ij} := \sum_{k=1}^n A_{ik}B_{kj}
-\tag{2.1}\]</span></span></p>
+\tag{2.2}\]</span></span></p>
 </div>
 </div>
 </div>
