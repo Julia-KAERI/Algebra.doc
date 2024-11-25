@@ -6,6 +6,10 @@ crossref:
   chapters: true
 ---
 
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
 ## 기본적인 개념
 
 ### 스칼라 (Scalar)
@@ -44,7 +48,7 @@ $(\boldsymbol{A})_{ij}$ 혹은 기울어진 일반글씨체의 $A_{ij}$ 는 행�
 
 ### 순서집합
 
-일반적으로 $\{y_1,\,y_2,\ldots\}$ 처럼 기술되는 집합은 집합 내의 원소를 나열하는 순서가 중요하지 않다. 하지만 그 순서가 중요한 경우가 있는데 이 경우 집합에 순서를 부여하여 $(x_1,\,x_2,\,x_3,\ldots)$ 와 같이 $(\quad)$ 안에 나열하여 표현한다. 즉, $\{a,\,b\} = \{b,\,a\}$ 이지만 $(a,\,b) \ne (b,\,a)$ 이다. 
+일반적으로 $\{y_1,\,y_2,\ldots\}$ 처럼 기술되는 집합은 집합 내의 원소를 나열하는 순서가 중요하지 않다. 하지만 그 순서가 중요한 경우가 있는데 이 경우 집합에 순서를 부여하여 $(x_1,\,x_2,\,x_3,\ldots)$ 와 같이 $(\quad)$ 안에 나열하여 표현한다. 즉, $\{a,\,b\} = \{b,\,a\}$ 이지만 $(a,\,b) \ne (b,\,a)$ 이다. 순서집합의 대표적인 경우가 수열이다.
 
 :::
 :::
@@ -137,24 +141,26 @@ $$
 
 이것을 수학적으로 다시 정리하면 다음과 같다.
 
-::: {.callout-note appearance="simple" icon="false"}
+</br>
+
+::: {.callout-note appearance="minimal"}
 
 ::: {#def-vector_space_2}
 #### 벡터공간과 벡터
 
 어떤 집합 $V$ 와 체 $\mathbb{F}$ 에 대해 $V$ 의 원소 사이의 덧셈과 $\mathbb{F}$ 와 $V$ 사이의 곱셈이 정의되어 있으며, 다음이 성립하면 $V$ 를 **$\mathbb{F}$ 위에서의 벡터공간** 혹은 **$\mathbb{F}$-벡터공간** 이라 한다.
 
-1. $u,\,v \in V ,\, a\in \mathbb{F} \implies u+v = v+u \in V$, $av\in V$,
+&emsp;($1$) $u,\,v \in V ,\, a\in \mathbb{F} \implies u+v = v+u \in V$, $av\in V$,
 
-2. $u,\,v,\,w \in V,\, a,\, b\in \mathbb{F} \implies (u + v) + w = u+(v+w)$, $(ab)v = a(bv)$,
+&emsp;($2$) $u,\,v,\,w \in V,\, a,\, b\in \mathbb{F} \implies (u + v) + w = u+(v+w)$, $(ab)v = a(bv)$,
 
-3. $\exists 0_V\in V\, \forall v\in V,\, v + 0_V=0_V+v = v$,
+&emsp;($3$) $\exists 0_V\in V\, \forall v\in V,\, v + 0_V=0_V+v = v$,
 
-4. $\forall v\in V \;\exists w\in V$ s.t. $v + w = 0_V$,
+&emsp;($4$) $\forall v\in V \;\exists w\in V$ s.t. $v + w = 0_V$,
 
-5. $\forall v \in V \implies 1v =v$,
+&emsp;($5$) $\forall v \in V \implies 1v =v$,
 
-6.  $u,\,v \in V,\, a,\, b\in \mathbb{F} \implies a(u+v)=au + av,\, (a+b)v = av+bv$.
+&emsp;($6$)  $u,\,v \in V,\, a,\, b\in \mathbb{F} \implies a(u+v)=au + av,\, (a+b)v = av+bv$.
 
 벡터공간 $V$ 가 정의되었을 때 벡터공간의 원소를 **벡터(vector)** 라 한다. $\mathbb{R}$ 위에서의 벡터 공간을 **실벡터공간(real vector space)** 혹은 **$\mathbb{R}$-벡터공간**, $\mathbb{C}$ 위에서의 벡터 공간을 **복소벡터공간(complex vector space)** 혹은 **$\mathbb{C}$-벡터공간** 이라 한다. 
 
@@ -179,34 +185,50 @@ $$
 
 벡터공간 $V$ 와 $v\in V$ 그리고 영벡터 $O_V$ 에 대해 다음이 성립한다.
 
-&emsp; ($1$) 영벡터는 유일하다.
+&emsp;($1$) 영벡터는 유일하다.
   
-&emsp; ($2$) $0v = 0_V$
+&emsp;($2$) $0v = 0_V$
   
-&emsp; ($3$) $(-1)v = -v$
+&emsp;($3$) $(-1)v = -v$
 :::
 
 </div>
 </br>
+
+::: {.proof}
+
+($1$) 두 영벡터를 각각 $0_V$ 와 $0'_V$ 라고 하자. $0_V = 0_V+0'_V = 0'_V$.
+
+($2$) $0v = (0+0)v = 0v + 0v$ 이므로 $0v = 0_V$ 이다.
+
+($3$) $0_V = 0v =  (1-1)v = v + (-v)$. 이므로 $v$ 의 덧셈에 대한 역원인 $-v$ 는 $(-1)v$ 이다. $\square$
+
+:::
+
+</br>
+
 
 ### 중요한 벡터공간들
 
 아래의 보기는 앞으로 자주 등장할 벡터공간이다. 
+
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-vectorspace_F}
 $\mathbb{F}$ 는 $\mathbb{F}$-벡터공간이다.
 :::
-</div>
-</br>
+</div></br>
+
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-vectorspace_Rn}
 데카르트 곱 $\mathbb{R}^2 = \{ (x,\,y): x\in \mathbb{R},\, y\in \mathbb{R}\}$ 을 생각하자. 덧셈과 스칼라곱을 $(x_1,\, y_1) + (x_2,\,y_2) = (x_1+x_2,\, y_1+y_2)$, $a(x,\, y) = (ax,\, ay)$ 로 정의하면 $\mathbb{R}^2$ 가 $\mathbb{R}$ 위의 벡터공간임을 쉽게 알 수 있다. 이로부터 임의의 0이 아닌 자연수 $n$ 에 대해 $\mathbb{R}^n$ 이 $\mathbb{R}$-벡터공간이고, $\mathbb{C}^n$ 이 $\mathbb{C}$-벡터공간임을 알 수 있다. 
 :::
 
-</div>
+</div></br>
 
-</br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-vectorspace_CnRn}
 합과 스칼라곱이 아래와 같이 정의된 데카르트곱 $\mathbb{R}^n$ 과 $\mathbb{C}^n$ 을 생각하자.
 
@@ -216,16 +238,18 @@ $$
 
 이 때 $\mathbb{C}^n$ 은 $\mathbb{R}$-벡터공간이다. 그러나 $\mathbb{R}^n$ 은 $\mathbb{C}$-벡터공간이 될 수 없다. 
 :::
-</div>
-</br>
+</div></br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-vectorspace_polynomial}
 다항식 $p(x) = a_0 + a_1 x + \cdots + a_n x^n$ 을 생각하자. $a_n\ne 0$ 일 때 $p(x)$ 를 $n$ 차 다항식이라고 하며 이때의 $n$ 값을 다항식 $p(x)$ 의 **차수 (degree)** 라고 하고 $\deg (p)$ 혹은 $\deg (p(x))$ 라고 표기한다. 굳이 0차 다항식이라고 이름을 붙이지는 않지만 상수함수도 다항식에 포함된다. 앞으로 $\mathbb{F}$ 값을 계수로 갖는 변수 $t$ 에 대한 다항식의 집합을 $\mathbb{F}[t]$ 라고 표기하며, $\mathbb{F}_n[t]$ 는 $n$ 차를 포함하여 그 이하의 차수를 갖는 다항식의 집합을 의미한다. 예를 들어 $\mathbb{R}_3[t]$ 는 3차 이하의 차수를 갖는 실계수 다항식의 집합을 말한다. 0 이상의 정수 $n$ 에 대해 $\mathbb{F}_n[t]$ 은 $\mathbb{F}$-벡터공간이다. 또한 $\mathbb{F}[t]$ 도 벡터공간이다.
 :::
-</div>
-</br>
+
+</div></br>
+
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-vectorspace_matrix}
 실계수를 갖는 $m \times n$ 행렬의 집합을 $\mathcal{M}_{m \times n}(\mathbb{R})$ 이이라고 하기로 하였다. $\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{R})$ 일 때 두 행렬을 더하면 그 결과는 같은 크기의 행렬이며 더하여 나온 행렬의 성분은 같은 위치에서의 $\boldsymbol{A}$ 와 $\boldsymbol{B}$ 의 성분의 합으로 정의하자. 즉,
 
@@ -240,10 +264,11 @@ $$
 
 이라 정의하자. 그렇다면 $\mathcal{M}_{m \times n}(\mathbb{R})$ 은 $\mathbb{R}$-벡터공간이다. $\mathcal{M}_{m \times n}(\mathbb{C})$ 이 $\mathbb{C}$-벡터공간임은 쉽게 보일 수 있다. 즉 체 $\mathbb{F}$ 를 원소로 갖는 $m\times n$ 행렬의 집합을 $\mathcal{M}_{m \times n}(\mathbb{F})$ 이라 하면 $\mathcal{M}_{m \times n}(\mathbb{F})$ 은 $\mathbb{F}$-벡터공간이다.
 :::
-</div>
-</br>
+
+</div></br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-vectorspace_row_column}
 
 #### 행벡터와 열벡터
@@ -252,18 +277,15 @@ $$
 
 :::
 
-</div>
-</br>
+</div></br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-continuous_function}
 $C_{(a,\,b)}$ 를 $(a,\,b)$ 구간에서 연속인 실함수의 집합이라고 하자. 이 때 $C_{(a,\,b)}$ 는 $\mathbb{R}$-벡터공간이다. 실수 영역 전체에서 연속인 함수의 집합 $C_{\mathbb{R}}$ 역시 $\mathbb{R}$-벡터공간이다.
 :::
 
-</div>
-
-
-</br>
+</div></br>
 
 ## 부분공간과 직합
 
@@ -276,30 +298,29 @@ $C_{(a,\,b)}$ 를 $(a,\,b)$ 구간에서 연속인 실함수의 집합이라고 
 
 $V$ 가 $\mathbb{F}$-벡터공간이라 하자. $U$ 가 $V$ 의 부분분집합이며, $\mathbb{F}$-벡터공간일 때 $U$ 를 $V$ 의 **부분공간 (subspace)** 혹은 **부분벡터공간** 이라 한다.
 :::
-
 :::
-
-</br>
 
 $U$ 가 $V$ 의 부분공간 일 때 $U\le V$ 라 표기하겠다.
 
 </br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-subspace_0}
 벡터공간 $V$ 는 자기 자신의 부분공간이다. $V$ 가 벡터공간일 때 $\{0_V\}$ 도 $V$ 의 부분공간이다.
 :::
-</div>
-</br>
+
+</div></br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-intersection_of_two_spaces}
 
 $U,\,V$ 가 벡터공간일 때 $U \cap V$ 도 벡터공간이다.
 :::
-</div>
-</br>
+</div></br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-subspace_1}
 앞서 언급한 벡터공간 $\mathbb{R}^2$ 에 대해 $A= \{ (x,\,0) : x\in \mathbb{R} \}$ 은 $\mathbb{R}^2$ 의 부분집합이며 벡터공간이므로 부분벡터공간이다. $B=\{(x,\, x) : x\in \mathbb{R}\}$ 역시 $\mathbb{R}^2$ 의 부분벡터공간임은 쉽게 알 수 있다.
 :::
@@ -307,35 +328,39 @@ $U,\,V$ 가 벡터공간일 때 $U \cap V$ 도 벡터공간이다.
 </br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-subspace_2}
 @exm-vectorspace_polynomial 에서 정의한 $\mathbb{R}_n[t]$ 을 생각하자. $m \le n$ 일 때, $\mathbb{R}_m[t]$ 는 $\mathbb{R}_n[t]$ 의 부분공간이다.
 :::
-</div>
-</br>
+
+</div></br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-subspace_2}
 $\mathbb{C}^2$ 는 $\mathbb{C}$-벡터공간이다. $\mathbb{R}^2$ 는 $\mathbb{C}^2$ 의 부분집합이지만 $\mathbb{C}$-벡터공간이 아니므로 ($i(1,\,1) = (i,\, ,i) \not\in \mathbb{R}^2$) $\mathbb{C}^2$ 의 부분공간이 아니다. 그러나, $\mathbb{C}^2$ 는 $\mathbb{R}$-벡터공간이기도 하다. 그렇다면 $\mathbb{R}^2$ 는 $\mathbb{R}$- 벡터공간 $\mathbb{C}^2$ 의 부분공간이 된다.
 
 
 요컨데, $\mathbb{C}$ 위에서의 $\mathbb{C}^2$ 와 $\mathbb{R}$ 위에서의 $\mathbb{C}^2$ 는 다른 벡터공간이며, 부분집합이 부분공간인지 아닌지를 따질 때에 어떤 체(field) 위에서의 벡터공간인지가 중요하다. 엄밀하게 말하면 체 $\mathbb{F}$ 위에서의 벡터공간 $V$ 에서 벡터합 $+$ 와 벡터의 스칼라곱 $\cdot$ 이 정의되었을 때 $(V,\,\mathbb{F},\, +,\, \cdot)$ 과 같이 써야한다. 여기서는 이렇게 까지는 하지 않겠다.
 :::
-</div>
-</br>
+
+</div></br>
 
 ::: {.callout-warning appearance="simple" icon="false"}
 명제, 정리, 보조정리, 따름정리 등에 대한 증명이 아주 쉬운 경우는 언급도 없이 증명을 생략 할 수 있다.
 :::
 
 </br>
+
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-subspace_1}
 
 벡터공간 $V$ 에 대해 $U\le V$ 이고 $W \le U$ 이면 $W \le V$ 이다.
 
 :::
-</div>
-</br>
+
+</div></br>
 
 ### 합공간과 직합 {#sec-direct_sum}
 
@@ -355,14 +380,14 @@ $$
 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-sum_of_subspace}
 
 $V_1 \le V,\, V_2 \le V$ 일 때 $V_1+ V_2 \le V$ 이다. 따라서 $V$ 의 부분공간 $V_1, \ldots,\,V_m$ 의 합공간도 $V$ 의 부분공간이다.
 
 :::
-</div>
 
-</br>
+</div></br>
 
 ::: {.callout-note appearance="simple" icon="false"}
 
@@ -379,21 +404,22 @@ $V_1,\,V_2,\ldots,\,V_m$ 이 모두 $V$ 의 부분공간 일 때 $V_0=V_1 + \cdo
 </br>
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#thm-directsum}
 
 #### 직합의 조건
 
 $V$ 의 부분공간 $V_1,\ldots,\,V_m$ 에 대해 다음은 동치이다.
 
-&emsp; ($1$) $V_1+ \cdots + V_m = V_1 \oplus \cdots \oplus V_m$ 이다.
+&emsp;($1$) $V_1+ \cdots + V_m = V_1 \oplus \cdots \oplus V_m$ 이다.
   
-&emsp; ($2$) $v_i\in V_i$ 에 대해 $v_1+\cdots + v_m = 0_V$ 인 경우는 $v_1 = \cdots = v_m = 0_V$ 뿐이다.
+&emsp;($2$) $v_i\in V_i$ 에 대해 $v_1+\cdots + v_m = 0_V$ 인 경우는 $v_1 = \cdots = v_m = 0_V$ 뿐이다.
 
 :::
-</div>
-</br>
+</div></br>
 
 ::: {.proof}
+
 (1 $\implies$ 2) 직합의 정의에 의해 자명하다.
 
 (2 $\implies$ 1) $0_V =v_1 + \cdots + v_m,\, v_i\in V_i$ 이 한가지로만 표현된다고 하자. 만약 어떤 $v\in V$ 가 두가지 방법으로 $v = v_1 + \cdots + v_m = v'_1 + \cdots + v'_m,\, v_i,\, v'_i \in V_i$ 표현된다면 $0_V= (v_1 -v'_1) + \cdots + (v_m - v'_m)$ 이므로 $u_i = u'_i,\, i=1,\ldots, m$ 이다. 즉 $v$ 를 $v_i$ 의 합으로 나타내는 방법은 한가지 뿐이므로 $V_1 + \cdots + V_m$ 은 직합이다. $\square$
@@ -406,8 +432,7 @@ $V$ 의 부분공간 $V_1,\ldots,\,V_m$ 에 대해 다음은 동치이다.
 
 $V_1,\,V_2$ 가 $V$ 의 부분공간일 때 $V_1+ V_2 = V_1\oplus V_2$ 일 필요충분조건은 $V_1 \cap V_2 = \{0_V\}$ 이다.
 :::
-</div>
-</br>
+</div></br>
 
 ::: {.proof}
 
@@ -428,13 +453,13 @@ $V_1 \cap V_2= \{0_V\}$ 라고 하자. 어떤 $v_1\in V_1,\, v_2\in V_2$ 에 대
 
 #### 선형결합과 Span
 
-$V$ 가 $\mathbb{F}$-벡터공간이고, $a_1,\ldots,\,a_m \in \mathbb{F}$, $\{v_1,\ldots,\,v_m\}\subset V$ 에 대해
+$V$ 가 $\mathbb{F}$-벡터공간 일 때, $a_1,\ldots,\,a_m \in \mathbb{F}$, $\{v_1,\ldots,\,v_m\}\subset V$ 에 대해
 
 $$
 v = a_1 v_1 + \cdots + a_m v_m
 $$
 
-이라면, $v$ 는 $\{v_1,\ldots,v_m\}$ 의 **선형결합** 이라고 한다. $v$ 가 $\{v_1,\ldots,\,v_m\}$ 의 선형결합일 때 $\{v_1,\ldots,\,v_m\}$ 가 $v$ 를 **span** 한다라고 한다. 또한 $\{v_1,\ldots,\,v_m\}$ 으로 span 할 수 있는 모든 벡터의 집합을 $\text{span} (v_1,\ldots,\,v_m)$ 이라 표현한다. 즉,
+이라면, $v$ 는 $\{v_1,\ldots,v_m\}$ 의 **선형결합** 이라고 하고, $\{v_1,\ldots,\,v_m\}$ 가 $v$ 를 **span** 한다라고 한다. 또한 $\{v_1,\ldots,\,v_m\}$ 으로 span 할 수 있는 모든 벡터의 집합을 $\text{span} (v_1,\ldots,\,v_m)$ 이라 표현한다. 즉,
 
 $$
 \text{span}(v_1,\ldots,\,v_m) = \{a_1v_1 + \cdots + a_m v_m \mid a_1,\ldots,a_m \in \mathbb{F}\}
@@ -499,7 +524,6 @@ $U$ 가 벡터공간 $V$ 의 부분집합일 때 $\langle U \rangle = \text{span
 벡터 공간 $V$ 를 유한개의 벡터의 span 으로 표현 할 수 있을 때 $V$ 를 **유한차원 벡터공간** 이라 한다. 유한차원 벡터공간이 아닌 벡터공간을 **무한차원 벡터공간** 이라 한다.
 :::
 :::
-
 
 </br>
 
