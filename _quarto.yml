@@ -16,13 +16,11 @@ book:
         - src/part1/ch1_01_vectorspace.qmd
         - src/part1/ch1_02_linear_map.qmd
         - src/part1/ch1_03_determinant.qmd
-        # - src/part1/ch1_04_gauss_jordan_elimination.qmd
-        # - src/part1/ch1_05_matrix.qmd
-        - src/part1/ch1_06_eigenvalue.qmd
-        - src/part1/ch1_07_innerproduct.qmd
-        - src/part1/ch1_08_operators_on_innerproduct_space.qmd
-        - src/part1/ch1_09_spectrum_theorem.qmd
-        - src/part1/ch1_10_svd.qmd
+        - src/part1/ch1_04_eigenvalue.qmd
+        - src/part1/ch1_05_innerproduct.qmd
+        - src/part1/ch1_06_operators_on_innerproduct_space.qmd
+        - src/part1/ch1_07_spectrum_theorem.qmd
+        - src/part1/ch1_08_svd.qmd
     - part: src/part2/part2.qmd
       chapters: 
         - src/part2/ch2_01_groups.qmd

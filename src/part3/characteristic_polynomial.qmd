@@ -245,7 +245,7 @@ $$
 
 ## 특성다항식 {#sec-characteristic_polynomial}
 
-정사각 행렬에 대한 특성다항식은 이미 [특성다항식](../part1/ch1_06_eigenvalue.qmd#sec-characteristic_polynomial) 에서 정의하였지만 환기를 위해 다시 한번 정의한다.
+정사각 행렬에 대한 특성다항식은 이미 [특성다항식](../part1/ch1_04_eigenvalue.qmd#sec-characteristic_polynomial) 에서 정의하였지만 환기를 위해 다시 한번 정의한다.
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-part3_characteristic_polynomial_re}

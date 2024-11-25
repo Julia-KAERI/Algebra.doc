@@ -14,7 +14,7 @@ crossref:
 
 ### Isometry {#sec-isometry}
 
-이미 우리는 [linear isometry](../part1/ch1_08_operators_on_innerproduct_space.qmd#sec-linear_isometry) 에서 선형대수학적인 입장에서 다루었다. 여기서는 내적벡터공간에서 내적을 보존하는 선형연산자를 Isometry 라고 정의했다.(@prp-properties_of_isometry) 
+이미 우리는 [linear isometry](../part1/ch1_06_operators_on_innerproduct_space.qmd#sec-linear_isometry) 에서 선형대수학적인 입장에서 다루었다. 여기서는 내적벡터공간에서 내적을 보존하는 선형연산자를 Isometry 라고 정의했다.(@prp-properties_of_isometry) 
 
 </br>
 

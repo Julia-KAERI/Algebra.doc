@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>대수학 - 6&nbsp; 내적벡터공간에서의 연산자</title>
+<title>6&nbsp; 내적벡터공간에서의 연산자 – 대수학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,8 +50,8 @@ div.csl-indent {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../src/part1/ch1_09_spectrum_theorem.html" rel="next">
-<link href="../../src/part1/ch1_07_innerproduct.html" rel="prev">
+<link href="../../src/part1/ch1_07_spectrum_theorem.html" rel="next">
+<link href="../../src/part1/ch1_05_innerproduct.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -89,7 +89,7 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -127,13 +127,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part1/part1.html">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</a></li><li class="breadcrumb-item"><a href="../../src/part1/ch1_08_operators_on_innerproduct_space.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">내적벡터공간에서의 연산자</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part1/part1.html">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</a></li><li class="breadcrumb-item"><a href="../../src/part1/ch1_06_operators_on_innerproduct_space.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">내적벡터공간에서의 연산자</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -165,7 +165,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part1/part1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -190,31 +190,31 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/part1/ch1_06_eigenvalue.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/part1/ch1_04_eigenvalue.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">고유값과 고유벡터</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/part1/ch1_07_innerproduct.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/part1/ch1_05_innerproduct.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">내적</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/part1/ch1_08_operators_on_innerproduct_space.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../src/part1/ch1_06_operators_on_innerproduct_space.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">내적벡터공간에서의 연산자</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/part1/ch1_09_spectrum_theorem.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/part1/ch1_07_spectrum_theorem.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">스펙트럼 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../src/part1/ch1_10_svd.html" class="sidebar-item-text sidebar-link">
+  <a href="../../src/part1/ch1_08_svd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">특이값 분해</span></span></a>
   </div>
 </li>
@@ -224,7 +224,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part2/part2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">II. 군 (Groups)</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -259,7 +259,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../src/part3/part3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">III. 심화 선형대수학</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="토글 섹션">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="토글 섹션">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -354,7 +354,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part1/part1.html">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</a></li><li class="breadcrumb-item"><a href="../../src/part1/ch1_08_operators_on_innerproduct_space.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">내적벡터공간에서의 연산자</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part1/part1.html">I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지</a></li><li class="breadcrumb-item"><a href="../../src/part1/ch1_06_operators_on_innerproduct_space.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">내적벡터공간에서의 연산자</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">내적벡터공간에서의 연산자</span></h1>
 </div>
@@ -390,7 +390,7 @@ window.Quarto = {
 <p><span id="eq-adjoint_function"><span class="math display">\[
 \langle L (u),\,v \rangle = \langle u,\, L^\ast (v) \rangle.
 \tag{6.1}\]</span></span></p>
-<p>우선 고정된 <span class="math inline">\(v\)</span> 에 대해 <span class="math inline">\(\phi (u) = \langle Lu,\,v\rangle\)</span> 는 선형 범함수(<a href="#exr-adjoint_operator_1" class="quarto-xref">연습문제&nbsp;<span>6.1</span></a>) 이며 <a href="ch1_07_innerproduct.html#thm-part1_reisz_representation_theorem_1" class="quarto-xref">정리&nbsp;<span>5.3</span></a> 에 의해 <span class="math inline">\(\phi(u) = \langle u, w\rangle\)</span> 인 <span class="math inline">\(w\in U\)</span> 가 유일하게 존재한다. 이제 함수 <span class="math inline">\(L^\ast : V \to U\)</span> 를 <span class="math inline">\(L^\ast( v)= w\)</span> 인 함수로 생각 할 수 있다. (뭔가 이상한가? 이상해야 하는데..) 이 <span class="math inline">\(L^\ast\)</span> 를 <span class="math inline">\(L\)</span> 에 대한 adjoint function 이라고 한다.</p>
+<p>우선 고정된 <span class="math inline">\(v\)</span> 에 대해 <span class="math inline">\(\phi (u) = \langle Lu,\,v\rangle\)</span> 는 선형 범함수(<a href="#exr-adjoint_operator_1" class="quarto-xref">연습문제&nbsp;<span>6.1</span></a>) 이며 <a href="ch1_05_innerproduct.html#thm-part1_reisz_representation_theorem_1" class="quarto-xref">정리&nbsp;<span>5.3</span></a> 에 의해 <span class="math inline">\(\phi(u) = \langle u, w\rangle\)</span> 인 <span class="math inline">\(w\in U\)</span> 가 유일하게 존재한다. 이제 함수 <span class="math inline">\(L^\ast : V \to U\)</span> 를 <span class="math inline">\(L^\ast( v)= w\)</span> 인 함수로 생각 할 수 있다. (뭔가 이상한가? 이상해야 하는데..) 이 <span class="math inline">\(L^\ast\)</span> 를 <span class="math inline">\(L\)</span> 에 대한 adjoint function 이라고 한다.</p>
 <p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-adjoint_operator_1" class="theorem exercise">
@@ -430,7 +430,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>여기서 한가지 짚어야 할 것이 있다. 우리는 리츠의 표현정리(<a href="ch1_07_innerproduct.html#thm-part1_reisz_representation_theorem_1" class="quarto-xref">정리&nbsp;<span>5.3</span></a>) 를 이용하였는데 이 정리는 유한차원 벡터공간에서만 성립한다. 실제로 adjoint 는 유한차원 벡터공간에서만 유일하게 정해지며, 무한차원벡터공간에서는 유일하지 않을 수 있다(<span class="citation" data-cites="Hoffman1971">Hoffman and Kunze (<a href="../../references.html#ref-Hoffman1971" role="doc-biblioref">1971</a>)</span> . pp 295)</p>
+<p>여기서 한가지 짚어야 할 것이 있다. 우리는 리츠의 표현정리(<a href="ch1_05_innerproduct.html#thm-part1_reisz_representation_theorem_1" class="quarto-xref">정리&nbsp;<span>5.3</span></a>) 를 이용하였는데 이 정리는 유한차원 벡터공간에서만 성립한다. 실제로 adjoint 는 유한차원 벡터공간에서만 유일하게 정해지며, 무한차원벡터공간에서는 유일하지 않을 수 있다(<span class="citation" data-cites="Hoffman1971">Hoffman and Kunze (<a href="../../references.html#ref-Hoffman1971" role="doc-biblioref">1971</a>)</span> . pp 295)</p>
 </div>
 </div>
 </div>
@@ -537,7 +537,7 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 &amp;\iff v \in \left(\text{im}(L)\right)^\perp
 \end{aligned}
 \]</span></p>
-<p>(<span class="math inline">\(2\)</span>) (<span class="math inline">\(1\)</span>) 의 결과에 <span class="math inline">\(L\)</span> 대신 <span class="math inline">\(L^\ast\)</span> 를 넣으면 <span class="math inline">\(\ker(L) = (\text{im}(L^\ast))^\perp\)</span> 이다. <a href="ch1_07_innerproduct.html#cor-dimension_relation_of_orthogonal_complement" class="quarto-xref">따름정리&nbsp;<span>5.2</span></a> 에서 부분공간 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\((U^\perp)^\perp = U\)</span> 임을 이용하면 <span class="math inline">\(2\)</span> 를 얻는다.</p>
+<p>(<span class="math inline">\(2\)</span>) (<span class="math inline">\(1\)</span>) 의 결과에 <span class="math inline">\(L\)</span> 대신 <span class="math inline">\(L^\ast\)</span> 를 넣으면 <span class="math inline">\(\ker(L) = (\text{im}(L^\ast))^\perp\)</span> 이다. <a href="ch1_05_innerproduct.html#cor-dimension_relation_of_orthogonal_complement" class="quarto-xref">따름정리&nbsp;<span>5.2</span></a> 에서 부분공간 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\((U^\perp)^\perp = U\)</span> 임을 이용하면 <span class="math inline">\(2\)</span> 를 얻는다.</p>
 <p>(<span class="math inline">\(3\)</span>), (<span class="math inline">\(4\)</span>) 는 (<span class="math inline">\(1\)</span>), (<span class="math inline">\(2\)</span>) 의 결과에서 <span class="math inline">\(L\)</span> 대신에 <span class="math inline">\(L^\ast\)</span> 를 넣으면 보일 수 있다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
@@ -601,7 +601,7 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 &amp;= \langle (L-L^\ast)(u),\, u\rangle
 \end{aligned}
 \]</span></p>
-<p>임을 안다. <a href="ch1_07_innerproduct.html#exr-operator_orthogonal_to_every_vector" class="quarto-xref">연습문제&nbsp;<span>5.24</span></a> 로 부터 <span class="math inline">\(L=L^\ast\)</span> 임을 알 수 있다. 즉 <span class="math inline">\(L\)</span> 는 에르미트 연산자이다.</p>
+<p>임을 안다. <a href="ch1_05_innerproduct.html#exr-operator_orthogonal_to_every_vector" class="quarto-xref">연습문제&nbsp;<span>5.24</span></a> 로 부터 <span class="math inline">\(L=L^\ast\)</span> 임을 알 수 있다. 즉 <span class="math inline">\(L\)</span> 는 에르미트 연산자이다.</p>
 <p>(<span class="math inline">\(2 \implies 1\)</span>) <span class="math inline">\(L\)</span> 이 에르미트 연산자라고 하자.</p>
 <p><span class="math display">\[
 \langle L(u),\, u\rangle - \overline{\langle L(u),\, u\rangle} = \langle L(u),\, u\rangle - \langle L^\ast(u),\, u\rangle =0
@@ -952,18 +952,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -995,7 +984,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1003,7 +1014,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -1328,12 +1339,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../src/part1/ch1_07_innerproduct.html" class="pagination-link" aria-label="내적">
+      <a href="../../src/part1/ch1_05_innerproduct.html" class="pagination-link" aria-label="내적">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">내적</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/part1/ch1_09_spectrum_theorem.html" class="pagination-link" aria-label="스펙트럼 정리">
+      <a href="../../src/part1/ch1_07_spectrum_theorem.html" class="pagination-link" aria-label="스펙트럼 정리">
         <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">스펙트럼 정리</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

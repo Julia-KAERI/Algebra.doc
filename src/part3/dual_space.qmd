@@ -454,7 +454,7 @@ $$
 
 ## 전치행렬과 행렬의 rank
 
-우리는 이미 전치행렬과 행렬의 rank 에 대해 [행간소 사다리꼴 행렬을 통한 선형사상의 이해](../part1/ch1_05_matrix.qmd#sec-linear_map_understood_by_RREM) 알아보았다. 여기서는 그 의미를 다른 방법으로 알아보자.
+우리는 이미 전치행렬과 행렬의 rank 에 대해 [행간소 사다리꼴 행렬을 통한 선형사상의 이해](../part1/ch1_03_determinant.qmd#sec-linear_map_understood_by_RREM) 알아보았다. 여기서는 그 의미를 다른 방법으로 알아보자.
 
 
 벡터공간 $U,\,V$ 와 그 기저 $\mathcal{B}_U = (u_1,\ldots,\,u_n),\, \mathcal{B}_V = (v_1,\ldots,\,v_m)$, 그리고 이 기저에 대한 쌍대기저 $\mathcal{B}_{U^\ast} = (\varphi_1,\ldots,\,\varphi_n),\, \mathcal{B}_{V^\ast} = (\psi_1,\ldots,\,\psi_m)$ 를 생각하자. $L\in \mathcal{L}(U, V)$ 와 그 쌍대사상 $L^T\in \mathcal{L}(V^\ast, U^\ast)$ 를 생각 할 수 있다. $[L]_{\mathcal{B}_U, \mathcal{B}_V} = \boldsymbol{A}$, $[L^T]_{\mathcal{B}_{V^\ast}, \mathcal{B}_{U^\ast}} =\boldsymbol{B}$ 라고 하자. 
