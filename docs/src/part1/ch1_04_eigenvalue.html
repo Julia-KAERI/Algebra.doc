@@ -318,7 +318,7 @@ window.Quarto = {
   <ul>
   <li><a href="#고유값-고유벡터-고유공간" id="toc-고유값-고유벡터-고유공간" class="nav-link active" data-scroll-target="#고유값-고유벡터-고유공간"><span class="header-section-number">4.1</span> 고유값, 고유벡터, 고유공간</a>
   <ul class="collapse">
-  <li><a href="#고유값-고유벡터-고유공간-1" id="toc-고유값-고유벡터-고유공간-1" class="nav-link" data-scroll-target="#고유값-고유벡터-고유공간-1"><span class="header-section-number">4.1.1</span> 고유값, 고유벡터, 고유공간</a></li>
+  <li><a href="#sec-part1_eigens" id="toc-sec-part1_eigens" class="nav-link" data-scroll-target="#sec-part1_eigens"><span class="header-section-number">4.1.1</span> 고유값, 고유벡터, 고유공간</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제"><span class="header-section-number">4.1.2</span> 연습문제</a></li>
   </ul></li>
   <li><a href="#특성다항식" id="toc-특성다항식" class="nav-link" data-scroll-target="#특성다항식"><span class="header-section-number">4.2</span> 특성다항식</a>
@@ -368,8 +368,10 @@ window.Quarto = {
 
 <section id="고유값-고유벡터-고유공간" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="고유값-고유벡터-고유공간"><span class="header-section-number">4.1</span> 고유값, 고유벡터, 고유공간</h2>
-<section id="고유값-고유벡터-고유공간-1" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="고유값-고유벡터-고유공간-1"><span class="header-section-number">4.1.1</span> 고유값, 고유벡터, 고유공간</h3>
+<p>함수 <span class="math inline">\(f:X \to Y\)</span> 와 <span class="math inline">\(A \subset X\)</span> 에 대해 <span class="math inline">\(f(A) := \{f(a):a\in A\}\)</span> 라고 하는 것처럼 선형사상 <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 와 <span class="math inline">\(U\subset V\)</span> 에 대해 <span class="math inline">\(L(U) = \{Lu:u\in U\}\)</span> 라고 하자.</p>
+<p><br></p>
+<section id="sec-part1_eigens" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="sec-part1_eigens"><span class="header-section-number">4.1.1</span> 고유값, 고유벡터, 고유공간</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -389,7 +391,7 @@ L(U) \le U
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-invariant_subspace" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 4.1</strong></span> <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 에 대해 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 4.1</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 다음이 성립한다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(V\)</span> 는 <span class="math inline">\(L\)</span> 에 대한 불변부분공간이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\ker (L)\)</span> 는 <span class="math inline">\(L\)</span> 에 대한 불변부분공간이다.</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\text{im} (L)\)</span> 은 <span class="math inline">\(L\)</span> 에 대한 불변부분공간이다.</p>
@@ -397,7 +399,7 @@ L(U) \le U
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) 은 자명하다. <span class="math inline">\(u\in \ker (L) \implies L(u) \in \ker (L)\)</span> 이므로 (<span class="math inline">\(2\)</span>) 도 성립한다. <span class="math inline">\(u \in \text{im} (L)\)</span> 일 때 <span class="math inline">\(L(u)\in \text{im}(L)\)</span> 이므로 (<span class="math inline">\(3\)</span>) 도 성립한다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) 은 자명하다. <span class="math inline">\(u\in \ker (L) \implies L(u) = 0_V \in \ker (L)\)</span> 이므로 (<span class="math inline">\(2\)</span>) 도 성립한다. <span class="math inline">\(u \in \text{im} (L)\)</span> 일 때 <span class="math inline">\(L(u)\in \text{im}(L)\)</span> 이므로 (<span class="math inline">\(3\)</span>) 도 성립한다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">

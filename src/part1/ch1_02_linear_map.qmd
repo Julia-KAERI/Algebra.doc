@@ -337,8 +337,6 @@ $$ {#eq-multiplication_of_matrix}
 :::
 :::
 
-
-
 </br>
 
 ### 선형사상의 합의 행렬표현
@@ -452,11 +450,11 @@ $$
 
 #### $\text{ker}$ 와 $\text{im}$
 
-$L\in \mathcal{L}(U,\,V)$ 에 대해 $L$ 의 kernel ($\ker (T)$) 과 image ($\text{im}(T)$) 는 다음과 같이 정의된다.
+$L\in \mathcal{L}(U,\,V)$ 에 대해 $L$ 의 kernel ($\ker (L)$) 과 image ($\text{im}(L)$) 는 다음과 같이 정의된다.
 
 $$
 \begin{aligned}
-\ker (L) &:= \{ u\in U : L(u) = 0_V\} ,\\
+\ker (L) &:= \{ u\in U : L(u) = 0_V\} ,\\[0.3em]
 \text{im}(L) &:= \{L(u) : u \in U\}.
 \end{aligned}
 $$
@@ -495,23 +493,22 @@ $\ker (L)$ 와 $\text{im}(L)$ 가 각각 부분공간이기 때문에 차원을 
 
 #### **nullity** 와 **rank**
 
-$L\in \mathcal{L}(U,\,V)$ 에서 $\ker (L)$ 의 차원을 $\text{nullity}(L)$ 라 하고 $\text{im}(L)$ 의 차원을 $\text{rank}(L)$ 라 한다. 즉,
+$L\in \mathcal{L}(U,\,V)$ 에서 $\ker (L)$ 의 차원을 $\text{nullity}(L)$ 라 하고 $\text{im}(L)$ 의 차원을 $\text{rank}(L)$ 라 한다. 
 
 $$
 \begin{aligned}
-\text{nullity}(L) &:= \dim (\ker (L)), \\
+\text{nullity}(L) &:= \dim (\ker (L)), \\[0.3em]
 \text{rank}(L) &:= \dim (\text{im}(L)),
 \end{aligned}
 $$
 
-이다.
 :::
 :::
 
 
 </br>
 
-### Rank-nullity 정리
+### Rank-nullity 정리 {#sec-part1_rank_nullity_theorem}
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -555,9 +552,9 @@ $$
 
 </br>
 
-## 동형사상과 선형연산자의 기본 정리
+## 동형사상과 선형연산자
 
-### 동형사상과 동형
+### 동형사상과 동형 {#sec-part1_isomorphism_of_linear_map}
 
 선형사상은 벡터에 대한 함수이므로 역함수를 생각 할 수 있으며 선형사상이 전단사 함수라면 당연히 역함수, 즉 역사상(inverse map)이 존재한다. 
 
@@ -660,13 +657,15 @@ $$
 이다. 즉 $L^{-1}$ 은 선형사상이다. $(L^{-1})^{-1}=L$ 이므로 $L^{-1}$ 도 동형사상이다. $\square$ 
 :::
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-basis-tranformations}
 
 #### 가역사상과 기저의 변환
 
-$L\in \mathcal{L}(V,\,W)$ 에 대해 다음 두 조건은 동치이다. 
+$L\in \mathcal{L}(V,\,W)$ 에 대해 다음 두 명제는 동치이다. 
 
 &emsp; ($1$) $L$ 는 동형사상이다.
 
@@ -686,7 +685,7 @@ $L\in \mathcal{L}(V,\,W)$ 에 대해 다음 두 조건은 동치이다.
 
 </br>
 
-### 선형사상공간의 차원
+### 선형사상공간의 차원 {#sec-part1_dimension_of_linear_map_space}
 
 우리는 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $\mathcal{L}(U,\,V)$ 가 벡터공간이라는 것을 안다(@prp-LUV_vector_space). 또한 $\mathbb{F}$ 의 원소를 성분으로 갖는 $m \times n$ 행렬의 집합 $\mathcal{M}_{m \times n}(\mathbb{F})$ 도 벡터공간이라는 것을 안다 (@exm-vectorspace_matrix). $n = \dim (U),\, m = \dim (V)$ 이고 $\mathcal{B}_U = (u_i)$, $\mathcal{B}_V = (v_j)$ 가 각각 $U,\,V$ 의 기저라고 하자. $L\in \mathcal{L}(U,\,V)$ 의 행렬표현 $[L]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 를 생각하면 $[-]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 는 $\mathcal{L}(U,\,V) \mapsto\mathcal{M}_{\dim V \times \dim U}(\mathbb{F})$ 함수이다. $L,\, K\in \mathcal{L}(U,\,V)$, $c \in \mathbb{F}$ 에 대해
 
@@ -756,12 +755,11 @@ $$
 
 </br>
 
-### 선형연산자의 기본정리
+### 동형사상인 연산자의 성질
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#thm-fundamental_theorem_linaar_map}
 
-#### 선형 연산자의 기본 정리
+::: {#thm-part1_isomorphic_linear_map}
 
 유한차원 벡터공간 $V$ 에서의 선형 연산자 $L\in \mathcal{L}(V)$ 에 대해 다음 세 명제는 동치이다.
 
@@ -776,7 +774,7 @@ $$
 </div></br>
 
 ::: {.proof}
-함수가 가역이면 전단사이고, 전단사 이면 가역이다. 따라서 $L$ 가 전사라는 것과 단사라는 것이 동치임을 보이면 된다. Rank-nullity 정리(@thm-rank_nullity)로부터
+함수가 가역이면 전단사이고, 전단사 이면 가역이다. 따라서 $L$ 가 전사라는 것과 단사라는 것이 동치임을 보이면 된다. Rank-nullity 정리(@thm-rank_nullity) 로부터
 
 $$
 \dim (V) = \text{nullity}(L)  + \text{rank}(L)
@@ -956,19 +954,18 @@ $$
 
 $L\in \mathcal{L}(U,\,V)$ 가 가역사상이라고 하자. 이 때 임의의 $u\in U,\, v\in V$ 에 대해 $(L^{-1}\circ T )(u)=u$ 이고 $(L \circ L^{-1}) (v)= v$ 이다. $\mathcal{B}_U,\,\mathcal{B}_V$ 가 각각 $U,\,V$ 의 기저라고 하자. $\boldsymbol{L}=[L]_{\mathcal{B}_U, \mathcal{B}_V}$ 에 대해 $[L^{-1}]_{\mathcal{B}_V,\mathcal{B}_U} =\boldsymbol{L}^{-1}$ 이라고 쓰는 것은 자연스럽다. 또한 $\boldsymbol{LL}^{-1} = \boldsymbol{L}^{-1}\boldsymbol{L} = \boldsymbol{I}$ 라는 것을 알 수 있다. 이 때 $\boldsymbol{L}^{-1}$ 을 $\boldsymbol{L}$ 의 **역행렬 (inverse matrix)** 라 한다.
 
+
 </br>
 
 ### 기저의 변화에 따른 행렬의 변화 {#sec-matrix_transform_by_basis_transform}
 
-$U$ 가 $n$ 차원 $\mathbb{F}$-벡터공간이며 $\mathcal{B}_1 = (u_1,\ldots,u_n)$ 이 $U$ 의 기저라고 하자. $P\in \mathcal{L}(U)$ 가 가역이면 @cor-basis_transformation 에서 보았듯이 $\mathcal{B}_2= (T(u_1),\ldots, T(u_n) )$ 도 $U$ 의 기저이다. $v_i = T(u_i)$ 라고 할 때 $P$ 가 다음과 같이 정의된다고 하자.
+$U$ 가 $n$ 차원 $\mathbb{F}$-벡터공간이며 $\mathcal{B}_1 = (u_1,\ldots,u_n)$ 이 $U$ 의 기저라고 하자. $P\in \mathcal{L}(U)$ 가 가역이면 @cor-basis_transformation 에서 보았듯이 $\mathcal{B}_2= (P(u_1),\ldots, P(u_n) )$ 도 $U$ 의 기저이다. $v_i = T(u_i)$ 라고 할 때 $P$ 가 다음과 같이 정의된다고 하자.
 
 $$
 P(u_i) = \sum_{j=1}^n P_{ji}u_j = v_i
 $$
 
 그렇다면 $u_i = P^{-1}(P(u_i)) = P^{-1}(v_i)$ 이다. $\boldsymbol{u}_i=[u_i]_{\mathcal{B}_1}$, $\boldsymbol{v}_i = [v_i]_{\mathcal{B}_1}$, $\boldsymbol{P}=[P]_{\mathcal{B}_1}$ 라면 $\boldsymbol{v}_i = \boldsymbol{Pu}_i$ 이다. 그런데 $\boldsymbol{u}_i =[u_i]_{\mathcal{B}_1}$ 은 표준기저 $\boldsymbol{e}_i$ 이므로 $\boldsymbol{v}_i$ 는 $\boldsymbol{P}$ 의 $i$ 번 째 열 $\boldsymbol{P}_{:i}$ 이다. 이것은 앞으로도 매우 중요하므로 뒤에 별도로 다시 언급하겠다.
-
-</br>
 
 이제 $\mathcal{B}_2$ 기저에서 $u_i$ 와 $v_i$ 를 표현해보자. $[v_i]_{\mathcal{B}_2} = \boldsymbol{e}_i$ 임은 자명하다. 
 
@@ -983,20 +980,20 @@ $$
 이므로 $[u_i]_{\mathcal{B}_2} = \boldsymbol{P}^{-1}[v_i]_{\mathcal{B}_2}$ 이다. 즉 $[u_i]_{\mathcal{B}_2}$ 는 $\boldsymbol{P}^{-1}$ 의 $i$ 번째 열이다.
 
 
-이제 연산자 $T\in \mathcal{L}$ 이 $T(u_i) = \sum_j A_{ij}u_j$ 로 정의되었으며 이 연산자의 $\mathcal{B}_1$ 기저에서의 행렬표현을 $\boldsymbol{A}$ 라 하자. 즉 $\boldsymbol{A} = [T]_{\mathcal{B}_1}$ 이다. 이 때,
+이제 연산자 $L\in \mathcal{L}(U)$ 이 $L(u_i) = \sum_j A_{ij}u_j$ 로 정의되었으며 이 연산자의 $\mathcal{B}_1$ 기저에서의 행렬표현을 $\boldsymbol{A}$ 라 하자. 즉 $\boldsymbol{A} = [L]_{\mathcal{B}_1}$ 이다. 이 때,
 
 $$
 \begin{aligned}
-T(v_i) &= T(P(u_i)) = T \left( \sum_{k=1}^n  P_{ki}u_k\right) = \sum_{k=1}^n P_{ki} T(u_k) \\
+L(v_i) &= L(P(u_i)) = TL\left( \sum_{k=1}^n  P_{ki}u_k\right) = \sum_{k=1}^n P_{ki} L(u_k) \\
 &= \sum_k P_{ki} \left(  \sum_l A_{lk}u_l \right)= \sum_k P_{ki}\left(\sum_l A_{lk} \sum_{j} (P^{-1})_{jl} v_j\right) \\
 &= \sum_j \left( \sum_l \sum_k (P^{-1})_{jl} A_{lk} P_{ki}\right) v_j
 \end{aligned}
 $$
 
-이다. 이로부터 $[T]_{\mathcal{B}_2} = \boldsymbol{P}^{-1}\boldsymbol{AP}$ 임을 알 수 있다. 즉 두 기저 $\mathcal{B}_1 =\{u_i\}$, $\mathcal{B}_2 = \{P(u_i)\}$ 사이에,
+이다. 이로부터 $[L]_{\mathcal{B}_2} = \boldsymbol{P}^{-1}\boldsymbol{AP}$ 임을 알 수 있다. 즉 두 기저 $\mathcal{B}_1 =\{u_i\}$, $\mathcal{B}_2 = \{P(u_i)\}$ 사이에,
 
 $$
-[T]_{\mathcal{B_1}} = \boldsymbol{A} \iff [T]_{\mathcal{B}_2} = \boldsymbol{P}^{-1}\boldsymbol{AP}
+[L]_{\mathcal{B_1}} = \boldsymbol{A} \iff [L]_{\mathcal{B}_2} = \boldsymbol{P}^{-1}\boldsymbol{AP}
 $$
 
 의 관계가 성립한다. 즉 어떤 기저와 그 기저에서의 선형변환을 나타내는 행렬을 안다면, 변화된 기저에서의 선형변환을 나타내는 행렬도 알 수 있다. 이런 기저의 변환을 행렬의 닮음 변환 (similarity transformation) 이라 한다.
@@ -1027,6 +1024,10 @@ $K=P^{-1}\circ L \circ P$ 라면 그 행렬표현도 $[K] = [P^{-1}][L][P]$ 일 
 
 :::
 :::
+
+</br>
+
+우리가 이미 보였지만 다음 명제는 별도로 언급할 가치가 있다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -1066,7 +1067,7 @@ $\boldsymbol{P}$ 가 가역행렬일 때 $\boldsymbol{P}$ 의 각 열은 표준�
 
 ::: {#exr-linear_map_1}
 
-$V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(V, W)$ 이다. $V$ 의 어떤 부분공간 $U$ 는 $U \cap \ker (L)=\{0\}$ 이며 $\text{im}\,(L)=\{L(u) : u \in U\}$ 임을 보이시오.
+$V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(V, W)$ 이다. $V$ 의 어떤 부분공간 $U$ 는 $U \cap \ker (L)=\{0\}$ 이며 $\text{im}\,(L)=\{L(u) : u \in U\}$ 임을 보여라.
 :::
 
 </div></br>

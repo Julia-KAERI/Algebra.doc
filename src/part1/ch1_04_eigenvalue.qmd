@@ -8,7 +8,11 @@ crossref:
 
 ## 고유값, 고유벡터, 고유공간
 
-### 고유값, 고유벡터, 고유공간 
+함수 $f:X \to Y$ 와 $A \subset X$ 에 대해 $f(A) := \{f(a):a\in A\}$ 라고 하는 것처럼 선형사상 $L\in \mathcal{L}(V,\,W)$ 와 $U\subset V$ 에 대해 $L(U) = \{Lu:u\in U\}$ 라고 하자.
+
+</br>
+
+### 고유값, 고유벡터, 고유공간 {#sec-part1_eigens}
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-invariant_subspace}
@@ -30,7 +34,7 @@ $$
 
 ::: {#prp-invariant_subspace}
 
-$T\in \mathcal{L}(V)$ 에 대해 다음이 성립한다.
+$L\in \mathcal{L}(V)$ 에 대해 다음이 성립한다.
 
 &emsp;($1$) $V$ 는 $L$ 에 대한 불변부분공간이다.
 
@@ -42,7 +46,7 @@ $T\in \mathcal{L}(V)$ 에 대해 다음이 성립한다.
 </div></br>
 
 ::: {.proof}
-($1$) 은 자명하다. $u\in \ker (L) \implies L(u) \in \ker (L)$ 이므로 ($2$) 도 성립한다. $u \in \text{im} (L)$ 일 때 $L(u)\in \text{im}(L)$ 이므로 ($3$) 도 성립한다. $\square$
+($1$) 은 자명하다. $u\in \ker (L) \implies L(u) = 0_V \in \ker (L)$ 이므로 ($2$) 도 성립한다. $u \in \text{im} (L)$ 일 때 $L(u)\in \text{im}(L)$ 이므로 ($3$) 도 성립한다. $\square$
 
 :::
 

@@ -12,12 +12,12 @@ crossref:
 
 </br>
 
-## 기본 행 연산 {#sec-elementary_row_operation}
+## 기본 행 연산 
 
-### 기본 행 연산의 정의와 행렬표현
+### 기본 행 연산의 정의와 행렬표현 {#sec-elementary_row_operation}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-elementary_row_operation}
+::: {#def-part1_elementary_row_operation}
 
 #### 기본 행 연산
 
@@ -58,7 +58,7 @@ $$
 
 </br>
 
-### 기본 행 연산의 행렬 표현
+### 기본 행 연산의 행렬 표현 {#sec-part1_matrix_representatin_of_elementary_row_operation}
 
 기본 행 연산은 선형 연산이기 때문에 행렬로 표현 할 수 있다. 행 연산에 대한 표기로 $E^{(i)}$ 를 사용했는데 이와 유사하게 이의 행렬 표기를 $\boldsymbol{E}^{(i)}$ 로 한다. 또한 $\boldsymbol{I}_{k:}$ 는 단위행렬의 $k$ 번째 행벡터를 의미한다.
 
@@ -153,16 +153,19 @@ $$
 
 </br>
 
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
 ::: {#exm-non-echelon_matrix}
+
 아래의 행렬 $\boldsymbol{A}_1,\,\boldsymbol{A}_2$ 는 각각 1, 2 번 조건을 거스르는 행렬이므로 행사다리꼴이 아니다. (선행 성분을 밑줄로 표시하였다.)
 
 $$
 \boldsymbol{A}_1 = \begin{bmatrix} \underline{2} & 2 & 0 \\0 & 0 & 0 \\ 0 & \underline{1} & 0\end{bmatrix} , \qquad\boldsymbol{A}_2 = \begin{bmatrix} 0 & 0 & \underline{3} \\ \underline{2} & 0 & 2\end{bmatrix}. 
 $$
-
 :::
 
-</br>
+</div></br>
+
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-echelon_matrix}
@@ -277,31 +280,51 @@ $m \times n$ 인 사다리꼴 행렬 $\boldsymbol{A}$ 를 생각하자. $m>n$ �
 
 </br>
 
-## 대칭군
+## 대칭군 
+
+### 대칭군과 순열 {#sec-part1_symmetric_group}
 
 이제 행렬식에 대해 알아보도록 하자. 행렬식을 도입하는 방법은 여러가지가 있지만 그 가운데 대칭군을 도입하여 정의 한 후 행렬식의 중요한 성질을 하나하나 증명해 나가보도록 한다.
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-symmetric_group}
+::: {#def-part1_symmetric_group}
 
 #### 대칭군과 순열
 $n$ 이 1 이상의 자연수일 때 $\{1,\ldots,\,n\} \mapsto \{1, \ldots,\,n\}$ 함수 가운데 전단사 함수 전체의 집합을 **대칭군(symmetric group)** 이라 하고 $S_n$ 이라 표기한다. 대칭군의 원소를 **순열 (permutation)** 이라 한다. 
-[대칭군 (symmetric group) 이라는 이름에서 알 수 있듯이, $S_n$ 은 2부에서 다룰 군(group) 이라는 수학적 구조에 속한다. 하지만 여기서는 특별히 군에 대해 이야기 하지 않을 것이기 때문에 대칭군 이라는 이름을 가지는 집합 정도로 이해하면 되겠다.]{.aside}
+
 
 :::
 :::
 
+대칭군 (symmetric group) 이라는 이름에서 알 수 있듯이, $S_n$ 은 2부에서 다룰 군(group) 이라는 수학적 구조에 속한다. 하지만 여기서는 특별히 군에 대해 이야기 하지 않을 것이기 때문에 대칭군 이라는 이름을 가지는 집합 정도로 이해하면 되겠다.
 
 
-예를 들어 $n=3$ 일 때 $\sigma (1) = 1,\, \sigma(2) = 3,\, \sigma(3)=2$ 인 $\sigma$ 는 $S_3$ 의 원소이지만 $\tau(1)=2$, $\tau(2)=2$, $\tau(3)=1$ 은 전단사 함수가 아니기 때문에 $S_3$ 의 원소가 아니다. 또한 $S_n$ 은 함수의 집합이므로 그 원소들에 대한 함수의 합성과 역함수를 생각 할 수 있다. (늘 그렇듯이) $\sigma\in S_n$ 에 대한 역함수는 $\sigma^{-1}$ 로 표기하며, $\sigma_1,\,\sigma_2\in S_n$ 의 합성은 $\sigma_1 \circ \sigma_2$ 로 표기한다. 항등순열 $i_d \in S_n$ 은 $i_d(i)=i$ $(i=1,\ldots, n)$ 인 순열이다. 
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-part1_symmetric_groups}
+
+$n=3$ 일 때 $\sigma (1) = 1,\, \sigma(2) = 3,\, \sigma(3)=2$ 인 $\sigma$ 는 $S_3$ 의 원소이지만 $\tau(1)=2$, $\tau(2)=2$, $\tau(3)=1$ 은 전단사 함수가 아니기 때문에 $S_3$ 의 원소가 아니다. 
+
+:::
 
 
-<br>
+</div><br>
 
-### 순열의 표기
+$S_n$ 은 함수의 집합이므로 그 원소들에 대한 함수의 합성과 역함수를 생각 할 수 있다. (늘 그렇듯이) $\sigma\in S_n$ 에 대한 역함수는 $\sigma^{-1}$ 로 표기하며, $\sigma_1,\,\sigma_2\in S_n$ 의 합성은 함수의 합성 기호 $\circ$ 를 써서 $\sigma_1 \circ \sigma_2$ 로 표기하거나 곱으로서 $\sigma_1 \sigma_2$ 로 표기한다. 항등순열 $i_d \in S_n$ 은 $i_d(i)=i$ $(i=1,\ldots, n)$ 인 순열이다. 
 
-#### 기본적인 표기법
+</br>
+
+### 순열의 표기 {#sec-part1_notation_of_permutations}
+
+순열을 표기하는데는 보통 두줄표기법과 순환표기법을 사용하며, 수학적으로 다룰 때는 순환표기법이 주로 사용된다.
+
+</br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-part1_two_line_notation}
+
+#### 두줄표기법 (two-line notation)
 
 $\sigma \in S_n$ 일 때 $1,\,2,\,\ldots,\,n$ 과 $\sigma(1),\,\sigma(2),\ldots,\, \sigma(n)$ 을 두줄로 아래와 같이 표기할 수 있다.
 
@@ -311,7 +334,13 @@ $$
 
 예를 들어 $\sigma = \begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 3 & 1 & 4\end{pmatrix}$ 는 $\sigma(1)=2,\, \sigma (2)=3,\,\sigma(3)=1,\,\sigma(4)=4$ 이다. 
 
+:::
+:::
+
 </br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-part1_cyclic_notation}
 
 #### 순환 표기법 (cyclic notation)
 
@@ -326,11 +355,20 @@ $$
 $$
 \sigma = \begin{pmatrix} 1 & 2 & 3 & 4 \\ 4 & 3 & 1 &2\end{pmatrix}
 $$
-가 된다.
+가 된다. 
+
+
 
 $(1, 3, 2)(4, 2)$ 처럼 순열을 곱하는 것처럼 쓰면 합성함수처럼 생각한다. $\sigma_1 = (1, 3, 2),\, \sigma_2=(4, 2)$ 에 대해 $\sigma = \sigma_1 \circ \sigma_2 =  (1, 3, 2)(4, 2)$ 이다. 즉 $\sigma(2) = \sigma_1(\sigma_2(2))=\sigma_1(4) = 4$ 이다. 
 
+:::
+:::
+
+
 </br>
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-part1_k_cycle}
 
 #### $k$-cycle 과 호환
 
@@ -342,25 +380,28 @@ $$
 
 를 보자. $1,\,2,\,3$ 은 $1,\,2,\,3$ 내에서 $4,\,5$ 는 $4,\,5$ 내에서 순환됨을 알 수 있다. 이것은 합성순열처럼 $(1, 2, 3) (4, 5)$ 로 쓸 수 있다. 하나의 $(\cdots)$ 안에 $k$ 개의 숫자가 있을 때 $k$-**cycle** 이라고 하며 각각의 $k$-cycle 들을 cycle 이라고 한다. $(1, 3, 2, 4)$ 는 4-cycle 이다. $k=2$ 일 경우는 특별히 **호환 (transposition)** 이라 한다. 
 
+:::
+:::
+
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-basic_properties_of_permutation}
 
 $S_n$ 에 대해 다음이 성립한다.
 
-&emsp; ($1$) $\sigma \in S_n \implies \sigma^{-1} \in S_n$,
+&emsp;($1$) $\sigma \in S_n \implies \sigma^{-1} \in S_n$,
 
-&emsp; ($2$) $\sigma,\, \tau\in S_n \implies \sigma \circ \tau \in S_n$,
+&emsp;($2$) $\sigma,\, \tau\in S_n \implies \sigma \circ \tau \in S_n$,
 
-&emsp; ($3$) $\sigma, \tau, \theta \in S_n \implies (\sigma \circ \tau)\circ \theta = \sigma \circ (\tau \circ \theta)$,
+&emsp;($3$) $\sigma, \tau, \theta \in S_n \implies (\sigma \circ \tau)\circ \theta = \sigma \circ (\tau \circ \theta)$,
 
-&emsp; ($4$) $\{\sigma^{-1}: \sigma\in S_n\}=S_n$,
+&emsp;($4$) $\{\sigma^{-1}: \sigma\in S_n\}=S_n$,
 
-&emsp; ($5$) $\tau \in S_n \implies \{\tau \circ \sigma : \sigma \in S_n\} = S_n$
+&emsp;($5$) $\tau \in S_n \implies \{\tau \circ \sigma : \sigma \in S_n\} = S_n$
 
-&emsp; ($6$) $\sigma$ 가 호환이면 $\sigma^2 = i_d$ 이다.
+&emsp;($6$) $\sigma$ 가 호환이면 $\sigma^2 = i_d$ 이다.
 
-&emsp; ($7$) $\sigma$ 가 $k$-cycle 이면 $\sigma^k = i_d$ 이다.
+&emsp;($7$) $\sigma$ 가 $k$-cycle 이면 $\sigma^k = i_d$ 이다.
 
 :::
 
@@ -385,8 +426,9 @@ $$
 
 <br>
 
+### 순열의 분해 {#sec-part1_decomposition_of_permutation}
 
-### 순열의 분해
+</br>
 
 두 cycle $\sigma_1,\, \sigma_2 \in S_n$ 에 대해 $\sigma_1,\,\sigma_2$ 에 겹치는 정수가 없을 때 두 cycle 을 **disjoint** 하다고 한다. 모든 순열은 disjoint 한 cycle 의 합성으로 표현 할 수 있다는 것은 쉽게 알 수 있다. 또한 $\sigma,\, \tau$ 가 disjoint 한 두 cycle 일 때 $\sigma \circ \tau = \tau \circ \sigma$ 임을 쉽게 예상 할 수 있다. 그러나 서로 disjoint 하지 않은 두 cycle 에 대해서는 교환법칙이 성립하지 않을 수 있다.
 
@@ -435,7 +477,7 @@ $$
 
 </br>
 
-### 순열에 대한 $\text{sgn}$ 함수
+### 순열에 대한 $\text{sgn}$ 함수 {#sec-part1_sgn_for_permutation}
 
 우리는 순열이 호환의 합성으로 표현 가능하다는 것을 알았다. 그러나 이 호환의 합성은 유일하지도 않고, 호환의 갯수도 유일하지 않다.
 
@@ -447,6 +489,8 @@ $$
 $$
 
 그러나 순열을 호환의 합성으로 표현했을 때 호환의 갯수가 짝수개인지 홀수개인지는 불변이며 이것을 증명하고자 한다.
+
+
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-sgn_of_permutaion}
@@ -472,7 +516,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-permutation_even_odd}
+::: {#thm-part1_permutation_even_odd}
 순열을 분해했을 때의 호환의 갯수의 짝수/홀수 여부는 순열을 어떻게 분해하더라도 불변이다.
 :::
 
@@ -519,8 +563,9 @@ $\text{sgn}$ 함수에 대한 몇가지 성질을 보자.
 ::: {#prp-sgn_of_permutation}
 $\sigma,\, \tau \in S_n$ 에 대해 다음이 성립한다.
 
-1. $\text{sgn}(\tau \circ \sigma) = \text{sgn}(\tau) \, \text{sgn}(\sigma)$,
-2. $\text{sgn}(\sigma) = \text{sgn}(\tau)\,\text{sgn}(\sigma)\,\text{sgn}(\tau)$.
+&emsp;($1$) $\text{sgn}(\tau \circ \sigma) = \text{sgn}(\tau) \, \text{sgn}(\sigma)$,
+
+&emsp;($2$) $\text{sgn}(\sigma) = \text{sgn}(\tau)\,\text{sgn}(\sigma)\,\text{sgn}(\tau)$.
 :::
 
 </div></br>
@@ -531,7 +576,7 @@ $\sigma,\, \tau \in S_n$ 에 대해 다음이 성립한다.
 
 ## 대칭군을 이용한 행렬식 {#sec-determinant_definition_using_symmetric_group}
 
-행렬식을 도입하는 방법은 몇가지가 있다. 여기서는 우선 대칭군을 이용하여 행렬식을 도입하기로 한다. 
+행렬식을 도입하는 방법은 몇가지가 있다. 여기서는 대칭군을 이용하여 행렬식을 도입하기로 한다. 
 
 ### 행렬식의 정의
 
@@ -666,8 +711,6 @@ $$
 
 </div></br>
 
-
-
 ::: {.proof}
 $$
 \begin{aligned}
@@ -691,6 +734,7 @@ $\det (c_1 \boldsymbol{a}_1, \ldots, c_n \boldsymbol{a}_n) = c_1 \cdots c_n \det
 :::
 
 </div></br>
+
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-linear_dependency_and_determinant}
@@ -747,7 +791,7 @@ $$
 ::: {#prp-elementary_row_operation_and_determinant}
 #### 행 기본 연산과 행렬식
 
-$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 라고 하자. @def-elementary_row_operation 에서 정의된 행 기본연산 $E^{(1)},\, E^{(2)},\, E^{(3)}$ 에 대해 다음이 성립한다.
+$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 라고 하자. @def-part1_elementary_row_operation 에서 정의된 행 기본연산 $E^{(1)},\, E^{(2)},\, E^{(3)}$ 에 대해 다음이 성립한다.
 
 &emsp; ($1$) $\det(\boldsymbol{I}_n) = 1$
 
@@ -1279,7 +1323,7 @@ $$
 
 ::: {.proof}
 
-$\boldsymbol{S}$ 가 가역행렬이므로 $\boldsymbol{Av}=\boldsymbol{0} \iff \boldsymbol{SAv}=\boldsymbol{0}$ 이다. 따라서 $\ker \boldsymbol{A} = \ker (\boldsymbol{SA})$ 이다. 따라서 선형사상의 기본정리(@thm-rank_nullity) 에 의해 $\dim (\text{im} (\boldsymbol{A})) = \dim (\text{im} (\boldsymbol{SA}))$ 이므로 $\text{rank} (\boldsymbol{A}) = \text{rank} (\boldsymbol{SA})$ 이다. $\square$ 
+$\boldsymbol{S}$ 가 가역행렬이므로 $\boldsymbol{Av}=\boldsymbol{0} \iff \boldsymbol{SAv}=\boldsymbol{0}$ 이다. 즉 $\ker \boldsymbol{A} = \ker (\boldsymbol{SA})$ 이며 rank-nullity 정리(@thm-rank_nullity) 에 의해 $\text{rank} (\boldsymbol{A}) = \text{rank} (\boldsymbol{SA})$ 이다. $\square$ 
 
 
 ::::
