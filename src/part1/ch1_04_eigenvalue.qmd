@@ -6,6 +6,10 @@ crossref:
   chapters: true
 ---
 
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
 ## 고유값, 고유벡터, 고유공간
 
 함수 $f:X \to Y$ 와 $A \subset X$ 에 대해 $f(A) := \{f(a):a\in A\}$ 라고 하는 것처럼 선형사상 $L\in \mathcal{L}(V,\,W)$ 와 $U\subset V$ 에 대해 $L(U) = \{Lu:u\in U\}$ 라고 하자.
@@ -46,7 +50,11 @@ $L\in \mathcal{L}(V)$ 에 대해 다음이 성립한다.
 </div></br>
 
 ::: {.proof}
-($1$) 은 자명하다. $u\in \ker (L) \implies L(u) = 0_V \in \ker (L)$ 이므로 ($2$) 도 성립한다. $u \in \text{im} (L)$ 일 때 $L(u)\in \text{im}(L)$ 이므로 ($3$) 도 성립한다. $\square$
+($1$) 은 자명하다. 
+
+($2$) $u\in L(\ker (L))$ 이면 어떤 $v\in \ker L$ 에 대해 $u=Lv=0_V\in \ker L$. 
+
+($3$) $u\in L(\im (L)) \implies u \in \im L$. $\square$
 
 :::
 
@@ -63,27 +71,40 @@ $$
 L(v) = \lambda v
 $$
 
-일 때 $v$ 를 $L$ 의 **고유벡터 (eigenvector)**, $\lambda$ 를 $L$ 에 대한 $v$ 의 **고유값(eigenvalue)** 이라 한다. 연산자 $L$ 이 고유값 $\lambda$ 를 가질 때, 이 고유값 $\lambda$ 를 갖는 고유벡터와 영벡터의 집합을 $\lambda$ 에 대한 $L$ 의 **고유공간(eigenspace)** 이라고 하며 $E(\lambda, L)$ 라 쓴다.
+일 때 $v$ 를 $L$ 의 **고유벡터 (eigenvector)**, $\lambda$ 를 $L$ 에 대한 $v$ 의 **고유값(eigenvalue)** 이라 한다. 연산자 $L$ 이 고유값 $\lambda$ 를 가질 때, 이 고유값 $\lambda$ 를 갖는 고유벡터와 영벡터의 집합을 $\lambda$ 에 대한 $L$ 의 **고유공간(eigenspace)** 이라고 하며 $E(\lambda, L)$ 라 쓴다. 
 :::
 :::
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br>
 
-::: {#prp-diagonal_matrix_and_eigenvalue}
+즉 $v$ 가 $\lambda$ 의 고유값을 갖는 $L$ 의 고유벡터라면 $(L-\lambda I)v=0_V$ 이다. @thm-part1_isomorphic_linear_map 로부터 다음과 같은 결론을 얻게 된다.
 
-$\boldsymbol{D}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 대각행렬, 즉 대각성분을 제외한 모든 성분이 $0$ 인 행렬이라면 표준기저 $\hat{\boldsymbol{e}}_i$ 는 $\lambda_i = D_{ii}$ 를 고유값으로 갖는 $\boldsymbol{D}$ 의 고유벡터이다.
+</br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-part1_finite_dimensional_vector_space_and_eigenvector}
+
+유한차원 $\F$-벡터공간 $V$ 에서의 선형연산자 $L$ 과 $\lambda\in \mathbb{F}$ 에 대해 다음은 동치이다.
+
+&emsp;($1$) $\lambda$ 는 $L$ 의 고유값이다.
+
+&emsp;($2$) $L-\lambda I$ 는 가역사상이 아니다.
+
+&emsp;($3$) $L-\lambda I$ 는 전사도 단사도 아니다.
 
 :::
 
 </div></br>
 
-::: {.proof}
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-$\boldsymbol{D}\hat{\boldsymbol{e}}_i = \lambda_i \hat{\boldsymbol{e}}_i$ 이다. $\square$
+::: {#exm-diagonal_matrix_and_eigenvalue}
+
+$\boldsymbol{D}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 대각행렬, 즉 대각성분을 제외한 모든 성분이 $0$ 인 행렬이라고 하자. 표준기저 $\hat{\boldsymbol{e}}_i$ 에 대해 $\boldsymbol{D}\hat{\boldsymbol{e}}_i = D_{ii} \hat{\boldsymbol{e}}_i$ 이므로 $\hat{\bf{e}}_i$ 는 $D_{ii}$ 를 고유값으로 갖는 $\boldsymbol{D}$ 의 고유벡터이다. 
 
 :::
+</div></br>
 
-</br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-eigenspace_invariant}
@@ -106,6 +127,8 @@ $$
 :::
 
 </br>
+
+### 고유값과 행렬식 {#sec-part1_eigenvalue_and_determinant}
 
 이제 선형사상/행렬의 고유값을 찾는 방법을 알아보자. 다음 정리는 선형사상/행렬의 고유값을 찾는 가장 중요한 방법을 알려준다.
 
@@ -133,7 +156,9 @@ $\det (\lambda \boldsymbol{I}-\boldsymbol{A})  = 0$ 이면 $\text{nullity} (\lam
 
 :::
 
-</div></br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</div></br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-eigenvector_linear_independence}
 $L\in \mathcal{L}(V)$ 의 고유벡터의 집합 $\{v_1,\ldots,\, v_m\}$ 에 대해 고유벡터가 각각 서로 다른 고유값 $\lambda_1,\ldots,\lambda_m$ 을 갖는 고유벡터라면 이 벡터의 집합은 선형독립이다.
@@ -142,7 +167,7 @@ $L\in \mathcal{L}(V)$ 의 고유벡터의 집합 $\{v_1,\ldots,\, v_m\}$ 에 대
 </div></br>
 
 ::: {.proof}
-$V_0=\{v_1, \ldots,\,v_m\}$ 가 선형종속임을 가정하자. $v_k$ 가 $\{ v_1, \ldots, v_{k-1}\}$ 의 선형결합으로 표현되는 첫번째 벡터라고 하자. 이런 $v_k$ 가 존재하지 않으면 $V_0$ 는 선형독립이므로 $v_k$ 는 항상 존재한다ㅣ. 이 때, 당연히도 $\{v_1,\ldots,\,v_{k-1}\}$ 은 선형독립이다.
+$V_0=\{v_1, \ldots,\,v_m\}$ 가 선형종속임을 가정하자. $v_k$ 가 $\{ v_1, \ldots, v_{k-1}\}$ 의 선형결합으로 표현되는 첫번째 벡터라고 하자. 이런 $v_k$ 가 존재하지 않으면 $V_0$ 는 선형독립이므로 $v_k$ 는 항상 존재한다. 이 때, 당연히도 $\{v_1,\ldots,\,v_{k-1}\}$ 은 선형독립이다.
 
 $$
 \begin{aligned}
@@ -158,37 +183,19 @@ $$
 c_1 (\lambda_k -\lambda_1) v_1 + \cdots + c_{k-1}(\lambda_k -\lambda_{k-1}) v_{k-1}=0
 $$
 
-이다. $\{v_1,\ldots,v_{k-1}\}$ 이 선형독립이며 모든 $\{\lambda_i\}$ 가 서로 다르므로, $c_1 = \cdots = c_{k-1}=0$ 이다. 즉 $\{v_1,\ldots,\,v_k\}$ 는 선형독립이므로 가정에 모순이다. 즉 $V_0$ 는 선형독립이다. $\square$
+이다. $\{v_1,\ldots,v_{k-1}\}$ 이 선형독립이며 모든 $\{\lambda_i\}$ 가 서로 다르므로, $c_1 = \cdots = c_{k-1}=0$ 이다. 즉 $\{v_1,\ldots,\,v_k\}$ 는 선형독립이므로 선형종속이라는 가정에 모순된다. 즉 $V_0$ 는 선형독립이다. $\square$
 :::
 
 </br>
 
-### 연습문제 {.unnumbere}
+### 연습문제 {.unnumbered}
 
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-::: {#exr-invariant_subspace_1}
-
-벡터공간 $V$ 에서 정의된 $K,\, L\in \mathcal{L}(V)$ 가 $LK = KL$ 이라고 하자. 이 때 다음을 보여라.
-
-&emsp;($1$) $\ker (K)$ 는 $L$ 에 대한 불변부분공간이다.
-
-&emsp;($2$) $\text{im}\,(K)$ 는 $L$ 에 대한 불변부분공간이다.
-
-:::
-
-</div></br>
-
-::: {.solution}
-
-($1$) $u\in \ker (K)$ 라고 하자. $KLu = LKu = 0_V$ 이므로 $Lu\in \ker (K)$ 이다. 즉 $\ker (K)$ 는 $L$ 에 대한 불변부분공간이다. 
-
-($2$) $v\in \text{im}(K)$ 이면 $v=Ku$ 인 $u\in V$ 가 존재한다. $Lv = LKu = KLu$ 이므로 $Lv\in \text{im}(K)$ 이다. 
-
-:::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-invarant_subspace_2}
+::: {#exr-axler4_5_A_4}
+
+#### Axler4th 5.A.4
 
 유한차원 $\mathbb{F}$-벡터공간 $V$ 에 대해 $U\le V$ 가 $V$ 에 대한 모든 연산자에 대해 불변부분공간이면 $U=\{0_V\}$ 이거나 $U=V$ 임을 보여라.
 
@@ -200,6 +207,40 @@ $$
 
 $U=\{0_V\}$ 이거나 $U=V$ 이면 자명하다. $1 < \dim (U) < \dim (V)$ 라고 하자. $U$ 의 임의의 기저 $(u_1,\ldots,\,u_m)$ 를 확장하여 $V$ 의 기저 $(u_1,\ldots,\,u_m,\,v_1,\ldots,\,v_n)$ 을 구성했다고 하자. $L\in \mathcal{L}(V)$ 를 $L(u_1) = v_1$ 이 되도록 정할 수 있으며 이 경우 $U$ 는 $L$ 의 불변부분공간이 되지 않는다. 
 
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4_5_A_8}
+#### Axler4th 5.A.8
+
+$P\in \mathcal{L}(V)$ 가 $P^2=P$ 라고 하자. $\lambda$ 가 $P$ 의 고유값이라면 $\lambda = 0$ 이거나 $1$ 임을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+고유값 $\lambda$ 에 대한 고유벡터를 $v_\lambda$ 라고 하면 $Pv_\lambda = \lambda v_\lambda$ 이며 $P^2\lambda = \lambda^2 v_\lambda = \lambda v_\lambda$ 이다. 따라서 $\lambda = 0$ 혹은 $1$ 이다.
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4_5_A_9}
+#### Axler4th 5.A.9
+
+$L:\R[t] \to \R[t]$ 가 $L(p(t))= p'(t)$ 일 때 모든 고유값과 고유벡터를 구하라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+고유값은 모든 실수가 될 수 있으며 $\lambda\in \R$ 에 대한 고유벡터는 $\displaystyle p(t) = e^{\lambda t}= \sum_{k=0}^\infty \dfrac{(\lambda t)^k}{k!}$ 이다. 
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">

@@ -360,7 +360,7 @@ window.Quarto = {
 <p><br></p>
 <section id="sec-basic_properties_of_polynomial" class="level3" data-number="18.1.1">
 <h3 data-number="18.1.1" class="anchored" data-anchor-id="sec-basic_properties_of_polynomial"><span class="header-section-number">18.1.1</span> 다항식의 기본적인 성질</h3>
-<p><a href="../part1/ch1_04_eigenvalue.html#thm-existance_of_eigenvector_for_complex_field" class="quarto-xref">정리&nbsp;<span>4.2</span></a> 에서 정의한 바와 같다.</p>
+<p><a href="../part1/ch1_04_eigenvalue.html#thm-existance_of_eigenvector_for_complex_field" class="quarto-xref">정리&nbsp;<span>4.3</span></a> 에서 정의한 바와 같다.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -533,8 +533,8 @@ p(x) = c(x-c_1)\cdots (x-c_m)(x^2+b_1x + c_1) \cdots (x^2 + b_kx + c_k).
 <p><br></p>
 <p>또한 우리는 다음을 보였다.</p>
 <ul>
-<li><p><a href="../part1/ch1_04_eigenvalue.html#prp-invariance_of_characteristic_polynomial" class="quarto-xref">명제&nbsp;<span>4.7</span></a> : 특성 다항식은 닮음 변환에 대해 불변이다. 즉 행렬 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 과 가역행렬 <span class="math inline">\(\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(p_{\boldsymbol{A}}(\lambda) = p_{\boldsymbol{P^{-1}AP}}(\lambda)\)</span> 이다.</p></li>
-<li><p><a href="../part1/ch1_04_eigenvalue.html#prp-eigenvalue_characteristic_polynomial" class="quarto-xref">명제&nbsp;<span>4.8</span></a> : <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\lambda\in \mathbb{F}\)</span> 가 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유값이기 위한 필요충분조건은 <span class="math inline">\(p_{\boldsymbol{A}}(\lambda)=0\)</span> 인 것이다.</p></li>
+<li><p><a href="../part1/ch1_04_eigenvalue.html#prp-invariance_of_characteristic_polynomial" class="quarto-xref">명제&nbsp;<span>4.6</span></a> : 특성 다항식은 닮음 변환에 대해 불변이다. 즉 행렬 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 과 가역행렬 <span class="math inline">\(\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(p_{\boldsymbol{A}}(\lambda) = p_{\boldsymbol{P^{-1}AP}}(\lambda)\)</span> 이다.</p></li>
+<li><p><a href="../part1/ch1_04_eigenvalue.html#prp-eigenvalue_characteristic_polynomial" class="quarto-xref">명제&nbsp;<span>4.7</span></a> : <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\lambda\in \mathbb{F}\)</span> 가 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유값이기 위한 필요충분조건은 <span class="math inline">\(p_{\boldsymbol{A}}(\lambda)=0\)</span> 인 것이다.</p></li>
 </ul>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
@@ -598,7 +598,7 @@ p(L) -p(\lambda)I_V &amp;=  a_n(L^n -\lambda^n I_V) + \cdots + a_1(L-\lambda I_V
 <p><br></p>
 <section id="sec-characteristic_polynomial_and_diagonalization" class="level3" data-number="18.2.1">
 <h3 data-number="18.2.1" class="anchored" data-anchor-id="sec-characteristic_polynomial_and_diagonalization"><span class="header-section-number">18.2.1</span> 행렬의 대각화와 특성다항식</h3>
-<p><a href="../part1/ch1_04_eigenvalue.html#thm-diagonalizability" class="quarto-xref">정리&nbsp;<span>4.4</span></a> 에서 우리는 행렬의 대각화에 대해 정리하였다. 이제 행렬의 대각화를 특성다항식의 관점에서 보자.</p>
+<p><a href="../part1/ch1_04_eigenvalue.html#thm-diagonalizability" class="quarto-xref">정리&nbsp;<span>4.5</span></a> 에서 우리는 행렬의 대각화에 대해 정리하였다. 이제 행렬의 대각화를 특성다항식의 관점에서 보자.</p>
 <p>– to be done –</p>
 <p><br></p>
 </section>
@@ -677,7 +677,7 @@ p(L) -p(\lambda)I_V &amp;=  a_n(L^n -\lambda^n I_V) + \cdots + a_1(L-\lambda I_V
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(n=\dim (V)\)</span> 라고 하자. 우선 <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span> 에 대해 증명한다. <a href="../part1/ch1_04_eigenvalue.html#thm-uppertriangular_matrix_complex_field" class="quarto-xref">정리&nbsp;<span>4.3</span></a> 에서 우리는 복소수체에서 정의된 모든 정사각행렬은 상삼각행렬과 닮았다는 것을 보였다. 따라서 우리는 상삼각행렬에 대한 특성다항식에 대해서만 증명하면 된다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 상삼각행렬이라고 하면, <span class="math inline">\(p_\boldsymbol{A}(t) = \prod_{i=1}^n (t-A_{ii})\)</span> 이다. 이제</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(n=\dim (V)\)</span> 라고 하자. 우선 <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span> 에 대해 증명한다. <a href="../part1/ch1_04_eigenvalue.html#thm-uppertriangular_matrix_complex_field" class="quarto-xref">정리&nbsp;<span>4.4</span></a> 에서 우리는 복소수체에서 정의된 모든 정사각행렬은 상삼각행렬과 닮았다는 것을 보였다. 따라서 우리는 상삼각행렬에 대한 특성다항식에 대해서만 증명하면 된다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 상삼각행렬이라고 하면, <span class="math inline">\(p_\boldsymbol{A}(t) = \prod_{i=1}^n (t-A_{ii})\)</span> 이다. 이제</p>
 <p><span class="math display">\[
 p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymbol{I}_n)=0
 \]</span></p>
@@ -736,7 +736,7 @@ p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymb
 </div>
 </div>
 <p><br></p>
-<p>우리는 <a href="../part1/ch1_04_eigenvalue.html#prp-eigenvalue_characteristic_polynomial" class="quarto-xref">명제&nbsp;<span>4.8</span></a> 에서 연산자에 대한 특성다항식의 해가 그 연산자의 고유값임을 보였다. 실제로는 특성다항식이 아니라 최소다항식에 대해서도 성립한다.</p>
+<p>우리는 <a href="../part1/ch1_04_eigenvalue.html#prp-eigenvalue_characteristic_polynomial" class="quarto-xref">명제&nbsp;<span>4.7</span></a> 에서 연산자에 대한 특성다항식의 해가 그 연산자의 고유값임을 보였다. 실제로는 특성다항식이 아니라 최소다항식에 대해서도 성립한다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-part3_minimal_polynomial_and_eigenvalues" class="theorem">
@@ -777,7 +777,7 @@ p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymb
 </div>
 <p><br></p>
 <div class="proof page-columns page-full">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(p(t) = t^2+bt+c,\, U = \ker (L^2+bL+cI_V)= \ker p(L)\)</span> 라고 하자. <a href="../part1/ch1_04_eigenvalue.html#prp-kernal_and_images_of_operator_under_polynomial" class="quarto-xref">명제&nbsp;<span>4.6</span></a> 에 따라 <span class="math inline">\(U\)</span> 는 <span class="math inline">\(L\)</span>-불변부분공간이다. <span class="math inline">\(K=L|_U\)</span> 라고 하면 <span class="math inline">\(p(K)= p(L|_U)\)</span> 이며 <span class="math inline">\(K^2+bK+cI_U=0\)</span> 이다. <span class="math inline">\(u\in U\)</span> 가 <span class="math inline">\(\lambda\)</span> 의 고유값을 갖는 <span class="math inline">\(K\)</span> 의 고유벡터라고 가정하자. 그렇다면</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(p(t) = t^2+bt+c,\, U = \ker (L^2+bL+cI_V)= \ker p(L)\)</span> 라고 하자. <a href="../part1/ch1_04_eigenvalue.html#prp-kernal_and_images_of_operator_under_polynomial" class="quarto-xref">명제&nbsp;<span>4.5</span></a> 에 따라 <span class="math inline">\(U\)</span> 는 <span class="math inline">\(L\)</span>-불변부분공간이다. <span class="math inline">\(K=L|_U\)</span> 라고 하면 <span class="math inline">\(p(K)= p(L|_U)\)</span> 이며 <span class="math inline">\(K^2+bK+cI_U=0\)</span> 이다. <span class="math inline">\(u\in U\)</span> 가 <span class="math inline">\(\lambda\)</span> 의 고유값을 갖는 <span class="math inline">\(K\)</span> 의 고유벡터라고 가정하자. 그렇다면</p>
 <p><span class="math display">\[
 0_U = (K^2+bK+cI_U)u = (\lambda^2+b\lambda + c)u = \left(\left(\lambda + \dfrac{b}{2}\right)^2 + c-\dfrac{b^2}{4} \right) u
 \]</span></p>
@@ -796,7 +796,7 @@ p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymb
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="../part1/ch1_04_eigenvalue.html#thm-existance_of_eigenvector_for_complex_field" class="quarto-xref">정리&nbsp;<span>4.2</span></a> 에 의해 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-공간에서 정의된 모든 연산자는 고유값을 가진다는 것을 안다. 따라서 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간에서 생각한다. <span class="math inline">\(n=\dim (V)\)</span> 라고 하자. <span class="math inline">\(n=1\)</span> 이면 당연하게도 성립한다. 이제 <span class="math inline">\(n\)</span> 보다 작은 홀수차원 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 성립한다는 것을 가정하자. <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대한 최소다항식 <span class="math inline">\(m(t)\in \mathbb{R}[t]\)</span> 를 생각하자.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="../part1/ch1_04_eigenvalue.html#thm-existance_of_eigenvector_for_complex_field" class="quarto-xref">정리&nbsp;<span>4.3</span></a> 에 의해 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-공간에서 정의된 모든 연산자는 고유값을 가진다는 것을 안다. 따라서 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간에서 생각한다. <span class="math inline">\(n=\dim (V)\)</span> 라고 하자. <span class="math inline">\(n=1\)</span> 이면 당연하게도 성립한다. 이제 <span class="math inline">\(n\)</span> 보다 작은 홀수차원 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 성립한다는 것을 가정하자. <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대한 최소다항식 <span class="math inline">\(m(t)\in \mathbb{R}[t]\)</span> 를 생각하자.</p>
 <p>만악 <span class="math inline">\(m(t)\)</span> 가 어떤 <span class="math inline">\(\lambda\in \mathbb{R}\)</span> 에 대해 <span class="math inline">\((t-\lambda)\)</span> 로 나누어진다면 <span class="math inline">\(\lambda\)</span> 는 <span class="math inline">\(L\)</span> 의 고유값이므로 성립한다.</p>
 </div>
 <p><br></p>

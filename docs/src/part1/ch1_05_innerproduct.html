@@ -789,7 +789,7 @@ u_k = v_{k} - \sum_{j=1}^{k-1} \text{Proj}_{e_j} v_k = v_k-\sum_{j=1}^{k-1} \lef
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\mathcal{B}_V\)</span> 는 선형독립이므로 Gram-Schmidt 과정을 통해 얻은 정규직교벡터는 <span class="math inline">\(V\)</span> 의 정규직교기저이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p>그람-슈미트 과정은 내적벡터공간에 기저가 주어지면 이 기저의 선형결합으로 정규직교기저를 얻을 수 있음을 보장한다. 우리는 앞서 <a href="ch1_04_eigenvalue.html#thm-uppertriangular_matrix_complex_field" class="quarto-xref">정리&nbsp;<span>4.3</span></a> 에서 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-벡터공간에서의 모든 연산자는 어떤 기저에서 상삼각 행렬로 표현된다는 것을 보였다. 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-내적벡터공간에서는 정규직교기저에대해 상삼각 행렬로 표현되는 것을 보이자.</p>
+<p>그람-슈미트 과정은 내적벡터공간에 기저가 주어지면 이 기저의 선형결합으로 정규직교기저를 얻을 수 있음을 보장한다. 우리는 앞서 <a href="ch1_04_eigenvalue.html#thm-uppertriangular_matrix_complex_field" class="quarto-xref">정리&nbsp;<span>4.4</span></a> 에서 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-벡터공간에서의 모든 연산자는 어떤 기저에서 상삼각 행렬로 표현된다는 것을 보였다. 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-내적벡터공간에서는 정규직교기저에대해 상삼각 행렬로 표현되는 것을 보이자.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-schure" class="theorem">
@@ -798,7 +798,7 @@ u_k = v_{k} - \sum_{j=1}^{k-1} \text{Proj}_{e_j} v_k = v_k-\sum_{j=1}^{k-1} \lef
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(V\)</span> 를 <span class="math inline">\(n\)</span> 차원 <span class="math inline">\(\mathbb{C}\)</span>-내적벡터공간이라 하자. <a href="ch1_04_eigenvalue.html#thm-uppertriangular_matrix_complex_field" class="quarto-xref">정리&nbsp;<span>4.3</span></a> 에서 <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 는 어떤 기저 에서 상삼각행렬로 표현된다는 것을 보였다. 이 기저를 <span class="math inline">\(\mathcal{B}_V = \{v_1,\ldots,\,v_n\}\)</span> 이라 하고, 그람-슈미트 과정을 통해 얻은 정규직교기저를 <span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 이라 하자. 즉 <span class="math inline">\(e_i \in \text{span}(v_1,\ldots,\,v_i)\)</span> 이다. 그렇다면, 그람 슈미트 과정으로부터</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(V\)</span> 를 <span class="math inline">\(n\)</span> 차원 <span class="math inline">\(\mathbb{C}\)</span>-내적벡터공간이라 하자. <a href="ch1_04_eigenvalue.html#thm-uppertriangular_matrix_complex_field" class="quarto-xref">정리&nbsp;<span>4.4</span></a> 에서 <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 는 어떤 기저 에서 상삼각행렬로 표현된다는 것을 보였다. 이 기저를 <span class="math inline">\(\mathcal{B}_V = \{v_1,\ldots,\,v_n\}\)</span> 이라 하고, 그람-슈미트 과정을 통해 얻은 정규직교기저를 <span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 이라 하자. 즉 <span class="math inline">\(e_i \in \text{span}(v_1,\ldots,\,v_i)\)</span> 이다. 그렇다면, 그람 슈미트 과정으로부터</p>
 <p><span class="math display">\[
 \text{span}(e_1,\ldots,\,e_j) = \text{span}(v_1,\ldots,\,v_j), \quad j=1,\ldots, n
 \]</span></p>
