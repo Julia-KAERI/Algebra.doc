@@ -652,7 +652,7 @@ $$
 \end{aligned}
 $$
 
-이다. 마지막 부등호는 베셀 부등식(@prp-properties_of_orthonormal_vectors ($3$)) 으로부터 성립한다. 따라서 $\|\boldsymbol{Av}\| \le s_M \|\boldsymbol{v}\|$ 이다. $\square$
+이다. 마지막 부등호는 베셀 부등식(@prp-part1_properties_of_orthonormal_vectors ($3$)) 으로부터 성립한다. 따라서 $\|\boldsymbol{Av}\| \le s_M \|\boldsymbol{v}\|$ 이다. $\square$
 :::
 
 

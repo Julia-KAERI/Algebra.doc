@@ -339,12 +339,9 @@ window.Quarto = {
   <li><a href="#내적-inner-product-과-노름-norm" id="toc-내적-inner-product-과-노름-norm" class="nav-link active" data-scroll-target="#내적-inner-product-과-노름-norm"><span class="header-section-number">5.1</span> 내적 (Inner product) 과 노름 (norm)</a></li>
   <li><a href="#정규직교기저" id="toc-정규직교기저" class="nav-link" data-scroll-target="#정규직교기저"><span class="header-section-number">5.2</span> 정규직교기저</a>
   <ul class="collapse">
-  <li><a href="#기저와-내적" id="toc-기저와-내적" class="nav-link" data-scroll-target="#기저와-내적"><span class="header-section-number">5.2.1</span> 기저와 내적</a></li>
-  <li><a href="#정규직교기저-1" id="toc-정규직교기저-1" class="nav-link" data-scroll-target="#정규직교기저-1"><span class="header-section-number">5.2.2</span> 정규직교기저</a></li>
-  <li><a href="#정규직교벡터의-성질" id="toc-정규직교벡터의-성질" class="nav-link" data-scroll-target="#정규직교벡터의-성질"><span class="header-section-number">5.2.3</span> 정규직교벡터의 성질</a></li>
-  <li><a href="#정규직교기저에서의-벡터의-표현" id="toc-정규직교기저에서의-벡터의-표현" class="nav-link" data-scroll-target="#정규직교기저에서의-벡터의-표현"><span class="header-section-number">5.2.4</span> 정규직교기저에서의 벡터의 표현</a></li>
-  <li><a href="#정규직교기저와-내적" id="toc-정규직교기저와-내적" class="nav-link" data-scroll-target="#정규직교기저와-내적"><span class="header-section-number">5.2.5</span> 정규직교기저와 내적</a></li>
-  <li><a href="#정규직교기저벡터에-대한-연산자의-행렬-표현" id="toc-정규직교기저벡터에-대한-연산자의-행렬-표현" class="nav-link" data-scroll-target="#정규직교기저벡터에-대한-연산자의-행렬-표현"><span class="header-section-number">5.2.6</span> 정규직교기저벡터에 대한 연산자의 행렬 표현</a></li>
+  <li><a href="#sec-part1_orthonomal_vectors_and_orthonormal_basis" id="toc-sec-part1_orthonomal_vectors_and_orthonormal_basis" class="nav-link" data-scroll-target="#sec-part1_orthonomal_vectors_and_orthonormal_basis"><span class="header-section-number">5.2.1</span> 정규직교벡터와 정규직교기저</a></li>
+  <li><a href="#정규직교벡터의-성질" id="toc-정규직교벡터의-성질" class="nav-link" data-scroll-target="#정규직교벡터의-성질"><span class="header-section-number">5.2.2</span> 정규직교벡터의 성질</a></li>
+  <li><a href="#정규직교기저벡터에-대한-연산자의-행렬-표현" id="toc-정규직교기저벡터에-대한-연산자의-행렬-표현" class="nav-link" data-scroll-target="#정규직교기저벡터에-대한-연산자의-행렬-표현"><span class="header-section-number">5.2.3</span> 정규직교기저벡터에 대한 연산자의 행렬 표현</a></li>
   </ul></li>
   <li><a href="#sec-gram_schmidt" id="toc-sec-gram_schmidt" class="nav-link" data-scroll-target="#sec-gram_schmidt"><span class="header-section-number">5.3</span> 그람-슈미트 과정과 정규직교기저</a>
   <ul class="collapse">
@@ -422,7 +419,7 @@ window.Quarto = {
 <p>대표적인 내적 벡터 공간으로는 다음과 같은 것들이 있다.</p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-innerproduct_R1_C1" class="theorem example">
-<p><span class="theorem-title"><strong>보기 5.1</strong></span> <span class="math inline">\(\mathbb{C}^1\)</span>, 즉 1차원 복소벡터공간에서의 내적을</p>
+<p><span class="theorem-title"><strong>보기 5.1 (<span class="math inline">\(\mathbb{C}^1\)</span>)</strong></span> <span class="math inline">\(\mathbb{C}^1\)</span>, 즉 1차원 복소벡터공간에서의 내적을</p>
 <p><span class="math display">\[
 \langle c_1,\, c_2\rangle = c_1\overline{c_2}
 \]</span></p>
@@ -455,7 +452,7 @@ window.Quarto = {
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-basic_properties_of_inner_product" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.1</strong></span> <span class="math inline">\(V\)</span> 가 <span class="math inline">\(\mathbb{F}\)</span>-내적벡터공간이며 <span class="math inline">\(u,\,v,\,w \in V,\, c \in \mathbb{F}\)</span> 일 때 다음이 성립한다.</p>
-<p> (<span class="math inline">\(1\)</span>) 정해진 <span class="math inline">\(u\in V\)</span> 에 대해 <span class="math inline">\(T(v) = \langle v,\,u \rangle\)</span> 는 선형사상이다.</p>
+<p> (<span class="math inline">\(1\)</span>) 정해진 <span class="math inline">\(u\in V\)</span> 에 대해 <span class="math inline">\(L_u(v) = \langle v,\,u \rangle\)</span> 는 선형사상이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\langle 0,\, u\rangle = 0 = \langle u,\,0\rangle\)</span>.</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\langle u,\, v+w \rangle = \langle u,\, v\rangle + \langle u,\, w \rangle\)</span>.</p>
 <p> (<span class="math inline">\(4\)</span>) <span class="math inline">\(\langle u,\,c v\rangle = \overline{c} \langle u,\, v \rangle\)</span>.</p>
@@ -475,7 +472,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-orthogonal_linearity" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.2</strong></span> 내적벡터 공간 <span class="math inline">\(V\)</span> 에서의 영벡터가 아닌 벡터의 집합 <span class="math inline">\(\{v_1,\ldots,\,v_n\}\)</span> 이 직교하는 벡터의 집합이면 선형 독립이다.</p>
@@ -524,8 +521,8 @@ d(u, v) = \|u-v\|
 </div>
 </div>
 <p><br></p>
-<p>벡터공간에서의 내적과 마찬가지로 노름 역시 공간에 부여된 특정 조건을 만족하는 함수이다. 내적벡터공간은 그 자체로 거리공간인데 이것은 내적에 의해 노름과 거리함수가 자연스럽게 정의되기 때문이다. 참고로 노름공간은 거리함수가 부여된 벡터공간이지만 엄밀한 의미에서의 거리공간은 벡터공간이 아닐 수도 있으며, 단지 적절한 거리함수가 정의된 집합이면 거리공간이다. 여기서는 거리함수가 부여된 벡터공간인 노름공간만을</p>
-<br>
+<p>벡터공간에서의 내적과 마찬가지로 노름 역시 공간에 부여된 특정 조건을 만족하는 함수이다. 내적벡터공간은 그 자체로 거리공간인데 이것은 내적에 의해 노름과 거리함수가 자연스럽게 정의되기 때문이다. 참고로 노름공간은 거리함수가 부여된 벡터공간이지만 엄밀한 의미에서의 거리공간은 벡터공간이 아닐 수도 있으며, 단지 적절한 거리함수가 정의된 집합이면 거리공간이다. 여기서는 거리함수가 부여된 벡터공간인 노름공간만을 생각한다.</p>
+<p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-norm_space_1" class="theorem example">
 <p><span class="theorem-title"><strong>보기 5.4 (<span class="math inline">\(L_p\)</span> 노름)</strong></span> <span class="math inline">\(V=\mathbb{R}^n\)</span> 에 대해 <span class="math inline">\(v=(v_1,\ldots,\,v_n)\)</span> 일 때 <span class="math inline">\(p\in \mathbb{Z}_+\)</span> 에 대해</p>
@@ -607,8 +604,8 @@ d(u, v) = \|u-v\|
 </section>
 <section id="정규직교기저" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="정규직교기저"><span class="header-section-number">5.2</span> 정규직교기저</h2>
-<section id="기저와-내적" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="기저와-내적"><span class="header-section-number">5.2.1</span> 기저와 내적</h3>
+<section id="sec-part1_orthonomal_vectors_and_orthonormal_basis" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="sec-part1_orthonomal_vectors_and_orthonormal_basis"><span class="header-section-number">5.2.1</span> 정규직교벡터와 정규직교기저</h3>
 <p>내적벡터공간 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\{h_i\}\)</span> 를 생각하자. 두 벡터 <span class="math inline">\(u=\sum_i u_i h_i,\, v= \sum_j v_j h_j\)</span> 의 내적은 다음과 같다.</p>
 <p><span id="eq-innerproduct"><span class="math display">\[
 \begin{aligned}
@@ -619,17 +616,14 @@ d(u, v) = \|u-v\|
 \tag{5.1}\]</span></span></p>
 <p>즉 각각의 기저의 쌍에 대한 내적을 알면 벡터의 내적을 계산 할 수 있다. 그런데 만약 서로 다른 두 기저벡터의 내적이 <span class="math inline">\(0\)</span> 이라면, 즉 기저들이 직교한다면 <span class="math inline">\(\|h_i\|^2\)</span> 만을 생각해도 되기 때문에 계산이 쉬워질 것이다. 거기에 더하여 기저벡터의 노름이 모두 1 이라면 더욱 쉬워질 것이다. 이것을 만족하는 기저를 정규직교기저라고 한다.</p>
 <p><br></p>
-</section>
-<section id="정규직교기저-1" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="정규직교기저-1"><span class="header-section-number">5.2.2</span> 정규직교기저</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-orthonormal_Basis" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.4 (정규직교기저 (Orthonormal basis))</strong></span> 내적벡터공간의 벡터의 집합 <span class="math inline">\(\{v_1,\ldots,\,v_n\}\)</span> 의 직교하는 벡터의 집합이며 벡터의 노름이 모두 <span class="math inline">\(1\)</span> 일 때, 즉 <span class="math inline">\(\langle v_i,\,v_j\rangle = \delta_{ij}\)</span> 일 때 <strong>정규직교벡터 (orthonormal vectors)</strong> 라 한다. 정규직교기저벡터가 선형독립임은 <a href="#prp-orthogonal_linearity" class="quarto-xref">명제&nbsp;<span>5.2</span></a> 에서 보았다. 정규직교벡터가 벡터공간의 기저일 때 이 기저를 <strong>정규직교기저 (orthonormal basis)</strong> 라 한다.</p>
+<div id="def-part1_orthonormal_Basis" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 5.4 (정규직교벡터와 정규직교기저)</strong></span> 내적벡터공간의 벡터의 집합 <span class="math inline">\(\{v_1,\ldots,\,v_n\}\)</span> 의 직교하는 벡터의 집합이며 벡터의 노름이 모두 <span class="math inline">\(1\)</span> 일 때, 즉 <span class="math inline">\(\langle v_i,\,v_j\rangle = \delta_{ij}\)</span> 일 때 <strong>정규직교벡터 (orthonormal vectors)</strong> 라 한다. 정규직교기저벡터가 선형독립임은 <a href="#prp-orthogonal_linearity" class="quarto-xref">명제&nbsp;<span>5.2</span></a> 에서 보았다. 정규직교벡터가 벡터공간의 기저일 때 이 기저를 <strong>정규직교기저 (orthonormal basis)</strong> 라 한다.</p>
 </div>
 </div>
 </div>
@@ -638,10 +632,10 @@ d(u, v) = \|u-v\|
 <p>우리는 <a href="#prp-orthogonal_linearity" class="quarto-xref">명제&nbsp;<span>5.2</span></a> 와 <a href="#cor-number_of_orthogonal_vectors" class="quarto-xref">따름정리&nbsp;<span>5.1</span></a> 를 통해 유한차원 내적벡터공간의 서로 직교하는 벡터의 갯수는 벡터공간의 차원보다 작거나 같다는 것을 안다. 정규직교기저가 되기 위해서는 정규직교벡터의 숫자가 차원과 같아야 하는데 이것은 뒤에 <a href="#sec-gram_schmidt">그람-슈미트 과정과 정규직교기저</a> 에서 자연스럽게 알게 된다.</p>
 <p><br></p>
 </section>
-<section id="정규직교벡터의-성질" class="level3" data-number="5.2.3">
-<h3 data-number="5.2.3" class="anchored" data-anchor-id="정규직교벡터의-성질"><span class="header-section-number">5.2.3</span> 정규직교벡터의 성질</h3>
+<section id="정규직교벡터의-성질" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="정규직교벡터의-성질"><span class="header-section-number">5.2.2</span> 정규직교벡터의 성질</h3>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-properties_of_orthonormal_vectors" class="theorem proposition">
+<div id="prp-part1_properties_of_orthonormal_vectors" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.6</strong></span> <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 이 <span class="math inline">\(\mathbb{F}\)</span>-내적벡터공간 <span class="math inline">\(V\)</span> 에서의 정규직교벡터일 때 다음이 성립한다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 은 선형독립이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(a_1,\ldots,\,a_m\in \mathbb{F}\)</span> 일 때 <span class="math inline">\(\|a_1e_1 + \cdots + a_me_m \|^2 = |a_1|^2 + \cdots + |a_m|^2\)</span> 이다.</p>
@@ -666,46 +660,33 @@ d(u, v) = \|u-v\|
 <p>이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-</section>
-<section id="정규직교기저에서의-벡터의-표현" class="level3" data-number="5.2.4">
-<h3 data-number="5.2.4" class="anchored" data-anchor-id="정규직교기저에서의-벡터의-표현"><span class="header-section-number">5.2.4</span> 정규직교기저에서의 벡터의 표현</h3>
-<p><span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 이 내적벡터공간 <span class="math inline">\(V\)</span>의 정규직교기저라고 하자. <span class="math inline">\(v\in V\)</span> 를 이 기저의 선형결합으로 표현하면 아래와 같다고 하자.</p>
-<p><span class="math display">\[
-v=\sum_i^n c_i e_i
-\]</span></p>
-<p>여기서</p>
-<p><span class="math display">\[
-\langle v,\,e_j\rangle  = \sum_{i=1}^n c_i \langle e_i,\,e_j\rangle = c_j
-\]</span></p>
-<p>이므로,</p>
-<p><span class="math display">\[
-v =\sum_{i}^n \langle v,\,e_i \rangle e_i
-\]</span></p>
-<p>이다.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-part1_properties_of_orthonormal_basis" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 5.7</strong></span> <span class="math inline">\((e_1,\ldots,\,e_n)\)</span> 이 <span class="math inline">\(\mathbb{F}\)</span>-내적벡터공간 <span class="math inline">\(V\)</span> 에서의 정규직교기저일 때 다음이 성립한다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\displaystyle v=\sum_{i=1} \langle v,\,e_i\rangle e_i\)</span> 이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(u,\,v\in V\)</span> 에 대해 <span class="math inline">\(u=\sum_{i}u_i e_i,\, v=\sum_j v_j e_j\)</span> 일 때 <span class="math inline">\(\displaystyle \langle u,\,v \rangle = \sum_{i=1}^n u_i\overline{v_i}\)</span> 이다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(v=\sum_i^n c_i e_i\)</span> 일 때 <span class="math inline">\(\langle v,\,e_j\rangle = c_i\)</span> 이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\displaystyle \langle u,\,v\rangle = \sum_{i,j} \langle u_ie_i,\,v_je_j\rangle = \sum_{i,j} u_i\overline{v}_j \langle e_i,e_j\rangle = u_i\overline{v_j}\)</span>. <span class="math inline">\(\square\)</span></p>
+</div>
 <p><br></p>
 </section>
-<section id="정규직교기저와-내적" class="level3" data-number="5.2.5">
-<h3 data-number="5.2.5" class="anchored" data-anchor-id="정규직교기저와-내적"><span class="header-section-number">5.2.5</span> 정규직교기저와 내적</h3>
-<p><span class="math inline">\(\mathcal{B}=(e_i)\)</span> 가 내적벡터공간 <span class="math inline">\(V\)</span> 의 정규직교기저이고 두 벡터 <span class="math inline">\(u,\,v\)</span> 가 <span class="math inline">\(u= \sum_i u_i e_i,\, v=\sum_j v_j e_j\)</span> 라 하자. 이 때 두 벡터의 내적은</p>
+<section id="정규직교기저벡터에-대한-연산자의-행렬-표현" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="정규직교기저벡터에-대한-연산자의-행렬-표현"><span class="header-section-number">5.2.3</span> 정규직교기저벡터에 대한 연산자의 행렬 표현</h3>
+<p><span class="math inline">\(L\in \mathcal{L}(V)\)</span> 라 하자. <span class="math inline">\(\mathcal{B}=(e_i)\)</span> 이 정규직교기저벡터일 때 <span class="math inline">\(L\)</span> 는</p>
 <p><span class="math display">\[
-\langle u,\, v\rangle = \sum_i \sum_j \langle u_i e_i,\, v_j e_j \rangle = \sum_i \sum_j u_i \overline{v_j} \langle e_i,\, e_j\rangle= \sum_i u_i \overline{v_j}
-\]</span></p>
-<p>이다. 이것을 <a href="#eq-innerproduct" class="quarto-xref">식&nbsp;<span>5.1</span></a> 와 비교해보면 얼마나 간단해졌는지 느낄 수 있을 것이다. 정규직교기저인 <span class="math inline">\(\mathcal{B}\)</span> 에서의 행렬표현은 <span class="math inline">\(\boldsymbol{u}=[u]_\mathcal{B}= \begin{bmatrix} u_1 \\ \vdots \\ u_n\end{bmatrix}\)</span> <span class="math inline">\(\boldsymbol{v} = [v]_\mathcal{B}= \begin{bmatrix} v_1 \\ \vdots \\ v_n\end{bmatrix}\)</span> 이며 이때의 내적은 <span class="math inline">\(\boldsymbol{v}^\ast \boldsymbol{u}\)</span> 이다. <span class="math inline">\(V\)</span> 가 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간 일 때 내적은 <span class="math inline">\(\boldsymbol{v}^T\boldsymbol{u}\)</span> 이다. 이것은 유클리드 내적과 같다. 우리는 뒤에 <a href="#sec-gram_schmidt">그람-슈미트 과정과 정규직교기저</a> 를 통해 유한차원 내적벡터공간에서 기저는 항상 정규직교기저로 변환 될 수 있다는 것을 보일것이다. 즉 모든 내적 벡터공간은 정규직교기저 변환을 통해 유클리드 공간으로 변환된다고 볼 수 있다.</p>
-<p><br></p>
-</section>
-<section id="정규직교기저벡터에-대한-연산자의-행렬-표현" class="level3" data-number="5.2.6">
-<h3 data-number="5.2.6" class="anchored" data-anchor-id="정규직교기저벡터에-대한-연산자의-행렬-표현"><span class="header-section-number">5.2.6</span> 정규직교기저벡터에 대한 연산자의 행렬 표현</h3>
-<p><span class="math inline">\(T\in \mathcal{L}(V)\)</span> 라 하자. <span class="math inline">\(\mathcal{B}=(e_i)\)</span> 이 정규직교기저벡터일 때 <span class="math inline">\(T\)</span> 는</p>
-<p><span class="math display">\[
-T(e_j) = \sum_{k=1}^n A_{kj}e_k
+L(e_j) = \sum_{k=1}^n A_{kj}e_k
 \]</span></p>
 <p>라 하자.</p>
 <p><span class="math display">\[
-\langle T(e_j),\, e_i\rangle = \sum_{k=1}^n \langle A_{kj}e_k,\, e_i\rangle = \sum_{k=1}^n A_{kj} \langle e_k,\, e_i\rangle = A_{ij}
+\langle L(e_j),\, e_i\rangle = \sum_{k=1}^n \langle A_{kj}e_k,\, e_i\rangle = \sum_{k=1}^n A_{kj} \langle e_k,\, e_i\rangle = A_{ij}
 \]</span></p>
 <p>이다. 즉,</p>
 <p><span class="math display">\[
-A_{ij} = \langle T(e_j),\, e_i \rangle
+A_{ij} = \langle L(e_j),\, e_i \rangle
 \]</span></p>
 <p>이다.</p>
 <p><br></p>
@@ -717,7 +698,7 @@ A_{ij} = \langle T(e_j),\, e_i \rangle
 <h2 data-number="5.3" class="anchored" data-anchor-id="sec-gram_schmidt"><span class="header-section-number">5.3</span> 그람-슈미트 과정과 정규직교기저</h2>
 <section id="벡터에-대한-정사영-projection" class="level3" data-number="5.3.1">
 <h3 data-number="5.3.1" class="anchored" data-anchor-id="벡터에-대한-정사영-projection"><span class="header-section-number">5.3.1</span> 벡터에 대한 정사영 (Projection)</h3>
-<p>두 벡터의 내적이 <span class="math inline">\(0\)</span> 일 때 두 벡터는 직교한다(be perpendicular)고 하며, 한 벡터가 다른 벡터의 스칼라곱일 때 두 벡터가 <strong>평행하다(be parallel)</strong> 고 한다. 내적벡터공간 <span class="math inline">\(V\)</span> 의 두 벡터 <span class="math inline">\(u,\,v\)</span> 가 주어졌다고 하자. 이 때 <span class="math inline">\(v\)</span> 의 <span class="math inline">\(v\)</span> 에 대한 사영연산자 <span class="math inline">\(\text{Proj}_u v\)</span> 를 아래와 같이 정의하자.</p>
+<p>두 벡터의 내적이 <span class="math inline">\(0\)</span> 일 때 두 벡터는 직교한다(be perpendicular)고 하며, 한 벡터가 다른 벡터의 스칼라곱일 때 두 벡터가 <strong>평행하다(be parallel)</strong> 고 한다. 내적벡터공간 <span class="math inline">\(V\)</span> 의 두 벡터 <span class="math inline">\(u,\,v\)</span> 가 주어졌다고 하자. 이 때 <span class="math inline">\(v\)</span> 의 <span class="math inline">\(v\)</span> 에 대한 Projection <span class="math inline">\(\text{Proj}_u v\)</span> 를 아래와 같이 정의하자.</p>
 <p><span class="math display">\[
 \text{Proj}_{u}v = \dfrac{\langle v,\, u\rangle}{\langle u,\, u\rangle} u
 \]</span></p>
@@ -793,20 +774,20 @@ u_k = v_{k} - \sum_{j=1}^{k-1} \text{Proj}_{e_j} v_k = v_k-\sum_{j=1}^{k-1} \lef
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-schure" class="theorem">
-<p><span class="theorem-title"><strong>정리 5.2 (슈어 정리 (Schur’s Theorem))</strong></span> 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-내적벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 는 어떤 정규직교기저에서 상삼각행렬로 표현된다.</p>
+<p><span class="theorem-title"><strong>정리 5.2 (슈어 정리 (Schur’s Theorem))</strong></span> 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-내적벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 는 어떤 정규직교기저에서 상삼각행렬로 표현된다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(V\)</span> 를 <span class="math inline">\(n\)</span> 차원 <span class="math inline">\(\mathbb{C}\)</span>-내적벡터공간이라 하자. <a href="ch1_04_eigenvalue.html#thm-uppertriangular_matrix_complex_field" class="quarto-xref">정리&nbsp;<span>4.4</span></a> 에서 <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 는 어떤 기저 에서 상삼각행렬로 표현된다는 것을 보였다. 이 기저를 <span class="math inline">\(\mathcal{B}_V = \{v_1,\ldots,\,v_n\}\)</span> 이라 하고, 그람-슈미트 과정을 통해 얻은 정규직교기저를 <span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 이라 하자. 즉 <span class="math inline">\(e_i \in \text{span}(v_1,\ldots,\,v_i)\)</span> 이다. 그렇다면, 그람 슈미트 과정으로부터</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(V\)</span> 를 <span class="math inline">\(n\)</span> 차원 <span class="math inline">\(\mathbb{C}\)</span>-내적벡터공간이라 하자. <a href="ch1_04_eigenvalue.html#thm-uppertriangular_matrix_complex_field" class="quarto-xref">정리&nbsp;<span>4.4</span></a> 에서 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 는 어떤 기저 에서 상삼각행렬로 표현된다는 것을 보였다. 이 기저를 <span class="math inline">\(\mathcal{B}_V = \{v_1,\ldots,\,v_n\}\)</span> 이라 하고, 그람-슈미트 과정을 통해 얻은 정규직교기저를 <span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 이라 하자. 즉 <span class="math inline">\(e_i \in \text{span}(v_1,\ldots,\,v_i)\)</span> 이다. 그렇다면, 그람 슈미트 과정으로부터</p>
 <p><span class="math display">\[
 \text{span}(e_1,\ldots,\,e_j) = \text{span}(v_1,\ldots,\,v_j), \quad j=1,\ldots, n
 \]</span></p>
-<p>임을 안다. <span class="math inline">\(T\)</span> 가 <span class="math inline">\(\mathcal{B}_V\)</span> 에서 상삼각 행렬로 표현되므로 <span class="math inline">\(T(v_i) \in \text{span}(v_1,\ldots,\,v_i)\)</span> 이며, 따라서</p>
+<p>임을 안다. <span class="math inline">\(L\)</span> 가 <span class="math inline">\(\mathcal{B}_V\)</span> 에서 상삼각 행렬로 표현되므로 <span class="math inline">\(L(v_i) \in \text{span}(v_1,\ldots,\,v_i)\)</span> 이며, 따라서</p>
 <p><span class="math display">\[
-T(v_i) \in \text{span}(v_1,\ldots,\,v_i) = \text{span}(e_1,\ldots,\,e_i)
+(v_i) \in \text{span}(v_1,\ldots,\,v_i) = \text{span}(e_1,\ldots,\,e_i)
 \]</span></p>
-<p>이다. 즉 <span class="math inline">\(T\)</span> 는 정규직교기저에서 상삼각 행렬로 표현된다. <span class="math inline">\(\square\)</span></p>
+<p>이다. 즉 <span class="math inline">\(L\)</span> 는 정규직교기저에서 상삼각 행렬로 표현된다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -1029,7 +1010,7 @@ U^\perp = \{ v\in V : \langle v,\, u\rangle = 0 \text{ for every }u\in U\}
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-orthogonal_complement_is_a_vector_space" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 5.7</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 의 부분집합 <span class="math inline">\(U\)</span> 에 대해 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 5.8</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 의 부분집합 <span class="math inline">\(U\)</span> 에 대해 다음이 성립한다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\{0_V\}^\perp = V\)</span>, <span class="math inline">\(V^\perp = \{0_V\}\)</span>,</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(U^\perp\)</span> 는 <span class="math inline">\(V\)</span> 의 부분벡터공간이다.</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(U \cap U^\perp  \subset \{0_V\}\)</span>,</p>
@@ -1049,7 +1030,7 @@ U^\perp = \{ v\in V : \langle v,\, u\rangle = 0 \text{ for every }u\in U\}
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-generated_subspace_and_orthogonal_compliment" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 5.8</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 와 유한차원 부분공간 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\(V = U \oplus U^\perp\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>명제 5.9</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 와 유한차원 부분공간 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\(V = U \oplus U^\perp\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -1058,12 +1039,12 @@ U^\perp = \{ v\in V : \langle v,\, u\rangle = 0 \text{ for every }u\in U\}
 <p><span class="math display">\[
 \langle w, e_j\rangle = \langle v, e_j \rangle - \langle u, e_j\rangle = 0
 \]</span></p>
-<p>이므로 <span class="math inline">\(w\in U^\perp\)</span> 이다. <a href="#prp-orthogonal_complement_is_a_vector_space" class="quarto-xref">명제&nbsp;<span>5.7</span></a> 의 (<span class="math inline">\(3\)</span>) 에 따라 <span class="math inline">\(U\cap U^\perp = \{0_V\}\)</span> 이므로 <a href="ch1_01_vectorspace.html#prp-condition_for_direct_sum" class="quarto-xref">명제&nbsp;<span>1.4</span></a> 에 따라 <span class="math inline">\(V=U \oplus U^\perp\)</span> 이다.</p>
+<p>이므로 <span class="math inline">\(w\in U^\perp\)</span> 이다. <a href="#prp-orthogonal_complement_is_a_vector_space" class="quarto-xref">명제&nbsp;<span>5.8</span></a> 의 (<span class="math inline">\(3\)</span>) 에 따라 <span class="math inline">\(U\cap U^\perp = \{0_V\}\)</span> 이므로 <a href="ch1_01_vectorspace.html#prp-condition_for_direct_sum" class="quarto-xref">명제&nbsp;<span>1.4</span></a> 에 따라 <span class="math inline">\(V=U \oplus U^\perp\)</span> 이다.</p>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-part1_orthogonal_space_in_infinite_dimensional_vector_space" class="theorem example">
-<p><span class="theorem-title"><strong>보기 5.6 (무한차원 벡터공간에서의 직교여공간)</strong></span> 위의 <a href="#prp-generated_subspace_and_orthogonal_compliment" class="quarto-xref">명제&nbsp;<span>5.8</span></a> 는 <span class="math inline">\(U\)</span> 가 무한차원 벡터공간일 때 성립하지 않는 수 있다는 것을 보일 수 있다. <span class="math inline">\([-1,\,1]\)</span> 구간에서 연속인 함수의 집합 <span class="math inline">\(C_{[-1, 1]}\)</span> 는 벡터공간이며 내적을</p>
+<p><span class="theorem-title"><strong>보기 5.6 (무한차원 벡터공간에서의 직교여공간)</strong></span> 위의 <a href="#prp-generated_subspace_and_orthogonal_compliment" class="quarto-xref">명제&nbsp;<span>5.9</span></a> 는 <span class="math inline">\(U\)</span> 가 무한차원 벡터공간일 때 성립하지 않는 수 있다는 것을 보일 수 있다. <span class="math inline">\([-1,\,1]\)</span> 구간에서 연속인 함수의 집합 <span class="math inline">\(C_{[-1, 1]}\)</span> 는 벡터공간이며 내적을</p>
 <p><span class="math display">\[
 \langle f,\, g\rangle = \int_{-1}^1 f(x)\, g(x) \, dx
 \]</span></p>
@@ -1094,12 +1075,12 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-uniqueness_of_orthogonal_decomposition" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 5.9</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(v\in V\)</span> 는 어떤 <span class="math inline">\(u\in U\)</span> 와 <span class="math inline">\(w\in U^\perp\)</span> 에 대해 <span class="math inline">\(v = u+w\)</span> 로 나타낼 수 있으며, 이를 만족하는 <span class="math inline">\(u,\,w\)</span> 는 유일하다.</p>
+<p><span class="theorem-title"><strong>명제 5.10</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(v\in V\)</span> 는 어떤 <span class="math inline">\(u\in U\)</span> 와 <span class="math inline">\(w\in U^\perp\)</span> 에 대해 <span class="math inline">\(v = u+w\)</span> 로 나타낼 수 있으며, 이를 만족하는 <span class="math inline">\(u,\,w\)</span> 는 유일하다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-generated_subspace_and_orthogonal_compliment" class="quarto-xref">명제&nbsp;<span>5.8</span></a> 에 따라 <span class="math inline">\(V=U\oplus U^\perp\)</span> 이다. 이제 <span class="math inline">\(U\)</span> 의 정규직교기저 <span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 과 <span class="math inline">\(U^\perp\)</span> 의 정규직교 기저 <span class="math inline">\(\{f_1,\ldots,\,f_m\}\)</span> 에 대해 <span class="math inline">\(u = \sum_i a_i e_i + \sum_j b_j f_j\)</span> 를 만족하는 <span class="math inline">\(a_i,\, b_j\)</span> 가 존재한다. <span class="math inline">\(u= \sum_i a_i e_i\)</span> 이며 <span class="math inline">\(w=\sum_j b_j f_j\)</span> 이다. 이 때 <span class="math inline">\(u,\,w\)</span> 가 유일하게 정해진다는 것은 자명하다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-generated_subspace_and_orthogonal_compliment" class="quarto-xref">명제&nbsp;<span>5.9</span></a> 에 따라 <span class="math inline">\(V=U\oplus U^\perp\)</span> 이다. 이제 <span class="math inline">\(U\)</span> 의 정규직교기저 <span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 과 <span class="math inline">\(U^\perp\)</span> 의 정규직교 기저 <span class="math inline">\(\{f_1,\ldots,\,f_m\}\)</span> 에 대해 <span class="math inline">\(u = \sum_i a_i e_i + \sum_j b_j f_j\)</span> 를 만족하는 <span class="math inline">\(a_i,\, b_j\)</span> 가 존재한다. <span class="math inline">\(u= \sum_i a_i e_i\)</span> 이며 <span class="math inline">\(w=\sum_j b_j f_j\)</span> 이다. 이 때 <span class="math inline">\(u,\,w\)</span> 가 유일하게 정해진다는 것은 자명하다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
@@ -1128,7 +1109,7 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-range_of_projection" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 5.10</strong></span> <span class="math inline">\(\text{im}(P)\)</span> 는 <span class="math inline">\(P\)</span>-불변 부분 공간이다.</p>
+<p><span class="theorem-title"><strong>명제 5.11</strong></span> <span class="math inline">\(\text{im}(P)\)</span> 는 <span class="math inline">\(P\)</span>-불변 부분 공간이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -1136,7 +1117,7 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(u\in \text{im}(P)\)</span> 이면 <span class="math inline">\(P(v)=u\)</span> 인 <span class="math inline">\(v\in V\)</span> 가 존재하며, <span class="math inline">\(P(u)=P^2(v) = P(v) = u\)</span> 이므로 <span class="math inline">\(\text{im}(P)\)</span> 는 <span class="math inline">\(P\)</span> 불변 부분 공간이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p>벡터공간 <span class="math inline">\(V\)</span> 와 projection <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(U = \text{im}(P)\)</span> 라 하자. <span class="math inline">\(U\)</span> 가 유한차원 부분공간이라면 <span class="math inline">\(V=U \oplus U^\perp\)</span> 이라는 것을 안다. 또한 <a href="#prp-uniqueness_of_orthogonal_decomposition" class="quarto-xref">명제&nbsp;<span>5.9</span></a> 에서 보인 것처럼 <span class="math inline">\(V\)</span> 가 유한차원이라면 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(v=u+u',\, u\in U,\, u'\in U^{\perp}\)</span> 가 되도록 하는 <span class="math inline">\(u,\,u'\)</span> 은 유일하다. 이제 반대로 <span class="math inline">\(U \le V\)</span> 에 대해 <span class="math inline">\(v\in V\)</span> 는 어떤 <span class="math inline">\(u\in U\)</span> 와 <span class="math inline">\(u'\in U^\perp\)</span> 의 합으로 유일하게 표현 될 수 있다는 것을 안다. 이렇게 어떤 부분공간 <span class="math inline">\(U\)</span> 를 치역으로 갖는 projection 다음과 같이 따로 정의할 수 있다.</p>
+<p>벡터공간 <span class="math inline">\(V\)</span> 와 projection <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(U = \text{im}(P)\)</span> 라 하자. <span class="math inline">\(U\)</span> 가 유한차원 부분공간이라면 <span class="math inline">\(V=U \oplus U^\perp\)</span> 이라는 것을 안다. 또한 <a href="#prp-uniqueness_of_orthogonal_decomposition" class="quarto-xref">명제&nbsp;<span>5.10</span></a> 에서 보인 것처럼 <span class="math inline">\(V\)</span> 가 유한차원이라면 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(v=u+u',\, u\in U,\, u'\in U^{\perp}\)</span> 가 되도록 하는 <span class="math inline">\(u,\,u'\)</span> 은 유일하다. 이제 반대로 <span class="math inline">\(U \le V\)</span> 에 대해 <span class="math inline">\(v\in V\)</span> 는 어떤 <span class="math inline">\(u\in U\)</span> 와 <span class="math inline">\(u'\in U^\perp\)</span> 의 합으로 유일하게 표현 될 수 있다는 것을 안다. 이렇게 어떤 부분공간 <span class="math inline">\(U\)</span> 를 치역으로 갖는 projection 다음과 같이 따로 정의할 수 있다.</p>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -1153,7 +1134,7 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-properties_of_orghogonal_projection" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 5.11</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 유한차원 부분벡터공간 일 때 다음이 성립한다. 증명은 쉬우므로 생략한다.</p>
+<p><span class="theorem-title"><strong>명제 5.12</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 유한차원 부분벡터공간 일 때 다음이 성립한다. 증명은 쉬우므로 생략한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(u \in U \implies P_U (u) = u\)</span>.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(w \in U^\perp \implies P_U(w) = 0\)</span>.</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\ker (P_U) = U^\perp, \,\text{im}(P_U) = U\)</span>.</p>
@@ -1231,7 +1212,7 @@ u = \left( u - \dfrac{\varphi (u)}{\varphi (v)} v \right) + \dfrac{\varphi(u)}{\
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-distance_to_subspace" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 5.12</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 내적벡터공간이고 <span class="math inline">\(v\in V\)</span>, 이며 <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 부분공간일 때, <span class="math inline">\(v\)</span> 에서 <span class="math inline">\(U\)</span> 까지의 거리는 <span class="math inline">\(v\)</span> 에서 <span class="math inline">\(P_U (v)\)</span> 까지의 거리와 같다. 즉,</p>
+<p><span class="theorem-title"><strong>명제 5.13</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 내적벡터공간이고 <span class="math inline">\(v\in V\)</span>, 이며 <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 부분공간일 때, <span class="math inline">\(v\)</span> 에서 <span class="math inline">\(U\)</span> 까지의 거리는 <span class="math inline">\(v\)</span> 에서 <span class="math inline">\(P_U (v)\)</span> 까지의 거리와 같다. 즉,</p>
 <p><span class="math display">\[
 \|v-U\| = \|v-P_U(v)\|
 \]</span></p>
@@ -1275,16 +1256,16 @@ Lx = b
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-part1_pseudoinverse_1" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 5.13</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 일 때 <span class="math inline">\(L|_{(\ker (L))^\perp}\)</span> 는 <span class="math inline">\((\ker L)^\perp \mapsto \text{im}(L)\)</span> 동형사상이다.</p>
+<p><span class="theorem-title"><strong>명제 5.14</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 일 때 <span class="math inline">\(L|_{(\ker (L))^\perp}\)</span> 는 <span class="math inline">\((\ker L)^\perp \mapsto \text{im}(L)\)</span> 동형사상이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(L|_{(\ker (L))^\perp}\)</span> 가 <span class="math inline">\((\ker (L))^\perp \mapsto \text{im}(L)\)</span> 전단사 임을 보이면 된다. <span class="math inline">\(v\in \ker \left(L|_{(\ker (L))^\perp}\right)\)</span> 이면 <span class="math inline">\(v\in (\ker (L))^\perp \cap \ker (L)\)</span> 이므로 <span class="math inline">\(v=0\)</span> 이다. 즉 <span class="math inline">\(L|_{(\ker (L))^\perp}\)</span> 는 단사이다.</p>
-<p>또한 <span class="math inline">\(\text{im}\left( L|_{(\ker (L))^\perp}\right) \subset \text{im}(L)\)</span> 임은 자명하다. <span class="math inline">\(w\in \text{im}(L)\)</span> 이면 <span class="math inline">\(w = Lv\)</span> 인 <span class="math inline">\(v\in \mathcal{M}_{n}(\mathbb{F})\)</span> 가 존재하며 <a href="#prp-generated_subspace_and_orthogonal_compliment" class="quarto-xref">명제&nbsp;<span>5.8</span></a> 에 따라 어떤 <span class="math inline">\(x\in\ker L,\, (\ker L)^\perp\)</span> 에 대해 <span class="math inline">\(v=x+y\)</span> 이다. 이 때 <span class="math inline">\(L|_{(\ker (L))^\perp} y = w\)</span> 이므로 <span class="math inline">\(w\in \text{im}\left( L|_{(\ker (L))^\perp}\right)\)</span> 이며 따라서 <span class="math inline">\(\text{im}\left( L|_{(\ker (L))^\perp}\right) = \text{im}(L)\)</span> 이다. 즉 <span class="math inline">\(L\in \mathcal{M}_{m\times n}(\mathbb{F})\)</span> 전사이다. <span class="math inline">\(\square\)</span></p>
+<p>또한 <span class="math inline">\(\text{im}\left( L|_{(\ker (L))^\perp}\right) \subset \text{im}(L)\)</span> 임은 자명하다. <span class="math inline">\(w\in \text{im}(L)\)</span> 이면 <span class="math inline">\(w = Lv\)</span> 인 <span class="math inline">\(v\in \mathcal{M}_{n}(\mathbb{F})\)</span> 가 존재하며 <a href="#prp-generated_subspace_and_orthogonal_compliment" class="quarto-xref">명제&nbsp;<span>5.9</span></a> 에 따라 어떤 <span class="math inline">\(x\in\ker L,\, (\ker L)^\perp\)</span> 에 대해 <span class="math inline">\(v=x+y\)</span> 이다. 이 때 <span class="math inline">\(L|_{(\ker (L))^\perp} y = w\)</span> 이므로 <span class="math inline">\(w\in \text{im}\left( L|_{(\ker (L))^\perp}\right)\)</span> 이며 따라서 <span class="math inline">\(\text{im}\left( L|_{(\ker (L))^\perp}\right) = \text{im}(L)\)</span> 이다. 즉 <span class="math inline">\(L\in \mathcal{M}_{m\times n}(\mathbb{F})\)</span> 전사이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p><a href="#prp-part1_pseudoinverse_1" class="quarto-xref">명제&nbsp;<span>5.13</span></a> 를 행렬의 입장에서 보자. <span class="math inline">\(V=(\ker L)^\perp \oplus (\ker L)\)</span> 이며 <span class="math inline">\(W=(\text{im}(L))\oplus (\text{im}(L))^\perp\)</span> 이다. <span class="math inline">\((\ker L)^\perp\)</span> 의 기저 <span class="math inline">\(\mathcal{B}_{V+} = (e_1,\ldots,\,e_n)\)</span> 을 확장하여 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B}_V=(e_1,\ldots,\,e_n,\,e_{n+1},\ldots,\,e_N)\)</span> 를 구성 할 수 있다. <span class="math inline">\(\mathcal{B}_{W+}=(f_1,\ldots,\,f_n)\)</span> 이 <span class="math inline">\(\text{im}(L)\)</span> 의 기저이며 이를 확장하여 <span class="math inline">\(W\)</span> 의 기저 <span class="math inline">\(\mathcal{B}_W=(f_1,\ldots,\,f_n,\,f_{n+1},\ldots,\,f_{M})\)</span> 을 구성 할 수 있다. 그렇다면 이 기저에 대한 <span class="math inline">\(L\)</span> 의 행렬표현은 다음과 같다.</p>
+<p><a href="#prp-part1_pseudoinverse_1" class="quarto-xref">명제&nbsp;<span>5.14</span></a> 를 행렬의 입장에서 보자. <span class="math inline">\(V=(\ker L)^\perp \oplus (\ker L)\)</span> 이며 <span class="math inline">\(W=(\text{im}(L))\oplus (\text{im}(L))^\perp\)</span> 이다. <span class="math inline">\((\ker L)^\perp\)</span> 의 기저 <span class="math inline">\(\mathcal{B}_{V+} = (e_1,\ldots,\,e_n)\)</span> 을 확장하여 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B}_V=(e_1,\ldots,\,e_n,\,e_{n+1},\ldots,\,e_N)\)</span> 를 구성 할 수 있다. <span class="math inline">\(\mathcal{B}_{W+}=(f_1,\ldots,\,f_n)\)</span> 이 <span class="math inline">\(\text{im}(L)\)</span> 의 기저이며 이를 확장하여 <span class="math inline">\(W\)</span> 의 기저 <span class="math inline">\(\mathcal{B}_W=(f_1,\ldots,\,f_n,\,f_{n+1},\ldots,\,f_{M})\)</span> 을 구성 할 수 있다. 그렇다면 이 기저에 대한 <span class="math inline">\(L\)</span> 의 행렬표현은 다음과 같다.</p>
 <p><span class="math display">\[
 [L]_{\mathcal{B}_V,\mathcal{B}_W} = \begin{bmatrix} [L]_{\mathcal{B}_{V+}, \mathcal{B}_{W+}} &amp; \boldsymbol{0} \\ \boldsymbol{0} &amp; \boldsymbol{0}\end{bmatrix} .
 \]</span></p>

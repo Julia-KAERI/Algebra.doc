@@ -100,7 +100,7 @@ $$
 
 ::: {#exm-diagonal_matrix_and_eigenvalue}
 
-$\boldsymbol{D}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 대각행렬, 즉 대각성분을 제외한 모든 성분이 $0$ 인 행렬이라고 하자. 표준기저 $\hat{\boldsymbol{e}}_i$ 에 대해 $\boldsymbol{D}\hat{\boldsymbol{e}}_i = D_{ii} \hat{\boldsymbol{e}}_i$ 이므로 $\hat{\bf{e}}_i$ 는 $D_{ii}$ 를 고유값으로 갖는 $\boldsymbol{D}$ 의 고유벡터이다. 
+$\bf{D}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 대각행렬, 즉 대각성분을 제외한 모든 성분이 $0$ 인 행렬이라고 하자. 표준기저 $\hat{\bf{e}}_i$ 에 대해 $\bf{D}\hat{\bf{e}}_i = D_{ii} \hat{\bf{e}}_i$ 이므로 $\hat{\bf{e}}_i$ 는 $D_{ii}$ 를 고유값으로 갖는 $\bf{D}$ 의 고유벡터이다. 
 
 :::
 </div></br>
@@ -136,7 +136,7 @@ $$
 
 ::: {#thm-eigenvalues_determinant}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\det (\lambda \boldsymbol{I}-\boldsymbol{A}) \ne 0$ 을 만족하는 $\lambda \in \mathbb{F}$ 는 행렬 $\boldsymbol{A}$ 의 고유값이며, 이 $\lambda$ 에 대한 고유벡터가 항상 존재한다.
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\det (\lambda \bf{I}-\bf{A}) \ne 0$ 을 만족하는 $\lambda \in \mathbb{F}$ 는 행렬 $\bf{A}$ 의 고유값이며, 이 $\lambda$ 에 대한 고유벡터가 항상 존재한다.
 
 :::
 
@@ -144,7 +144,7 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\det (\lamb
 
 ::: {.proof}
 
-$\det (\lambda \boldsymbol{I}-\boldsymbol{A})  = 0$ 이면 $\text{nullity} (\lambda \boldsymbol{I}-\boldsymbol{A})  \ne 0$ 이므로 $\boldsymbol{A}v=\lambda \boldsymbol{v}$ 를 만족하는 영벡터가 아닌 벡터 $\boldsymbol{v}$ 가 항상 존재한다. $\square$
+$\det (\lambda \bf{I}-\bf{A})  = 0$ 이면 $\text{nullity} (\lambda \bf{I}-\bf{A})  \ne 0$ 이므로 $\bf{A}v=\lambda \bf{v}$ 를 만족하는 영벡터가 아닌 벡터 $\bf{v}$ 가 항상 존재한다. $\square$
 
 :::
 
@@ -152,7 +152,7 @@ $\det (\lambda \boldsymbol{I}-\boldsymbol{A})  = 0$ 이면 $\text{nullity} (\lam
 
 ::: {#exm-eigenvalues_for_Field}
 
-예를 들어 $\boldsymbol{A}_1 = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}$ 라 하자. $\det(\lambda \boldsymbol{I}-\boldsymbol{A})  = (\lambda-1)^2 +1$ 이므로 $\det (\lambda \boldsymbol{I}-\boldsymbol{A}) =0$ 을 만족하는 $\lambda$ 는 $1 \pm i$ 이다. 만약 $\boldsymbol{A}$ 가 $\mathbb{C}$ 위에서 정의된 행렬이라면 고유값과 고유벡터가 존재하지만 $\mathbb{R}$ 위에서 정의된 행렬이라면 고유값이 존재하지 않는다. 
+예를 들어 $\bf{A}_1 = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}$ 라 하자. $\det(\lambda \bf{I}-\bf{A})  = (\lambda-1)^2 +1$ 이므로 $\det (\lambda \bf{I}-\bf{A}) =0$ 을 만족하는 $\lambda$ 는 $1 \pm i$ 이다. 만약 $\bf{A}$ 가 $\mathbb{C}$ 위에서 정의된 행렬이라면 고유값과 고유벡터가 존재하지만 $\mathbb{R}$ 위에서 정의된 행렬이라면 고유값이 존재하지 않는다. 
 
 :::
 
@@ -245,7 +245,9 @@ $L:\R[t] \to \R[t]$ 가 $L(p(t))= p'(t)$ 일 때 모든 고유값과 고유벡�
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_5_a_14}
+::: {#exr-part1_axler4_5_A_12}
+
+#### Axler4th 5.A.12
 
 유한차원 벡터공간 $V$ 에 대해 $V= U \oplus W$ 이며 $U,\,W$ 는 $\{0_V\}$ 이 아니다. $P\in \mathcal{L}(V)$ 가 모든 $u\in U,\, w\in W$ 에 대해 $P(u+w)= u$  일 때 $P$ 의 모든 고유값과 고유벡터를 구하시오.
 
@@ -261,9 +263,11 @@ $P(u)=u,\, P(w) = 0$ 이므로 $U$ 의 모든 벡터는 고유값 $1$ 을 $W$ �
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-similar_transformation_and_eigenvectors}
+::: {#exr-part1_axler4_5_A_13}
 
-$S,\,L\in \mathcal{L}{V}$ 이며 $S$ 가 가역일 때 $S^{-1}LS$ 는 $L$ 과 같은 고유값을 가짐을 보여라. $L$ 과 $S^{-1}LS$ 의 고유벡터의 관계를 보여라.
+#### Axler4th 5.A.13
+
+$S,\,L\in \mathcal{L}(V)$ 이며 $S$ 가 가역일 때 $S^{-1}LS$ 는 $L$ 과 같은 고유값을 가짐을 보여라. $L$ 과 $S^{-1}LS$ 의 고유벡터의 관계를 보여라.
 
 :::
 
@@ -271,12 +275,14 @@ $S,\,L\in \mathcal{L}{V}$ 이며 $S$ 가 가역일 때 $S^{-1}LS$ 는 $L$ 과 �
 
 ::: {.solution}
 
-$v\in V$ 가 $L$ 의 고유벡터이면 $Lv = \lambda v$ 이다. $u=S^{-1}v$ 에 대해 $S^{-1}LS u= \lambda u$ 이다. 따라서 $v$ 가 $L$ 의 고유벡터이면 $S^{-1}v$ 는 $S^{-1}LS$ 의 같은 은 고유값을 갖는 고유벡터이다.
+$v\in V$ 가 $L$ 의 고유벡터이면 $Lv = \lambda v$ 이다. $u=S^{-1}v$ 에 대해 $S^{-1}LS u= \lambda u$ 이다. 따라서 $v$ 가 $L$ 의 고유벡터이면 $S^{-1}v$ 는 $S^{-1}LS$ 의 같은 고유값을 갖는 고유벡터이다.
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler4_5a_14}
+::: {#exr-axler4_5_A_15}
+
+#### Axler4th 5.A.15
 
 (**주의** : [쌍대사상](../part3/dual_space.qmd) 을 보라) 유한차원 벡터공간 $V$ 와 $L\in \mathcal{L}(V)$ 에 대해 $\lambda$ 가 $L$ 의 고유값이면 $\lambda$ 는 $L$ 의 쌍대연산자의 고유값임을 보여라.
 
@@ -286,14 +292,51 @@ $v\in V$ 가 $L$ 의 고유벡터이면 $Lv = \lambda v$ 이다. $u=S^{-1}v$ 에
 
 ::: {.solution}
 
-$Lv =\lambda v$ 라고 하고 $v$ 에 대한 쌍대기저를 $\delta_v$ 라고 하자. $L$ 에대한 쌍대연산자를 $L^T$ 라고 하면 $\phi \in V^\ast$ 에 대해 $L^T (\phi) = \phi \circ L$ 이며 $L^T(\delta_v) = \lambda\delta_v (v)$ 이므로 $\lambda$ 는 $L^T$ 의 고유값이다. 
-
+$Lv =\lambda v$ 라고 하고 $v$ 에 대한 쌍대기저를 $\delta_v$ 라고 하자. $L$ 에대한 쌍대연산자를 $L^T$ 라고 하자. $\phi \in V^\ast$ 에 대해 $L^T (\phi) = \phi \circ L$ 이며 $L^T(\delta_v) = \lambda\delta_v (v)$ 이므로 $\lambda$ 는 $L^T$ 의 고유값이다. 
 
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-eigenvalue_and_inverse_matrix}
+::: {#exr-axler4_5_A_16}
+
+#### Axler4th 5.A.16
+
+$\mathcal{B}_V=(v_1,\ldots,\,v_n)$ 이 $V$ 의 기저이며 $L\in \mathcal{L}(V)$ 이고 $[L]_{\mathcal{B}}=\bf{L}$ 일 때 $L$ 의 고유값 $\lambda$ 에 대해 다음이 성립함을 보여라.
+
+$$
+|\lambda | \le n \max\{|L_{ij}| :1 \le i,\,j \le n \}
+$$ {#eq-exr-axler4_5_A_16}
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+$\lambda$ 가 $L$ 의 고유값이므로 이에대한 고유벡터를 $v$ 라고 하면 $\lambda v = Lv$ 이다. $v=\sum_{i=1}^n c_i v_i$ 라고 하면
+
+$$
+\sum_{i=1}^n \lambda c_i v_i = \lambda v = L\left(\sum_{i=i}^n c_i v_i\right) = \sum_{i=i,\,j}^n c_i L_{ji}v_j
+$$
+
+이며 $(v_i)$ 가 선형독립이므로 $\lambda c_i = \sum_{j=1}^n c_j L_{ij}$ 이다. $c_1,\ldots,\,c_n$ 가운데 절대값이 가장 큰 것을 $c_M$ 라고 하면
+
+$$
+|\lambda \cdot c_M| = \left|\sum_{j=1}^n c_j L_{Mj}\right| \le \sum_{j=1}^n |c_j||L_{Mj}| \le n|c_M| \max\{|L_{ij}| :1 \le i,\,j \le n \}
+$$
+
+이며 따라서 @eq-exr-axler4_5_A_16 이 성립한다.
+
+:::
+
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-part1_axler4_5_A_21}
+
+#### Axler4th 5.A.21
 
 $L\in \mathcal{L}(V)$ 가 가역일 때 $\lambda (\ne 0)$ 이 $L$ 의 고유값이면 $L^{-1}$ 은 같은 고유벡터에 대해 $1/\lambda$ 를 고유값으로 갖게 됨을 보여라.
 
@@ -307,41 +350,12 @@ $Lv=\lambda v$ 에 대해 $v=L^{-1}L v = \lambda L^{-1}v$ 이므로 $L^{-1}v = \
 
 :::
 
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler4_5a_16}
+::: {#exr-part1_axler4_5_A_23}
 
-$\mathcal{B}=(v_1,\ldots,\,v_n)$ 이 $V$ 의 기저이며 $L\in \mathcal{L}(V)$ 일 때 $\lambda$ 가 $L$ 의 고유값이라면 다음이 성립함을 보여라.
-
-$$
-|\lambda| \le n \max \{\left|\left([L]_{\mathcal{B}}\right)_{ij}\right| : 1 \le i,\,j \le n\}
-$$
-
-:::
-
-</div></br>
-
-::: {.solution}
-
-$\lambda$ 의 고유값을 갖는 고유벡터를 $v=\sum_i a_i v_i$ 라고 하자. 또 $\boldsymbol{v}=[v]_\mathcal{B}$, $\boldsymbol{L}=[L]_\mathcal{B}$ 라고 하자. $\boldsymbol{Lv}=\lambda\boldsymbol{v}$ 이므로
-
-$$
-\lambda a_i = \sum_{j=1}^n L_{ij}a_j
-$$
-
-이다. $k$ 를 $|a_i|$ 가 가장 큰 인덱스라고 하고 $M = \max \{\left|\left([L]_{\mathcal{B}}\right)_{ij}\right| : 1 \le i,\,j \le n\}$ 라고 하자.
-
-$$
-|\lambda a_k| = \left|\sum_{j=1}^n L_{ij}a_j \right| \le \sum_{j=1}^n |L_{ij} a_j|\le \sum_{j=1}^n M|a_j| \le \sum_{j=1}^n M|a_k| = nM|a_k| 
-$$
-
-이다. 따라서 $|\lambda|\le nM$ 이 성립한다. 
-
-:::
-
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-eigenvalue_of_product_matrix}
+#### Axler4th 5.A.23
 
 유한차원 벡터공간 $V$ 에서 $K,\,L\in \mathcal{L}(V)$ 일 때 $KL$ 과 $LK$ 는 같은 고유값을 가진다는 것을 보여라.
 
@@ -357,7 +371,9 @@ $KLv=\lambda v$ 라고 하자. $LK(Lv)= L(\lambda v)= \lambda (Lv)$ 이므로 $L
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-sum_of_eigenvector_is_eigenvector}
+::: {#exr-part1_axler4_5_A_25}
+
+#### Axler4th 5.A.25
 
 $u,\,v$ 가 벡터공간 $V$ 에서 정의된 연산자 $L$ 의 고유벡터이고 $u+v$ 도 고유벡터이면 $u$ 와 $v$ 는 같은 고유값을 가짐을 보여라.
 
@@ -379,7 +395,9 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-scalar_multiple_of_identity_matrix}
+::: {#exr-part1_axler4_5_A_26}
+
+#### Axler4th 5.A.26
 
 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 를 생각하자. 모든 $V$ 의 벡터가 $L$ 의 고유벡터라면 $L$ 은 항등연산자의 스칼라곱임을 보여라.
 
@@ -389,13 +407,15 @@ $$
 
 ::: {.solution}
 
-@exr-sum_of_eigenvector_is_eigenvector 에 따라 모든 $V$ 의 벡터는 같은 고유값을 가지는 벡터이다. 이 고유값을 $c$ 라고 하자. 모든 기저에 대해 $L$ 의 행렬형식은 $cI_V$ 이므로 $L$ 은 $cI_V$ 이다. .
+@exr-part1_axler4_5_A_25 에 따라 모든 $V$ 의 벡터는 같은 고유값을 가지는 벡터이다. 이 고유값을 $c$ 라고 하자. 모든 기저에 대해 $L$ 의 행렬형식은 $cI_V$ 이므로 $L$ 은 $cI_V$ 이다. .
 
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler4_5a_27}
+::: {#exr-axler4_5_A_27}
+
+#### Axler4th_5_A_27
 
 유한차원 벡터공간 $V$ 에서 정의된 연산자 $L$ 을 생각하자. 모든 $V$ 의 부분공간이 $L$ 에 대한 불변부분공간이라면 $L$ 은 항등행렬의 스칼라곱임을 보여라.
 
@@ -405,13 +425,15 @@ $$
 
 ::: {.solution}
 
-$v\in V$ 에 대해 $\text{span}\{v_i\}$ 가 $L$ 에 대한 불변부분공간이므로 모든 $v$ 는 $L$ 의 고유벡터이다. @exr-scalar_multiple_of_identity_matrix 에 따라 $L$ 은 항등연산자의 스칼라곱이다.
+$v\in V$ 에 대해 $\text{span}\{v_i\}$ 가 $L$ 에 대한 불변부분공간이므로 모든 $v$ 는 $L$ 의 고유벡터이다. @exr-part1_axler4_5_A_26 에 따라 $L$ 은 항등연산자의 스칼라곱이다.
 
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler4_5a_34}
+::: {#exr-axler4_5_A_34}
+
+#### Axler4th_5_A_34
 
 유한차원 벡터공간 $V$ 와 $V_0=\{v_1,\ldots,\,v_m: v_i\in V\}$ 에 대해 다음은 동치임을 보여라.
 
@@ -432,6 +454,9 @@ $v\in V$ 에 대해 $\text{span}\{v_i\}$ 가 $L$ 에 대한 불변부분공간�
 
 
 </br>
+
+
+
 
 ## 특성다항식 
 
@@ -514,7 +539,7 @@ $u\in \text{im}(p(L))$ 이면 $u=p(L)v$ 인 $v\in V$ 가 존재한다. $Lu = Lp(
 여기부터 이 장의 마지막까지 유한차원 벡터공간에서 생각하기로 한다. 그리고 유한차원 벡터공간과 그 연산자가 아니라 그 행렬표현으로 전개하도록 하겠다. 
 :::
 
- $\lambda$ 를 미지수로 간주하면 $n \times n$ 행렬 $\boldsymbol{A}$ 에 대해 $\det (\lambda \boldsymbol{I}-\boldsymbol{A})$ 는 $\lambda$ 에 대한 $n$ 차 다항식이다. 이 다항식의 근이 존재한다면, 그 근이 고유값이 되며, 이 고유값에 대한 고유벡터가 항상 존재한다는 의미이다. 이 다항식은 매우 중요하기 때문에 특별한 이름이 붙어 있다.
+ $\lambda$ 를 미지수로 간주하면 $n \times n$ 행렬 $\bf{A}$ 에 대해 $\det (\lambda \bf{I}-\bf{A})$ 는 $\lambda$ 에 대한 $n$ 차 다항식이다. 이 다항식의 근이 존재한다면, 그 근이 고유값이 되며, 이 고유값에 대한 고유벡터가 항상 존재한다는 의미이다. 이 다항식은 매우 중요하기 때문에 특별한 이름이 붙어 있다.
 
 
 ::: {.callout-note appearance="simple" icon="false"}
@@ -522,23 +547,28 @@ $u\in \text{im}(p(L))$ 이면 $u=p(L)v$ 인 $v\in V$ 가 존재한다. $Lu = Lp(
 
 #### 특성다항식
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대한 $p_{\boldsymbol{A}}(\lambda) = \det (\lambda \boldsymbol{I}-\boldsymbol{A})$ 를 **특성 다항식(characteristic polynomial)** 이라 한다.
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대한 $p_{\bf{A}}(\lambda) = \det (\lambda \bf{I}-\bf{A})$ 를 **특성 다항식(characteristic polynomial)** 이라 한다.
 
 :::
 :::
 
-</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+</br>
 
-::: {#exm-degree_of_characteristic_polynomial}
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대한 특성다항식은 $n$ 차 다항식이다.
+다음은 행렬식의 성질을 생각하면 너무나도 당연하다.
+
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-degree_of_characteristic_polynomial}
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대한 특성다항식은 $n$ 차 다항식이다.
 :::
 
 </div></br>
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-invariance_of_characteristic_polynomial}
-특성 다항식은 닮음 변환에 대해 불변이다. 즉 행렬 $\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 과 가역행렬 $\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $p_{\boldsymbol{A}}(\lambda) = p_{\boldsymbol{P^{-1}AP}}(\lambda)$ 이다.
+::: {#prp-part1_invariance_of_characteristic_polynomial}
+특성 다항식은 닮음 변환에 대해 불변이다. 즉 행렬 $\bf{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 과 가역행렬 $\bf{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $p_{\bf{A}}(\lambda) = p_{\bf{P^{-1}AP}}(\lambda)$ 이다.
 :::
 
 </div></br>
@@ -546,32 +576,31 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대한 특성다항
 ::: {.proof}
 $$
 \begin{aligned}
-\det(\lambda \boldsymbol{I}-\boldsymbol{P^{-1}AP}) & = \det (\boldsymbol{P}^{-1}(\lambda \boldsymbol{I}-\boldsymbol{A})\boldsymbol{P}) \\
-& = \det(\boldsymbol{P}^{-1}) \det (\lambda \boldsymbol{I}-\boldsymbol{A}) \det (\boldsymbol{P}) \\
-&=  \det (\lambda \boldsymbol{I}-\boldsymbol{A}). &\square
+\det(\lambda \bf{I}-\bf{P^{-1}AP}) & = \det (\bf{P}^{-1}(\lambda \bf{I}-\bf{A})\bf{P}) \\
+& = \det(\bf{P}^{-1}) \det (\lambda \bf{I}-\bf{A}) \det (\bf{P}) \\
+&=  \det (\lambda \bf{I}-\bf{A}). &\square
 \end{aligned}
 $$
 
 :::
 
+</br>
+
+@prp-part1_invariance_of_characteristic_polynomial 는 유한차원 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 에 대한 특성다항식을 정의 할 수 있게 해 준다. 어떤 기저에 대해서도 $[L]$ 의 특성다항식은 같기 때문에 이것은 연산자 $L$ 에 대한 특성다항식이라고 할 수 있다. 
+
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-eigenvalue_characteristic_polynomial}
+::: {#prp-part1_eigenvalue_characteristic_polynomial}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\lambda\in \mathbb{F}$ 가 $\boldsymbol{A}$ 의 고유값이기 위한 필요충분조건은 $p_{\boldsymbol{A}}(\lambda)=0$ 인 것이다.
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\lambda\in \mathbb{F}$ 가 $\bf{A}$ 의 고유값이기 위한 필요충분조건은 $p_{\bf{A}}(\lambda)=0$ 인 것이다.
 :::
 
 </div></br>
 
 ::: {.proof}
-$p_{\boldsymbol{A}}(\lambda)=0$ 일 때 $\lambda$ 가 $\boldsymbol{A}$ 의 고유값이 되는것은 @thm-eigenvalues_determinant 에서 보였다. $\lambda$ 가 $\boldsymbol{A}$ 의 고유값이라면 어떤 벡터 $\boldsymbol{v} \ne \boldsymbol{0}$ 에 대해 $\boldsymbol{Av}=\lambda \boldsymbol{v}$ 이므로 $(\lambda \boldsymbol{I}-\boldsymbol{A})\boldsymbol{v}=0$ 이다. 즉 $\text{nullity}(\lambda \boldsymbol{I}-\boldsymbol{A}) >0$ 이므로 $\det (\lambda \boldsymbol{I}-\boldsymbol{A}) = p_{\boldsymbol{A}}(\lambda)= 0$ 이다. $\square$
+$p_{\bf{A}}(\lambda)=0$ 일 때 $\lambda$ 가 $\bf{A}$ 의 고유값이 되는것은 @thm-eigenvalues_determinant 에서 보였다. $\lambda$ 가 $\bf{A}$ 의 고유값이라면 어떤 벡터 $\bf{v} \ne \bf{0}$ 에 대해 $\bf{Av}=\lambda \bf{v}$ 이므로 $(\lambda \bf{I}-\bf{A})\bf{v}=0$ 이다. 즉 $\text{nullity}(\lambda \bf{I}-\bf{A}) >0$ 이므로 $\det (\lambda \bf{I}-\bf{A}) = p_{\bf{A}}(\lambda)= 0$ 이다. $\square$
 
 :::
-
-</br>
-
-@prp-invariance_of_characteristic_polynomial 와 @prp-eigenvalue_characteristic_polynomial 는 유한차원 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 에 대한 특성다항식을 정의 할 수 있게 해 준다. 어떤 기저에 대해서도 $[L]$ 의 특성다항식은 같기 때문에 이것은 연산자 $L$ 에 대한 특성다항식이라고 할 수 있다. 
-
 
 </br>
 
@@ -586,19 +615,100 @@ $p_{\boldsymbol{A}}(\lambda)=0$ 일 때 $\lambda$ 가 $\boldsymbol{A}$ 의 고�
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-existance_of_eigenvector_for_complex_field}
-복소수체에서 정의된 정사각 행렬에 대해 항상 고유벡터가 존재한다.
+유한차원 $\C$-벡터공간에서정의된 연산자에 대해서 항상 고유벡터가 존재한다. 
 :::
 
 </div></br>
 
 ::: {.proof}
-대수학의 기본정리에 의해 복소수 영역에서는 항상 특성다항식의 해가 존재하며 @prp-eigenvalue_characteristic_polynomial 에 의해 고유벡터가 존재한다. $\square$
+대수학의 기본정리에 의해 복소수 영역에서는 항상 특성다항식의 해가 존재하며 @prp-part1_eigenvalue_characteristic_polynomial 에 의해 고유벡터가 존재한다. $\square$
 :::
 
 </br>
 
+### 연습문제 {.unnumbered}
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4_5_A_33}
+
+#### Axler4th_5_A_33
+
+$L\in \mathcal{L}(V)$ 이고 $m$ 이 양의 정수이다. 다음을 보여라.
+
+&emsp;($1$) $L$ 이 단사일 필요충분조건은 $L^m$ 이 단사인 것이다.
+
+&emsp;($2$) $L$ 이 전사일 필요충분조건은 $L^m$ 이 전사인 것이다.
+
+:::
+
+</div></br>
+
+::: {.soltion}
+
+($1$) $L$ 이 단사임을 가정하자. $L$ 이 단사이면 $\ker L = \ker L^m = \{0_V\}$ 임을 우선 보이자.  $\ker L \subset \ker L^m$ 임은 자명하다. $u\in \ker L^m$ 이면 $L^mu=0=L(L^{m-1}u)=0_V$ 이므로 $L^{m-1}u=0_V$ 이며 따라서 $u\in \ker L^{m-1}$ 이다. 이것을 계속 반복하면 $u\in \ker L = \{0_V\}$ 이다. 즉 $\ker L^m \subset \ker L = \{0_V\}$ 이므로 $\ker L = \ker L^m = \{0_V\}$ 이다.
+
+어떤 $u,\,v\in V$ 에 대해 $L^m u=L^m v$ 이면 $u-v\in \ker L^m$ 이므로 $u=v$ 이다. 즉 $L$ 이 단사이면 $L^m$ 이단사이다. 역으로 $L^m$ 이 단사임을 가정하자. $Lu=Lv\implies L^mu = L^mv$ 이므로 $u=v$ 이다. 즉 $L^m$ 이 단사이면 $L$ 도 단사이다.
+
+($2$) $L$ 이 전사이면 $L^m$ 이 전사임은 자명하다. 이제 $L^m$ 이 전사임을 가정하자. $L$ 이 전사가 아니라면 $x\not\in\im (L)$ 인 $x\in V$ 가 존재하는데 $x\not\in \im (L^m)$ 이므로 $L^m$ 이 전사라는 가정에 모순된다. 따라서 $L^m$ 이 전사이면 $L$ 도 전사이다.
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4_5_A_40}
+
+#### Axler4th_5_A_40
+
+$L,\,K\in \mathcal{L}(V)$ 이고 $K$ 가 가역이다. $p \in \F[t]$ 일 때
+
+$$
+p(KLK^{-1})= Kp(L)K^{-1}
+$$
+
+임을 보여라.
+:::
+
+</div></br>
+
+::: {.solution}
+
+$m\in \Z_+$ 일 때 $(KLK^{-1})^m = KL^mK^{-1}$ 임은 쉽게 보일 수 있다. $\displaystyle p(t) = \sum_{m=0}^n c_m t^m$ 에 대해
+
+$$
+\begin{aligned}
+p(KLK^{-1}) &= \sum_{m=0}^n c_m (KLK^{-1})^m = \sum_{m=0}^n c_m KL^mK^{-1} \\[0.3em]
+&= K\left(\sum_{m=0}^n c_m L^m\right)K^{-1} = Kp(L)K^{-1}
+\end{aligned}
+$$
+
+이다. 
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4_5_A_43}
+
+#### Axler4th_5_A_43
+
+$V$ 는 1보다 큰 차원의 유한차원 벡터공간이며 $L\in \mathcal{L}(V)$ 이다. $\{p(L): p(t) \in \F[t]\} \ne \mathcal{L}(V)$ 임을 보여라.
+
+:::
+
+</div></br>
+
+::: {.solution}
+
+.. to be done ..
+:::
 
 
+</br>
 
 ## 블록행렬과 불변부분공간
 
@@ -611,13 +721,13 @@ $p_{\boldsymbol{A}}(\lambda)=0$ 일 때 $\lambda$ 가 $\boldsymbol{A}$ 의 고�
 
 ### 불변 부분공간과 블럭 상삼각행렬
 
-우선 @sec-matrix_transform_by_basis_transform 에서 본 행렬의 닮음 변환을 다시 한번 상기하자. $\mathcal{M}_{n}(\mathbb{F})$ 공간에서 정의된 선형독립인 벡터 $\{\boldsymbol{u}_1,\ldots,\, \boldsymbol{u}_n\}$ 와 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 을 생각하자. $\boldsymbol{u}_i$ 가 $i$ 번째 열이 된 행렬 $\boldsymbol{P} = \begin{bmatrix} \boldsymbol{u}_1 & \cdots & \boldsymbol{u}_n \end{bmatrix}$ 는 기저를 변환하는 행렬, 즉 닮음변환을 정의하는 행렬이 되며 $\boldsymbol{P}^{-1}\boldsymbol{AP}$ 는 변환된 기저에서의 선형사상이고 변환행렬 $\boldsymbol{P}= \begin{bmatrix} \boldsymbol{u}_1 & \cdots & \boldsymbol{u}_n\end{bmatrix}$ 가 정의되며 아래 표와 같이 변환된다.
+우선 @sec-matrix_transform_by_basis_transform 에서 본 행렬의 닮음 변환을 다시 한번 상기하자. $\mathcal{M}_{n}(\mathbb{F})$ 공간에서 정의된 선형독립인 벡터 $\{\bf{u}_1,\ldots,\, \bf{u}_n\}$ 와 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 을 생각하자. $\bf{u}_i$ 가 $i$ 번째 열이 된 행렬 $\bf{P} = \begin{bmatrix} \bf{u}_1 & \cdots & \bf{u}_n \end{bmatrix}$ 는 기저를 변환하는 행렬, 즉 닮음변환을 정의하는 행렬이 되며 $\bf{P}^{-1}\bf{AP}$ 는 변환된 기저에서의 선형사상이고 변환행렬 $\bf{P}= \begin{bmatrix} \bf{u}_1 & \cdots & \bf{u}_n\end{bmatrix}$ 가 정의되며 아래 표와 같이 변환된다.
 
 | 원래 기저에서의 행렬표현 | 새로운 기저에서의 행렬표현 |
 |:-------:|:------:|
-| $\boldsymbol{e}_i$ | $\boldsymbol{P}^{-1}\boldsymbol{e}_i$ |
-| $\boldsymbol{u}_i$ | $\boldsymbol{e}_i$ |
-| $\boldsymbol{A}$  | $\boldsymbol{P}^{-1}\boldsymbol{AP}$ |
+| $\bf{e}_i$ | $\bf{P}^{-1}\bf{e}_i$ |
+| $\bf{u}_i$ | $\bf{e}_i$ |
+| $\bf{A}$  | $\bf{P}^{-1}\bf{AP}$ |
 
 
 
@@ -627,7 +737,7 @@ $p_{\boldsymbol{A}}(\lambda)=0$ 일 때 $\lambda$ 가 $\boldsymbol{A}$ 의 고�
 
 #### 불변부분공간과 블럭상삼각행렬
 
-행렬 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 불변부분공간이 존재하면 $\boldsymbol{A}$ 와 닮은 블럭 상삼각 행렬이 존재한다.
+행렬 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 불변부분공간이 존재하면 $\bf{A}$ 와 닮은 블럭 상삼각 행렬이 존재한다.
 
 :::
 
@@ -635,15 +745,15 @@ $p_{\boldsymbol{A}}(\lambda)=0$ 일 때 $\lambda$ 가 $\boldsymbol{A}$ 의 고�
 
 ::: {.proof}
 
-$\mathbb{F}$-벡터공간 $\mathcal{M}_{n}(\mathbb{F})$ 의 어떤 부분공간 $U$ 와 행렬 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $U$ 가 $\boldsymbol{A}$ 에 대한 불변부분공간이라고 하자. $U$ 의 기저 $\{\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_m\}$ 를 확장하여 $\mathcal{M}_n(\mathbb{F})$ 의 기저 $\{\boldsymbol{u}_1,\ldots,\boldsymbol{u}_n\}$ 을 구성했다고 하자. 그렇다면 
+$\mathbb{F}$-벡터공간 $\mathcal{M}_{n}(\mathbb{F})$ 의 어떤 부분공간 $U$ 와 행렬 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $U$ 가 $\bf{A}$ 에 대한 불변부분공간이라고 하자. $U$ 의 기저 $\{\bf{u}_1,\ldots,\,\bf{u}_m\}$ 를 확장하여 $\mathcal{M}_n(\mathbb{F})$ 의 기저 $\{\bf{u}_1,\ldots,\bf{u}_n\}$ 을 구성했다고 하자. 그렇다면 
 
 $$
-\boldsymbol{Au}_i = \left\{ \begin{array}{ll} B_{1i}\boldsymbol{u}_i + \cdots + B_{mi}\boldsymbol{u}_m & 1\le i \le m \\
-B_{1i}\boldsymbol{u}_i + \cdots + B_{mi}\boldsymbol{u}_m + \cdots + B_{ni}\boldsymbol{u}_n \qquad & m+1 \le i \le n
+\bf{Au}_i = \left\{ \begin{array}{ll} B_{1i}\bf{u}_i + \cdots + B_{mi}\bf{u}_m & 1\le i \le m \\
+B_{1i}\bf{u}_i + \cdots + B_{mi}\bf{u}_m + \cdots + B_{ni}\bf{u}_n \qquad & m+1 \le i \le n
 \end{array} \right.
 $$
 
-이다. 즉 $\{\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_m\}$ 를 확장하여 $\mathbb{F}^{n }$ 기저에서는 $\boldsymbol{A}$ 로 표현된 변환이 블럭 상삼각행렬이 된다. 즉 $\boldsymbol{P} = \begin{bmatrix} \boldsymbol{u}_1 & \cdots &\boldsymbol{u}_n \end{bmatrix}$ 에 대해 $\boldsymbol{P}^{-1}\boldsymbol{AP}$ 는 블록 상삼각행렬이다. $\square$
+이다. 즉 $\{\bf{u}_1,\ldots,\,\bf{u}_m\}$ 를 확장하여 $\mathbb{F}^{n }$ 기저에서는 $\bf{A}$ 로 표현된 변환이 블럭 상삼각행렬이 된다. 즉 $\bf{P} = \begin{bmatrix} \bf{u}_1 & \cdots &\bf{u}_n \end{bmatrix}$ 에 대해 $\bf{P}^{-1}\bf{AP}$ 는 블록 상삼각행렬이다. $\square$
 
 :::
 
@@ -658,11 +768,11 @@ $$
 
 ::: {#prp-upper_triangular_matrix}
 
-정사각 행렬 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음은 동치이다.
+정사각 행렬 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음은 동치이다.
 
-&emsp;($1$) $\boldsymbol{A}$ 가 어떤 상삼각행렬과 닮음이다.
+&emsp;($1$) $\bf{A}$ 가 어떤 상삼각행렬과 닮음이다.
 
-&emsp;($2$) $\mathcal{M}_{n}(\mathbb{F})$ 의 어떤 기저 $(\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_n)$ 에 대해 $\boldsymbol{Av}_i = \text{span}(\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_i)$ 이다.
+&emsp;($2$) $\mathcal{M}_{n}(\mathbb{F})$ 의 어떤 기저 $(\bf{v}_1,\ldots,\,\bf{v}_n)$ 가 존재하여 $i=1,\ldots,\,n$ 에 대해 $\bf{Av}_i = \text{span}(\bf{v}_1,\ldots,\,\bf{v}_i)$ 이다.
 
 :::
 
@@ -670,21 +780,21 @@ $$
 
 ::: {.proof}
 
-(1 $\implies$ 2) $\boldsymbol{B}=\boldsymbol{P}^{-1}\boldsymbol{AP}$ 가 상삼각행렬이라고 하자. $\hat{\boldsymbol{e}}_1,\ldots,\,\hat{\boldsymbol{e}}_n$ 에 대해 
+(1 $\implies$ 2) $\bf{B}=\bf{P}^{-1}\bf{AP}$ 가 상삼각행렬이라고 하자. $\hat{\bf{e}}_1,\ldots,\,\hat{\bf{e}}_n$ 에 대해 
 $$
-\boldsymbol{Be}_i \in \text{span} ( \hat{\boldsymbol{e}}_1,\ldots,\,\hat{\boldsymbol{e}}_i)
+\bf{Be}_i \in \text{span} ( \hat{\bf{e}}_1,\ldots,\,\hat{\bf{e}}_i)
 $$
-이다. $\boldsymbol{v}_i = \boldsymbol{P}\hat{\boldsymbol{e}}_i$ 라 하자.  $\boldsymbol{A}= \boldsymbol{PBP}^{-1}$ 이므로,
+이다. $\bf{v}_i = \bf{P}\hat{\bf{e}}_i$ 라 하자.  $\bf{A}= \bf{PBP}^{-1}$ 이므로,
 $$
-\boldsymbol{Av}_i = \boldsymbol{PBP}^{-1}\boldsymbol{P}\hat{\boldsymbol{e}}_i = \boldsymbol{PB}\hat{\boldsymbol{e}}_i
+\bf{Av}_i = \bf{PBP}^{-1}\bf{P}\hat{\bf{e}}_i = \bf{PB}\hat{\bf{e}}_i
 $$
-이다. 따라서 $\boldsymbol{Av}_i \in \text{span}(\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_i)$ 이다. 
+이다. 따라서 $\bf{Av}_i \in \text{span}(\bf{v}_1,\ldots,\,\bf{v}_i)$ 이다. 
 
-(2 $\implies$ 1) $\boldsymbol{P}=\begin{bmatrix} \boldsymbol{v}_1 & \cdots & \boldsymbol{v}_n\end{bmatrix}$ 라 하자. $\boldsymbol{B}=\boldsymbol{P}^{-1}\boldsymbol{AP}$ 라 하면
+(2 $\implies$ 1) $\bf{P}=\begin{bmatrix} \bf{v}_1 & \cdots & \bf{v}_n\end{bmatrix}$ 라 하자. $\bf{B}=\bf{P}^{-1}\bf{AP}$ 라 하면
 $$
-\boldsymbol{B}\hat{\boldsymbol{e}}_i = \boldsymbol{P}^{-1}\boldsymbol{AP}\hat{\boldsymbol{e}}_i = \boldsymbol{P}^{-1} \boldsymbol{Av}_i 
+\bf{B}\hat{\bf{e}}_i = \bf{P}^{-1}\bf{AP}\hat{\bf{e}}_i = \bf{P}^{-1} \bf{Av}_i 
 $$
-이다. $\boldsymbol{Av}_i \in \text{span}(\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_i)$ 이므로 $\boldsymbol{B}\hat{\boldsymbol{e}}_i \in \text{span}(\hat{\boldsymbol{e}}_1,\ldots,\,\hat{\boldsymbol{e}}_i)$ 이다. 즉 $\boldsymbol{B}$ 는 상삼각행렬이다. $\square$ 
+이다. $\bf{Av}_i \in \text{span}(\bf{v}_1,\ldots,\,\bf{v}_i)$ 이므로 $\bf{B}\hat{\bf{e}}_i \in \text{span}(\hat{\bf{e}}_1,\ldots,\,\hat{\bf{e}}_i)$ 이다. 즉 $\bf{B}$ 는 상삼각행렬이다. $\square$ 
 
 :::
 
@@ -697,13 +807,13 @@ $$
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-uppertriangular_matrix_complex_field}
-$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{C})$ 행렬과 닮은 상삼각 행렬이 존재한다. 
+$\bf{A}\in \mathcal{M}_{n\times n}(\mathbb{C})$ 행렬과 닮은 상삼각 행렬이 존재한다. 
 :::
 
 </div></br>
 
 ::: {.proof}
-$\boldsymbol{A}_n \in \mathcal{M}_{n \times n}(\mathbb{C})$ 이라 하고 $n$ 에 대한 귀납법으로 증명한다. $n=1$ 일 때는 자명하다. $k<n$ 에 대해 위의 명제가 성립한다고 가정하자. 우리는 @thm-existance_of_eigenvector_for_complex_field 를 통해 행렬 $\boldsymbol{A}_n$ 에 대한 고유값 $\lambda$ 와 고유벡터 $\boldsymbol{v}_1$ 이 존재한다는 것을 안다. $\boldsymbol{v}_1$ 을 확장하여 $\mathcal{M}_n(\mathbb{F})$ 의 기저를 구성 할 수 있으며, 이 기저로 변환된  블럭 상삼각행렬을 이룬다 (@prp-invariant_subspace_block_upperdiagonal_matrix). 이 블럭 상삼각 행렬의 1 행과 1 열을 제거한 $(n-1)\times (n-1)$ 행렬은 가정에 의해 어떤 상 삼각 행렬과 닮았다. 따라서 $\boldsymbol{A}_n$ 은 어떤 상 삼각행렬과 닮았다. $\square$ 
+$\bf{A}_n \in \mathcal{M}_{n \times n}(\mathbb{C})$ 이라 하고 $n$ 에 대한 귀납법으로 증명한다. $n=1$ 일 때는 자명하다. $k<n$ 에 대해 위의 명제가 성립한다고 가정하자. 우리는 @thm-existance_of_eigenvector_for_complex_field 를 통해 행렬 $\bf{A}_n$ 에 대한 고유값 $\lambda$ 와 고유벡터 $\bf{v}_1$ 이 존재한다는 것을 안다. $\bf{v}_1$ 을 확장하여 $\mathcal{M}_n(\mathbb{F})$ 의 기저를 구성 할 수 있으며, 이 기저로 변환된  블럭 상삼각행렬을 이룬다 (@prp-invariant_subspace_block_upperdiagonal_matrix). 이 블럭 상삼각 행렬의 1 행과 1 열을 제거한 $(n-1)\times (n-1)$ 행렬은 가정에 의해 어떤 상 삼각 행렬과 닮았다. 따라서 $\bf{A}_n$ 은 어떤 상 삼각행렬과 닮았다. $\square$ 
 :::
 
 </br>
@@ -754,32 +864,32 @@ $$
 
 ::: {#thm-diagonalizability}
 
-정사각 행렬 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 서로 다른 고유값 $\lambda_1,\ldots,\,\lambda_m$ 을 가질 때 다음은 동치이다.
+정사각 행렬 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 서로 다른 고유값 $\lambda_1,\ldots,\,\lambda_m$ 을 가질 때 다음은 동치이다.
 
 
-&emsp;($1$) $\boldsymbol{A}$ 는 대각화 가능 행렬이다.
+&emsp;($1$) $\bf{A}$ 는 대각화 가능 행렬이다.
 
-&emsp;($2$) $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n}(\mathbb{F})$ 의 기저가 존재한다.
+&emsp;($2$) $\bf{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n}(\mathbb{F})$ 의 기저가 존재한다.
 
-&emsp;($3$) $\mathcal{M}_n (\mathbb{F}) = E(\lambda_1, \boldsymbol{A}) \oplus \cdots \oplus E(\lambda_m, \boldsymbol{A})$
+&emsp;($3$) $\mathcal{M}_n (\mathbb{F}) = E(\lambda_1, \bf{A}) \oplus \cdots \oplus E(\lambda_m, \bf{A})$
 :::
 
 </div></br>
 
 ::: {.proof}
-($1 \implies 2$) 대각 행렬 $\boldsymbol{D}$ 에 대해 $\boldsymbol{D} = \boldsymbol{P}^{-1}\boldsymbol{AP}$ 라고 하자. $\boldsymbol{D}\hat{\boldsymbol{e}}_i = D_{ii}\hat{\boldsymbol{e}}_i$ 이므로, 
+($1 \implies 2$) 대각 행렬 $\bf{D}$ 에 대해 $\bf{D} = \bf{P}^{-1}\bf{AP}$ 라고 하자. $\bf{D}\hat{\bf{e}}_i = D_{ii}\hat{\bf{e}}_i$ 이므로, 
 
 $$
-\boldsymbol{APe}_i = \boldsymbol{PDe}_i = D_{ii}\boldsymbol{Pe}_i
+\bf{APe}_i = \bf{PDe}_i = D_{ii}\bf{Pe}_i
 $$
 
 
-이며, 따라서 $\boldsymbol{Pe}_i$  는 $D_{ii}$ 를 고유값으로 갖는 $\boldsymbol{A}$ 의 고유벡터이다. $\boldsymbol{P}$ 가 가역행렬이므로 $\{\boldsymbol{P}\hat{\boldsymbol{e}}_1,\ldots,\boldsymbol{P}\hat{\boldsymbol{e}}_1\}$ 는 $\mathcal{M}_n(\mathbb{F})$ 의 기저이다.
+이며, 따라서 $\bf{Pe}_i$  는 $D_{ii}$ 를 고유값으로 갖는 $\bf{A}$ 의 고유벡터이다. $\bf{P}$ 가 가역행렬이므로 $\{\bf{P}\hat{\bf{e}}_1,\ldots,\bf{P}\hat{\bf{e}}_1\}$ 는 $\mathcal{M}_n(\mathbb{F})$ 의 기저이다.
 
-($2 \implies 3$) $(\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n)$ 이 $\boldsymbol{A}$ 의 고유벡터이며 $\mathcal{M}_n(\mathbb{F})$ 의 기저일 때 같은 고유값 $\lambda_j$ 를 갖는 $\boldsymbol{u}_i$ 들은 $E(\lambda_j, \boldsymbol{A})$ 의 기저이다. 임의의 $\lambda_{j_1}\le \lambda_{j_2}$ 일 때 $E(\lambda_{j_1}, \boldsymbol{A})\cap E(\lambda_{j_2})= \{\boldsymbol{0}\}$ 이므로, $\mathcal{M}_n (\mathbb{F}) = E(\lambda_1, \boldsymbol{A}) \oplus \cdots \oplus E(\lambda_m, \boldsymbol{A})$ 이다. 
+($2 \implies 3$) $(\bf{u}_1,\ldots,\,\bf{u}_n)$ 이 $\bf{A}$ 의 고유벡터이며 $\mathcal{M}_n(\mathbb{F})$ 의 기저일 때 같은 고유값 $\lambda_j$ 를 갖는 $\bf{u}_i$ 들은 $E(\lambda_j, \bf{A})$ 의 기저이다. 임의의 $\lambda_{j_1}\le \lambda_{j_2}$ 일 때 $E(\lambda_{j_1}, \bf{A})\cap E(\lambda_{j_2})= \{\bf{0}\}$ 이므로, $\mathcal{M}_n (\mathbb{F}) = E(\lambda_1, \bf{A}) \oplus \cdots \oplus E(\lambda_m, \bf{A})$ 이다. 
 
 
-($3 \implies 1$) 각각의 $E(\lambda_i, \boldsymbol{A})$ 의 기저벡터를 모아 $(\boldsymbol{u}_1,\ldots,\boldsymbol{u}_n)$ 을 만들었을 때 $\boldsymbol{U} = \begin{bmatrix} \boldsymbol{u}_1 & \cdots & \boldsymbol{u}_n\end{bmatrix}$ 라 하자. $\boldsymbol{U}$ 는 가역이며, $\boldsymbol{U}^{-1}\boldsymbol{AU}$ 는 대각행렬이다. $\square$
+($3 \implies 1$) 각각의 $E(\lambda_i, \bf{A})$ 의 기저벡터를 모아 $(\bf{u}_1,\ldots,\bf{u}_n)$ 을 만들었을 때 $\bf{U} = \begin{bmatrix} \bf{u}_1 & \cdots & \bf{u}_n\end{bmatrix}$ 라 하자. $\bf{U}$ 는 가역이며, $\bf{U}^{-1}\bf{AU}$ 는 대각행렬이다. $\square$
 
 
 :::
@@ -788,7 +898,7 @@ $$
 
 ::: {#cor-diagoalizability_of_dimV_distinct_eigenvalues_1}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 $n$ 개의 서로 다른 고유값을 가지면 $\boldsymbol{A}$ 는 대각화 가능 행렬이다.
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 $n$ 개의 서로 다른 고유값을 가지면 $\bf{A}$ 는 대각화 가능 행렬이다.
 
 :::
 
@@ -796,14 +906,14 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 $n$ 개의 서로 �
 
 ::: {.proof}
 
-@prp-eigenvector_linear_independence 에서 보였듯이 서로 다른 고유값을 갖는 고유벡터는 선형독립이므로 이 $n$ 개의 고유벡터는 $\mathcal{M}_n(\mathbb{F})$ 의 기저이다. 따라서 $\boldsymbol{A}$ 는 대각화 가능 행렬이다. $\square$
+@prp-eigenvector_linear_independence 에서 보였듯이 서로 다른 고유값을 갖는 고유벡터는 선형독립이므로 이 $n$ 개의 고유벡터는 $\mathcal{M}_n(\mathbb{F})$ 의 기저이다. 따라서 $\bf{A}$ 는 대각화 가능 행렬이다. $\square$
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#cor-diagoalizability_of_dimV_distinct_eigenvalues_2}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 의 특성다항식 $p_{\boldsymbol{A}}$ 가 $n$ 개의 서로 다른 해를 $\mathbb{F}$ 에서 가지면 $\boldsymbol{A}$ 는 대각화 가능 행렬이다. 
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 의 특성다항식 $p_{\bf{A}}$ 가 $n$ 개의 서로 다른 해를 $\mathbb{F}$ 에서 가지면 $\bf{A}$ 는 대각화 가능 행렬이다. 
 :::
 
 </div></br>
@@ -814,7 +924,7 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 의 특성다항식 $p_
 
 ::: {#exr-linearly_independency_and_distict_eigenvalues}
 
-$\{\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_m \} \subset \mathcal{M}_n(\mathbb{F})$ 이 선형독립일 필요충분 조건은 위 벡터들이 서로 다른 고유값을 갖는 고유벡터가 되도록 하는 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 존재하는 것임을 보여라.
+$\{\bf{v}_1,\ldots,\,\bf{v}_m \} \subset \mathcal{M}_n(\mathbb{F})$ 이 선형독립일 필요충분 조건은 위 벡터들이 서로 다른 고유값을 갖는 고유벡터가 되도록 하는 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 존재하는 것임을 보여라.
 
 :::
 
@@ -822,9 +932,9 @@ $\{\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_m \} \subset \mathcal{M}_n(\mathbb{F
 
 ::: {.solution}
 
-서로 다른 고유값을 갖는 고유벡터의 집합은 선형독립이라는 것을 안다(@prp-eigenvector_linear_independence). 따라서 $\{\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_m \}$ 가 선형독립이면 이 벡터들이 각각 다른 고유값을 갖는 고유벡터가 되는 행렬 $\boldsymbol{A}$ 가 존재함을 보이면 된다. $\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_m$ 을 확장하여 기저 $\{\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_n\}$ 을 구성하고 $\boldsymbol{P}= \begin{bmatrix} \boldsymbol{v}_1 & \cdots & \boldsymbol{v}_n\end{bmatrix}$ 라 하자. $\boldsymbol{P}^{-1}$ 은 $\boldsymbol{v}_i$ 를 표준기저 $\hat{\boldsymbol{e}}_i$ 로 변환해주는 연산자이다. 
+서로 다른 고유값을 갖는 고유벡터의 집합은 선형독립이라는 것을 안다(@prp-eigenvector_linear_independence). 따라서 $\{\bf{v}_1,\ldots,\,\bf{v}_m \}$ 가 선형독립이면 이 벡터들이 각각 다른 고유값을 갖는 고유벡터가 되는 행렬 $\bf{A}$ 가 존재함을 보이면 된다. $\bf{v}_1,\ldots,\,\bf{v}_m$ 을 확장하여 기저 $\{\bf{v}_1,\ldots,\,\bf{v}_n\}$ 을 구성하고 $\bf{P}= \begin{bmatrix} \bf{v}_1 & \cdots & \bf{v}_n\end{bmatrix}$ 라 하자. $\bf{P}^{-1}$ 은 $\bf{v}_i$ 를 표준기저 $\hat{\bf{e}}_i$ 로 변환해주는 연산자이다. 
 
-행렬 $\boldsymbol{A}$ 를 $1$ 행 $1$ 열 부터 $m$ 행 $m$ 열 까지는 $A_{ij}= \delta_{ij}$ 가 되도록 하고 $m+1$ 행 $m+1$ 열부터는 임의의 값을 가지는 블럭대각행렬이라 하자. $\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_m$ 은 은 각각 $1,\ldots,m$ 의 고유값을 가지므로 $\boldsymbol{PAP}^{-1}$ 은 $\boldsymbol{v}_1,\ldots,\boldsymbol{v}_m$ 이 각각 $1,\ldots,\,m$ 의 고유값을 갖는 행렬이다. 
+행렬 $\bf{A}$ 를 $1$ 행 $1$ 열 부터 $m$ 행 $m$ 열 까지는 $A_{ij}= j\delta_{ij}$ 가 되도록 하고 $m+1$ 행 $m+1$ 열부터는 임의의 값을 가지는 블럭대각행렬이라 하자. $\bf{e}_1,\ldots,\,\bf{e}_m$ 은 은 각각 $1,\ldots,m$ 의 고유값을 가지므로 $\bf{PAP}^{-1}$ 은 $\bf{v}_1,\ldots,\bf{v}_m$ 이 각각 $1,\ldots,\,m$ 의 고유값을 갖는 행렬이다. 
 
 :::
 
@@ -832,10 +942,10 @@ $\{\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_m \} \subset \mathcal{M}_n(\mathbb{F
 
 ::: {#exr-axler_5_B_1}
 
-$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 어떤 자연수 $n$ 에 대해 $\boldsymbol{A}^n=\boldsymbol{0}$ 이라고 하자. $\boldsymbol{I}_n-\boldsymbol{A}$ 는 가역행렬이며 다음이 성립함을 보여라.
+$\bf{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 어떤 자연수 $n$ 에 대해 $\bf{A}^n=\bf{0}$ 이라고 하자. $\bf{I}_n-\bf{A}$ 는 가역행렬이며 다음이 성립함을 보여라.
 
 $$
-(\boldsymbol{I}_n-\boldsymbol{A})^{-1} = \boldsymbol{I}_n+ \boldsymbol{A} + \cdots + \boldsymbol{A}^{n-1}.
+(\bf{I}_n-\bf{A})^{-1} = \bf{I}_n+ \bf{A} + \cdots + \bf{A}^{n-1}.
 $$
 
 :::
@@ -844,7 +954,7 @@ $$
 
 ::: {.solution}
 
-$(\boldsymbol{I}_n-\boldsymbol{A})(\boldsymbol{I}_n + \boldsymbol{A} + \cdots + \boldsymbol{A}^{n-1}) = \boldsymbol{I}_n- \boldsymbol{A}^n=\boldsymbol{I}_n$ 
+$(\bf{I}_n-\bf{A})(\bf{I}_n + \bf{A} + \cdots + \bf{A}^{n-1}) = \bf{I}_n- \bf{A}^n=\bf{I}_n$ 
 
 :::
 
@@ -852,7 +962,7 @@ $(\boldsymbol{I}_n-\boldsymbol{A})(\boldsymbol{I}_n + \boldsymbol{A} + \cdots + 
 
 ::: {#exr-axler_5_b_4}
 
-$\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 $\boldsymbol{P}^2=\boldsymbol{P}$ 일 때 $\boldsymbol{P}$ 를 **projection** 이라고 한다. $\boldsymbol{P}$ 가 projection 일 때 $\mathcal{M}_n (\mathbb{F})=(\ker (\boldsymbol{P})) \oplus (\text{im}(\boldsymbol{P}))$ 임을 보여라.
+$\bf{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 $\bf{P}^2=\bf{P}$ 일 때 $\bf{P}$ 를 **projection** 이라고 한다. $\bf{P}$ 가 projection 일 때 $\mathcal{M}_n (\mathbb{F})=(\ker (\bf{P})) \oplus (\text{im}(\bf{P}))$ 임을 보여라.
 
 :::
 
@@ -860,7 +970,7 @@ $\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 $\boldsymbol{P}^2=\
 
 ::: {.solution}
 
-$\boldsymbol{u}\in \ker (\boldsymbol{P})\cap \text{im}(\boldsymbol{P})$ 라 하자. $\boldsymbol{Pu}=\boldsymbol{0}$ 이며 $\boldsymbol{Pv}=\boldsymbol{u}$ 인 $\boldsymbol{u}$ 가 존재해야 한다. 그런데 $\boldsymbol{P}^2\boldsymbol{v} = \boldsymbol{Pu}=\boldsymbol{0}$ 이며 $\boldsymbol{P}^2\boldsymbol{v} = \boldsymbol{Pv}$ 이므로 $\boldsymbol{u}=\boldsymbol{0}$ 이다. 즉 $\ker (\boldsymbol{P})\cap \text{im}(\boldsymbol{P}) = \{\boldsymbol{0}\}$ 이다. @thm-rank_nullity 에 의해 $\mathcal{M}_n (\mathbb{F})=(\ker (\boldsymbol{P})) \oplus (\text{im}(\boldsymbol{P}))$ 이다.
+$\bf{u}\in \ker (\bf{P})\cap \text{im}(\bf{P})$ 라 하자. $\bf{Pu}=\bf{0}$ 이며 $\bf{Pv}=\bf{u}$ 인 $\bf{u}$ 가 존재해야 한다. 그런데 $\bf{P}^2\bf{v} = \bf{Pu}=\bf{0}$ 이며 $\bf{P}^2\bf{v} = \bf{Pv}$ 이므로 $\bf{u}=\bf{0}$ 이다. 즉 $\ker (\bf{P})\cap \text{im}(\bf{P}) = \{\bf{0}\}$ 이다. @thm-rank_nullity 에 의해 $\mathcal{M}_n (\mathbb{F})=(\ker (\bf{P})) \oplus (\text{im}(\bf{P}))$ 이다.
 
 :::
 
@@ -868,16 +978,16 @@ $\boldsymbol{u}\in \ker (\boldsymbol{P})\cap \text{im}(\boldsymbol{P})$ 라 하�
 
 ::: {#exr-axler_5_c_1}
 
-$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 대각화 가능 행렬이면 $\mathcal{M}_n(\mathbb{F})=\ker (\boldsymbol{A})\oplus \text{im}(\boldsymbol{A})$ 임을 보여라.
+$\bf{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 대각화 가능 행렬이면 $\mathcal{M}_n(\mathbb{F})=\ker (\bf{A})\oplus \text{im}(\bf{A})$ 임을 보여라.
 
 :::
 
 </div></br>
 
 ::: {.solution}
-$\ker (\boldsymbol{A})$ 와 $\text{im}(\boldsymbol{A})$ 모두 $\mathcal{M}_n(\mathbb{F})$ 의 부분공간이다. $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_n (\mathbb{F})$ 의 기저 $\{\boldsymbol{u}_1, \ldots,\, \boldsymbol{u}_n\}$ 을 생각 할 수 있다. $\boldsymbol{x}\in \ker (\boldsymbol{A})\cap \text{im}(\boldsymbol{A})$ 이라고 하자. $\boldsymbol{x}\in \ker (\boldsymbol{A})$ 이므로 $\boldsymbol{Ax}=\boldsymbol{0}$ 이며 $\boldsymbol{x}\in \text{im}(\boldsymbol{A})$ 이므로 $\boldsymbol{Ay}=\boldsymbol{x}$ 를 만족하는 $\boldsymbol{y}$ 가 존재해야 한다. $\boldsymbol{A}$ 가 대각화 가능 행렬이므로 고유값 $\lambda_i$ 를 갖는 고유벡터 $\boldsymbol{u}_i$ 가 기저가 되며 따라서 $\boldsymbol{y}=\sum_i c_i \boldsymbol{u}_i$ 로 표현 할 수 있다. $\boldsymbol{Ay} = \sum_i c_i \lambda_i \boldsymbol{u}_i = \boldsymbol{x}$, $\boldsymbol{A}^2\boldsymbol{y} = \sum_i c_i \lambda_i^2 \boldsymbol{u}_i = \boldsymbol{0}$ 이므로 $\boldsymbol{y}$ 는 $\boldsymbol{A}$ 에 대해 고유값이 $0$ 인 벡터의 선형결합이다. 따라서 $\boldsymbol{y}\in \ker (\boldsymbol{A})$ 이며 $\boldsymbol{x}=\boldsymbol{0}$ 이다. 
+$\ker (\bf{A})$ 와 $\text{im}(\bf{A})$ 모두 $\mathcal{M}_n(\mathbb{F})$ 의 부분공간이다. $\bf{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_n (\mathbb{F})$ 의 기저 $\{\bf{u}_1, \ldots,\, \bf{u}_n\}$ 을 생각 할 수 있다. $\bf{x}\in \ker (\bf{A})\cap \text{im}(\bf{A})$ 이라고 하자. $\bf{x}\in \ker (\bf{A})$ 이므로 $\bf{Ax}=\bf{0}$ 이며 $\bf{x}\in \text{im}(\bf{A})$ 이므로 $\bf{Ay}=\bf{x}$ 를 만족하는 $\bf{y}$ 가 존재해야 한다. $\bf{A}$ 가 대각화 가능 행렬이므로 고유값 $\lambda_i$ 를 갖는 고유벡터 $\bf{u}_i$ 가 기저가 되며 따라서 $\bf{y}=\sum_i c_i \bf{u}_i$ 로 표현 할 수 있다. $\bf{Ay} = \sum_i c_i \lambda_i \bf{u}_i = \bf{x}$, $\bf{A}^2\bf{y} = \sum_i c_i \lambda_i^2 \bf{u}_i = \bf{0}$ 이므로 $\bf{y}$ 는 $\bf{A}$ 에 대해 고유값이 $0$ 인 벡터의 선형결합이다. 따라서 $\bf{y}\in \ker (\bf{A})$ 이며 $\bf{x}=\bf{0}$ 이다. 
 
-@thm-rank_nullity 에 의해 $n=\text{nullity}(\boldsymbol{A})+\text{rank}(\boldsymbol{A})$ 이며 $\ker (\boldsymbol{A}) \cap \text{im}(\boldsymbol{A})=\{\boldsymbol{0}\}$ 이므로 $\mathcal{M}_n(\mathbb{F})=\ker (\boldsymbol{A})\oplus \text{im}(\boldsymbol{A})$ 이다.
+@thm-rank_nullity 에 의해 $n=\text{nullity}(\bf{A})+\text{rank}(\bf{A})$ 이며 $\ker (\bf{A}) \cap \text{im}(\bf{A})=\{\bf{0}\}$ 이므로 $\mathcal{M}_n(\mathbb{F})=\ker (\bf{A})\oplus \text{im}(\bf{A})$ 이다.
 
 :::
 
@@ -885,13 +995,13 @@ $\ker (\boldsymbol{A})$ 와 $\text{im}(\boldsymbol{A})$ 모두 $\mathcal{M}_n(\m
 
 ::: {#exr-axer_5_c_3}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음 세 명제는 동치임을 보여라.
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음 세 명제는 동치임을 보여라.
 
-&emsp;($1$) $\mathcal{M}_{n}(\mathbb{F}) = \ker (\boldsymbol{A})\oplus \text{im}(\boldsymbol{A})$.
+&emsp;($1$) $\mathcal{M}_{n}(\mathbb{F}) = \ker (\bf{A})\oplus \text{im}(\bf{A})$.
 
-&emsp;($2$) $\mathcal{M}_{n}(\mathbb{F}) = \ker (\boldsymbol{A}) + \text{im}(\boldsymbol{A})$.
+&emsp;($2$) $\mathcal{M}_{n}(\mathbb{F}) = \ker (\bf{A}) + \text{im}(\bf{A})$.
 
-&emsp;($3$) $\ker (\boldsymbol{A}) \cap \text{im}(\boldsymbol{A}) = \{\boldsymbol{0}\}$.
+&emsp;($3$) $\ker (\bf{A}) \cap \text{im}(\bf{A}) = \{\bf{0}\}$.
 
 :::
 
@@ -899,57 +1009,57 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음 세 �
 
 ::: {.solution}
 
-($1\implies 2$) 가정에 의해 $\ker (\boldsymbol{A})\cap \text{im}(\boldsymbol{A})= \{\boldsymbol{0}\}$ 이다. @prp-condition_for_direct_sum 의해 $\ker (\boldsymbol{A}) + \text{im}(\boldsymbol{A}) = \ker (\boldsymbol{A})\oplus \text{im}(\boldsymbol{A}) = \mathcal{M}_{n}(\mathbb{F})$ 이다.
+($1\implies 2$) 가정에 의해 $\ker (\bf{A})\cap \text{im}(\bf{A})= \{\bf{0}\}$ 이다. @prp-condition_for_direct_sum 의해 $\ker (\bf{A}) + \text{im}(\bf{A}) = \ker (\bf{A})\oplus \text{im}(\bf{A}) = \mathcal{M}_{n}(\mathbb{F})$ 이다.
 
-($2\implies 3$) @thm-rank_nullity 에 의해 $\ker (\boldsymbol{A}) \cap \text{im}(\boldsymbol{A}) = \{\boldsymbol{0}\}$ 이다. 
+($2\implies 3$) @thm-rank_nullity 에 의해 $\ker (\bf{A}) \cap \text{im}(\bf{A}) = \{\bf{0}\}$ 이다. 
 
-($3 \implies 1$) $\ker (\boldsymbol{A})$ 와 $\text{im}(\boldsymbol{A})$ 는 $\mathcal{M}_n(\mathbb{F})$ 의 부분공간이며 가정에 의해 $\ker (\boldsymbol{A}) + \text{im}(\boldsymbol{A}) = \ker (\boldsymbol{A}) \oplus \text{im}(\boldsymbol{A})$ 도 부분공간이다. @thm-rank_nullity 에 의해 $\mathcal{M}_{n}(\mathbb{F}) = \ker (\boldsymbol{A})\oplus \text{im}(\boldsymbol{A})$ 이다.
+($3 \implies 1$) $\ker (\bf{A})$ 와 $\text{im}(\bf{A})$ 는 $\mathcal{M}_n(\mathbb{F})$ 의 부분공간이며 가정에 의해 $\ker (\bf{A}) + \text{im}(\bf{A}) = \ker (\bf{A}) \oplus \text{im}(\bf{A})$ 도 부분공간이다. @thm-rank_nullity 에 의해 $\mathcal{M}_{n}(\mathbb{F}) = \ker (\bf{A})\oplus \text{im}(\bf{A})$ 이다.
 
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_5_c_5}
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때 다음이 동치임을 보이시오.
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때 다음이 동치임을 보이시오.
 
-&emsp;($1$) $\boldsymbol{A}$ 는 대각화 가능 행렬이다.
+&emsp;($1$) $\bf{A}$ 는 대각화 가능 행렬이다.
 
-&emsp;($2$) 모든 $\lambda \in \mathbb{C}$ 에 대해 $\mathcal{M}_{n}(\mathbb{C}) = \ker (\boldsymbol{A}-\lambda \boldsymbol{I}_n) \oplus \text{im}(\boldsymbol{A}-\lambda \boldsymbol{I}_n)$
+&emsp;($2$) 모든 $\lambda \in \mathbb{C}$ 에 대해 $\mathcal{M}_{n}(\mathbb{C}) = \ker (\bf{A}-\lambda \bf{I}_n) \oplus \text{im}(\bf{A}-\lambda \bf{I}_n)$
 
 :::
 
 </div></br>
 
 ::: {.solution}
-($1 \implies 2$) $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때
+($1 \implies 2$) $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때
 
 $$
 \begin{aligned}
-\boldsymbol{Au}=\lambda_u\boldsymbol{u} \iff (\boldsymbol{A}-\lambda \boldsymbol{I}_n)\boldsymbol{u} = (\lambda_u -\lambda)\boldsymbol{u}
+\bf{Au}=\lambda_u\bf{u} \iff (\bf{A}-\lambda \bf{I}_n)\bf{u} = (\lambda_u -\lambda)\bf{u}
 \end{aligned}
 $$
 
-이므로 $\boldsymbol{u}$ 가 $\boldsymbol{A}$ 의 고유벡터인것과 $\boldsymbol{A}-\lambda\boldsymbol{I}_n$ 의 고유벡터인것은 동치임을 안다. 따라서 $\boldsymbol{A}$ 가 대각화 가능인것과 임의의 $\lambda\in \mathbb{C}$ 에 대해 $\boldsymbol{A}-\lambda \boldsymbol{I}_n$ 이 대각화 가능인것은 동치이다. $\boldsymbol{A}-\lambda\boldsymbol{I}_n$ 이 대각화 가능이므로 @exr-axler_5_c_1 에서 보였듯이 $\mathcal{M}_n(\mathbb{C}) = \ker (\boldsymbol{A}-\lambda\boldsymbol{I}_n) \oplus \text{im} (\boldsymbol{A}-\lambda\boldsymbol{I}_n)$ 이다. 
+이므로 $\bf{u}$ 가 $\bf{A}$ 의 고유벡터인것과 $\bf{A}-\lambda\bf{I}_n$ 의 고유벡터인것은 동치임을 안다. 따라서 $\bf{A}$ 가 대각화 가능인것과 임의의 $\lambda\in \mathbb{C}$ 에 대해 $\bf{A}-\lambda \bf{I}_n$ 이 대각화 가능인것은 동치이다. $\bf{A}-\lambda\bf{I}_n$ 이 대각화 가능이므로 @exr-axler_5_c_1 에서 보였듯이 $\mathcal{M}_n(\mathbb{C}) = \ker (\bf{A}-\lambda\bf{I}_n) \oplus \text{im} (\bf{A}-\lambda\bf{I}_n)$ 이다. 
 
 
-($2 \implies 1$) 정해진 $\lambda_1\in \mathbb{C}$ 에 대해 $(\boldsymbol{u}_i, \ldots,\,\boldsymbol{u}_m)$ 이 $\ker(\boldsymbol{A}-\lambda_1 \boldsymbol{I}_n)$ 의 기저라고하자. $(\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_{n-m})$ 를 $\text{im}(\boldsymbol{A}-\lambda_1\boldsymbol{I}_n)$ 의 기저라고 하자. 
+($2 \implies 1$) 정해진 $\lambda_1\in \mathbb{C}$ 에 대해 $(\bf{u}_i, \ldots,\,\bf{u}_m)$ 이 $\ker(\bf{A}-\lambda_1 \bf{I}_n)$ 의 기저라고하자. $(\bf{v}_1,\ldots,\,\bf{v}_{n-m})$ 를 $\text{im}(\bf{A}-\lambda_1\bf{I}_n)$ 의 기저라고 하자. 
 
 $$
-\boldsymbol{U} = \begin{bmatrix} \boldsymbol{u}_1 & \cdots & \boldsymbol{u}_m & \boldsymbol{v}_1 & \cdots & \boldsymbol{v}_{n-m}\end{bmatrix}
+\bf{U} = \begin{bmatrix} \bf{u}_1 & \cdots & \bf{u}_m & \bf{v}_1 & \cdots & \bf{v}_{n-m}\end{bmatrix}
 $$
 
-라고 하면 $\boldsymbol{U}$ 은 가역행렬이며 $\boldsymbol{U}^{-1}\boldsymbol{AU}$ 은 블럭대각행렬이다. 이 때 1행 1열부터 $m$ 행 $m$ 열까지는 대각행렬이라는 것을 알 수 있다. 또한 $\boldsymbol{Uv}_j$ 는 1 행부터 $m$ 행 까지의 값이 $0$ 이다.
+라고 하면 $\bf{U}$ 은 가역행렬이며 $\bf{U}^{-1}\bf{AU}$ 은 블럭대각행렬이다. 이 때 1행 1열부터 $m$ 행 $m$ 열까지는 대각행렬이라는 것을 알 수 있다. 또한 $\bf{Uv}_j$ 는 1 행부터 $m$ 행 까지의 값이 $0$ 이다.
 
-우리는 모든 복소 행렬은 고유값을 가진다는 것을 알고 있다(@thm-existance_of_eigenvector_for_complex_field). 이것을 이용하여 $n$ 에 대한 induction 을 통해 증명하자. $n=1$ 일 때는 자명하다. 이제 $n$ 보다 작은 양의 정수에 대해 성립함을 가정하자. $\boldsymbol{A}$ 는 고유값 $\lambda_1$ 을 가지며 따라서 앞서의 과정에 따라 블럭대각화를 할 수 있다. $\dim(E(\lambda_1, \boldsymbol{A}))=m$ 인데 $\boldsymbol{U}^{-1}\boldsymbol{AU}$ 에서 1 행 1열부터 $m$ 행 $m$ 열 까지를 $0$ 으로 만든 행렬을 $\boldsymbol{A}_1$ 이라고 하자. 
+우리는 모든 복소 행렬은 고유값을 가진다는 것을 알고 있다(@thm-existance_of_eigenvector_for_complex_field). 이것을 이용하여 $n$ 에 대한 induction 을 통해 증명하자. $n=1$ 일 때는 자명하다. 이제 $n$ 보다 작은 양의 정수에 대해 성립함을 가정하자. $\bf{A}$ 는 고유값 $\lambda_1$ 을 가지며 따라서 앞서의 과정에 따라 블럭대각화를 할 수 있다. $\dim(E(\lambda_1, \bf{A}))=m$ 인데 $\bf{U}^{-1}\bf{AU}$ 에서 1 행 1열부터 $m$ 행 $m$ 열 까지를 $0$ 으로 만든 행렬을 $\bf{A}_1$ 이라고 하자. 
 
-이제 모든 $\lambda\in\mathbb{C}$ 에 대해 $\text{im}(\boldsymbol{A}_1-\lambda\boldsymbol{I}_n) = \ker (\boldsymbol{A}_1-\lambda \boldsymbol{I}_n) \oplus \text{im}(\boldsymbol{A}_1-\lambda \boldsymbol{I}_n)$ 임을 보이자. @exr-axer_5_c_3 에 따라 $\ker (\boldsymbol{A}_1-\lambda \boldsymbol{I}_n) \cap \text{im}(\boldsymbol{A}_1-\lambda \boldsymbol{I}_n) =\{\boldsymbol{0}\}$ 이라는 것을 보이면 된다. 그런데 $\ker (\boldsymbol{A}_1-\lambda \boldsymbol{I}_n) \in \ker  (\boldsymbol{A}-\lambda \boldsymbol{I}_n)$ 이며 $\text{im}(\boldsymbol{A}_1-\lambda \boldsymbol{I}_n) \subset \text{im}(\boldsymbol{A}-\lambda \boldsymbol{I}_n)$ 이므로 $\ker (\boldsymbol{A}_1-\lambda \boldsymbol{I}_n) \cap \text{im}(\boldsymbol{A}_1-\lambda \boldsymbol{I}_n) =\{\boldsymbol{0}\}$ 이다. Induction 의 가정에 따라 $\boldsymbol{A}_1$ 이 대각화 가능이며 따라서 $\boldsymbol{A}$ 는 대각화 가능이다. $\square$
+이제 모든 $\lambda\in\mathbb{C}$ 에 대해 $\text{im}(\bf{A}_1-\lambda\bf{I}_n) = \ker (\bf{A}_1-\lambda \bf{I}_n) \oplus \text{im}(\bf{A}_1-\lambda \bf{I}_n)$ 임을 보이자. @exr-axer_5_c_3 에 따라 $\ker (\bf{A}_1-\lambda \bf{I}_n) \cap \text{im}(\bf{A}_1-\lambda \bf{I}_n) =\{\bf{0}\}$ 이라는 것을 보이면 된다. 그런데 $\ker (\bf{A}_1-\lambda \bf{I}_n) \in \ker  (\bf{A}-\lambda \bf{I}_n)$ 이며 $\text{im}(\bf{A}_1-\lambda \bf{I}_n) \subset \text{im}(\bf{A}-\lambda \bf{I}_n)$ 이므로 $\ker (\bf{A}_1-\lambda \bf{I}_n) \cap \text{im}(\bf{A}_1-\lambda \bf{I}_n) =\{\bf{0}\}$ 이다. Induction 의 가정에 따라 $\bf{A}_1$ 이 대각화 가능이며 따라서 $\bf{A}$ 는 대각화 가능이다. $\square$
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_5_c_6}
 
-$\boldsymbol{A},\, \boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이고 $\boldsymbol{A}$ 가 $n$ 개의 서로 다른 고유값을 가지며 $\boldsymbol{B}$ 가 $\boldsymbol{A}$ 와 같은 고유벡터를 가질 때 $\boldsymbol{AB}=\boldsymbol{BA}$ 임을 보여라.
+$\bf{A},\, \bf{B}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이고 $\bf{A}$ 가 $n$ 개의 서로 다른 고유값을 가지며 $\bf{B}$ 가 $\bf{A}$ 와 같은 고유벡터를 가질 때 $\bf{AB}=\bf{BA}$ 임을 보여라.
 
 :::
 
@@ -957,13 +1067,13 @@ $\boldsymbol{A},\, \boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이�
 
 ::: {.solution}
 
-$(\boldsymbol{u}_1,\ldots,\boldsymbol{u}_n)$ 을 각각 $\lambda_i$ 의 고유값을 갖는 $\boldsymbol{A}$ 의 고유벡터라고 하면 이 벡터는 각각 다른 고유값을 가지므로 선형독립이며, 따라서 기저이다. $\boldsymbol{U} = \begin{bmatrix} \boldsymbol{u}_1 & \cdots & \boldsymbol{u}_n\end{bmatrix}$ 에 대해 $\boldsymbol{U}^{-1}\boldsymbol{AU}$ 와 $\boldsymbol{U}^{-1}\boldsymbol{BU}$ 는 각각 고유값을 대각성분으로 갖는 대각행렬이며, 두 대각행렬의 곱은 순서에 관계 없이 같으므로, 
+$(\bf{u}_1,\ldots,\bf{u}_n)$ 을 각각 $\lambda_i$ 의 고유값을 갖는 $\bf{A}$ 의 고유벡터라고 하면 이 벡터는 각각 다른 고유값을 가지므로 선형독립이며, 따라서 기저이다. $\bf{U} = \begin{bmatrix} \bf{u}_1 & \cdots & \bf{u}_n\end{bmatrix}$ 에 대해 $\bf{U}^{-1}\bf{AU}$ 와 $\bf{U}^{-1}\bf{BU}$ 는 각각 고유값을 대각성분으로 갖는 대각행렬이며, 두 대각행렬의 곱은 순서에 관계 없이 같으므로, 
 
 $$
-(\boldsymbol{U}^{-1}\boldsymbol{AU}) (\boldsymbol{U}^{-1}\boldsymbol{BU})=(\boldsymbol{U}^{-1}\boldsymbol{BU}) (\boldsymbol{U}^{-1}\boldsymbol{AU})
+(\bf{U}^{-1}\bf{AU}) (\bf{U}^{-1}\bf{BU})=(\bf{U}^{-1}\bf{BU}) (\bf{U}^{-1}\bf{AU})
 $$
 
-이다. 이로부터 $\boldsymbol{AB}=\boldsymbol{BA}$ 를 얻는다.
+이다. 이로부터 $\bf{AB}=\bf{BA}$ 를 얻는다.
 
 :::
 
@@ -979,15 +1089,15 @@ $$
 f_1 = 1,\qquad f_2=1,\qquad f_{n+2} = f_{n+1} +f_n.
 $$
 
-$\boldsymbol{F} = \begin{bmatrix} 0 & 1 \\ 1 & 1\end{bmatrix}$ 에 대해 다음을 보여라.
+$\bf{F} = \begin{bmatrix} 0 & 1 \\ 1 & 1\end{bmatrix}$ 에 대해 다음을 보여라.
 
-&emsp; ($1$) $\boldsymbol{F}^n \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} f_n \\ f_{n+1}\end{bmatrix}$ 이다.
+&emsp; ($1$) $\bf{F}^n \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} f_n \\ f_{n+1}\end{bmatrix}$ 이다.
 
-&emsp; ($2$) $\boldsymbol{F}$ 의 고유값을 구하라.
+&emsp; ($2$) $\bf{F}$ 의 고유값을 구하라.
 
-&emsp; ($3$) $\boldsymbol{F}$ 의 고유벡터로 이루어진 $\mathcal{M}_{2}(\mathbb{R})$ 의 기저를 구하라.
+&emsp; ($3$) $\bf{F}$ 의 고유벡터로 이루어진 $\mathcal{M}_{2}(\mathbb{R})$ 의 기저를 구하라.
 
-&emsp; ($4$) ($3$) 의 해를 이용하여 $\boldsymbol{F}^{n} \begin{bmatrix}0 \\ 1 \end{bmatrix}$ 를 계산하라. 
+&emsp; ($4$) ($3$) 의 해를 이용하여 $\bf{F}^{n} \begin{bmatrix}0 \\ 1 \end{bmatrix}$ 를 계산하라. 
 
 &emsp; ($5$) ($4$) 를 이용하여 각각의 양의 정수 $n$ 에 대해 $f_n$ 은 $\dfrac{1}{\sqrt{5}} \left(\dfrac{1+\sqrt{5}}{2}\right)^n$ 에 가장 가까운 정수임을 보여라.
 :::
@@ -996,22 +1106,22 @@ $\boldsymbol{F} = \begin{bmatrix} 0 & 1 \\ 1 & 1\end{bmatrix}$ 에 대해 다음
 
 ::: {.solution}
 
-($1$) $n=1$ 일 경우로부터 $f_1=1,\, f_2=2$ 임을 안다. $\boldsymbol{F}^n \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} f_n \\ f_{n+1}\end{bmatrix}$ 라고 가정하자.
+($1$) $n=1$ 일 경우로부터 $f_1=1,\, f_2=2$ 임을 안다. $\bf{F}^n \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} f_n \\ f_{n+1}\end{bmatrix}$ 라고 가정하자.
 
 $$
-\boldsymbol{F}^{n+1} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \boldsymbol{F}\begin{bmatrix} f_n \\ f_{n+1}\end{bmatrix} = \begin {bmatrix} f_{n+1} \\ f_{n}+f_{n+1}= f_{n+2}\end{bmatrix}
+\bf{F}^{n+1} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \bf{F}\begin{bmatrix} f_n \\ f_{n+1}\end{bmatrix} = \begin {bmatrix} f_{n+1} \\ f_{n}+f_{n+1}= f_{n+2}\end{bmatrix}
 $$
 
 이다. 
 
-($2$) $\det (\lambda \boldsymbol{I}_2-\boldsymbol{F})=0$ 를 통해 고유값 $\lambda_1 = \dfrac{1+\sqrt{5}}{2}$ 와 $\lambda_2 = \dfrac{1-\sqrt{5}}{2}$ 를 얻을 수 있다.
+($2$) $\det (\lambda \bf{I}_2-\bf{F})=0$ 를 통해 고유값 $\lambda_1 = \dfrac{1+\sqrt{5}}{2}$ 와 $\lambda_2 = \dfrac{1-\sqrt{5}}{2}$ 를 얻을 수 있다.
 
-($3$) $\boldsymbol{Fu}_i = \lambda_i \boldsymbol{u}_i$ 를 통해, $\boldsymbol{u}_1 = \begin{bmatrix}1 \\ \frac{1+\sqrt{5}}2\end{bmatrix}$, $\boldsymbol{u}_2 = \begin{bmatrix}1 \\ \frac{1-\sqrt{5}}{2}\end{bmatrix}$ 를 얻으며 둘은 선형독립이므로 $\mathcal{M}_2(\mathbb{R})$ 의 기저이다.
+($3$) $\bf{Fu}_i = \lambda_i \bf{u}_i$ 를 통해, $\bf{u}_1 = \begin{bmatrix}1 \\ \frac{1+\sqrt{5}}2\end{bmatrix}$, $\bf{u}_2 = \begin{bmatrix}1 \\ \frac{1-\sqrt{5}}{2}\end{bmatrix}$ 를 얻으며 둘은 선형독립이므로 $\mathcal{M}_2(\mathbb{R})$ 의 기저이다.
 
-($4$) $\begin{bmatrix} 0 \\ 1 \end{bmatrix} = \dfrac{1}{\sqrt{5}}\left(\boldsymbol{u}_1 -\boldsymbol{u}_2\right)$ 이며 $\boldsymbol{F}^{n}(\dfrac{1}{\sqrt{5}}\boldsymbol{u}_1-\dfrac{1}{\sqrt{5}}\boldsymbol{u}_2) = \dfrac{1}{\sqrt{5}} (\lambda_1)^n \boldsymbol{u}_1 - \dfrac{1}{\sqrt{5}}(\lambda_2)^n \boldsymbol{u}_2$ 이다. 즉, 
+($4$) $\begin{bmatrix} 0 \\ 1 \end{bmatrix} = \dfrac{1}{\sqrt{5}}\left(\bf{u}_1 -\bf{u}_2\right)$ 이며 $\bf{F}^{n}(\dfrac{1}{\sqrt{5}}\bf{u}_1-\dfrac{1}{\sqrt{5}}\bf{u}_2) = \dfrac{1}{\sqrt{5}} (\lambda_1)^n \bf{u}_1 - \dfrac{1}{\sqrt{5}}(\lambda_2)^n \bf{u}_2$ 이다. 즉, 
 
 $$
-\boldsymbol{F}^n\begin{bmatrix}0 \\ 1 \end{bmatrix} = \dfrac{1}{\sqrt{5}}\left[{\lambda_1}^n \boldsymbol{u}_1 - {\lambda_2}^n \boldsymbol{u}_2\right] = \dfrac{1}{\sqrt{5}} \begin{bmatrix} \left(\dfrac{1+\sqrt{5}}{2}\right)^n - \left(\dfrac{1-\sqrt{5}}{2}\right)^n  \\ \left(\dfrac{1+\sqrt{5}}{2}\right)^{n+1}  - \left(\dfrac{1-\sqrt{5}}{2}\right)^{n+1} \end{bmatrix} 
+\bf{F}^n\begin{bmatrix}0 \\ 1 \end{bmatrix} = \dfrac{1}{\sqrt{5}}\left[{\lambda_1}^n \bf{u}_1 - {\lambda_2}^n \bf{u}_2\right] = \dfrac{1}{\sqrt{5}} \begin{bmatrix} \left(\dfrac{1+\sqrt{5}}{2}\right)^n - \left(\dfrac{1-\sqrt{5}}{2}\right)^n  \\ \left(\dfrac{1+\sqrt{5}}{2}\right)^{n+1}  - \left(\dfrac{1-\sqrt{5}}{2}\right)^{n+1} \end{bmatrix} 
 $$
 
 이다. 따라서 $f_n =\dfrac{1}{\sqrt{5}} \left[ \left(\dfrac{1+\sqrt{5}}{2}\right)^n - \left(\dfrac{1-\sqrt{5}}{2}\right)^n\right]$ 이다.

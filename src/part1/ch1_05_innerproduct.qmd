@@ -42,6 +42,8 @@ $\mathbb{F}$-벡터공간 $V$ 에서 정의된 $\phi : V \times V \to \mathbb{F}
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-innerproduct_R1_C1}
+
+#### $\C^1$
 $\mathbb{C}^1$, 즉 1차원 복소벡터공간에서의 내적을
 
 $$
@@ -95,7 +97,7 @@ $$
 
 $V$ 가 $\mathbb{F}$-내적벡터공간이며 $u,\,v,\,w \in V,\, c \in \mathbb{F}$ 일 때 다음이 성립한다.
 
-&emsp;($1$) 정해진 $u\in V$ 에 대해 $T(v) = \langle v,\,u \rangle$ 는 선형사상이다.
+&emsp;($1$) 정해진 $u\in V$ 에 대해 $L_u(v) = \langle v,\,u \rangle$ 는 선형사상이다.
 
 &emsp;($2$) $\langle 0,\, u\rangle = 0 = \langle u,\,0\rangle$.
 
@@ -118,9 +120,9 @@ $V$ 가 $\mathbb{F}$-내적벡터공간이며 $u,\,v,\,w \in V,\, c \in \mathbb{
 :::
 :::
 
+</br>
 
-
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-orthogonal_linearity}
 내적벡터 공간 $V$ 에서의 영벡터가 아닌 벡터의 집합 $\{v_1,\ldots,\,v_n\}$ 이 직교하는 벡터의 집합이면 선형 독립이다.
@@ -184,9 +186,11 @@ $$
 
 </br>
 
-벡터공간에서의 내적과 마찬가지로 노름 역시 공간에 부여된 특정 조건을 만족하는 함수이다. 내적벡터공간은 그 자체로 거리공간인데 이것은 내적에 의해 노름과 거리함수가 자연스럽게 정의되기 때문이다. 참고로 노름공간은 거리함수가 부여된 벡터공간이지만 엄밀한 의미에서의 거리공간은 벡터공간이 아닐 수도 있으며, 단지 적절한 거리함수가 정의된 집합이면 거리공간이다. 여기서는 거리함수가 부여된 벡터공간인 노름공간만을 
+벡터공간에서의 내적과 마찬가지로 노름 역시 공간에 부여된 특정 조건을 만족하는 함수이다. 내적벡터공간은 그 자체로 거리공간인데 이것은 내적에 의해 노름과 거리함수가 자연스럽게 정의되기 때문이다. 참고로 노름공간은 거리함수가 부여된 벡터공간이지만 엄밀한 의미에서의 거리공간은 벡터공간이 아닐 수도 있으며, 단지 적절한 거리함수가 정의된 집합이면 거리공간이다. 여기서는 거리함수가 부여된 벡터공간인 노름공간만을 생각한다.
 
-</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-norm_space_1}
 
@@ -317,7 +321,7 @@ $\square$
 
 ## 정규직교기저
 
-### 기저와 내적 
+### 정규직교벡터와 정규직교기저 {#sec-part1_orthonomal_vectors_and_orthonormal_basis}
 
 내적벡터공간 $V$ 의 기저 $\{h_i\}$ 를 생각하자. 두 벡터 $u=\sum_i u_i h_i,\, v= \sum_j v_j h_j$ 의 내적은 다음과 같다.
 
@@ -335,13 +339,11 @@ $$ {#eq-innerproduct}
 
 </br>
 
-### 정규직교기저
-
 ::: {.callout-note appearance="simple" icon="false"}
 
-::: {#def-orthonormal_Basis}
+::: {#def-part1_orthonormal_Basis}
 
-#### 정규직교기저 (Orthonormal basis)
+#### 정규직교벡터와 정규직교기저
 
 내적벡터공간의 벡터의 집합 $\{v_1,\ldots,\,v_n\}$ 의  직교하는 벡터의 집합이며 벡터의 노름이 모두 $1$ 일 때, 즉 $\langle v_i,\,v_j\rangle = \delta_{ij}$ 일 때 **정규직교벡터 (orthonormal vectors)** 라 한다. 정규직교기저벡터가 선형독립임은 @prp-orthogonal_linearity 에서 보았다. 정규직교벡터가 벡터공간의 기저일 때 이 기저를 **정규직교기저 (orthonormal basis)** 라 한다. 
 :::
@@ -357,7 +359,8 @@ $$ {#eq-innerproduct}
 ### 정규직교벡터의 성질
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#prp-properties_of_orthonormal_vectors}
+
+::: {#prp-part1_properties_of_orthonormal_vectors}
 
 $\{e_1,\ldots,\,e_m\}$ 이 $\mathbb{F}$-내적벡터공간 $V$ 에서의 정규직교벡터일 때 다음이 성립한다.
 
@@ -398,67 +401,52 @@ $$
 
 :::
 
-
-
-
 </br>
 
-### 정규직교기저에서의 벡터의 표현
 
-$\{e_1,\ldots,\,e_n\}$ 이 내적벡터공간 $V$의 정규직교기저라고 하자. $v\in V$ 를 이 기저의 선형결합으로 표현하면 아래와 같다고 하자.
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-$$
-v=\sum_i^n c_i e_i
-$$
+::: {#prp-part1_properties_of_orthonormal_basis}
 
- 여기서
-
-$$
-\langle v,\,e_j\rangle  = \sum_{i=1}^n c_i \langle e_i,\,e_j\rangle = c_j
-$$
-
-이므로,
-
-$$
-v =\sum_{i}^n \langle v,\,e_i \rangle e_i
-$$
-
-이다.
-
-</br>
-
-### 정규직교기저와 내적
+$(e_1,\ldots,\,e_n)$ 이 $\mathbb{F}$-내적벡터공간 $V$ 에서의 정규직교기저일 때 다음이 성립한다.
 
 
+&emsp;($1$) $v\in V$ 에 대해 $\displaystyle v=\sum_{i=1} \langle v,\,e_i\rangle e_i$ 이다.
 
-$\mathcal{B}=(e_i)$ 가 내적벡터공간 $V$ 의 정규직교기저이고 두 벡터 $u,\,v$ 가 $u= \sum_i u_i e_i,\, v=\sum_j v_j e_j$ 라 하자. 이 때 두 벡터의 내적은 
+&emsp;($2$) $u,\,v\in V$ 에 대해 $u=\sum_{i}u_i e_i,\, v=\sum_j v_j e_j$ 일 때 $\displaystyle \langle u,\,v \rangle = \sum_{i=1}^n u_i\overline{v_i}$ 이다. 
 
-$$
-\langle u,\, v\rangle = \sum_i \sum_j \langle u_i e_i,\, v_j e_j \rangle = \sum_i \sum_j u_i \overline{v_j} \langle e_i,\, e_j\rangle= \sum_i u_i \overline{v_j}
-$$
+:::
 
-이다. 이것을 @eq-innerproduct 와 비교해보면 얼마나 간단해졌는지 느낄 수 있을 것이다. 정규직교기저인 $\mathcal{B}$ 에서의 행렬표현은 $\boldsymbol{u}=[u]_\mathcal{B}= \begin{bmatrix} u_1 \\ \vdots \\ u_n\end{bmatrix}$ $\boldsymbol{v} = [v]_\mathcal{B}= \begin{bmatrix} v_1 \\ \vdots \\ v_n\end{bmatrix}$ 이며 이때의 내적은 $\boldsymbol{v}^\ast \boldsymbol{u}$ 이다. $V$ 가 $\mathbb{R}$-벡터공간 일 때 내적은 $\boldsymbol{v}^T\boldsymbol{u}$ 이다. 이것은 유클리드 내적과 같다. 우리는 뒤에 [그람-슈미트 과정과 정규직교기저](#sec-gram_schmidt) 를 통해 유한차원 내적벡터공간에서 기저는 항상 정규직교기저로 변환 될 수 있다는 것을 보일것이다. 즉 모든 내적 벡터공간은 정규직교기저 변환을 통해 유클리드 공간으로 변환된다고 볼 수 있다.
+</div></br>
+
+::: {.proof}
+
+($1$) $v=\sum_i^n c_i e_i$ 일 때 $\langle v,\,e_j\rangle = c_i$ 이다.
+
+($2$) $\displaystyle \langle u,\,v\rangle = \sum_{i,j} \langle u_ie_i,\,v_je_j\rangle = \sum_{i,j} u_i\overline{v}_j \langle e_i,e_j\rangle = u_i\overline{v_j}$. $\square$
+
+::: 
 
 </br>
 
 ### 정규직교기저벡터에 대한 연산자의 행렬 표현
 
-$T\in \mathcal{L}(V)$ 라 하자. $\mathcal{B}=(e_i)$ 이 정규직교기저벡터일 때 $T$ 는
+$L\in \mathcal{L}(V)$ 라 하자. $\mathcal{B}=(e_i)$ 이 정규직교기저벡터일 때 $L$ 는
 
 $$
-T(e_j) = \sum_{k=1}^n A_{kj}e_k
+L(e_j) = \sum_{k=1}^n A_{kj}e_k
 $$
 
 라 하자.
 
 $$
-\langle T(e_j),\, e_i\rangle = \sum_{k=1}^n \langle A_{kj}e_k,\, e_i\rangle = \sum_{k=1}^n A_{kj} \langle e_k,\, e_i\rangle = A_{ij}
+\langle L(e_j),\, e_i\rangle = \sum_{k=1}^n \langle A_{kj}e_k,\, e_i\rangle = \sum_{k=1}^n A_{kj} \langle e_k,\, e_i\rangle = A_{ij}
 $$
 
 이다. 즉,
 
 $$
-A_{ij} = \langle T(e_j),\, e_i \rangle
+A_{ij} = \langle L(e_j),\, e_i \rangle
 $$
 
 이다.
@@ -475,7 +463,7 @@ $$
 
 ### 벡터에 대한 정사영 (Projection)
 
-두 벡터의 내적이 $0$ 일 때 두 벡터는 직교한다(be perpendicular)고 하며, 한 벡터가 다른 벡터의 스칼라곱일 때 두 벡터가 **평행하다(be parallel)** 고 한다. 내적벡터공간 $V$ 의 두 벡터 $u,\,v$ 가 주어졌다고 하자. 이 때 $v$ 의 $v$ 에 대한 사영연산자 $\text{Proj}_u v$ 를 아래와 같이 정의하자.
+두 벡터의 내적이 $0$ 일 때 두 벡터는 직교한다(be perpendicular)고 하며, 한 벡터가 다른 벡터의 스칼라곱일 때 두 벡터가 **평행하다(be parallel)** 고 한다. 내적벡터공간 $V$ 의 두 벡터 $u,\,v$ 가 주어졌다고 하자. 이 때 $v$ 의 $v$ 에 대한 Projection $\text{Proj}_u v$ 를 아래와 같이 정의하자.
 
 $$
 \text{Proj}_{u}v = \dfrac{\langle v,\, u\rangle}{\langle u,\, u\rangle} u
@@ -570,25 +558,25 @@ $\mathcal{B}_V$ 는 선형독립이므로 Gram-Schmidt 과정을 통해 얻은 �
 
 #### 슈어 정리 (Schur's Theorem)
 
-유한차원 $\mathbb{C}$-내적벡터공간 $V$ 에서 정의된 연산자 $T\in \mathcal{L}(V)$ 는 어떤 정규직교기저에서 상삼각행렬로 표현된다.
+유한차원 $\mathbb{C}$-내적벡터공간 $V$ 에서 정의된 연산자 $L\in \mathcal{L}(V)$ 는 어떤 정규직교기저에서 상삼각행렬로 표현된다.
 :::
 
 </div></br>
 
 ::: {.proof}
-$V$ 를 $n$ 차원 $\mathbb{C}$-내적벡터공간이라 하자. @thm-uppertriangular_matrix_complex_field 에서 $T\in \mathcal{L}(V)$ 는 어떤 기저 에서 상삼각행렬로 표현된다는 것을 보였다. 이 기저를 $\mathcal{B}_V = \{v_1,\ldots,\,v_n\}$ 이라 하고, 그람-슈미트 과정을 통해 얻은 정규직교기저를 $\{e_1,\ldots,\,e_n\}$ 이라 하자. 즉 $e_i \in \text{span}(v_1,\ldots,\,v_i)$ 이다. 그렇다면, 그람 슈미트 과정으로부터
+$V$ 를 $n$ 차원 $\mathbb{C}$-내적벡터공간이라 하자. @thm-uppertriangular_matrix_complex_field 에서 $L\in \mathcal{L}(V)$ 는 어떤 기저 에서 상삼각행렬로 표현된다는 것을 보였다. 이 기저를 $\mathcal{B}_V = \{v_1,\ldots,\,v_n\}$ 이라 하고, 그람-슈미트 과정을 통해 얻은 정규직교기저를 $\{e_1,\ldots,\,e_n\}$ 이라 하자. 즉 $e_i \in \text{span}(v_1,\ldots,\,v_i)$ 이다. 그렇다면, 그람 슈미트 과정으로부터
 
 $$
 \text{span}(e_1,\ldots,\,e_j) = \text{span}(v_1,\ldots,\,v_j), \quad j=1,\ldots, n
 $$
 
-임을 안다. $T$ 가 $\mathcal{B}_V$ 에서 상삼각 행렬로 표현되므로 $T(v_i) \in \text{span}(v_1,\ldots,\,v_i)$ 이며, 따라서
+임을 안다. $L$ 가 $\mathcal{B}_V$ 에서 상삼각 행렬로 표현되므로 $L(v_i) \in \text{span}(v_1,\ldots,\,v_i)$ 이며, 따라서
 
 $$
-T(v_i) \in \text{span}(v_1,\ldots,\,v_i) = \text{span}(e_1,\ldots,\,e_i)
+(v_i) \in \text{span}(v_1,\ldots,\,v_i) = \text{span}(e_1,\ldots,\,e_i)
 $$
 
-이다. 즉 $T$ 는 정규직교기저에서 상삼각 행렬로 표현된다. $\square$
+이다. 즉 $L$ 는 정규직교기저에서 상삼각 행렬로 표현된다. $\square$
 :::
 
 </br>

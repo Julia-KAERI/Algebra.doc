@@ -261,9 +261,9 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대한 $p_{\boldsym
 
 또한 우리는 다음을 보였다.
 
-- @prp-invariance_of_characteristic_polynomial : 특성 다항식은 닮음 변환에 대해 불변이다. 즉 행렬 $\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 과 가역행렬 $\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $p_{\boldsymbol{A}}(\lambda) = p_{\boldsymbol{P^{-1}AP}}(\lambda)$ 이다.
+- @prp-part1_invariance_of_characteristic_polynomial : 특성 다항식은 닮음 변환에 대해 불변이다. 즉 행렬 $\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 과 가역행렬 $\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $p_{\boldsymbol{A}}(\lambda) = p_{\boldsymbol{P^{-1}AP}}(\lambda)$ 이다.
 
-- @prp-eigenvalue_characteristic_polynomial : $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\lambda\in \mathbb{F}$ 가 $\boldsymbol{A}$ 의 고유값이기 위한 필요충분조건은 $p_{\boldsymbol{A}}(\lambda)=0$ 인 것이다.
+- @prp-part1_eigenvalue_characteristic_polynomial : $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\lambda\in \mathbb{F}$ 가 $\boldsymbol{A}$ 의 고유값이기 위한 필요충분조건은 $p_{\boldsymbol{A}}(\lambda)=0$ 인 것이다.
 
 </br>
 
@@ -553,7 +553,7 @@ $p\in \mathcal{I}_L$ 는 $L$ 에 대한 최소다항식으로 나누어 떨어�
 
 </div></br>
 
-우리는 @prp-eigenvalue_characteristic_polynomial 에서 연산자에 대한 특성다항식의 해가 그 연산자의 고유값임을 보였다. 실제로는 특성다항식이 아니라 최소다항식에 대해서도 성립한다. 
+우리는 @prp-part1_eigenvalue_characteristic_polynomial 에서 연산자에 대한 특성다항식의 해가 그 연산자의 고유값임을 보였다. 실제로는 특성다항식이 아니라 최소다항식에 대해서도 성립한다. 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
