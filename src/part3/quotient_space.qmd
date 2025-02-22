@@ -6,10 +6,10 @@ crossref:
   chapters: true
 ---
 
-## 아핀 부분집합과 몫공간
+## 아핀 부분집합과 몫공간 {#sec-ALA_affine_space_and_quotient_space}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-part3_affine_subset}
+::: {#def-ALA_affine_subset}
 
 #### 부분공간의 평행이동
 
@@ -26,7 +26,7 @@ $$
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-part3_quotient_space}
+::: {#def-ALA_quotient_space}
 
 #### 몫공간
 $U$ 가 $V$ 의 부분공간일 때 **몫공간 (quotient space)** $V/U$ 는 $U$ 가 평행이동한 부분집합의 집합이다. 즉,
@@ -45,7 +45,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part3_affine_subset}
+::: {#thm-ALA_affine_subset}
 
 #### 몫공간의 성질
 
@@ -69,7 +69,7 @@ $v_1 - v_2 = u\in U$ 이면 $v_1+U = v_2+U$ 임은 자명하다. 이제 $v_1-v_2
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-part3_addition_and_scalar_multiplication_in_quotient_space}
+::: {#def-ALA_addition_and_scalar_multiplication_in_quotient_space}
 
 #### 몫공간에서의 합과 스칼라곱
 
@@ -88,7 +88,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_quotient_sapce}
+::: {#prp-ALA_quotient_sapce}
  $V/U$ 는 벡터공간이다.
 :::
 
@@ -100,10 +100,10 @@ $$
 
 </br>
 
-## 몫사상
+## 몫사상 {#sec-ALA_quotient_map}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-part3_quotient_map}
+::: {#def-ALA_quotient_map}
 
 #### 몫사상 (Quotient map)
 
@@ -117,7 +117,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_quotient_map}
+::: {#prp-ALA_quotient_map}
 몫사상 $\pi_U$ 는 선형사상이다.
 :::
 
@@ -137,7 +137,7 @@ $\square$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part3_dim_quotient_space}
+::: {#thm-ALA_dim_quotient_space}
 
 $V$ 가 유한차원벡터공간이고 $U$ 가 $V$ 의 부분공간일 때
 
@@ -159,7 +159,7 @@ $\ker (\pi_U) = U$ 이다. $\square$
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-part3_tilde_map}
+::: {#def-ALA_tilde_map}
 
 #### $\tilde{T}$
 
@@ -173,7 +173,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_tilde_T_linear_map}
+::: {#prp-ALA_tilde_T_linear_map}
  $\tilde{T}$ 는 선형사상이다.
 :::
 
@@ -185,7 +185,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_properties_of_tilde_T}
+::: {#prp-ALA_properties_of_tilde_T}
 $\tilde{T}$ 에 대해 다음이 성립한다.
 
 &emsp;($1$) $\tilde{T}$ 는 단사이다.  
@@ -205,7 +205,7 @@ $\tilde{T}$ 에 대해 다음이 성립한다.
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_3E_9}
+::: {#exr-ALA_axler4_3E_9}
 
 #### Axler4 3E.9
 

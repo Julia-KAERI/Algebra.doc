@@ -44,7 +44,7 @@ $(\boldsymbol{A})_{ij}$ 혹은 기울어진 일반글씨체의 $A_{ij}$ 는 행�
 ### 순서집합 (Ordered set)
 ::: {.callout-note appearance="simple" icon="false"}
 
-::: {#def-ordered_set}
+::: {#def-LA_ordered_set}
 
 ### 순서집합
 
@@ -58,7 +58,7 @@ $(\boldsymbol{A})_{ij}$ 혹은 기울어진 일반글씨체의 $A_{ij}$ 는 행�
 
 ::: {.callout-note appearance="simple" icon="false"}
 
-::: {#def-cartesian_product}
+::: {#def-LA_cartesian_product}
 
 #### 데카르트곱
 
@@ -95,7 +95,7 @@ $$
 앞으로 많이 사용될 간단하지만 유용한 함수가 있다.
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-kroneker_delter}
+::: {#def-LA_kroneker_delter}
 #### 크로네커 델타 함수
 $i,\,j$ 가 정수일 때 다음과 같이 정의된 함수 $\delta_{ij}$ 를 크로네커 델타 함수 (Kronecker delta function)라고 한다.
 
@@ -110,7 +110,7 @@ $$
 ## 벡터공간과 벡터 
 
 
-### 벡터공간 
+### 벡터공간 {#sec-LA_vector_space}
 
 벡터공간을 정의하기 위해서는 어떤 집합 $V$ 와 체(field) $\mathbb{F}$, 그리고 $V$ 의 원소끼리의 덧셈과, $V$ 의 원소와 $\mathbb{F}$ 의 원소의 곱이 정의되어야 한다. 이 때, 집합 $V$ 과 체 $\mathbb{F}$ 에 대해 아래의 성질을 만족하면 집합 $V$ 를 $\mathbb{F}$ 위에서의 **벡터공간(vector space)**  혹은 **$\mathbb{F}$-벡터공간** 이라 한다.
 
@@ -145,7 +145,7 @@ $$
 
 ::: {.callout-note appearance="minimal"}
 
-::: {#def-vector_space_2}
+::: {#def-LA_vector_space_2}
 #### 벡터공간과 벡터
 
 어떤 집합 $V$ 와 체 $\mathbb{F}$ 에 대해 $V$ 의 원소 사이의 덧셈과 $\mathbb{F}$ 와 $V$ 사이의 곱셈이 정의되어 있으며, 다음이 성립하면 $V$ 를 **$\mathbb{F}$ 위에서의 벡터공간** 혹은 **$\mathbb{F}$-벡터공간** 이라 한다.
@@ -181,7 +181,7 @@ $$
 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#prp-zero_one_vector}
+::: {#prp-LA_zero_one_vector}
 
 벡터공간 $V$ 와 $v\in V$ 그리고 영벡터 $O_V$ 에 대해 다음이 성립한다.
 
@@ -214,14 +214,14 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-vectorspace_F}
+::: {#exm-LA_vectorspace_F}
 $\mathbb{F}$ 는 $\mathbb{F}$-벡터공간이다.
 :::
 </div></br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-vectorspace_Rn}
+::: {#exm-LA_vectorspace_Rn}
 데카르트 곱 $\mathbb{R}^2 = \{ (x,\,y): x\in \mathbb{R},\, y\in \mathbb{R}\}$ 을 생각하자. 덧셈과 스칼라곱을 $(x_1,\, y_1) + (x_2,\,y_2) = (x_1+x_2,\, y_1+y_2)$, $a(x,\, y) = (ax,\, ay)$ 로 정의하면 $\mathbb{R}^2$ 가 $\mathbb{R}$ 위의 벡터공간임을 쉽게 알 수 있다. 이로부터 임의의 0이 아닌 자연수 $n$ 에 대해 $\mathbb{R}^n$ 이 $\mathbb{R}$-벡터공간이고, $\mathbb{C}^n$ 이 $\mathbb{C}$-벡터공간임을 알 수 있다. 
 :::
 
@@ -229,7 +229,7 @@ $\mathbb{F}$ 는 $\mathbb{F}$-벡터공간이다.
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-vectorspace_CnRn}
+::: {#exm-LA_vectorspace_CnRn}
 합과 스칼라곱이 아래와 같이 정의된 데카르트곱 $\mathbb{R}^n$ 과 $\mathbb{C}^n$ 을 생각하자.
 
 $$
@@ -242,7 +242,7 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-vectorspace_polynomial}
+::: {#exm-LA_vectorspace_polynomial}
 다항식 $p(x) = a_0 + a_1 x + \cdots + a_n x^n$ 을 생각하자. $a_n\ne 0$ 일 때 $p(x)$ 를 $n$ 차 다항식이라고 하며 이때의 $n$ 값을 다항식 $p(x)$ 의 **차수 (degree)** 라고 하고 $\deg (p)$ 혹은 $\deg (p(x))$ 라고 표기한다. 굳이 0차 다항식이라고 이름을 붙이지는 않지만 상수함수도 다항식에 포함된다. 앞으로 $\mathbb{F}$ 값을 계수로 갖는 변수 $t$ 에 대한 다항식의 집합을 $\mathbb{F}[t]$ 라고 표기하며, $\mathbb{F}_n[t]$ 는 $n$ 차를 포함하여 그 이하의 차수를 갖는 다항식의 집합을 의미한다. 예를 들어 $\mathbb{R}_3[t]$ 는 3차 이하의 차수를 갖는 실계수 다항식의 집합을 말한다. 0 이상의 정수 $n$ 에 대해 $\mathbb{F}_n[t]$ 은 $\mathbb{F}$-벡터공간이다. 또한 $\mathbb{F}[t]$ 도 벡터공간이다.
 :::
 
@@ -250,7 +250,7 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-vectorspace_matrix}
+::: {#exm-LA_vectorspace_matrix}
 실계수를 갖는 $m \times n$ 행렬의 집합을 $\mathcal{M}_{m \times n}(\mathbb{R})$ 이이라고 하기로 하였다. $\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{R})$ 일 때 두 행렬을 더하면 그 결과는 같은 크기의 행렬이며 더하여 나온 행렬의 성분은 같은 위치에서의 $\boldsymbol{A}$ 와 $\boldsymbol{B}$ 의 성분의 합으로 정의하자. 즉,
 
 $$
@@ -269,11 +269,11 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-vectorspace_row_column}
+::: {#exm-LA_vectorspace_row_column}
 
 #### 행벡터와 열벡터
 
-@exm-vectorspace_matrix 에서 $\mathcal{M}_{m\times n}(\mathbb{F})$ 은 벡터공간임을 보였다. 이중에서 특히 $\mathcal{M}_{n \times 1}(\mathbb{F})$ 의 원소를 **열벡터**라고 한다. 특별히 열벡터공간은 $\mathcal{M}_{n}(\mathbb{F})$ 라고 쓰기로 하자. $\mathcal{M}_{1 \times n}(\mathbb{F})$ 의 원소를 **행벡터** 라고 한다.
+@exm-LA_vectorspace_matrix 에서 $\mathcal{M}_{m\times n}(\mathbb{F})$ 은 벡터공간임을 보였다. 이중에서 특히 $\mathcal{M}_{n \times 1}(\mathbb{F})$ 의 원소를 **열벡터**라고 한다. 특별히 열벡터공간은 $\mathcal{M}_{n}(\mathbb{F})$ 라고 쓰기로 하자. $\mathcal{M}_{1 \times n}(\mathbb{F})$ 의 원소를 **행벡터** 라고 한다.
 
 :::
 
@@ -281,7 +281,7 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-continuous_function}
+::: {#exm-LA_continuous_function}
 $C_{(a,\,b)}$ 를 $(a,\,b)$ 구간에서 연속인 실함수의 집합이라고 하자. 이 때 $C_{(a,\,b)}$ 는 $\mathbb{R}$-벡터공간이다. 실수 영역 전체에서 연속인 함수의 집합 $C_{\mathbb{R}}$ 역시 $\mathbb{R}$-벡터공간이다.
 :::
 
@@ -289,10 +289,10 @@ $C_{(a,\,b)}$ 를 $(a,\,b)$ 구간에서 연속인 실함수의 집합이라고 
 
 ## 부분공간과 직합
 
-### 부분공간 
+### 부분공간 {#sec-LA_subspace}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-subspace}
+::: {#def-LA_subspace}
 
 #### 부분공간 
 
@@ -305,7 +305,7 @@ $U$ 가 $V$ 의 부분공간 일 때 $U\le V$ 라 표기하겠다.
 </br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-subspace_0}
+::: {#exm-LA_subspace_0}
 벡터공간 $V$ 는 자기 자신의 부분공간이다. $V$ 가 벡터공간일 때 $\{0_V\}$ 도 $V$ 의 부분공간이다.
 :::
 
@@ -313,7 +313,7 @@ $U$ 가 $V$ 의 부분공간 일 때 $U\le V$ 라 표기하겠다.
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-intersection_of_two_spaces}
+::: {#exm-LA_intersection_of_two_spaces}
 
 $U,\,V$ 가 벡터공간일 때 $U \cap V$ 도 벡터공간이다.
 :::
@@ -321,7 +321,7 @@ $U,\,V$ 가 벡터공간일 때 $U \cap V$ 도 벡터공간이다.
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-subspace_1}
+::: {#exm-LA_subspace_1}
 앞서 언급한 벡터공간 $\mathbb{R}^2$ 에 대해 $A= \{ (x,\,0) : x\in \mathbb{R} \}$ 은 $\mathbb{R}^2$ 의 부분집합이며 벡터공간이므로 부분벡터공간이다. $B=\{(x,\, x) : x\in \mathbb{R}\}$ 역시 $\mathbb{R}^2$ 의 부분벡터공간임은 쉽게 알 수 있다.
 :::
 </div>
@@ -329,15 +329,15 @@ $U,\,V$ 가 벡터공간일 때 $U \cap V$ 도 벡터공간이다.
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-subspace_2}
-@exm-vectorspace_polynomial 에서 정의한 $\mathbb{R}_n[t]$ 을 생각하자. $m \le n$ 일 때, $\mathbb{R}_m[t]$ 는 $\mathbb{R}_n[t]$ 의 부분공간이다.
+::: {#exm-LA_subspace_2}
+@exm-LA_vectorspace_polynomial 에서 정의한 $\mathbb{R}_n[t]$ 을 생각하자. $m \le n$ 일 때, $\mathbb{R}_m[t]$ 는 $\mathbb{R}_n[t]$ 의 부분공간이다.
 :::
 
 </div></br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-subspace_2}
+::: {#exm-LA_subspace_2}
 $\mathbb{C}^2$ 는 $\mathbb{C}$-벡터공간이다. $\mathbb{R}^2$ 는 $\mathbb{C}^2$ 의 부분집합이지만 $\mathbb{C}$-벡터공간이 아니므로 ($i(1,\,1) = (i,\, ,i) \not\in \mathbb{R}^2$) $\mathbb{C}^2$ 의 부분공간이 아니다. 그러나, $\mathbb{C}^2$ 는 $\mathbb{R}$-벡터공간이기도 하다. 그렇다면 $\mathbb{R}^2$ 는 $\mathbb{R}$- 벡터공간 $\mathbb{C}^2$ 의 부분공간이 된다.
 
 
@@ -354,7 +354,7 @@ $\mathbb{C}^2$ 는 $\mathbb{C}$-벡터공간이다. $\mathbb{R}^2$ 는 $\mathbb{
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-subspace_1}
+::: {#prp-LA_subspace_1}
 
 벡터공간 $V$ 에 대해 $U\le V$ 이고 $W \le U$ 이면 $W \le V$ 이다.
 
@@ -365,7 +365,7 @@ $\mathbb{C}^2$ 는 $\mathbb{C}$-벡터공간이다. $\mathbb{R}^2$ 는 $\mathbb{
 ### 합공간과 직합 {#sec-direct_sum}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-sum_of_subspace}
+::: {#def-LA_sum_of_subspace}
 
 #### 합공간
 
@@ -381,7 +381,7 @@ $$
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-sum_of_subspace}
+::: {#prp-LA_sum_of_subspace}
 
 $V_1 \le V,\, V_2 \le V$ 일 때 $V_1+ V_2 \le V$ 이다. 따라서 $V$ 의 부분공간 $V_1, \ldots,\,V_m$ 의 합공간도 $V$ 의 부분공간이다.
 
@@ -391,7 +391,7 @@ $V_1 \le V,\, V_2 \le V$ 일 때 $V_1+ V_2 \le V$ 이다. 따라서 $V$ 의 부�
 
 ::: {.callout-note appearance="simple" icon="false"}
 
-::: {#def-directsum}
+::: {#def-LA_directsum}
 
 #### 직합
 
@@ -405,7 +405,7 @@ $V_1,\,V_2,\ldots,\,V_m$ 이 모두 $V$ 의 부분공간 일 때 $V_0=V_1 + \cdo
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-directsum}
+::: {#thm-LA_directsum}
 
 #### 직합의 조건
 
@@ -427,7 +427,7 @@ $V$ 의 부분공간 $V_1,\ldots,\,V_m$ 에 대해 다음은 동치이다.
 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#prp-condition_for_direct_sum}
+::: {#prp-LA_condition_for_direct_sum}
 
 
 $V_1,\,V_2$ 가 $V$ 의 부분공간일 때 $V_1+ V_2 = V_1\oplus V_2$ 일 필요충분조건은 $V_1 \cap V_2 = \{0_V\}$ 이다.
@@ -436,7 +436,7 @@ $V_1,\,V_2$ 가 $V$ 의 부분공간일 때 $V_1+ V_2 = V_1\oplus V_2$ 일 필�
 
 ::: {.proof}
 
-$V_1+V_2 = V_1 \oplus V_2$ 임을 가정하자. $v\in V_1 \cap V_2$ 라면 $v\in V_1,\, (-v)\in V_2$ 이며 $v\ne 0$ 이면 @thm-directsum 에 위배된다. 따라서 $V_1 \cap V_2 = \{0_V\}$ 이다.
+$V_1+V_2 = V_1 \oplus V_2$ 임을 가정하자. $v\in V_1 \cap V_2$ 라면 $v\in V_1,\, (-v)\in V_2$ 이며 $v\ne 0$ 이면 @thm-LA_directsum 에 위배된다. 따라서 $V_1 \cap V_2 = \{0_V\}$ 이다.
 
 $V_1 \cap V_2= \{0_V\}$ 라고 하자. 어떤 $v_1\in V_1,\, v_2\in V_2$ 에 대해 $v_1+v_2=0$ 이라고 하자. $v_2=(-v_1)\in V_1$ 이므로 $v_1=v_2=0$ 일 수 밖에 없다. 따라서 $V_1+V_2 = V_1\oplus V_2$ 이다. $\square$
 
@@ -446,10 +446,10 @@ $V_1 \cap V_2= \{0_V\}$ 라고 하자. 어떤 $v_1\in V_1,\, v_2\in V_2$ 에 대
 
 ## 벡터공간의 기저와 차원
 
-### 선형결합과 Span {#sec-linear_combinatin_and_span}
+### 선형결합과 Span {#sec-LA_linear_combinatin_and_span}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-linear_combination_and_span}
+::: {#def-LA_linear_combination_and_span}
 
 #### 선형결합과 Span
 
@@ -468,13 +468,12 @@ $$
 이다.
 
 :::
-
 :::
 
 </br>
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#prp-span_minimal_subspace}
+::: {#prp-LA_span_minimal_subspace}
 
 $\mathbb{F}$-벡터공간 $V$ 에 대해 $v_1,\ldots,\,v_m\in V$ 일 때 $\text{span}(v_1,\ldots,\,v_m)$ 은 $V$ 의 부분공간이며 또한 $v_1,\ldots,\,v_m$ 을 포함하는 가장 작은 $V$ 의 부분공간이다.
 
@@ -493,7 +492,7 @@ $\mathbb{F}$-벡터공간 $V$ 에 대해 $v_1,\ldots,\,v_m\in V$ 일 때 $\text{
 
 ::: {.callout-note appearance="minimal" icon="false"}
 
-::: {#def-generated_vector_space}
+::: {#def-LA_generated_vector_space}
 
 #### 집합으로 부터 생성된 부분공간
 
@@ -505,7 +504,7 @@ $\mathbb{F}$-벡터공간 $V$ 에 대해 $v_1,\ldots,\,v_m\in V$ 일 때 $\text{
 
 </br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-::: {#exr-generated_subspace}
+::: {#exr-LA_generated_subspace}
 
 $U$ 가 벡터공간 $V$ 의 부분집합일 때 $\langle U \rangle = \text{span}(U)$ 는 $V$ 의 부분공간임을 보여라. $U$ 가 $V$ 의 부분공간이라면 $U = \langle U \rangle$ 임을 보여라.
 
@@ -518,7 +517,7 @@ $U$ 가 벡터공간 $V$ 의 부분집합일 때 $\langle U \rangle = \text{span
 ### 유한차원 벡터공간과 무한차원 벡터공간, 선형독립과 선형종속
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-finite_dimensional_vector_space}
+::: {#def-LA_finite_dimensional_vector_space}
 
 #### 유한차원 벡터공간
 벡터 공간 $V$ 를 유한개의 벡터의 span 으로 표현 할 수 있을 때 $V$ 를 **유한차원 벡터공간** 이라 한다. 유한차원 벡터공간이 아닌 벡터공간을 **무한차원 벡터공간** 이라 한다.
@@ -530,14 +529,14 @@ $U$ 가 벡터공간 $V$ 의 부분집합일 때 $\langle U \rangle = \text{span
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-fdvs1}
+::: {#exm-LA_fdvs1}
 $\mathbb{R}$-벡터공간 $\mathbb{R}^2$ 를 생각하자. 모든 $r\in \mathbb{R}^2$ 는 $(1,\,0)$ 과 $(0,\,1)$ 의 선형결합으로 표현 될 수 있다는 것을 보일 수 있다. 따라서 $\mathbb{R}^2$ 는 유한차원 벡터공간이다. $A=\{(x,\,x) : x\in \mathbb{R}\}$ 은 $\mathbb{R}^2$ 의 부분공간이며, $(1,\,1)$ 의 선형결합으로 표현할 수 있다. 따라서 $A$ 도 유한차원 벡터공간이다.
 :::
 </div>
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-independency}
+::: {#def-LA_independency}
 #### 선형독립과 선형종속
 
 벡터공간 $V$ 의 부분집합 $\{v_1,\ldots,\,v_m\}$ 에 대해 
@@ -557,7 +556,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-zero_vector_dependent}
+::: {#exr-LA_zero_vector_dependent}
 $0$ 벡터가 포함된 벡터의 집합은 선형종속이다.
 :::
 </div></br>
@@ -575,13 +574,13 @@ $$
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-unique_span}
+::: {#prp-LA_unique_span}
 $\mathbb{F}$-벡터공간 $V$ 의 부분집합 $\{v_1,\ldots,\,v_n\}$ 이 선형독립이고 $v\in \text{span}(v_1,\ldots,v_n)$ 일 때, $v$ 를 $\{v_1,\ldots,\,v_n\}$ 의 선형결합으로 표현하는 방법은 유일하다.
 :::
 </div></br>
 
 ::: {.proof}
-우선 @def-independency 에 따라 $0_V$ 을 $\{v_1,\ldots,\,v_n\}$ 의 선형결합으로 표현하는 방법이 유일하다. $v\in \text{span}(v_1,\ldots,\,v_n)$ 일 때,
+우선 @def-LA_independency 에 따라 $0_V$ 을 $\{v_1,\ldots,\,v_n\}$ 의 선형결합으로 표현하는 방법이 유일하다. $v\in \text{span}(v_1,\ldots,\,v_n)$ 일 때,
 
 $$
 \begin{aligned}
@@ -617,12 +616,13 @@ $$
 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#prp-vector_dependency_and_span}
+
+::: {#prp-LA_vector_dependency_and_span}
 벡터공간 $V$ 와 $V_0 = \{v_1,\ldots,\,v_n\} \subset V$ 에 대해 다음은 동치이다.
 
-&emsp; ($1$) $V_0$ 가 선형 종속이다
+&emsp;($1$) $V_0$ 가 선형 종속이다
 
-&emsp; ($2$) $\text{span}(V_0) = \text{span}(V_0-\{v_k\})$ 인 $v_k \in V_0$ 가 존재한다.
+&emsp;($2$) $\text{span}(V_0) = \text{span}(V_0-\{v_k\})$ 인 $v_k \in V_0$ 가 존재한다.
 :::
 </div></br>
 
@@ -638,17 +638,18 @@ $$
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-vector_independency_and_span}
+::: {#cor-LA_vector_independency_and_span}
 벡터공간 $V$ 와 $V_0 = \{v_1,\ldots,\,v_n\} \subset V$ 에 대해 다음은 동치이다.
 
-&emsp; (1) $V_0$ 가 선형 독립이다
+&emsp;(1) $V_0$ 가 선형 독립이다
 
-&emsp; (2) 모든 $v_i\in V_0$ 에 대해 $\text{span}(V_0) \ne \text{span}(V_0-\{v_i\})$ 이다.
+&emsp;(2) 모든 $v_i\in V_0$ 에 대해 $\text{span}(V_0) \ne \text{span}(V_0-\{v_i\})$ 이다.
 :::
 </div>
 </br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-::: {#exm-linear_dependency_of_polynomials}
+
+::: {#exm-LA_linear_dependency_of_polynomials}
 
 $\mathbb{F}_n[t]$ 에서 $\{1,\,t,\ldots,\,t^n\}$ 이 선형독립임을 보이자. 
 
@@ -664,10 +665,10 @@ $$
 
 </br>
 
-### 벡터공간의 기저 와 순서 기저 
+### 벡터공간의 기저 와 순서 기저 {#sec-LA_basis_and_ordered_basis}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-basis}
+::: {#def-LA-basis}
 #### 기저
 
 선형 독립인 $\{v_1,\ldots,\,v_m\}$ 가 벡터공간 $V$ 를 span 할 때  $V$ 의 **기저 (basis)** 라 한다. 
@@ -676,12 +677,12 @@ $$
 
 </br>
 
-기저의 정의와 @prp-unique_span 으로부터, 다음을 알 수 있다.
+기저의 정의와 @prp-LA_unique_span 으로부터, 다음을 알 수 있다.
 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-unique}
+::: {#prp-LA_unique}
 $v\in V$ 를 $V$ 의 기저인 $\{v_1,\ldots,\,v_m\}$ 의 선형결합으로 표현하는 방법은 유일하다.
 :::
 
@@ -693,11 +694,11 @@ $v\in V$ 를 $V$ 의 기저인 $\{v_1,\ldots,\,v_m\}$ 의 선형결합으로 표
 
 ### Span 하는 벡터로부터 기저를 추출하기
 
-유한개의 벡터의 집합 $\{u_1,\ldots,u_m\}$ 이 벡터공간 $V$ 를 span 하면 $V$ 는 유한차원 벡터공간이다. 만약 이 $\{u_i\}$ 가 선형종속이면 적절한 벡터를 제거하여 $V$ 를 span 하게 할 수 있다(@prp-vector_dependency_and_span). 더 이상 제거할 수 없을 때 이 집합은 선형 독립(@cor-vector_independency_and_span)이며 $V$ 의 기저이다. 우리는 이로부터 다음을 알 수 있다.
+유한개의 벡터의 집합 $\{u_1,\ldots,u_m\}$ 이 벡터공간 $V$ 를 span 하면 $V$ 는 유한차원 벡터공간이다. 만약 이 $\{u_i\}$ 가 선형종속이면 적절한 벡터를 제거하여 $V$ 를 span 하게 할 수 있다(@prp-LA_vector_dependency_and_span). 더 이상 제거할 수 없을 때 이 집합은 선형 독립(@cor-LA_vector_independency_and_span)이며 $V$ 의 기저이다. 우리는 이로부터 다음을 알 수 있다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-finitebasis}
+::: {#thm-LA_finitebasis}
 유한차원 벡터공간은 유한개의 벡터로 이루어진 기저를 갖는다. 
 :::
 
@@ -713,7 +714,8 @@ $v\in V$ 를 $V$ 의 기저인 $\{v_1,\ldots,\,v_m\}$ 의 선형결합으로 표
 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#lem-basis_expansion}
+
+::: {#lem-LA_basis_expansion}
 유한차원 벡터공간 $V$ 의 부분집합 $\mathcal{B}_0=\{u_1,\ldots,\,u_m\}$ 이 선형독립일 때 $\mathcal{B}_0$ 를 포함하는 $V$ 의 기저가 존재한다.
 :::
 
@@ -746,7 +748,8 @@ $$
 다음 보조정리는 선형독립인 벡터의 집합과 벡터공간을 span 하는 벡터의 집합의 크기에 어떤 관련이 있음을 말한다. 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#lem-number_of_basis}
+
+::: {#lem-LA_number_of_basis}
 유한차원 벡터공간 $V$ 에 속하는 선형독립인 벡터 $\{v_1,\ldots,\,v_m\}$ 을 생각하자. 벡터의 집합 $\{u_1,\ldots,\,u_n\}$ 이 $V$ 를 span 할 때, $V$ 에 포함되는 선형독립인 벡터의 갯수는 벡터공간을 span 하는 벡터의 갯수보다 항상 작거나 같다.
 :::
 
@@ -762,7 +765,7 @@ $\mathcal{B}_0=\{u_1,\ldots,\,u_n\}$ 라 하자. $\text{span}(\mathcal{B}_0)=V$ 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-basis_equality}
+::: {#thm-LA_basis_equality}
 유한차원 벡터공간 $V$ 의 기저를 이루는 벡터의 개수는 항상 동일하다.
 :::
 </div></br>
@@ -774,7 +777,7 @@ $\mathcal{B}_1 = (v_1,\ldots,\,v_m)$ 과 $\mathcal{B}_2 = (v'_1,\ldots,\,v'_n)$ 
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-dimension}
+::: {#def-LA_dimension}
 
 ### 벡터공간의 차원 
 
@@ -785,7 +788,7 @@ $\mathcal{B}_1 = (v_1,\ldots,\,v_m)$ 과 $\mathcal{B}_2 = (v'_1,\ldots,\,v'_n)$ 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-dim_subspace}
+::: {#cor-LA_dim_subspace}
 
 $W$ 가 $V$ 의 부분공간이면 $\dim (W) \le \dim (V)$ 이고 $\dim (W)= \dim (V)$ 이면 $V=W$ 이다.
 
@@ -807,9 +810,9 @@ $$
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-dimension_of_matrix_space}
+::: {#exm-LA_dimension_of_matrix_space}
 
-우리는 @exm-vectorspace_matrix 에서 $\mathbb{F}$ 의 의 원소를 성분으로 갖는 행렬의 집합 $\mathcal{M}_{m\times n}(\mathbb{F})$ 가 벡터공간이라는 것을 알았다. $1 \le i \le m$, $1 \le j \le n$ 에 대해 $\boldsymbol{E}^{(i,j)}$ 을 $i$ 행 $j$ 열 성분은 $1$ 이며 나머지 성분은 모두 $0$ 인 $m \times n$ 행렬이라 하자. 즉 $\mathbb{F}^{2 \times 3}$ 에서 $\boldsymbol{E}^{(2, 1)} = \begin{bmatrix} 0 & 0 & 0 \\ 1 & 0 & 0\end{bmatrix}$ 이다. $\mathbb{F}^{m \times n}$ 에서 $\mathcal{B}=\left\{\boldsymbol{E}^{(i, j)} : 1\le i \le m,\, 1 \le j \le n\right\}$ 는 선형독립이다. 또한 $\mathcal{B}$ 가 $\mathcal{M}_{m\times n}(\mathbb{F})$ 을 span 한다. $\mathcal{B}$ 의 원소의 갯수는 $mn$ 이므로 $\dim (\mathcal{M}_{m\times n}(\mathbb{F}))=mn$ 이다.
+우리는 @exm-LA_vectorspace_matrix 에서 $\mathbb{F}$ 의 의 원소를 성분으로 갖는 행렬의 집합 $\mathcal{M}_{m\times n}(\mathbb{F})$ 가 벡터공간이라는 것을 알았다. $1 \le i \le m$, $1 \le j \le n$ 에 대해 $\boldsymbol{E}^{(i,j)}$ 을 $i$ 행 $j$ 열 성분은 $1$ 이며 나머지 성분은 모두 $0$ 인 $m \times n$ 행렬이라 하자. 즉 $\mathbb{F}^{2 \times 3}$ 에서 $\boldsymbol{E}^{(2, 1)} = \begin{bmatrix} 0 & 0 & 0 \\ 1 & 0 & 0\end{bmatrix}$ 이다. $\mathbb{F}^{m \times n}$ 에서 $\mathcal{B}=\left\{\boldsymbol{E}^{(i, j)} : 1\le i \le m,\, 1 \le j \le n\right\}$ 는 선형독립이다. 또한 $\mathcal{B}$ 가 $\mathcal{M}_{m\times n}(\mathbb{F})$ 을 span 한다. $\mathcal{B}$ 의 원소의 갯수는 $mn$ 이므로 $\dim (\mathcal{M}_{m\times n}(\mathbb{F}))=mn$ 이다.
 
 :::
 
@@ -818,7 +821,8 @@ $$
 ### 합공간의 차원
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#prp-dim_sum}
+
+::: {#prp-LA_dim_sum}
 $U_1,\,U_2$ 가 유한차원 부분공간 $V$ 의 부분공간일 때 다음이 성립한다.
 $$
 \dim (U_1 + U_2) = \dim (U_1) + \dim (U_2) - \dim (U_1 \cap U_2).
@@ -829,7 +833,7 @@ $$
 </div></br>
 
 ::: {.proof}
-두 벡터공간 $U,\,V$ 의 교집합은 $U$ 와 $V$ 각각의 부분공간이다. (즉 벡터공간이다. @exm-intersection_of_two_spaces) $\dim (U_1 \cap U_2) = m$ 이라 할 때 $U_1 \cap U_2$ 의 기저 $\{w_1,\ldots,\,w_m\}$ 을 잡는다. 이를 확장하여 $U_1$ 의 기저 $\{w_1,\ldots,\,w_m,\,u_1,\ldots,\,u_k\}$  와 $U_2$ 의 기저 $\{ w_1,\ldots,\,w_m,\,u_1,\ldots,u_n \}$ 을 구성 할 수 있다.
+두 벡터공간 $U,\,V$ 의 교집합은 $U$ 와 $V$ 각각의 부분공간이다. (즉 벡터공간이다. @exm-LA_intersection_of_two_spaces) $\dim (U_1 \cap U_2) = m$ 이라 할 때 $U_1 \cap U_2$ 의 기저 $\{w_1,\ldots,\,w_m\}$ 을 잡는다. 이를 확장하여 $U_1$ 의 기저 $\{w_1,\ldots,\,w_m,\,u_1,\ldots,\,u_k\}$  와 $U_2$ 의 기저 $\{ w_1,\ldots,\,w_m,\,u_1,\ldots,u_n \}$ 을 구성 할 수 있다.
 
 $\dim (U_1) = m+k$, $\dim (U_2) = m+n$ 이며 $\dim (U_1+U_2)= m+n+k$ 이므로 위의 식이 성립한다. $\square$
 
@@ -841,7 +845,7 @@ $\dim (U_1) = m+k$, $\dim (U_2) = m+n$ 이며 $\dim (U_1+U_2)= m+n+k$ 이므로 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-dimension_of_direct_sum}
+::: {#prp-LA_dimension_of_direct_sum}
 
 유한차원 벡터공간 $V$ 와 그 부분공간 $U_1,\,U_2$ 에 대해 $V=U_1\oplus U_2$ 이면 $\dim (V) = \dim(U_1) + \dim (U_2)$ 이다.
 
@@ -855,10 +859,10 @@ $\dim (U_1) = m+k$, $\dim (U_2) = m+n$ 이며 $\dim (U_1+U_2)= m+n+k$ 이므로 
 
 여기서는 벡터를 행렬로 표현하는 방법에 대해 다룬다.
 
-### 벡터의 행렬표현 
+### 벡터의 행렬표현 {#sec-LA_matrix_representation_of_vector}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-matrix_representation_of_vector}
+::: {#def-LA_matrix_representation_of_vector}
 
 #### 벡터의 행렬표현과 좌표
 
@@ -879,10 +883,10 @@ $n$ 차원 벡터를 행렬로 표형할때는 일반적으로 위와 같은 $n 
 </br>
 
 
-### 열벡터와 표준 기저
+### 열벡터와 표준 기저 {#sec-LA_column_vector_and_standard_basis}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-standard_basis}
+::: {#def-LA_standard_basis}
 
 #### 표준기저와 표준기저벡터
 
@@ -901,14 +905,16 @@ $$
 
 </br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-::: {#exm-standard_basis}
+
+::: {#exm-LA_standard_basis}
 위에서 정의한 표준기저가 실제 벡터공간 $\mathbb{F}^{n}$ 의 기저임을 보여라.
 :::
 
 </div></br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-::: {#exm-stadard_basis_2}
+
+::: {#exm-LA_stadard_basis_2}
 
 벡터공간 $V$ 의 기저 $\mathcal{B}_V=(v_i)$ 에 대해 기저의 행렬표현은 표준기저이다. 즉 $[v_i]_{\mathcal{B}_V} = \boldsymbol{e}_i$ 이다.
 
@@ -917,13 +923,15 @@ $$
 </div></br>
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-::: {#exm-matrix_representation_of_vectors}
+
+::: {#exm-LA_matrix_representation_of_vectors}
 $\mathbb{R}^2$ 에서 $\mathcal{B}_1 = ((1, 0),\, (0, 1))$ 이 표준기저이다. 이 이외에도 $\mathcal{B}_2 = ( (1, 1),\, (1, -1) )$ 도 기저가 될 수 있다. $v=(3,\,1)$ 은 $3(1, 0) + 1(0,1)$ 이므로 $[v]_{\mathcal{B}_1}=\begin{bmatrix} 3 \\ 1\end{bmatrix}$ 이다. 또한 $v=2(1,1)+(1, -1)$ 이므로 $[v]_{\mathcal{B}_2} =\begin{bmatrix} 2 \\ 1 \end{bmatrix}$ 이다.
 :::
 
 </div></br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-::: {#exm-sum_of_vector_in_matrix_representation}
+
+::: {#exm-LA_sum_of_vector_in_matrix_representation}
 $n$ 차원 벡터공간 $V$ 에 대해 $u,\,v\in V,\,c \in \mathbb{F}$ 라 하자. $V$ 의 한 순서기저 $\mathcal{B} = (v_1,\ldots,v_n)$ 에 대해 $v=\sum_i a_i v_i$, $u=\sum_i b_i v_i$ 일 때, 
 
 $$
@@ -936,7 +944,7 @@ $$
 </div></br>
 
 ::: {.callout-warning appearance="simple" icon="false"}
-우리는 아직 행렬의 덧셈을 정의하지 않았고 단지 두 벡터의 합과 스칼라곱이 벡터의 행렬표현에서 어떻게 되는지를 알아본 것이다. 위의 @exm-sum_of_vector_in_matrix_representation 을 잘 보면 (최소한) $n\times 1$ 행렬의 덧셈과 스칼라곱을 어떻게 자연스럽게 정의 할 수 있을지 판단 할 수 있을 것이다. 다음 장에서 일반적인 행렬의 덧셈과 스칼라곱을 제대로 정의 할 것이다.
+우리는 아직 행렬의 덧셈을 정의하지 않았고 단지 두 벡터의 합과 스칼라곱이 벡터의 행렬표현에서 어떻게 되는지를 알아본 것이다. 위의 @exm-LA_sum_of_vector_in_matrix_representation 을 잘 보면 (최소한) $n\times 1$ 행렬의 덧셈과 스칼라곱을 어떻게 자연스럽게 정의 할 수 있을지 판단 할 수 있을 것이다. 다음 장에서 일반적인 행렬의 덧셈과 스칼라곱을 제대로 정의 할 것이다.
 
 :::
 
@@ -946,7 +954,7 @@ $$
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-union_of_two_subspaces}
+::: {#exr-LA_union_of_two_subspaces}
 
 벡터공간 $V$ 의 두 부분공간 $U_1$, $U_2$ 에 대해 $(U_1 \cup U_2) \le V$ 일 필요충분조건은 $U_1 \le U_2$ 이거나 $U_2 \le U_1$ 인 것을 보여라.
 :::
@@ -960,7 +968,8 @@ $U_1 \le U_2$ 일 때 $(U_1 \cup U_2) \le V$ 인 것은 자명하다. $u_1 \in U
 
 </br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-::: {#exr-basis_or_direct_sum}
+
+::: {#exr-LA_basis_or_direct_sum}
 
 $U, V$ 가 벡터공간 $W$ 의 부분공간이며 $W=U \oplus V$ 라고 하자. $(u_1,\ldots,\,u_n)$ 이 $U$ 의 기저이고 $(v_1, \ldots,\,v_m)$ 이 $V$ 의 기저이면 $(u_1,\ldots,\,u_n,\,v_1,\ldots,\,v_m)$ 은 $W$ 의 기저임을 보여라.
 :::

@@ -7,16 +7,18 @@ crossref:
 ---
 
 
+{{< include ../../latexmacros.qmd >}}
 
+</br>
 
-## 쌍선형 형식
+## 쌍선형 형식 {#sec-ALA_bilinear_form}
 
-두 벡터공간을 곱하는 것에 대해 우리는 곱공간 $U \times V$ 를 안다. 여기서는 $U \otimes V$ 로 표기되는 두 벡터공간의 텐서곱에 대해 알아보고자 한다. 이를 위해 @def-k_linear_form 에서의 쌍선형 형식을 이용한다.  여기서는 쌍선형 형식을 많이 쓰기 때문에 $\mathcal{T}^2(U, V)$ 를 $\mathfrak{B}(U,\,V)$ 로 표기하기로 한다. 
-@prp-vector_space_of_k_linear_form 로부터 다음을 안다.
+두 벡터공간을 곱하는 것에 대해 우리는 곱공간 $U \times V$ 를 안다. 여기서는 $U \otimes V$ 로 표기되는 두 벡터공간의 텐서곱에 대해 알아보고자 한다. 이를 위해 @def-ALA_k_linear_form 에서의 쌍선형 형식을 이용한다.  여기서는 쌍선형 형식을 많이 쓰기 때문에 $\mathcal{T}^2(U, V)$ 를 $\mathfrak{B}(U,\,V)$ 로 표기하기로 한다. 
+@prp-ALA_vector_space_of_k_linear_form 로부터 다음을 안다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part_3_bilinear_form_is_vector_space}
+::: {#prp-ALA_bilinear_form_is_vector_space}
 
 $\mathbb{F}$-벡터공간 $U\times V$ 에서 정의된 쌍선형 형식의 집합 $\mathfrak{B}(U,\,V)$ 는 벡터공간이다. 
 
@@ -29,7 +31,7 @@ $\mathbb{F}$-벡터공간 $U\times V$ 에서 정의된 쌍선형 형식의 집�
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-part3_bilinear_functional}
+::: {#exm-ALA_bilinear_functional}
 
 #### 쌍선형 형식
 
@@ -52,7 +54,7 @@ $\mathbb{F}$-벡터공간 $U\times V$ 에서 정의된 쌍선형 형식의 집�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_dimension_of_bilinear_functional}
+::: {#prp-ALA_dimension_of_bilinear_functional}
 
 유한차원 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $\dim(\mathfrak{B}(U,\,V)) = \dim(U) \times \dim(V)$ 이다. 
 
@@ -86,11 +88,11 @@ $\beta_A$ 가 $U,\, V$ 에서의 쌍선형 형식이라는 것은 쉽게 보일 
 
 </br>
 
-## 텐서곱
+## 텐서곱 {#sec-ALA_tensor_product}
 
 ::: {.callout-note appearance="minimal"}
 
-::: {#def-part3_tensor_product}
+::: {#def-ALA_tensor_product}
 
 #### 벡터공간의 텐서곱
 
@@ -106,7 +108,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_dimension_of_tensor_product}
+::: {#prp-ALA_dimension_of_tensor_product}
 
 $U,\,V$ 가 유한차원 벡터공간일 때 $\dim(U \otimes V) = \dim(U) \times \dim (V)$ 이다.
 
@@ -122,7 +124,7 @@ $U,\,V$ 가 유한차원 벡터공간일 때 $\dim(U \otimes V) = \dim(U) \times
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_bilinearity_of_tensor_product}
+::: {#prp-ALA_bilinearity_of_tensor_product}
 
 $u,\, u_1,\,u_2\in U$, $v,\,v_1,\,v_2\in V$, $c\in \mathbb{F}$ 에 대해 다음이 성립한다.
 
@@ -152,12 +154,12 @@ $$
 
 :::
 
-위의 @prp-part3_bilinearity_of_tensor_product 는 $u \otimes v$ 가 쌍선형 형식임을 보여준다.
+위의 @prp-ALA_bilinearity_of_tensor_product 는 $u \otimes v$ 가 쌍선형 형식임을 보여준다.
 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part3_basis_of_tensor_product}
+::: {#thm-ALA_basis_of_tensor_product}
 
 $\mathcal{B}_U = (e_1,\ldots,\,e_m),\, \mathcal{B}_V=(f_1,\ldots,\,f_n)$ 이 각각 벡터공간 $U,\,V$ 의 부분집합이고 $\mathcal{B} = \{e_i \otimes f_j : i=1,\ldots,\,m,\, j=1,\ldots,\,n\}$ 일 때 다음이 성립한다. 
 
@@ -187,7 +189,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler_4th_9D_3}
+::: {#exr-ALA_axler_4th_9D_3}
 
 $\{u_1,\ldots,\,u_m\}$ 이 $U$ 에서의 선형독립이며 $\{v_1,\ldots,\,v_m\}\subset V$ 가
 
@@ -214,7 +216,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler_4th_9D_4}
+::: {#exr-ALA_axler_4th_9D_4}
 
 $\dim (U)>1,\, \dim(V)>1$ 일 때 $X=\{u\otimes v : (u,\,v)\in U\times V\}$ 는 $U \otimes V$ 의 부분공간이 아님을 보이시오.
 
@@ -244,18 +246,18 @@ $$
 
 </br>
 
-## 쌍선형 사상
+## 쌍선형 사상 {#sec-ALA_bilinear_map}
 
 ::: {.callout-note appearance="minimal"}
 
-::: {#def-part3_bilinear_map}
+::: {#def-ALA_bilinear_map}
 
 #### 쌍선형 사상
 벡터공간 $U,\,V,\,W$ 에 대해 $\Gamma : U \times V \to W$ 가 
 
-&emsp; ($1$) 고정된 $v\in V$ 에 대해 $\chi (u) = \Gamma (u, v) \in \mathcal{L}(U,\,W)$ 이며,
+&emsp;($1$) 고정된 $v\in V$ 에 대해 $\chi (u) = \Gamma (u, v) \in \mathcal{L}(U,\,W)$ 이며,
 
-&emsp; ($2$) 고정된 $u\in U$ 에 대해 $\xi (v) = \Gamma (u,\,v) \in \mathcal{L}(V,\,W)$ 이면
+&emsp;($2$) 고정된 $u\in U$ 에 대해 $\xi (v) = \Gamma (u,\,v) \in \mathcal{L}(V,\,W)$ 이면
 
 $\Gamma$ 를 $U\times V$ 에서 $W$ 로의 **쌍선형 사상(bilinear map)** 이라고 한다. 
 
@@ -267,15 +269,15 @@ $\Gamma$ 를 $U\times V$ 에서 $W$ 로의 **쌍선형 사상(bilinear map)** �
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-part3_examples_of_bilinear_map}
+::: {#exm-ALA_examples_of_bilinear_map}
 
-1. $\mathfrak{B}(U,\,V)$ 는 $U\times V \mapsto \mathbb{F}$ 인 쌍선형 사상이다.
+($1$) $\mathfrak{B}(U,\,V)$ 는 $U\times V \mapsto \mathbb{F}$ 인 쌍선형 사상이다.
 
-2. $\Gamma : U \times V \to U\otimes V$ 를 $\Gamma (u,\,v) = u\otimes v$ 로 정의하면 $\Gamma$ 는 $U \times V \mapsto U\otimes V$ 인 쌍선형 사상이다.
+($2$) $\Gamma : U \times V \to U\otimes V$ 를 $\Gamma (u,\,v) = u\otimes v$ 로 정의하면 $\Gamma$ 는 $U \times V \mapsto U\otimes V$ 인 쌍선형 사상이다.
 
-3. $\Gamma: \mathcal{L}(V)\times \mathcal{L}(V) \to \mathcal{L}(V)$ 를 $\Gamma(L,\, S) = LS$ 로 정의하면 쌍선형 사상이다.
+($3$) $\Gamma: \mathcal{L}(V)\times \mathcal{L}(V) \to \mathcal{L}(V)$ 를 $\Gamma(L,\, S) = LS$ 로 정의하면 쌍선형 사상이다.
 
-4. $\Gamma : U \times \mathcal{L}(U,\,V) \to V$ 를 $\Gamma(v,\,,L)= Lv$ 로 정의하면 쌍선형 사상이다. 
+($4$) $\Gamma : U \times \mathcal{L}(U,\,V) \to V$ 를 $\Gamma(v,\,,L)= Lv$ 로 정의하면 쌍선형 사상이다. 
 
 
 :::
@@ -284,7 +286,7 @@ $\Gamma$ 를 $U\times V$ 에서 $W$ 로의 **쌍선형 사상(bilinear map)** �
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part3_bilinear_map_to_linear_map}
+::: {#thm-ALA_bilinear_map_to_linear_map}
 
 유한차원 $\mathbb{F}$-벡터공간 $U,\,V,\,W$ 를 생각하자. 
 
@@ -308,7 +310,7 @@ $$
 
 $(e_1,\ldots,\,e_m)$ 이 $U$ 의 기저이고 $(f_1,\ldots,\,f_n)$ 이 $V$ 의 기저라고 하자. 
 
-($1$) @prp-linearmap_basis 과 @thm-part3_basis_of_tensor_product ($2$) 에 의해 다음을 만족하는 선형사상 $\hat{\Gamma}(U \otimes V) \to W$ 가 존재한다.
+($1$) @prp-LA_linearmap_basis 과 @thm-ALA_basis_of_tensor_product ($2$) 에 의해 다음을 만족하는 선형사상 $\hat{\Gamma}(U \otimes V) \to W$ 가 존재한다.
 
 $$
 \hat{\Gamma}(e_i \otimes f_j) =  \Gamma(e_i, f_j),\qquad i=1,\ldots,\,m,\,j=1,\ldots,n.

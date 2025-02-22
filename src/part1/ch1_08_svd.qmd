@@ -11,7 +11,7 @@ crossref:
 ## Positive, Positive definite 행렬과 제곱근 행렬
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-pisitive_definite_matrix}
+::: {#def-LA_pisitive_definite_matrix}
 
 #### Positive Definite 행렬 와 제곱근 행렬
 
@@ -38,7 +38,7 @@ crossref:
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-properties_of_posivive_definite_matrix}
+::: {#prp-LA_properties_of_posivive_definite_matrix}
 
 $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 동치이다.
 
@@ -75,7 +75,7 @@ $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 �
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-uniqueness_of_squareroot_matrix}
+::: {#prp-LA_uniqueness_of_squareroot_matrix}
 
 non-negative 행렬 $\boldsymbol{A}$ 의 non-nagative 한 제곱근 행렬은 유일하다.
 
@@ -105,7 +105,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-squareroot_matrix}
+::: {#prp-LA_squareroot_matrix}
 
 임의의 $\boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\boldsymbol{B}^\ast \boldsymbol{B}$ 를 생각 할 수 있다. 이 때 $\boldsymbol{B}^\ast \in \mathcal{M}_{n \times m}(\mathbb{F})$ 이다. $\boldsymbol{B}^\ast \boldsymbol{B}$ 는
 
@@ -125,7 +125,7 @@ $$
 
 ($2$) $\langle \boldsymbol{B}^\ast\boldsymbol{Bv},\,\boldsymbol{v}\rangle = \|\boldsymbol{Bv}\|^2 \ge 0$.
 
-($3$) @prp-properties_of_posivive_definite_matrix $\square$
+($3$) @prp-LA_properties_of_posivive_definite_matrix $\square$
 :::
 
 </br>
@@ -159,7 +159,7 @@ $\boldsymbol{u}\in \ker \boldsymbol{B}$ 라 하자. $\boldsymbol{BAu} =\boldsymb
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-singular_value_of_matrix}
+::: {#def-LA_singular_value_of_matrix}
 
 #### 특이값
 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 의 고유값을 **특이값(singular value)** 라 한다. 특이값을 열거할때는 보통 가장 큰 값부터 내림차순으로 열거한다. 따라서 특이값 $s_1,\ldots,\,s_n$ 이라고 하면 $s_1 \ge s_2 \ge \cdots \ge s_n$ 을 의미한다.
@@ -169,17 +169,17 @@ $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\sqrt{\bold
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-properties_of_AAast}
+::: {#prp-LA_properties_of_AAast}
 
 $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한다.
 
-&emsp; ($1$) $\bf{A}^\ast \bf{A}$ 는 positive 행렬이다.
+&emsp;($1$) $\bf{A}^\ast \bf{A}$ 는 positive 행렬이다.
 
-&emsp; ($2$) $\ker (\bf{A}^\ast \bf{A}) = \ker (\bf{A})$.
+&emsp;($2$) $\ker (\bf{A}^\ast \bf{A}) = \ker (\bf{A})$.
 
-&emsp; ($3$) $\text{im}(\bf{A}^\ast \bf{A}) = \text{im}(\bf{A}^\ast)$.
+&emsp;($3$) $\text{im}(\bf{A}^\ast \bf{A}) = \text{im}(\bf{A}^\ast)$.
 
-&emsp; ($4$) $\text{rank}(\bf{A}) = \text{rank}(\bf{A}^\ast) = \text{rank}(\bf{A}^\ast \bf{A})$
+&emsp;($4$) $\text{rank}(\bf{A}) = \text{rank}(\bf{A}^\ast) = \text{rank}(\bf{A}^\ast \bf{A})$
  
 :::
 
@@ -191,7 +191,7 @@ $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한�
 
 ($2$) $u\in \ker(\bf{A}^\ast \bf{A}) \implies \langle \bf{A}^\ast \bf{Au},\, \bf{v}\rangle = \|\bf{Au}\|^2=0$ 이므로 $\bf{u}\in \ker (\bf{A})$. 역으로 $\bf{u}\in \ker \bf{A}$ 이면 $\bf{Au}=\bf{0}$ 이므로 $\bf{A}^\ast \bf{A u}=0$ 이며, 따라서 $\bf{u}\in \ker (\bf{A}^\ast \bf{A})$. 따라서 $\ker (\bf{A}^\ast \bf{A}) = \ker (\bf{A})$.
 
-($3$) @thm-kernel_image_of_adjoint_operator 과 ($2$) 로부터 $\text{im}(\bf{A}^\ast \bf{A}) = (\ker(\bf{A}^\ast \bf{A}))^\perp = (\ker (\bf{A}))^\perp = \text{im}(\bf{A}^\ast)$ 임을 안다. 
+($3$) @thm-LA_kernel_image_of_adjoint_operator 과 ($2$) 로부터 $\text{im}(\bf{A}^\ast \bf{A}) = (\ker(\bf{A}^\ast \bf{A}))^\perp = (\ker (\bf{A}))^\perp = \text{im}(\bf{A}^\ast)$ 임을 안다. 
 
 ($4$) @exr-axler4th_7_A_7 로부터 $\text{rank}(\bf{A}) = \text{rank}(\bf{A}^\ast)$. ($3$) 으로부터 $\text{rank}(\bf{A}^\ast) = \text{rank}(\bf{A}^\ast \bf{A})$. $\square$
 
@@ -199,15 +199,15 @@ $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-properties_of_singular_value}
+::: {#prp-LA_properties_of_singular_value}
 
 $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
 
-&emsp; ($1$) $\bf{A}$ 가 단사일 필요충분조건은 $0$ 이 $\bf{A}$ 의 특이값이 아닌 것이다.
+&emsp;($1$) $\bf{A}$ 가 단사일 필요충분조건은 $0$ 이 $\bf{A}$ 의 특이값이 아닌 것이다.
 
-&emsp; ($2$) $\bf{A}$ 의 0 이 아닌 특이값의 갯수는 반복되는 것도 갯수를 합치면 $\text{rank}(\bf{A})$ 와 같다. 
+&emsp;($2$) $\bf{A}$ 의 0 이 아닌 특이값의 갯수는 반복되는 것도 갯수를 합치면 $\text{rank}(\bf{A})$ 와 같다. 
 
-&emsp; ($3$) $\bf{A}$ 가 전사일 필요충분조건은 $\bf{A}$ 의 특이값의 갯수가 $n$ 인 것이다. 
+&emsp;($3$) $\bf{A}$ 가 전사일 필요충분조건은 $\bf{A}$ 의 특이값의 갯수가 $n$ 인 것이다. 
 
 :::
 
@@ -217,7 +217,7 @@ $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
 
 ($1$) $\bf{A}$ 가 단사 $\iff \ker (\bf{A}) = \{0\} \iff \ker(\bf{A}^\ast \bf{A})= \{0\}$ 
 
-($2$) $\bf{A}$ 가 에르미트 이므로 $\dim (\bf{A})$ 는 $\bf{A}$ 의 $0$ 이 아닌 고유값의 갯수(반복되는 것도 포함하여)와 같다. @prp-properties_of_AAast 의 ($4$) 에 따라 $\bf{A}$ 의 특이값의 갯수는 $\text{rank}(\bf{A})$ 와 같다.
+($2$) $\bf{A}$ 가 에르미트 이므로 $\dim (\bf{A})$ 는 $\bf{A}$ 의 $0$ 이 아닌 고유값의 갯수(반복되는 것도 포함하여)와 같다. @prp-LA_properties_of_AAast 의 ($4$) 에 따라 $\bf{A}$ 의 특이값의 갯수는 $\text{rank}(\bf{A})$ 와 같다.
 
 ($3$) ($2$) 에 의헤 당연하다. $\square$
 
@@ -225,13 +225,13 @@ $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-linear_isometry_and_singular_values}
+::: {#prp-LA_linear_isometry_and_singular_values}
 
 정사각 행렬 $\boldsymbol{S}$ 에 대해 다음은 동치이다.
 
-&emsp; ($1$) $\boldsymbol{S}$ 는 linear isometry 이다.
+&emsp;($1$) $\boldsymbol{S}$ 는 linear isometry 이다.
 
-&emsp; ($2$) $\boldsymbol{S}$ 의 특이값이 $1$ 뿐이다.
+&emsp;($2$) $\boldsymbol{S}$ 의 특이값이 $1$ 뿐이다.
 
 :::
 
@@ -248,11 +248,11 @@ $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
 
 </br>
 
-### 특이값 분해
+### 특이값 분해 {#sec-LA_SVD}
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-for_svd}
+::: {#prp-LA_for_svd}
 
 영행렬이 아닌 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 의 $0$ 이 아닌 특이값 $s_1,\ldots,\,s_M$ 에 대해 $\mathcal{M}_{n}(\mathbb{F})$ 에 속하는 정규직교벡터 $\{\boldsymbol{e}_1,\,\ldots,\,\boldsymbol{e}_n\}$ 와 $\mathcal{M}_m(\mathbb{F})$ 에 속하는 정규직교벡터 $\{\boldsymbol{f}_1,\ldots,\,\boldsymbol{f}_m \}$ 가 존재하여 $\boldsymbol{v}\in \mathcal{M}_n(\mathbb{F})$ 에 대해
 
@@ -301,11 +301,11 @@ $$
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-eigenvector_for_signular_value}
+::: {#def-LA_eigenvector_for_signular_value}
 
 #### 특이벡터
 
-@prp-for_svd 에서 정의된 $\mathcal{M}_n(\mathbb{F})$ 의 정규직교기저벡터 $\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n$ 를 행렬 $\boldsymbol{A}$ 에 대한 **오른쪽 특이벡터 (right singular vectors)** 라고 한다. 또한 $\mathcal{M}_m(\mathbb{F})$ 의 정규직교기저벡터 $\boldsymbol{f}_1,\ldots,\,\boldsymbol{f}_m$ 을 **왼쪽 특이 벡터(left singular vectors)** 라고 한다.
+@prp-LA_for_svd 에서 정의된 $\mathcal{M}_n(\mathbb{F})$ 의 정규직교기저벡터 $\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n$ 를 행렬 $\boldsymbol{A}$ 에 대한 **오른쪽 특이벡터 (right singular vectors)** 라고 한다. 또한 $\mathcal{M}_m(\mathbb{F})$ 의 정규직교기저벡터 $\boldsymbol{f}_1,\ldots,\,\boldsymbol{f}_m$ 을 **왼쪽 특이 벡터(left singular vectors)** 라고 한다.
 
 :::
 :::
@@ -317,7 +317,7 @@ $$
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-svd_1}
+::: {#thm-LA_svd_1}
 
 #### 1차 특이값 분해
 
@@ -334,7 +334,7 @@ $$
 
 ::: {.proof}
 
-@prp-for_svd 을 생각하자. 이제 $\boldsymbol{B} = \begin{bmatrix} \boldsymbol{f}_1 & \cdots & \boldsymbol{f}_M\end{bmatrix}$ 라 하고 $\boldsymbol{D}$ 는 $D_{ij}= s_j\delta_{ij}$ 가 되도록 하며 $\boldsymbol{C} = \begin{bmatrix} \boldsymbol{e}_1 & \cdots \boldsymbol{e}_M \end{bmatrix}$ 라고 하자. 
+@prp-LA_for_svd 을 생각하자. 이제 $\boldsymbol{B} = \begin{bmatrix} \boldsymbol{f}_1 & \cdots & \boldsymbol{f}_M\end{bmatrix}$ 라 하고 $\boldsymbol{D}$ 는 $D_{ij}= s_j\delta_{ij}$ 가 되도록 하며 $\boldsymbol{C} = \begin{bmatrix} \boldsymbol{e}_1 & \cdots \boldsymbol{e}_M \end{bmatrix}$ 라고 하자. 
 
 $$
 \boldsymbol{BDC}^\ast\boldsymbol{v}= \boldsymbol{BD}\begin{bmatrix} \langle \boldsymbol{v},\,\boldsymbol{e}_1\rangle \\ \vdots \\ \langle \boldsymbol{v},\, \boldsymbol{e}_M\rangle \end{bmatrix} = \boldsymbol{B}\begin{bmatrix} s_1\langle \boldsymbol{v},\,\boldsymbol{e}_1\rangle \\ \vdots \\ s_M\langle \boldsymbol{v},\, \boldsymbol{e}_M\rangle \end{bmatrix} = \sum_{i=1}^M s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{f}_i = \boldsymbol{Av}
@@ -346,11 +346,11 @@ $$
 
 </br>
 
-@thm-svd_1 은 실제 계산에서 잘 사용하지 않으며, 약간 변형된 형태로 많이 사용한다.
+@thm-LA_svd_1 은 실제 계산에서 잘 사용하지 않으며, 약간 변형된 형태로 많이 사용한다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-svd_2}
+::: {#thm-LA_svd_2}
 
 #### 2차 특이값 분해
 
@@ -368,9 +368,9 @@ $$
 
 ::: {.proof}
 
-@prp-for_svd 를 생각하자. $\boldsymbol{U} = \begin{bmatrix} \boldsymbol{f}_1 & \cdots & \boldsymbol{f}_m\end{bmatrix}$ 라 하고 $\boldsymbol{V}= \begin{bmatrix} \boldsymbol{e}_1 & \cdots \boldsymbol{e}_n\end{bmatrix}$ 라고 하자. (@thm-svd_1 의 $\boldsymbol{B},\, \boldsymbol{D}$ 보다 큰데, 왼쪽 특이벡터와 오른쪽 특이벡터 전체를 사용한다.)
+@prp-LA_for_svd 를 생각하자. $\boldsymbol{U} = \begin{bmatrix} \boldsymbol{f}_1 & \cdots & \boldsymbol{f}_m\end{bmatrix}$ 라 하고 $\boldsymbol{V}= \begin{bmatrix} \boldsymbol{e}_1 & \cdots \boldsymbol{e}_n\end{bmatrix}$ 라고 하자. (@thm-LA_svd_1 의 $\boldsymbol{B},\, \boldsymbol{D}$ 보다 큰데, 왼쪽 특이벡터와 오른쪽 특이벡터 전체를 사용한다.)
 
-@thm-svd_1 에서 $\boldsymbol{D}$ 는 $M \times M$ 행렬이며 $M \le \text{min}(m, n)$ 이다. $m \times n$ 행렬 $\boldsymbol{\Sigma}$ 을 1행 1열부터 $M$ 행 $M$ 열 까지를 $\boldsymbol{D}$ 와 같은 값을 가지며 나머지는 $0$ 인 행렬로 정의하자. 그렇다면, 임의의 $\boldsymbol{v}\in \mathcal{M}_{n}(\mathbb{F})$ 에 대해 
+@thm-LA_svd_1 에서 $\boldsymbol{D}$ 는 $M \times M$ 행렬이며 $M \le \text{min}(m, n)$ 이다. $m \times n$ 행렬 $\boldsymbol{\Sigma}$ 을 1행 1열부터 $M$ 행 $M$ 열 까지를 $\boldsymbol{D}$ 와 같은 값을 가지며 나머지는 $0$ 인 행렬로 정의하자. 그렇다면, 임의의 $\boldsymbol{v}\in \mathcal{M}_{n}(\mathbb{F})$ 에 대해 
 
 $$
 \begin{aligned}
@@ -385,11 +385,11 @@ $$
 :::
 
 
-많은 경우 @thm-svd_2 의 형태로 특이값 분해를 사용한다.
+많은 경우 @thm-LA_svd_2 의 형태로 특이값 분해를 사용한다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-adjoint_of_svd}
+::: {#prp-LA_adjoint_of_svd}
 
 $\boldsymbol{A} \in \mathcal{M}_{m\times n}(\mathbb{F})$ 의 오른쪽 특이벡터와 왼쪽 특이벡터는 각각 $\boldsymbol{A}^\ast$ 의 왼쪽 특이벡터와 오른쪽 특이벡터이다. $\boldsymbol{A}$ 가 $0$ 이 아닌 특이값 $s_1 \ge \cdots \ge s_M>0$ 을 가질 때 $\boldsymbol{u}\in \mathcal{M}_m(\mathbb{F})$ 에 대해
 
@@ -418,7 +418,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-inverse_matrix_using_svd}
+::: {#prp-LA_inverse_matrix_using_svd}
 
 $\boldsymbol{A}$ 가 가역행렬이라고 하자. $\boldsymbol{A}= \boldsymbol{U\Sigma V}^\ast$ 일 때 
 
@@ -438,7 +438,7 @@ $$
 
 ::: {.proof}
 
-$\boldsymbol{A}$ 가 가역행렬이면 정사각 행렬이며, @prp-properties_of_singular_value 에 따라 $\boldsymbol{\Sigma}$ 는 대각성분이 모두 $0$ 이 아닌 대각행렬이며 따라서 $\boldsymbol{\Sigma\overline{\Sigma}} = \boldsymbol{I}$ 이다. 이를 이용하면
+$\boldsymbol{A}$ 가 가역행렬이면 정사각 행렬이며, @prp-LA_properties_of_singular_value 에 따라 $\boldsymbol{\Sigma}$ 는 대각성분이 모두 $0$ 이 아닌 대각행렬이며 따라서 $\boldsymbol{\Sigma\overline{\Sigma}} = \boldsymbol{I}$ 이다. 이를 이용하면
 
 $$
 \boldsymbol{A}(\boldsymbol{V\overline{\Sigma} U}^\ast)  = (\boldsymbol{U\Sigma V}^\ast)(\boldsymbol{V\overline{\Sigma} U}^\ast)= \boldsymbol{U\Sigma \overline{\Sigma} U}^\ast = \boldsymbol{UU}^\ast = \boldsymbol{I}
@@ -453,6 +453,7 @@ $$
 ### 연습문제 {.unnumbered}
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
 ::: {#exr-axler4_7_E_1}
 
 #### Axler4th 7.E.1
@@ -465,7 +466,7 @@ $L\in \mathcal{L}(V,\,W)$ 이다. $L=0$ 인 것의 필요충분 조건은 $L$ �
 
 ::: {.solution}
 
-$L=0$ 이면 $L^\ast L=0$ 이므로 $L$ 의 모든 특이값이 $0$ 이다. $L$ 의 모든 특이값이 $0$ 이면 @prp-properties_of_singular_value ($2$) 에 의해 $\text{rank}(L)=0$ 이므로 $L=0$ 이다.
+$L=0$ 이면 $L^\ast L=0$ 이므로 $L$ 의 모든 특이값이 $0$ 이다. $L$ 의 모든 특이값이 $0$ 이면 @prp-LA_properties_of_singular_value ($2$) 에 의해 $\text{rank}(L)=0$ 이므로 $L=0$ 이다.
 
 :::
 
@@ -484,7 +485,7 @@ $L\in \mathcal{L}(V,\,W)$ 이며 $s>0$ 이다. $s$ 가 $L$ 의 특이값일 필�
 
 ::: {.solution}
 
-$s$ 가 $L$ 의 특이값이라고 가정하자. @prp-for_svd 에서 $v=e_j,\, w=f_j$ 라고 잡으면 $Lv = sw$ 이다. 또한 $s^2 v = L^\ast L v = sL^\ast w$ 이므로 $L^\ast w = sv$ 이다.
+$s$ 가 $L$ 의 특이값이라고 가정하자. @prp-LA_for_svd 에서 $v=e_j,\, w=f_j$ 라고 잡으면 $Lv = sw$ 이다. 또한 $s^2 v = L^\ast L v = sL^\ast w$ 이므로 $L^\ast w = sv$ 이다.
 
 $Lv=sw$ 이며 $L^\ast w=sv$ 라면 $L^\ast L v= s^2 v$ 이므로 $s$ 는 $L$ 의 특이값이다.
 :::
@@ -627,11 +628,11 @@ $$
 
 ## 특이값 분해의 활용
 
-### 행렬의 노름
+### 행렬의 노름 {#sec-LA_norm_of_matrix}
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-norm_of_matrix}
+::: {#prp-LA_norm_of_matrix}
 
 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 의 가장 큰 특이값을 $s_M$ 이라고 하면 다음이 성립한다.
 
@@ -644,7 +645,7 @@ $$
 
 ::: {.proof}
 
-@thm-svd_2 의 증명과정에서 $\boldsymbol{Av} = \sum_i s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{f}_i$ 임을 알았다. 이를 이용하면
+@thm-LA_svd_2 의 증명과정에서 $\boldsymbol{Av} = \sum_i s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{f}_i$ 임을 알았다. 이를 이용하면
 
 $$
 \begin{aligned}
@@ -652,13 +653,13 @@ $$
 \end{aligned}
 $$
 
-이다. 마지막 부등호는 베셀 부등식(@prp-part1_properties_of_orthonormal_vectors ($3$)) 으로부터 성립한다. 따라서 $\|\boldsymbol{Av}\| \le s_M \|\boldsymbol{v}\|$ 이다. $\square$
+이다. 마지막 부등호는 베셀 부등식(@prp-LA_properties_of_orthonormal_vectors ($3$)) 으로부터 성립한다. 따라서 $\|\boldsymbol{Av}\| \le s_M \|\boldsymbol{v}\|$ 이다. $\square$
 :::
 
 
 </br>
 
-@prp-norm_of_matrix 의 최대 특이값 $s_M$ 을 갖는 벡터는 ${s_M}^2$ 의 고유값에 대한 $\boldsymbol{A}^\ast\boldsymbol{A}$ 의 고유벡터이므로 항상 존재한다. $\boldsymbol{v}\ne \boldsymbol{0}$ 에 대해 
+@prp-LA_norm_of_matrix 의 최대 특이값 $s_M$ 을 갖는 벡터는 ${s_M}^2$ 의 고유값에 대한 $\boldsymbol{A}^\ast\boldsymbol{A}$ 의 고유벡터이므로 항상 존재한다. $\boldsymbol{v}\ne \boldsymbol{0}$ 에 대해 
 
 $$
 \dfrac{\|\boldsymbol{Av}\|}{\|\boldsymbol{v}\|} \le s_M
@@ -670,7 +671,7 @@ $$
 
 
 ::: {.callout-note appearance="minimal" icon="false"}
-::: {#def-norm_of_matrix}
+::: {#def-LA_norm_of_matrix}
 
 #### 행렬의 노름
 
@@ -686,19 +687,19 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-anothor_definitions_of_matrix_norm}
+::: {#prp-LA_anothor_definitions_of_matrix_norm}
 
 #### 노름의 다양한 정의
 
 행렬 $\boldsymbol{A}$ 에 대해 다음 네 값은 같다. 즉 행렬의 노름에 대해 4가지 동등한 정의가 존재한다.
 
-&emsp; ($1$) $\max \{ \|\boldsymbol{Av}\| : \|\boldsymbol{v}\|=1 \}$
+&emsp;($1$) $\max \{ \|\boldsymbol{Av}\| : \|\boldsymbol{v}\|=1 \}$
 
-&emsp; ($2$) $\max \{ \|\boldsymbol{Av}\| : \|\boldsymbol{v}\|\le 1 \}$
+&emsp;($2$) $\max \{ \|\boldsymbol{Av}\| : \|\boldsymbol{v}\|\le 1 \}$
 
-&emsp; ($3$) $\boldsymbol{A}$ 의 최대 특이값.
+&emsp;($3$) $\boldsymbol{A}$ 의 최대 특이값.
 
-&emsp; ($4$) $\max \left\{ \dfrac{\|\boldsymbol{Av}\|}{\|\boldsymbol{v}\|} : \boldsymbol{v} \ne \boldsymbol{0}\right\}$. 
+&emsp;($4$) $\max \left\{ \dfrac{\|\boldsymbol{Av}\|}{\|\boldsymbol{v}\|} : \boldsymbol{v} \ne \boldsymbol{0}\right\}$. 
 
 :::
 
@@ -714,21 +715,21 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-properties_of_matrix_norm}
+::: {#prp-LA_properties_of_matrix_norm}
 
 행렬의 노름 $\|\cdot \|$ 에 대해 다음이 성립한다.
 
-&emsp; ($1$) $\|\boldsymbol{A}\|\ge 0$. 
+&emsp;($1$) $\|\boldsymbol{A}\|\ge 0$. 
 
-&emsp; ($2$) $\|\boldsymbol{A}\|=0 \iff \boldsymbol{A} =\boldsymbol{0}$.
+&emsp;($2$) $\|\boldsymbol{A}\|=0 \iff \boldsymbol{A} =\boldsymbol{0}$.
 
-&emsp; ($3$) $c\in \mathbb{F}$ 에 대해 $\|c\boldsymbol{A}\| = |c|\|\boldsymbol{A}\|$.
+&emsp;($3$) $c\in \mathbb{F}$ 에 대해 $\|c\boldsymbol{A}\| = |c|\|\boldsymbol{A}\|$.
 
-&emsp; ($4$) $\|\boldsymbol{A} +\boldsymbol{B}\| \le \|\boldsymbol{A} \|+\|\boldsymbol{B}\|$. 
+&emsp;($4$) $\|\boldsymbol{A} +\boldsymbol{B}\| \le \|\boldsymbol{A} \|+\|\boldsymbol{B}\|$. 
 
-&emsp; ($5$) $\|\boldsymbol{A}\| \|\boldsymbol{v}\| \ge \|\boldsymbol{Av}\|$.
+&emsp;($5$) $\|\boldsymbol{A}\| \|\boldsymbol{v}\| \ge \|\boldsymbol{Av}\|$.
 
-&emsp; ($6$) $\|\boldsymbol{A^\ast}\| = \| \boldsymbol{A}\|$. 
+&emsp;($6$) $\|\boldsymbol{A^\ast}\| = \| \boldsymbol{A}\|$. 
 
 :::
 
@@ -744,7 +745,7 @@ $$
 
 ($4$) $\|(\boldsymbol{A}+\boldsymbol{B})\boldsymbol{v}\| = \|\boldsymbol{Av}+\boldsymbol{Bv}\|  \le \|\boldsymbol{Av}\| +\|\boldsymbol{Bv}\|$.
 
-($5$) @prp-anothor_definitions_of_matrix_norm 의 ($4$) 로 부터 $\|\boldsymbol{A}\| \ge \dfrac{\|\boldsymbol{Av}\|}{\|\boldsymbol{v}\|}$ 이다. 
+($5$) @prp-LA_anothor_definitions_of_matrix_norm 의 ($4$) 로 부터 $\|\boldsymbol{A}\| \ge \dfrac{\|\boldsymbol{Av}\|}{\|\boldsymbol{v}\|}$ 이다. 
 
 ($6$) $\|\boldsymbol{A}^\ast\boldsymbol{v}\|^2 = \langle \boldsymbol{AA}^\ast\boldsymbol{v},\, \boldsymbol{v}\rangle \le \boldsymbol{v} \le \|\boldsymbol{AA}^\ast\boldsymbol{v}\|\|\boldsymbol{v}\|$ 이며 ($5$) 로 부터 
 
@@ -773,7 +774,7 @@ $L\in \mathcal{L}(U,\,V)$ 의 양의 특이값을 $s_1 \ge s_2 \ge \ldots,\ge s_
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-approximation_using_svd}
+::: {#prp-LA_approximation_using_svd}
 
 $\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 양의 특이값 $s_1 \ge s_2 \ge \ldots \ge s_m>0$ 을 갖는다고 하자. $k \le m$ 에 대해 다음이 성립한다.
 
@@ -789,7 +790,7 @@ $$
 
 ::: {.proof}
 
-@thm-svd_2 를 생각하자. $\boldsymbol{v}\in \mathcal{M}_n(\mathbb{F})$ 에 대해 $\boldsymbol{A}=\boldsymbol{U\Sigma V}^\ast$ 이다. 이 때 $\boldsymbol{V}_k = \begin{bmatrix} \boldsymbol{e}_1 & \cdots & \boldsymbol{e}_k & 0 & \cdots & 0\end{bmatrix}$ 라고 하고 $\boldsymbol{A}_k = \boldsymbol{U\Sigma V}_k^\ast$ 라고 하자. 
+@thm-LA_svd_2 를 생각하자. $\boldsymbol{v}\in \mathcal{M}_n(\mathbb{F})$ 에 대해 $\boldsymbol{A}=\boldsymbol{U\Sigma V}^\ast$ 이다. 이 때 $\boldsymbol{V}_k = \begin{bmatrix} \boldsymbol{e}_1 & \cdots & \boldsymbol{e}_k & 0 & \cdots & 0\end{bmatrix}$ 라고 하고 $\boldsymbol{A}_k = \boldsymbol{U\Sigma V}_k^\ast$ 라고 하자. 
 
 $$
 (\boldsymbol{A}-\boldsymbol{A}_k)\boldsymbol{v} = \boldsymbol{U\Sigma} \begin{bmatrix}  \boldsymbol{0} \\ \langle \boldsymbol{v},\, \boldsymbol{e}_{k+1} \rangle \\ \vdots \\ \langle \boldsymbol{v},\,\boldsymbol{e}_{m} \rangle \\ \boldsymbol{0}\end{bmatrix} =  \sum_{i=k+1}^m s_{i} \langle \boldsymbol{v},\, \boldsymbol{e}_i\rangle \boldsymbol{f}_i
@@ -846,11 +847,11 @@ $$
 
 </br>
 
-### 극분해
+### 극분해 {#sec-LA_polar_decomposition}
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-polar_decomposition}
+::: {#prp-LA_polar_decomposition}
 
 정사각행렬 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 는 어떤 유니타리 행렬 $\boldsymbol{U}$ 에 대해 $\boldsymbol{A}=\boldsymbol{S}\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}$ 이다.
 
@@ -860,7 +861,7 @@ $$
 
 ::: {.proof}
 
-@thm-svd_2 형식의 특이값 분해 $\boldsymbol{A}= \boldsymbol{U\Sigma V}^\ast$ 를 사용한다. $\boldsymbol{A}$ 가 정사각 행렬이므로 $\boldsymbol{U},\,\boldsymbol{\Sigma},\, \boldsymbol{V}$ 모두 정사각 행렬이다. $\boldsymbol{\Sigma}$ 는 실수 성분의 대각행렬이다. $\boldsymbol{A}^\ast\boldsymbol{A} = \boldsymbol{V}\boldsymbol{\Sigma}^2\boldsymbol{V}^\ast$ 이므로, $\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}} = \boldsymbol{V\Sigma V}^\ast$ 이다. 따라서 $\boldsymbol{S}=\boldsymbol{UV}^\ast$ 라고 하면 $\boldsymbol{A} = \boldsymbol{S}\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}$ 이다. $\square$
+@thm-LA_svd_2 형식의 특이값 분해 $\boldsymbol{A}= \boldsymbol{U\Sigma V}^\ast$ 를 사용한다. $\boldsymbol{A}$ 가 정사각 행렬이므로 $\boldsymbol{U},\,\boldsymbol{\Sigma},\, \boldsymbol{V}$ 모두 정사각 행렬이다. $\boldsymbol{\Sigma}$ 는 실수 성분의 대각행렬이다. $\boldsymbol{A}^\ast\boldsymbol{A} = \boldsymbol{V}\boldsymbol{\Sigma}^2\boldsymbol{V}^\ast$ 이므로, $\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}} = \boldsymbol{V\Sigma V}^\ast$ 이다. 따라서 $\boldsymbol{S}=\boldsymbol{UV}^\ast$ 라고 하면 $\boldsymbol{A} = \boldsymbol{S}\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}$ 이다. $\square$
 
 :::
 
@@ -871,6 +872,6 @@ $$
 
 #### 행렬의 극분해
 
-@prp-polar_decomposition 에 따라 정사각 행렬을 유니타리 행렬과 non-negative 행렬의 곱으로 표현하는 것을 행렬의 **극분해(polar decomposition)** 이라고 한다. 
+@prp-LA_polar_decomposition 에 따라 정사각 행렬을 유니타리 행렬과 non-negative 행렬의 곱으로 표현하는 것을 행렬의 **극분해(polar decomposition)** 이라고 한다. 
 :::
 :::

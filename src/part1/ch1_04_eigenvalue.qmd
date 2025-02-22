@@ -16,10 +16,10 @@ crossref:
 
 </br>
 
-### 고유값, 고유벡터, 고유공간 {#sec-part1_eigens}
+### 고유값, 고유벡터, 고유공간 {#sec-LA_eigens}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-invariant_subspace}
+::: {#def-LA_invariant_subspace}
 
 #### 불변부분공간
 
@@ -36,7 +36,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-invariant_subspace}
+::: {#prp-LA_invariant_subspace}
 
 $L\in \mathcal{L}(V)$ 에 대해 다음이 성립한다.
 
@@ -61,7 +61,7 @@ $L\in \mathcal{L}(V)$ 에 대해 다음이 성립한다.
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-eigenvector}
+::: {#def-LA_eigenvector}
 
 #### 고유값, 고유벡터, 고유공간
 
@@ -77,12 +77,12 @@ $$
 
 </br>
 
-즉 $v$ 가 $\lambda$ 의 고유값을 갖는 $L$ 의 고유벡터라면 $(L-\lambda I)v=0_V$ 이다. @thm-part1_isomorphic_linear_map 로부터 다음과 같은 결론을 얻게 된다.
+즉 $v$ 가 $\lambda$ 의 고유값을 갖는 $L$ 의 고유벡터라면 $(L-\lambda I)v=0_V$ 이다. @thm-LA_isomorphic_linear_map 로부터 다음과 같은 결론을 얻게 된다.
 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part1_finite_dimensional_vector_space_and_eigenvector}
+::: {#thm-LA_finite_dimensional_vector_space_and_eigenvector}
 
 유한차원 $\F$-벡터공간 $V$ 에서의 선형연산자 $L$ 과 $\lambda\in \mathbb{F}$ 에 대해 다음은 동치이다.
 
@@ -98,7 +98,7 @@ $$
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-diagonal_matrix_and_eigenvalue}
+::: {#exm-LA_diagonal_matrix_and_eigenvalue}
 
 $\bf{D}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 대각행렬, 즉 대각성분을 제외한 모든 성분이 $0$ 인 행렬이라고 하자. 표준기저 $\hat{\bf{e}}_i$ 에 대해 $\bf{D}\hat{\bf{e}}_i = D_{ii} \hat{\bf{e}}_i$ 이므로 $\hat{\bf{e}}_i$ 는 $D_{ii}$ 를 고유값으로 갖는 $\bf{D}$ 의 고유벡터이다. 
 
@@ -107,7 +107,7 @@ $\bf{D}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 대각행렬, 즉 대각성�
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-eigenspace_invariant}
+::: {#prp-LA_eigenspace_invariant}
 
 $E(\lambda,\, L)$ 은 $L$ 에 대한 불변부분공간이다.
 
@@ -128,13 +128,13 @@ $$
 
 </br>
 
-### 고유값과 행렬식 {#sec-part1_eigenvalue_and_determinant}
+### 고유값과 행렬식 {#sec-LA_eigenvalue_and_determinant}
 
 이제 선형사상/행렬의 고유값을 찾는 방법을 알아보자. 다음 정리는 선형사상/행렬의 고유값을 찾는 가장 중요한 방법을 알려준다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-eigenvalues_determinant}
+::: {#thm-LA_eigenvalues_determinant}
 
 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\det (\lambda \bf{I}-\bf{A}) \ne 0$ 을 만족하는 $\lambda \in \mathbb{F}$ 는 행렬 $\bf{A}$ 의 고유값이며, 이 $\lambda$ 에 대한 고유벡터가 항상 존재한다.
 
@@ -150,7 +150,7 @@ $\det (\lambda \bf{I}-\bf{A})  = 0$ 이면 $\text{nullity} (\lambda \bf{I}-\bf{A
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-eigenvalues_for_Field}
+::: {#exm-LA_eigenvalues_for_Field}
 
 예를 들어 $\bf{A}_1 = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}$ 라 하자. $\det(\lambda \bf{I}-\bf{A})  = (\lambda-1)^2 +1$ 이므로 $\det (\lambda \bf{I}-\bf{A}) =0$ 을 만족하는 $\lambda$ 는 $1 \pm i$ 이다. 만약 $\bf{A}$ 가 $\mathbb{C}$ 위에서 정의된 행렬이라면 고유값과 고유벡터가 존재하지만 $\mathbb{R}$ 위에서 정의된 행렬이라면 고유값이 존재하지 않는다. 
 
@@ -160,7 +160,7 @@ $\det (\lambda \bf{I}-\bf{A})  = 0$ 이면 $\text{nullity} (\lambda \bf{I}-\bf{A
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-eigenvector_linear_independence}
+::: {#prp-LA_eigenvector_linear_independence}
 $L\in \mathcal{L}(V)$ 의 고유벡터의 집합 $\{v_1,\ldots,\, v_m\}$ 에 대해 고유벡터가 각각 서로 다른 고유값 $\lambda_1,\ldots,\lambda_m$ 을 갖는 고유벡터라면 이 벡터의 집합은 선형독립이다.
 :::
 
@@ -245,7 +245,7 @@ $L:\R[t] \to \R[t]$ 가 $L(p(t))= p'(t)$ 일 때 모든 고유값과 고유벡�
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part1_axler4_5_A_12}
+::: {#exr-LA_axler4_5_A_12}
 
 #### Axler4th 5.A.12
 
@@ -263,7 +263,7 @@ $P(u)=u,\, P(w) = 0$ 이므로 $U$ 의 모든 벡터는 고유값 $1$ 을 $W$ �
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part1_axler4_5_A_13}
+::: {#exr-LA_axler4_5_A_13}
 
 #### Axler4th 5.A.13
 
@@ -334,7 +334,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part1_axler4_5_A_21}
+::: {#exr-LA_axler4_5_A_21}
 
 #### Axler4th 5.A.21
 
@@ -353,7 +353,7 @@ $Lv=\lambda v$ 에 대해 $v=L^{-1}L v = \lambda L^{-1}v$ 이므로 $L^{-1}v = \
 </br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part1_axler4_5_A_23}
+::: {#exr-LA_axler4_5_A_23}
 
 #### Axler4th 5.A.23
 
@@ -371,7 +371,7 @@ $KLv=\lambda v$ 라고 하자. $LK(Lv)= L(\lambda v)= \lambda (Lv)$ 이므로 $L
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part1_axler4_5_A_25}
+::: {#exr-LA_axler4_5_A_25}
 
 #### Axler4th 5.A.25
 
@@ -395,7 +395,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part1_axler4_5_A_26}
+::: {#exr-LA_axler4_5_A_26}
 
 #### Axler4th 5.A.26
 
@@ -407,7 +407,7 @@ $$
 
 ::: {.solution}
 
-@exr-part1_axler4_5_A_25 에 따라 모든 $V$ 의 벡터는 같은 고유값을 가지는 벡터이다. 이 고유값을 $c$ 라고 하자. 모든 기저에 대해 $L$ 의 행렬형식은 $cI_V$ 이므로 $L$ 은 $cI_V$ 이다. .
+@exr-LA_axler4_5_A_25 에 따라 모든 $V$ 의 벡터는 같은 고유값을 가지는 벡터이다. 이 고유값을 $c$ 라고 하자. 모든 기저에 대해 $L$ 의 행렬형식은 $cI_V$ 이므로 $L$ 은 $cI_V$ 이다. .
 
 :::
 
@@ -425,7 +425,7 @@ $$
 
 ::: {.solution}
 
-$v\in V$ 에 대해 $\text{span}\{v_i\}$ 가 $L$ 에 대한 불변부분공간이므로 모든 $v$ 는 $L$ 의 고유벡터이다. @exr-part1_axler4_5_A_26 에 따라 $L$ 은 항등연산자의 스칼라곱이다.
+$v\in V$ 에 대해 $\text{span}\{v_i\}$ 가 $L$ 에 대한 불변부분공간이므로 모든 $v$ 는 $L$ 의 고유벡터이다. @exr-LA_axler4_5_A_26 에 따라 $L$ 은 항등연산자의 스칼라곱이다.
 
 :::
 
@@ -447,9 +447,9 @@ $v\in V$ 에 대해 $\text{span}\{v_i\}$ 가 $L$ 에 대한 불변부분공간�
 
 ::: {.solution}
 
-($\,\Longleftarrow \,$) @prp-eigenvector_linear_independence.
+($\,\Longleftarrow \,$) @prp-LA_eigenvector_linear_independence.
 
-($\implies$) @prp-linearmap_basis 에 따라 $V_0$ 가 선형독립이므로 $Lv_j = j v_j$ 인 선형연산자가 존재한다.
+($\implies$) @prp-LA_linearmap_basis 에 따라 $V_0$ 가 선형독립이므로 $Lv_j = j v_j$ 인 선형연산자가 존재한다.
 :::
 
 
@@ -460,21 +460,21 @@ $v\in V$ 에 대해 $\text{span}\{v_i\}$ 가 $L$ 에 대한 불변부분공간�
 
 ## 특성다항식 
 
-### 다항식과 연산자 {#sec-polynomials_and_operators}
+### 다항식과 연산자 {#sec-LA_polynomials_and_operators}
 
 ::: {.callout-note appearance="minimal"}
 
-::: {#def-power_of_operator}
+::: {#def-LA_power_of_operator}
 
 #### $L^m$
 
 $L\in \mathcal{L}(V)$ 이고 $m$ 이 음이 아닌 정수일 때 다음과 같이 정의된다.
 
-&emsp; ($1$) $L^m := \underbrace{L\cdots L}_{m\,\text{times}}$.
+&emsp;($1$) $L^m := \underbrace{L\cdots L}_{m\,\text{times}}$.
 
-&emsp; ($2$) $L^0 :=I_V$.
+&emsp;($2$) $L^0 :=I_V$.
 
-&emsp; ($3$) $L$ 이 가역일 때 $L^{-m} := (L^{-1})^m$.
+&emsp;($3$) $L$ 이 가역일 때 $L^{-m} := (L^{-1})^m$.
 
 :::
 
@@ -485,7 +485,8 @@ $L\in \mathcal{L}(V)$ 이고 $m$ 이 음이 아닌 정수일 때 다음과 같�
 다음 명제는 쉽게 보일 수 있다.
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#prp-power_of_operators}
+
+::: {#prp-LA_power_of_operators}
 
 $L\in \mathcal{L}(V)$ 이며 $m,\,n\in \mathbb{Z}$ 일 때 다음이 성립한다.
 
@@ -499,7 +500,7 @@ $$
 
 ::: {.callout-note appearance="minimal"}
 
-::: {#def-polynomials_on_operator}
+::: {#def-LA_polynomials_on_operator}
 
 #### 다항식과 연산자
 
@@ -515,7 +516,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-kernal_and_images_of_operator_under_polynomial}
+::: {#prp-LA_kernal_and_images_of_operator_under_polynomial}
 
 $p(t)\in \mathbb{F}[t]$ 이고 $V$ 가 $\mathbb{F}$-벡터공간이며 $L\in \mathcal{L}(V)$ 일 때 $\ker (p(L)),\, \text{im}(p(L))$ 은 $L$ 에 대한 불변부분공간이다.
 
@@ -533,7 +534,7 @@ $u\in \text{im}(p(L))$ 이면 $u=p(L)v$ 인 $v\in V$ 가 존재한다. $Lu = Lp(
 
 </br>
 
-### 특성다항식 {#sec-characteristic_polynomial}
+### 특성다항식 {#sec-LA_characteristic_polynomial}
 
 ::: {.callout-caution appearance="simple"  icon="false"}
 여기부터 이 장의 마지막까지 유한차원 벡터공간에서 생각하기로 한다. 그리고 유한차원 벡터공간과 그 연산자가 아니라 그 행렬표현으로 전개하도록 하겠다. 
@@ -543,7 +544,7 @@ $u\in \text{im}(p(L))$ 이면 $u=p(L)v$ 인 $v\in V$ 가 존재한다. $Lu = Lp(
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-characteristic_polynomial}
+::: {#def-LA_characteristic_polynomial}
 
 #### 특성다항식
 
@@ -559,7 +560,7 @@ $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대한 $p_{\bf{A}}(\lambda)
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-degree_of_characteristic_polynomial}
+::: {#prp-LA_degree_of_characteristic_polynomial}
 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대한 특성다항식은 $n$ 차 다항식이다.
 :::
 
@@ -567,7 +568,7 @@ $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대한 특성다항식은 $
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part1_invariance_of_characteristic_polynomial}
+::: {#prp-LA_invariance_of_characteristic_polynomial}
 특성 다항식은 닮음 변환에 대해 불변이다. 즉 행렬 $\bf{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 과 가역행렬 $\bf{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $p_{\bf{A}}(\lambda) = p_{\bf{P^{-1}AP}}(\lambda)$ 이다.
 :::
 
@@ -586,11 +587,11 @@ $$
 
 </br>
 
-@prp-part1_invariance_of_characteristic_polynomial 는 유한차원 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 에 대한 특성다항식을 정의 할 수 있게 해 준다. 어떤 기저에 대해서도 $[L]$ 의 특성다항식은 같기 때문에 이것은 연산자 $L$ 에 대한 특성다항식이라고 할 수 있다. 
+@prp-LA_invariance_of_characteristic_polynomial 는 유한차원 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 에 대한 특성다항식을 정의 할 수 있게 해 준다. 어떤 기저에 대해서도 $[L]$ 의 특성다항식은 같기 때문에 이것은 연산자 $L$ 에 대한 특성다항식이라고 할 수 있다. 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part1_eigenvalue_characteristic_polynomial}
+::: {#prp-LA_eigenvalue_characteristic_polynomial}
 
 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\lambda\in \mathbb{F}$ 가 $\bf{A}$ 의 고유값이기 위한 필요충분조건은 $p_{\bf{A}}(\lambda)=0$ 인 것이다.
 :::
@@ -598,7 +599,7 @@ $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\lambda\in \mathbb{
 </div></br>
 
 ::: {.proof}
-$p_{\bf{A}}(\lambda)=0$ 일 때 $\lambda$ 가 $\bf{A}$ 의 고유값이 되는것은 @thm-eigenvalues_determinant 에서 보였다. $\lambda$ 가 $\bf{A}$ 의 고유값이라면 어떤 벡터 $\bf{v} \ne \bf{0}$ 에 대해 $\bf{Av}=\lambda \bf{v}$ 이므로 $(\lambda \bf{I}-\bf{A})\bf{v}=0$ 이다. 즉 $\text{nullity}(\lambda \bf{I}-\bf{A}) >0$ 이므로 $\det (\lambda \bf{I}-\bf{A}) = p_{\bf{A}}(\lambda)= 0$ 이다. $\square$
+$p_{\bf{A}}(\lambda)=0$ 일 때 $\lambda$ 가 $\bf{A}$ 의 고유값이 되는것은 @thm-LA_eigenvalues_determinant 에서 보였다. $\lambda$ 가 $\bf{A}$ 의 고유값이라면 어떤 벡터 $\bf{v} \ne \bf{0}$ 에 대해 $\bf{Av}=\lambda \bf{v}$ 이므로 $(\lambda \bf{I}-\bf{A})\bf{v}=0$ 이다. 즉 $\text{nullity}(\lambda \bf{I}-\bf{A}) >0$ 이므로 $\det (\lambda \bf{I}-\bf{A}) = p_{\bf{A}}(\lambda)= 0$ 이다. $\square$
 
 :::
 
@@ -614,14 +615,14 @@ $p_{\bf{A}}(\lambda)=0$ 일 때 $\lambda$ 가 $\bf{A}$ 의 고유값이 되는�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-existance_of_eigenvector_for_complex_field}
+::: {#thm-LA_existance_of_eigenvector_for_complex_field}
 유한차원 $\C$-벡터공간에서정의된 연산자에 대해서 항상 고유벡터가 존재한다. 
 :::
 
 </div></br>
 
 ::: {.proof}
-대수학의 기본정리에 의해 복소수 영역에서는 항상 특성다항식의 해가 존재하며 @prp-part1_eigenvalue_characteristic_polynomial 에 의해 고유벡터가 존재한다. $\square$
+대수학의 기본정리에 의해 복소수 영역에서는 항상 특성다항식의 해가 존재하며 @prp-LA_eigenvalue_characteristic_polynomial 에 의해 고유벡터가 존재한다. $\square$
 :::
 
 </br>
@@ -713,7 +714,7 @@ $V$ 는 1보다 큰 차원의 유한차원 벡터공간이며 $L\in \mathcal{L}(
 ## 블록행렬과 불변부분공간
 
 
-[블록행렬](ch1_03_determinant.qmd#def-block_matrix)의 대각 부분 행렬이 정사각행렬이라면, 행렬의 모든 대각성분은 부분행렬의 대각성분이 된다. 이를 대각 부분행렬이라 하자. 대각 부분행렬을 제외한 부분행렬이 모두 $0$ 행렬인 경우 **블록 대각 행렬 (block diagonal matrix)** 라 한다. 상삼각 행렬/하삼각 행렬처럼 **블록 상삼각 행렬(block upper triangular matrix)** 와 **블록 하삼각 행렬(block lower triangular matrix)** 를 정의 할 수 있다.
+[블록행렬](ch1_03_determinant.qmd#def-LA_block_matrix)의 대각 부분 행렬이 정사각행렬이라면, 행렬의 모든 대각성분은 부분행렬의 대각성분이 된다. 이를 대각 부분행렬이라 하자. 대각 부분행렬을 제외한 부분행렬이 모두 $0$ 행렬인 경우 **블록 대각 행렬 (block diagonal matrix)** 라 한다. 상삼각 행렬/하삼각 행렬처럼 **블록 상삼각 행렬(block upper triangular matrix)** 와 **블록 하삼각 행렬(block lower triangular matrix)** 를 정의 할 수 있다.
 
 
 
@@ -721,7 +722,7 @@ $V$ 는 1보다 큰 차원의 유한차원 벡터공간이며 $L\in \mathcal{L}(
 
 ### 불변 부분공간과 블럭 상삼각행렬
 
-우선 @sec-matrix_transform_by_basis_transform 에서 본 행렬의 닮음 변환을 다시 한번 상기하자. $\mathcal{M}_{n}(\mathbb{F})$ 공간에서 정의된 선형독립인 벡터 $\{\bf{u}_1,\ldots,\, \bf{u}_n\}$ 와 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 을 생각하자. $\bf{u}_i$ 가 $i$ 번째 열이 된 행렬 $\bf{P} = \begin{bmatrix} \bf{u}_1 & \cdots & \bf{u}_n \end{bmatrix}$ 는 기저를 변환하는 행렬, 즉 닮음변환을 정의하는 행렬이 되며 $\bf{P}^{-1}\bf{AP}$ 는 변환된 기저에서의 선형사상이고 변환행렬 $\bf{P}= \begin{bmatrix} \bf{u}_1 & \cdots & \bf{u}_n\end{bmatrix}$ 가 정의되며 아래 표와 같이 변환된다.
+우선 @sec-LA_matrix_transform_by_basis_transform 에서 본 행렬의 닮음 변환을 다시 한번 상기하자. $\mathcal{M}_{n}(\mathbb{F})$ 공간에서 정의된 선형독립인 벡터 $\{\bf{u}_1,\ldots,\, \bf{u}_n\}$ 와 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 을 생각하자. $\bf{u}_i$ 가 $i$ 번째 열이 된 행렬 $\bf{P} = \begin{bmatrix} \bf{u}_1 & \cdots & \bf{u}_n \end{bmatrix}$ 는 기저를 변환하는 행렬, 즉 닮음변환을 정의하는 행렬이 되며 $\bf{P}^{-1}\bf{AP}$ 는 변환된 기저에서의 선형사상이고 변환행렬 $\bf{P}= \begin{bmatrix} \bf{u}_1 & \cdots & \bf{u}_n\end{bmatrix}$ 가 정의되며 아래 표와 같이 변환된다.
 
 | 원래 기저에서의 행렬표현 | 새로운 기저에서의 행렬표현 |
 |:-------:|:------:|
@@ -733,7 +734,7 @@ $V$ 는 1보다 큰 차원의 유한차원 벡터공간이며 $L\in \mathcal{L}(
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-invariant_subspace_block_upperdiagonal_matrix}
+::: {#prp-LA_invariant_subspace_block_upperdiagonal_matrix}
 
 #### 불변부분공간과 블럭상삼각행렬
 
@@ -766,7 +767,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-upper_triangular_matrix}
+::: {#prp-LA_upper_triangular_matrix}
 
 정사각 행렬 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음은 동치이다.
 
@@ -800,29 +801,29 @@ $$
 
 </br>
 
-### 복소수체에서의 행렬과 상삼각행렬
+### 복소수체에서의 행렬과 상삼각행렬 {#sec-LA_matrix_and_upper_triangula_matrix_over_C}
 
 이제 이 장에서 가장 중요한 결론을 낼 수 있다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-uppertriangular_matrix_complex_field}
+::: {#thm-LA_uppertriangular_matrix_complex_field}
 $\bf{A}\in \mathcal{M}_{n\times n}(\mathbb{C})$ 행렬과 닮은 상삼각 행렬이 존재한다. 
 :::
 
 </div></br>
 
 ::: {.proof}
-$\bf{A}_n \in \mathcal{M}_{n \times n}(\mathbb{C})$ 이라 하고 $n$ 에 대한 귀납법으로 증명한다. $n=1$ 일 때는 자명하다. $k<n$ 에 대해 위의 명제가 성립한다고 가정하자. 우리는 @thm-existance_of_eigenvector_for_complex_field 를 통해 행렬 $\bf{A}_n$ 에 대한 고유값 $\lambda$ 와 고유벡터 $\bf{v}_1$ 이 존재한다는 것을 안다. $\bf{v}_1$ 을 확장하여 $\mathcal{M}_n(\mathbb{F})$ 의 기저를 구성 할 수 있으며, 이 기저로 변환된  블럭 상삼각행렬을 이룬다 (@prp-invariant_subspace_block_upperdiagonal_matrix). 이 블럭 상삼각 행렬의 1 행과 1 열을 제거한 $(n-1)\times (n-1)$ 행렬은 가정에 의해 어떤 상 삼각 행렬과 닮았다. 따라서 $\bf{A}_n$ 은 어떤 상 삼각행렬과 닮았다. $\square$ 
+$\bf{A}_n \in \mathcal{M}_{n \times n}(\mathbb{C})$ 이라 하고 $n$ 에 대한 귀납법으로 증명한다. $n=1$ 일 때는 자명하다. $k<n$ 에 대해 위의 명제가 성립한다고 가정하자. 우리는 @thm-LA_existance_of_eigenvector_for_complex_field 를 통해 행렬 $\bf{A}_n$ 에 대한 고유값 $\lambda$ 와 고유벡터 $\bf{v}_1$ 이 존재한다는 것을 안다. $\bf{v}_1$ 을 확장하여 $\mathcal{M}_n(\mathbb{F})$ 의 기저를 구성 할 수 있으며, 이 기저로 변환된  블럭 상삼각행렬을 이룬다 (@prp-LA_invariant_subspace_block_upperdiagonal_matrix). 이 블럭 상삼각 행렬의 1 행과 1 열을 제거한 $(n-1)\times (n-1)$ 행렬은 가정에 의해 어떤 상 삼각 행렬과 닮았다. 따라서 $\bf{A}_n$ 은 어떤 상 삼각행렬과 닮았다. $\square$ 
 :::
 
 </br>
 
 ## 행렬의 대각화
 
-### 고유공간의 성질
+### 고유공간의 성질 {#sec-LA_properties_of_eigen_space}
 
-우리는 연산자 $L\in\mathcal{L}(V)$ 에 대한 고유공간 $E(\lambda, L)$ 을 @def-eigenvector 에서 정의하였다. 또한 서로 다른 고유값을 갖는 벡터의 집합은 선형독립이라는 것도 안다(@prp-eigenvector_linear_independence). 이제 고유공간에 대해 좀 더 알아보자. 
+우리는 연산자 $L\in\mathcal{L}(V)$ 에 대한 고유공간 $E(\lambda, L)$ 을 @def-LA_eigenvector 에서 정의하였다. 또한 서로 다른 고유값을 갖는 벡터의 집합은 선형독립이라는 것도 안다(@prp-LA_eigenvector_linear_independence). 이제 고유공간에 대해 좀 더 알아보자. 
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 ::: {#prp-sum_of_eigenspace}
@@ -847,11 +848,11 @@ $$
 
 </br>
 
-### 대각화가능 행렬
+### 대각화가능 행렬 {#sec-LA_diagonalizable_matrix}
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-diagonalizable_matrix}
+::: {#def-LA_diagonalizable_matrix}
 
 #### 대각화 가능 행렬
 
@@ -862,7 +863,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-diagonalizability}
+::: {#thm-LA_diagonalizability}
 
 정사각 행렬 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 서로 다른 고유값 $\lambda_1,\ldots,\,\lambda_m$ 을 가질 때 다음은 동치이다.
 
@@ -896,7 +897,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-diagoalizability_of_dimV_distinct_eigenvalues_1}
+::: {#cor-LA_diagoalizability_of_dimV_distinct_eigenvalues_1}
 
 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 $n$ 개의 서로 다른 고유값을 가지면 $\bf{A}$ 는 대각화 가능 행렬이다.
 
@@ -906,12 +907,12 @@ $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 $n$ 개의 서로 다른 �
 
 ::: {.proof}
 
-@prp-eigenvector_linear_independence 에서 보였듯이 서로 다른 고유값을 갖는 고유벡터는 선형독립이므로 이 $n$ 개의 고유벡터는 $\mathcal{M}_n(\mathbb{F})$ 의 기저이다. 따라서 $\bf{A}$ 는 대각화 가능 행렬이다. $\square$
+@prp-LA_eigenvector_linear_independence 에서 보였듯이 서로 다른 고유값을 갖는 고유벡터는 선형독립이므로 이 $n$ 개의 고유벡터는 $\mathcal{M}_n(\mathbb{F})$ 의 기저이다. 따라서 $\bf{A}$ 는 대각화 가능 행렬이다. $\square$
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-diagoalizability_of_dimV_distinct_eigenvalues_2}
+::: {#cor-LA_diagoalizability_of_dimV_distinct_eigenvalues_2}
 
 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 의 특성다항식 $p_{\bf{A}}$ 가 $n$ 개의 서로 다른 해를 $\mathbb{F}$ 에서 가지면 $\bf{A}$ 는 대각화 가능 행렬이다. 
 :::
@@ -932,7 +933,7 @@ $\{\bf{v}_1,\ldots,\,\bf{v}_m \} \subset \mathcal{M}_n(\mathbb{F})$ 이 선형�
 
 ::: {.solution}
 
-서로 다른 고유값을 갖는 고유벡터의 집합은 선형독립이라는 것을 안다(@prp-eigenvector_linear_independence). 따라서 $\{\bf{v}_1,\ldots,\,\bf{v}_m \}$ 가 선형독립이면 이 벡터들이 각각 다른 고유값을 갖는 고유벡터가 되는 행렬 $\bf{A}$ 가 존재함을 보이면 된다. $\bf{v}_1,\ldots,\,\bf{v}_m$ 을 확장하여 기저 $\{\bf{v}_1,\ldots,\,\bf{v}_n\}$ 을 구성하고 $\bf{P}= \begin{bmatrix} \bf{v}_1 & \cdots & \bf{v}_n\end{bmatrix}$ 라 하자. $\bf{P}^{-1}$ 은 $\bf{v}_i$ 를 표준기저 $\hat{\bf{e}}_i$ 로 변환해주는 연산자이다. 
+서로 다른 고유값을 갖는 고유벡터의 집합은 선형독립이라는 것을 안다(@prp-LA_eigenvector_linear_independence). 따라서 $\{\bf{v}_1,\ldots,\,\bf{v}_m \}$ 가 선형독립이면 이 벡터들이 각각 다른 고유값을 갖는 고유벡터가 되는 행렬 $\bf{A}$ 가 존재함을 보이면 된다. $\bf{v}_1,\ldots,\,\bf{v}_m$ 을 확장하여 기저 $\{\bf{v}_1,\ldots,\,\bf{v}_n\}$ 을 구성하고 $\bf{P}= \begin{bmatrix} \bf{v}_1 & \cdots & \bf{v}_n\end{bmatrix}$ 라 하자. $\bf{P}^{-1}$ 은 $\bf{v}_i$ 를 표준기저 $\hat{\bf{e}}_i$ 로 변환해주는 연산자이다. 
 
 행렬 $\bf{A}$ 를 $1$ 행 $1$ 열 부터 $m$ 행 $m$ 열 까지는 $A_{ij}= j\delta_{ij}$ 가 되도록 하고 $m+1$ 행 $m+1$ 열부터는 임의의 값을 가지는 블럭대각행렬이라 하자. $\bf{e}_1,\ldots,\,\bf{e}_m$ 은 은 각각 $1,\ldots,m$ 의 고유값을 가지므로 $\bf{PAP}^{-1}$ 은 $\bf{v}_1,\ldots,\bf{v}_m$ 이 각각 $1,\ldots,\,m$ 의 고유값을 갖는 행렬이다. 
 
@@ -970,7 +971,7 @@ $\bf{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 $\bf{P}^2=\bf{P}$ 일 때 $
 
 ::: {.solution}
 
-$\bf{u}\in \ker (\bf{P})\cap \text{im}(\bf{P})$ 라 하자. $\bf{Pu}=\bf{0}$ 이며 $\bf{Pv}=\bf{u}$ 인 $\bf{u}$ 가 존재해야 한다. 그런데 $\bf{P}^2\bf{v} = \bf{Pu}=\bf{0}$ 이며 $\bf{P}^2\bf{v} = \bf{Pv}$ 이므로 $\bf{u}=\bf{0}$ 이다. 즉 $\ker (\bf{P})\cap \text{im}(\bf{P}) = \{\bf{0}\}$ 이다. @thm-rank_nullity 에 의해 $\mathcal{M}_n (\mathbb{F})=(\ker (\bf{P})) \oplus (\text{im}(\bf{P}))$ 이다.
+$\bf{u}\in \ker (\bf{P})\cap \text{im}(\bf{P})$ 라 하자. $\bf{Pu}=\bf{0}$ 이며 $\bf{Pv}=\bf{u}$ 인 $\bf{u}$ 가 존재해야 한다. 그런데 $\bf{P}^2\bf{v} = \bf{Pu}=\bf{0}$ 이며 $\bf{P}^2\bf{v} = \bf{Pv}$ 이므로 $\bf{u}=\bf{0}$ 이다. 즉 $\ker (\bf{P})\cap \text{im}(\bf{P}) = \{\bf{0}\}$ 이다. @thm-LA_rank_nullity 에 의해 $\mathcal{M}_n (\mathbb{F})=(\ker (\bf{P})) \oplus (\text{im}(\bf{P}))$ 이다.
 
 :::
 
@@ -987,7 +988,7 @@ $\bf{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 대각화 가능 행렬이�
 ::: {.solution}
 $\ker (\bf{A})$ 와 $\text{im}(\bf{A})$ 모두 $\mathcal{M}_n(\mathbb{F})$ 의 부분공간이다. $\bf{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_n (\mathbb{F})$ 의 기저 $\{\bf{u}_1, \ldots,\, \bf{u}_n\}$ 을 생각 할 수 있다. $\bf{x}\in \ker (\bf{A})\cap \text{im}(\bf{A})$ 이라고 하자. $\bf{x}\in \ker (\bf{A})$ 이므로 $\bf{Ax}=\bf{0}$ 이며 $\bf{x}\in \text{im}(\bf{A})$ 이므로 $\bf{Ay}=\bf{x}$ 를 만족하는 $\bf{y}$ 가 존재해야 한다. $\bf{A}$ 가 대각화 가능 행렬이므로 고유값 $\lambda_i$ 를 갖는 고유벡터 $\bf{u}_i$ 가 기저가 되며 따라서 $\bf{y}=\sum_i c_i \bf{u}_i$ 로 표현 할 수 있다. $\bf{Ay} = \sum_i c_i \lambda_i \bf{u}_i = \bf{x}$, $\bf{A}^2\bf{y} = \sum_i c_i \lambda_i^2 \bf{u}_i = \bf{0}$ 이므로 $\bf{y}$ 는 $\bf{A}$ 에 대해 고유값이 $0$ 인 벡터의 선형결합이다. 따라서 $\bf{y}\in \ker (\bf{A})$ 이며 $\bf{x}=\bf{0}$ 이다. 
 
-@thm-rank_nullity 에 의해 $n=\text{nullity}(\bf{A})+\text{rank}(\bf{A})$ 이며 $\ker (\bf{A}) \cap \text{im}(\bf{A})=\{\bf{0}\}$ 이므로 $\mathcal{M}_n(\mathbb{F})=\ker (\bf{A})\oplus \text{im}(\bf{A})$ 이다.
+@thm-LA_rank_nullity 에 의해 $n=\text{nullity}(\bf{A})+\text{rank}(\bf{A})$ 이며 $\ker (\bf{A}) \cap \text{im}(\bf{A})=\{\bf{0}\}$ 이므로 $\mathcal{M}_n(\mathbb{F})=\ker (\bf{A})\oplus \text{im}(\bf{A})$ 이다.
 
 :::
 
@@ -1009,11 +1010,11 @@ $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음 세 명제는
 
 ::: {.solution}
 
-($1\implies 2$) 가정에 의해 $\ker (\bf{A})\cap \text{im}(\bf{A})= \{\bf{0}\}$ 이다. @prp-condition_for_direct_sum 의해 $\ker (\bf{A}) + \text{im}(\bf{A}) = \ker (\bf{A})\oplus \text{im}(\bf{A}) = \mathcal{M}_{n}(\mathbb{F})$ 이다.
+($1\implies 2$) 가정에 의해 $\ker (\bf{A})\cap \text{im}(\bf{A})= \{\bf{0}\}$ 이다. @prp-LA_condition_for_direct_sum 의해 $\ker (\bf{A}) + \text{im}(\bf{A}) = \ker (\bf{A})\oplus \text{im}(\bf{A}) = \mathcal{M}_{n}(\mathbb{F})$ 이다.
 
-($2\implies 3$) @thm-rank_nullity 에 의해 $\ker (\bf{A}) \cap \text{im}(\bf{A}) = \{\bf{0}\}$ 이다. 
+($2\implies 3$) @thm-LA_rank_nullity 에 의해 $\ker (\bf{A}) \cap \text{im}(\bf{A}) = \{\bf{0}\}$ 이다. 
 
-($3 \implies 1$) $\ker (\bf{A})$ 와 $\text{im}(\bf{A})$ 는 $\mathcal{M}_n(\mathbb{F})$ 의 부분공간이며 가정에 의해 $\ker (\bf{A}) + \text{im}(\bf{A}) = \ker (\bf{A}) \oplus \text{im}(\bf{A})$ 도 부분공간이다. @thm-rank_nullity 에 의해 $\mathcal{M}_{n}(\mathbb{F}) = \ker (\bf{A})\oplus \text{im}(\bf{A})$ 이다.
+($3 \implies 1$) $\ker (\bf{A})$ 와 $\text{im}(\bf{A})$ 는 $\mathcal{M}_n(\mathbb{F})$ 의 부분공간이며 가정에 의해 $\ker (\bf{A}) + \text{im}(\bf{A}) = \ker (\bf{A}) \oplus \text{im}(\bf{A})$ 도 부분공간이다. @thm-LA_rank_nullity 에 의해 $\mathcal{M}_{n}(\mathbb{F}) = \ker (\bf{A})\oplus \text{im}(\bf{A})$ 이다.
 
 :::
 
@@ -1050,7 +1051,7 @@ $$
 
 라고 하면 $\bf{U}$ 은 가역행렬이며 $\bf{U}^{-1}\bf{AU}$ 은 블럭대각행렬이다. 이 때 1행 1열부터 $m$ 행 $m$ 열까지는 대각행렬이라는 것을 알 수 있다. 또한 $\bf{Uv}_j$ 는 1 행부터 $m$ 행 까지의 값이 $0$ 이다.
 
-우리는 모든 복소 행렬은 고유값을 가진다는 것을 알고 있다(@thm-existance_of_eigenvector_for_complex_field). 이것을 이용하여 $n$ 에 대한 induction 을 통해 증명하자. $n=1$ 일 때는 자명하다. 이제 $n$ 보다 작은 양의 정수에 대해 성립함을 가정하자. $\bf{A}$ 는 고유값 $\lambda_1$ 을 가지며 따라서 앞서의 과정에 따라 블럭대각화를 할 수 있다. $\dim(E(\lambda_1, \bf{A}))=m$ 인데 $\bf{U}^{-1}\bf{AU}$ 에서 1 행 1열부터 $m$ 행 $m$ 열 까지를 $0$ 으로 만든 행렬을 $\bf{A}_1$ 이라고 하자. 
+우리는 모든 복소 행렬은 고유값을 가진다는 것을 알고 있다(@thm-LA_existance_of_eigenvector_for_complex_field). 이것을 이용하여 $n$ 에 대한 induction 을 통해 증명하자. $n=1$ 일 때는 자명하다. 이제 $n$ 보다 작은 양의 정수에 대해 성립함을 가정하자. $\bf{A}$ 는 고유값 $\lambda_1$ 을 가지며 따라서 앞서의 과정에 따라 블럭대각화를 할 수 있다. $\dim(E(\lambda_1, \bf{A}))=m$ 인데 $\bf{U}^{-1}\bf{AU}$ 에서 1 행 1열부터 $m$ 행 $m$ 열 까지를 $0$ 으로 만든 행렬을 $\bf{A}_1$ 이라고 하자. 
 
 이제 모든 $\lambda\in\mathbb{C}$ 에 대해 $\text{im}(\bf{A}_1-\lambda\bf{I}_n) = \ker (\bf{A}_1-\lambda \bf{I}_n) \oplus \text{im}(\bf{A}_1-\lambda \bf{I}_n)$ 임을 보이자. @exr-axer_5_c_3 에 따라 $\ker (\bf{A}_1-\lambda \bf{I}_n) \cap \text{im}(\bf{A}_1-\lambda \bf{I}_n) =\{\bf{0}\}$ 이라는 것을 보이면 된다. 그런데 $\ker (\bf{A}_1-\lambda \bf{I}_n) \in \ker  (\bf{A}-\lambda \bf{I}_n)$ 이며 $\text{im}(\bf{A}_1-\lambda \bf{I}_n) \subset \text{im}(\bf{A}-\lambda \bf{I}_n)$ 이므로 $\ker (\bf{A}_1-\lambda \bf{I}_n) \cap \text{im}(\bf{A}_1-\lambda \bf{I}_n) =\{\bf{0}\}$ 이다. Induction 의 가정에 따라 $\bf{A}_1$ 이 대각화 가능이며 따라서 $\bf{A}$ 는 대각화 가능이다. $\square$
 :::
@@ -1091,15 +1092,15 @@ $$
 
 $\bf{F} = \begin{bmatrix} 0 & 1 \\ 1 & 1\end{bmatrix}$ 에 대해 다음을 보여라.
 
-&emsp; ($1$) $\bf{F}^n \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} f_n \\ f_{n+1}\end{bmatrix}$ 이다.
+&emsp;($1$) $\bf{F}^n \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} f_n \\ f_{n+1}\end{bmatrix}$ 이다.
 
-&emsp; ($2$) $\bf{F}$ 의 고유값을 구하라.
+&emsp;($2$) $\bf{F}$ 의 고유값을 구하라.
 
-&emsp; ($3$) $\bf{F}$ 의 고유벡터로 이루어진 $\mathcal{M}_{2}(\mathbb{R})$ 의 기저를 구하라.
+&emsp;($3$) $\bf{F}$ 의 고유벡터로 이루어진 $\mathcal{M}_{2}(\mathbb{R})$ 의 기저를 구하라.
 
-&emsp; ($4$) ($3$) 의 해를 이용하여 $\bf{F}^{n} \begin{bmatrix}0 \\ 1 \end{bmatrix}$ 를 계산하라. 
+&emsp;($4$) ($3$) 의 해를 이용하여 $\bf{F}^{n} \begin{bmatrix}0 \\ 1 \end{bmatrix}$ 를 계산하라. 
 
-&emsp; ($5$) ($4$) 를 이용하여 각각의 양의 정수 $n$ 에 대해 $f_n$ 은 $\dfrac{1}{\sqrt{5}} \left(\dfrac{1+\sqrt{5}}{2}\right)^n$ 에 가장 가까운 정수임을 보여라.
+&emsp;($5$) ($4$) 를 이용하여 각각의 양의 정수 $n$ 에 대해 $f_n$ 은 $\dfrac{1}{\sqrt{5}} \left(\dfrac{1+\sqrt{5}}{2}\right)^n$ 에 가장 가까운 정수임을 보여라.
 :::
 
 </div></br>

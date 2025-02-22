@@ -6,14 +6,18 @@ crossref:
   chapters: true
 ---
 
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
 ## 준 동형사상 
 
-### 준 동형 사상 {#sec-group_homomorphsm}
+### 준 동형 사상 {#sec-MA_group_homomorphsm}
 
-[어떤 집합과 집합에서의 연산이 잘 정의되어 있을때 둘을 같이 묶어서 대수적 구조(algebraic structure) 라고 한다. 대표적인 우리는 이미 체(field), 벡터공간(vector space), 군(groups)이라는 대수적 구조가 존재한다는 것을 알고 있다. 준동형사상은 대수적 구조 사이에 대수적 구조의 연산을 보존하는 함수를 통칭한다. 그리고 이 준동형사상이 전단사일 경우에는 동형사상(isomorphism) 이라고 한다. 우리는 이미 @def-isomorphism_in_vector_space 에서 벡터공간에서의 동형사상에 대해 다루었다. 당연히 군에 대해서도 동형사상이 매우 중요하며 앞으로 나올 것이다.]{.aside}
+[어떤 집합과 집합에서의 연산이 잘 정의되어 있을때 둘을 같이 묶어서 대수적 구조(algebraic structure) 라고 한다. 대표적인 우리는 이미 체(field), 벡터공간(vector space), 군(groups)이라는 대수적 구조가 존재한다는 것을 알고 있다. 준동형사상은 대수적 구조 사이에 대수적 구조의 연산을 보존하는 함수를 통칭한다. 그리고 이 준동형사상이 전단사일 경우에는 동형사상(isomorphism) 이라고 한다. 우리는 이미 @def-LA_isomorphism_in_vector_space 에서 벡터공간에서의 동형사상에 대해 다루었다. 당연히 군에 대해서도 동형사상이 매우 중요하며 앞으로 나올 것이다.]{.aside}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-homomorphisms_in_groups}
+::: {#def-MA_homomorphisms_in_groups}
 #### 준동형사상
 
 
@@ -40,7 +44,7 @@ $G$ 에서 $G'$ 으로의 준 동형사상의 집합을 $\text{Hom}\, (G,G')$ �
 </br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-homomorphism1}
+::: {#exm-MA_homomorphism1}
 
 $\varphi :G \to G'$ 이 $\varphi(g)=1_{G'}$ 일 때 $\varphi$ 를 **사소한 준동형사상 (trivial homomorphism)**이라고 한다. $H \le G$ 일 때 $\psi: H \to G$ 가 포함사상(inclusion map) $\psi (h) = h$ 이라면 $\psi$ 도 준동형사상이다.
 
@@ -50,14 +54,14 @@ $\varphi :G \to G'$ 이 $\varphi(g)=1_{G'}$ 일 때 $\varphi$ 를 **사소한 �
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-properties_of_homomorphism}
+::: {#prp-MA_properties_of_homomorphism}
 $\varphi :G \to G'$ 이 준동형사상일 때 다음이 성립한다.
 
-&emsp; ($1$) $a_1,\ldots,\,a_k \in G$ 에 대해 $\varphi(a_1\cdots a_k) = \varphi(a_1)\cdots \varphi(a_k)$ 이다.
+&emsp;($1$) $a_1,\ldots,\,a_k \in G$ 에 대해 $\varphi(a_1\cdots a_k) = \varphi(a_1)\cdots \varphi(a_k)$ 이다.
 
-&emsp; ($2$) $\varphi(1_G)=1_{G'}$ 이다.
+&emsp;($2$) $\varphi(1_G)=1_{G'}$ 이다.
 
-&emsp; ($3$) $\varphi(a^{-1}) =  (\varphi(a))^{-1}$ 이다.
+&emsp;($3$) $\varphi(a^{-1}) =  (\varphi(a))^{-1}$ 이다.
 
 :::
 
@@ -74,7 +78,7 @@ $\varphi :G \to G'$ 이 준동형사상일 때 다음이 성립한다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-kernel_and_images_of_group}
+::: {#prp-MA_kernel_and_images_of_group}
 
 준동형사상 $\varphi : G\to G'$ 에 대해 $\ker \varphi$ 는 $G$ 의 부분군이며 $\text{im}\, \varphi$ 는 $G'$ 의 부분군이다.
 
@@ -162,10 +166,10 @@ $$
 
 ## 잉여류 (Cosets) 와 라그랑쥬 정리
 
-### 잉여류 {#sec-cosets}
+### 잉여류 {#sec-MA_cosets}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-cosets}
+::: {#def-patt2_osets}
 #### 잉여류
 
 군 $G$ 와 그 부분군 $H$, 그리고 $G$ 의 원소 $a$ 에 대해
@@ -188,7 +192,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-cosets}
+::: {#prp-MA_cosets}
 
 $H\le G$ 이며 $a,\,b\in G$ 에 대해 다음 명제들은 동치이다.
 
@@ -216,7 +220,7 @@ $H\le G$ 이며 $a,\,b\in G$ 에 대해 다음 명제들은 동치이다.
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-kernel_and_image}
+::: {#prp-MA_kernel_and_image}
 
 $\varphi \in \text{Hom}(G, G')$ 이며 $K=\ker \varphi$ 일 때 $g \in \varphi^{-1}(\{g'\})$ 이라면 $\varphi^{-1}(\{g'\}) = gK$ 이다.
 
@@ -226,7 +230,7 @@ $\varphi \in \text{Hom}(G, G')$ 이며 $K=\ker \varphi$ 일 때 $g \in \varphi^{
 
 ::: {.proof}
 
-$k\in K$ 이면 $\varphi (gk)=\varphi(g)\varphi(k) = g$ 이므로 $gK \subset \varphi^{-1}(\{g'\})$ 이다. $x\in \varphi^{-1}(\{g'\})$ 이면 $\varphi (g^{-1}x) = \varphi(g^{-1})\varphi(x)=(g')^{-1}g=1_{G'}$ 이므로 $g^{-1}x \in \ker \varphi$ 이다. @prp-cosets 에 따라 $x\in gK$ 이므로 $\varphi^{-1}(\{g'\}) \subset gK$. 따라서 $gK = \varphi^{-1}(\{g'\})$. $\square$
+$k\in K$ 이면 $\varphi (gk)=\varphi(g)\varphi(k) = g$ 이므로 $gK \subset \varphi^{-1}(\{g'\})$ 이다. $x\in \varphi^{-1}(\{g'\})$ 이면 $\varphi (g^{-1}x) = \varphi(g^{-1})\varphi(x)=(g')^{-1}g=1_{G'}$ 이므로 $g^{-1}x \in \ker \varphi$ 이다. @prp-MA_cosets 에 따라 $x\in gK$ 이므로 $\varphi^{-1}(\{g'\}) \subset gK$. 따라서 $gK = \varphi^{-1}(\{g'\})$. $\square$
 
 :::
 
@@ -237,7 +241,7 @@ $k\in K$ 이면 $\varphi (gk)=\varphi(g)\varphi(k) = g$ 이므로 $gK \subset \v
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-cosets}
+::: {#cor-MA_cosets}
 
 $\varphi \in \text{Hom}\, (G,G')$ 이 단사일 필요충분 조건은 $\ker \varphi = \{1_G\}$ 인 것이다.
 
@@ -247,7 +251,7 @@ $\varphi \in \text{Hom}\, (G,G')$ 이 단사일 필요충분 조건은 $\ker \va
 
 ### 라그랑쥬 정리 {#sec-lagrange_theorem}
 
-::: {#prp-properties_of_coset}
+::: {#prp-MA_properties_of_coset}
 
 $H\le G$ 일 때 $H$ 의 두 왼쪽 잉여류는 같거나 교집합이 공집합이다.
 
@@ -255,18 +259,18 @@ $H\le G$ 일 때 $H$ 의 두 왼쪽 잉여류는 같거나 교집합이 공집�
 
 ::: {.proof}
 
-$a,\,b \in G$ 에 대해 $x\in aH \cap bH$ 라 하자. 어떤 $h_1,\,h_2\in H$ 에 대해 $x=ah_1=bh_2$ 이며, 따라서 $a^{-1}b=h_1h_2^{-1}\in H$ 이므로 @prp-cosets 에 따라 $aH=bH$ 이다. 
+$a,\,b \in G$ 에 대해 $x\in aH \cap bH$ 라 하자. 어떤 $h_1,\,h_2\in H$ 에 대해 $x=ah_1=bh_2$ 이며, 따라서 $a^{-1}b=h_1h_2^{-1}\in H$ 이므로 @prp-MA_cosets 에 따라 $aH=bH$ 이다. 
 
 :::
 
 </br>
 
-군 $G$ 의 왼쪽 잉여류의 집합을 생각하자. $g\in G$ 에 대해 $g\in gH$ 이므로 모든 $G$ 의 원소는 최소한 하나의 왼쪽 잉여류에 포함된다. 또한 @prp-properties_of_coset 에 의해 두 잉여류는 같거나 그 교집합이 공집합이다. 이로부터 우리는 다음과 같은 결론을 얻는다.
+군 $G$ 의 왼쪽 잉여류의 집합을 생각하자. $g\in G$ 에 대해 $g\in gH$ 이므로 모든 $G$ 의 원소는 최소한 하나의 왼쪽 잉여류에 포함된다. 또한 @prp-MA_properties_of_coset 에 의해 두 잉여류는 같거나 그 교집합이 공집합이다. 이로부터 우리는 다음과 같은 결론을 얻는다.
 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-partiotion_by_cosets}
+::: {#prp-MA_partiotion_by_cosets}
 
 $H\le G$ 일 때 $H$ 에 의한 잉여류의 집합은 $G$ 를 분할한다.
 :::
@@ -277,7 +281,7 @@ $H\le G$ 일 때 $H$ 에 의한 잉여류의 집합은 $G$ 를 분할한다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-order_of_cosets}
+::: {#prp-MA_order_of_cosets}
 
 $H\le G$ 일 때 $H$ 에 의한 두 잉여류 사이에 전단사 함수가 존재한다.
 :::
@@ -296,7 +300,7 @@ $H\le G$ 라면 $G$ 는 $H$ 의 잉여류의 집합으로 분할 할 수 있으�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-lagrange_theorem_for_subgrous}
+::: {#thm-MA_lagrange_theorem_for_subgrous}
 
 #### 라그랑쥬 정리
 
@@ -307,7 +311,7 @@ $H\le G$ 라면 $G$ 는 $H$ 의 잉여류의 집합으로 분할 할 수 있으�
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-order_of_group_element}
+::: {#cor-MA_order_of_group_element}
 
 유한군 $G$ 에 대해 $g\in G$ 일 때 $o(g)$ 는 $|G|$ 를 나눈다.
 :::
@@ -339,7 +343,7 @@ $|G|=p$ 가 소수이면 $|G|$ 의 진부분군이 존재하지 않는다. 따�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-orders_in_group_homomorphism}
+::: {#thm-MA_orders_in_group_homomorphism}
 
 유한군 $G,\,G'$ 에 대해 $\varphi \in \text{Hom}\,(G,G')$ 일 때 다음이 성립한다. 
 
@@ -353,7 +357,7 @@ $|G|=p$ 가 소수이면 $|G|$ 의 진부분군이 존재하지 않는다. 따�
 
 ::: {.proof}
 
-($1$) @prp-kernel_and_image 와 라그랑쥬 정리(@thm-lagrange_theorem_for_subgrous) 를 보라.
+($1$) @prp-MA_kernel_and_image 와 라그랑쥬 정리(@thm-MA_lagrange_theorem_for_subgrous) 를 보라.
 
 ($2$) $\text{im}(\varphi) \le G'$ 이므로 자명하다. $\square$
 
@@ -361,7 +365,7 @@ $|G|=p$ 가 소수이면 $|G|$ 의 진부분군이 존재하지 않는다. 따�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-multiplicative_properties_of_the_index}
+::: {#prp-MA_multiplicative_properties_of_the_index}
 
 유한군 $G$ 에 대해 $K \le H \le G$ 일 때 $[G:K]=[G:H][H:K]$ 이다.
 
@@ -534,10 +538,10 @@ $x,\,y\in S$ 이지만 $xy\not\in S$ 라면 $xy\in (xy)S$ 이다. 그런데 $y^{
 
 ## 동형사상
 
-### 동형사상 {#sec-group_isomorphism}
+### 동형사상 {#sec-MA_group_isomorphism}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-isomorphism_in_group}
+::: {#def-MA_isomorphism_in_group}
 #### 동형사상
 
 군 $G,\,G'$ 에 대해 $\varphi \in \text{Hom}\, (G,\,G')$ 이 전단사일 때 $\varphi$ 를 $G$ 에서 $G'$ 으로의 **동형사상(isomorphism)** 이라고 한다. $G$ 에서 $G'$ 으로의 동형사상의 집합을 $\text{Iso}\, (G,\,G')$ 로 표기한다. 두 군 $G,\,G'$ 사이에 동형사상이 존재하면 $G$ 와 $G'$ 이 **동형(isomorphic)** 이라고 하며 $G \cong G'$ 이라고 쓴다.
@@ -565,7 +569,7 @@ $\varphi^{-1}$ 이 $G'$ 에서 $G$ 로의 전단사 함수이므로 $\varphi^{-1
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-conjugation_automorphism}
+::: {#prp-MA_conjugation_automorphism}
 
 군 $G$ 에서 임의의 정해진 $g\in G$ 에 대해 $\varphi (x) = gxg^{-1}$ 를 **conjugation by $g$** 라고 한다. 이 때 $\varphi (x)$ 는 자기동형사상이다. 
 
@@ -691,7 +695,7 @@ $$
 \phi (g^m g^n) = g^{(m+n)k}= g^{mk}g^{nk} = \phi(g^m)\phi(g^n)
 $$
 
-이므로 준동형 사상이 정해진다. 앞의 명제에 따라 $\phi(g)$ 가 $g^2,\, g^4,\, g^5,\, g^6,\, g^8$ 이면 앞의 명제에 따라 자기동형사상이 아니다. 남은 가능성은 $\phi(g)$ 가 $g,\,g^3,\,g^7,\,g^9$ 일 때 이다. 즉 10 과 서로소인 $k$ 에 대해 $\phi (g) = g^k$ 일 때 이다. $\phi(g^x) = \phi(g^y)$ 이면 $xk \equiv yk\;(\text{mod}\,10)$ 이므로 @prp-modula 의 ($4$) 에서 보였듯이 $x\equiv y\;(\text{mod}\,10)$ 이므로 $\phi$ 는 단사이다. 즉 $\phi$ 는 자기동형사상이다.
+이므로 준동형 사상이 정해진다. 앞의 명제에 따라 $\phi(g)$ 가 $g^2,\, g^4,\, g^5,\, g^6,\, g^8$ 이면 앞의 명제에 따라 자기동형사상이 아니다. 남은 가능성은 $\phi(g)$ 가 $g,\,g^3,\,g^7,\,g^9$ 일 때 이다. 즉 10 과 서로소인 $k$ 에 대해 $\phi (g) = g^k$ 일 때 이다. $\phi(g^x) = \phi(g^y)$ 이면 $xk \equiv yk\;(\text{mod}\,10)$ 이므로 @prp-MA_modula 의 ($4$) 에서 보였듯이 $x\equiv y\;(\text{mod}\,10)$ 이므로 $\phi$ 는 단사이다. 즉 $\phi$ 는 자기동형사상이다.
 
 ($2$) $S_3 = \{1,\,x,\,x^2,\,y,\,xy,\,x^2y\}$, $x^3=y^2=1$, $x^2y=yx$ 이다. $o(xy)=o(x^2y)=2$ 이다.
 

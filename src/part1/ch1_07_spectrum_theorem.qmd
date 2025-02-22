@@ -19,9 +19,9 @@ crossref:
 
 </br>
 
-### 정규 연산자와 행렬 {#sec-normal_operator}
+### 정규 연산자와 행렬 {#sec-LA_normal_operator}
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-normal_matrix}
+::: {#def-LA_normal_matrix}
 ### 정규 행렬
 
 내적벡터공간에서 정의된 $L\in \mathcal{L}(U,\,V)$ 가 $LL^\ast = L^\ast L$ 일 때 $L$ 을 **정규연산자(normal operator)** 라고 한다. 마찬가지로 정사각 행렬 $\boldsymbol{L}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 $\boldsymbol{LL}^\ast = \boldsymbol{L}^\ast \boldsymbol{L}$ 일 때 $\boldsymbol{L}$ 을 **정규 행렬(normal matrix)** 라 한다. 
@@ -34,7 +34,7 @@ crossref:
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-hermitian_is_normal}
+::: {#prp-LA_hermitian_is_normal}
 
 에르미트 연산자는 정규연산자이다. 또한 에르미트 행렬은 정규 행렬이다. 
 
@@ -46,7 +46,7 @@ crossref:
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-condition_of_normal_matrix}
+::: {#prp-LA_condition_of_normal_matrix}
 
 $\boldsymbol{A}$ 가 정규행렬일 필요충분인 조건은 모든 $\boldsymbol{v}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\|\boldsymbol{Av}\| = \|\boldsymbol{A}^\ast \boldsymbol{v}\|$ 이다.
 :::
@@ -67,7 +67,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part1_properties_of_normal_operator}
+::: {#prp-LA_part1_properties_of_normal_operator}
 
 $\F$-벡터공간 $L\in \mathcal{L}(V)$ 가 정규연산자일 때 다음이 성립한다.
 
@@ -85,9 +85,9 @@ $\F$-벡터공간 $L\in \mathcal{L}(V)$ 가 정규연산자일 때 다음이 성
 
 ::: {.proof}
 
-전체적으로 @thm-kernel_image_of_adjoint_operator 를 참고하라.
+전체적으로 @thm-LA_kernel_image_of_adjoint_operator 를 참고하라.
 
-($a$) @prp-condition_of_normal_matrix
+($a$) @prp-LA_condition_of_normal_matrix
 
 ($b$) $\text{im}(L) = (\ker (L^\ast))^\perp = (\ker (L))^\perp = \text{im}(L^\ast)$.
 
@@ -102,15 +102,13 @@ $$
 \end{aligned}
 $$
 
-
-
 :::
 
 </br>
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-eigenvectors_or_normal_matrix_and_adjoint}
+::: {#prp-LA_eigenvectors_or_normal_matrix_and_adjoint}
 $L$ 이 정규연산자이면 $L^\ast$ 와 같은 고유벡터를 가지며 이에 대한 고유값은 서로 복소 공액이다. 
 :::
 
@@ -119,14 +117,14 @@ $L$ 이 정규연산자이면 $L^\ast$ 와 같은 고유벡터를 가지며 이�
 </br>
 
 ::: {.proof}
-$L-cI$ 가 정규연산자이므로 @prp-condition_of_normal_matrix 로부터 $0 = \|(L-cI)v\| = \|(L-cI)^\ast v\|$. $\square$ 
+$L-cI$ 가 정규연산자이므로 @prp-LA_condition_of_normal_matrix 로부터 $0 = \|(L-cI)v\| = \|(L-cI)^\ast v\|$. $\square$ 
 
 :::
 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-orthogonality_of_normal_matrix}
+::: {#prp-LA_orthogonality_of_normal_matrix}
 정규행렬 $\boldsymbol{A}$ 의 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.
 :::
 
@@ -146,7 +144,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-diagonality_of_norma_matrix}
+::: {#prp-LA_diagonality_of_norma_matrix}
 
 정규행렬의 상삼각행렬꼴은 대각행렬이다.
 
@@ -156,7 +154,7 @@ $$
 
 ::: {.proof} 
 
-우리는 [슈어 정리](#슈어-정리-schurs-theorem) 로부터 모든 복소행렬이 어떤 정규직교기저에서 상삼각행렬꼴로 나타남을 안다. 이 상삼각행렬을 $\boldsymbol{A}$ 라 하면 정규직교기저의 행렬형식은 표준기저 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 가 된다. $\boldsymbol{Ae}_j$ 는 $\boldsymbol{A}$ 의 $j$ 번째 열벡터 $\boldsymbol{A}_{:j}$ 이며, $\boldsymbol{A}$ 가 상삼각행렬 이므로 $\|\boldsymbol{Ae}_j\|^2 = \sum_{i=1}^j |A_{ij}|^2$ 이다. $\boldsymbol{A}^\ast$ 는 하삼각행렬이며, 땨라서 
+우리는 슈어 정리(@thm-LA_schure) 로부터 모든 복소행렬이 어떤 정규직교기저에서 상삼각행렬꼴로 나타남을 안다. 이 상삼각행렬을 $\boldsymbol{A}$ 라 하면 정규직교기저의 행렬형식은 표준기저 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 가 된다. $\boldsymbol{Ae}_j$ 는 $\boldsymbol{A}$ 의 $j$ 번째 열벡터 $\boldsymbol{A}_{:j}$ 이며, $\boldsymbol{A}$ 가 상삼각행렬 이므로 $\|\boldsymbol{Ae}_j\|^2 = \sum_{i=1}^j |A_{ij}|^2$ 이다. $\boldsymbol{A}^\ast$ 는 하삼각행렬이며, 땨라서 
 
 $$
 \|\boldsymbol{A}^\ast\boldsymbol{e}_j\|^2= \sum_{i=j}^n \left|(\boldsymbol{A}^\ast)_{ij}\right|^2 = \sum_{i=j}^n |A_{ji}|^2
@@ -181,7 +179,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part1_normal_operator_and_two_hermite_operator}
+::: {#thm-LA_part1_normal_operator_and_two_hermite_operator}
 
 $\C$ 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 에 대해 다음은 동치이다.
 
@@ -378,7 +376,7 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 정규연산자일 
 
 ::: {.solution}
 
-($1$) @prp-condition_of_normal_matrix 로부터 $v\in \ker (\boldsymbol{A})$ 이면 $0=\|\boldsymbol{Av}\|=\|\boldsymbol{A}^\ast \boldsymbol{v}\|$ 이므로 $\boldsymbol{v} \in \ker (\boldsymbol{A}^\ast)$ 임을 안다. $(\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}$ 이므로 $\ker (\boldsymbol{A})= \ker(\boldsymbol{A}^\ast)$ 이다. 또한 @thm-kernel_image_of_adjoint_operator 로부터
+($1$) @prp-LA_condition_of_normal_matrix 로부터 $v\in \ker (\boldsymbol{A})$ 이면 $0=\|\boldsymbol{Av}\|=\|\boldsymbol{A}^\ast \boldsymbol{v}\|$ 이므로 $\boldsymbol{v} \in \ker (\boldsymbol{A}^\ast)$ 임을 안다. $(\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}$ 이므로 $\ker (\boldsymbol{A})= \ker(\boldsymbol{A}^\ast)$ 이다. 또한 @thm-LA_kernel_image_of_adjoint_operator 로부터
 
 $$
 \text{im}(\boldsymbol{A}) = (\ker (\boldsymbol{A}^\ast))^\perp = (\ker (\boldsymbol{A}))^\perp = \text{im}(\boldsymbol{A}^\ast)
@@ -474,7 +472,7 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때 $\boldsymbol{A}
 
 ::: {.solution}
 
-@thm-spectrum_theorem_for_complex_vector_space 
+@thm-LA_spectrum_theorem_for_complex_vector_space 
 
 :::
 
@@ -489,7 +487,7 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 일 때 $\boldsymbol{A}
 
 ::: {.solution}
 
-@thm-spectrum_theorem_for_real_vector_space
+@thm-LA_spectrum_theorem_for_real_vector_space
 
 :::
 
@@ -501,7 +499,7 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 일 때 $\boldsymbol{A}
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-spectrum_theorem_for_complex_vector_space}
+::: {#thm-LA_spectrum_theorem_for_complex_vector_space}
 
 #### 복소수체에서 정의된 행렬에 대한 스펙트럼 정리
 
@@ -518,7 +516,7 @@ $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 행렬에 대해 다�
 
 ::: {.proof}
 
-($1 \implies 2$) 는 @prp-diagonality_of_norma_matrix 에서 보였다.
+($1 \implies 2$) 는 @prp-LA_diagonality_of_norma_matrix 에서 보였다.
 
 ($2\implies 3$) $\boldsymbol{A}$ 가 unitary 행렬 $\boldsymbol{P}$ 에 의해 대각행렬로 변환된다고 하자. 즉 $\boldsymbol{P}^{-1}\boldsymbol{AP}=\boldsymbol{D}$ 는 대각행렬이다. 대각행렬이 주어졌을 때, 표준정규직교벡터 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 는 $\lambda_i = D_{ii}$ 를 고유값으로 갖는 대각행렬의 고유벡터이다. 여기서
 
@@ -572,7 +570,7 @@ $$
 </div></br>
 ::: {.solution}
 
-$\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 이 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저이고 $\boldsymbol{e}_i$ 의 고유값은 $\lambda_i$ 라 하자. @prp-hermite_tvv 에서 보았듯이 임의의 $\boldsymbol{u} \in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \boldsymbol{Au},\boldsymbol{u}\rangle$ 이 실수이면 $\boldsymbol{A}$ 는 에르미트 행렬이다. $\boldsymbol{u}= \sum_i^n u_i \boldsymbol{e}_i$ 라 하면,
+$\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 이 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저이고 $\boldsymbol{e}_i$ 의 고유값은 $\lambda_i$ 라 하자. @prp-LA_hermite_tvv 에서 보았듯이 임의의 $\boldsymbol{u} \in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \boldsymbol{Au},\boldsymbol{u}\rangle$ 이 실수이면 $\boldsymbol{A}$ 는 에르미트 행렬이다. $\boldsymbol{u}= \sum_i^n u_i \boldsymbol{e}_i$ 라 하면,
 
 $$
 \begin{aligned}
@@ -594,7 +592,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-invirtible_deformation}
+::: {#lem-LA_invirtible_deformation}
 
 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 행렬에 대해 $\boldsymbol{A}$ 가 대칭행렬이고 실수 $b,\,c$ 가 $b^2-4c <0$ 일 때 
 
@@ -640,7 +638,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-factorization_of_polinomial}
+::: {#lem-LA_factorization_of_polinomial}
 $n$ 차 실계수 다항식 $p(x)$ 는 1차식들과 2차식의 곱들로, 2차식의 경우 $f(x)$ 라 했을 때 $f(x)=0$ 을 만족하는 실수가 존재하지 않도록 아래와 같이 분해된다.
 
 $$
@@ -676,7 +674,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-hermitian_real_matrix_eigenvalue}
+::: {#lem-LA_hermitian_real_matrix_eigenvalue}
 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬이면 고유값을 가진다.
 :::
 
@@ -690,7 +688,7 @@ $$
 0=c_0 \boldsymbol{v} + c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n \boldsymbol{v}
 $$
 
-를 만족하는 nontrivial 한 $\{c_i\}$ 가 존재한다. @lem-factorization_of_polinomial 에 의해,
+를 만족하는 nontrivial 한 $\{c_i\}$ 가 존재한다. @lem-LA_factorization_of_polinomial 에 의해,
 
 $$
 \begin{aligned}
@@ -699,13 +697,13 @@ c_0 \boldsymbol{v} + & c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n\bolds
 \end{aligned}
 $$
 
-로 분해 할 수 있다. 이 때 $i=1,\ldots,\,M$ 에 대해 $b_i^2<4c_i$ 이다. @lem-invirtible_deformation 에 의해 $(\boldsymbol{A}^2 +b_i\boldsymbol{A}+c_i\boldsymbol{I})$ 꼴의 행렬은 가역이다. 그렇다면 최소한 하나의 $\boldsymbol{A}-\lambda_j \boldsymbol{I}$ 꼴의 행렬이 가역행렬이 아니며, 이 때의 $\lambda_j$ 가 고유값이다. 즉 $\boldsymbol{A}$ 는 고유값을 가진다.$\square$
+로 분해 할 수 있다. 이 때 $i=1,\ldots,\,M$ 에 대해 $b_i^2<4c_i$ 이다. @lem-LA_invirtible_deformation 에 의해 $(\boldsymbol{A}^2 +b_i\boldsymbol{A}+c_i\boldsymbol{I})$ 꼴의 행렬은 가역이다. 그렇다면 최소한 하나의 $\boldsymbol{A}-\lambda_j \boldsymbol{I}$ 꼴의 행렬이 가역행렬이 아니며, 이 때의 $\lambda_j$ 가 고유값이다. 즉 $\boldsymbol{A}$ 는 고유값을 가진다.$\square$
 
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-self_adjoint_matrix_and_invariable_space}
+::: {#lem-LA_self_adjoint_matrix_and_invariable_space}
 
 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬 이고 $U\le \mathcal{M}_n(\mathbb{R})$ 가 $\boldsymbol{A}$ 에 대한 불변부분공간일 때,
 
@@ -744,7 +742,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-matrix_under_two_invariant_subspace}
+::: {#lem-LA_matrix_under_two_invariant_subspace}
 
 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 가 대칭행렬이고 $U,\,V \le \mathcal{M}_{n}(\mathbb{R})$ 가 $\boldsymbol{A}$ 에 대한 불변부분공간이며 $\mathcal{M}_{n }(\mathbb{R})= U \oplus V$ 이면 $\boldsymbol{A}$ 는 어떤 직교변환에 의해 블럭대각행렬이 된다.
 :::
@@ -758,7 +756,7 @@ $\boldsymbol{u}\in U$ 이면 $\boldsymbol{Au}\in U$ 이고 $\boldsymbol{v}\in V$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-symmetric_matrix_digoalization} 
+::: {#lem-LA_symmetric_matrix_digoalization} 
 $\boldsymbol{A}$ 가 대칭행렬이면 어떤 직교 변환에 의해 대각행렬이 된다.
 :::
 
@@ -768,13 +766,13 @@ $\boldsymbol{A}$ 가 대칭행렬이면 어떤 직교 변환에 의해 대각행
 
 $n$ 에 대한 수학적 귀납법을 이용한다. $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬이라고 하자. $n=1$ 일 때는 스스로 대각행렬이다. 이제 $k<n$ 인 대칭행렬은 어떤 직교 변환에 의해 대각행렬이 된다고 가정하자.
 
-$\boldsymbol{A}$ 가 $n \times n$ 대칭 행렬일 때 고유값이 항상 존재하며 고유값에 대한 고유벡터 가운데 하나 $\boldsymbol{u}_1$ 를 이용하여 $U=\text{span}(\boldsymbol{u}_1)$ 를 만들면 $U$ 은 불변부분공간이며 @lem-self_adjoint_matrix_and_invariable_space 에서 보였듯이 $U^\perp$ 도 불변부분공간이다. $\mathcal{M}_{n \times n}(\mathbb{R}) = U \otimes U^\perp$ 이므로 @lem-matrix_under_two_invariant_subspace 에서 보였듯이 어떤 직교 변환에 의해 $1$ 행렬과 $(n-1)\times (n-1)$ 행렬로 블록대각행렬이 된다. $(n-1)\times (n-1)$ 행렬은 귀납법의 가정에 의해 대각행렬이 되므로 $\boldsymbol{A}$ 는 대각행렬이 된다. $\square$
+$\boldsymbol{A}$ 가 $n \times n$ 대칭 행렬일 때 고유값이 항상 존재하며 고유값에 대한 고유벡터 가운데 하나 $\boldsymbol{u}_1$ 를 이용하여 $U=\text{span}(\boldsymbol{u}_1)$ 를 만들면 $U$ 은 불변부분공간이며 @lem-LA_self_adjoint_matrix_and_invariable_space 에서 보였듯이 $U^\perp$ 도 불변부분공간이다. $\mathcal{M}_{n \times n}(\mathbb{R}) = U \otimes U^\perp$ 이므로 @lem-LA_matrix_under_two_invariant_subspace 에서 보였듯이 어떤 직교 변환에 의해 $1$ 행렬과 $(n-1)\times (n-1)$ 행렬로 블록대각행렬이 된다. $(n-1)\times (n-1)$ 행렬은 귀납법의 가정에 의해 대각행렬이 되므로 $\boldsymbol{A}$ 는 대각행렬이 된다. $\square$
 
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-spectrum_theorem_for_real_vector_space}
+::: {#thm-LA_spectrum_theorem_for_real_vector_space}
 
 #### 실수체($\mathbb{R}$) 에서 정의된 행렬의 스펙트럼 정리
 

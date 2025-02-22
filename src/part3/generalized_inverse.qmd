@@ -6,7 +6,13 @@ crossref:
   chapters: true
 ---
 
-## 일반화된 역행렬
+
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
+## 일반화된 역행렬 {#sec-ALA_generalized_inverse}
+
 ::: {.callout-warning icon="false"}
 
 #### 참고자료
@@ -23,7 +29,7 @@ crossref:
 
 ::: {.callout-note appearance="minimal" icon="false"}
 
-::: {#def-part3_generalized_inverse}
+::: {#def-ALA_generalized_inverse}
 
 #### 일반화된 역행렬
 
@@ -34,7 +40,7 @@ crossref:
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_generalized_inverse_of_invertible_matrix}
+::: {#prp-ALA_generalized_inverse_of_invertible_matrix}
 
 $A$ 가 가역행렬이면 $G=A^{-1}$ 이다.
 
@@ -53,7 +59,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_gim_1}
+::: {#prp-ALA_gim_1}
 
 $AA^-$ 는 와 $A^-A$ 는 projection 이다. 
 
@@ -78,7 +84,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_gim_2}
+::: {#prp-ALA_gim_2}
 
 $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 이고 $G=A^-$ 일 때 임의의 $y\in \mathcal{M}_m(\mathbb{F})$ 에 대해 다음이 성립한다.
 
@@ -100,7 +106,7 @@ $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 이고 $G=A^-$ 일 때 임의의 $y\
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part3_gim_abcd}
+::: {#thm-ALA_gim_abcd}
 
 $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 $r=\text{rank}(A)$ 일 때 적절한 행교환 $P_1$ 과 열교환 $P_2$,  가역행렬 $R\in \mathcal{M}_{r \times r}(\mathbb{F})$ 과, 어떤 $B=\mathcal{M}_{r\times (n-r)}(\mathbb{F})$, $C=\mathcal{M}_{(m-r)\times r}(\mathbb{F})$ 에 대해 
 
@@ -128,9 +134,9 @@ $r+1$ 행부터 $m$ 행까지는 $1$ 행부터 $r$ 행까지의 선형결합으�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part3_gim}
+::: {#thm-ALA_gim}
 
-@thm-part3_gim_abcd 의 notation 에 대해 $G_0 = \begin{bmatrix} R^{-1} & 0 \\ 0 & 0 \end{bmatrix} \in \mathcal{M}_{n \times m}(\mathbb{F})$ 를 생각하자. 이 때 $G=P_2G_0 {P_1}$ 이 $A$ 의 일반화된 역행렬이다.
+@thm-ALA_gim_abcd 의 notation 에 대해 $G_0 = \begin{bmatrix} R^{-1} & 0 \\ 0 & 0 \end{bmatrix} \in \mathcal{M}_{n \times m}(\mathbb{F})$ 를 생각하자. 이 때 $G=P_2G_0 {P_1}$ 이 $A$ 의 일반화된 역행렬이다.
 
 :::
 
@@ -152,7 +158,7 @@ $$
 
 </br>
 
-@thm-part3_gim 은 일반적인 행렬에 대해 최소한 하나의 일반화된 역행렬이 존재한다는 것을 보장한다. 
+@thm-ALA_gim 은 일반적인 행렬에 대해 최소한 하나의 일반화된 역행렬이 존재한다는 것을 보장한다. 
 
 </br>
 
@@ -162,7 +168,7 @@ $$
 
 ::: {.callout-note appearance="minimal" icon="false"}
 
-::: {#def-part3_penrose_inverse}
+::: {#def-ALA_penrose_inverse}
 
 #### 펜로즈 역행렬
 
@@ -183,7 +189,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_uniqueness_of_penrose_inverse}
+::: {#prp-ALA_uniqueness_of_penrose_inverse}
 
 펜로즈 역행렬은 유일하다.
 
@@ -224,7 +230,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_penrose_inverse_for_diagonal_matrix}
+::: {#prp-ALA_penrose_inverse_for_diagonal_matrix}
 
 $D \in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 대각성분이 아닌 성분이 모두 $0$ 인 일반화된 대각행렬일 때 $D$ 의 펜로즈 역행렬 $D^{+} \in \mathcal{M}_{n \times m}(\mathbb{F})$ 는 다음과 같다.
 
@@ -239,7 +245,7 @@ $$
 
 ::: {.proof}
 
-@def-part3_penrose_inverse 의 각 조건을 만족함을 보이자.
+@def-ALA_penrose_inverse 의 각 조건을 만족함을 보이자.
 
 우선 $(DD^+)_{ij} = \sum_k D_{ik}D^{+}_{kj}= D_{ij}\delta_{ij}$ 이며 $(D^+D)= D_{ij}\delta_{ij}$ 이다.
 
@@ -260,7 +266,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part3_psudo_invserse}
+::: {#thm-ALA_psudo_invserse}
 
 특이값 분해 $A = U \Sigma V^\ast$ 에 대해 $A^+ = V\Sigma^+U^\ast$ 이다. 
 
@@ -270,7 +276,7 @@ $$
 
 ::: {.proof}
 
-@def-part3_penrose_inverse 의 각 조건을 만족함을 보이자.
+@def-ALA_penrose_inverse 의 각 조건을 만족함을 보이자.
 
 ($1$) $AA^+A= (U\Sigma V^\ast) (V\Sigma^+ U^\ast) (U \Sigma V^\ast)= U(\Sigma \Sigma^+ \Sigma)V^\ast = U\Sigma V^\ast = A$.
 
@@ -288,7 +294,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_penrose_inverse_and_adjoint}
+::: {#exr-ALA_penrose_inverse_and_adjoint}
 
 $(A^\ast)^+ = (A^+)^\ast$ 임을 보여라.
 :::
@@ -308,7 +314,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_basic_properties_of_penrose_inverse_1}
+::: {#exr-ALA_basic_properties_of_penrose_inverse_1}
 
 행렬 $A$ 와 그 펜로즈 역행럴 $A^+$ 에 대해 다음이 성립함을 보여라.
 
@@ -350,7 +356,7 @@ $AA^+$ 와 $A^+A$ 가 에르미트 행렬임을 이용한다.
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_basic_properties_of_penrose_inverse_2}
+::: {#prp-ALA_basic_properties_of_penrose_inverse_2}
 
 $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $A^+ = A^\ast (AA^\ast)^+ = (A^\ast A)^+ A^\ast$ 이다.
 
@@ -360,14 +366,14 @@ $A\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $A^+ = A^\ast (AA^\ast)^+
 
 ::: {.proof}
 
-($1$) 우선 $A^+ = A^\ast (AA^\ast)^+$ 를 보인다. $D = A^\ast(AA^\ast)^+$ 라 하자. $D$ 가  @def-part3_penrose_inverse 를 따르는 $A$ 의 펜로즈 역행렬임을 보인다.
+($1$) 우선 $A^+ = A^\ast (AA^\ast)^+$ 를 보인다. $D = A^\ast(AA^\ast)^+$ 라 하자. $D$ 가  @def-ALA_penrose_inverse 를 따르는 $A$ 의 펜로즈 역행렬임을 보인다.
 
 ($1-1$)
 $$
 \begin{aligned}
 AA^\ast = (AA^\ast)(AA^\ast)^+(AA^\ast) &\iff AA^\ast = ADAA^\ast \iff (I-AD)AA^\ast = 0 
 \end{aligned}
-$$ {#eq-part3_prp_basic_properties_of_penrose_inverse_2_1}
+$$ {#eq-ALA_prp_basic_properties_of_penrose_inverse_2_1}
 
 이다. 여기서 $AA^\ast$ 는 non-negative 이다. 우선 $XAA^\ast = 0 \implies AA^\ast=0$ 임을 보이자. 
 
@@ -375,7 +381,7 @@ $$
 XAA^\ast = 0 \implies XAA^\ast X^\ast = 0 \implies (XA)(XA)^\ast = 0
 $$
 
-이므로 $XA=0$ 이다. 즉 @eq-part3_prp_basic_properties_of_penrose_inverse_2_1 에 대해 $(I-AD)A=0 \implies ADA=A$.
+이므로 $XA=0$ 이다. 즉 @eq-ALA_prp_basic_properties_of_penrose_inverse_2_1 에 대해 $(I-AD)A=0 \implies ADA=A$.
 
 ($1-2$) 같은 방법으로 
 
@@ -431,7 +437,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_product_of_penrose_inverse}
+::: {#prp-ALA_product_of_penrose_inverse}
 
 $A\in \mathcal{M}_{m \times n}(\mathbb{F}),\, B\in \mathcal{M}_{n \times k}(\mathbb{F})$ 에 대해 $A$ 의 모든 열벡터가 northonormal 하면 $(AB)^+ = B^+ A^+$ 이다. 
 
@@ -458,7 +464,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_product_of_penrose_inverse}
+::: {#prp-ALA_product_of_penrose_inverse}
 
 $A\in \mathcal{M}_{m \times n}(\mathbb{F}),\, B\in \mathcal{M}_{n \times k}(\mathbb{F})$ 에 $\text{rank}(A) = \text{rank}(B) = n$ 일 때 $(AB)^+ = B^+ A^+$ 이다.
 

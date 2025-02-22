@@ -6,19 +6,23 @@ crossref:
   chapters: true
 ---
 
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
 ::: {.callout-warning appearance="minimal"}
 
 이 장은 [특성다항식, 최소다항식과 케일리-해밀턴 정리](characteristic_polynomial.qmd) 로부터 이어진다.
 
 :::
 
-### 일반화된 고유벡터와 고유공간
+## 일반화된 고유벡터와 고유공간 {#sec-ALA_generalized_eigen_space}
 
 벡터공간 $V$ 에서의 선형 연산자 $L\in \mathcal{L}(V)$ 에 대해 다음이 성립한다는 것은 쉽게 보일 수 있다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_kernel_of_power_of_operator}
+::: {#prp-ALA_kernel_of_power_of_operator}
 
 $L\in \mathcal{L}(V)$ 이며 $L^0 :=I_V$ 라고 하자. 이 때 다음이 성립한다. 
 
@@ -31,7 +35,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_equality_in_the_sequence_of_kernel}
+::: {#prp-ALA_equality_in_the_sequence_of_kernel}
 
 $L\in \mathcal{L}(V)$ 에서 어떤 자연수 $m$ 에 대해 $\ker (L^m) = \ker (L^{m+1})$ 이면 $n\ge m$ 에 대해 
 
@@ -46,7 +50,7 @@ $$
 
 ::: {.proof}
 
-@prp-part3_kernel_of_power_of_operator 에 의해 $\ker (L^m)\subset \ker (L^n)$ 이다. 따라서 $\ker (L^n) \subset \ker (L^m)$ 임을 보이면 된다. 만약 우리가 임의의 양의 정수 $k$ 에 대해 $\ker (L^{m+k+1}) \subset \ker (L^{m+k})$ 임을 보인다면 연쇄적으로 $\ker (L^n) = \ker (L^m)$ 라는 것을 보이는 것이 된다. 
+@prp-ALA_kernel_of_power_of_operator 에 의해 $\ker (L^m)\subset \ker (L^n)$ 이다. 따라서 $\ker (L^n) \subset \ker (L^m)$ 임을 보이면 된다. 만약 우리가 임의의 양의 정수 $k$ 에 대해 $\ker (L^{m+k+1}) \subset \ker (L^{m+k})$ 임을 보인다면 연쇄적으로 $\ker (L^n) = \ker (L^m)$ 라는 것을 보이는 것이 된다. 
 $$
 \begin{aligned}
 v\in \ker (L^{m+k+1}) &\implies L^{m+1}(L^{k}v) = 0\\
@@ -59,7 +63,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_kernel_of_power_of_dimension}
+::: {#exr-ALA_kernel_of_power_of_dimension}
 
 유한차원 벡터공간 $V$ 에서 $n=\dim (V),\, L\in \mathcal{L}(V)$ 일 때 $\ker (L^n) = \ker (L^{n+1}) = \cdots$ 이다.
 
@@ -68,12 +72,12 @@ $$
 </div></br>
 
 ::: {.solution}
-@prp-part3_equality_in_the_sequence_of_kernel 을 생각하면 어떤 $m<n$ 에 대해 $\ker(L^m)= \ker (L^{m+1})$ 이라면 위의 명제가 성립한다는 것을 안다. 이제 각각의 $m<n$ 에 대해 $\ker(L^m) \ne \ker (L^{m+1})$ 라면 $\dim (\ker(L^m)) < \dim (\ker (L^{m+1}))$ 이며 $\ker (L^n)=V$ 이므로 $\ker (L^n)= \ker (L^{n+1})=V$ 이다. $\square$
+@prp-ALA_equality_in_the_sequence_of_kernel 을 생각하면 어떤 $m<n$ 에 대해 $\ker(L^m)= \ker (L^{m+1})$ 이라면 위의 명제가 성립한다는 것을 안다. 이제 각각의 $m<n$ 에 대해 $\ker(L^m) \ne \ker (L^{m+1})$ 라면 $\dim (\ker(L^m)) < \dim (\ker (L^{m+1}))$ 이며 $\ker (L^n)=V$ 이므로 $\ker (L^n)= \ker (L^{n+1})=V$ 이다. $\square$
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_kernel_range_of_power_of_operator}
+::: {#prp-ALA_kernel_range_of_power_of_operator}
 
 유한차원 벡터공간 $V$ 에서 $n=\dim (V),\, L\in \mathcal{L}(V)$ 일 때 
 
@@ -88,7 +92,7 @@ $$
 
 ::: {.proof}
 
-$v\in \ker(T^n) \cap \text{im}(L^n)$ 이면 $L^n(v)=0$ 이며 $v=L^n (u)$ 인 $u\in V$ 가 존재한다. $L^n (v) = L^{2n}(u) = 0$ 이므로 $u \in \ker (L^{2n})$ 이다. 따라서 @exr-part3_kernel_of_power_of_dimension 에 의해 $u\in \ker (L^n)$ 이므로 $v=0$ 이다. 즉 $\ker(L^n) \cap \text{im}(L^n) = \{0\}$ 이다.
+$v\in \ker(T^n) \cap \text{im}(L^n)$ 이면 $L^n(v)=0$ 이며 $v=L^n (u)$ 인 $u\in V$ 가 존재한다. $L^n (v) = L^{2n}(u) = 0$ 이므로 $u \in \ker (L^{2n})$ 이다. 따라서 @exr-ALA_kernel_of_power_of_dimension 에 의해 $u\in \ker (L^n)$ 이므로 $v=0$ 이다. 즉 $\ker(L^n) \cap \text{im}(L^n) = \{0\}$ 이다.
 
 우리는 $\text{nullity}(L^n) + \text{rank}(L^n)=n$ 임을 안다. 따라서 $V = \ker (L^n) \oplus \text{im}(L^n)$ 이다. $\square$
 :::
@@ -96,7 +100,7 @@ $v\in \ker(T^n) \cap \text{im}(L^n)$ 이면 $L^n(v)=0$ 이며 $v=L^n (u)$ 인 $u
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-part3_generalized_eigenvectors_eigenspaces}
+::: {#def-ALA_generalized_eigenvectors_eigenspaces}
 #### 일반화된 고유벡터와 일반화된 고유공간
 
 $L\in \mathcal{L}(V)$ 이고 $\lambda$ 가 $L$ 의 고유값일 때 어떤 양의 정수 $k$ 와 영벡터가 아닌 벡터 $v\in V$ 가
@@ -110,11 +114,11 @@ $$
 :::
 :::
 
-이제 고유값 $\lambda$ 를 갖는 연산자 $L$ 에 대한 일반화된 고유공간을 $G(\lambda, L)$ 라고 쓰기로 하자. 다음 명제는 @exr-part3_kernel_of_power_of_dimension 에 따라 자명하다.
+이제 고유값 $\lambda$ 를 갖는 연산자 $L$ 에 대한 일반화된 고유공간을 $G(\lambda, L)$ 라고 쓰기로 하자. 다음 명제는 @exr-ALA_kernel_of_power_of_dimension 에 따라 자명하다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_generalized_eigenspace}
+::: {#prp-ALA_generalized_eigenspace}
 $$
 G(\lambda, L) = \ker (L-\lambda I)^{\dim (V)}
 $$
@@ -126,7 +130,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_linearly_independent_generalized_eigenvectors}
+::: {#prp-ALA_linearly_independent_generalized_eigenvectors}
 
 서로 다른 고유값을 갖는 일반화된 고유벡터의 집합은 선형독립이다.
 
@@ -159,11 +163,11 @@ $$
 
 </br>
 
-### Nilpotent Operator
+## Nilpotent Operator
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-part3_nilpotent}
+::: {#def-ALA_nilpotent}
 
 #### Nilpotent 연산자
 
@@ -175,7 +179,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_nilpotent_operator_power_of_dimension}
+::: {#prp-ALA_nilpotent_operator_power_of_dimension}
 
 $V$ 가 유한차원 벡터공간이며 $N\in \mathcal{L}(V)$ 가 nilpotent 일 때 $N^{\dim (V)} = 0$ 이다.
 
@@ -186,13 +190,13 @@ $V$ 가 유한차원 벡터공간이며 $N\in \mathcal{L}(V)$ 가 nilpotent 일 
 
 ::: {.proof}
 
-$G(0,\, N) = V$ 이므로, @prp-part3_generalized_eigenspace 에 의해 성립한다. $\square$
+$G(0,\, N) = V$ 이므로, @prp-ALA_generalized_eigenspace 에 의해 성립한다. $\square$
 :::
 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_eigenvalue_of_nilpotent}
+::: {#prp-ALA_eigenvalue_of_nilpotent}
 
 $N\in \mathcal{L}(V)$ 이 nilpotent 이면 $N$ 은 $0$ 이외의 고유값을 갖지 않는다.
 
@@ -217,7 +221,7 @@ $\lambda \ne 0$ 이 $N$ 의 고유값이며 $v$ 가 $\lambda$ 에 대한 고유�
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_8a_1}
+::: {#exr-ALA_axler4_8a_1}
 
 $L\in \mathcal{L}(V)$ 이며 $\text{nullity}(L^4)=8,\, \text{nullity}(L^6)=9$ 이면 $m\ge 5$ 에 대해 $\text{nullity}(L^m)=9$ 임을 보여라.
 
@@ -227,13 +231,13 @@ $L\in \mathcal{L}(V)$ 이며 $\text{nullity}(L^4)=8,\, \text{nullity}(L^6)=9$ �
 
 ::: {.solution}
 
-$\text{nullity}(L^5)$ 는 8 혹은 9이며 @prp-part3_equality_in_the_sequence_of_kernel 에 따라 8 이라면 $\text{nullity}{L^9}=8$ 이어야 하므로 $\text{nullity}(L^5)=9$ 이고 $m\ge 5$ 에 대해 성립한다.
+$\text{nullity}(L^5)$ 는 8 혹은 9이며 @prp-ALA_equality_in_the_sequence_of_kernel 에 따라 8 이라면 $\text{nullity}{L^9}=8$ 이어야 하므로 $\text{nullity}(L^5)=9$ 이고 $m\ge 5$ 에 대해 성립한다.
 
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_8a_2}
+::: {#exr-ALA_axler4_8a_2}
 $L\in \mathcal{L}(V)$, $m\in \mathbb{Z}_+$ 이다. $v\in V$ 에 대해 $L^{m-1}v\ne 0_V$ 이지만 $L^mv=0_V$ 이다. 이 때 $\{v,\,Lv,\ldots,\,L^{m-1}v\}$ 는 선형 독립임을 보여라.
 
 :::
@@ -253,7 +257,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_8a_3}
+::: {#exr-ALA_axler4_8a_3}
 
 $L\in \mathcal{L}(V)$ 일 때 다음을 보여라.
 
@@ -267,7 +271,7 @@ $$
 
 ::: {.solution}
 
-$\ker (L)= \ker (L^2)$ 이면 @prp-part3_equality_in_the_sequence_of_kernel 에 따라 모든 $m\ge 1$ 에 대해 $\ker (L^m) = \ker (L)$ 이다. 
+$\ker (L)= \ker (L^2)$ 이면 @prp-ALA_equality_in_the_sequence_of_kernel 에 따라 모든 $m\ge 1$ 에 대해 $\ker (L^m) = \ker (L)$ 이다. 
 
 ($\implies$) $V=\ker (L)\oplus \text{im}(L)$ 임을 가정하자. $\ker (L)\subset \ker (L^2)$ 이므로 $\ker (L^2) \subset \ker (L)$ 임을 보이면 된다. $v\ne 0_V$, $v\in \ker (L^2)$ 라고 하자. $L^2 v=0_V$ 이므로 $Lv\in \ker (L)$ 이다. $v\not\in \ker (L)$ 이라면 $v\in \text{im}(L)$ 이므로 $Lu=v$ 인 $u\in V$ 가 존재한다. $u\not\in \ker (L)$ 이므로 $u\not\in \ker(L^3)$ 이며 따라서 $L^2 v = L^3 u \ne 0_V$ 이다. 그런데 이는 $v\in \ker(L^2)$ 임에 모순된다. 따라서 $v\in \ker(L)$ 이다. 즉 $\ker (L^2) = \ker (L)$ 이다.
 
@@ -277,7 +281,7 @@ $\ker (L)= \ker (L^2)$ 이면 @prp-part3_equality_in_the_sequence_of_kernel 에 
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_8a_4}
+::: {#exr-ALA_axler4_8a_4}
 
 $L\in \mathcal{L}(V),\, c\in \mathbb{F}$ 이며 어떤 양의 정수 $m$ 에 대해 $L$ 의 최소다항식이 $(z-c)^m$ 으로 나누어 떨어진다고 하자. 이 때 
 
@@ -303,7 +307,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_invariance_of_kernel_and_image_of_operator}
+::: {#prp-ALA_invariance_of_kernel_and_image_of_operator}
 
 $T\in \mathcal{L}(V)$ 일 때 $T$ 에 대한 다항식으로 정의된 연산자 $p(T)$ 의 $\ker (p(T))$ 와 $\text{im}
 (p(T))$ 는 $T$ 에 대한 불변부분공간이다.

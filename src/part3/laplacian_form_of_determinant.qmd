@@ -33,12 +33,12 @@ crossref:
 
 ::::
 
-[교대형식과 행렬식](../part3/bilinear_form.qmd#sec-alternating_form_and_determinant_of_matrix) 에서 위의 조건을 만족하는 함수가 유일하다는 것을 보였다(@thm-uniqueness_of_determinant). 즉 우리가 위의 조건을 만족하는 어떤 함수를 생각해낸다면 그것은 행렬식과 같다는 의미이다. 일단 우리는 이것을 인정하기로 하자.
+[교대형식과 행렬식](../part3/bilinear_form.qmd#sec-ALA_alternating_form_and_determinant_of_matrix) 에서 위의 조건을 만족하는 함수가 유일하다는 것을 보였다(@thm-ALA_uniqueness_of_determinant). 즉 우리가 위의 조건을 만족하는 어떤 함수를 생각해낸다면 그것은 행렬식과 같다는 의미이다. 일단 우리는 이것을 인정하기로 하자.
 
 
 ::: {.callout-note appearance="minimal"}
 
-::: {#def-part3_minor_of_matrix}
+::: {#def-ALA_part3_minor_of_matrix}
 
 #### Minor
 
@@ -50,7 +50,7 @@ $n \times n$ 정사각 행렬 $\boldsymbol{A}$ 에 대해 $i$ 번째 행과 $j$ 
 </br>
 
 ::: {.callout-note appearance="minimal"}
-::: {#def-part3_minor_expansion}
+::: {#def-ALA_minor_expansion}
 
 #### 라플라스 전개
 
@@ -58,13 +58,13 @@ $n\times n$ 행렬 $\boldsymbol{A}$ 에 대한 $(i,\,j)$-minor 를 $M_{ij}$ 라�
 
 $$
 D^j(\boldsymbol{A}) :=   \sum_{i=1}^n (-1)^{i+j} A_{ij}M_{ij}.
-$$ {#eq-part3_laplace_expansion_for_column}
+$$ {#eq-ALA_laplace_expansion_for_column}
 
 같은 방법으로 **$i$-번째 행에 대해 라플라스 전개** $D_i:\mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}$ 를 아래와 같이 정의한다.
 
 $$
 D_i(\boldsymbol{A}) :=   \sum_{j=1}^n (-1)^{i+j} A_{ij}M_{ij}.
-$$ {#eq-part3_laplace_expansion_for_row}
+$$ {#eq-ALA_laplace_expansion_for_row}
 
 :::
 
@@ -76,7 +76,7 @@ $$ {#eq-part3_laplace_expansion_for_row}
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-part3_laplace_expansion_and_k_laternating_form_0}
+::: {#lem-ALA_laplace_expansion_and_k_laternating_form_0}
 
 $D_i(\boldsymbol{A}^T) = D^i (\boldsymbol{A})$ 이다.
 :::
@@ -97,7 +97,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-part3_laplace_expansion_and_k_laternating_form_1}
+::: {#lem-ALA_laplace_expansion_and_k_laternating_form_1}
 
 $D_i(\boldsymbol{I}_n)=D^j(\boldsymbol{I}_n)=1$ 이다.
 
@@ -121,7 +121,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-part3_laplace_expansion_and_k_laternating_form_2}
+::: {#lem-ALA_laplace_expansion_and_k_laternating_form_2}
 
 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대한 $D_i(\boldsymbol{A})$ 는 $n$-교대형식이다.
 
@@ -148,7 +148,7 @@ $$
 
 이다. 즉 $D_i$ 는 $n$-다중선형형식이다.
 
-이제 $D_i$ 가 교대형식이라는 것을 보이자. 교대형식은 두 열이 같을 때 그 값이 $0$ 이 된다(@prp-k_alternating_form). $k$ 번째 열과 $m(>k)$ 번째 열이 같다면 $M_{ij}$ 에서 $j=k$ 이거나 $j=m$ 일 경우를 제외하면 $M$ 을 계산하는데 포함되는 부분행렬에 같은 열이 최소한 두개 존재하므로 $M_{ij}=0$ 이된다. 따라서, 
+이제 $D_i$ 가 교대형식이라는 것을 보이자. 교대형식은 두 열이 같을 때 그 값이 $0$ 이 된다(@prp-ALA_k_alternating_form). $k$ 번째 열과 $m(>k)$ 번째 열이 같다면 $M_{ij}$ 에서 $j=k$ 이거나 $j=m$ 일 경우를 제외하면 $M$ 을 계산하는데 포함되는 부분행렬에 같은 열이 최소한 두개 존재하므로 $M_{ij}=0$ 이된다. 따라서, 
 
 $$
 D_{i}(\boldsymbol{A}) = (-1)^{i+k}A_{ik}M_{ik} + (-1)^{i+m}A_{im} M_{im}
@@ -171,22 +171,22 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-laplacian_expansion_and_determinant}
+::: {#thm-ALA_laplacian_expansion_and_determinant}
 
-@def-part3_minor_expansion 의 @eq-part3_laplace_expansion_for_row 와 @eq-part3_laplace_expansion_for_column 은 모두 행렬식의 정의와 같다.
+@def-ALA_minor_expansion 의 @eq-ALA_laplace_expansion_for_row 와 @eq-ALA_laplace_expansion_for_column 은 모두 행렬식의 정의와 같다.
 :::
 
 </div></br>
 
 ::: {.proof}
 
-@lem-part3_laplace_expansion_and_k_laternating_form_1 과 @lem-part3_laplace_expansion_and_k_laternating_form_2 에 의해 $D_i(\boldsymbol{A})$ 는 행렬식이다. 따라서 $D_i(\boldsymbol{A})=D_i(\boldsymbol{A}^T)$ 와 같다. 그런데 @lem-part3_laplace_expansion_and_k_laternating_form_0 에 의해 $D_i(\boldsymbol{A}^T)=D^i(\boldsymbol{A}^T)$ 이다. $\square$
+@lem-ALA_laplace_expansion_and_k_laternating_form_1 과 @lem-ALA_laplace_expansion_and_k_laternating_form_2 에 의해 $D_i(\boldsymbol{A})$ 는 행렬식이다. 따라서 $D_i(\boldsymbol{A})=D_i(\boldsymbol{A}^T)$ 와 같다. 그런데 @lem-ALA_laplace_expansion_and_k_laternating_form_0 에 의해 $D_i(\boldsymbol{A}^T)=D^i(\boldsymbol{A}^T)$ 이다. $\square$
 
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_determinant_of_cartan_matrix}
+::: {#exr-ALA_determinant_of_cartan_matrix}
 
 #### 카르탕 행렬 (Cartan matrix)
 $n\ge 1$ 에 대해 $\boldsymbol{A}_n\in \mathcal{M}_{n\times n}(\mathbb{F})$, $n \ge 2$ 에 대해 $\boldsymbol{B}_n\in \mathcal{M}_{n\times n}(\mathbb{F})$, $n\ge 4$ 에 대해 $\boldsymbol{D}_n \in \mathcal{M}_{n\times n}(\mathbb{F})$ 를 각각 아래와 같이 정의한다.

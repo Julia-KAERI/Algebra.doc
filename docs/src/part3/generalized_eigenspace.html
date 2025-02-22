@@ -316,10 +316,12 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#일반화된-고유벡터와-고유공간" id="toc-일반화된-고유벡터와-고유공간" class="nav-link active" data-scroll-target="#일반화된-고유벡터와-고유공간"><span class="header-section-number">19.0.1</span> 일반화된 고유벡터와 고유공간</a></li>
-  <li><a href="#nilpotent-operator" id="toc-nilpotent-operator" class="nav-link" data-scroll-target="#nilpotent-operator"><span class="header-section-number">19.0.2</span> Nilpotent Operator</a></li>
+  <li><a href="#sec-ALA_generalized_eigen_space" id="toc-sec-ALA_generalized_eigen_space" class="nav-link active" data-scroll-target="#sec-ALA_generalized_eigen_space"><span class="header-section-number">19.1</span> 일반화된 고유벡터와 고유공간</a></li>
+  <li><a href="#nilpotent-operator" id="toc-nilpotent-operator" class="nav-link" data-scroll-target="#nilpotent-operator"><span class="header-section-number">19.2</span> Nilpotent Operator</a>
+  <ul class="collapse">
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
-  <li><a href="#연산자의-분해" id="toc-연산자의-분해" class="nav-link" data-scroll-target="#연산자의-분해"><span class="header-section-number">19.1</span> 연산자의 분해</a></li>
+  </ul></li>
+  <li><a href="#연산자의-분해" id="toc-연산자의-분해" class="nav-link" data-scroll-target="#연산자의-분해"><span class="header-section-number">19.3</span> 연산자의 분해</a></li>
   </ul>
 </nav>
     </div>
@@ -345,6 +347,15 @@ window.Quarto = {
 </header>
 
 
+<div class="hidden">
+<p>% %</p>
+%
+<p><span class="math display">\[
+\DeclarePairedDelimiters{\set}{\{}{\}}
+\DeclareMathOperator*{\argmax}{argmax}
+\]</span></p>
+</div>
+<p><br></p>
 <div class="callout callout-style-simple callout-warning no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -355,12 +366,12 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<section id="일반화된-고유벡터와-고유공간" class="level3" data-number="19.0.1">
-<h3 data-number="19.0.1" class="anchored" data-anchor-id="일반화된-고유벡터와-고유공간"><span class="header-section-number">19.0.1</span> 일반화된 고유벡터와 고유공간</h3>
+<section id="sec-ALA_generalized_eigen_space" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="sec-ALA_generalized_eigen_space"><span class="header-section-number">19.1</span> 일반화된 고유벡터와 고유공간</h2>
 <p>벡터공간 <span class="math inline">\(V\)</span> 에서의 선형 연산자 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 다음이 성립한다는 것은 쉽게 보일 수 있다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_kernel_of_power_of_operator" class="theorem proposition">
+<div id="prp-ALA_kernel_of_power_of_operator" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 19.1</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이며 <span class="math inline">\(L^0 :=I_V\)</span> 라고 하자. 이 때 다음이 성립한다.</p>
 <p><span class="math display">\[
 \{0\} \subset \ker (L^0) \subset \ker (L^1)  \subset \cdots \subset \ker (L^k) \subset \ker (L^{k+1})\subset \cdots.
@@ -369,7 +380,7 @@ window.Quarto = {
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_equality_in_the_sequence_of_kernel" class="theorem proposition">
+<div id="prp-ALA_equality_in_the_sequence_of_kernel" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 19.2</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에서 어떤 자연수 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(\ker (L^m) = \ker (L^{m+1})\)</span> 이면 <span class="math inline">\(n\ge m\)</span> 에 대해</p>
 <p><span class="math display">\[
 \ker (L^n) = \ker (L^m)
@@ -379,7 +390,7 @@ window.Quarto = {
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-part3_kernel_of_power_of_operator" class="quarto-xref">명제&nbsp;<span>19.1</span></a> 에 의해 <span class="math inline">\(\ker (L^m)\subset \ker (L^n)\)</span> 이다. 따라서 <span class="math inline">\(\ker (L^n) \subset \ker (L^m)\)</span> 임을 보이면 된다. 만약 우리가 임의의 양의 정수 <span class="math inline">\(k\)</span> 에 대해 <span class="math inline">\(\ker (L^{m+k+1}) \subset \ker (L^{m+k})\)</span> 임을 보인다면 연쇄적으로 <span class="math inline">\(\ker (L^n) = \ker (L^m)\)</span> 라는 것을 보이는 것이 된다. <span class="math display">\[
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-ALA_kernel_of_power_of_operator" class="quarto-xref">명제&nbsp;<span>19.1</span></a> 에 의해 <span class="math inline">\(\ker (L^m)\subset \ker (L^n)\)</span> 이다. 따라서 <span class="math inline">\(\ker (L^n) \subset \ker (L^m)\)</span> 임을 보이면 된다. 만약 우리가 임의의 양의 정수 <span class="math inline">\(k\)</span> 에 대해 <span class="math inline">\(\ker (L^{m+k+1}) \subset \ker (L^{m+k})\)</span> 임을 보인다면 연쇄적으로 <span class="math inline">\(\ker (L^n) = \ker (L^m)\)</span> 라는 것을 보이는 것이 된다. <span class="math display">\[
 \begin{aligned}
 v\in \ker (L^{m+k+1}) &amp;\implies L^{m+1}(L^{k}v) = 0\\
 &amp;\implies L^k v \in \ker (L^{m+1}) = \ker(L^{m})
@@ -389,17 +400,17 @@ v\in \ker (L^{m+k+1}) &amp;\implies L^{m+1}(L^{k}v) = 0\\
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-part3_kernel_of_power_of_dimension" class="theorem exercise">
+<div id="exr-ALA_kernel_of_power_of_dimension" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 19.1</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에서 <span class="math inline">\(n=\dim (V),\, L\in \mathcal{L}(V)\)</span> 일 때 <span class="math inline">\(\ker (L^n) = \ker (L^{n+1}) = \cdots\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-part3_equality_in_the_sequence_of_kernel" class="quarto-xref">명제&nbsp;<span>19.2</span></a> 을 생각하면 어떤 <span class="math inline">\(m&lt;n\)</span> 에 대해 <span class="math inline">\(\ker(L^m)= \ker (L^{m+1})\)</span> 이라면 위의 명제가 성립한다는 것을 안다. 이제 각각의 <span class="math inline">\(m&lt;n\)</span> 에 대해 <span class="math inline">\(\ker(L^m) \ne \ker (L^{m+1})\)</span> 라면 <span class="math inline">\(\dim (\ker(L^m)) &lt; \dim (\ker (L^{m+1}))\)</span> 이며 <span class="math inline">\(\ker (L^n)=V\)</span> 이므로 <span class="math inline">\(\ker (L^n)= \ker (L^{n+1})=V\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-ALA_equality_in_the_sequence_of_kernel" class="quarto-xref">명제&nbsp;<span>19.2</span></a> 을 생각하면 어떤 <span class="math inline">\(m&lt;n\)</span> 에 대해 <span class="math inline">\(\ker(L^m)= \ker (L^{m+1})\)</span> 이라면 위의 명제가 성립한다는 것을 안다. 이제 각각의 <span class="math inline">\(m&lt;n\)</span> 에 대해 <span class="math inline">\(\ker(L^m) \ne \ker (L^{m+1})\)</span> 라면 <span class="math inline">\(\dim (\ker(L^m)) &lt; \dim (\ker (L^{m+1}))\)</span> 이며 <span class="math inline">\(\ker (L^n)=V\)</span> 이므로 <span class="math inline">\(\ker (L^n)= \ker (L^{n+1})=V\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_kernel_range_of_power_of_operator" class="theorem proposition">
+<div id="prp-ALA_kernel_range_of_power_of_operator" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 19.3</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에서 <span class="math inline">\(n=\dim (V),\, L\in \mathcal{L}(V)\)</span> 일 때</p>
 <p><span class="math display">\[
 V = \ker(L^n)\oplus \text{im}(L^n)
@@ -409,7 +420,7 @@ V = \ker(L^n)\oplus \text{im}(L^n)
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(v\in \ker(T^n) \cap \text{im}(L^n)\)</span> 이면 <span class="math inline">\(L^n(v)=0\)</span> 이며 <span class="math inline">\(v=L^n (u)\)</span> 인 <span class="math inline">\(u\in V\)</span> 가 존재한다. <span class="math inline">\(L^n (v) = L^{2n}(u) = 0\)</span> 이므로 <span class="math inline">\(u \in \ker (L^{2n})\)</span> 이다. 따라서 <a href="#exr-part3_kernel_of_power_of_dimension" class="quarto-xref">연습문제&nbsp;<span>19.1</span></a> 에 의해 <span class="math inline">\(u\in \ker (L^n)\)</span> 이므로 <span class="math inline">\(v=0\)</span> 이다. 즉 <span class="math inline">\(\ker(L^n) \cap \text{im}(L^n) = \{0\}\)</span> 이다.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(v\in \ker(T^n) \cap \text{im}(L^n)\)</span> 이면 <span class="math inline">\(L^n(v)=0\)</span> 이며 <span class="math inline">\(v=L^n (u)\)</span> 인 <span class="math inline">\(u\in V\)</span> 가 존재한다. <span class="math inline">\(L^n (v) = L^{2n}(u) = 0\)</span> 이므로 <span class="math inline">\(u \in \ker (L^{2n})\)</span> 이다. 따라서 <a href="#exr-ALA_kernel_of_power_of_dimension" class="quarto-xref">연습문제&nbsp;<span>19.1</span></a> 에 의해 <span class="math inline">\(u\in \ker (L^n)\)</span> 이므로 <span class="math inline">\(v=0\)</span> 이다. 즉 <span class="math inline">\(\ker(L^n) \cap \text{im}(L^n) = \{0\}\)</span> 이다.</p>
 <p>우리는 <span class="math inline">\(\text{nullity}(L^n) + \text{rank}(L^n)=n\)</span> 임을 안다. 따라서 <span class="math inline">\(V = \ker (L^n) \oplus \text{im}(L^n)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
@@ -419,7 +430,7 @@ V = \ker(L^n)\oplus \text{im}(L^n)
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-part3_generalized_eigenvectors_eigenspaces" class="theorem definition">
+<div id="def-ALA_generalized_eigenvectors_eigenspaces" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 19.1 (일반화된 고유벡터와 일반화된 고유공간)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(\lambda\)</span> 가 <span class="math inline">\(L\)</span> 의 고유값일 때 어떤 양의 정수 <span class="math inline">\(k\)</span> 와 영벡터가 아닌 벡터 <span class="math inline">\(v\in V\)</span> 가</p>
 <p><span class="math display">\[
 (L-\lambda I_V)^k v = 0
@@ -429,10 +440,10 @@ V = \ker(L^n)\oplus \text{im}(L^n)
 </div>
 </div>
 </div>
-<p>이제 고유값 <span class="math inline">\(\lambda\)</span> 를 갖는 연산자 <span class="math inline">\(L\)</span> 에 대한 일반화된 고유공간을 <span class="math inline">\(G(\lambda, L)\)</span> 라고 쓰기로 하자. 다음 명제는 <a href="#exr-part3_kernel_of_power_of_dimension" class="quarto-xref">연습문제&nbsp;<span>19.1</span></a> 에 따라 자명하다.</p>
+<p>이제 고유값 <span class="math inline">\(\lambda\)</span> 를 갖는 연산자 <span class="math inline">\(L\)</span> 에 대한 일반화된 고유공간을 <span class="math inline">\(G(\lambda, L)\)</span> 라고 쓰기로 하자. 다음 명제는 <a href="#exr-ALA_kernel_of_power_of_dimension" class="quarto-xref">연습문제&nbsp;<span>19.1</span></a> 에 따라 자명하다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_generalized_eigenspace" class="theorem proposition">
+<div id="prp-ALA_generalized_eigenspace" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 19.4</strong></span> <span class="math display">\[
 G(\lambda, L) = \ker (L-\lambda I)^{\dim (V)}
 \]</span></p>
@@ -441,7 +452,7 @@ G(\lambda, L) = \ker (L-\lambda I)^{\dim (V)}
 </div>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_linearly_independent_generalized_eigenvectors" class="theorem proposition">
+<div id="prp-ALA_linearly_independent_generalized_eigenvectors" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 19.5</strong></span> 서로 다른 고유값을 갖는 일반화된 고유벡터의 집합은 선형독립이다.</p>
 </div>
 </div>
@@ -462,15 +473,15 @@ S:=(L-\lambda_1 I)^k (L-\lambda_2I)^{\dim (V)} \cdots (L-\lambda_mI)^{\dim (V)}
 </div>
 <p><br></p>
 </section>
-<section id="nilpotent-operator" class="level3" data-number="19.0.2">
-<h3 data-number="19.0.2" class="anchored" data-anchor-id="nilpotent-operator"><span class="header-section-number">19.0.2</span> Nilpotent Operator</h3>
+<section id="nilpotent-operator" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="nilpotent-operator"><span class="header-section-number">19.2</span> Nilpotent Operator</h2>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-part3_nilpotent" class="theorem definition">
+<div id="def-ALA_nilpotent" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 19.2 (Nilpotent 연산자)</strong></span> 벡터공간에서 정의된 연산자 <span class="math inline">\(N\in \mathcal{L}(V)\)</span> 가 어떤 <span class="math inline">\(n\in \mathbb{Z}_+\)</span> 에 대해 <span class="math inline">\(N^n= 0\)</span> 일 때 <span class="math inline">\(N\)</span> 을 <strong>nilpotent</strong>라고 한다.</p>
 </div>
 </div>
@@ -478,17 +489,17 @@ S:=(L-\lambda_1 I)^k (L-\lambda_2I)^{\dim (V)} \cdots (L-\lambda_mI)^{\dim (V)}
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_nilpotent_operator_power_of_dimension" class="theorem proposition">
+<div id="prp-ALA_nilpotent_operator_power_of_dimension" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 19.6</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 벡터공간이며 <span class="math inline">\(N\in \mathcal{L}(V)\)</span> 가 nilpotent 일 때 <span class="math inline">\(N^{\dim (V)} = 0\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(G(0,\, N) = V\)</span> 이므로, <a href="#prp-part3_generalized_eigenspace" class="quarto-xref">명제&nbsp;<span>19.4</span></a> 에 의해 성립한다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(G(0,\, N) = V\)</span> 이므로, <a href="#prp-ALA_generalized_eigenspace" class="quarto-xref">명제&nbsp;<span>19.4</span></a> 에 의해 성립한다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_eigenvalue_of_nilpotent" class="theorem proposition">
+<div id="prp-ALA_eigenvalue_of_nilpotent" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 19.7</strong></span> <span class="math inline">\(N\in \mathcal{L}(V)\)</span> 이 nilpotent 이면 <span class="math inline">\(N\)</span> 은 <span class="math inline">\(0\)</span> 이외의 고유값을 갖지 않는다.</p>
 </div>
 </div>
@@ -497,7 +508,6 @@ S:=(L-\lambda_1 I)^k (L-\lambda_2I)^{\dim (V)} \cdots (L-\lambda_mI)^{\dim (V)}
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\lambda \ne 0\)</span> 이 <span class="math inline">\(N\)</span> 의 고유값이며 <span class="math inline">\(v\)</span> 가 <span class="math inline">\(\lambda\)</span> 에 대한 고유벡터라면 모든 <span class="math inline">\(k\in \mathbb{Z}_+\)</span> 에 대해 <span class="math inline">\(N^kv=\lambda^k v \ne 0\)</span> 이므로 <span class="math inline">\(N\)</span> 은 nilpotent 가 아니다. 따라서 nilpotent 의 고유값은 <span class="math inline">\(0\)</span> 뿐이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-</section>
 <section id="연습문제" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
 <div class="callout callout-style-simple callout-warning no-icon">
@@ -512,17 +522,17 @@ S:=(L-\lambda_1 I)^k (L-\lambda_2I)^{\dim (V)} \cdots (L-\lambda_mI)^{\dim (V)}
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-part3_axler4_8a_1" class="theorem exercise">
+<div id="exr-ALA_axler4_8a_1" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 19.2</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이며 <span class="math inline">\(\text{nullity}(L^4)=8,\, \text{nullity}(L^6)=9\)</span> 이면 <span class="math inline">\(m\ge 5\)</span> 에 대해 <span class="math inline">\(\text{nullity}(L^m)=9\)</span> 임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\text{nullity}(L^5)\)</span> 는 8 혹은 9이며 <a href="#prp-part3_equality_in_the_sequence_of_kernel" class="quarto-xref">명제&nbsp;<span>19.2</span></a> 에 따라 8 이라면 <span class="math inline">\(\text{nullity}{L^9}=8\)</span> 이어야 하므로 <span class="math inline">\(\text{nullity}(L^5)=9\)</span> 이고 <span class="math inline">\(m\ge 5\)</span> 에 대해 성립한다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\text{nullity}(L^5)\)</span> 는 8 혹은 9이며 <a href="#prp-ALA_equality_in_the_sequence_of_kernel" class="quarto-xref">명제&nbsp;<span>19.2</span></a> 에 따라 8 이라면 <span class="math inline">\(\text{nullity}{L^9}=8\)</span> 이어야 하므로 <span class="math inline">\(\text{nullity}(L^5)=9\)</span> 이고 <span class="math inline">\(m\ge 5\)</span> 에 대해 성립한다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-part3_axler4_8a_2" class="theorem exercise">
+<div id="exr-ALA_axler4_8a_2" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 19.3</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span>, <span class="math inline">\(m\in \mathbb{Z}_+\)</span> 이다. <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(L^{m-1}v\ne 0_V\)</span> 이지만 <span class="math inline">\(L^mv=0_V\)</span> 이다. 이 때 <span class="math inline">\(\{v,\,Lv,\ldots,\,L^{m-1}v\}\)</span> 는 선형 독립임을 보여라.</p>
 </div>
 </div>
@@ -536,7 +546,7 @@ c_0 = c_1 = \cdots = c_{m-1}=0
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-part3_axler4_8a_3" class="theorem exercise">
+<div id="exr-ALA_axler4_8a_3" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 19.4</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 일 때 다음을 보여라.</p>
 <p><span class="math display">\[
 V = \ker(L) \oplus \text{im}(L) \iff \ker (L^2) = \ker (L).
@@ -545,13 +555,13 @@ V = \ker(L) \oplus \text{im}(L) \iff \ker (L^2) = \ker (L).
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\ker (L)= \ker (L^2)\)</span> 이면 <a href="#prp-part3_equality_in_the_sequence_of_kernel" class="quarto-xref">명제&nbsp;<span>19.2</span></a> 에 따라 모든 <span class="math inline">\(m\ge 1\)</span> 에 대해 <span class="math inline">\(\ker (L^m) = \ker (L)\)</span> 이다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\ker (L)= \ker (L^2)\)</span> 이면 <a href="#prp-ALA_equality_in_the_sequence_of_kernel" class="quarto-xref">명제&nbsp;<span>19.2</span></a> 에 따라 모든 <span class="math inline">\(m\ge 1\)</span> 에 대해 <span class="math inline">\(\ker (L^m) = \ker (L)\)</span> 이다.</p>
 <p>(<span class="math inline">\(\implies\)</span>) <span class="math inline">\(V=\ker (L)\oplus \text{im}(L)\)</span> 임을 가정하자. <span class="math inline">\(\ker (L)\subset \ker (L^2)\)</span> 이므로 <span class="math inline">\(\ker (L^2) \subset \ker (L)\)</span> 임을 보이면 된다. <span class="math inline">\(v\ne 0_V\)</span>, <span class="math inline">\(v\in \ker (L^2)\)</span> 라고 하자. <span class="math inline">\(L^2 v=0_V\)</span> 이므로 <span class="math inline">\(Lv\in \ker (L)\)</span> 이다. <span class="math inline">\(v\not\in \ker (L)\)</span> 이라면 <span class="math inline">\(v\in \text{im}(L)\)</span> 이므로 <span class="math inline">\(Lu=v\)</span> 인 <span class="math inline">\(u\in V\)</span> 가 존재한다. <span class="math inline">\(u\not\in \ker (L)\)</span> 이므로 <span class="math inline">\(u\not\in \ker(L^3)\)</span> 이며 따라서 <span class="math inline">\(L^2 v = L^3 u \ne 0_V\)</span> 이다. 그런데 이는 <span class="math inline">\(v\in \ker(L^2)\)</span> 임에 모순된다. 따라서 <span class="math inline">\(v\in \ker(L)\)</span> 이다. 즉 <span class="math inline">\(\ker (L^2) = \ker (L)\)</span> 이다.</p>
 <p>(<span class="math inline">\(\,\Longleftarrow\,\)</span>) <span class="math inline">\(\ker (L^2) = \ker(L)\)</span> 임을 가정하자. 우선 <span class="math inline">\(\ker (L) \cap \text{im}(L) = \{0_V\}\)</span> 임을 보이자. <span class="math inline">\(x\ne 0_V,\, x\in \ker (L)\cap \text{im}(L)\)</span> 이라고 하자. <span class="math inline">\(Lx=0\)</span> 이며 <span class="math inline">\(x=Ly\)</span> 이면 <span class="math inline">\(Lx = L^2 y = 0_V\)</span> 이이다. 조건에 의해 <span class="math inline">\(y\in \ker L\)</span> 이므로 <span class="math inline">\(Ly=x=0_V\)</span> 이어야 하는데 이는 <span class="math inline">\(x\ne 0_V\)</span> 라는 가정에 모순이다. 따라서 <span class="math inline">\(\ker (L) \cap \text{im}(L) = \{0_V\}\)</span> 이다. <span class="math inline">\(V\)</span> 가 유한차원 벡터공간이므로 <span class="math inline">\(\text{nullity} (L) + \text{rank}(L)= \dim (V)\)</span> 이며 <span class="math inline">\(\ker (L)\cap \text{im}(L) = \{0_V\}\)</span> 이므로 <span class="math inline">\(V=\ker (L) \oplus \text{im}(L)\)</span> 이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-part3_axler4_8a_4" class="theorem exercise">
+<div id="exr-ALA_axler4_8a_4" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 19.5</strong></span> <span class="math inline">\(L\in \mathcal{L}(V),\, c\in \mathbb{F}\)</span> 이며 어떤 양의 정수 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(L\)</span> 의 최소다항식이 <span class="math inline">\((z-c)^m\)</span> 으로 나누어 떨어진다고 하자. 이 때</p>
 <p><span class="math display">\[
 \text{nullity}\left((L-c I_V)^m \right) \ge m
@@ -565,11 +575,12 @@ V = \ker(L) \oplus \text{im}(L) \iff \ker (L^2) = \ker (L).
 </div>
 <p><br></p>
 </section>
-<section id="연산자의-분해" class="level2" data-number="19.1">
-<h2 data-number="19.1" class="anchored" data-anchor-id="연산자의-분해"><span class="header-section-number">19.1</span> 연산자의 분해</h2>
+</section>
+<section id="연산자의-분해" class="level2" data-number="19.3">
+<h2 data-number="19.3" class="anchored" data-anchor-id="연산자의-분해"><span class="header-section-number">19.3</span> 연산자의 분해</h2>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_invariance_of_kernel_and_image_of_operator" class="theorem proposition">
+<div id="prp-ALA_invariance_of_kernel_and_image_of_operator" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 19.8</strong></span> <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 일 때 <span class="math inline">\(T\)</span> 에 대한 다항식으로 정의된 연산자 <span class="math inline">\(p(T)\)</span> 의 <span class="math inline">\(\ker (p(T))\)</span> 와 <span class="math inline">\(\text{im}
 (p(T))\)</span> 는 <span class="math inline">\(T\)</span> 에 대한 불변부분공간이다.</p>
 </div>

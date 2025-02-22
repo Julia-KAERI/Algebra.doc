@@ -7,34 +7,27 @@ crossref:
 ---
 
 
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
 ## 다항식 {#sec-polynomials}
 
 여기서는 다항식의 여러가지 성질 중 벡터공간 $\mathbb{F}_n[t]$ 로서의 다항식과 앞으로 벡터공간을 다루는 데 사용될 다항식의 여러가지 성질에 대해 알아보기로 한다.
 
 </br>
 
-### 다항식의 기본적인 성질 {#sec-basic_properties_of_polynomial}
+### 다항식의 기본적인 성질 {#sec-ALA_basic_properties_of_polynomial}
 
-@thm-existance_of_eigenvector_for_complex_field 에서 정의한 바와 같다.
-
-::: {.callout-note appearance="minimal"}
-
-::: {#def-part3_polynomials}
-#### 다항식의 차수와 표기
-
-다항식 $p(t) = a_0 + a_1 t + \cdots + a_n t^n$ 에서 $a_n\ne 0$ 일 때 $p(t)$ 를 $n$ 차 다항식이라고 하며 이때의 $n$ 값을 다항식 $p(t)$ 의 **차수 (degree)** 라고 하며 $\deg (p)$ 혹은 $\deg (p(t))$ 라고 표기한다. $\mathbb{F}$ 값을 계수로 갖는 변수 $t$ 에 대한 다항식의 집합을 $\mathbb{F}[t]$ 라고 표기하며, $\mathbb{F}_n[t]$ 는 $n$ 차를 포함하여 그 이하의 차수를 갖는 다항식의 집합을 의미한다. 
-
-:::
-
-:::
+@exm-LA_vectorspace_polynomial 에서 정의한 바와 같다.
 
 </br>
 
-### 다항식의 영점 {#sec-zeros_of_polynomials}
+### 다항식의 영점 {#sec-ALA_zeros_of_polynomials}
 
 ::: {.callout-note appearance="minimal"}
 
-::: {#def-part3_zeros_of_polynomials}
+::: {#def-ALA_zeros_of_polynomials}
 
 #### 다항식의 영점
 
@@ -49,7 +42,7 @@ crossref:
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part3_degree_one_factor_from_zeros}
+::: {#thm-ALA_degree_one_factor_from_zeros}
 
 $p(t) \in \mathbb{F}_n[t]$ 이며 $c$ 가 $p(x)$ 의 영점이라면 어떤 $q(t)\in \mathbb{F}_{n-1}[t]$ 에 대해 
 
@@ -80,7 +73,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-part3_degree_and_zeros}
+::: {#cor-ALA_degree_and_zeros}
 
 $p(t)\in \mathbb{F}_n[t]$ 이면 $p(t)$ 는 많아야 $n$ 개의 영점을 가진다.
 
@@ -90,13 +83,13 @@ $p(t)\in \mathbb{F}_n[t]$ 이면 $p(t)$ 는 많아야 $n$ 개의 영점을 가�
 
 ::: {.proof}
 
-@thm-part3_degree_one_factor_from_zeros 에 따라 $m>n$ 개의 근을 가지면 $\deg(p) \ge m > n$ 이다. $\square$
+@thm-ALA_degree_one_factor_from_zeros 에 따라 $m>n$ 개의 근을 가지면 $\deg(p) \ge m > n$ 이다. $\square$
 
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_division_of_polynomials}
+::: {#prp-ALA_division_of_polynomials}
 
 $p,\,q\in \mathbb{F}[t]$ 이고 $q\ne 0$ 일 때 어떤 $s,\,r\in \mathbb{F}[t],\, \deg (r) <\deg (q)$ 가 존재하여
 
@@ -118,7 +111,7 @@ $$
 X=\{1,\,t,\,t^2,\ldots,\,t^{m-1},\, q(t),\, q(t)t,\ldots,\, q(t)t^{n-m}\}
 $$
 
-은 $\mathbb{F}_n[t]$ 에서 선형독립이며(@exm-linear_dependency_of_polynomials) 또한 $\mathbb{F}_n[t]$ 에 포함된다. $X$ 에 $n+1$ 개의 원소가 포함되므로 $X$ 는 $\mathbb{F}_n[t]$ 의 기저이다. $p(t) \in \mathbb{F}_n[t]$ 이므로, 
+은 $\mathbb{F}_n[t]$ 에서 선형독립이며(@exm-LA_linear_dependency_of_polynomials) 또한 $\mathbb{F}_n[t]$ 에 포함된다. $X$ 에 $n+1$ 개의 원소가 포함되므로 $X$ 는 $\mathbb{F}_n[t]$ 의 기저이다. $p(t) \in \mathbb{F}_n[t]$ 이므로, 
 
 $$
 p(t) = b_0 + b_1 t + \cdots b_{m-1}t^{n-1} + q(t)\left(a_1 + a_2 t + \cdots + a_{n-m}t^{n-1}\right)
@@ -134,7 +127,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part3_fundamental_theorem_of_algebra}
+::: {#thm-ALA_fundamental_theorem_of_algebra}
 
 #### 대수학의 기본정리
 
@@ -144,12 +137,12 @@ $p(t) \in \mathbb{C}_n[t]$ 이며 $\deg (p) > 0$ 일 때 $p(t)$ 는 영점을 �
 
 </div></br>
 
-대수학의 기본정리는 다항식의 영점을 어떻게 발견할 것인가에 대해서는 말하지 않는다. 단지 복소계수 다항식의 경우 최소한 하나의 영점을 가진다는 것을 보여준다. @thm-part3_degree_one_factor_from_zeros 와 대수학의 기본정리(@thm-part3_fundamental_theorem_of_algebra) 를 이용하면 다음을 알 수 있다. 
+대수학의 기본정리는 다항식의 영점을 어떻게 발견할 것인가에 대해서는 말하지 않는다. 단지 복소계수 다항식의 경우 최소한 하나의 영점을 가진다는 것을 보여준다. @thm-ALA_degree_one_factor_from_zeros 와 대수학의 기본정리(@thm-ALA_fundamental_theorem_of_algebra) 를 이용하면 다음을 알 수 있다. 
 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part3_fundamental_theorem_of_algebra_2}
+::: {#thm-ALA_fundamental_theorem_of_algebra_2}
 
 $p(t) \in \mathbb{C}_n[t],\, n\ge 1$ 이면 어떤 $c_1,\ldots,\,c_n\in \mathbb{C}$ 에 대해 $p(t)$ 는 다음의 꼴로 표현 될 수 있으며 이 때 $(c,\, c_1,\ldots,\,c_n)$ 은 유일하게 정해진다.
 
@@ -163,7 +156,7 @@ $$
 
 ::: {.proof}
 
-우선 $p\in \mathbb{C}_n[t]$ 일 때 일차식의 곱으로 분해됨을 induction 을 사용하여 보일 수 있다 $n=1$ 일 경우는 자명하다. $n-1$ 에 대해 성립하을 가정하자. 대수학의 기본정리에 의해 $p(t)$ 는 영점 $c_1$ 을 가지며 @thm-part3_degree_one_factor_from_zeros 에 의해 $p(t) = (t-c)q(t)$ 인 $q(t)$ 가 존재한다. 또한 $\deg (q)= \deg (p)-1$ 이므로 induction 의 가정에 의해 $q(t)$ 는 $n-1$ 개의 일차식의 곱이므로 $p(t)$ 는 $n$ 개의 일차식의 곱이 된다는 것을 알 수 있다.
+우선 $p\in \mathbb{C}_n[t]$ 일 때 일차식의 곱으로 분해됨을 induction 을 사용하여 보일 수 있다 $n=1$ 일 경우는 자명하다. $n-1$ 에 대해 성립하을 가정하자. 대수학의 기본정리에 의해 $p(t)$ 는 영점 $c_1$ 을 가지며 @thm-ALA_degree_one_factor_from_zeros 에 의해 $p(t) = (t-c)q(t)$ 인 $q(t)$ 가 존재한다. 또한 $\deg (q)= \deg (p)-1$ 이므로 induction 의 가정에 의해 $q(t)$ 는 $n-1$ 개의 일차식의 곱이므로 $p(t)$ 는 $n$ 개의 일차식의 곱이 된다는 것을 알 수 있다.
 
 $\{c,\,c_1,\ldots,\,c_n\}$ 의 유일함을 보이자. 다른 $\{d,\, d_1,\ldots,\,d_n\}$ 에 대해
 
@@ -177,7 +170,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_pair_zeros_in_real_polynomial}
+::: {#exr-ALA_pair_zeros_in_real_polynomial}
 
 실계수 방정식 $p(t)$ 와 $c\in \mathbb{C}-\mathbb{R}$ 에 대해 $p(c)=0$ 이면 $p(\overline{c})=0$ 임을 보여라.
 
@@ -193,13 +186,13 @@ $p(t) = a_0 + a_1t + \cdots + a_nt^n$ 이라고 하자. $p(c) = 0$ 이면 $\over
 
 </br></br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_factorization_of_real_polynomial}
+::: {#prp-ALA_factorization_of_real_polynomial}
 
 $p(t)\in \mathbb{R}_n[t],\, n\ge 1$ 일 때 $p$ 는 아래와 같이 일차다항식과 $x^2+b_jx +c_j,\, (b_j^2 < 4c_j)$ 형태인 이차다항식으로 분해된다.
 
 $$
 p(x) = c(x-c_1)\cdots (x-c_m)(x^2+b_1x + c_1) \cdots (x^2 + b_kx + c_k).
-$$ {#eq-part3_factorization_of_real_polynomial}
+$$ {#eq-ALA_factorization_of_real_polynomial}
 
 :::
 
@@ -207,7 +200,7 @@ $$ {#eq-part3_factorization_of_real_polynomial}
 
 ::: {.proof}
 
-$p(t)\in \mathbb{R}_n[t]$ 와 같은 계수를 갖는 복소계수 다항식 $q(t)$ 을 생각하자. @thm-part3_fundamental_theorem_of_algebra_2 에 의해 $q(t)$ 는 일차식의 곱으로 분해된다. $q(t)$ 의 영점 가운데 실수인 것을 $c_1,\ldots,\,c_n$ 이라고 하고 복소수인 것들을 $\lambda_1,\ldots,\,\lambda_l$ 이라고 하자. @exr-part3_pair_zeros_in_real_polynomial 에 의해 $q(\lambda_1)= 0$ 이므로 $q(\overline{\lambda_1})=0$ 이어야 하며 $r_1(t) = x^2 - (\lambda_1 + \overline{\lambda_1}) + |\lambda_1|^2$ 이 $q(t)$ 를 분해해야 하고 $b_1 = (\lambda_1) + \overline{\lambda_1},\, c_1 =|\lambda_1|^2$ 에 대해 $b_1^2<4c_1$ 이어야 한다. $q(t)/r_1(t)$ 에 대해서도 이 방법을 계속 사용 할 수 있다. 따라서 $q(t)$ 는 실수근과 복소수근에 대해 @eq-part3_factorization_of_real_polynomial 와 같이 분해 할 수 있다. $\square$
+$p(t)\in \mathbb{R}_n[t]$ 와 같은 계수를 갖는 복소계수 다항식 $q(t)$ 을 생각하자. @thm-ALA_fundamental_theorem_of_algebra_2 에 의해 $q(t)$ 는 일차식의 곱으로 분해된다. $q(t)$ 의 영점 가운데 실수인 것을 $c_1,\ldots,\,c_n$ 이라고 하고 복소수인 것들을 $\lambda_1,\ldots,\,\lambda_l$ 이라고 하자. @exr-ALA_pair_zeros_in_real_polynomial 에 의해 $q(\lambda_1)= 0$ 이므로 $q(\overline{\lambda_1})=0$ 이어야 하며 $r_1(t) = x^2 - (\lambda_1 + \overline{\lambda_1}) + |\lambda_1|^2$ 이 $q(t)$ 를 분해해야 하고 $b_1 = (\lambda_1) + \overline{\lambda_1},\, c_1 =|\lambda_1|^2$ 에 대해 $b_1^2<4c_1$ 이어야 한다. $q(t)/r_1(t)$ 에 대해서도 이 방법을 계속 사용 할 수 있다. 따라서 $q(t)$ 는 실수근과 복소수근에 대해 @eq-ALA_factorization_of_real_polynomial 와 같이 분해 할 수 있다. $\square$
 
 :::
 
@@ -217,7 +210,7 @@ $p(t)\in \mathbb{R}_n[t]$ 와 같은 계수를 갖는 복소계수 다항식 $q(
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_4_12}
+::: {#exr-ALA_axler4_4_12}
 
 #### 라그랑쥬 다항식
 
@@ -245,10 +238,10 @@ $$
 
 ## 특성다항식 {#sec-characteristic_polynomial}
 
-정사각 행렬에 대한 특성다항식은 이미 [특성다항식](../part1/ch1_04_eigenvalue.qmd#sec-characteristic_polynomial) 에서 정의하였지만 환기를 위해 다시 한번 정의한다.
+정사각 행렬에 대한 특성다항식은 이미 [특성다항식](../part1/ch1_04_eigenvalue.qmd#sec-LA_characteristic_polynomial) 에서 정의하였지만 환기를 위해 다시 한번 정의한다.
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-part3_characteristic_polynomial_re}
+::: {#def-ALA_characteristic_polynomial_re}
 
 #### 특성다항식
 
@@ -261,14 +254,14 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대한 $p_{\boldsym
 
 또한 우리는 다음을 보였다.
 
-- @prp-part1_invariance_of_characteristic_polynomial : 특성 다항식은 닮음 변환에 대해 불변이다. 즉 행렬 $\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 과 가역행렬 $\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $p_{\boldsymbol{A}}(\lambda) = p_{\boldsymbol{P^{-1}AP}}(\lambda)$ 이다.
+- @prp-LA_invariance_of_characteristic_polynomial : 특성 다항식은 닮음 변환에 대해 불변이다. 즉 행렬 $\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 과 가역행렬 $\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $p_{\boldsymbol{A}}(\lambda) = p_{\boldsymbol{P^{-1}AP}}(\lambda)$ 이다.
 
-- @prp-part1_eigenvalue_characteristic_polynomial : $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\lambda\in \mathbb{F}$ 가 $\boldsymbol{A}$ 의 고유값이기 위한 필요충분조건은 $p_{\boldsymbol{A}}(\lambda)=0$ 인 것이다.
+- @prp-LA_eigenvalue_characteristic_polynomial : $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\lambda\in \mathbb{F}$ 가 $\boldsymbol{A}$ 의 고유값이기 위한 필요충분조건은 $p_{\boldsymbol{A}}(\lambda)=0$ 인 것이다.
 
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-part3_trace_of_matrix}
+::: {#def-ALA_trace_of_matrix}
 
 #### 행렬의 trace
 
@@ -284,7 +277,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_trace_is_invariant_under_similar_transformation}
+::: {#prp-ALA_trace_is_invariant_under_similar_transformation}
 
 정사각 행렬에 대한 trace 는 닮은 변환에 대해 불변이다.
 
@@ -308,7 +301,7 @@ $$
 </br> 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_SNU_7_4_1}
+::: {#exr-ALA_SNU_7_4_1}
 
 $L\in \mathcal{L}(V)$ 이고 $p(\lambda) \in \mathbb{F}[\lambda]$ 라고 하자. $v \in E(\lambda, L)$ 이면 $v \in E(p(\lambda), p(L))$ 임을 보여라.
 
@@ -332,7 +325,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_SNU_7_4_2}
+::: {#exr-ALA_SNU_7_4_2}
 
 $L,\,T\in \mathcal{L}(V)$ 이고 $T$ 가 가역사상일 때 $p(t)\in \mathbb{F}[t]$ 이면 $p(T^{-1}LU) = T^{-1}p(t)T$ 임을 보여라.
 
@@ -348,9 +341,9 @@ $L,\,T\in \mathcal{L}(V)$ 이고 $T$ 가 가역사상일 때 $p(t)\in \mathbb{F}
 
 </br>
 
-### 행렬의 대각화와 특성다항식 {#sec-characteristic_polynomial_and_diagonalization}
+### 행렬의 대각화와 특성다항식 {#sec-ALA_characteristic_polynomial_and_diagonalization}
 
-@thm-diagonalizability 에서 우리는 행렬의 대각화에 대해 정리하였다. 이제 행렬의 대각화를 특성다항식의 관점에서 보자.
+@thm-LA_diagonalizability 에서 우리는 행렬의 대각화에 대해 정리하였다. 이제 행렬의 대각화를 특성다항식의 관점에서 보자.
 
 -- to be done -- 
 
@@ -360,7 +353,7 @@ $L,\,T\in \mathcal{L}(V)$ 이고 $T$ 가 가역사상일 때 $p(t)\in \mathbb{F}
 ## 케일리 해밀턴 정리
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-part3_annihilator_ideal}
+::: {#def-ALA_annihilator_ideal}
 
 #### Annihilator Ideal
 
@@ -375,7 +368,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
  
-::: {#prp-part3_annihilator_ideal}
+::: {#prp-ALA_annihilator_ideal}
 
 $\mathbb{F}$-벡터 $V$ 에 대해 $L\in \mathcal{L}(V)$ 일 때 다음을 보여라.
 
@@ -397,7 +390,7 @@ $\mathbb{F}$-벡터 $V$ 에 대해 $L\in \mathcal{L}(V)$ 일 때 다음을 보�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_similarity_relation_in_annihilator_ideal}
+::: {#prp-ALA_similarity_relation_in_annihilator_ideal}
 
 $S,\, T\in \mathcal{L}(V)$ 에 대해 $S\sim T$ 이면 $\mathcal{I}_S= \mathcal{I}_T$ 이다.
 
@@ -413,7 +406,7 @@ $S,\, T\in \mathcal{L}(V)$ 에 대해 $S\sim T$ 이면 $\mathcal{I}_S= \mathcal{
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_annihilator_ideal_is_nontrivial}
+::: {#prp-ALA_annihilator_ideal_is_nontrivial}
 
 유한차원 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 에 대해 $\mathcal{I}_L \ne \{0\}$ 이다.
 
@@ -434,7 +427,7 @@ $\dim (V) = n$ 이라고 하자. $\dim(\mathcal{L}(V)) = n^2$ 이므로, $\{I_V,
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_before_cayley_hamilton}
+::: {#exr-ALA_before_cayley_hamilton}
 
 $\boldsymbol{B}_i\in \mathcal{M}_{n \times n}(\mathbb{F})$ 는 상삼각행렬이며 $i$ 번째 대각성분이 $0$ 이라고 하자. 이 때 $\prod_{i=1}^n \boldsymbol{B}_i = \boldsymbol{B}_1 \boldsymbol{B}_2 \cdots \boldsymbol{B}_n = \boldsymbol{0}$ 임을 보여라.
 
@@ -457,7 +450,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part3_cayley_hamilton_theorem}
+::: {#thm-ALA_cayley_hamilton_theorem}
 
 #### 케일리-해밀턴 정리(Cayley-Hamilton Theorem)
 
@@ -469,13 +462,13 @@ $$
 
 ::: {.proof}
 
-$n=\dim (V)$ 라고 하자. 우선 $\mathbb{F}=\mathbb{C}$ 에 대해 증명한다. @thm-uppertriangular_matrix_complex_field 에서 우리는 복소수체에서 정의된 모든 정사각행렬은 상삼각행렬과 닮았다는 것을 보였다. 따라서 우리는 상삼각행렬에 대한 특성다항식에 대해서만 증명하면 된다. $\boldsymbol{A}$ 가 상삼각행렬이라고 하면, $p_\boldsymbol{A}(t) = \prod_{i=1}^n (t-A_{ii})$ 이다. 이제 
+$n=\dim (V)$ 라고 하자. 우선 $\mathbb{F}=\mathbb{C}$ 에 대해 증명한다. @thm-LA_uppertriangular_matrix_complex_field 에서 우리는 복소수체에서 정의된 모든 정사각행렬은 상삼각행렬과 닮았다는 것을 보였다. 따라서 우리는 상삼각행렬에 대한 특성다항식에 대해서만 증명하면 된다. $\boldsymbol{A}$ 가 상삼각행렬이라고 하면, $p_\boldsymbol{A}(t) = \prod_{i=1}^n (t-A_{ii})$ 이다. 이제 
 
 $$
 p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymbol{I}_n)=0
 $$ 
 
-임을 보이면 된다. $\boldsymbol{A}$ 가 상삼각행렬이므로 $(\boldsymbol{A}- A_{ii}\boldsymbol{I}_n)_{ii}  = 0$ 이다. 위의 @exr-part3_before_cayley_hamilton 에서 보였듯이 $p_\boldsymbol{A}(\boldsymbol{A}) =0$ 이므로 $p_T(L) \in \mathcal{I}_L$ 이다.
+임을 보이면 된다. $\boldsymbol{A}$ 가 상삼각행렬이므로 $(\boldsymbol{A}- A_{ii}\boldsymbol{I}_n)_{ii}  = 0$ 이다. 위의 @exr-ALA_before_cayley_hamilton 에서 보였듯이 $p_\boldsymbol{A}(\boldsymbol{A}) =0$ 이므로 $p_T(L) \in \mathcal{I}_L$ 이다.
 
 이제 $\mathbb{F}=\mathbb{R}$ 인 경우에 대해 생각하자. $\mathbb{R}\subset \mathbb{C}$ 이므로 성립하지 않을 이유가 없다. $\square$ 
 
@@ -490,7 +483,7 @@ $$
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-part3_minimal_polynomial}
+::: {#def-ALA_minimal_polynomial}
 
 #### 최소다항식
 
@@ -501,7 +494,7 @@ $L\in \mathcal{L}(V)$ 에 대한 annihilator ideal $\mathcal{I}_L$ 가운데 1 �
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part3_existance_and_uniqueness_of_minimal_polynomial}
+::: {#thm-ALA_existance_and_uniqueness_of_minimal_polynomial}
 
 $L\in \mathcal{L}(V)$ 에 대한 최소다항식은 존재하며, 유일하다.
 
@@ -511,12 +504,12 @@ $L\in \mathcal{L}(V)$ 에 대한 최소다항식은 존재하며, 유일하다.
 
 ::: {.proof}
 
-@prp-part3_annihilator_ideal_is_nontrivial 에 의해 $L$ 에 대한 최소다항식은 존재한다. 이제 $p,\,q$ 가 $L$ 에 대한 최소다항식이라고 하자. 당연히 두 다항식은 같은 차수 $m$ 를 가진다. $p \ne q$ 라면 $r=p-q$ 는 $m$ 보다 작은 차수를 가지며 $r(L)=0$ 이다. $p,\,q$ 가 최소다항식이므로 남은 유일한 가능성은 $r=0$ 일 때 뿐이며 따라서 $p=q$ 이다. $\square$
+@prp-ALA_annihilator_ideal_is_nontrivial 에 의해 $L$ 에 대한 최소다항식은 존재한다. 이제 $p,\,q$ 가 $L$ 에 대한 최소다항식이라고 하자. 당연히 두 다항식은 같은 차수 $m$ 를 가진다. $p \ne q$ 라면 $r=p-q$ 는 $m$ 보다 작은 차수를 가지며 $r(L)=0$ 이다. $p,\,q$ 가 최소다항식이므로 남은 유일한 가능성은 $r=0$ 일 때 뿐이며 따라서 $p=q$ 이다. $\square$
 :::
 
 </br>
 
-위의 정리와 @prp-part3_similarity_relation_in_annihilator_ideal 로부터 다음을 알 수 있다.
+위의 정리와 @prp-ALA_similarity_relation_in_annihilator_ideal 로부터 다음을 알 수 있다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -528,11 +521,11 @@ $V$ 에서의 두 연산자가 닮았으면, 두 연산자의 최소다항식은
 
 </div></br>
 
-[케일리-해밀턴 정리](#thm-part3_cayley_hamilton_theorem) 로부터 우리는 다음을 알 수 있다.
+[케일리-해밀턴 정리](#thm-ALA_cayley_hamilton_theorem) 로부터 우리는 다음을 알 수 있다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_degree_limit_of_minimal_polynonmial}
+::: {#prp-ALA_degree_limit_of_minimal_polynonmial}
 
 $n$ 차원 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 의 최소다항식의 차수는 $n$ 보다 작거나 같다
 
@@ -545,7 +538,7 @@ $n$ 차원 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 의 최소다
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_divisability_of_annihilator_ideal}
+::: {#prp-ALA_divisability_of_annihilator_ideal}
 
 $p\in \mathcal{I}_L$ 는 $L$ 에 대한 최소다항식으로 나누어 떨어진다. 또한 최소다항식에 임의의 다항식을 곱한 다항식은 $\mathcal{I}_L$ 포함된다.
 
@@ -553,11 +546,11 @@ $p\in \mathcal{I}_L$ 는 $L$ 에 대한 최소다항식으로 나누어 떨어�
 
 </div></br>
 
-우리는 @prp-part1_eigenvalue_characteristic_polynomial 에서 연산자에 대한 특성다항식의 해가 그 연산자의 고유값임을 보였다. 실제로는 특성다항식이 아니라 최소다항식에 대해서도 성립한다. 
+우리는 @prp-LA_eigenvalue_characteristic_polynomial 에서 연산자에 대한 특성다항식의 해가 그 연산자의 고유값임을 보였다. 실제로는 특성다항식이 아니라 최소다항식에 대해서도 성립한다. 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part3_minimal_polynomial_and_eigenvalues}
+::: {#thm-ALA_minimal_polynomial_and_eigenvalues}
 
 유한차원 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 에 대해 $L$ 의 최소다항식의 해는 $L$ 의 고유값이다.
 
@@ -573,7 +566,7 @@ $\lambda$ 가 $L$ 의 고유값이라면 최소다항식은 $(t-\lambda )$ 로 �
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_minimal_polynomial_and_subspace}
+::: {#prp-ALA_minimal_polynomial_and_subspace}
 
 유한차원 벡터공간 $V$ 에 대해 $U\le V$ 이며 $L\in \mathcal{L}(V)$ 에 대해 $L|_U$ 가 $L$ 의 $U$ 에 대한 restriction 일 때 $L$ 의 최소다항식은 $L|_U$ 의 최소다항식으로 나누어진다.
 
@@ -589,7 +582,7 @@ $p_L$ 이 $L$ 의 최소다항식이라고 하자. $u\in U$ 이면 $u\in V$ 이�
 
 </br> <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-:::{#prp-part3_constant_of_minimal_polynomal}
+:::{#prp-ALA_constant_of_minimal_polynomal}
 
 $L\in \mathcal{L}(V)$ 에 대해 다음의 두 명제는 동치이다. 
 
@@ -608,7 +601,7 @@ $L$ 이 가역이 아니면 $0$ 은 $L$ 의 고유값이므로 $p_L$ 의 상수�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part3_even_dimensiona_kernel}
+::: {#prp-ALA_even_dimensiona_kernel}
 
 유한차원 $\mathbb{R}$-벡터공간 $V$ 와 $L\in \mathcal{L}(V)$ 를 생각하자. $b,\,c\in \mathbb{R},\, b^2-4c<0$ 일 때 $\text{nullity} (L^2+bL+cI_V)$ 는 짝수이다.
 
@@ -618,7 +611,7 @@ $L$ 이 가역이 아니면 $0$ 은 $L$ 의 고유값이므로 $p_L$ 의 상수�
 
 ::: {.proof}
 
-$p(t) = t^2+bt+c,\, U = \ker (L^2+bL+cI_V)= \ker p(L)$ 라고 하자. @prp-kernal_and_images_of_operator_under_polynomial 에 따라 $U$ 는 $L$-불변부분공간이다. $K=L|_U$ 라고 하면 $p(K)= p(L|_U)$ 이며 $K^2+bK+cI_U=0$ 이다. $u\in U$ 가 $\lambda$ 의 고유값을 갖는 $K$ 의 고유벡터라고 가정하자. 그렇다면
+$p(t) = t^2+bt+c,\, U = \ker (L^2+bL+cI_V)= \ker p(L)$ 라고 하자. @prp-LA_kernal_and_images_of_operator_under_polynomial 에 따라 $U$ 는 $L$-불변부분공간이다. $K=L|_U$ 라고 하면 $p(K)= p(L|_U)$ 이며 $K^2+bK+cI_U=0$ 이다. $u\in U$ 가 $\lambda$ 의 고유값을 갖는 $K$ 의 고유벡터라고 가정하자. 그렇다면
 
 $$
 0_U = (K^2+bK+cI_U)u = (\lambda^2+b\lambda + c)u = \left(\left(\lambda + \dfrac{b}{2}\right)^2 + c-\dfrac{b^2}{4} \right) u
@@ -639,7 +632,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part3_odd_dimensional_vector_space_and_eigenvalue}
+::: {#thm-ALA_odd_dimensional_vector_space_and_eigenvalue}
 
 홀수 차원 벡터공간에서 정의된 연산자는 고유값을 가진다.
 
@@ -649,7 +642,7 @@ $$
 
 ::: {.proof}
 
-@thm-existance_of_eigenvector_for_complex_field 에 의해 유한차원 $\mathbb{C}$-공간에서 정의된 모든 연산자는 고유값을 가진다는 것을 안다. 따라서 $\mathbb{R}$-벡터공간에서 생각한다. $n=\dim (V)$ 라고 하자. $n=1$ 이면 당연하게도 성립한다. 이제 $n$ 보다 작은 홀수차원 $\mathbb{R}$-벡터공간 $V$ 에서 성립한다는 것을 가정하자. $L\in \mathcal{L}(V)$ 에 대한 최소다항식 $m(t)\in \mathbb{R}[t]$ 를 생각하자. 
+@thm-LA_existance_of_eigenvector_for_complex_field 에 의해 유한차원 $\mathbb{C}$-공간에서 정의된 모든 연산자는 고유값을 가진다는 것을 안다. 따라서 $\mathbb{R}$-벡터공간에서 생각한다. $n=\dim (V)$ 라고 하자. $n=1$ 이면 당연하게도 성립한다. 이제 $n$ 보다 작은 홀수차원 $\mathbb{R}$-벡터공간 $V$ 에서 성립한다는 것을 가정하자. $L\in \mathcal{L}(V)$ 에 대한 최소다항식 $m(t)\in \mathbb{R}[t]$ 를 생각하자. 
 
 만악 $m(t)$ 가 어떤 $\lambda\in \mathbb{R}$ 에 대해 $(t-\lambda)$ 로 나누어진다면 $\lambda$ 는 $L$ 의 고유값이므로 성립한다. 
 
@@ -661,7 +654,7 @@ $$
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_5b_4}
+::: {#exr-ALA_axler4_5b_4}
 
 ($1$) $V$ 가 $\mathbb{C}$-벡터공간이며 $L\in \mathcal{L}(V)$ 이라고 하자. $p(t)\in \mathbb{C}[t],\, a\in \mathbb{C}$ 에 대해 $a$ 가 $p(L)$ 의 고유값인 필요충분조건이 어떤 $L$ 의 고유값 $\lambda$ 에 대해 $a=p(\lambda)$ 인 것임을 보여라.
 
@@ -688,7 +681,7 @@ $a_1,\ldots,\,a_m$ 가운데 어떤 것도 $L$ 의 고유값이 아니라면 $(p
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_5b_6}
+::: {#exr-ALA_axler4_5b_6}
 
 $L=\mathcal{L}(\mathbb{F}^2)$ 는 $L(w,\,z):=(-z,\,w)$ 로 정의되었다. $L$ 에 대한 최소다항식을 구하라.
 
@@ -722,7 +715,7 @@ $K=\begin{bmatrix} 1 & 0 \\ 0 & 0\end{bmatrix},\, L=\begin{bmatrix} 0 & -1 \\ 0 
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">****
 
-::: {#exr-part3_axler4_5b_9}
+::: {#exr-ALA_axler4_5b_9}
 
 $L\in \mathcal{L}(V)$ 가 어떤 기저에 대해 행렬로 표현했을 때 모든 행렬 성분이 유리수이다. 그렇다면 $L$ 의 최소다항식의 계수는 모두 유리수라는 것을 보여라.
 
@@ -738,7 +731,7 @@ $n=\dim(V)$ 라고 하자. 유리행렬로 표현되는 기저에 대한 행렬�
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_5b_10}
+::: {#exr-ALA_axler4_5b_10}
 
 $V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(V)$ 이며 $v\in V$ 이다. 모든 $m\ge \dim(V)-1$ 에 대해 다음이 성립함을 보여라.
 
@@ -752,7 +745,7 @@ $$
 
 ::: {.solution}
 
-@prp-part3_degree_limit_of_minimal_polynonmial 로 부터 우리는 최소다항식의 차수가 $\dim(V)$ 보다 작거나 같음을 안다. 즉 $n \le \dim (V)$ 을 최소다항식의 차수일 때
+@prp-ALA_degree_limit_of_minimal_polynonmial 로 부터 우리는 최소다항식의 차수가 $\dim(V)$ 보다 작거나 같음을 안다. 즉 $n \le \dim (V)$ 을 최소다항식의 차수일 때
 
 $$
 t^n = a_{n-1}t^{n-1}+ \cdots + a_1 t + a_0
@@ -763,7 +756,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_5b_12}
+::: {#exr-ALA_axler4_5b_12}
 
 $L\in \mathcal{L}(\mathbb{F}^n)$ 은 $L(x_1,\,x_2,\ldots,\,x_n) := (x_1,\,2x_2,\ldots,\,nx_n)$ 이다. $L$ 에 대한 최소다항식을 구하라.
 
@@ -779,7 +772,7 @@ $L\in \mathcal{L}(\mathbb{F}^n)$ 은 $L(x_1,\,x_2,\ldots,\,x_n) := (x_1,\,2x_2,\
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_5b_14}
+::: {#exr-ALA_axler4_5b_14}
 
 $V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(V)$ 에 대한 최소다항식은 
 
@@ -799,7 +792,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-part3_order_of_minimal_polynomial_of_inverse}
+::: {#lem-ALA_order_of_minimal_polynomial_of_inverse}
 
 $L\in \mathcal{L}(V)$ 가 가역이면 $L$ 과 $L^{-1}$ 의 최소다항식의 order 는 같다.
 
@@ -819,13 +812,13 @@ $$
 
 :::
 
-@lem-part3_order_of_minimal_polynomial_of_inverse 에 따라 $L^{-1}$ 의 최소다항식은 $m_{L^{-1}} = \frac{1}{4}q(t)$ 이다.
+@lem-ALA_order_of_minimal_polynomial_of_inverse 에 따라 $L^{-1}$ 의 최소다항식은 $m_{L^{-1}} = \frac{1}{4}q(t)$ 이다.
 
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_5b_15}
+::: {#exr-ALA_axler4_5b_15}
 
 $V$ 가 유한차원 복소벡터공간이고 $\dim (V)>0$ 이며 $L\in \mathcal{L}(V)$ 라고 하자. 함수 $f:\mathbb{C}\to \mathbb{R}$ 을 $f(\lambda) = \text{rank} (T-\lambda I_V)$ 로 정의하자. $f$ 가 연속함수가 아님을 보여라.
 
@@ -840,7 +833,7 @@ $V$ 가 유한차원 복소벡터공간이므로 $L$ 은 반드시 유한개의 
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_5b_16}
+::: {#exr-ALA_axler4_5b_16}
 
 #### 동반 행렬 (companion matrix)
 
@@ -897,7 +890,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4-5b_17}
+::: {#exr-ALA_axler4-5b_17}
 
 유한차원 $\mathbb{F}$-벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 와 $L$ 의 최소다항식 $m_L$ 을 생각하자. $c\in \mathbb{F}$ 일 때 $L-c I_V$ 의 최소다항식은 $m_L(t+c)$ 임을 보여라.
 
@@ -913,7 +906,7 @@ $K:=L-cI_V$ 라고 하자. 모든 $v\in V$ 에 대해 $m_L(L)v=0_V$ 이므로 $m
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_5b_18}
+::: {#exr-ALA_axler4_5b_18}
 
 유한차원 $\mathbb{F}$-벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 와 $L$ 의 최소다항식 $m_L$ 을 생각하자. $c\in \mathbb{F},\, c\ne 0$ 에 대해 $cL$ 의 최소다항식은 $c^{\deg (m_L)} m_L(t/c)$ 임을 보여라.
 
@@ -929,7 +922,7 @@ $K:=cL$ 이라고 하자. $v\in V$ 에 대해 $m_L(L)v = 0$ 이므로 $m_L(K/c)v
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_5b_19}
+::: {#exr-ALA_axler4_5b_19}
 
 유한차원 $\mathbb{F}$-벡터공간 $V$ 와 $L\in \mathcal{L}(V)$ 에 대해 
 
@@ -951,7 +944,7 @@ $\dim (X)$ 는 $X$ 에 포함되는 최고차 다항식의 차수이다. $L$ 에
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_5b_21}
+::: {#exr-ALA_axler4_5b_21}
 
 유한차원 $\mathbb{F}$-벡터공간 $V$ 와 $L\in \mathcal{L}(V)$ 를 생각한다. $L$ 의 최소다항식 $m_L$ 에 대해
 
@@ -988,7 +981,7 @@ $$
 
 ::: {.solution}
 
-$m_L$ 이 $L$ 의 최소다항식이며 $n=\dim (V)$ 라고 하자. @prp-part3_constant_of_minimal_polynomal 에 따라 $L$ 이 가역인 것의 필요충분조건은 $m_L$ 의 상수항이 $0$ 이 아닌것이다. 
+$m_L$ 이 $L$ 의 최소다항식이며 $n=\dim (V)$ 라고 하자. @prp-ALA_constant_of_minimal_polynomal 에 따라 $L$ 이 가역인 것의 필요충분조건은 $m_L$ 의 상수항이 $0$ 이 아닌것이다. 
 
 ($\implies$) $L$ 이 가역임을 가정한다. 즉 $m_L$ 의 상수항이 $0$ 이 아니며 $\deg (m_L) \le n=\dim (V)$ 이다. $m_L(L) = a_0I_V + a_1 L + \cdots + a_k L^k\, (k\le n) = 0$ 이며 $a_0 \ne 0$ 이므로 
 
@@ -1004,7 +997,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_5b_23}
+::: {#exr-ALA_axler4_5b_23}
 
 유한체원 벡터공간 $V$ 와 $L\in \mathcal{L}(V)$ 를 생각하자. $n=\dim (V)$ 라고 하자. $v\in V$ 에 대해 $\text{span}(v,\, Lv,\ldots,\,L^{n-1}v)$ 는 $L$-invariant 함을 보여라.
 
@@ -1020,7 +1013,7 @@ $L$ 의 최소다항식 $m_L$ 에 대해 $\deg (m_L)\le n$ 임을 생각하면 �
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_5b_28}
+::: {#exr-ALA_axler4_5b_28}
 
 유한차원 벡터공간 $V$ 과 $L\in \mathcal{L}(V)$ 에 대한 쌍대공간 $V^\ast$ 와 쌍대사상 $L^T\in \mathcal{L}(V^\ast)$ 를 생각하자. 이 때 $L$ 에 대한 최소다항식은 $L^T$ 에 대한 최소다항식과 같음을 보여라.
 
@@ -1039,7 +1032,7 @@ $K=L^T$ 라고 하고 $L,\, K$ 에 대한 최소다항식을 각각 $m_L,\, m_K$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-part3_axler4_5b_29}
+::: {#exr-ALA_axler4_5b_29}
 
 2차원 이상의 유한차원 벡터공간에서 정의된 연산자는 2차원의 불변부분공간을 가짐을 보여라.
 

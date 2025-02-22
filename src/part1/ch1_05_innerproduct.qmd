@@ -8,10 +8,12 @@ crossref:
 
 {{< include ../../latexmacros.qmd >}}
 
+</br>
+
 ## 내적 (Inner product) 과 노름 (norm)
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-innerproduct}
+::: {#def-LA_innerproduct}
 
 #### 내적과 내적 공간
 
@@ -41,7 +43,7 @@ $\mathbb{F}$-벡터공간 $V$ 에서 정의된 $\phi : V \times V \to \mathbb{F}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-innerproduct_R1_C1}
+::: {#exm-LA_innerproduct_R1_C1}
 
 #### $\C^1$
 $\mathbb{C}^1$, 즉 1차원 복소벡터공간에서의 내적을
@@ -63,7 +65,7 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-euclidean_innerproduct}
+::: {#exm-LA_euclidean_innerproduct}
 
 #### 유클리드 공간
 
@@ -74,7 +76,7 @@ $\mathbb{R}^n$ 에서 $x = (x_1,\ldots,\,x_n)$, $y=(y_1,\ldots,\,y_n)\in \mathbb
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-innerproduct_definded_by_intergration_in_R}
+::: {#exm-LA_innerproduct_definded_by_intergration_in_R}
 
 $[0,\,1]$ 구간에서 연속인 실함수로 이루어진 벡터공간에서의 내적을 아래와 같이 정의 할 수 있다.
 $$
@@ -93,7 +95,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-basic_properties_of_inner_product}
+::: {#prp-LA_basic_properties_of_inner_product}
 
 $V$ 가 $\mathbb{F}$-내적벡터공간이며 $u,\,v,\,w \in V,\, c \in \mathbb{F}$ 일 때 다음이 성립한다.
 
@@ -112,7 +114,7 @@ $V$ 가 $\mathbb{F}$-내적벡터공간이며 $u,\,v,\,w \in V,\, c \in \mathbb{
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-orthogonality_of_vector}
+::: {#def-LA_orthogonality_of_vector}
 
 #### 벡터의 직교
 
@@ -124,7 +126,7 @@ $V$ 가 $\mathbb{F}$-내적벡터공간이며 $u,\,v,\,w \in V,\, c \in \mathbb{
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-orthogonal_linearity}
+::: {#prp-LA_orthogonal_linearity}
 내적벡터 공간 $V$ 에서의 영벡터가 아닌 벡터의 집합 $\{v_1,\ldots,\,v_n\}$ 이 직교하는 벡터의 집합이면 선형 독립이다.
 :::
 
@@ -146,21 +148,21 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-number_of_orthogonal_vectors}
+::: {#cor-LA_number_of_orthogonal_vectors}
 유한차원 내적벡터공간에서 직교하는 벡터의 갯수는 그 차원보다 많을 수 없다.
 :::
 
 </div></br>
 
 :::{.proof}
-@lem-number_of_basis 를 보라.
+@lem-LA_number_of_basis 를 보라.
 :::
 
 
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-norm}
+::: {#def-LA_norm}
 #### 노름 과 거리함수
 
 $\mathbb{F}$-벡터공간 $V$ 에서 벡터의 **노름(norm)** 은 다음을 만족하는 함수이다.
@@ -192,7 +194,7 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-norm_space_1}
+::: {#exm-LA_norm_space_1}
 
 #### $L_p$ 노름
 
@@ -208,7 +210,7 @@ $$
 \|v\|_\infty = \max\{ |v_1|, \ldots,\,|v_n|\}
 $$
 
-역시 노름이며 $L_\infty$ 노름이라고 한다. $L_p$ 노름과 $L_\infty$ 노름이 @def-norm 의 조건을 만족한다는 것을 보이는 것은 독자에게 맡긴다. $L_p$ 노름에서 $\|u+v\|_p\le \|u\|_p+\|v\|_p$ 를 [민코프스키 부등식](https://en.wikipedia.org/wiki/Minkowski_inequality) 이라고 한다.
+역시 노름이며 $L_\infty$ 노름이라고 한다. $L_p$ 노름과 $L_\infty$ 노름이 @def-LA_norm 의 조건을 만족한다는 것을 보이는 것은 독자에게 맡긴다. $L_p$ 노름에서 $\|u+v\|_p\le \|u\|_p+\|v\|_p$ 를 [민코프스키 부등식](https://en.wikipedia.org/wiki/Minkowski_inequality) 이라고 한다.
 
 :::
 
@@ -216,7 +218,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-innerproduct_norm}
+::: {#prp-LA_innerproduct_norm}
 
 내적 백터공간 $V$ 의 두 벡터 $u,\,v$ 에 대해 다음이 성립한다. 
 
@@ -230,7 +232,7 @@ $$
 
 ::: {.proof}
 
-뒤에 사용하겠지만 일단은 임시방편으로 $\langle v, v\rangle = \|v\|^2$ 라고 하자. @def-innerproduct 에 의해 $\|v\|\ge 0$ 이며 $\|v\|=0 \iff v=0$ 임을 알 수 있다. ($1$) 은 쉽게 보일 수 있다. ($2$) $v=0$ 일 때는 자명하다. 이제 $v\ne 0$ 일 경우만을 생각하자. $w=\|v\|^2 u - \langle u,\, v\rangle v$ 라고 하면, $\|w\|^2\ge 0$ 이므로, 
+뒤에 사용하겠지만 일단은 임시방편으로 $\langle v, v\rangle = \|v\|^2$ 라고 하자. @def-LA_innerproduct 에 의해 $\|v\|\ge 0$ 이며 $\|v\|=0 \iff v=0$ 임을 알 수 있다. ($1$) 은 쉽게 보일 수 있다. ($2$) $v=0$ 일 때는 자명하다. 이제 $v\ne 0$ 일 경우만을 생각하자. $w=\|v\|^2 u - \langle u,\, v\rangle v$ 라고 하면, $\|w\|^2\ge 0$ 이므로, 
 
 $$
 \begin{aligned}
@@ -249,7 +251,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-norm_of_innerproduct_space}
+::: {#prp-LA_norm_of_innerproduct_space}
 
 #### 내적 공간의 노름
 
@@ -261,7 +263,7 @@ $\mathbb{F}$-내적벡터공간에서 $\sqrt{\langle v,\, v\rangle}$ 은 거리�
 
 ::: {.proof}
 
-@def-innerproduct 에서의 ($1$), ($2$) 로부터 @def-norm 의 ($1$), ($2$) 가 성립함을 알 수 있다. @def-innerproduct 의 ($4$) 로 부터 $\|cv\|^2= |c|^2 \|v\|^2$ 라는 것을 알 수 있으며 $\|cv\|\ge 0$ 이므로 $\|cv\| = |c|\|v\|$ 이다.
+@def-LA_innerproduct 에서의 ($1$), ($2$) 로부터 @def-LA_norm 의 ($1$), ($2$) 가 성립함을 알 수 있다. @def-LA_innerproduct 의 ($4$) 로 부터 $\|cv\|^2= |c|^2 \|v\|^2$ 라는 것을 알 수 있으며 $\|cv\|\ge 0$ 이므로 $\|cv\| = |c|\|v\|$ 이다.
 
 이제 ($4$) 를 보이자. 
 
@@ -281,7 +283,7 @@ $$
 \langle u, v\rangle + \langle v, u\rangle = \text{Re}(\langle u, v\rangle) \le |\langle u, v\rangle|
 $$
 
-이므로 @prp-innerproduct_norm 의 ($2$) 를 이용하면
+이므로 @prp-LA_innerproduct_norm 의 ($2$) 를 이용하면
 
 $$
 (\|u\|+\|v\|)^2 - \|u+v\|^2 = 2\|u\|\|v\|- \langle u, v\rangle - \langle v, u \rangle \ge 2\|u\|\|v\| - |\langle u, v\rangle| \ge 0
@@ -297,17 +299,17 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-norm_in_innerproduct_space}
+::: {#prp-LA_norm_in_innerproduct_space}
 
 내적 백터공간 $V$ 의 두 벡터 $u,\,v$ 에 대해 다음이 성립한다. 
 
-&emsp; ($1$) 피타고라스 정리 : $\langle u,\,v \rangle = 0 \implies \|u + v\|^2 = \|u\|^2 + \|v\|^2$.
+&emsp;($1$) 피타고라스 정리 : $\langle u,\,v \rangle = 0 \implies \|u + v\|^2 = \|u\|^2 + \|v\|^2$.
 
-&emsp; ($2$) 코시-슈바르츠 부등식 :$|\langle u,\,v \rangle | \le \|u\| \|v\|$.
+&emsp;($2$) 코시-슈바르츠 부등식 :$|\langle u,\,v \rangle | \le \|u\| \|v\|$.
 
-&emsp; ($3$) 삼각부등식 : $\|u+v\| \le \|u\|+ \|v\|$.
+&emsp;($3$) 삼각부등식 : $\|u+v\| \le \|u\|+ \|v\|$.
 
-&emsp; ($4$) 평행사변형 공식 : $\|u+v\|^2+\|u-v\|^2 = 2\|u\|^2+2\|v\|^2$.
+&emsp;($4$) 평행사변형 공식 : $\|u+v\|^2+\|u-v\|^2 = 2\|u\|^2+2\|v\|^2$.
 :::
 
 </div></br>
@@ -321,7 +323,7 @@ $\square$
 
 ## 정규직교기저
 
-### 정규직교벡터와 정규직교기저 {#sec-part1_orthonomal_vectors_and_orthonormal_basis}
+### 정규직교벡터와 정규직교기저 {#sec-LA_orthonomal_vectors_and_orthonormal_basis}
 
 내적벡터공간 $V$ 의 기저 $\{h_i\}$ 를 생각하자. 두 벡터 $u=\sum_i u_i h_i,\, v= \sum_j v_j h_j$ 의 내적은 다음과 같다.
 
@@ -341,26 +343,26 @@ $$ {#eq-innerproduct}
 
 ::: {.callout-note appearance="simple" icon="false"}
 
-::: {#def-part1_orthonormal_Basis}
+::: {#def-LA_orthonormal_Basis}
 
 #### 정규직교벡터와 정규직교기저
 
-내적벡터공간의 벡터의 집합 $\{v_1,\ldots,\,v_n\}$ 의  직교하는 벡터의 집합이며 벡터의 노름이 모두 $1$ 일 때, 즉 $\langle v_i,\,v_j\rangle = \delta_{ij}$ 일 때 **정규직교벡터 (orthonormal vectors)** 라 한다. 정규직교기저벡터가 선형독립임은 @prp-orthogonal_linearity 에서 보았다. 정규직교벡터가 벡터공간의 기저일 때 이 기저를 **정규직교기저 (orthonormal basis)** 라 한다. 
+내적벡터공간의 벡터의 집합 $\{v_1,\ldots,\,v_n\}$ 의  직교하는 벡터의 집합이며 벡터의 노름이 모두 $1$ 일 때, 즉 $\langle v_i,\,v_j\rangle = \delta_{ij}$ 일 때 **정규직교벡터 (orthonormal vectors)** 라 한다. 정규직교기저벡터가 선형독립임은 @prp-LA_orthogonal_linearity 에서 보았다. 정규직교벡터가 벡터공간의 기저일 때 이 기저를 **정규직교기저 (orthonormal basis)** 라 한다. 
 :::
 :::
 
 
 </br>
 
-우리는 @prp-orthogonal_linearity 와 @cor-number_of_orthogonal_vectors 를 통해 유한차원 내적벡터공간의 서로 직교하는 벡터의 갯수는 벡터공간의 차원보다 작거나 같다는 것을 안다. 정규직교기저가 되기 위해서는 정규직교벡터의 숫자가 차원과 같아야 하는데 이것은 뒤에 [그람-슈미트 과정과 정규직교기저](#sec-gram_schmidt) 에서 자연스럽게 알게 된다. 
+우리는 @prp-LA_orthogonal_linearity 와 @cor-LA_number_of_orthogonal_vectors 를 통해 유한차원 내적벡터공간의 서로 직교하는 벡터의 갯수는 벡터공간의 차원보다 작거나 같다는 것을 안다. 정규직교기저가 되기 위해서는 정규직교벡터의 숫자가 차원과 같아야 하는데 이것은 뒤에 [그람-슈미트 과정과 정규직교기저](#sec-LA_gram_schmidt) 에서 자연스럽게 알게 된다. 
 
 </br>
 
-### 정규직교벡터의 성질
+### 정규직교벡터의 성질 {#sec-LA_properties_of_orthonormal_vectors}
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part1_properties_of_orthonormal_vectors}
+::: {#prp-LA_properties_of_orthonormal_vectors}
 
 $\{e_1,\ldots,\,e_m\}$ 이 $\mathbb{F}$-내적벡터공간 $V$ 에서의 정규직교벡터일 때 다음이 성립한다.
 
@@ -406,7 +408,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part1_properties_of_orthonormal_basis}
+::: {#prp-LA_properties_of_orthonormal_basis}
 
 $(e_1,\ldots,\,e_n)$ 이 $\mathbb{F}$-내적벡터공간 $V$ 에서의 정규직교기저일 때 다음이 성립한다.
 
@@ -429,7 +431,7 @@ $(e_1,\ldots,\,e_n)$ 이 $\mathbb{F}$-내적벡터공간 $V$ 에서의 정규직
 
 </br>
 
-### 정규직교기저벡터에 대한 연산자의 행렬 표현
+### 정규직교기저벡터에 대한 연산자의 행렬 표현 {#sec-LA_matrix_representation_of_operator_using_orthonormal_basis}
 
 $L\in \mathcal{L}(V)$ 라 하자. $\mathcal{B}=(e_i)$ 이 정규직교기저벡터일 때 $L$ 는
 
@@ -459,9 +461,9 @@ $$
 
 </br>
 
-## 그람-슈미트 과정과 정규직교기저 {#sec-gram_schmidt}
+## 그람-슈미트 과정과 정규직교기저 {#sec-LA_gram_schmidt}
 
-### 벡터에 대한 정사영 (Projection)
+### 벡터에 대한 정사영 (Projection) {#sec-LA_projection_on_vector}
 
 두 벡터의 내적이 $0$ 일 때 두 벡터는 직교한다(be perpendicular)고 하며, 한 벡터가 다른 벡터의 스칼라곱일 때 두 벡터가 **평행하다(be parallel)** 고 한다. 내적벡터공간 $V$ 의 두 벡터 $u,\,v$ 가 주어졌다고 하자. 이 때 $v$ 의 $v$ 에 대한 Projection $\text{Proj}_u v$ 를 아래와 같이 정의하자.
 
@@ -479,7 +481,7 @@ $$
 
 </br>
 
-### 그람-슈미트 과정 (Gram-Schmidt Process)
+### 그람-슈미트 과정 (Gram-Schmidt Process) {#sec-LA_gram-schimidt_process}
 
 그람-슈미트 과정을 통해 유한차원 내적 벡터공간에서 주어진 독립 벡터를 이용하여 같은 갯수의 정규 직교 벡터를 얻을 수 있다. $n$ 차원 내적 벡터 공간 $V$ 에서 $m$ 개의 독립벡터 $\{v_1,\ldots,v_m\}$ 이 주어졌다고 하자. (당연히 $m \le n$ 이다). 정규직교벡터의 집합 $\{e_1,\ldots,\,e_m\}$ 을 그람-슈미트 과정을 수행하여 얻을 수 있다. 그람-슈미트 과정을 귀납적으로 표현하면 다음과 같다.
 
@@ -500,7 +502,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-gram_schmidt}
+::: {#lem-LA_gram_schmidt}
 위 과정을 통해 얻은 $\{e_1,\ldots,\,e_m\}$ 은 orthonomal 하다. 즉, $\langle e_i,\, e_j\rangle = \delta_{ij}$ 이다.
 :::
 
@@ -537,7 +539,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-orthonormal_basis}
+::: {#thm-LA_orthonormal_basis}
 $V$ 가 유한차원 내적벡터공간이며 $\mathcal{B}_V= (v_i)$ 가 $V$ 의 기저일 때 $\mathcal{B}_V$ 로부터 정규직교기저를 얻을 수 있다.
 :::
 
@@ -550,11 +552,11 @@ $\mathcal{B}_V$ 는 선형독립이므로 Gram-Schmidt 과정을 통해 얻은 �
 
 </br>
 
-그람-슈미트 과정은 내적벡터공간에 기저가 주어지면 이 기저의 선형결합으로 정규직교기저를 얻을 수 있음을 보장한다. 우리는 앞서 @thm-uppertriangular_matrix_complex_field 에서 유한차원 $\mathbb{C}$-벡터공간에서의 모든 연산자는 어떤 기저에서 상삼각 행렬로 표현된다는 것을 보였다. 유한차원 $\mathbb{C}$-내적벡터공간에서는 정규직교기저에대해 상삼각 행렬로 표현되는 것을 보이자.
+그람-슈미트 과정은 내적벡터공간에 기저가 주어지면 이 기저의 선형결합으로 정규직교기저를 얻을 수 있음을 보장한다. 우리는 앞서 @thm-LA_uppertriangular_matrix_complex_field 에서 유한차원 $\mathbb{C}$-벡터공간에서의 모든 연산자는 어떤 기저에서 상삼각 행렬로 표현된다는 것을 보였다. 유한차원 $\mathbb{C}$-내적벡터공간에서는 정규직교기저에대해 상삼각 행렬로 표현되는 것을 보이자.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-schure}
+::: {#thm-LA_schure}
 
 #### 슈어 정리 (Schur's Theorem)
 
@@ -564,7 +566,7 @@ $\mathcal{B}_V$ 는 선형독립이므로 Gram-Schmidt 과정을 통해 얻은 �
 </div></br>
 
 ::: {.proof}
-$V$ 를 $n$ 차원 $\mathbb{C}$-내적벡터공간이라 하자. @thm-uppertriangular_matrix_complex_field 에서 $L\in \mathcal{L}(V)$ 는 어떤 기저 에서 상삼각행렬로 표현된다는 것을 보였다. 이 기저를 $\mathcal{B}_V = \{v_1,\ldots,\,v_n\}$ 이라 하고, 그람-슈미트 과정을 통해 얻은 정규직교기저를 $\{e_1,\ldots,\,e_n\}$ 이라 하자. 즉 $e_i \in \text{span}(v_1,\ldots,\,v_i)$ 이다. 그렇다면, 그람 슈미트 과정으로부터
+$V$ 를 $n$ 차원 $\mathbb{C}$-내적벡터공간이라 하자. @thm-LA_uppertriangular_matrix_complex_field 에서 $L\in \mathcal{L}(V)$ 는 어떤 기저 에서 상삼각행렬로 표현된다는 것을 보였다. 이 기저를 $\mathcal{B}_V = \{v_1,\ldots,\,v_n\}$ 이라 하고, 그람-슈미트 과정을 통해 얻은 정규직교기저를 $\{e_1,\ldots,\,e_n\}$ 이라 하자. 즉 $e_i \in \text{span}(v_1,\ldots,\,v_i)$ 이다. 그렇다면, 그람 슈미트 과정으로부터
 
 $$
 \text{span}(e_1,\ldots,\,e_j) = \text{span}(v_1,\ldots,\,v_j), \quad j=1,\ldots, n
@@ -589,7 +591,7 @@ $$
 
 <br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part1_reisz_representation_theorem_1}
+::: {#thm-LA_reisz_representation_theorem_1}
 
 #### Riesz 의 표현 정리 1 (Reisz Representation theorem 1)
 
@@ -630,13 +632,13 @@ Reitz 의 표현정리는 유한차원 내적벡터공간에서만 성립하며 
 
 ## 조르당-폰 노이만 정리 {#sec-jordan_von_neumann_theorem} 
 
-우리는 앞서 @prp-norm_of_innerproduct_space 에서 내적벡터공간에는 자연스러운 거리함수가 존재한다는 것을 보였다. 즉 내적공간은 거리공간이다. 그렇다면 어떤 조건에서 거리공간은 내적공간이 될 수 있을까를 말해주는 것이 조르당-폰 노이만 정리이다. 결론적으로 말하자면 거리공간에 사다리꼴 공식이 성립한다면 내적공간이 되며 이것을 조르당-폰 노이만 정리라고 한다. 우선 실벡터 공간에 대해서 보이고 이후 복소벡터 공간에서 보이도록 하자. 다만 이것의 증명을 위해서는 연속에 대한 해석학적인 지식이 필요하다.
+우리는 앞서 @prp-LA_norm_of_innerproduct_space 에서 내적벡터공간에는 자연스러운 거리함수가 존재한다는 것을 보였다. 즉 내적공간은 거리공간이다. 그렇다면 어떤 조건에서 거리공간은 내적공간이 될 수 있을까를 말해주는 것이 조르당-폰 노이만 정리이다. 결론적으로 말하자면 거리공간에 사다리꼴 공식이 성립한다면 내적공간이 되며 이것을 조르당-폰 노이만 정리라고 한다. 우선 실벡터 공간에 대해서 보이고 이후 복소벡터 공간에서 보이도록 하자. 다만 이것의 증명을 위해서는 연속에 대한 해석학적인 지식이 필요하다.
 
 </br>
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-jordan_von_neumann_1}
+::: {#lem-LA_jordan_von_neumann_1}
 
 $\mathbb{R}$-거리 공간 $V$ 에서 함수 $\phi : V \times V \to [0, \infty)$ 를 다음과 같이 정의하자.
 
@@ -686,9 +688,9 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-jordan_von_neumann_2}
+::: {#lem-LA_jordan_von_neumann_2}
 
-@lem-jordan_von_neumann_1 과 같은 조건에서 $u,\,v\in V,\, c\in \mathbb{R}$ 일 때 다음이 성립한다.
+@lem-LA_jordan_von_neumann_1 과 같은 조건에서 $u,\,v\in V,\, c\in \mathbb{R}$ 일 때 다음이 성립한다.
 
 $$
 \phi (cu, v) =  c\phi (u, v).
@@ -707,7 +709,7 @@ $$
 
 으로부터 $\phi (-u, v)=-\phi(u, v)$ 임을 안다. 즉 $-1\in S$ 이다. 
 
-이제 $c\in S\implies c+1\in S$ 임을 보이자. @lem-jordan_von_neumann_1 의 결과를 이용해 다음과 같이 보일 수 있다.
+이제 $c\in S\implies c+1\in S$ 임을 보이자. @lem-LA_jordan_von_neumann_1 의 결과를 이용해 다음과 같이 보일 수 있다.
 
 $$
 \begin{aligned}
@@ -743,7 +745,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-jordan_von_neumann_theorem}
+::: {#thm-LA_jordan_von_neumann_theorem}
 
 #### 실벡터공간에서의 조르당-폰 노이만 정리
 
@@ -759,9 +761,9 @@ $\mathbb{R}$-거리벡터공간 $V$ 에 대해 다음은 동치이다.
 
 ::: {.proof}
 
-($1 \implies 2$) 는 @prp-norm_in_innerproduct_space 에서 보였다.
+($1 \implies 2$) 는 @prp-LA_norm_in_innerproduct_space 에서 보였다.
 
-($2 \implies 1$) @eq-innerproduct_from_norm_in_R 가 @def-innerproduct 를 만족한다는 것은 @lem-jordan_von_neumann_1 과 @lem-jordan_von_neumann_2 를 이용하여 보일 수 있다. $\square$
+($2 \implies 1$) @eq-innerproduct_from_norm_in_R 가 @def-LA_innerproduct 를 만족한다는 것은 @lem-LA_jordan_von_neumann_1 과 @lem-LA_jordan_von_neumann_2 를 이용하여 보일 수 있다. $\square$
 
 :::
 
@@ -773,7 +775,7 @@ $\mathbb{R}$-거리벡터공간 $V$ 에 대해 다음은 동치이다.
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-jordan_von_neumann_3}
+::: {#lem-LA_jordan_von_neumann_3}
 
 $\mathbb{C}$-거리공간 $V$ 에서 함수 $\psi : V \times V \to \mathbb{C}$ 를 다음과 같이 정의한다.
 
@@ -800,7 +802,7 @@ $$
 \psi_R (u, v) = \dfrac{\|u+v\| - \|u-v\|}{r},\qquad \psi_I(u, v) = \dfrac{\|u+iv\| -\|u-iv\|}{4}
 $$
 
-로 놓으면 $\psi(u, v) = \psi_R(u, v)+ i\psi_I (u, v)$ 이다. $\psi_R(u+u',v)= \psi_R(u,v) + \psi_R(u',v)$ 인것은 @lem-jordan_von_neumann_1 에서 보였다. $\psi_I(u, v) = \psi_R(u, iv)$ 이므로 $\psi_I(u+u',v)= \psi_I(u,v) + \psi_I(u',v)$ 이다. $\square$
+로 놓으면 $\psi(u, v) = \psi_R(u, v)+ i\psi_I (u, v)$ 이다. $\psi_R(u+u',v)= \psi_R(u,v) + \psi_R(u',v)$ 인것은 @lem-LA_jordan_von_neumann_1 에서 보였다. $\psi_I(u, v) = \psi_R(u, iv)$ 이므로 $\psi_I(u+u',v)= \psi_I(u,v) + \psi_I(u',v)$ 이다. $\square$
 
 :::
 
@@ -808,9 +810,9 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-jordan_von_neumann_4}
+::: {#lem-LA_jordan_von_neumann_4}
 
-$\mathbb{C}$-거리공간 $V$ 에서 @lem-jordan_von_neumann_3 에서 정의된 함수 $\psi$ (@eq-innerproduct_from_norm_in_C) 는 $c \in \mathbb{F}$ 에 대해 다음을 만족한다.
+$\mathbb{C}$-거리공간 $V$ 에서 @lem-LA_jordan_von_neumann_3 에서 정의된 함수 $\psi$ (@eq-innerproduct_from_norm_in_C) 는 $c \in \mathbb{F}$ 에 대해 다음을 만족한다.
 
 $$
 \psi (cu, v) = c\psi(u, v). 
@@ -821,7 +823,7 @@ $$
 </div></br>
 
 ::: {.proof}
-@lem-jordan_von_neumann_3 의 증명과 같이 $\psi_R$ 과 $\psi_I$ 를 정의하자. $\psi_R(cu, v) = c\psi_R (u, v)$ 는 실벡터 거리공간에서의 경우와 마찬가지이다. $\psi_I (u, v) = \psi _I (u, iv)$ 이므로 $\psi_I (cu, v) = c\psi_I (u, v)$ 이다. 따라서 $\psi (cu, v) =  c\psi (u, v)$ 이다. $\square$
+@lem-LA_jordan_von_neumann_3 의 증명과 같이 $\psi_R$ 과 $\psi_I$ 를 정의하자. $\psi_R(cu, v) = c\psi_R (u, v)$ 는 실벡터 거리공간에서의 경우와 마찬가지이다. $\psi_I (u, v) = \psi _I (u, iv)$ 이므로 $\psi_I (cu, v) = c\psi_I (u, v)$ 이다. 따라서 $\psi (cu, v) =  c\psi (u, v)$ 이다. $\square$
 
 :::
 
@@ -831,7 +833,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-jordan_von_neumann_theorem2}
+::: {#thm-LA_jordan_von_neumann_theorem2}
 
 #### 복소벡터공간에서의 조르당-폰 노이만 정리
 
@@ -850,9 +852,9 @@ $\mathbb{C}$-거리벡터공간 $V$ 에 대해 다음은 동치이다.
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-L1_not_innerproduct_space}
+::: {#exm-LA_L1_not_innerproduct_space}
 
-@exm-norm_space_1 에서 정의된 $L_p$ 노름은 $p\ne 2$ 일 경우를 제외하면 내적을 정의 할 수 없다. $V=\mathbb{C}^n$  에 대해 $u=(1, 0, \ldots, 0)$, $v=(0, 1, 0, \ldots,\,0)$ 이라고 하자.
+@exm-LA_norm_space_1 에서 정의된 $L_p$ 노름은 $p\ne 2$ 일 경우를 제외하면 내적을 정의 할 수 없다. $V=\mathbb{C}^n$  에 대해 $u=(1, 0, \ldots, 0)$, $v=(0, 1, 0, \ldots,\,0)$ 이라고 하자.
 
 $$
 \begin{aligned}
@@ -872,7 +874,7 @@ $$
 ## 직교 여공간 (Orthogonal complement) 과 Orthogonal projection
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-part1_orthogonal_complement}
+::: {#def-LA_orthogonal_complement}
 
 #### 직교 여공간
 
@@ -888,7 +890,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-orthogonal_complement_is_a_vector_space}
+::: {#prp-LA_orthogonal_complement_is_a_vector_space}
 
 벡터공간 $V$ 의 부분집합 $U$ 에 대해 다음이 성립한다.
 
@@ -924,7 +926,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-generated_subspace_and_orthogonal_compliment}
+::: {#prp-LA_generated_subspace_and_orthogonal_compliment}
 
 벡터공간 $V$ 와 유한차원 부분공간 $U$ 에 대해 $V = U \oplus U^\perp$ 이다.
 
@@ -939,7 +941,7 @@ $$
 \langle w, e_j\rangle = \langle v, e_j \rangle - \langle u, e_j\rangle = 0
 $$
 
-이므로 $w\in U^\perp$ 이다. @prp-orthogonal_complement_is_a_vector_space 의 ($3$) 에 따라 $U\cap U^\perp = \{0_V\}$ 이므로 @prp-condition_for_direct_sum 에 따라 $V=U \oplus U^\perp$ 이다.
+이므로 $w\in U^\perp$ 이다. @prp-LA_orthogonal_complement_is_a_vector_space 의 ($3$) 에 따라 $U\cap U^\perp = \{0_V\}$ 이므로 @prp-LA_condition_for_direct_sum 에 따라 $V=U \oplus U^\perp$ 이다.
 
 :::
 
@@ -947,11 +949,11 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-part1_orthogonal_space_in_infinite_dimensional_vector_space}
+::: {#exm-LA_orthogonal_space_in_infinite_dimensional_vector_space}
 
 #### 무한차원 벡터공간에서의 직교여공간
 
-위의 @prp-generated_subspace_and_orthogonal_compliment 는 $U$ 가 무한차원 벡터공간일 때 성립하지 않는 수 있다는 것을 보일 수 있다. $[-1,\,1]$ 구간에서 연속인 함수의 집합 $C_{[-1, 1]}$ 는 벡터공간이며 내적을
+위의 @prp-LA_generated_subspace_and_orthogonal_compliment 는 $U$ 가 무한차원 벡터공간일 때 성립하지 않는 수 있다는 것을 보일 수 있다. $[-1,\,1]$ 구간에서 연속인 함수의 집합 $C_{[-1, 1]}$ 는 벡터공간이며 내적을
 
 $$
 \langle f,\, g\rangle = \int_{-1}^1 f(x)\, g(x) \, dx
@@ -998,7 +1000,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-uniqueness_of_orthogonal_decomposition}
+::: {#prp-LA_uniqueness_of_orthogonal_decomposition}
 
 유한차원 벡터공간 $V$ 에 대해 $v\in V$ 는 어떤 $u\in U$ 와 $w\in U^\perp$ 에 대해 $v = u+w$ 로 나타낼 수 있으며, 이를 만족하는 $u,\,w$ 는 유일하다.
 
@@ -1007,29 +1009,29 @@ $$
 </div></br>
 
 ::: {.proof}
-@prp-generated_subspace_and_orthogonal_compliment 에 따라 $V=U\oplus U^\perp$ 이다. 이제 $U$ 의 정규직교기저 $\{e_1,\ldots,\,e_n\}$ 과 $U^\perp$ 의 정규직교 기저 $\{f_1,\ldots,\,f_m\}$ 에 대해 $u = \sum_i a_i e_i + \sum_j b_j f_j$ 를 만족하는 $a_i,\, b_j$ 가 존재한다. $u= \sum_i a_i e_i$ 이며 $w=\sum_j b_j f_j$ 이다. 이 때 $u,\,w$ 가 유일하게 정해진다는 것은 자명하다. $\square$
+@prp-LA_generated_subspace_and_orthogonal_compliment 에 따라 $V=U\oplus U^\perp$ 이다. 이제 $U$ 의 정규직교기저 $\{e_1,\ldots,\,e_n\}$ 과 $U^\perp$ 의 정규직교 기저 $\{f_1,\ldots,\,f_m\}$ 에 대해 $u = \sum_i a_i e_i + \sum_j b_j f_j$ 를 만족하는 $a_i,\, b_j$ 가 존재한다. $u= \sum_i a_i e_i$ 이며 $w=\sum_j b_j f_j$ 이다. 이 때 $u,\,w$ 가 유일하게 정해진다는 것은 자명하다. $\square$
 
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-dimension_relation_of_orthogonal_complement}
+::: {#cor-LA_dimension_relation_of_orthogonal_complement}
 
 $V$ 가 유한차원 벡터공간일 때 $U\le V$ 에 대해 다음이 성립한다.
 
-&emsp; ($1$) $\dim (V) = \dim(U) + \dim(U^\perp)$.
+&emsp;($1$) $\dim (V) = \dim(U) + \dim(U^\perp)$.
 
-&emsp; ($2$) $(U^\perp)^\perp = U$.
+&emsp;($2$) $(U^\perp)^\perp = U$.
 
 :::
 
 </div></br>
 
-### Orthogonal projection {#sec-part1_orthogonal_projection}
+### Orthogonal projection {#sec-LA_orthogonal_projection}
 
 
 ::: {.callout-note appearance="minimal"}
-::: {#def-projection_operator}
+::: {#def-LA_projection_operator}
 
 #### Projection
 
@@ -1042,7 +1044,7 @@ $V$ 가 유한차원 벡터공간일 때 $U\le V$ 에 대해 다음이 성립한
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-range_of_projection}
+::: {#prp-LA_range_of_projection}
 
 $\text{im}(P)$ 는 $P$-불변 부분 공간이다.
 
@@ -1059,13 +1061,13 @@ $u\in \text{im}(P)$ 이면 $P(v)=u$ 인 $v\in V$ 가 존재하며, $P(u)=P^2(v) 
 
 </br>
 
-벡터공간 $V$ 와 projection $P\in \mathcal{L}(V)$ 에 대해 $U = \text{im}(P)$ 라 하자. $U$ 가 유한차원 부분공간이라면 $V=U \oplus U^\perp$ 이라는 것을 안다. 또한 @prp-uniqueness_of_orthogonal_decomposition 에서 보인 것처럼 $V$ 가 유한차원이라면 $v\in V$ 에 대해 $v=u+u',\, u\in U,\, u'\in U^{\perp}$ 가 되도록 하는 $u,\,u'$ 은 유일하다. 이제 반대로 $U \le V$ 에 대해 $v\in V$ 는 어떤 $u\in U$ 와 $u'\in U^\perp$ 의 합으로 유일하게 표현 될 수 있다는 것을 안다. 이렇게 어떤 부분공간 $U$ 를 치역으로 갖는 projection 다음과 같이 따로 정의할 수 있다.
+벡터공간 $V$ 와 projection $P\in \mathcal{L}(V)$ 에 대해 $U = \text{im}(P)$ 라 하자. $U$ 가 유한차원 부분공간이라면 $V=U \oplus U^\perp$ 이라는 것을 안다. 또한 @prp-LA_uniqueness_of_orthogonal_decomposition 에서 보인 것처럼 $V$ 가 유한차원이라면 $v\in V$ 에 대해 $v=u+u',\, u\in U,\, u'\in U^{\perp}$ 가 되도록 하는 $u,\,u'$ 은 유일하다. 이제 반대로 $U \le V$ 에 대해 $v\in V$ 는 어떤 $u\in U$ 와 $u'\in U^\perp$ 의 합으로 유일하게 표현 될 수 있다는 것을 안다. 이렇게 어떤 부분공간 $U$ 를 치역으로 갖는 projection 다음과 같이 따로 정의할 수 있다.
 
 
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-orthogonal_projection}
+::: {#def-LA_orthogonal_projection}
 #### Orthogonal projection
 
 벡터공간 $V$ 의 유한차원 부분공간 $U$ 를 치역으로 갖는 projeciton 을 $V$ 에 대한 $U$ 로의 **orthogonal projection** 이라고 하며 $P_U$ 라고 쓴다.
@@ -1075,22 +1077,22 @@ $u\in \text{im}(P)$ 이면 $P(v)=u$ 인 $v\in V$ 가 존재하며, $P(u)=P^2(v) 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-properties_of_orghogonal_projection}
+::: {#prp-LA_properties_of_orghogonal_projection}
 $U$ 가 $V$ 의 유한차원 부분벡터공간 일 때 다음이 성립한다. 증명은 쉬우므로 생략한다.
 
-&emsp; ($1$) $u \in U \implies P_U (u) = u$.
+&emsp;($1$) $u \in U \implies P_U (u) = u$.
 
-&emsp; ($2$) $w \in U^\perp \implies P_U(w) = 0$.
+&emsp;($2$) $w \in U^\perp \implies P_U(w) = 0$.
 
-&emsp; ($3$) $\ker (P_U) = U^\perp, \,\text{im}(P_U) = U$.
+&emsp;($3$) $\ker (P_U) = U^\perp, \,\text{im}(P_U) = U$.
 
-&emsp; ($4$) $v-P_U (v) \in U^\perp$.
+&emsp;($4$) $v-P_U (v) \in U^\perp$.
 
-&emsp; ($5$) $P_U^2 = P_U$.
+&emsp;($5$) $P_U^2 = P_U$.
 
-&emsp; ($6$) $\|P_U (v) \| \le \|v\|$.
+&emsp;($6$) $\|P_U (v) \| \le \|v\|$.
 
-&emsp; ($7$) $e_1,\ldots,\,e_m$ 이 $U$ 의 정규직교기저이고 $v\in V$ 이면 다음이 성립한다.
+&emsp;($7$) $e_1,\ldots,\,e_m$ 이 $U$ 의 정규직교기저이고 $v\in V$ 이면 다음이 성립한다.
 
 $$
 P_U(v) = \langle v,\,e_1\rangle e_1 + \cdots + \langle v,\,e_m \rangle e_m.
@@ -1101,12 +1103,12 @@ $$
 
 </br>
 
-Reisz 표현 정리(@thm-part1_reisz_representation_theorem_1) 에서는 유한차원 벡터공간 $V$ 에서의 모든 선형 범함수는 각각 유일하게 정해진 어떤 벡터에 대한 내적과 같다는 것을 보였다. 
+Reisz 표현 정리(@thm-LA_reisz_representation_theorem_1) 에서는 유한차원 벡터공간 $V$ 에서의 모든 선형 범함수는 각각 유일하게 정해진 어떤 벡터에 대한 내적과 같다는 것을 보였다. 
 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part1_reisz_representation_theorem_2}
+::: {#thm-LA_reisz_representation_theorem_2}
 
 #### Reisz 의 표현정리 2
 
@@ -1124,19 +1126,19 @@ $$
 
 ::: {.proof}
 
-$\Phi : V \to V^\ast$ 를 $\Phi(v) = \varphi_v$ 로 정의하자. $\Phi$ 가 단사임은 @thm-part1_reisz_representation_theorem_1 에서 보였다. 이제 $\Phi$ 가 전사임을 보이자. $\varphi \in V^\ast$ 일 때 $\varphi=0$ 이면 $\varphi = \varphi_{0_V}$ 이다. 이제 $\varphi \ne \varphi_{0_V}$ 에서만 생각해도 된다. $\ker \varphi \ne V$ 이므로 $(\ker \varphi)^\perp \ne \{0_V\}$ 이다.
+$\Phi : V \to V^\ast$ 를 $\Phi(v) = \varphi_v$ 로 정의하자. $\Phi$ 가 단사임은 @thm-LA_reisz_representation_theorem_1 에서 보였다. 이제 $\Phi$ 가 전사임을 보이자. $\varphi \in V^\ast$ 일 때 $\varphi=0$ 이면 $\varphi = \varphi_{0_V}$ 이다. 이제 $\varphi \ne \varphi_{0_V}$ 에서만 생각해도 된다. $\ker \varphi \ne V$ 이므로 $(\ker \varphi)^\perp \ne \{0_V\}$ 이다.
 
 $w\in (\ker \varphi)^\perp,\, w\ne 0_V$ 일 때
 
 $$
 v = \dfrac{\overline{\varphi (w)}}{\|w\|^2} w
-$$ {#eq-part1_reisz_representation_theorem_2_1}
+$$ {#eq-LA_reisz_representation_theorem_2_1}
 
 라면 $v\in (\ker \varphi)^\perp$ 이다. 양변에 노름을 취하면
 
 $$
 \|v\| = \dfrac{|\varphi (w)|}{\|w\|}
-$$ {#eq-part1_reisz_representation_theorem_2_2}
+$$ {#eq-LA_reisz_representation_theorem_2_2}
 
 이다. 그렇다면
 
@@ -1170,11 +1172,11 @@ $\F=\R$ 일 경우는 $\Phi$ 가 선형사상이 되어 쉽게 풀 수 있다. @
 
 ## 최소화문제와 의사역행렬
 
-### 최소화 문제 {#sec-part1_minimization_problems}
+### 최소화 문제 {#sec-LA_minimization_problems}
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-part1_distance_to_subspace}
+::: {#def-LA_distance_to_subspace}
 
 #### 부분공간 까지의 거리
 
@@ -1193,7 +1195,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-distance_to_subspace}
+::: {#prp-LA_distance_to_subspace}
 $V$ 가 유한차원 내적벡터공간이고 $v\in V$, 이며 $U$ 가 $V$ 의 부분공간일 때, $v$ 에서 $U$ 까지의 거리는 $v$ 에서 $P_U (v)$ 까지의 거리와 같다. 즉, 
 
 $$
@@ -1223,7 +1225,7 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-part1_approximation_of_sin_function}
+::: {#exm-LA_approximation_of_sin_function}
 
 #### 사인 함수의 다항식 근사
 
@@ -1233,7 +1235,7 @@ $$
 \int_{-\pi}^\pi \left| \sin x - p(x)\right|^2\, dx
 $$
 
-를 최소화하도록 $p(x)$ 의 계수를 정하는 것도 한가지 방법이다. 이제 $C[-\pi,\, \pi]$ 를 $[-\pi,\,\pi]$ 구간에서의 연속인 실함수의 집합으로 정의하면 $C:=C[-\pi,\, \pi]$ 는 벡터공간이며 $f,\,g\in \in C$ 일 때 $C$ 에서의 내적을 아래와 같이 정의 할 수 있다는 것을 안다. (@exm-innerproduct_definded_by_intergration_in_R)
+를 최소화하도록 $p(x)$ 의 계수를 정하는 것도 한가지 방법이다. 이제 $C[-\pi,\, \pi]$ 를 $[-\pi,\,\pi]$ 구간에서의 연속인 실함수의 집합으로 정의하면 $C:=C[-\pi,\, \pi]$ 는 벡터공간이며 $f,\,g\in \in C$ 일 때 $C$ 에서의 내적을 아래와 같이 정의 할 수 있다는 것을 안다. (@exm-LA_innerproduct_definded_by_intergration_in_R)
 
 $$
 \langle f,\, g\rangle := \int_{-\pi}^{\pi} f(x)\,g(x)\, dx
@@ -1248,7 +1250,7 @@ $\sin \in C[-\pi,\, \pi]$ 이다. 이제 $p(x)$ 를 5차 이하의 다항식으�
 
 </br>
 
-### 의사 역사상 {#sec-part1_pseudoinverse}
+### 의사 역사상 {#sec-LA_pseudoinverse}
 
 $L \in \mathcal{L}(V,\,W)$, $b\in W$ 이 주어졌을 때 방정식 
 
@@ -1262,7 +1264,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-part1_pseudoinverse_1}
+::: {#prp-LA_pseudoinverse_1}
 
 $L\in \mathcal{L}(V,\,W)$ 일 때 $L|_{(\ker (L))^\perp}$ 는 $(\ker L)^\perp \mapsto \text{im}(L)$ 동형사상이다.
 
@@ -1274,13 +1276,13 @@ $L\in \mathcal{L}(V,\,W)$ 일 때 $L|_{(\ker (L))^\perp}$ 는 $(\ker L)^\perp \m
 
 $L|_{(\ker (L))^\perp}$ 가 $(\ker (L))^\perp \mapsto \text{im}(L)$ 전단사 임을 보이면 된다. $v\in \ker \left(L|_{(\ker (L))^\perp}\right)$ 이면 $v\in (\ker (L))^\perp \cap \ker (L)$ 이므로 $v=0$ 이다. 즉 $L|_{(\ker (L))^\perp}$ 는 단사이다. 
 
-또한 $\text{im}\left( L|_{(\ker (L))^\perp}\right) \subset \text{im}(L)$ 임은 자명하다. $w\in \text{im}(L)$ 이면 $w = Lv$ 인 $v\in \mathcal{M}_{n}(\mathbb{F})$ 가 존재하며 @prp-generated_subspace_and_orthogonal_compliment 에 따라 어떤 $x\in\ker L,\, (\ker L)^\perp$ 에 대해 $v=x+y$ 이다. 이 때 $L|_{(\ker (L))^\perp} y = w$ 이므로 $w\in \text{im}\left( L|_{(\ker (L))^\perp}\right)$ 이며 따라서  $\text{im}\left( L|_{(\ker (L))^\perp}\right) = \text{im}(L)$ 이다. 즉 $L\in \mathcal{M}_{m\times n}(\mathbb{F})$ 전사이다. $\square$
+또한 $\text{im}\left( L|_{(\ker (L))^\perp}\right) \subset \text{im}(L)$ 임은 자명하다. $w\in \text{im}(L)$ 이면 $w = Lv$ 인 $v\in \mathcal{M}_{n}(\mathbb{F})$ 가 존재하며 @prp-LA_generated_subspace_and_orthogonal_compliment 에 따라 어떤 $x\in\ker L,\, (\ker L)^\perp$ 에 대해 $v=x+y$ 이다. 이 때 $L|_{(\ker (L))^\perp} y = w$ 이므로 $w\in \text{im}\left( L|_{(\ker (L))^\perp}\right)$ 이며 따라서  $\text{im}\left( L|_{(\ker (L))^\perp}\right) = \text{im}(L)$ 이다. 즉 $L\in \mathcal{M}_{m\times n}(\mathbb{F})$ 전사이다. $\square$
 
 :::
 
 </br>
 
-@prp-part1_pseudoinverse_1 를 행렬의 입장에서 보자. $V=(\ker L)^\perp \oplus (\ker L)$ 이며 $W=(\text{im}(L))\oplus (\text{im}(L))^\perp$ 이다. $(\ker L)^\perp$ 의 기저 $\mathcal{B}_{V+} = (e_1,\ldots,\,e_n)$ 을 확장하여 $V$ 의 기저 $\mathcal{B}_V=(e_1,\ldots,\,e_n,\,e_{n+1},\ldots,\,e_N)$ 를 구성 할 수 있다. $\mathcal{B}_{W+}=(f_1,\ldots,\,f_n)$ 이 $\text{im}(L)$ 의 기저이며 이를 확장하여 $W$ 의 기저 $\mathcal{B}_W=(f_1,\ldots,\,f_n,\,f_{n+1},\ldots,\,f_{M})$ 을 구성 할 수 있다. 그렇다면 이 기저에 대한 $L$ 의 행렬표현은 다음과 같다.
+@prp-LA_pseudoinverse_1 를 행렬의 입장에서 보자. $V=(\ker L)^\perp \oplus (\ker L)$ 이며 $W=(\text{im}(L))\oplus (\text{im}(L))^\perp$ 이다. $(\ker L)^\perp$ 의 기저 $\mathcal{B}_{V+} = (e_1,\ldots,\,e_n)$ 을 확장하여 $V$ 의 기저 $\mathcal{B}_V=(e_1,\ldots,\,e_n,\,e_{n+1},\ldots,\,e_N)$ 를 구성 할 수 있다. $\mathcal{B}_{W+}=(f_1,\ldots,\,f_n)$ 이 $\text{im}(L)$ 의 기저이며 이를 확장하여 $W$ 의 기저 $\mathcal{B}_W=(f_1,\ldots,\,f_n,\,f_{n+1},\ldots,\,f_{M})$ 을 구성 할 수 있다. 그렇다면 이 기저에 대한 $L$ 의 행렬표현은 다음과 같다.
 
 $$
 [L]_{\mathcal{B}_V,\mathcal{B}_W} = \begin{bmatrix} [L]_{\mathcal{B}_{V+}, \mathcal{B}_{W+}} & \bf{0} \\ \bf{0} & \bf{0}\end{bmatrix} .
@@ -1293,7 +1295,7 @@ $$
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-part1_pseudo_inverse}
+::: {#def-LA_pseudo_inverse}
 
 #### 의사역행렬
 
@@ -1311,9 +1313,9 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-part1_pseudoinverse_2}
+::: {#lem-LA_pseudoinverse_2}
 
-위의 @def-part1_pseudo_inverse 에서 
+위의 @def-LA_pseudo_inverse 에서 
 
 &emsp;($1$) $w\in (\text{im}(L))^\perp$ 이면 $L^+w = 0_V$ 이고,
 
@@ -1335,7 +1337,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-part1_pseudoinverse_3}
+::: {#lem-LA_pseudoinverse_3}
 
 유한차원 벡터공간 $V$ 에 대해 $L\in \mathcal{L}(V,\,W)$ 일 때 다음이 성립한다.
 
@@ -1352,7 +1354,7 @@ $$
 
 ($1$) $L$ 이 가역사상이면 $\ker L = \{0_V\}$ 이므로 $(\ker L)^\perp = V$ 이고 $P_{\text{im}(L)} = P_W = I$ 이다. 따라서 $L^+ = L^{-1}$ 이다.
 
-($2$) $w\in \text{im}(L)$ 이면 @lem-part1_pseudoinverse_2 ($2$) 에서 보였듯이 $LL^+w = w$ 이다. $w\in (\text{im}(L))^\perp$ 이면 역시 @lem-part1_pseudoinverse_2 ($2$) 에서 보였듯이 $LL^+w=0_W$ 이다. 즉 $LL^+ = P_{\text{im}(L)}$ 이다.
+($2$) $w\in \text{im}(L)$ 이면 @lem-LA_pseudoinverse_2 ($2$) 에서 보였듯이 $LL^+w = w$ 이다. $w\in (\text{im}(L))^\perp$ 이면 역시 @lem-LA_pseudoinverse_2 ($2$) 에서 보였듯이 $LL^+w=0_W$ 이다. 즉 $LL^+ = P_{\text{im}(L)}$ 이다.
 
 ($3$) $v\in (\ker L)^\perp$ 라면 $Lv =w\in \text{im}(L)$ 이며 $L^+ Lv = v$ 이다. $v\in \ker L$ 이면 $L^+Lv=0_V$ 이므로 $L^+L = P_{(\ker L)^\perp}$ 이다. $\square$
 
@@ -1366,7 +1368,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part1_pseudoinverse}
+::: {#thm-LA_pseudoinverse}
 
 유한차원 벡터공간 $V$ 에 대해 $L\in \mathcal{L}(V,\,W)$ 일 때 다음이 성립한다.
 
@@ -1385,7 +1387,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part1_pseudoinverse_2}
+::: {#thm-LA_pseudoinverse_2}
 
 유한차원 벡터공간 $V$ 에 대해 $L\in \mathcal{L}(V,\,W)$ 이고 $b\in W$ 라고 하자.
 
@@ -1399,7 +1401,7 @@ $$
 
 ::: {.proof}
 
-($1$) $x\in V$ 에 대해 $Lx-b = (Lx - LL^+b) + (LL^+b -b)$ 이다. @lem-part1_pseudoinverse_3 ($2$) 에 따라 $(Lx-LL^+b) \in \text{im} (L)$ 이며 $(LL^+b - b)\in (\text{im}L)^\perp$ 이다. 따라서 
+($1$) $x\in V$ 에 대해 $Lx-b = (Lx - LL^+b) + (LL^+b -b)$ 이다. @lem-LA_pseudoinverse_3 ($2$) 에 따라 $(Lx-LL^+b) \in \text{im} (L)$ 이며 $(LL^+b - b)\in (\text{im}L)^\perp$ 이다. 따라서 
 
 $$
 \|Lx-b\| = \|(Lx - LL^+b) + (LL^+b -b)\| = \|Lx-LL^+b\| + \|LL^+b - b\|
@@ -1423,7 +1425,7 @@ $$
 
 #### 최소화 문제의 해
 
-원래의 우리는 주어진 $L \in \mathcal{L}(V,\,W)$ 과 $b\in W$ 에 대해 $\|Lx-b\|$ 를 최소화 하는 $x$ 를 찾고자 했다. @thm-part1_pseudoinverse_2 로부터 우리는 $x=L^+b$ 일 때 최소가 됨을 알았다. 
+원래의 우리는 주어진 $L \in \mathcal{L}(V,\,W)$ 과 $b\in W$ 에 대해 $\|Lx-b\|$ 를 최소화 하는 $x$ 를 찾고자 했다. @thm-LA_pseudoinverse_2 로부터 우리는 $x=L^+b$ 일 때 최소가 됨을 알았다. 
 
 :::
 
@@ -1571,7 +1573,7 @@ $$
 \varphi (u) := \langle u,\,v\rangle
 $$
 
-라고 정의한다. Reisz 표현정리 (@thm-part1_reisz_representation_theorem_1) 를 내적벡터공간 $U$ 에 적용하면 
+라고 정의한다. Reisz 표현정리 (@thm-LA_reisz_representation_theorem_1) 를 내적벡터공간 $U$ 에 적용하면 
 
 $$
 \varphi (u) = \langle u,\,w\rangle
@@ -1708,7 +1710,7 @@ $$
 
 #### Axler4th 6.C.14
 
-$(e_1,\ldots,\,e_n)$ 이 $V$ 의 정규직교기저라고 하자. 이 정규직교기저의 쌍대기저는 Reisz 의 표현정리 2 (@thm-part1_reisz_representation_theorem_2) 에서의 범함수의 그것과 같음을 보여랴.
+$(e_1,\ldots,\,e_n)$ 이 $V$ 의 정규직교기저라고 하자. 이 정규직교기저의 쌍대기저는 Reisz 의 표현정리 2 (@thm-LA_reisz_representation_theorem_2) 에서의 범함수의 그것과 같음을 보여랴.
 
 :::
 
@@ -1771,7 +1773,7 @@ $V$ 는 유한차원 벡터공간이며 $L\in \mathcal{L}(V)$ 는 projection 이
 
 ::: {.solution}
 
-$L$ 이 projection 이므로 $L^2=L$ 이며 $L = P_{\text{im}(L)}$ 이다. 또한 $(\ker (L))^\perp = \text{im}(L)$ 이므로 $L|_{(\ker L)^\perp} = I|_{\text{im}(L)}$ 이다. @def-part1_pseudo_inverse 로 부터 $L^+w = L$ 이다.
+$L$ 이 projection 이므로 $L^2=L$ 이며 $L = P_{\text{im}(L)}$ 이다. 또한 $(\ker (L))^\perp = \text{im}(L)$ 이므로 $L|_{(\ker L)^\perp} = I|_{\text{im}(L)}$ 이다. @def-LA_pseudo_inverse 로 부터 $L^+w = L$ 이다.
 
 :::
 
@@ -1794,7 +1796,7 @@ $$
 
 ::: {.solution}
 
-($1$) $\ker (L^+) = (\text{im}(L))^\perp$ 를 보이자. @def-part1_pseudo_inverse 로부터 $L^+w = 0_V \iff P_{\text{im}(L)}= 0_V$ 따라서 $\ker (L^+) = (\text{im}(L))^\perp$
+($1$) $\ker (L^+) = (\text{im}(L))^\perp$ 를 보이자. @def-LA_pseudo_inverse 로부터 $L^+w = 0_V \iff P_{\text{im}(L)}= 0_V$ 따라서 $\ker (L^+) = (\text{im}(L))^\perp$
 
 ($2$) $\text{im}(L^+) = (\ker L)^\perp$ 를 보이자.$u\in \text{im}(L^+)$ 이면 $u\in \text{im}\left((L|_{(\ker L)^\perp})^{-1}\right)$ 이므로 $u\in (\ker L)^\perp$ 이다. 즉 $\text{im}(L^+) \subset (\ker L)^\perp$ 이다.
 
@@ -1827,13 +1829,13 @@ $$
 </div></br>
 
 ::: {.solution}
-@lem-part1_pseudoinverse_3 ($2$) 로부터 $LL^+=P_{\text{im}(L)}$ 이므로
+@lem-LA_pseudoinverse_3 ($2$) 로부터 $LL^+=P_{\text{im}(L)}$ 이므로
 
 $$
 LL^+L = P_{\text{im}(L)}L = L.
 $$
 
-@lem-part1_pseudoinverse_3 ($3$) 으로부터 $L^+L=P_{(\ker L)^\perp}$ 이므로
+@lem-LA_pseudoinverse_3 ($3$) 으로부터 $L^+L=P_{(\ker L)^\perp}$ 이므로
 
 $$
 L^+LL^+ = P_{(\text{ker}L)^\perp} L^+ = L^+.
@@ -1875,7 +1877,7 @@ $$
 이다. 즉 $v\in \ker L \implies \left(L^+\right)^+v = 0_W$ 이다. 
 
 
-이제 $v\in (\ker L)^\perp$ 인 경우를 생각해보자. 앞서 보았듯이 $P_{\text{im}(M)}=P_{(\ker L)^\perp}$ 이므로 $M^+v = \left(M|_{(\ker M)^\perp} \right)^{-1}v$ 이다. 역시 @exr-axler4_6_C_20 에서 보였듯이 $(\ker L^+)=(\text{im}(L))^\perp$ 이며 @cor-dimension_relation_of_orthogonal_complement ($2$) 로부터
+이제 $v\in (\ker L)^\perp$ 인 경우를 생각해보자. 앞서 보았듯이 $P_{\text{im}(M)}=P_{(\ker L)^\perp}$ 이므로 $M^+v = \left(M|_{(\ker M)^\perp} \right)^{-1}v$ 이다. 역시 @exr-axler4_6_C_20 에서 보였듯이 $(\ker L^+)=(\text{im}(L))^\perp$ 이며 @cor-LA_dimension_relation_of_orthogonal_complement ($2$) 로부터
 $(\ker L^+)^\perp=\left((\text{im}(L))^\perp\right)^\perp = \text{im}(L)$ 이므로
 
 $$
@@ -2426,6 +2428,6 @@ $U^\perp = \{0_V\}$ 이면 $U$ 의 정규직교기저 $\mathcal{B}=\{e_1,\ldots,
 
 ::: {.solution}
 
-$\ker (P)$ 와 $\text{im}(P)$ 가 직교하므로 @thm-rank_nullity 에 의해 $\ker (P) \cap \text{im}(P) =\{0_V\}$ 이다. 또한 $\text{im}(P_U)=U$ 이므로 $U=\text{im}(P)$ 라 놓으며 조건을 만족한다.
+$\ker (P)$ 와 $\text{im}(P)$ 가 직교하므로 @thm-LA_rank_nullity 에 의해 $\ker (P) \cap \text{im}(P) =\{0_V\}$ 이다. 또한 $\text{im}(P_U)=U$ 이므로 $U=\text{im}(P)$ 라 놓으며 조건을 만족한다.
 
 :::

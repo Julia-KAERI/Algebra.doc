@@ -6,12 +6,16 @@ crossref:
   chapters: true
 ---
 
+{{< include ../../latexmacros.qmd >}}
+
+</br>
+
 ## 정규부분군
 
-### Conjugate 와 정규부분군 {#sec-normal_subgroup}
+### Conjugate 와 정규부분군 {#sec-MA_normal_subgroup}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-normal_subgroups}
+::: {#def-MA_normal_subgroups}
 #### Conjugate 와 정규부분군
 
 $a,\,g$ 가 군 $G$ 의 원소일 때 $gag^{-1}$ 을 $g$ 에 의한 $a$ 의 **conjugate** 라고 한다. $N\le G$ 가 모든 $a\in N$ 과 $g\in G$ 에 대해 $gag^{-1}\in N$ 일 때 $N$ 을 $G$ 의 **정규부분군(normal subgroup)** 이라고 하며 $N \trianglelefteq G$ 라고 표기한다.
@@ -19,11 +23,11 @@ $a,\,g$ 가 군 $G$ 의 원소일 때 $gag^{-1}$ 을 $g$ 에 의한 $a$ 의 **co
 :::
 :::
 
-즉 $G$ 의 부분군 $N$ 이 모든 $g\in G$ 에 대해 $gNg^{-1}\subset N$ 이면 $N \trianglelefteq G$ 이다. 우리는 잠시 후 @prp-normal_subgroup_condition 에서 $gNg^{-1} \subset N$ 이면 $gNg^{-1}= N$ 이라는 것을 알게 된다.
+즉 $G$ 의 부분군 $N$ 이 모든 $g\in G$ 에 대해 $gNg^{-1}\subset N$ 이면 $N \trianglelefteq G$ 이다. 우리는 잠시 후 @prp-MA_normal_subgroup_condition 에서 $gNg^{-1} \subset N$ 이면 $gNg^{-1}= N$ 이라는 것을 알게 된다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-conjugate_subgroup}
+::: {#prp-MA_conjugate_subgroup}
 
 $H \le G$ 일 때 $g\in G$ 에 대해 $gHg^{-1}= \{ ghg^{-1}: h\in H\}$ 는 $G$ 의 부분군이다. 이렇게 정의된 $gHg^{-1}$ 을 **cojugate subgroup** 이라고 한다.
 
@@ -39,7 +43,7 @@ $1_G\in H$ 이며 $g1_Gg^{-1}=1_G\in gHg^{-1}$ 이다. $h_1,\,h_2\in H$ 에 대�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-kernel_and_normal_subgroup}
+::: {#prp-MA_kernel_and_normal_subgroup}
 
 $\varphi \in \text{Hom}\, (G,\,G')$ 일 때 $\ker \varphi \trianglelefteq G$ 이다.
 
@@ -53,7 +57,7 @@ $a \in \ker \varphi$ 이고 $g\in G$ 일 때 $\varphi (gag^{-1})= \varphi (g)1_G
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-normal_subgroup_and_S3}
+::: {#exm-MA_normal_subgroup_and_S3}
 
 $S_3 = \{1, x, x^2, y, xy, x^2y\}$ 를 생각하자. $x^2y=yx$ 를 만족한다. 이 때 $\langle x \rangle \trianglelefteq G$ 이지만 $\langle y \rangle$ 은 $G$ 의 정규부분이 아니다. 예를 들어 $xyx^{-1}= xyx^2 =x^2y \not\in \langle y \rangle$ 이다. 
 :::
@@ -78,7 +82,7 @@ $$
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-center_of_group_is_normal_subgroup}
+::: {#exm-MA_center_of_group_is_normal_subgroup}
 
 $z\in Z_G$ 일 때 $g\in G$ 에 대해 $gzg^{-1}= zgg^{-1}=z\in Z_G$ 이므로 $Z_G \trianglelefteq G$ 이다.
 :::
@@ -86,7 +90,8 @@ $z\in Z_G$ 일 때 $g\in G$ 에 대해 $gzg^{-1}= zgg^{-1}=z\in Z_G$ 이므로 $
 </div>
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#prp-normal_subgroup_condition}
+
+::: {#prp-MA_normal_subgroup_condition}
 
 $H \le G$ 일 때 다음 명제들은 동치이다.
 
@@ -116,7 +121,7 @@ $H \le G$ 일 때 다음 명제들은 동치이다.
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-normal_subgroup_condition}
+::: {#cor-MA_normal_subgroup_condition}
 
 $H\le G$ 일 때 $H \trianglelefteq G$ 일 필요충분조건은 $H$ 에 대한 왼쪽 잉여군의 집합과 $H$ 에 대한 오른쪽 잉여군의 집합이 같은 것이다.
 
@@ -126,7 +131,7 @@ $H\le G$ 일 때 $H \trianglelefteq G$ 일 필요충분조건은 $H$ 에 대한 
 
 ::: {.proof}
 
-$H$ 에 대한 왼쪽 잉여군의 집합과 $H$ 에 대한 오른쪽 잉여군의 집합이 같은 것의 필요충분조건은 @prp-normal_subgroup_condition 의 ($3$) 인 것을 보이자. $L_H$ 를 왼쪽 잉여군의 집합, $R_H$ 를 오른쪽 잉여군의 집합이라고 하자.
+$H$ 에 대한 왼쪽 잉여군의 집합과 $H$ 에 대한 오른쪽 잉여군의 집합이 같은 것의 필요충분조건은 @prp-MA_normal_subgroup_condition 의 ($3$) 인 것을 보이자. $L_H$ 를 왼쪽 잉여군의 집합, $R_H$ 를 오른쪽 잉여군의 집합이라고 하자.
 
 ($3$) 이 성립함을 가정하자. $gH\in L_H$ 이면 $gH=Hg$ 이므로 $gH \in R_H$ 이다. 따라서 $L_H \subset R_H$ 이며 같은 방법으로 $R_H \subset L_H$ 임을 보일 수 있으므로 $L_H = R_H$ 이다. 
 
@@ -135,7 +140,7 @@ $H$ 에 대한 왼쪽 잉여군의 집합과 $H$ 에 대한 오른쪽 잉여군�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-subgroup_of_unique_order_is_normal}
+::: {#prp-MA_subgroup_of_unique_order_is_normal}
 
 $H\le G$ 이며 $H$ 가 $|H|$ order 를 갖는 $G$ 의 유일한 부분군이면 $H \trianglelefteq G$ 이다.
 
@@ -292,14 +297,14 @@ $[G:H]=2$ 인 경우를 보자. $g\in G$ 이며 $g\notin H$ 에 대해 $G$ 의 �
 
 ## 대응 정리
 
-### 대응 정리 {#sec-correnspodence_theorem_1}
+### 대응 정리 {#sec-MA_correnspodence_theorem_1}
 
 
 $\varphi \in \text{Hom}(G,G')$ 이며 $H \le G$ 일 때 $\varphi$ 의 정의역을 $H$ 로 제한하는 함수를 $\varphi|_H$ 로 쓰자. 즉 $h\in H$ 에 대해 $\varphi|_H(h) =\varphi(h)$ 이다. 이 때 (당연하게도) $\ker (\varphi|_H) = \ker \varphi \cap H$ 이다. 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-restriction_homomorphsm_1}
+::: {#prp-MA_restriction_homomorphsm_1}
 
 $G,\,G'$ 이 유한군이고 $H \le G$ 라고 하자. $\varphi \in \text{Hom}(G, G')$ 이며 $\gcd (|H|, |G'|)=1$ 이면 $H \le \ker \varphi$ 이다.
 
@@ -308,15 +313,15 @@ $G,\,G'$ 이 유한군이고 $H \le G$ 라고 하자. $\varphi \in \text{Hom}(G,
 </div></br>
 
 ::: {.proof}
-@thm-orders_in_group_homomorphism 에 따라 $|\text{im}(\varphi|_H)| {\large \mid} |H|$ 이며 $|\text{im}(\varphi|_H)| {\large \mid} |G'|$ 이어야 한다. 따라서 $\text{im}(\varphi_H) = \{1_G'\}$. $\square$
+@thm-MA_orders_in_group_homomorphism 에 따라 $|\text{im}(\varphi|_H)| {\large \mid} |H|$ 이며 $|\text{im}(\varphi|_H)| {\large \mid} |G'|$ 이어야 한다. 따라서 $\text{im}(\varphi_H) = \{1_G'\}$. $\square$
 
 :::
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-image_of_sign_homomorphism}
+::: {#exm-MA_image_of_sign_homomorphism}
 
-집합 $\{1,\,-1\}$ 은 곱하기 연산에 대해 군이다. 우리는 [행렬식](../part1/ch1_03_determinant.qmd) 에서 $\text{sgn}$ 함수에 대해 알았보았다. $\text{sgn} : S_n \to (\{1,\,-1\}, \times)$ 가 준동형사상이라는 것은 쉽게 보일 수 있다. 만약 $S_n$ 의 부분군이 홀수개의 원소를 포함한다면 @prp-restriction_homomorphsm_1 에 따라 $\ker (\text{sgn})$ 즉, $A_n$ 에 포함된다. 예를 들어 홀수인 $k$ 에 대한 $k$-cycle 의 경우 order $k$ 부분군이며 따라서 짝순열(even pertumation) 이다. 
+집합 $\{1,\,-1\}$ 은 곱하기 연산에 대해 군이다. 우리는 [행렬식](../part1/ch1_03_determinant.qmd) 에서 $\text{sgn}$ 함수에 대해 알았보았다. $\text{sgn} : S_n \to (\{1,\,-1\}, \times)$ 가 준동형사상이라는 것은 쉽게 보일 수 있다. 만약 $S_n$ 의 부분군이 홀수개의 원소를 포함한다면 @prp-MA_restriction_homomorphsm_1 에 따라 $\ker (\text{sgn})$ 즉, $A_n$ 에 포함된다. 예를 들어 홀수인 $k$ 에 대한 $k$-cycle 의 경우 order $k$ 부분군이며 따라서 짝순열(even pertumation) 이다. 
 
 :::
 
@@ -324,7 +329,7 @@ $G,\,G'$ 이 유한군이고 $H \le G$ 라고 하자. $\varphi \in \text{Hom}(G,
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-restriction_homomorphism_2}
+::: {#prp-MA_restriction_homomorphism_2}
 
 $\varphi \in \text{Hom} (G, G')$ 이고 $K=\ker \varphi$ 라 하자. $H'\le G'$ 에 대해 $H=\varphi^{-1}(H')$ 라 하자. 이 때 다음이 성립한다.
 
@@ -357,7 +362,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-correspondence_theorem_of_groups}
+::: {#thm-MA_correspondence_theorem_of_groups}
 
 #### 대응 정리 (Correspondence Theorem )
 
@@ -369,14 +374,14 @@ $\varphi \in \text{Hom}(G,G')$ 이며 전사이고 $K = \ker \varphi$ 라 하자
 ::: {.proof} 
 $\varphi$ 가 전사이므로 $\varphi (\varphi^{-1}(H')) = H'$ 이다. 또한 $H \subset \varphi^{-1}(\varphi(H))$ 이다 ($\varphi$ 가 단사이면 등호가 성립한다). 이제 $\varphi^{-1}(\varphi (H)) \subset H$ 임을 보이자. $x\in \varphi^{-1}(\varphi (H))$ 이면 $\varphi (x) \in \varphi (H)$ 이어야 하며, 따라서 어떤 $h\in H$ 에 대해 $\varphi (x) = \varphi (h)$ 이어야 한다. $h^{-1}x\in K\le H$ 이며 $h\in H$ 이므로 $x \in H$ 이다. 즉 $\varphi^{-1}(\varphi(H)) = H$ 이다. 
 
-$G'$ 의 부분군의 집합을 $P$, $K$ 를 포함하는 $G$ 의 부분군의 집합을 $Q$ 라고 할 때 @prp-restriction_homomorphism_2 에 의해  함수 $\Psi : P \to Q$ 를 $\Psi(H') = \varphi^{-1}(H')$ 으로 정의 할 수 있다. 임의의 $H\in Q$ 에 대해 $\varphi (H) \in P$ 이며 $\varphi^{-1}(\varphi (H)) = H$ 이므로 $\Psi$ 는 전사이다. $\varphi^{-1}(H'_1) \ne \varphi^{-1}(H'_2)$ 이면 $\varphi$ 가 전사이므로 $H'_1\ne H'_2$ 이다. 즉 $\Psi$ 는 단사이다. 따라서 $P$ 와 $Q$ 사이에 일대일 대응이 존재한다.
+$G'$ 의 부분군의 집합을 $P$, $K$ 를 포함하는 $G$ 의 부분군의 집합을 $Q$ 라고 할 때 @prp-MA_restriction_homomorphism_2 에 의해  함수 $\Psi : P \to Q$ 를 $\Psi(H') = \varphi^{-1}(H')$ 으로 정의 할 수 있다. 임의의 $H\in Q$ 에 대해 $\varphi (H) \in P$ 이며 $\varphi^{-1}(\varphi (H)) = H$ 이므로 $\Psi$ 는 전사이다. $\varphi^{-1}(H'_1) \ne \varphi^{-1}(H'_2)$ 이면 $\varphi$ 가 전사이므로 $H'_1\ne H'_2$ 이다. 즉 $\Psi$ 는 단사이다. 따라서 $P$ 와 $Q$ 사이에 일대일 대응이 존재한다.
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-correnspondence_theorem_of_groups}
+::: {#cor-MA_correnspondence_theorem_of_groups}
 
-@thm-correspondence_theorem_of_groups 조건에서 $|\varphi^{-1}(H') | = |H'||K|$ 이다. 
+@thm-MA_correspondence_theorem_of_groups 조건에서 $|\varphi^{-1}(H') | = |H'||K|$ 이다. 
 
 :::
 
@@ -384,7 +389,7 @@ $G'$ 의 부분군의 집합을 $P$, $K$ 를 포함하는 $G$ 의 부분군의 �
 
 ::: {.proof}
 
-$\varphi|_H \in \text{Hom}(H,\, H')$ 이며 전사이고 $\varphi^{-1}(H')=H$ 이다. 또한 $K = \ker \varphi = \ker \varphi|_H$, $\text{im}\, \varphi|_H = H'$ 이므로 @thm-orders_in_group_homomorphism 에 따라
+$\varphi|_H \in \text{Hom}(H,\, H')$ 이며 전사이고 $\varphi^{-1}(H')=H$ 이다. 또한 $K = \ker \varphi = \ker \varphi|_H$, $\text{im}\, \varphi|_H = H'$ 이므로 @thm-MA_orders_in_group_homomorphism 에 따라
 
 $$
 |H| = |\varphi^{-1}(H')|=|H'|\,|K|
@@ -479,7 +484,7 @@ $\varphi \in \text{Hom}(G, G')$ 이 전사이며 $K = \ker (\varphi)$ 라고 하
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-external_product_of_groups}
+::: {#def-MA_external_product_of_groups}
 #### External product of groups
 
 군 $G,\,G'$ 의 데카르트곱 $G\times G'$ 에 아래와 같은 곱연산을 부여한 것을 $G$ 와 $G'$ 의 **External product** 라고 한다.
@@ -501,9 +506,9 @@ $$
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-external_product_of_groups_is_a_group}
+::: {#prp-MA_external_product_of_groups_is_a_group}
 
-@def-external_product_of_groups 에 의해 정의된 $G \times G'$ 은 군이다.
+@def-MA_external_product_of_groups 에 의해 정의된 $G \times G'$ 은 군이다.
 
 ::: 
 
@@ -511,7 +516,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-isomorphic_to_external_product}
+::: {#prp-MA_isomorphic_to_external_product}
 
 $r$ 과 $s$ 가 서로소인 두 정수일 때 계수가 $rs$ 인 순환군은 계수가 $r$, $s$ 인 두 순환군의 external product 와 동형이다.
 
@@ -534,7 +539,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-inner_product_group}
+::: {#prp-MA_inner_product_group}
 
 $H\le G,\, K \le G$ 일 때 $f:H \times K \to G$ 를 $f(h, k)=hk$ 로 정의하자. $HK=\{hk|h\in H,\, k \in K\}$ 라 할 때 $\text{im}\, (f) = HK$ 이다. 이 때 다음이 성립한다.
 
@@ -577,9 +582,9 @@ $$
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-multiplicaiton_map_and_homomorphism}
+::: {#exm-MA_multiplicaiton_map_and_homomorphism}
 
-@prp-inner_product_group 의 $f$ 는 동형사상이 아니더라도 전단사 일 수 있다. 예를 들어 $S_3 = \{1,\, x,\,x^2,\,y,\,xy,\,x^2y\}$ 를 생각하자. 여기서 $x^3=y^2=1$ 이며 $x^2y=yx$ 이다. $H=\langle x\rangle,\, K = \langle y \rangle$ 에 대해 $f:H \times K \to S_3$ 를 $f(h, k) = hk$ 로 정의하자. $f$ 는 전단사이지만 $xy\ne yx$ 이므로 $f \notin \text{Hom}(H \times K,\, G)$ 이다.
+@prp-MA_inner_product_group 의 $f$ 는 동형사상이 아니더라도 전단사 일 수 있다. 예를 들어 $S_3 = \{1,\, x,\,x^2,\,y,\,xy,\,x^2y\}$ 를 생각하자. 여기서 $x^3=y^2=1$ 이며 $x^2y=yx$ 이다. $H=\langle x\rangle,\, K = \langle y \rangle$ 에 대해 $f:H \times K \to S_3$ 를 $f(h, k) = hk$ 로 정의하자. $f$ 는 전단사이지만 $xy\ne yx$ 이므로 $f \notin \text{Hom}(H \times K,\, G)$ 이다.
 
 :::
 
@@ -591,7 +596,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-herstein_lem_2_5_1}
+::: {#prp-MA_herstein_lem_2_5_1}
 
 $H\le G,\, K\le G$ 일 때, $HK = KH \iff HK \le G$ 이다.
 
@@ -608,7 +613,7 @@ $H\le G,\, K\le G$ 일 때, $HK = KH \iff HK \le G$ 이다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-herstein_thm_2_5_1}
+::: {#prp-MA_herstein_thm_2_5_1}
 
 $H,\, K$ 가 $G$ 의 유한부분군일 때 다음이 성립함을 보여라. 
 
@@ -622,7 +627,7 @@ $$
 
 ::: {.proof}
 
-$f:H \times K \to HK$ 를 $f(h,\,k) = hk$ 로 정의하자. $H \cap K = \{1_G\}$ 이면 @prp-inner_product_group 에 의해 $|H||K|=|HK|$ 이다. 이제 한 $|f^{-1}(\{hk\})| =  |H \cap K|$ 임을 보이면 된다. 
+$f:H \times K \to HK$ 를 $f(h,\,k) = hk$ 로 정의하자. $H \cap K = \{1_G\}$ 이면 @prp-MA_inner_product_group 에 의해 $|H||K|=|HK|$ 이다. 이제 한 $|f^{-1}(\{hk\})| =  |H \cap K|$ 임을 보이면 된다. 
 
 $x\in H\cap K$ 라고 하자. $hk = (hx)(x^{-1}k)$ 이며 $hx\in H,\, x^{-1}k\in K$ 이므로 $f^{-1}(\{hk\})$ 는 최소한 $|H \cap K|$ 개의 원소를 가진다. 이제 $hk = h'k'$ 이라고 하자. $h^{-1}h' = kk'^{-1}\in H\cap K$ 이다. $y=h^{-1}h' = kk'^{-1}$ 이라고 하면, $h'=hy,\, k'=y^{-1}k$ 즉 $hk=h'k'$ 이면 어떤 $y\in H \cap K$ 에 대해 $h'=hy,\, k'=y^{-1}k$ 이다. 따라서 $|f^{-1}(\{hk\})| =  |H \cap K|$ 이며 주어진 식이 성립한다. $\square$
 
@@ -668,7 +673,7 @@ $A=\langle a\rangle,\, B=\langle b\rangle$ 이 무한순환군이라고 하자. 
 </div></br>
 
 ::: {.solution}
-@prp-inner_product_group 에 따라 $H\cap K = \{1_G\}$, $HK=G$, $H \trianglelefteq G,\, K \trianglelefteq G$ 임을 보이면 된다.
+@prp-MA_inner_product_group 에 따라 $H\cap K = \{1_G\}$, $HK=G$, $H \trianglelefteq G,\, K \trianglelefteq G$ 임을 보이면 된다.
 
 ($1$) OK
 
@@ -716,7 +721,7 @@ $G$ 의 정규부분군중 하나는 order 3 이며 다른 하나는 order 5 이
 
 ::: {.solution}
 
-order 3 부분군과 order 5 부분군은 cyclic group 이다. $A=\langle a \rangle$ 를 order 3 부분군, $B=\langle b \rangle$ 를 order 5 부분군이라고 하자. $bab^{-1}$ 은 $a$ 이거나 $a^2$ 이다. $bab^{-1}=a$ 이면 $ab=ba$ 이므로 $AB=BA$ 이며, 따라서 @prp-herstein_lem_2_5_1 에 따라 $AB\le G$ 이다. $bab^{-1}=a^2$ 이면  $a^2b=a^{-1}b=ba$ 이다. 따라서 $AB=BA$ 이며 $AB\le G$ 이다. $AB = \langle ab\rangle$ 이며 $o(ab)=15$ 이다.
+order 3 부분군과 order 5 부분군은 cyclic group 이다. $A=\langle a \rangle$ 를 order 3 부분군, $B=\langle b \rangle$ 를 order 5 부분군이라고 하자. $bab^{-1}$ 은 $a$ 이거나 $a^2$ 이다. $bab^{-1}=a$ 이면 $ab=ba$ 이므로 $AB=BA$ 이며, 따라서 @prp-MA_herstein_lem_2_5_1 에 따라 $AB\le G$ 이다. $bab^{-1}=a^2$ 이면  $a^2b=a^{-1}b=ba$ 이다. 따라서 $AB=BA$ 이며 $AB\le G$ 이다. $AB = \langle ab\rangle$ 이며 $o(ab)=15$ 이다.
 
 :::
 
@@ -783,7 +788,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-product_of_cosets_of_normal_subgroup}
+::: {#prp-MA_product_of_cosets_of_normal_subgroup}
 
 $N \trianglelefteq G$ 이고 $a,\, b\in G$ 일 때 $(aN)(bN) = \{an_1bn_2 : n_1,\,n_2\in N\}=abN$ 이다.
 
@@ -798,13 +803,13 @@ $b^{-1}n_1b \in N$ 이므로 $n'=b^{-1}nb$ 라 하자. $an_1bn_2 = abb^{-1}n_1bn
 
 </br>
 
-이로부터 $N \trianglelefteq G$ 일 때 $N$ 에 의한 cosets 의 집합에 @prp-product_of_cosets_of_normal_subgroup 에서와 같이 $(aN)(bN)=abN$ 이라는 연산을 부여할 수 있다는 것을 즉, 이 연산이 잘 정의된다는 것을 알 수 있다. 이 때 $N$ 에 의한 $G$ 의 cosets 의 집합을 $G/N$ 이라고 하자.
+이로부터 $N \trianglelefteq G$ 일 때 $N$ 에 의한 cosets 의 집합에 @prp-MA_product_of_cosets_of_normal_subgroup 에서와 같이 $(aN)(bN)=abN$ 이라는 연산을 부여할 수 있다는 것을 즉, 이 연산이 잘 정의된다는 것을 알 수 있다. 이 때 $N$ 에 의한 $G$ 의 cosets 의 집합을 $G/N$ 이라고 하자.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-prouct_group}
+::: {#prp-MA_prouct_group}
 
-$N \trianglelefteq G$ 일 때 $G/N$ 에 @prp-product_of_cosets_of_normal_subgroup 의 연산을 부여하면 $G/N$ 은 군이다.
+$N \trianglelefteq G$ 일 때 $G/N$ 에 @prp-MA_product_of_cosets_of_normal_subgroup 의 연산을 부여하면 $G/N$ 은 군이다.
 
 :::
 
@@ -819,7 +824,7 @@ $N\in G/N$ 이며 $g\in G$ 에 대해 $(gN)(N) = gN$ 이므로 $gN$ 이 $G/N$ �
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-quotient_group}
+::: {#def-MA_quotient_group}
 #### 몫군
 
 군 $G$ 와 그 정규부분군 $N$ 에 대해 $G/N$ 을 그 cosets 의 집합으로 정의하고 $aN,\,bN\in G/N$ 에 대해
@@ -835,7 +840,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-canonical_map_for_quotient_group}
+::: {#prp-MA_canonical_map_for_quotient_group}
 
 $N \trianglelefteq G$ 일 때 함수 $\pi : G\to G/N$ 을 $\pi (g) = gN$ 으로 정의하면 $\pi\in \text{Hom}(G,\, G/N)$ 이다. 군과 몫군 사이에 정의된 이 준동형사상을 **canonical map** 이라고 한다.
 
@@ -847,7 +852,7 @@ $N \trianglelefteq G$ 일 때 함수 $\pi : G\to G/N$ 을 $\pi (g) = gN$ 으로 
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-map_with_homomorphism_property}
+::: {#lem-MA_map_with_homomorphism_property}
 
 $G$ 가 군이고, $Y$ 는 연산에 대해 닫혀있는 집합이라고 하자. 각 군에서의 연산을 곱하기로 표현하자. 함수 $\phi : G \to Y$ 가 전사이며, 준동형사상과 같이 모든 $g_1,\,g_2\in G$ 에 대해 $\phi(g_1)\phi(g_2) = \phi(g_1g_2)$ 를 만족한다면 $Y$ 는 군이며 따라서 $\phi \in \text{Hom}(G, Y)$ 이다.
 
@@ -872,7 +877,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-first_isomorphism_theorem}
+::: {#thm-MA_first_isomorphism_theorem}
 
 #### 제1 동형정리
 
@@ -885,7 +890,7 @@ $\varphi \in \text{Hom}(G,\,G')$ 이 전사이며 $N = \ker \varphi$ 라 하자.
 ::: {.proof}
 
 
-@prp-kernel_and_normal_subgroup 에 따라 $N = \ker \varphi  \trianglelefteq G$ 이므로 몫군 $G/N$ 을 생각 할 수 있다. 함수 $\theta : G/N \to G'$ 을 $\theta (gN)= \varphi(g)$ 로 정의하자. $g_1\ne g_2,\, g_1N=g_2N$ 인 $g_1,\,g_2\in G$ 에 대해 $g_1=g_2n,\, n\in N = \ker \varphi$ 인 $n$ 이 존재하며 $\varphi(g_1)= \varphi(g_2n)=\varphi(g_2)$ 이므로 이 함수 $\theta$ 는 잘 정의된다. 또한 
+@prp-MA_kernel_and_normal_subgroup 에 따라 $N = \ker \varphi  \trianglelefteq G$ 이므로 몫군 $G/N$ 을 생각 할 수 있다. 함수 $\theta : G/N \to G'$ 을 $\theta (gN)= \varphi(g)$ 로 정의하자. $g_1\ne g_2,\, g_1N=g_2N$ 인 $g_1,\,g_2\in G$ 에 대해 $g_1=g_2n,\, n\in N = \ker \varphi$ 인 $n$ 이 존재하며 $\varphi(g_1)= \varphi(g_2n)=\varphi(g_2)$ 이므로 이 함수 $\theta$ 는 잘 정의된다. 또한 
 
 $$
 \theta(g_1N)\theta(g_2N) =  \varphi(g_1)\varphi(g_2) = \varphi(g_1g_2) = \theta(g_1g_2N)
@@ -897,7 +902,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-first_isomorphism_theorem}
+::: {#cor-MA_first_isomorphism_theorem}
 
 $\varphi \in \text{Hom}(G,\, G')$ 이며 $N =\ker \varphi$ 이고 $H' = \text{im}\,(\varphi)$ 이면 $G/N \cong H'$ 이다.
 :::
@@ -921,7 +926,7 @@ $H\le G$ 가 $G$ 의 정규부분군이 아닐 때 어떤 두 왼쪽 잉여류�
 
 ::: {.solution}
 
-$L_H$ 를 $H$ 에 의한 $G$ 의 왼쪽 잉여류의 집합이라고 하고 위 명제의 대우명제를 증명한다. 즉. $\forall a,\,b\in G$ 에 대해 $(aH)(bH) \in L_H$ 이면 $H \trianglelefteq G$ 임을 증명하자. 임의의 $a,\,b\in G$ 에 대해 $(aH)(bH)=cH$ 인 $c\in G$ 가 존재한다고 하자. 즉 임의의 $h_1,\,h_2\in H$ 에 대해 $ah_1bh_2 = ch_3$ 를 만족하는 $h_3$ 가 존재하므로 $h_1 b = a^{-1}c h_3 h_2^{-1}$ 이다. 이로부터 $Hb = a^{-1}cH$ 임을 알며 이는 $H$ 에 대한 $G$ 의 왼쪽 잉여류의 집합과 오른쪽 잉여류의 집합이 같다는것을 뜻한다. @cor-normal_subgroup_condition 로부터 $H \trianglelefteq G$ 이다.
+$L_H$ 를 $H$ 에 의한 $G$ 의 왼쪽 잉여류의 집합이라고 하고 위 명제의 대우명제를 증명한다. 즉. $\forall a,\,b\in G$ 에 대해 $(aH)(bH) \in L_H$ 이면 $H \trianglelefteq G$ 임을 증명하자. 임의의 $a,\,b\in G$ 에 대해 $(aH)(bH)=cH$ 인 $c\in G$ 가 존재한다고 하자. 즉 임의의 $h_1,\,h_2\in H$ 에 대해 $ah_1bh_2 = ch_3$ 를 만족하는 $h_3$ 가 존재하므로 $h_1 b = a^{-1}c h_3 h_2^{-1}$ 이다. 이로부터 $Hb = a^{-1}cH$ 임을 알며 이는 $H$ 에 대한 $G$ 의 왼쪽 잉여류의 집합과 오른쪽 잉여류의 집합이 같다는것을 뜻한다. @cor-MA_normal_subgroup_condition 로부터 $H \trianglelefteq G$ 이다.
 
 :::
 
@@ -1007,9 +1012,9 @@ $r=ad-bc$ 라고 하자. $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ 이�
 
 유한군 $G$ 에 대해 다음을 보여라.
 
-&emsp; ($1$) $|G|$ 가 짝수이면 order 2 인 성분을 포함함을 보여라.
+&emsp;($1$) $|G|$ 가 짝수이면 order 2 인 성분을 포함함을 보여라.
 
-&emsp; ($2$) $|G|=21$ 이면 order 3 성분을 포함함을 보여라.
+&emsp;($2$) $|G|=21$ 이면 order 3 성분을 포함함을 보여라.
 
 :::
 
@@ -1031,11 +1036,11 @@ $r=ad-bc$ 라고 하자. $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ 이�
 
 $|G|=6$ 일 때 아래의 경우에 대해 $G$ 를 분류하시오.
 
-&emsp; ($1$) $G$ 가 order 6 인 성분을 포함한다.
+&emsp;($1$) $G$ 가 order 6 인 성분을 포함한다.
 
-&emsp; ($2$) $G$ 는 order 3 성분을 포함하며 order 6 성분을 포함하지 않는다.
+&emsp;($2$) $G$ 는 order 3 성분을 포함하며 order 6 성분을 포함하지 않는다.
 
-&emsp; ($3$) $G$ 의 모든 성분은 order 가 1 이거나 2 이다.
+&emsp;($3$) $G$ 의 모든 성분은 order 가 1 이거나 2 이다.
 
 :::
 

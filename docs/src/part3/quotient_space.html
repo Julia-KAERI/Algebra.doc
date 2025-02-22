@@ -316,8 +316,8 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#아핀-부분집합과-몫공간" id="toc-아핀-부분집합과-몫공간" class="nav-link active" data-scroll-target="#아핀-부분집합과-몫공간"><span class="header-section-number">13.1</span> 아핀 부분집합과 몫공간</a></li>
-  <li><a href="#몫사상" id="toc-몫사상" class="nav-link" data-scroll-target="#몫사상"><span class="header-section-number">13.2</span> 몫사상</a></li>
+  <li><a href="#sec-ALA_affine_space_and_quotient_space" id="toc-sec-ALA_affine_space_and_quotient_space" class="nav-link active" data-scroll-target="#sec-ALA_affine_space_and_quotient_space"><span class="header-section-number">13.1</span> 아핀 부분집합과 몫공간</a></li>
+  <li><a href="#sec-ALA_quotient_map" id="toc-sec-ALA_quotient_map" class="nav-link" data-scroll-target="#sec-ALA_quotient_map"><span class="header-section-number">13.2</span> 몫사상</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul>
 </nav>
@@ -344,15 +344,15 @@ window.Quarto = {
 </header>
 
 
-<section id="아핀-부분집합과-몫공간" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="아핀-부분집합과-몫공간"><span class="header-section-number">13.1</span> 아핀 부분집합과 몫공간</h2>
+<section id="sec-ALA_affine_space_and_quotient_space" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="sec-ALA_affine_space_and_quotient_space"><span class="header-section-number">13.1</span> 아핀 부분집합과 몫공간</h2>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-part3_affine_subset" class="theorem definition">
+<div id="def-ALA_affine_subset" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 13.1 (부분공간의 평행이동)</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 의 정해진 <span class="math inline">\(v\in V\)</span> 와 <span class="math inline">\(V\)</span> 의 부분공간 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\(V\)</span> 의 부분집합 <span class="math inline">\(v+U\)</span> 를 다음과 같이 정의한다.</p>
 <p><span class="math display">\[
 v+U := \{v+u : u\in U\}.
@@ -369,7 +369,7 @@ v+U := \{v+u : u\in U\}.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-part3_quotient_space" class="theorem definition">
+<div id="def-ALA_quotient_space" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 13.2 (몫공간)</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 부분공간일 때 <strong>몫공간 (quotient space)</strong> <span class="math inline">\(V/U\)</span> 는 <span class="math inline">\(U\)</span> 가 평행이동한 부분집합의 집합이다. 즉,</p>
 <p><span class="math display">\[
 V/U = \{v+U: v\in V\}
@@ -382,7 +382,7 @@ V/U = \{v+U: v\in V\}
 <p>공간이라는 이름을 붙이는 이유는 뒤에 보이겠지만 적절하게 합과 스칼라곱을 정의하면 <span class="math inline">\(V/U\)</span> 가 벡터공간이 되기 때문이다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-part3_affine_subset" class="theorem">
+<div id="thm-ALA_affine_subset" class="theorem">
 <p><span class="theorem-title"><strong>정리 13.1 (몫공간의 성질)</strong></span> <span class="math inline">\(v_1,\,v_2 \in V\)</span> 와 <span class="math inline">\(U\le V\)</span> 에 대해 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(v_1-v_2\in U\)</span> 이면 <span class="math inline">\(v_1+U = v_2+U\)</span> 이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(v_1-v_2\notin U\)</span> 이면 <span class="math inline">\((v_1 + U)\cap (v_2+U) = \varnothing\)</span> 이다.</p>
@@ -399,7 +399,7 @@ V/U = \{v+U: v\in V\}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-part3_addition_and_scalar_multiplication_in_quotient_space" class="theorem definition">
+<div id="def-ALA_addition_and_scalar_multiplication_in_quotient_space" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 13.3 (몫공간에서의 합과 스칼라곱)</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 의 부분공간일 때 <span class="math inline">\(V/U\)</span> 의 원소들간의 합과 스칼라곱을 다음과 같이 정의한다.</p>
 <p><span class="math display">\[
 \begin{array}{c}
@@ -413,7 +413,7 @@ V/U = \{v+U: v\in V\}
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_quotient_sapce" class="theorem proposition">
+<div id="prp-ALA_quotient_sapce" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 13.1</strong></span> <span class="math inline">\(V/U\)</span> 는 벡터공간이다.</p>
 </div>
 </div>
@@ -423,15 +423,15 @@ V/U = \{v+U: v\in V\}
 </div>
 <p><br></p>
 </section>
-<section id="몫사상" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="몫사상"><span class="header-section-number">13.2</span> 몫사상</h2>
+<section id="sec-ALA_quotient_map" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="sec-ALA_quotient_map"><span class="header-section-number">13.2</span> 몫사상</h2>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-part3_quotient_map" class="theorem definition">
+<div id="def-ALA_quotient_map" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 13.4 (몫사상 (Quotient map))</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간인 <span class="math inline">\(V\)</span> 의 부분공간일 때 다음과 같이 정의되는 함수 <span class="math inline">\(\pi_U : V \to V/U\)</span> 를 <strong>몫사상(quotient map)</strong> 이라 한다.</p>
 <p><span class="math display">\[
 \pi_U (v) = v + U
@@ -442,7 +442,7 @@ V/U = \{v+U: v\in V\}
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_quotient_map" class="theorem proposition">
+<div id="prp-ALA_quotient_map" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 13.2</strong></span> 몫사상 <span class="math inline">\(\pi_U\)</span> 는 선형사상이다.</p>
 </div>
 </div>
@@ -458,7 +458,7 @@ V/U = \{v+U: v\in V\}
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-part3_dim_quotient_space" class="theorem">
+<div id="thm-ALA_dim_quotient_space" class="theorem">
 <p><span class="theorem-title"><strong>정리 13.2</strong></span> <span class="math inline">\(V\)</span> 가 유한차원벡터공간이고 <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 부분공간일 때</p>
 <p><span class="math display">\[
 \dim (V/U) = \dim V - \dim U
@@ -477,7 +477,7 @@ V/U = \{v+U: v\in V\}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-part3_tilde_map" class="theorem definition">
+<div id="def-ALA_tilde_map" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 13.5 (<span class="math inline">\(\tilde{T}\)</span>)</strong></span> 선형사상 <span class="math inline">\(T\in \mathcal{L}(V,\,W)\)</span> 에 대해 함수 <span class="math inline">\(\tilde{T} : V/\ker (T) \to \text{im}\, T\)</span> 를 다음과 같이 정의한다.</p>
 <p><span class="math display">\[
 \tilde{T}(v + \ker (T)) = T(v)
@@ -488,7 +488,7 @@ V/U = \{v+U: v\in V\}
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_tilde_T_linear_map" class="theorem proposition">
+<div id="prp-ALA_tilde_T_linear_map" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 13.3</strong></span> <span class="math inline">\(\tilde{T}\)</span> 는 선형사상이다.</p>
 </div>
 </div>
@@ -498,7 +498,7 @@ V/U = \{v+U: v\in V\}
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_properties_of_tilde_T" class="theorem proposition">
+<div id="prp-ALA_properties_of_tilde_T" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 13.4</strong></span> <span class="math inline">\(\tilde{T}\)</span> 에 대해 다음이 성립한다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\tilde{T}\)</span> 는 단사이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\text{im}\, \tilde{T} = \text{im} \, T\)</span></p>
@@ -512,7 +512,7 @@ V/U = \{v+U: v\in V\}
 <section id="연습문제" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h2>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-part3_axler4_3E_9" class="theorem exercise">
+<div id="exr-ALA_axler4_3E_9" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 13.1 (Axler4 3E.9)</strong></span> <span class="math inline">\(A\)</span> 가 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 의 부분집합이며 공집합이 아닐 때 다음 두 명제는 동치임을 보여라.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(A\)</span> 는 <span class="math inline">\(V\)</span> 의 어떤 부분공간의 평행이동이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) 임의의 <span class="math inline">\(x,\,y\in A\)</span> 와 <span class="math inline">\(c\in \mathbb{F}\)</span> 에 대해 <span class="math inline">\(cx+(1-c)y\in A\)</span> 이다.</p>

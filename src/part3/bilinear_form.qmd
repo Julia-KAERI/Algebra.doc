@@ -8,10 +8,10 @@ crossref:
 
 ## 다중선형 형식과 쌍선형 형식
 
-### 쌍선형 형식의 정의 {#sec-bilinear_form}
+### 쌍선형 형식의 정의 {#sec-ALA_bilinear_form}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-k_linear_form} 
+::: {#def-ALA_k_linear_form} 
 #### $k$-다중선형 형식, 쌍선형 형식, $k$-텐서
 
 $V_1,\ldots,\,V_k$ 가 $\mathbb{F}$-벡터공간이라고 하자. 함수 $T : V_1 \times \cdots \times V_k \to \mathbb{F}$ 가 각각의 $V_i$ 에 대해 선형일 때 $T$ 를 $k$-**다중선형 형식**($k$**-linear form**) 이라고 한다. 즉 임의의 $i\in \{1,\ldots,\,k\}$ 에 대해 $v_i,\,v_i'\in V_i$, $c\in \mathbb{F}$ 일 때, 
@@ -27,7 +27,7 @@ $$
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-k_linear_1}
+::: {#exm-ALA_k_linear_1}
 
 $T$ 가 벡터공간 $V$ 에 대한 $k$-다중선형형식 일 때 다음이 성립한다.
 
@@ -45,7 +45,7 @@ $$
 
  
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-arithmatics_for_multilinear_form} 
+::: {#def-ALA_arithmatics_for_multilinear_form} 
 ####  다중선형 형식의 합과 스칼라곱
 
 $\mathbb{F}$-벡터공간 $V_1,\ldots,\,V_k$ 에서 정의된 $k$-다중선형형식 $S,\,T$ 와 $c\in \mathbb{F}$ 에 대해 합과 스칼라곱을 아래와 같이 정의한다. 
@@ -60,9 +60,9 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-vector_space_of_k_linear_form}
+::: {#prp-ALA_vector_space_of_k_linear_form}
 
-$\mathbb{F}$-벡터공간 $V_1,\ldots,\,V_k$ 에서 정의된 $k$-다중선형형식의 집합 $\mathfrak{M}_k$ 는 @def-arithmatics_for_multilinear_form 에 의해 벡터공간이다.
+$\mathbb{F}$-벡터공간 $V_1,\ldots,\,V_k$ 에서 정의된 $k$-다중선형형식의 집합 $\mathfrak{M}_k$ 는 @def-ALA_arithmatics_for_multilinear_form 에 의해 벡터공간이다.
 
 :::
 
@@ -91,11 +91,11 @@ $$ {#eq-operation_in_k_linear_form}
 </br>
 
 
-여기서는 일반적인 $k$-다중형식보다는 쌍선형 형식과 $k$-텐서에 대해 집중해서 다루기로 한다. 보통 쌍선형 형식도 서로 다른 $U,\,V$ 에 대해 정해지는 것보다는 2-텐서를(즉 $U=V$ 인 경우) 더 많이 사용한다. 벡터공간 $V$ 에 대한 쌍선형 형식이라고 할 때는 $V$ 에 대한 $2$-텐서 를 의미한다. 이제 @prp-vector_space_of_k_linear_form 로부터 자연스럽게 아래의 결론을 내릴 수 있다.
+여기서는 일반적인 $k$-다중형식보다는 쌍선형 형식과 $k$-텐서에 대해 집중해서 다루기로 한다. 보통 쌍선형 형식도 서로 다른 $U,\,V$ 에 대해 정해지는 것보다는 2-텐서를(즉 $U=V$ 인 경우) 더 많이 사용한다. 벡터공간 $V$ 에 대한 쌍선형 형식이라고 할 때는 $V$ 에 대한 $2$-텐서 를 의미한다. 이제 @prp-ALA_vector_space_of_k_linear_form 로부터 자연스럽게 아래의 결론을 내릴 수 있다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-bilinear_and_k_tensor_are_vector_space}
+::: {#prp-ALA_bilinear_and_k_tensor_are_vector_space}
 
 벡터공간 $V$ 에서 정의된 쌍선형 형식의 집합은 벡터공간이다. 벡터공간 $V$ 에서 정의된 $k$-텐선의 집합 $\mathcal{T}^k(V)$ 는 벡터공간이다.
 
@@ -104,10 +104,10 @@ $$ {#eq-operation_in_k_linear_form}
 </div></br>
 
 
-### 쌍선형 형식의 행렬 표현 {#sec-matrix_representation_of_bilinear_form}
+### 쌍선형 형식의 행렬 표현 {#sec-ALA_matrix_representation_of_bilinear_form}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-matrix_representation_of_bilinear_form} 
+::: {#def-ALA_matrix_representation_of_bilinear_form} 
 #### 쌍선형 형식의 행렬표현
 
 유한차원 $\mathbb{F}$-벡터공간 $V$ 에서의 쌍선형 형식 $T\in \mathcal{T}^2(V)$ 을 생각하자. $\mathcal{B}=(v_1,\ldots,\,v_n)$ 이 $V$ 의 기저라고 할 때 $T$ 의 $\mathcal{B}$ 에 대한 행렬표현 $[T]_{\mathcal{B}}$ 를 다음과 같이 정의한다.
@@ -120,9 +120,9 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-matrix_representation_of_blinear_form}
+::: {#prp-ALA_matrix_representation_of_blinear_form}
 
-@def-matrix_representation_of_bilinear_form 에서 정의된 $[T]_{\mathcal{B}}$ 에 대해 다음이 성립한다.
+@def-ALA_matrix_representation_of_bilinear_form 에서 정의된 $[T]_{\mathcal{B}}$ 에 대해 다음이 성립한다.
 
 $$
 T(v, v') = \left([v]_\mathcal{B}\right)^T [T]_\mathcal{B} [v']_\mathcal{B}.
@@ -146,7 +146,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-bilinear_form_for_column_space}
+::: {#prp-ALA_bilinear_form_for_column_space}
 
 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 아래와 같이 정의된 $B:\mathcal{M}_n(\mathbb{F}) \times \mathcal{M}_n(\mathbb{F}) \to \mathbb{F}$ 는 $\mathcal{M}_n(\mathbb{F})$ 에 대한 쌍선형 형식이다.
 
@@ -168,7 +168,7 @@ trivial.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-isomorphism_between_matrix_and_bilinear}
+::: {#thm-ALA_isomorphism_between_matrix_and_bilinear}
 
 $n$ 차원 $\mathbb{F}$-벡터공간 $V$ 의 기저 $\mathcal{B}_V = (v_1,\ldots,\,v_n)$ 을 생각하자. 아래에 정의된 $\Phi_\mathcal{B} : \mathcal{T}^2(V) \to \mathcal{M}_{n\times n}(\mathbb{F})$ 는 동형사상이다.
 
@@ -191,7 +191,7 @@ $$
 이다. 따라서 $\Phi_\mathcal{B}(S+aT) = \Phi_\mathcal{B}(S) + a \Phi_\mathcal{B}(T)$ 이므로 $\Phi_B$ 는 선형사상이다.
 
 
-임의의 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 와 $v_1,\,v_2 \in V$ 에 대해 $([v_1]_\mathcal{B})^T \boldsymbol{A} [v_2]_\mathcal{B}$ 는 $V$ 에서의 쌍선형 형식이다. 따라서 $\Phi_\mathcal{B}$ 는 전사이다. 또한 @prp-matrix_representation_of_blinear_form 에 따라 $[T]_\mathcal{B}$ 는 유일하게 정해진다. 따라서 $\Phi_\mathcal{B}$ 는 단사이다. 즉 $\Phi_\mathcal{B}$ 는 동형사상이다.
+임의의 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 와 $v_1,\,v_2 \in V$ 에 대해 $([v_1]_\mathcal{B})^T \boldsymbol{A} [v_2]_\mathcal{B}$ 는 $V$ 에서의 쌍선형 형식이다. 따라서 $\Phi_\mathcal{B}$ 는 전사이다. 또한 @prp-ALA_matrix_representation_of_blinear_form 에 따라 $[T]_\mathcal{B}$ 는 유일하게 정해진다. 따라서 $\Phi_\mathcal{B}$ 는 단사이다. 즉 $\Phi_\mathcal{B}$ 는 동형사상이다.
 
 :::
 
@@ -199,10 +199,10 @@ $$
 
 ## 대칭형식과 교대형식 
 
-### 대칭형식 과 교대형식의 정의 {#sec-def_of_symmetric_form_and_alternating_form}
+### 대칭형식 과 교대형식의 정의 {#sec-ALA_def_of_symmetric_form_and_alternating_form}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-alternating_form} 
+::: {#def-ALA_alternating_form} 
 #### 대칭형식 교대형식
 
 
@@ -226,13 +226,13 @@ $$ {#eq-def_alternating_form}
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-k_alternating_form}
+::: {#prp-ALA_k_alternating_form}
 
 $T\in \mathcal{S}^k(V)$ 에 대해 다음은 동치임을 보여라.
 
-&emsp; ($1$) $T$ 는 $k$-교대형식이다. 즉 $T\in \mathcal{A}^k(V)$ 이다.
+&emsp;($1$) $T$ 는 $k$-교대형식이다. 즉 $T\in \mathcal{A}^k(V)$ 이다.
 
-&emsp; ($2$) $T$ 에 입력되는 벡터들 가운데 두개의 위치를 바꾸면 결과값은 원래값에 $-1$ 을 곱한값이다. 즉
+&emsp;($2$) $T$ 에 입력되는 벡터들 가운데 두개의 위치를 바꾸면 결과값은 원래값에 $-1$ 을 곱한값이다. 즉
 
 $$
 T( \cdots, v_i, \cdots, v_j ,\cdots) = - T(\cdots, v_j, \cdots, v_i, \cdots)
@@ -268,7 +268,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-symetric_and_alternating_form_are_subspace}
+::: {#prp-ALA_symetric_and_alternating_form_are_subspace}
 
 $\mathcal{S}^k(V)$ 와 $\mathcal{A}^k(V)$ 는 $\mathcal{T}^k(V)$ 의 부분공간이다.
 
@@ -296,7 +296,7 @@ $k$-교대형식을 다시 보자. 우리는 이것을 이미 [행렬식](../par
 </br>
 
 ::: {.callout-note appearance="minimal"}
-::: {#def-symmmectric_and_skew_symmetric_matrix}
+::: {#def-ALA_symmmectric_and_skew_symmetric_matrix}
 
 #### 대칭행렬, 반대칭 행렬
 
@@ -308,7 +308,7 @@ $\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 모든 $1\le i,\,j\n
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-alternating_matrix}
+::: {#exm-ALA_alternating_matrix}
 
 $\boldsymbol{A}$ 가 교대행렬이라면 $A_{ii} = - A_{ii}$ 이므로 모든 대각성분은 $0$ 이다.
 :::
@@ -320,13 +320,13 @@ $\boldsymbol{A}$ 가 교대행렬이라면 $A_{ii} = - A_{ii}$ 이므로 모든 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-matrix_form_of_symmetric_form}
+::: {#prp-ALA_matrix_form_of_symmetric_form}
 
 유한차원 벡터공간 $V$ 와 그 기저 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 에 대해 아래 두 명제는 동치이다.
 
-&emsp; ($1$) $T\in \mathcal{S}^2(V)$ 이다.
+&emsp;($1$) $T\in \mathcal{S}^2(V)$ 이다.
 
-&emsp; ($2$) $[T]_\mathcal{B}$ 는 대칭행렬이다.
+&emsp;($2$) $[T]_\mathcal{B}$ 는 대칭행렬이다.
 
 :::
 
@@ -345,13 +345,13 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-matrix_form_of_alternating_form}
+::: {#prp-ALA_matrix_form_of_alternating_form}
 
 유한차원 벡터공간 $V$ 와 그 기저 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 에 대해 아래 두 명제는 동치이다.
 
-&emsp; ($1$) $T\in \mathcal{A}^2(V)$ 이다.
+&emsp;($1$) $T\in \mathcal{A}^2(V)$ 이다.
 
-&emsp; ($2$) $[T]_\mathcal{B}$ 는 교대행렬이다. 
+&emsp;($2$) $[T]_\mathcal{B}$ 는 교대행렬이다. 
 :::
 
 </div></br>
@@ -375,7 +375,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-symmetric_and_alternating_form_as_subgroups}
+::: {#prp-ALA_symmetric_and_alternating_form_as_subgroups}
 
 유한차원 $\mathbb{F}$-벡터공간 $V$ 에 대해 다음이 성립한다.
 
@@ -393,7 +393,7 @@ $$
 
 $V$ 의 기저 $\mathcal{B} = (v_1,\ldots,\,v_n)$ 을 생각하자.
 
-($1$) @prp-symetric_and_alternating_form_are_subspace
+($1$) @prp-ALA_symetric_and_alternating_form_are_subspace
 
 ($2$) $\boldsymbol{E}^{(i, j)} \in \mathcal{M}_{n\times n}(\mathbb{F})$ 를 $i$ 행 $j$ 열 성분은 $1$, 나머지 $n^2-1$ 개의 성분은 $0$ 인 행렬이라고 하자. $\{\boldsymbol{E}^{(i, j)}:  1 \le i,\,j\le n\}$ 은 $\mathcal{M}_{n \times n}(\mathbb{F})$ 의 기저임은 쉽게 알 수 있다. 이 때, 
 
@@ -416,9 +416,9 @@ $$
 
 </br>
 
-### 교대형식과 행렬식 {#sec-alternating_form_and_determinant_of_matrix}
+### 교대형식과 행렬식 {#sec-ALA_alternating_form_and_determinant_of_matrix}
 
-우리가 @sec-determinant 에서 행렬식을 도입할 때 우선 행렬의 행벡터에 대한 $\det$ 함수로 도입하였다. 행벡터로 도입한것은 우리가 바로 전에 행 기본연산에 대해 논의했기 때문에 그 연속선상에서 그렇게 했다. 우리는 이미 열벡터에 대해서도 정의할 수 있다는 것을 안다. $\boldsymbol{A}_i$ 를 $\boldsymbol{A}$ 의 $i$ 번째 열벡터라고 하자.
+우리가 [대칭군을 이용한 행렬식](../part1/ch1_03_determinant.qmd#sec-LA_determinant_definition_using_symmetric_group) 에서 행렬식을 도입할 때 우선 행렬의 행벡터에 대한 $\det$ 함수로 도입하였다. 행벡터로 도입한것은 우리가 바로 전에 행 기본연산에 대해 논의했기 때문에 그 연속선상에서 그렇게 했다. 우리는 이미 열벡터에 대해서도 정의할 수 있다는 것을 안다. $\boldsymbol{A}_i$ 를 $\boldsymbol{A}$ 의 $i$ 번째 열벡터라고 하자.
 
 $$
 \phi (\boldsymbol{A}_{1},\ldots,\,\boldsymbol{A}_{k}) := \det (\boldsymbol{A})
@@ -426,16 +426,16 @@ $$
 
 라고 하하면 $\phi$ 함수는 다음과 같은 성질을 가진다는 것을 안다. 
 
-&emsp; ($1$) $\phi (\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_k)=1$
+&emsp;($1$) $\phi (\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_k)=1$
 
-&emsp; ($2$) $\phi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))$
+&emsp;($2$) $\phi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))$
 
 
 이제 우리는 반대로 위의 두 조건을 만족하는 $k$-alternating form 은 유일하다는 것을 보일 것이다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-dimension_of_k_alternating_form}
+::: {#lem-ALA_dimension_of_k_alternating_form}
 
 $\mathcal{M}_k(\mathbb{F})$ 에 대해 다음이 성립한다.
 
@@ -482,7 +482,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-uniqueness_of_determinant}
+::: {#thm-ALA_uniqueness_of_determinant}
 
 #### 행렬식의 유일성
 
@@ -494,11 +494,11 @@ $\phi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))$ 이며 $\phi (\boldsymbol{e}
 
 ## 이차형식
 
-### 이차형식 {#sec-quadratic_form}
+### 이차형식 {#sec-ALA_quadratic_form}
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-quadratic_form} 
+::: {#def-ALA_quadratic_form} 
 #### 이차형식
 
 벡터공간 $V$ 에서 정의된 함수 $\Psi : V\to \mathbb{F}$ 가 임의의 $c\in \mathbb{F},\, v,\,v'\in V$ 에 대해
@@ -514,7 +514,7 @@ $\phi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))$ 이며 $\phi (\boldsymbol{e}
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-quadratic_and_bilinear_1}
+::: {#prp-ALA_quadratic_and_bilinear_1}
 
 $T\in \mathcal{S}^2(V)$ 일 때 $\Psi_T(v) = \frac{1}{2}T(v, v)$ 는 이차형식이다.
 
@@ -544,11 +544,11 @@ $$
 
 </br>
 
-@prp-quadratic_and_bilinear_1 로부터 우리는 대칭 쌍선형형식 대한 이차형식이 존재함을 안다. 이제 좀 더 깊이 알아보자.
+@prp-ALA_quadratic_and_bilinear_1 로부터 우리는 대칭 쌍선형형식 대한 이차형식이 존재함을 안다. 이제 좀 더 깊이 알아보자.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-quadratic_and_bilinear_2}
+::: {#prp-ALA_quadratic_and_bilinear_2}
 
 $\mathbb{F}$-벡터공간 $V$ 에서의 이차형식 전체의 집합을 $\mathcal{Q}_V$ 라고 하자. $0_Q : V \to \mathbb{F}$ 를 다음과 같이 정의한다.
 
@@ -590,7 +590,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-quadratic_and_bilinear}
+::: {#thm-ALA_quadratic_and_bilinear}
 
 벡터공간 $V$ 에 대해 $\mathcal{S}^2(V)$ 와 $\mathcal{Q}_V$ 는 동형이다. 
 
@@ -600,8 +600,8 @@ $$
 
 ::: {.proof}
 
-$\Gamma : \mathcal{Q}_V \to \mathcal{S}^2(V)$ 를 @def-quadratic_form 에 따라 $\Gamma (\Psi) = B_\Psi$ 로 정의하자. 
-@prp-quadratic_and_bilinear_1 에서 $T\in \mathcal{S}^2(V)$ 일 때 $\Psi_T(v) = \dfrac{1}{2}T(v, v)$ 는 quadratic form 이며 
+$\Gamma : \mathcal{Q}_V \to \mathcal{S}^2(V)$ 를 @def-ALA_quadratic_form 에 따라 $\Gamma (\Psi) = B_\Psi$ 로 정의하자. 
+@prp-ALA_quadratic_and_bilinear_1 에서 $T\in \mathcal{S}^2(V)$ 일 때 $\Psi_T(v) = \dfrac{1}{2}T(v, v)$ 는 quadratic form 이며 
 
 $$
 \begin{aligned}
@@ -630,9 +630,9 @@ $$
 
 </br>
 
-### 이차형식의 행렬 표현 {#sec-matrix_representation_of_quadratic_form}
+### 이차형식의 행렬 표현 {#sec-ALA_matrix_representation_of_quadratic_form}
 
-이제 $n$ 차원 $\mathbb{F}$-벡터공간 $V$ 에 대해 $\Psi \in \mathcal{Q}_V$ 라고 하자. 우리는 $B_\Psi(v, v) = \dfrac{1}{2} \Psi(v) \in \mathcal{S}^2(V)$ 라는 것을 알며, 따라서 $\Psi_B$ 가 대칭행렬로 표현된다는 것도 안다. 이제 $V$ 의 기저 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 을 생각하자.  @prp-matrix_representation_of_blinear_form 에 따라
+이제 $n$ 차원 $\mathbb{F}$-벡터공간 $V$ 에 대해 $\Psi \in \mathcal{Q}_V$ 라고 하자. 우리는 $B_\Psi(v, v) = \dfrac{1}{2} \Psi(v) \in \mathcal{S}^2(V)$ 라는 것을 알며, 따라서 $\Psi_B$ 가 대칭행렬로 표현된다는 것도 안다. 이제 $V$ 의 기저 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 을 생각하자.  @prp-ALA_matrix_representation_of_blinear_form 에 따라
 
 $$
 \Psi(v) = \dfrac{1}{2}B_\psi(v, v) = \dfrac{1}{2}([v]_\mathcal{B})^T[B_{\Psi}]_\mathcal{B} ([v]_\mathcal{B})
@@ -661,7 +661,7 @@ $$
 
 ## 직교군과 심플렉틱 군
 
-### 이차공간과 직교군 {#sec-orthogonal_group}
+### 이차공간과 직교군 {#sec-ALA_orthogonal_group}
 
 
 
@@ -669,7 +669,7 @@ $$
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-quadratic_space} 
+::: {#def-ALA_quadratic_space} 
 #### 이차공간
 
 유한차원 $\mathbb{F}$-벡터공간 $V$ 에서 어떤 이차형식 $\Psi \in \mathcal{Q}_V$ 이 정해졌다면 이에 따라 대칭 쌍선형 형식 $B_\Psi$ 도 정의된다. 이렇게 벡터공간에 이차형식 $\Psi$ 이 부여되었을 때, 혹은 이와 동등하게 대칭 쌍선형 형식이 부여되었을 때 이 벡터공간 $V$ 를 **이차공간(quadratic space)** 라고 하고 $(V,\, \Psi)$, $(V,\, B_\Psi,\, \Psi)$, 혹은 $(V, B_\Psi)$ 라고 쓴다
@@ -679,7 +679,7 @@ $$
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-orthogonal_group} 
+::: {#def-ALA_orthogonal_group} 
 #### 직교군
 
 Quadratic space $(V, B_\Psi)$ 에 대해 다음과 같이 정의된 $O(V, B_\Psi)$ 를 $(V, B_\Psi)$ 에 대한 **직교군 (orthonormal group)** 이라 한다. 
@@ -703,13 +703,13 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-orthogonal_group_is_a_normal_subgroup}
+::: {#prp-ALA_orthogonal_group_is_a_normal_subgroup}
 
 유한차원 벡터공간 $V$ 에 대해 다음이 성립한다.
 
-&emsp; ($1$) $O(V, B_\Psi) \le GL(V)$.
+&emsp;($1$) $O(V, B_\Psi) \le GL(V)$.
 
-&emsp; ($2$) $SO(V,\, B_\Psi) \trianglelefteq O(V,\, B_\Psi)$.
+&emsp;($2$) $SO(V,\, B_\Psi) \trianglelefteq O(V,\, B_\Psi)$.
 
 :::
 
@@ -779,7 +779,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-metix_representation_of_orthogonal_group}
+::: {#prp-ALA_metix_representation_of_orthogonal_group}
 
 유한차원 벡터공간 $V$ 와 quadratic form $\Psi$ 에 대한 quadratic space $(V, \Psi)$ 를 생각하자. $V$ 의 기저 $\mathcal{B}$ 에 대해 다음은 동치이다.
 
@@ -792,7 +792,7 @@ $$
 $v,\,v'\in V$ 에 대해 $[v]_\mathcal{B}=\boldsymbol{v},\, [v']_\mathcal{B}=\boldsymbol{v}'$ 이라 하고 $[L]_\mathcal{B}=\boldsymbol{L},\, [B_\Psi]_\mathcal{B}= \boldsymbol{B}$ 라고 하자.
 우선 $\Psi,\,\Psi\in \mathcal{Q}_V$ 일 때 $B_\Psi (v, v) = B_\Phi (v, v) \iff \Psi = \Phi$ 임은 당연하다. 따라서 $\boldsymbol{v}^T[B_\Psi]\boldsymbol{v} = \boldsymbol{v}^T[B_\Phi]\boldsymbol{v} \iff [B_\Psi]=[B_\Phi]$ 를 의미한다.
 
-($1 \implies 2$)  @prp-matrix_representation_of_blinear_form 에 따라 $B_{\Psi}(Lv, Lv') = \boldsymbol{v}^T\boldsymbol{L}^T\boldsymbol{BLv}$, $B_\Psi (v,v) = \boldsymbol{v}^T\boldsymbol{Bv}$ 이다. 따라서 $\boldsymbol{L}^T\boldsymbol{BL}= \boldsymbol{B}$ 이다. 
+($1 \implies 2$)  @prp-ALA_matrix_representation_of_blinear_form 에 따라 $B_{\Psi}(Lv, Lv') = \boldsymbol{v}^T\boldsymbol{L}^T\boldsymbol{BLv}$, $B_\Psi (v,v) = \boldsymbol{v}^T\boldsymbol{Bv}$ 이다. 따라서 $\boldsymbol{L}^T\boldsymbol{BL}= \boldsymbol{B}$ 이다. 
 
 ($2 \implies 1$)  $\boldsymbol{L}^T\boldsymbol{BL}= \boldsymbol{B}$ 이면 $\boldsymbol{v}^T\boldsymbol{L}^T\boldsymbol{BLv}$, $B_\Psi (v,v) = \boldsymbol{v}^T\boldsymbol{Bv}$ 이므로 $L\in O(V,B_\Psi)$ 이다. $\square$
 
@@ -801,7 +801,7 @@ $v,\,v'\in V$ 에 대해 $[v]_\mathcal{B}=\boldsymbol{v},\, [v']_\mathcal{B}=\bo
 </div></br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-orthogonal_group_on_symmetric_matrix} 
+::: {#def-ALA_orthogonal_group_on_symmetric_matrix} 
 #### 대칭행렬에 대한 직교군 
 
 $\boldsymbol{J}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 대칭행렬 일 때 
@@ -817,7 +817,7 @@ $$
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-determinant_of_O_n_J}
+::: {#exm-ALA_determinant_of_O_n_J}
 
 대칭행렬 $\boldsymbol{J}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 가역일 때 $\boldsymbol{A}\in O_n^\boldsymbol{J}(\mathbb{F})$ 의 행렬식은 $\det(\boldsymbol{A}^T\boldsymbol{JA}) = \boldsymbol{J}$ 이며 $\det (\boldsymbol{A}^T) = \det (\boldsymbol{A})$ 이므로 $\det (\boldsymbol{A})= \pm 1$ 이다.
 
@@ -825,12 +825,12 @@ $$
 
 </div></br>
 
-### 심플렉틱 군
+### 심플렉틱 군 {#sec-ALA_symplectic_group}
 
 심플렉틱 군에 대해서는 간단히 소개만 하고 넘어가기로 한다.
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-symplectic_group} 
+::: {#def-ALA_symplectic_group} 
 #### 심플렉틱 군
 
 $n$ 차원 벡터공간 $V$ 에 대해 $B\in \mathcal{A}^2(V)$ 일 때 다음과 같이 정의된 $Sp(V, B)$ 를 $B$ 로부터 생성된 **심플렉틱 군 (symplectic group)** 이라고 한다.
@@ -845,13 +845,13 @@ $$
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-metix_representation_of_symplectic_group}
+::: {#prp-ALA_metix_representation_of_symplectic_group}
 
 유한차원 벡터공간 $V$ 와 $B\in\mathcal{A}^2(\mathbb{F})$ 를 생각하자. $V$ 의 기저 $\mathcal{B}$ 에 대해 다음은 동치이다.
 
-&emsp; ($1$) $L \in Sp(V, B)$.
+&emsp;($1$) $L \in Sp(V, B)$.
 
-&emsp; ($2$) $([L]_\mathcal{B})^T[B]_\mathcal{B}([L]_\mathcal{B}) =[B]_\mathcal{B}$.
+&emsp;($2$) $([L]_\mathcal{B})^T[B]_\mathcal{B}([L]_\mathcal{B}) =[B]_\mathcal{B}$.
 :::
 
 </div></br>
@@ -874,10 +874,10 @@ $v,\,v'\in V$ 에 대해 $[v]_\mathcal{B}=\boldsymbol{v},\, [v']_\mathcal{B}=\bo
 ### $O(1, 1)$
 
 
-[대칭행렬에 대한 직교군](#def-orthogonal_group_on_symmetric_matrix) 을 생각하자. 
+[대칭행렬에 대한 직교군](#def-ALA_orthogonal_group_on_symmetric_matrix) 을 생각하자. 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-O_11} 
+::: {#def-ALA_O_11} 
 #### $O(1, 1)$
 
 $\mathcal{M}_{2 \times 2}(\mathbb{R})$ 에서 정의된 $\boldsymbol{J} = \begin {bmatrix} 1 & 0 \\ 0 & -1\end{bmatrix}$ 에 대한 직교군 $O_2^\boldsymbol{J}$ 을 $O(1, 1)$ 이라고 한다.
@@ -888,13 +888,13 @@ $\mathcal{M}_{2 \times 2}(\mathbb{R})$ 에서 정의된 $\boldsymbol{J} = \begin
 </br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-O_11}
+::: {#exm-ALA_O_11}
 
 다음은 동치이다.
 
-&emsp; ($1$) $\boldsymbol{A} = \begin{bmatrix} x& z \\ y & w\end{bmatrix} \in O(1, 1)$.
+&emsp;($1$) $\boldsymbol{A} = \begin{bmatrix} x& z \\ y & w\end{bmatrix} \in O(1, 1)$.
 
-&emsp; ($2$) $x^2-y^2 = w^2-z^2 = 1,\, xz-yw=0$.
+&emsp;($2$) $x^2-y^2 = w^2-z^2 = 1,\, xz-yw=0$.
 
 ::: 
 

@@ -6,9 +6,13 @@ crossref:
   chapters: true
 ---
 
-## 정수의 성질 {#sec-integers}
+{{< include ../../latexmacros.qmd >}}
 
-### 약수와 최대공약수 {#sec-divisor_and_gcd}
+</br>
+
+## 정수의 성질 {#sec-MA_integers}
+
+### 약수와 최대공약수 {#sec-MA_divisor_and_gcd}
 
 
 [대수를 다루는데 앞으로 아래에 기술할 정수의 성질이 많이 사용된다. ]{.aside}
@@ -24,16 +28,16 @@ $$
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-divisor_gcd}
+::: {#def-MA_divisor_gcd}
 #### 약수와 최대공약수
 
 정수 $a$ 와 $0$ 이 아닌 정수 $b$ 가 주어졌을 때 어떤 정수 $m$ 에 대해 $a=mb$ 일 때 $b$ 를 $a$ 의 **약수 (devisor)**라고 하고 $b \mid a$ 라고 쓴다. $b$ 가 $a$ 의 약수가 아닐 때는 $b \nmid a$ 라고 쓴다. 
 
 주어진 정수 $a,\,b$ 에 대해 어떤 양의 정수 $c$ 가 
 
-&emsp; ($1$). $c\mid a,\, c\mid b$,
+&emsp;($1$). $c\mid a,\, c\mid b$,
 
-&emsp; ($2$). $\forall d\in \mathbb{Z},\, (d \mid a) \land (d \mid b) \implies d \mid c$ 
+&emsp;($2$). $\forall d\in \mathbb{Z},\, (d \mid a) \land (d \mid b) \implies d \mid c$ 
 
 일 때 $c$ 를 $a$ 와 $b$ 의 **최대공약수(greatest common devisor)** 라고 한다. $a$ 와 $b$ 의 최대공약수는 $\gcd (a,\,b)$ 로 표기한다.
 
@@ -42,7 +46,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-divisor}
+::: {#prp-MA_divisor}
 
 $0$ 이 아닌 $a,\,b\in \mathbb{Z}$ 에 대해 $\gcd (a,\,b)$ 는 존재하며, 어떤 정수 $m_0,\, n_0$ 에 대해 
 
@@ -72,10 +76,10 @@ $$
 
 </br>
 
-### 소수와 소인수 분해 {#sec-prime_number_factorization}
+### 소수와 소인수 분해 {#sec-MA_prime_number_factorization}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-relatively_prime}
+::: {#def-MA_relatively_prime}
 #### 서로소
 
 $a,\,b\in\mathbb{Z}$ 에 대해 $\gcd (a,\,b)=1$ 일 때 $a,\,b$ 는 **서로소(relatively prime)** 이라 한다.
@@ -85,11 +89,11 @@ $a,\,b\in\mathbb{Z}$ 에 대해 $\gcd (a,\,b)=1$ 일 때 $a,\,b$ 는 **서로소
 
 </br>
 
-다음 명제는 @prp-divisor 에 의해 자명하다.
+다음 명제는 @prp-MA_divisor 에 의해 자명하다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-relatively_prime}
+::: {#prp-MA_relatively_prime}
 
 $a,\,b\in \mathbb{Z}$ 가 서로소이면 $ma+nb=1$ 을 만족하는 $m,\,n\in \mathbb{Z}$ 가 존재한다.
 :::
@@ -98,7 +102,7 @@ $a,\,b\in \mathbb{Z}$ 가 서로소이면 $ma+nb=1$ 을 만족하는 $m,\,n\in \
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-prime}
+::: {#def-group_prime}
 #### 소수
 
 어떤 $1$ 보다 큰 양의 정수 $p$ 가 $\pm 1$ 과 $\pm p$ 이외의 약수가 존재하지 않을 때 $p$ 를 **소수(prime number)** 라고 한다.
@@ -108,13 +112,13 @@ $a,\,b\in \mathbb{Z}$ 가 서로소이면 $ma+nb=1$ 을 만족하는 $m,\,n\in \
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-prime_number_equivalence}
+::: {#prp-MA_prime_number_equivalence}
 
 다음 두 명제는 동치이다.
 
-&emsp; ($1$) $p$ 는 소수이다.
+&emsp;($1$) $p$ 는 소수이다.
 
-&emsp; ($2$) 임의의 정수 $n$ 에 대해 $\gcd (p, n)=1$ 이거나 $p \mid n$ 이다.
+&emsp;($2$) 임의의 정수 $n$ 에 대해 $\gcd (p, n)=1$ 이거나 $p \mid n$ 이다.
 
 :::
 
@@ -130,7 +134,7 @@ $p$ 가 소수가 아니라면 $1<d<p,\, d\mid p$ 인 양의정수 $d$ 가 존�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-relatively_prime_2}
+::: {#prp-MA_relatively_prime_2}
 
 $a$ 와 $b$ 가 서로소이고 $a\mid bc$ 이면 $a\mid c$ 이다.
 
@@ -140,13 +144,13 @@ $a$ 와 $b$ 가 서로소이고 $a\mid bc$ 이면 $a\mid c$ 이다.
 
 ::: {.proof}
 
-@prp-relatively_prime 에 의해 $ma+nb=1$ 을 만족하는 $m,\,n\in \mathbb{Z}$ 가 존재한다. $mac+nbc=c$ 이며 $a\mid mac$ 이고 가정에 의해 $a\mid mbc$ 이므로 $a \mid c$ 이다. $\square$
+@prp-MA_relatively_prime 에 의해 $ma+nb=1$ 을 만족하는 $m,\,n\in \mathbb{Z}$ 가 존재한다. $mac+nbc=c$ 이며 $a\mid mac$ 이고 가정에 의해 $a\mid mbc$ 이므로 $a \mid c$ 이다. $\square$
 
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-relatively_prime}
+::: {#cor-MA_relatively_prime}
 
 소수 $p$ 가 어떤 정수의 곱 $a,\,b$ 를 나눈다면 $p \mid a$ 이거나 $p \mid b$ 이다.
 
@@ -156,13 +160,13 @@ $a$ 와 $b$ 가 서로소이고 $a\mid bc$ 이면 $a\mid c$ 이다.
 
 ::: {.proof}
 
-$p$ 가 소수이므로 $p \nmid a$ 라면 @prp-prime_number_equivalence 에 의해 $\gcd (p,\,a)=1$ 이다. $mp+na=1$ 을 만족하는 $m,\,n\in \mathbb{Z}$ 가 존재한다. $mpb + nab = b$ 이며 $p \mid nab$ 이므로 $p\mid b$ 이다. $\square$ 
+$p$ 가 소수이므로 $p \nmid a$ 라면 @prp-MA_prime_number_equivalence 에 의해 $\gcd (p,\,a)=1$ 이다. $mp+na=1$ 을 만족하는 $m,\,n\in \mathbb{Z}$ 가 존재한다. $mpb + nab = b$ 이며 $p \mid nab$ 이므로 $p\mid b$ 이다. $\square$ 
 
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-prime_number_factorization}
+::: {#thm-MA_prime_number_factorization}
 
 $1$ 보다 큰 양의 정수 $a$ 는 소수의 곱으로 유일하게 표현된다. 즉 $a\in \mathbb{Z}_+$ 은 어떤 소수 $p_1,\ldots,\,p_m$, ($p_1< \cdots <p_m$) 에 대해 $a=p_1^{n_1} \cdots p_m^{n_m}$ 이며 $p_1,\ldots,\,p_m$ 과 $n_1,\ldots,\,n_m$ 은 유일하게 정해진다.
 
@@ -180,19 +184,19 @@ $1$ 보다 큰 양의 정수 $a$ 는 소수의 곱으로 유일하게 표현된�
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-prime}
+::: {#def-MA_prime}
 #### 소인수 분해
 
-@thm-prime_number_factorization 에서와 같이 $1$ 보다 큰 양의 정수를 소수의 곱으로 표현하는 것을 **소인수 분해 (prime factorization/integer factorization)** 라고 한다.
+@thm-MA_prime_number_factorization 에서와 같이 $1$ 보다 큰 양의 정수를 소수의 곱으로 표현하는 것을 **소인수 분해 (prime factorization/integer factorization)** 라고 한다.
 :::
 :::
 
 </br>
 
-### 모듈라 산술 {#sec-modula_arithmetic}
+### 모듈라 산술 {#sec-MA_modula_arithmetic}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-modula}
+::: {#def-MA_modula}
 #### mod
 
 양의 정수 $n$ 에 대해 $n\mid (a-b)$ 이면 $a \equiv b \;(\text{mod}\;n)$ 이라 한다. 정해진 양의 정수 $n$ 에 대해 $a\equiv b \;(\text{mod})\;n$ 일 때 관계(relation) $a\sim b$ 를 정의 할 수 있다. 이 관계를 **congruence modulo $n$** 이라 한다.
@@ -202,7 +206,7 @@ $1$ 보다 큰 양의 정수 $a$ 는 소수의 곱으로 유일하게 표현된�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-modula}
+::: {#prp-MA_modula}
 
 위에 정의된 congruence modulo $n$ 관계에 대해 다음이 성립한다.
 
@@ -225,7 +229,7 @@ $1$ 보다 큰 양의 정수 $a$ 는 소수의 곱으로 유일하게 표현된�
 
 ($3$) $n \mid (a-b),\, n \mid (c-d)$ 이면 $n \mid ((a-b)+ (c-d))$ 이므로 $n \mid ((a+c)- (b+d))$ 이다. 즉 $a+c \equiv b+d \; (\text{mod}\; n)$ 이다. 또한 $n \mid ((a-b)c + (c-d)b)$ 이므로 $n \mid (ac-bd)$ 이다. 
 
-($4$) $n \mid a(b-c)$ 이고 $n$ 과 $a$ 가 서로소 이므로 @prp-relatively_prime 에 의해 $n \mid (b-c)$ 이다.  $\square$
+($4$) $n \mid a(b-c)$ 이고 $n$ 과 $a$ 가 서로소 이므로 @prp-MA_relatively_prime 에 의해 $n \mid (b-c)$ 이다.  $\square$
 
 :::
 
@@ -246,7 +250,7 @@ $$
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-operation_of_congruence_class_1}
+::: {#prp-MA_operation_of_congruence_class_1}
 
 위의 덧셈과 곱셈 연산은 잘 정의된다.
 
@@ -256,13 +260,13 @@ $$
 
 ::: {.proof}
 
-$a,\,b\in [i],\, c,\,d\in [j]$ 라 하자. @prp-modula 에서 보인 대로 $a+c \equiv b+d \;(\text{mod}\; n)$ 이며 $ac \equiv bd \;(\text{mod}\;n)$ 이므로 잘 정의된다. $\square$
+$a,\,b\in [i],\, c,\,d\in [j]$ 라 하자. @prp-MA_modula 에서 보인 대로 $a+c \equiv b+d \;(\text{mod}\; n)$ 이며 $ac \equiv bd \;(\text{mod}\;n)$ 이므로 잘 정의된다. $\square$
 
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-operation_of_congruence_class_2}
+::: {#prp-MA_operation_of_congruence_class_2}
 
 위의 congruence class 의 연산에서 다음이 성립한다.
 
@@ -371,7 +375,7 @@ $\gcd(a,\,n) = m > 1$ 이라면 $m \mid n$ 이어야 하므로 $m = n$ 이다.
 
 #### Herstein 1.3.13
 
-@def-modula 와 @prp-modula 에서 정의된 equvalence class 의 집합을 $J_n$ 이라 하자. 즉 $J_n = \{[0],\ldots,\,[n-1]\}$ 이다. $\gcd (a,\,n)=1$ 이라면 $[a][b]=1$ 를 만족하는 $[b]\in J_n$ 이 존재함을 보여라.
+@def-MA_modula 와 @prp-MA_modula 에서 정의된 equvalence class 의 집합을 $J_n$ 이라 하자. 즉 $J_n = \{[0],\ldots,\,[n-1]\}$ 이다. $\gcd (a,\,n)=1$ 이라면 $[a][b]=1$ 를 만족하는 $[b]\in J_n$ 이 존재함을 보여라.
 
 :::
 
@@ -397,9 +401,9 @@ $\gcd(a, n)=1$ 이므로 $pa+qn=1$ 을 만족하는 $p,\,q\in \mathbb{Z}$ 가 �
 
 집합 $S$ 에 대해 $S\times S \mapsto S$ 함수를 **이항연산** 이라고 한다. 관습적으로 이항연산을 $a\cdot b$, $ab$, $a\ast b$, $a \circ b$, $a+b$ 등으로 쓴다. 임의의 $a,\,b,\,c\in S$ 에 대해 
 
-1. $(ab)c=a(bc)$ 일 때 결합법칙을 만족한다고 한다.
+&emsp;($1$) $(ab)c=a(bc)$ 일 때 결합법칙을 만족한다고 한다.
 
-2. $ab=ba$ 일 때 교환법칙을 만족한다고 한다.
+&emsp;($2$) $ab=ba$ 일 때 교환법칙을 만족한다고 한다.
 
 :::
 :::
@@ -409,19 +413,19 @@ $\gcd(a, n)=1$ 이므로 $pa+qn=1$ 을 만족하는 $p,\,q\in \mathbb{Z}$ 가 �
 
 </br>
 
-### 군과 부분군 {#sec-groups_subgroups}
+### 군과 부분군 {#sec-MA_groups_subgroups}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-groups}
+::: {#def-MA_groups}
 #### 군 (Groups)
 
 집합 $G$ 에 이항연산 $\cdot$ 이 정의되어 있으며, 
 
-1. $\forall a,\,b,\,c\in G,\, a\cdot (b \cdot c)=(a\cdot b)\cdot c$, 
+&emsp;($1$) $\forall a,\,b,\,c\in G,\, a\cdot (b \cdot c)=(a\cdot b)\cdot c$, 
 
-2. $\exists e\in G,\, \forall a\in G,\, a\cdot e=e\cdot a$, 
+&emsp;($2$) $\exists e\in G,\, \forall a\in G,\, a\cdot e=e\cdot a$, 
 
-3. $\forall a\in G,\, \exists a'\in G,\, a\cdot a' = a'\cdot a = e$
+&emsp;($3$) $\forall a\in G,\, \exists a'\in G,\, a\cdot a' = a'\cdot a = e$
 
 일 때 집합 $G$ 를 **군** 이라 하고 $(G,\cdot)$ 이라고 쓴다. 이 때 2. 의 $e$ 를 $G$ 의 항등원 이라고 한다. 항등원의 표기는 $e$ 혹은 연산이 곱셈이면 $1$ 이라고 쓰거나, 소속된 군을 표현하기 위해 $1_G$ 와 같이 쓰기도 한다. 연산이 덧셈이라면 $0$ 혹은 $0_G$ 로 쓰기도 한다. $a\cdot a'=a'\cdot a=e$ 인 $a'$ 을 $a$ 의 역원 이라고 한다. $a$ 의 역원은 $a^{-1}$ 이라 쓴다.
 :::
@@ -433,15 +437,15 @@ $\gcd(a, n)=1$ 이므로 $pa+qn=1$ 을 만족하는 $p,\,q\in \mathbb{Z}$ 가 �
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-uniqueness_of_identity_and_inverse}
+::: {#prp-MA_uniqueness_of_identity_and_inverse}
 
 $G$ 가 군 일 때 
 
-&emsp; ($1$) $G$ 의 항등원은 유일하다.
+&emsp;($1$) $G$ 의 항등원은 유일하다.
 
-&emsp; ($2$) $a\in G$ 에 대한 역원은 유일하다.
+&emsp;($2$) $a\in G$ 에 대한 역원은 유일하다.
 
-&emsp; ($3$) $G$ 의 항등원의 역원은 자기 자신이다.
+&emsp;($3$) $G$ 의 항등원의 역원은 자기 자신이다.
 
 :::
 
@@ -463,7 +467,7 @@ $g$ 가 군 $G$ 의 원소일 때 $g$ 를 $n$ 번 연산한 것을 $g^n$ 이라�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-cancelation_law}
+::: {#prp-MA_cancelation_law}
 
 #### 제거 규칙
 
@@ -480,7 +484,7 @@ $a=acc^{-1}=bcc^{-1}=b$ 이다.
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-abelian_finite_group}
+::: {#def-MA_abelian_finite_group}
 #### 가환군, 유한군
 
 $\forall a,\,b\in G$ 에 대해 $ab=ba$ 일 때 $G$ 를 **가환군** 혹은 **아벨군** 이라 한다. $G$ 가 유한집합일 때 $G$ 를 **유한군** 이라 한다. $G$ 가 유한군일 때 $G$ 의 원소의 갯수를 $G$ 의 **order** 라고 하며 $|G|$ 라고 쓴다.
@@ -500,15 +504,15 @@ $\forall a,\,b\in G$ 에 대해 $ab=ba$ 일 때 $G$ 를 **가환군** 혹은 **�
 
 다음의 군은 무한군이며 아벨군이다. 앞으로 특별한 설명 없이 사용하기로 하자.
 
-&emsp; ($1$) $\mathbb{Z}^+ = (\mathbb{Z}, +)$ : 더하기 연산이 정의된 정수의 집합.
+&emsp;($1$) $\mathbb{Z}^+ = (\mathbb{Z}, +)$ : 더하기 연산이 정의된 정수의 집합.
 
-&emsp; ($2$) $\mathbb{R}^+ = (\mathbb{R}, +)$ : 더하기 연산이 정의된 실수의 집합.
+&emsp;($2$) $\mathbb{R}^+ = (\mathbb{R}, +)$ : 더하기 연산이 정의된 실수의 집합.
 
-&emsp; ($3$) $\mathbb{R}^\times = (\mathbb{R}, \times)$ : 곱하기 연산이 정의된 $0$ 을 제외한 실수의 집합.
+&emsp;($3$) $\mathbb{R}^\times = (\mathbb{R}, \times)$ : 곱하기 연산이 정의된 $0$ 을 제외한 실수의 집합.
 
-&emsp; ($4$) $\mathbb{C}^+ = (\mathbb{C}, +)$ : 더하기 연산이 정의된 복소수의 집합.
+&emsp;($4$) $\mathbb{C}^+ = (\mathbb{C}, +)$ : 더하기 연산이 정의된 복소수의 집합.
 
-&emsp; ($5$) $\mathbb{C}^\times = (\mathbb{C}, \times)$ : 곱하기 연산이 정의된 $0$ 을 제외한 복소수의 집합.
+&emsp;($5$) $\mathbb{C}^\times = (\mathbb{C}, \times)$ : 곱하기 연산이 정의된 $0$ 을 제외한 복소수의 집합.
 
 </br>
 
@@ -517,20 +521,21 @@ $\forall a,\,b\in G$ 에 대해 $ab=ba$ 일 때 $G$ 를 **가환군** 혹은 **�
 우리는 앞서 [대칭군](../part1/ch1_03_determinant.qmd#def-symmetric_group) $S_n$ 에 대해 알아보았다. 대칭군은 아주 중요한 군이기 때문에 다시 언급할 가치가 있다. $S_n$ 은 유한군이며 가환군이 아니라는 것을 알 수 있을 것이다.
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-::: {#exm-S3}
+
+::: {#exm-MA_S3}
 앞으로 자주 사용될 군중의 하나는 $S_3$ 이다. $S_3 = \{e, (1, 2), (1, 3), (2, 3), (1,2, 3), (1, 3, 2) \}$ 이며 이 때 $x=(1, 2, 3)$, $y=(1,2)$ 으로 정하자. $x^2 = (1, 3, 2),\, x^3 = e$ 이며, $xy=(1, 3)$, $x^2y=(2, 3)$ 이므로 $S_3 = \{e, x, x^2, y, xy, x^2y\}$ 로 쓸 수 있으며 $x^2y=yx$ 의 관계를 만족한다. 항등원을 $1$ 이라 표기하면 $S_3 = \{1, x, x^2, y, xy, x^2y\}$ 이다.
 :::
 
 </div></br>
 
-우리는 @thm-part1_permutation_even_odd 에서 대칭군이 호환(transposition) 의 합성으로 표현될 때 그 갯수는 변하더라도 갯수가 짝수인지 홀수인지는 변하지 않는다는 것을 보였으며 그것이 짝수일 때 **짝순열**, 홀수일 때 **홀순열** 이라고 부른다는 것을 안다. 특히 짝순열의 집합은 군을 이루며 그것을 **교대군 (Alternating group)** 이라고 하고 $A_n$ 이라고 쓴다. 
+우리는 @thm-LA_permutation_even_odd 에서 대칭군이 호환(transposition) 의 합성으로 표현될 때 그 갯수는 변하더라도 갯수가 짝수인지 홀수인지는 변하지 않는다는 것을 보였으며 그것이 짝수일 때 **짝순열**, 홀수일 때 **홀순열** 이라고 부른다는 것을 안다. 특히 짝순열의 집합은 군을 이루며 그것을 **교대군 (Alternating group)** 이라고 하고 $A_n$ 이라고 쓴다. 
 
 </br>
 
 #### 일반선형군과 특수선형군
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-linear_group}
+::: {#def-MA_linear_group}
 #### 일반선형군, 특수선형군
 $\mathcal{M}_{n \times n}(\mathbb{F})$ 에 속하는 가역행렬의 집합은 행렬의 곱셈 연산에 대해 군이며 이를 **일반선형군 (general linear group)** 이라고 하고 $GL_n(\mathbb{F})$ 라고 표기한다. 이 가운데 행렬식이 $1$ 인 행렬의 집합도 군이며 이를 **특수선형군 (special linear group)** 이라고 하며 $SL_n(\mathbb{F})$ 라고 표기한다.
 
@@ -547,7 +552,7 @@ $\mathcal{M}_{n \times n}(\mathbb{F})$ 에 속하는 가역행렬의 집합은 �
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-subgroups}
+::: {#def-MA_subgroups}
 
 #### 부분군
 
@@ -557,15 +562,15 @@ $H$ 가 $G$ 의 부분집합이며 $H$ 스스로 군일 때 $H$ 를 $G$ 의 **�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-subgroup}
+::: {#prp-MA_subgroup}
 
 $H$ 가 군 $G$ 의 부분집합이며 다음을 만족하면 $H$ 는 $G$ 의 부분군이다.
 
-&emsp; ($1$) $\forall a,\,b\in H,\,  ab\in H$, ($H$ 는 연산에 닫혀 있다.) 
+&emsp;($1$) $\forall a,\,b\in H,\,  ab\in H$, ($H$ 는 연산에 닫혀 있다.) 
 
-&emsp; ($2$) $1_G \in H$, ($H$ 는 항등원을 포함한다.)
+&emsp;($2$) $1_G \in H$, ($H$ 는 항등원을 포함한다.)
 
-&emsp; ($3$) $\forall a\in H,\, a^{-1}\in H$. ($H$ 는 자신에 포함되는 원소의 역원을 포함한다.)
+&emsp;($3$) $\forall a\in H,\, a^{-1}\in H$. ($H$ 는 자신에 포함되는 원소의 역원을 포함한다.)
 
 :::
 
@@ -573,13 +578,13 @@ $H$ 가 군 $G$ 의 부분집합이며 다음을 만족하면 $H$ 는 $G$ 의 �
 
 ::: {.proof}
 
-@def-groups 를 생각해보라..
+@def-MA_groups 를 생각해보라..
 
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-intersection_of_subgroups}
+::: {#prp-MA_intersection_of_subgroups}
 
 $H$ 와 $K$ 가 $G$ 의 부분군일 때 $H \cap K$ 역시 $G$ 의 부분군이다.
 
@@ -596,7 +601,7 @@ $x,\,y \in H \cap K$ 라면 $xy\in H \cap K$ 이다. $1\in H\cap K$ 이다. $x\i
 
 </br>
 
-### 정수의 덧셈군 {#sec_additive_groups_of_integers}
+### 정수의 덧셈군 {#sec_part2_additive_groups_of_integers}
 
 여기서는 [정수의 성질](#sec-integers) 에서 다뤘던 정수에 대한 내용을 군의 입장에서 다시 다뤄보기로 한다. 우선 영이 아닌 정수 $a$ 의 배수의 집합을 $\mathbb{Z}a$ 라고 쓴다. 즉, $a\in \mathbb{Z}$ 에 대해 
 
@@ -608,7 +613,7 @@ $$
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-Za}
+::: {#exm-MA_Za}
 
 $\mathbb{Z}a$ 가 덧셈에 대해 $\mathbb{Z}^+$ 의 부분군이다. 따라서 $(\mathbb{Z}a,+)$ 라고 쓸 수 있다.
 
@@ -617,7 +622,7 @@ $\mathbb{Z}a$ 가 덧셈에 대해 $\mathbb{Z}^+$ 의 부분군이다. 따라서
 </div></br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-subgroup_of_Zplus}
+::: {#prp-MA_subgroup_of_Zplus}
 
 $S$ 가 $\mathbb{Z}^{+}$ 의 부분군이려면 $S=\{0\}$ 이거나 $\mathbb{Z}a$ 형태이며 이 때 $a$ 는 $S$ 에 포함된 가장 작은 양의 정수이다.
 
@@ -633,7 +638,7 @@ $\{0\}\le \mathbb{Z}^+$ 임은 자명하다. $S$ 가 $0$ 이외의 $x$ 를 포�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-additive_groups_generated_by_two_integers}
+::: {#prp-MA_additive_groups_generated_by_two_integers}
 
 두 정수 $a,\,b$ 에 대해 다음 집합 $S$ 를 생각하자.
 
@@ -655,14 +660,15 @@ $(m_1 a+ n_1 b) + (m_2 a + n_2 b) = (m_1+m_2)a+ (n_1 +n_2)b\in S$ 이므로 $S$ 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-additive_groups_generated_by_two_integers}
-$\mathbb{Z}a+ \mathbb{Z}b$ 가 $\mathbb{Z}^+$ 의 부분군이며 nontrivial 하므로 @prp-subgroup_of_Zplus 에 의해 어떤 양의 정수 $c$ 에 대해 $\mathbb{Z}a+\mathbb{Z}b = \mathbb{Z}c$ 이다.
+::: {#cor-MA_additive_groups_generated_by_two_integers}
+
+$\mathbb{Z}a+ \mathbb{Z}b$ 가 $\mathbb{Z}^+$ 의 부분군이며 nontrivial 하므로 @prp-MA_subgroup_of_Zplus 에 의해 어떤 양의 정수 $c$ 에 대해 $\mathbb{Z}a+\mathbb{Z}b = \mathbb{Z}c$ 이다.
 :::
 </div>
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-gcd_in_groups}
+::: {#prp-MA_gcd_in_groups}
 
 $\mathbb{Z}a + \mathbb{Z}b = \mathbb{Z}c$ 일 때 $c=\gcd (a,\,b)$ 이다.
 
@@ -671,12 +677,12 @@ $\mathbb{Z}a + \mathbb{Z}b = \mathbb{Z}c$ 일 때 $c=\gcd (a,\,b)$ 이다.
 </div></br>
 
 ::: {.proof}
-@prp-divisor 를 보라.
+@prp-MA_divisor 를 보라.
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-common_multiplier}
+::: {#prp-MA_common_multiplier}
 
 $0$ 이 아닌 정수 $a,\,b$ 에 대해 $\mathbb{Z}a \cap \mathbb{Z}b$ 는 어떤 양의 정수 $m$ 에 대해 $\mathbb{Z}a \cap \mathbb{Z}b = \mathbb{Z}m$ 이며 $m = \text{lcm}(a, b)$ 이다.
 
@@ -686,7 +692,7 @@ $0$ 이 아닌 정수 $a,\,b$ 에 대해 $\mathbb{Z}a \cap \mathbb{Z}b$ 는 어�
 
 ::: {.proof}
 
-@prp-intersection_of_subgroups 에 의해 $\mathbb{Z}a \cap \mathbb{Z}b$ 는 $\mathbb{Z}^+$ 의 부분군이며 $ab \in \mathbb{Z}a \cap \mathbb{Z}b$ 에 포함되므로 어떤 $m\in \mathbb{Z}_+$ 에 대해 $\mathbb{Z}m$ 이다. $\mathbb{Z}m \le \mathbb{Z}a$ 이므로 $a \mid m$ 이며, 같은 이유로 $b\mid m$ 이다. $a \mid n,\, b \mid n$ 인 양의 정수 $n$ 을 생각하면 $n \in \mathbb{Z}m$ 이므로 $m \mid n$ 이다. 따라서 $m=\text{lcm}(a,\,b)$ 이다. $\square$
+@prp-MA_intersection_of_subgroups 에 의해 $\mathbb{Z}a \cap \mathbb{Z}b$ 는 $\mathbb{Z}^+$ 의 부분군이며 $ab \in \mathbb{Z}a \cap \mathbb{Z}b$ 에 포함되므로 어떤 $m\in \mathbb{Z}_+$ 에 대해 $\mathbb{Z}m$ 이다. $\mathbb{Z}m \le \mathbb{Z}a$ 이므로 $a \mid m$ 이며, 같은 이유로 $b\mid m$ 이다. $a \mid n,\, b \mid n$ 인 양의 정수 $n$ 을 생각하면 $n \in \mathbb{Z}m$ 이므로 $m \mid n$ 이다. 따라서 $m=\text{lcm}(a,\,b)$ 이다. $\square$
 
 :::
 
@@ -695,7 +701,7 @@ $0$ 이 아닌 정수 $a,\,b$ 에 대해 $\mathbb{Z}a \cap \mathbb{Z}b$ 는 어�
 ### 순환군
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-cyclic_group}
+::: {#def-MA_cyclic_group}
 
 #### 순환 부분군과 차수
 
@@ -705,7 +711,7 @@ $0$ 이 아닌 정수 $a,\,b$ 에 대해 $\mathbb{Z}a \cap \mathbb{Z}b$ 는 어�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-order_of_finite_cyclic_group}
+::: {#prp-MA_order_of_finite_cyclic_group}
 
 $G=\langle g \rangle$ 일 때 $|G|= o(g)$ 이다.
 
@@ -975,7 +981,7 @@ $o(g)=\infty$ 이면 임의의 1보다 큰 양의 정수 $n$ 에 대해 $\langle
 
 ::: {.solution}
 
-$G=\langle g \rangle$ 이라 하자. $g^m,\, g^n\in H \le G$ 이면 임의의 정수 $\alpha,\, \beta$ 에 대해 $g^{\alpha m +\beta n}\in H$ 이며 @prp-gcd_in_groups 에서 보았듯이 $d=\gcd (m,\,n)$ 에 대해 $\langle g^d \rangle \le H$ 이므로 순환군의 부분군은 순환군이다.
+$G=\langle g \rangle$ 이라 하자. $g^m,\, g^n\in H \le G$ 이면 임의의 정수 $\alpha,\, \beta$ 에 대해 $g^{\alpha m +\beta n}\in H$ 이며 @prp-MA_gcd_in_groups 에서 보았듯이 $d=\gcd (m,\,n)$ 에 대해 $\langle g^d \rangle \le H$ 이므로 순환군의 부분군은 순환군이다.
 
 :::
 
@@ -1005,7 +1011,7 @@ $x,\,y$ 는 군 $G$ 의 원소이며 $o(x)=o(y)=o(xy)=2$ 이다. 이 때 $H=\{1,
 
 @sec-elementary_row_operation 의 기본 행 연산을 참고하여 다음을 보이시오
 
-&emsp; ($1$) @def-part1_elementary_row_operation 의 $E^{(2)}$ 와 $E^{(3)}$ 가 $GL_n(\mathbb{R})$ 을 생성함을 보이시오.
+&emsp; ($1$) @def-LA_elementary_row_operation 의 $E^{(2)}$ 와 $E^{(3)}$ 가 $GL_n(\mathbb{R})$ 을 생성함을 보이시오.
 
 &emsp; ($2$) $E^{(3  )}$ 가 $SL_n(\mathbb{R})$ 을 생성함을 보이시오. $2\times 2$ 의 경우를 우선 보이시오.
 
@@ -1015,7 +1021,7 @@ $x,\,y$ 는 군 $G$ 의 원소이며 $o(x)=o(y)=o(xy)=2$ 이다. 이 때 $H=\{1,
 
 ::: {.solution}
 
-($1$) @def-part1_elementary_row_operation 를 보자. $E^{(2)}(i, t)$ 는 $i$ 번째 행에 $0$ 이 아닌 스칼라 $t$ 를 곱하는 연산이며 $E^{(3)}(i, j, r)$ 은 $i$ 번째에 $j$ 번째 행에 $r$ 을 곱하여 더하는 연산이다. @prp-reduced_echelon_form_of_invertible_matrix 에서 보였듯이 모든 가역행렬은 행 기본 연산을 통해 항등행렬이 된다. 즉 $E^{(1)}$ 이 $E^{(2)}$ 와 $E^{(3)}$ 의 곱으로 표현될 수 있다면 명제가 증명된다. $E^{(1)}(i, j)$ 는 $i$ 행과 $j$ 행을 교환하는 연산이다. $E^{(1)}(i, j)$ 의 행렬표현은 $i$ 행, $j$ 행, $i$ 열, $j$ 열 을 제외하면 trivial 하며 $i$ 행과 $j$ 행에 대한 $E^{(2)},\,E^{(3)}$ 연산만으로 표현할 수 있음을 보일것이다. 그렇다면 $i$ 행 $j$ 행, $i$ 열, $j$ 열을 제외한 다른 성분에 변화가 없으므로 표현을 단순화하기 위해 $2 \times 2$ 행렬로 나타 낼 수 있다.
+($1$) @def-LA_elementary_row_operation 를 보자. $E^{(2)}(i, t)$ 는 $i$ 번째 행에 $0$ 이 아닌 스칼라 $t$ 를 곱하는 연산이며 $E^{(3)}(i, j, r)$ 은 $i$ 번째에 $j$ 번째 행에 $r$ 을 곱하여 더하는 연산이다. @prp-LA_reduced_echelon_form_of_invertible_matrix 에서 보였듯이 모든 가역행렬은 행 기본 연산을 통해 항등행렬이 된다. 즉 $E^{(1)}$ 이 $E^{(2)}$ 와 $E^{(3)}$ 의 곱으로 표현될 수 있다면 명제가 증명된다. $E^{(1)}(i, j)$ 는 $i$ 행과 $j$ 행을 교환하는 연산이다. $E^{(1)}(i, j)$ 의 행렬표현은 $i$ 행, $j$ 행, $i$ 열, $j$ 열 을 제외하면 trivial 하며 $i$ 행과 $j$ 행에 대한 $E^{(2)},\,E^{(3)}$ 연산만으로 표현할 수 있음을 보일것이다. 그렇다면 $i$ 행 $j$ 행, $i$ 열, $j$ 열을 제외한 다른 성분에 변화가 없으므로 표현을 단순화하기 위해 $2 \times 2$ 행렬로 나타 낼 수 있다.
 $$
 E^{(2)}\left(2, \frac{1}{2}\right) E^{(3)}(2,1, -1)E^{(2)}(1, -2)E^{(3)}\left(1, 2, -\frac{5}{2}\right)E^{(3)}(1,2, 2)E^{(3)}(2, 1, 2)\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} = \boldsymbol{I}_2
 $$
@@ -1084,7 +1090,7 @@ $GR_2(\mathbb{R})$ 에서 $A=\left[\begin{array}{rr} -1 & 1 \\ 0 &1 \end{array}\
 
 ::: {.solution}
 
-($1$) @prp-decomposition_to_transposition 에서 보였다.
+($1$) @prp-LA_decomposition_to_transposition 에서 보였다.
 
 ($2$) $(a,\,b)(b, c) = (a,\,b,\,c)$, $(a,\,b)(c,\,d)=(a,\,b,\,c)(b,\,c,\,d)$ 이므로 임의의 두 호환의 곱은 $3$-cycles 의 곱으로 표현 할 수 있다. $A_n$ 의 모든 원소는 은 짝수개의 호환의 곱으로 표현 할 수 있으므로 $3$-cycles 가 $A_n$ 을 생성한다.
 

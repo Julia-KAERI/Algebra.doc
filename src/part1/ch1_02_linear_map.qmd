@@ -19,7 +19,7 @@ crossref:
 ### 선형사상
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-linear_map}
+::: {#def-LA_linear_map}
 #### 선형사상/선형변환
 
 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 정의된 함수 $L: U \to V$ 이 모든 $u_1,\,u_2\in U,\, c\in \mathbb{F}$ 에 대해 
@@ -35,7 +35,7 @@ $$ {#eq-def_linear_map}
 </br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-zero_map}
+::: {#exm-LA_zero_map}
 
 함수 $L:U \to V$ 가 모든 $u\in U$ 에 대해 $L(u)=0_V$ 일 때 이 $L$ 를 **영사상(zero map)** 이라 부르며 $0(u)$ 와 같이 표기한다. 영사상이 선형사상이다.
 
@@ -45,7 +45,7 @@ $$ {#eq-def_linear_map}
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-T_zero}
+::: {#exm-LA_T_zero}
 $L\in \mathcal{L}(U,\,V)$ 일 때 $L(0_U) = 0_V$ 이다.
 :::
 
@@ -53,7 +53,7 @@ $L\in \mathcal{L}(U,\,V)$ 일 때 $L(0_U) = 0_V$ 이다.
 
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-negative_map}
+::: {#exm-LA_negative_map}
 
 $L\in \mathcal{L}(U,\,V)$ 에 대해 $L(u)=v$ 이면 $L(-u)=-v$ 이다.
 
@@ -62,7 +62,7 @@ $L\in \mathcal{L}(U,\,V)$ 에 대해 $L(u)=v$ 이면 $L(-u)=-v$ 이다.
 </div></br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-operator}
+::: {#def-LA_operator}
 #### 연산자
 
 자기 자신으로의 선형변환은 특별히 **선형 연산자(Linear operator)** 혹은 **연산자(Operator)** 라 하며 벡터공간 $V$ 에서의 선형 연산자의 집합을 $\mathcal{L}(V)$ 라 쓴다.
@@ -72,7 +72,7 @@ $L\in \mathcal{L}(U,\,V)$ 에 대해 $L(u)=v$ 이면 $L(-u)=-v$ 이다.
 </br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-derivative_integral_as_operator}
+::: {#exm-LA_derivative_integral_as_operator}
 
 실수 전체 구간에서 무한번 미분 가능한 $\mathbb{R} \mapsto \mathbb{R}$ 실함수의 집합을 $C_\mathbb{R}^{\infty}$ 라고 한다. $C_\mathbb{R}^\infty$ 는 $\mathbb{R}$-벡터공간임을 쉽게 보일 수 있다. $f\in C_\mathbb{R}^{\infty}$ 에 대한 미분연산자를 $\mathcal{D}$ 라고 하자. 즉 $(\mathcal{Df})(x)= f'(x)$ 이다. $f,\,g\in C_\mathbb{R}^\infty,\, c\in \mathbb{R}$ 에 대해 $\mathcal{D}(f+cg) = f'+cg'\in C_\mathbb{R}^\infty$ 이므로 $\mathcal{D} \in \mathcal{L}(C_\mathbb{R}^\infty)$ 이다. 또한 $\mathcal{I}:C_\mathbb{R}^\infty \to C^\infty$ 를 $(\mathcal{I}f)(x)=\int_{0}^x f(x)\,dx$ 로 정의하자. $\mathcal{I}\in \mathcal{L}(C_\mathbb{R}^\infty)$ 임을 알 수 있다.
 
@@ -84,7 +84,7 @@ $L\in \mathcal{L}(U,\,V)$ 에 대해 $L(u)=v$ 이면 $L(-u)=-v$ 이다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-linearmap_basis}
+::: {#prp-LA_linearmap_basis}
 
 유한차원 벡터공간 $U$ 의 기저 $\{u_1,\ldots,\,u_n\}$ 와 벡터공간 $V$ 를 생각하자. $v_1,\ldots,\,v_n\in V$ 에 대해 
 
@@ -126,7 +126,7 @@ $$
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-identity_operator}
+::: {#exm-LA_identity_operator}
 
 #### 항등사상
 $I_U\in \mathcal{L}(U)$ 일 때 모든 $u\in u$ 에 대해 $I_U(u) = u$ 이면 $I_U$ 를 벡터공간 $U$ 에서의 **항등 사상 (identity operator)** 이라고 한다. 항등사상은 선형사상임은 자명하다. 또한 $L\in \mathcal{L}(U)$ 일 때 다음 두 명제가 동치이다.
@@ -140,7 +140,7 @@ $I_U\in \mathcal{L}(U)$ 일 때 모든 $u\in u$ 에 대해 $I_U(u) = u$ 이면 $
 </div></br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-restriction}
+::: {#def-LA_restriction}
 
 #### 한정 사상
 
@@ -151,14 +151,14 @@ $L\in \mathcal{L}(V,\,W)$ 이고 $U \le V$ 라 하자. 이 때 $L$ 의 정의역
 
 </br>
 
-### 선형사상의 합과 스칼라곱
+### 선형사상의 합과 스칼라곱 {#sec-LA_sum_and_scalar_product_of_linear_map}
 
 앞서 벡터공간 $U,\,V$ 사이의 선형사상의 집합을 $\mathcal{L}(U,\,V)$ 로 표기한다고 하였다. 어떤 특별한 이름이나 표기법을 사용한다는 것은 그것이 매우 중요하다는 것을 뜻한다. $\mathcal{L}(U,\,V)$ 는 왜 이런 특별한 표기를 할까? 그것은 $\mathcal{L}(U,\,V)$ 에 적절한(혹은 합리적인, 납득할만한) 덧셈과 스칼라곱 규칙을 부여하면 [뭔가](ch1_01_vectorspace.qmd#벡터공간과 벡터)가 되기 때문이다. 
 
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-sum_prod_linear_map}
+::: {#def-LA_sum_prod_linear_map}
 #### 선형사상의 합과 스칼라곱
 
 $\mathbb{F}$-벡터공간 $U,\,V$ 와 $L,\,K\in \mathcal{L}(U,\,V),\, u\in V,\, c \in \mathbb{F}$ 에 대해, 선형사상의 합과 스칼라곱은 다음과 같이 정의된다.
@@ -178,7 +178,8 @@ $$
 우리는 이것으로부터 간단하게 선형사상의 아주 중요한 성질을 알 수 있다.
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#prp-LUV_vector_space}
+
+::: {#prp-LA_LUV_vector_space}
 
 #### $\mathcal{L}(U,\,V)$ 는 벡터공간이다 
 
@@ -206,7 +207,7 @@ $$
 
 </br>
 
-### 선형사상의 합성
+### 선형사상의 합성 {#sec-LA_composition_of_linear-maps}
 
 선형사상은 함수이므로 함수의 합성처럼 선형사상의 합성을 정의 할 수 있다. $\mathbb{F}$-벡터공간 $U,\,V,\,W$ 와 $L: \in \mathcal{L}(U,\,V),\, K\in\mathcal{L}(V,\,W)$ 에 대해 
 
@@ -218,8 +219,11 @@ $$
 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#prp-product_map}
+
+::: {#prp-LA_product_map}
+
 선형사상의 합성도 선형사상이다.
+
 :::
 </div></br>
 
@@ -237,7 +241,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-product_map}
+::: {#prp-LA_product_map}
 
 선형사상에 대해서는 다음이 성립한다.
 $$
@@ -260,7 +264,7 @@ $$
 
 ### 쌍대 기저 {#sec-dual_basis_pre}
 
-우리는 $\mathbb{F}$ 가 1차원 벡터공간임을 안다. 따라서 $\mathbb{F}$-벡터공간 $V$ 에 대해 $V\mapsto \mathbb{F}$ 인 선형사상을 생각 할 수 있다.  우리는 @prp-linearmap_basis 에서 $V$ 의 기저에 대해서만 값을 알면 선형사상이 유일하게 정해진다는 것을 보였다. 이제 $V$ 의 기저 $(v_i)$ 에 대해 다음과 같이 정의된 $\varphi_j \in \mathcal{L}(V, \mathbb{F})$ 를 생각 할 수 있다.
+우리는 $\mathbb{F}$ 가 1차원 벡터공간임을 안다. 따라서 $\mathbb{F}$-벡터공간 $V$ 에 대해 $V\mapsto \mathbb{F}$ 인 선형사상을 생각 할 수 있다.  우리는 @prp-LA_linearmap_basis 에서 $V$ 의 기저에 대해서만 값을 알면 선형사상이 유일하게 정해진다는 것을 보였다. 이제 $V$ 의 기저 $(v_i)$ 에 대해 다음과 같이 정의된 $\varphi_j \in \mathcal{L}(V, \mathbb{F})$ 를 생각 할 수 있다.
 
 $$
 \varphi_j (v_i) = \delta_{ij} 
@@ -278,7 +282,7 @@ $V$ 와 그 기저 $\{v_1,\ldots,\,v_n\}$ 에 대해 이렇게 정의된 선형�
 
 </br>
 
-### 선형사상의 행렬표현
+### 선형사상의 행렬표현 {#sec-LA_matrix_representation_of_linear_map}
 
 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $L\in \mathcal{L}(U,\,V)$ 라 하자. $\dim (U) = n$, $\dim (V) = m$ 이며 $\mathcal{B}_U=(u_j),\,\mathcal{B}_V=(v_i)$ 를 각각 $U$ 와 $V$ 의 순서기저라 하자. $u\in U$ 에 대해 $L(u)$ 는 $V$ 의 벡터이므로 $(v_i)$ 의 선형결합으로 표현된다. 따라서 $L(u_j)$ 를 $(v_i)$ 의 선형결합으로 아래와 같이 표현 할 수 있다.
 
@@ -327,7 +331,7 @@ $$
 이다. 행렬의 곱셈을 위와 같이 정의하여 특정 기저에서의 행렬과 벡터의 곱이 선형사상에 맞춰 자연스럽게 정해졌다. 선형 연산자의 경우, 즉 $U=V$ 인 경우는 $\mathcal{B}_U=\mathcal{B}_V$ 일 수 있다. 이경우는 $[L]_{\mathcal{B}_U}$ 로 쓰기로 하자. 기저가 이미 정해져서 아는 경우, 혹은 어떤 기저라도 상관 없는 경우에는 행렬 표현을 $[L]$ 나 $[v]$ 와 같이 줄여서 사용하기로 한다. 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-multiplication_of_matrix}
+::: {#def-LA_multiplication_of_matrix}
 
 $m \times n$ 행렬 $\boldsymbol{A}$ 와 $n \times l$ 행렬 $\boldsymbol{B}$ 의 곱 $\boldsymbol{AB}$ 는 다음과 같이 정의된다.
 
@@ -339,7 +343,7 @@ $$ {#eq-multiplication_of_matrix}
 
 </br>
 
-### 선형사상의 합의 행렬표현
+### 선형사상의 합의 행렬표현 {#sec-LA_matrix_representation_of_sum_of_linear_map}
 
 $L,\,K \in \mathcal{L}(U,\,V)$ 이고 $U,\,V$ 의 기저 $\mathcal{B}_U,\,\mathcal{B}_V$ 에 대해 $\boldsymbol{L}=[L]_{\mathcal{B}_U,\mathcal{B}_V}$, $\boldsymbol{K} =[K]_{\mathcal{B}_U,\mathcal{B}_V}$ 라 하자. $(L+K)(u)= L(u)+ K(u)$  이므로,
 
@@ -355,7 +359,7 @@ $$
 
 </br>
 
-### 선형사상의 합성의 행렬표현
+### 선형사상의 합성의 행렬표현 {#sec-LA_matrix_representation_of_compostion_of_linear_map}
 
 $L\in \mathcal{L}(U,\, W),\, K \in \mathcal{L}(W, V)$ 라 하자. $U,\,V,\,W$ 의 한 기저를 $\mathcal{B}_U =(u_j),\,\mathcal{B}_V = (v_i),\,\mathcal{B}_W = (w_k)$ 라 하자. 이 기저에서의 $L$ 와 $K$ 의 행렬표현을 $\boldsymbol{L},\,\boldsymbol{K}$ 라 하고, $(L\circ K)\in \mathcal{L}(U, V)$ 에 대한 행렬표현 $\boldsymbol{M}$ 를 알아보자.
 
@@ -375,11 +379,11 @@ $$
 \end{aligned}
 $$
 
-이다. @def-multiplication_of_matrix 에 의해 선형사상의 합성은 각 선형사상의 행렬표현의 곱임을 알 수 있다. $\boldsymbol{K}$ 가 $K\in \mathcal{L}(W,\,V)$ 의 행렬표현이며, $\boldsymbol{L}$ 가 $L\in \mathcal{L}(U,\,W)$ 의 행렬표현이므로 $\boldsymbol{K}$ 의 열의 갯수와 $\boldsymbol{L}$ 의 행의 갯수는 $\text{dim}(W)$ 와 같아야 한다. 
+이다. @def-LA_multiplication_of_matrix 에 의해 선형사상의 합성은 각 선형사상의 행렬표현의 곱임을 알 수 있다. $\boldsymbol{K}$ 가 $K\in \mathcal{L}(W,\,V)$ 의 행렬표현이며, $\boldsymbol{L}$ 가 $L\in \mathcal{L}(U,\,W)$ 의 행렬표현이므로 $\boldsymbol{K}$ 의 열의 갯수와 $\boldsymbol{L}$ 의 행의 갯수는 $\text{dim}(W)$ 와 같아야 한다. 
 
 </br>
 
-### 선형 사상의 스칼라곱
+### 선형 사상의 스칼라곱  {#sec-LA_scalar_multiplication_of_linear_map}
 
 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $L \in \mathcal{L}(U,\,V)$ 일 때 $[L]_{\mathcal{B}_U,\mathcal{B}_V} = \boldsymbol{L}$ 이며 $c\in \mathbb{F}$ 라 하자.
 
@@ -391,9 +395,9 @@ $$
 
 </br>
 
-### 항등사상과 항등행렬
+### 항등사상과 항등행렬 {#sec-LA_identity_matrix}
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-identity_matrix}
+::: {#def-LA_identity_matrix}
 
 #### 항등 행렬 (identity matrix)
 
@@ -403,7 +407,7 @@ $$
 
 </br>
 
-### 행렬의 행벡터와 열벡터
+### 행렬의 행벡터와 열벡터 {#sec-LA_column_vector_and_row_vector}
 
 $\mathcal{M}_{1\times n}(\mathbb{F})$ 과 $\mathcal{M}_{n \times 1}(\mathbb{F})=\mathcal{M}_n(\mathbb{F})$ 이 벡터공간임을 안다. 행렬 $\boldsymbol{A}$ 의 $i,\,j$ 성분을 $A_{ij}$ 혹은 $A_{i,j}$  로 표현할 수 있듯이 $\boldsymbol{A}$ 의 $i$ 번째 행을 $\boldsymbol{A}_{i,:}$ 혹은 $\boldsymbol{A}_{i:}$ 라 쓰고 $j$ 번째 열을 $\boldsymbol{A}_{:,j}$ 혹은 $\boldsymbol{A}_{:j}$ 라 쓰기로 하자. 각각의 $\boldsymbol{A}_{:i}$ 와 $\boldsymbol{A}_{j:}$ 를 행벡터와 열벡터로 간주한다. 즉 $m\times n$ 행렬의 경우 $\boldsymbol{A}_{:i}\in \mathcal{M}_m(\mathbb{F})$ 이며 $\boldsymbol{A}_{i:}\in \mathcal{M}_{1 \times n}(\mathbb{F})$ 이다. 많은 경우 계산을 하는데 도움이 된다.
 
@@ -442,11 +446,11 @@ $$
 
 ## 선형사상의 kernel, image, rank, nullity
 
-### 선형사상의 kernel 과 image
+### 선형사상의 kernel 과 image {#sec-LA_kernel_and_image_of_linear_map}
 
 ::: {.callout-note appearance="simple" icon="false"}
 
-::: {#def-ker_range}
+::: {#def-LA_ker_range}
 
 #### $\text{ker}$ 와 $\text{im}$
 
@@ -464,7 +468,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-ker_range_subspace}
+::: {#lem-LA_ker_range_subspace}
 
 $L\in \mathcal{L}(U,\,V)$ 일 때, $\ker (L) \le U$ 이며 $\text{im} (L) \le V$ 의 부분공간이다.
 
@@ -489,7 +493,7 @@ $\ker (L)$ 와 $\text{im}(L)$ 가 각각 부분공간이기 때문에 차원을 
 
 ::: {.callout-note appearance="simple" icon="false"}
 
-::: {#def-nullity_rank}
+::: {#def-LA_nullity_rank}
 
 #### **nullity** 와 **rank**
 
@@ -508,11 +512,11 @@ $$
 
 </br>
 
-### Rank-nullity 정리 {#sec-part1_rank_nullity_theorem}
+### Rank-nullity 정리 {#sec-LA_rank_nullity_theorem}
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-rank_nullity}
+::: {#thm-LA_rank_nullity}
 
 #### Rank-nullity 정리
 
@@ -527,7 +531,7 @@ $$
 </div></br>
 
 ::: {.proof}
-$\ker (L)$ 는 $U$ 의 부분공간이다(@lem-ker_range_subspace). $\text{nullity}(L)=m$ 이라 하고 $\ker (L)$ 의 기저를 $(u_1,\ldots,u_m )$ 이라 하자. 이 기저를 확장하여 $U$ 의 기저를 이루는 벡터 $(u_1,\ldots,\,u_m,\,w_1,\ldots,w_n)$ 를 구할 수 있다(@lem-basis_expansion). 그렇다면 $\dim (U) = m + n$ 이다. 이제 $\text{rank}(L)=n$ 임을 보이면 된다.
+$\ker (L)$ 는 $U$ 의 부분공간이다(@lem-LA_ker_range_subspace). $\text{nullity}(L)=m$ 이라 하고 $\ker (L)$ 의 기저를 $(u_1,\ldots,u_m )$ 이라 하자. 이 기저를 확장하여 $U$ 의 기저를 이루는 벡터 $(u_1,\ldots,\,u_m,\,w_1,\ldots,w_n)$ 를 구할 수 있다(@lem-LA_basis_expansion). 그렇다면 $\dim (U) = m + n$ 이다. 이제 $\text{rank}(L)=n$ 임을 보이면 된다.
 
 임의의 $v = a_1 u_1 + \cdots a_m u_m + b_1 w_1 + \cdots + b_n w_n$ 에 대해 $L(v)=a_1 L(w_1) + \cdots + a_n L(w_n)$ 이다. 즉 $\{L(w_1),\ldots,L(w_n)\}$ 이 $\text{im}(L)$ 를 span 한다. 이제 $\{L(w_1),\ldots,L(w_n)\}$ 이 선형 독립임을 보이자. $c_1 L(w_1) + \cdots + c_n L(w_n) = 0_V$ 인 $c_1,\ldots,c_n \in \mathbb{F}$ 를 찾자. $c_1 L(w_1) + \cdots + c_n L(w_n) = 0_V$ 라면 $L(c_1 w_1 + \cdots + c_n w_n) = 0_V$ 이므로 $c_1T(w_1) + \cdots + c_n T(w_n) \in \ker (T)$ 이어야 한다. 따라서,
 
@@ -544,7 +548,8 @@ $$
 아래의 명제는 위의 증명과정에서 보였지만 별도로 언급할 가치가 있다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#cor-range_independence}
+
+::: {#cor-LA_range_independence}
 선형사상 $L\in \mathcal{L}(U,\,V)$ 에 대해 $\{u_1,\ldots,\,u_m\}\subset U$ 가 선형독립이며 $L(u_i)\ne 0_V\, (i=1,\ldots,\,m)$ 이라 하자. 이 때 $\{L(u_1),\ldots,\, L(u_m)\}$ 은 선형독립이다.
 :::
 
@@ -554,12 +559,12 @@ $$
 
 ## 동형사상과 선형연산자
 
-### 동형사상과 동형 {#sec-part1_isomorphism_of_linear_map}
+### 동형사상과 동형 {#sec-LA_isomorphism_of_linear_map}
 
 선형사상은 벡터에 대한 함수이므로 역함수를 생각 할 수 있으며 선형사상이 전단사 함수라면 당연히 역함수, 즉 역사상(inverse map)이 존재한다. 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-isomorphism_in_vector_space}
+::: {#def-LA_isomorphism_in_vector_space}
 
 #### 가역사상/동형사상 
 
@@ -578,7 +583,7 @@ $L\in \mathcal{L}(U,\,V)$ 에 대한 역사상은 $T^{-1}$ 로 표기하며, 역
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-condition_of_injectivity}
+::: {#prp-LA_condition_of_injectivity}
 
 선형사상 $L\in \mathcal{L}(U,\,V)$ 가 단사(injection) 일 필요충분조건은 $\text{nullity} (L) = 0$ 이다.
 
@@ -594,7 +599,7 @@ $\text{nullity}(L)=0$ 이면 $\ker (L)=\{0_U\}$ 이다. $L(u_1)=L(u_2)$ $\implie
 
 <br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-same_dim_vs}
+::: {#prp-LA_same_dim_vs}
 두 유한차원 벡터공간 $U,\,V$ 에 대해 다음은 동치이다.
 
 &emsp; ($1$) $\dim (U) = \dim (V)$, 
@@ -610,7 +615,7 @@ $m=\dim (U),\, n = \dim (V)$ 이며 $(u_i),\,(v_j)$ 가 각각의 기저라 하�
 
 (1 $\implies$ 2) $L\in \mathcal{L}(U,\,V)$ 를 $L({u_i}) =v_i, \, i=1,\ldots, m=n$ 로 정의하면,  $\ker (L) = \{0_U\}$ 이므로 단사이고, $\text{im}(L) = V$ 이므로 전사이다. 따라서 $U \cong V$ 이다. 
 
-(2 $\implies$ 1) $L\in \mathcal{L}(U,\,V)$ 가 동형사상이면 $L$ 가 전사이므로 $\text{im}(L) = V$ 이어야 하며, $L$ 가 단사이므로 $\text{nullity} (L) = 0$ 이어야 한다. 선형사상의 기본정리(@thm-rank_nullity) 에 의해
+(2 $\implies$ 1) $L\in \mathcal{L}(U,\,V)$ 가 동형사상이면 $L$ 가 전사이므로 $\text{im}(L) = V$ 이어야 하며, $L$ 가 단사이므로 $\text{nullity} (L) = 0$ 이어야 한다. 선형사상의 기본정리(@thm-LA_rank_nullity) 에 의해
 
 $$
 \dim (U) = \text{nullity} (L) + \text{rank}(L) = 0 + \dim (V) = \dim (V)
@@ -627,7 +632,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-isomorphism_U_F}
+::: {#cor-LA_isomorphism_U_F}
 $n$ 차원 $\mathbb{F}$-벡터공간 $U$ 와 $\mathcal{M}_{n}(\mathbb{F})$, $\mathcal{M}_{1 \times n}(\mathbb{F})$ 은 동형이다.
 
 :::
@@ -636,7 +641,7 @@ $n$ 차원 $\mathbb{F}$-벡터공간 $U$ 와 $\mathcal{M}_{n}(\mathbb{F})$, $\ma
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-linearity_of_inverse_map}
+::: {#lem-LA_linearity_of_inverse_map}
 
 $L\in \mathcal{L}(U,\,V)$ 가 동형사상일 때 $L^{-1}$ 도 동형사상이다.
 
@@ -661,7 +666,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-basis-tranformations}
+::: {#thm-LA_basis-tranformations}
 
 #### 가역사상과 기저의 변환
 
@@ -677,7 +682,7 @@ $L\in \mathcal{L}(V,\,W)$ 에 대해 다음 두 명제는 동치이다.
 
 ::: {.proof}
 
-(1 $\implies$ 2) $V$ 의 기저 $\{v_1,\ldots,\,v_m\}$ 에 대해 $\text{nullity} (L) = 0$ 이므로 @cor-range_independence 에 따라 $\{L(v_1),\ldots,\, L(v_m)\}$ 은 선형독립이다. $L$ 이 전사이므로  $\{L(v_1),\ldots,\, L(v_m)\}$ 는 역시 $V$ 의 기저이다.
+(1 $\implies$ 2) $V$ 의 기저 $\{v_1,\ldots,\,v_m\}$ 에 대해 $\text{nullity} (L) = 0$ 이므로 @cor-LA_range_independence 에 따라 $\{L(v_1),\ldots,\, L(v_m)\}$ 은 선형독립이다. $L$ 이 전사이므로  $\{L(v_1),\ldots,\, L(v_m)\}$ 는 역시 $V$ 의 기저이다.
 
 (2 $\implies$ 1) $L$ 가 $V$ 의 기저를 $W$ 로 기저로 변환하므로 $\text{im}\, (L)=W$ 이다. 따라서 $L$ 은 전사이다. $V$ 의 기저 벡터중 $L$ 에 의해 영벡터가 되는 것이 없으므로 (영벡터를 포함하는 벡터의 집합은 무조건 선형종속이므로 기저가 될 수 없다) $\text{nullity}(L) = 0$ 이다. 따라서 $L$ 은 단사이다. 즉 $L$ 는 동형사상이다. $\square$
 
@@ -685,9 +690,9 @@ $L\in \mathcal{L}(V,\,W)$ 에 대해 다음 두 명제는 동치이다.
 
 </br>
 
-### 선형사상공간의 차원 {#sec-part1_dimension_of_linear_map_space}
+### 선형사상공간의 차원 {#sec-LA_dimension_of_linear_map_space}
 
-우리는 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $\mathcal{L}(U,\,V)$ 가 벡터공간이라는 것을 안다(@prp-LUV_vector_space). 또한 $\mathbb{F}$ 의 원소를 성분으로 갖는 $m \times n$ 행렬의 집합 $\mathcal{M}_{m \times n}(\mathbb{F})$ 도 벡터공간이라는 것을 안다 (@exm-vectorspace_matrix). $n = \dim (U),\, m = \dim (V)$ 이고 $\mathcal{B}_U = (u_i)$, $\mathcal{B}_V = (v_j)$ 가 각각 $U,\,V$ 의 기저라고 하자. $L\in \mathcal{L}(U,\,V)$ 의 행렬표현 $[L]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 를 생각하면 $[-]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 는 $\mathcal{L}(U,\,V) \mapsto\mathcal{M}_{\dim V \times \dim U}(\mathbb{F})$ 함수이다. $L,\, K\in \mathcal{L}(U,\,V)$, $c \in \mathbb{F}$ 에 대해
+우리는 $\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $\mathcal{L}(U,\,V)$ 가 벡터공간이라는 것을 안다(@prp-LA_LUV_vector_space). 또한 $\mathbb{F}$ 의 원소를 성분으로 갖는 $m \times n$ 행렬의 집합 $\mathcal{M}_{m \times n}(\mathbb{F})$ 도 벡터공간이라는 것을 안다 (@exm-LA_vectorspace_matrix). $n = \dim (U),\, m = \dim (V)$ 이고 $\mathcal{B}_U = (u_i)$, $\mathcal{B}_V = (v_j)$ 가 각각 $U,\,V$ 의 기저라고 하자. $L\in \mathcal{L}(U,\,V)$ 의 행렬표현 $[L]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 를 생각하면 $[-]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 는 $\mathcal{L}(U,\,V) \mapsto\mathcal{M}_{\dim V \times \dim U}(\mathbb{F})$ 함수이다. $L,\, K\in \mathcal{L}(U,\,V)$, $c \in \mathbb{F}$ 에 대해
 
 $$
 \left[ L + c K \right]_{\mathcal{B}_U, \mathcal{B}_V} = [L]_{\mathcal{B}_U, \mathcal{B}_V} + [c K]_{\mathcal{B}_U, \mathcal{B}_V} = [L]_{\mathcal{B}_U, \mathcal{B}_V} + c [K]_{\mathcal{B}_U, \mathcal{B}_V}
@@ -697,7 +702,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-MM_linearmap}
+::: {#lem-LA_MM_linearmap}
 
 $\mathbb{F}$ 에서 정의된 유한차원 벡터공간 $U,\,V$ 와 그 순서기저 $\mathcal{B}_U,\, \mathcal{B}_V$ 에 대해 $[L] = [L]_{\mathcal{B}_U,\,\mathcal{B}_V}$ 는 $\mathcal{L}(U,\,V) \to \mathcal{M}_{\dim V \times \dim U}(\mathbb{F})$ 인 선형사상이다.
 
@@ -709,24 +714,24 @@ $\mathbb{F}$ 에서 정의된 유한차원 벡터공간 $U,\,V$ 와 그 순서�
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-isomorphic}
+::: {#thm-LA_isomorphic}
 $n$ 차원 벡터공간 $U$ 와 $m$ 차원 벡터공간 $V$ 에 대해 $\mathcal{L}(U,\,V)$ 는 $\mathcal{M}_{m\times n}(\mathbb{F})$ 와 동형이다.
 :::
 
 </div></br>
 
 ::: {.proof}
-$U,\,V$ 의 기저를 각각 $\mathcal{B}_U = (u_i),\,\mathcal{B}_V = (v_j)$ 라 할 때 $\Phi: \mathcal{L}(U,\,V) \to \mathcal{M}_{m \times n}(\mathbb{F})$ 를 $\Phi(L) = [L]_{\mathcal{B}_U, \mathcal{B}_V}$ 로 정의한다. @lem-MM_linearmap 으로부터 $\Phi$ 는 선형사상임을 안다. $\ker (\Phi) = \{0_U\}$ 이므로 단사(injective)이다. 모든 $\mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 상응하는 $L$ 가 존재하므로 전사(surjective)이다. 즉 $\Phi$ 는 동형사상이다. $\square$
+$U,\,V$ 의 기저를 각각 $\mathcal{B}_U = (u_i),\,\mathcal{B}_V = (v_j)$ 라 할 때 $\Phi: \mathcal{L}(U,\,V) \to \mathcal{M}_{m \times n}(\mathbb{F})$ 를 $\Phi(L) = [L]_{\mathcal{B}_U, \mathcal{B}_V}$ 로 정의한다. @lem-LA_MM_linearmap 으로부터 $\Phi$ 는 선형사상임을 안다. $\ker (\Phi) = \{0_U\}$ 이므로 단사(injective)이다. 모든 $\mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 상응하는 $L$ 가 존재하므로 전사(surjective)이다. 즉 $\Phi$ 는 동형사상이다. $\square$
 
 :::
 
 </br>
 
-위의 정리와 @prp-same_dim_vs 로부터 다음을 알 수 있다.
+위의 정리와 @prp-LA_same_dim_vs 로부터 다음을 알 수 있다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-dimension_of_LUV}
+::: {#cor-LA_dimension_of_LUV}
 
 유한차원 벡터공간 $U,\,V$ 에 대해 다음이 성립한다.
 
@@ -759,22 +764,22 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-part1_isomorphic_linear_map}
+::: {#thm-LA_isomorphic_linear_map}
 
 유한차원 벡터공간 $V$ 에서의 선형 연산자 $L\in \mathcal{L}(V)$ 에 대해 다음 세 명제는 동치이다.
 
-&emsp; ($1$) $L$ 는 가역이다.
+&emsp;($1$) $L$ 는 가역이다.
 
-&emsp; ($2$) $L$ 는 단사이다.
+&emsp;($2$) $L$ 는 단사이다.
 
-&emsp; ($3$) $L$ 는 전사이다.
+&emsp;($3$) $L$ 는 전사이다.
 
 :::
 
 </div></br>
 
 ::: {.proof}
-함수가 가역이면 전단사이고, 전단사 이면 가역이다. 따라서 $L$ 가 전사라는 것과 단사라는 것이 동치임을 보이면 된다. Rank-nullity 정리(@thm-rank_nullity) 로부터
+함수가 가역이면 전단사이고, 전단사 이면 가역이다. 따라서 $L$ 가 전사라는 것과 단사라는 것이 동치임을 보이면 된다. Rank-nullity 정리(@thm-LA_rank_nullity) 로부터
 
 $$
 \dim (V) = \text{nullity}(L)  + \text{rank}(L)
@@ -800,7 +805,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#cor-basis_transformation}
+::: {#cor-LA_basis_transformation}
 
 유한차원 벡터공간 $V$ 에서의 선형연산자 $L\in \mathcal{L}(V)$ 에 대해 다음은 동치이다.
 
@@ -811,7 +816,7 @@ $$
 
 </div></br>
 
-### 곱공간
+### 곱공간 
 
 우리는 앞서 데카르트곱에 대해 알아보았다. 이제 벡터공간의 데카르트곱이 벡터공간이 되도록 확장하는 것을 알아보도록 하자.
 
@@ -819,7 +824,7 @@ $$
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-product_space}
+::: {#def-LA_product_space}
 
 #### 곱공간
 
@@ -859,18 +864,18 @@ $v\in V_1 \times \cdots \times V_m$ 일 때 $v$ 는 $(v_1,\ldots,\,v_m)$ 이며 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-product_space}
+::: {#prp-LA_product_space}
 곱공간은 벡터공간이다.
 :::
 
 </div></br>
 
 
-우리는 $\mathbb{F}$ 가 벡터공간임을 안다. 위의 @def-product_space 의 정의에 따라 곱공간 $\mathbb{F}^n$ 을 벡터공간으로 볼 수 있다. 실제로 우리가 수학 및 여러 다양한 분야에서 사용하는 $\mathbb{F}^n$ 은 벡터공간으로서의 $\mathbb{F}^n$ 이며 실제로는 앞으로 배울 내적이 정의된 내적벡터공간으로서의 $\mathbb{F}^n$ 이다.
+우리는 $\mathbb{F}$ 가 벡터공간임을 안다. 위의 @def-LA_product_space 의 정의에 따라 곱공간 $\mathbb{F}^n$ 을 벡터공간으로 볼 수 있다. 실제로 우리가 수학 및 여러 다양한 분야에서 사용하는 $\mathbb{F}^n$ 은 벡터공간으로서의 $\mathbb{F}^n$ 이며 실제로는 앞으로 배울 내적이 정의된 내적벡터공간으로서의 $\mathbb{F}^n$ 이다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-dimension_of_product_space}
+::: {#prp-LA_dimension_of_product_space}
 
 $V_1,\ldots,\,V_m$ 이 유한차원 벡터공간일 때,
 $$
@@ -890,7 +895,7 @@ $(v^{(i)}_1,\ldots,\,v^{(i)}_{m_i})$ 를 $V_i$ 의 기저라고 하면 $\dim (V_
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-map_product_space}
+::: {#prp-LA_map_product_space}
 
 $U_1,\ldots,\,U_m$ 이 $\mathbb{F}$-벡터공간 $U$ 의 부분공간일 때 다음과 같이 정의된 함수 $\Phi :  U_1 \times \cdots \times U_m  \to  U_1 + \cdots + U_m$ 는 선형사상이다.
 
@@ -907,7 +912,7 @@ $U = U_1 \times \cdots \times U_m$ 에 대해 $u,\,u'\in U,\, c \in \mathbb{F}$ 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-product_space_and_direct_sum}
+::: {#prp-LA_product_space_and_direct_sum}
 위에서 정의된 $\Phi$ 가 단사인 것의 필요충분조건은 $U_1+ \cdots +U_m$ 이 [직합(direct sum)](#직합) 인 것이다.
 :::
 
@@ -915,7 +920,7 @@ $U = U_1 \times \cdots \times U_m$ 에 대해 $u,\,u'\in U,\, c \in \mathbb{F}$ 
 
 ::: {.proof}
 
-@thm-directsum 에 의해 $U_1 + \cdots + U_m$ 이 직합일 필요충분조건은 $0$ 을 각각의 $u_i\in U_i$ 의 합으로 나타내는 방법이 모든 $u_i=0$ 인 것 뿐이다. 따라서, 
+@thm-LA_directsum 에 의해 $U_1 + \cdots + U_m$ 이 직합일 필요충분조건은 $0$ 을 각각의 $u_i\in U_i$ 의 합으로 나타내는 방법이 모든 $u_i=0$ 인 것 뿐이다. 따라서, 
 
 $$
 \begin{aligned}
@@ -929,7 +934,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-directsum_condition}
+::: {#prp-LA_directsum_condition}
 유한차원 벡터공간 $U$ 의 부분공간 $U_1,\ldots,\,U_m$ 에 대해 $U_1 + \cdots + U_m$ 이 직합일 필요충분조건은
 $$
 \dim (U_1 + \cdots + U_m) = \dim U_1 + \cdots + \dim U_m
@@ -941,7 +946,7 @@ $$
 </div></br>
 
 ::: {.proof}
-@prp-map_product_space 에서 정의된 $\Phi$ 를 생각한다. @prp-product_space_and_direct_sum 에 의해 $U_1+\cdots + U_m$ 이 직합일 필요충분조건이 $\Phi$ 가 단사인 것이며, $U_1 \times \cdots \times U_m$ 과 $U_1 + \cdots + U_m$ 이 유한차원 벡터공간이므로 $\Phi$ 가 단사인 것의 필요충분조건은 
+@prp-LA_map_product_space 에서 정의된 $\Phi$ 를 생각한다. @prp-LA_product_space_and_direct_sum 에 의해 $U_1+\cdots + U_m$ 이 직합일 필요충분조건이 $\Phi$ 가 단사인 것이며, $U_1 \times \cdots \times U_m$ 과 $U_1 + \cdots + U_m$ 이 유한차원 벡터공간이므로 $\Phi$ 가 단사인 것의 필요충분조건은 
 $$
 \dim (U_1 + \cdots + U_m) = \dim U_1 + \cdots + \dim U_m
 $$
@@ -950,16 +955,16 @@ $$
 
 </br>
 
-### 가역사상과 역행렬
+### 가역사상과 역행렬 {#sec-LA_invertible_map_and_inverse_matrix}
 
 $L\in \mathcal{L}(U,\,V)$ 가 가역사상이라고 하자. 이 때 임의의 $u\in U,\, v\in V$ 에 대해 $(L^{-1}\circ T )(u)=u$ 이고 $(L \circ L^{-1}) (v)= v$ 이다. $\mathcal{B}_U,\,\mathcal{B}_V$ 가 각각 $U,\,V$ 의 기저라고 하자. $\boldsymbol{L}=[L]_{\mathcal{B}_U, \mathcal{B}_V}$ 에 대해 $[L^{-1}]_{\mathcal{B}_V,\mathcal{B}_U} =\boldsymbol{L}^{-1}$ 이라고 쓰는 것은 자연스럽다. 또한 $\boldsymbol{LL}^{-1} = \boldsymbol{L}^{-1}\boldsymbol{L} = \boldsymbol{I}$ 라는 것을 알 수 있다. 이 때 $\boldsymbol{L}^{-1}$ 을 $\boldsymbol{L}$ 의 **역행렬 (inverse matrix)** 라 한다.
 
 
 </br>
 
-### 기저의 변화에 따른 행렬의 변화 {#sec-matrix_transform_by_basis_transform}
+### 기저의 변화에 따른 행렬의 변화 {#sec-LA_matrix_transform_by_basis_transform}
 
-$U$ 가 $n$ 차원 $\mathbb{F}$-벡터공간이며 $\mathcal{B}_1 = (u_1,\ldots,u_n)$ 이 $U$ 의 기저라고 하자. $P\in \mathcal{L}(U)$ 가 가역이면 @cor-basis_transformation 에서 보았듯이 $\mathcal{B}_2= (P(u_1),\ldots, P(u_n) )$ 도 $U$ 의 기저이다. $v_i = T(u_i)$ 라고 할 때 $P$ 가 다음과 같이 정의된다고 하자.
+$U$ 가 $n$ 차원 $\mathbb{F}$-벡터공간이며 $\mathcal{B}_1 = (u_1,\ldots,u_n)$ 이 $U$ 의 기저라고 하자. $P\in \mathcal{L}(U)$ 가 가역이면 @cor-LA_basis_transformation 에서 보았듯이 $\mathcal{B}_2= (P(u_1),\ldots, P(u_n) )$ 도 $U$ 의 기저이다. $v_i = T(u_i)$ 라고 할 때 $P$ 가 다음과 같이 정의된다고 하자.
 
 $$
 P(u_i) = \sum_{j=1}^n P_{ji}u_j = v_i
@@ -1002,7 +1007,7 @@ $$
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-similarity_transformation_of_linear_operator}
+::: {#def-LA_similarity_transformation_of_linear_operator}
 
 #### 연산자의 닮음과 닮음변환
 
@@ -1016,7 +1021,7 @@ $K=P^{-1}\circ L \circ P$ 라면 그 행렬표현도 $[K] = [P^{-1}][L][P]$ 일 
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-similarity_transformation}
+::: {#def-LA_similarity_transformation}
 
 #### 행렬의 닮음과 닮음변환
 
@@ -1031,7 +1036,7 @@ $K=P^{-1}\circ L \circ P$ 라면 그 행렬표현도 $[K] = [P^{-1}][L][P]$ 일 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-basis_transoframtion_by_similarity_transformation}
+::: {#prp-LA_basis_transoframtion_by_similarity_transformation}
 $\boldsymbol{P}$ 가 가역행렬일 때 $\boldsymbol{P}$ 의 각 열은 표준기저가 이 변환에 의해 변환된 새로운 기저이다.
 :::
 
@@ -1043,15 +1048,15 @@ $\boldsymbol{P}$ 가 가역행렬일 때 $\boldsymbol{P}$ 의 각 열은 표준�
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exm-similarity_equivalence}
+::: {#exm-LA_similarity_equivalence}
 
 두 정사각 행렬 $\boldsymbol{A},\,\boldsymbol{B}$ 가 닮았을 때 $\boldsymbol{A} \sim \boldsymbol{B}$ 라 표현한다고 하자. 이 때 다음이 성립함을 보여라.
 
-1. $\boldsymbol{A} \sim \boldsymbol{A}$ 이다.
+&emsp;($1$) $\boldsymbol{A} \sim \boldsymbol{A}$ 이다.
 
-2. $\boldsymbol{A} \sim \boldsymbol{B}$ 이면 $\boldsymbol{B} \sim \boldsymbol{A}$ 이다.
+&emsp;($2$) $\boldsymbol{A} \sim \boldsymbol{B}$ 이면 $\boldsymbol{B} \sim \boldsymbol{A}$ 이다.
 
-3. $\boldsymbol{A} \sim \boldsymbol{B}$ 이고 $\boldsymbol{B} \sim \boldsymbol{C}$ 이면 $\boldsymbol{C} \sim \boldsymbol{A}$ 이다.
+&emsp;($3$) $\boldsymbol{A} \sim \boldsymbol{B}$ 이고 $\boldsymbol{B} \sim \boldsymbol{C}$ 이면 $\boldsymbol{C} \sim \boldsymbol{A}$ 이다.
 
 :::
 
@@ -1065,7 +1070,7 @@ $\boldsymbol{P}$ 가 가역행렬일 때 $\boldsymbol{P}$ 의 각 열은 표준�
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-linear_map_1}
+::: {#exr-LA_linear_map_1}
 
 $V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(V, W)$ 이다. $V$ 의 어떤 부분공간 $U$ 는 $U \cap \ker (L)=\{0\}$ 이며 $\text{im}\,(L)=\{L(u) : u \in U\}$ 임을 보여라.
 :::
@@ -1074,13 +1079,13 @@ $V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(V, W)$ 이다. $V$ 의
 
 ::: {.solution}
 
-$\ker (L)$ 의 기저 $(v_1,\ldots,\,v_m)$ 을 확장하여 $V$ 의 기저 $(v_1,\ldots,\,v_m,\,u_1,\ldots,\,u_n)$ 을 구성 할 수 있다(@lem-basis_expansion). $U=\text{span}(u_1,\ldots,\,u_n)$ 이라 놓으면 된다. 
+$\ker (L)$ 의 기저 $(v_1,\ldots,\,v_m)$ 을 확장하여 $V$ 의 기저 $(v_1,\ldots,\,v_m,\,u_1,\ldots,\,u_n)$ 을 구성 할 수 있다(@lem-LA_basis_expansion). $U=\text{span}(u_1,\ldots,\,u_n)$ 이라 놓으면 된다. 
 
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-dimension_and_injectivity_surjectivity}
+::: {#exr-LA_dimension_and_injectivity_surjectivity}
 
 $U,\,V$ 가 유한차원 벡터공간일 때 다음을 보여라.
 
@@ -1106,13 +1111,13 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-inverse_image_of_linear_map}
+::: {#exr-LA_inverse_image_of_linear_map}
 
 $L\in \mathcal{L}(U,\,V)$ 이며 어떤 $u\in U$ 에 대해 $L(u)=v$ 일 때 다음을 보여라.
 
-&emsp; ($1$) $L^{-1}(\{v\}) = \{u+x: x\in \ker (L)\}$ 이다.
+&emsp;($1$) $L^{-1}(\{v\}) = \{u+x: x\in \ker (L)\}$ 이다.
 
-&emsp; ($2$) $L^{-1}(\{v\})$ 와 $\ker (L)$ 사이에 전단사 함수가 존재한다.
+&emsp;($2$) $L^{-1}(\{v\})$ 와 $\ker (L)$ 사이에 전단사 함수가 존재한다.
 
 :::
 

@@ -13,7 +13,7 @@ crossref:
 
 ## Adjoint 연산자와 행렬
 
-### Adjoint operator {#sec-adjoint_operator}
+### Adjoint operator {#sec-LA_adjoint_operator}
 
 $L\in \mathcal{L}(U,\,V)$ 에 대해 다음의 성질을 만족하는 $L^\ast : V \to U$ 를 $L$ 에 대한 adjoint function 이라고 한다.
 
@@ -21,7 +21,7 @@ $$
 \langle L (u),\,v \rangle = \langle u,\, L^\ast (v) \rangle.
 $$ {#eq-adjoint_function}
 
-우선 고정된 $v$ 에 대해 $\phi (u) = \langle Lu,\,v\rangle$ 는 선형 범함수(@exr-adjoint_operator_1) 이며 @thm-part1_reisz_representation_theorem_1 에 의해 $\phi(u) = \langle u, w\rangle$ 인 $w\in U$ 가 유일하게 존재한다. 이제 함수 $L^\ast : V \to U$ 를 $L^\ast( v)= w$ 인 함수로 생각 할 수 있다. (뭔가 이상한가? 이상해야 하는데..) 이 $L^\ast$ 를 $L$ 에 대한 adjoint function 이라고 한다.
+우선 고정된 $v$ 에 대해 $\phi (u) = \langle Lu,\,v\rangle$ 는 선형 범함수(@exr-adjoint_operator_1) 이며 @thm-LA_reisz_representation_theorem_1 에 의해 $\phi(u) = \langle u, w\rangle$ 인 $w\in U$ 가 유일하게 존재한다. 이제 함수 $L^\ast : V \to U$ 를 $L^\ast( v)= w$ 인 함수로 생각 할 수 있다. (뭔가 이상한가? 이상해야 하는데..) 이 $L^\ast$ 를 $L$ 에 대한 adjoint function 이라고 한다.
 
 </br>
 
@@ -51,7 +51,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-adjoint_transformation}
+::: {#prp-LA_adjoint_transformation}
 
 위에서 정의된 $L\in \mathcal{L}(U,\,V)$ 에 대한 adjoint function $L^\ast$ 는 선형사상이다.
 
@@ -78,7 +78,7 @@ $$
 
 ::: {.callout-warning appearance="minimal"}
 
-여기서 한가지 짚어야 할 것이 있다. 우리는 리츠의 표현정리(@thm-part1_reisz_representation_theorem_1) 를 이용하였는데 이 정리는 유한차원 벡터공간에서만 성립한다. 실제로 adjoint 는 유한차원 벡터공간에서만 유일하게 정해지며, 무한차원벡터공간에서는 유일하지 않을 수 있다(@Hoffman1971 . pp 295)
+여기서 한가지 짚어야 할 것이 있다. 우리는 리츠의 표현정리(@thm-LA_reisz_representation_theorem_1) 를 이용하였는데 이 정리는 유한차원 벡터공간에서만 성립한다. 실제로 adjoint 는 유한차원 벡터공간에서만 유일하게 정해지며, 무한차원벡터공간에서는 유일하지 않을 수 있다(@Hoffman1971 . pp 295)
 
 :::
 
@@ -86,7 +86,7 @@ $$
 
 ::: {.callout-note appearance="simple" icon="false"}
 
-::: {#def-part1_adjoint}
+::: {#def-LA_adjoint}
 
 #### Adjoint
 
@@ -99,7 +99,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-adjoint_matrix}
+::: {#prp-LA_adjoint_matrix}
 
 $L\in \mathcal{L}(U,\,V)$ 이며 $\mathcal{B}_U=(e_1,\ldots,\,e_n)$, $\mathcal{B}_V=(f_1,\ldots,\,f_n)$ 이 각각 $U,\,V$ 에서의 정규직교기저라고 하자. $\boldsymbol{A} = [L]_{\mathcal{B}_U,\mathcal{B}_V}$, $\boldsymbol{A}^\ast = [L^\ast]_{\mathcal{B}_V,\mathcal{B}_U}$ 라면 다음이 성립한다.
 
@@ -127,7 +127,7 @@ $$
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-adjoint_matrix}
+::: {#def-LA_adjoint_matrix}
 
 #### Adjoint matrix
 
@@ -172,19 +172,19 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-properties_of_adjoint_operator}
+::: {#prp-LA_properties_of_adjoint_operator}
 
 다음이 성립한다.
 
-&emsp; ($1$) $L,\, M\in \mathcal{L}(U,\,V)$ 일 때 $(L+M)^\ast = L^\ast + M^\ast$ 이다.
+&emsp;($1$) $L,\, M\in \mathcal{L}(U,\,V)$ 일 때 $(L+M)^\ast = L^\ast + M^\ast$ 이다.
 
-&emsp; ($2$) $L \in \mathcal{L}(U,\,V)$, $\lambda \in \mathbb{F}$ 일 때 $(\lambda L)^\ast = \overline{\lambda}L^\ast$.
+&emsp;($2$) $L \in \mathcal{L}(U,\,V)$, $\lambda \in \mathbb{F}$ 일 때 $(\lambda L)^\ast = \overline{\lambda}L^\ast$.
 
-&emsp; ($3$) $L \in \mathcal{L}(U,\,V)$ 일 때 $(L^\ast)^\ast = L$.
+&emsp;($3$) $L \in \mathcal{L}(U,\,V)$ 일 때 $(L^\ast)^\ast = L$.
 
-&emsp; ($4$) 항등연산자 $I\in \mathcal{L}(V)$ 에 대해 $I^\ast =I$.
+&emsp;($4$) 항등연산자 $I\in \mathcal{L}(V)$ 에 대해 $I^\ast =I$.
 
-&emsp; ($5$) $M\in \mathcal{L}(U, V),\, L\in \mathcal{L}(V,\,W)$ 에 대해 $(LM)^\ast = M^\ast L^\ast$ 이다.
+&emsp;($5$) $M\in \mathcal{L}(U, V),\, L\in \mathcal{L}(V,\,W)$ 에 대해 $(LM)^\ast = M^\ast L^\ast$ 이다.
 
 :::
 
@@ -208,7 +208,7 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#thm-kernel_image_of_adjoint_operator}
+::: {#thm-LA_kernel_image_of_adjoint_operator}
 #### Adjoint 의 kernel 과 치역
 
 $L\in \mathcal{L}(U,\,V)$ 일 때 다음이 성립한다.
@@ -236,7 +236,7 @@ v\in \ker (L^\ast) & \iff L^\ast v=0_V  \\
 \end{aligned}
 $$
 
-($2$) ($1$) 의 결과에 $L$ 대신 $L^\ast$ 를 넣으면 $\ker(L) = (\text{im}(L^\ast))^\perp$ 이다. @cor-dimension_relation_of_orthogonal_complement 에서 부분공간 $U$ 에 대해 $(U^\perp)^\perp = U$ 임을 이용하면 $2$ 를 얻는다. 
+($2$) ($1$) 의 결과에 $L$ 대신 $L^\ast$ 를 넣으면 $\ker(L) = (\text{im}(L^\ast))^\perp$ 이다. @cor-LA_dimension_relation_of_orthogonal_complement 에서 부분공간 $U$ 에 대해 $(U^\perp)^\perp = U$ 임을 이용하면 $2$ 를 얻는다. 
 
 ($3$), ($4$) 는 ($1$), ($2$) 의 결과에서 $L$ 대신에 $L^\ast$ 를 넣으면 보일 수 있다. $\square$ 
 
@@ -244,10 +244,10 @@ $$
 
 </br>
 
-## 에르미트 행렬 (Hermitian matrix) {#sec-hermitian_matrix}
+## 에르미트 행렬 (Hermitian matrix) {#sec-LA_hermitian_matrix}
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-hermitian_matrix}
+::: {#def-LA_hermitian_matrix}
 
 #### 에르미트 연산자, 에르미트 행렬, 대칭행렬
 
@@ -262,17 +262,17 @@ $\boldsymbol{A}$ 가 에르미트 행렬일 경우 $(\boldsymbol{A}^\ast)_{ij} =
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-peroperties_hermitian_operator}
+::: {#prp-LA_peroperties_hermitian_operator}
 
 #### 에르미트 연산자의 성질
 
 에르미트 연산자 $L \in \mathcal{L}(V)$ 에 대해 대해 다음이 성립한다.
 
-&emsp; ($1$) $\langle L(v_1),\, v_2\rangle = \langle v_1,\, L(v_2)\rangle$ 이다.
+&emsp;($1$) $\langle L(v_1),\, v_2\rangle = \langle v_1,\, L(v_2)\rangle$ 이다.
 
-&emsp; ($2$) 고유값은 항상 실수이다.
+&emsp;($2$) 고유값은 항상 실수이다.
 
-&emsp; ($3$) 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.
+&emsp;($3$) 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.
 :::
 
 </div></br>
@@ -304,13 +304,13 @@ $$
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-hermite_tvv}
+::: {#prp-LA_hermite_tvv}
 
 복소내적벡터공간 $U$ 에서 정의된 연산자 $L\in \mathcal{L}(U)$ 에 대해 다음 두 명제는 동치이다.
 
-&emsp; ($1$) 임의의 $u\in U$ 에 대해 $\langle L(u),\, u\rangle$ 은 실수이다.
+&emsp;($1$) 임의의 $u\in U$ 에 대해 $\langle L(u),\, u\rangle$ 은 실수이다.
 
-&emsp; ($2$) $L$ 는 에르미트 연산자이다.
+&emsp;($2$) $L$ 는 에르미트 연산자이다.
 
 :::
 
@@ -340,11 +340,11 @@ $$
 
 </br>
 
-## Linear Isometry {#sec-linear_isometry}
+## Linear Isometry {#sec-LA_linear_isometry}
 
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-linear_isometry}
+::: {#def-LA_linear_isometry}
 
 내적벡터공간 $V$ 에서 정의된 연산지 $S\in \mathcal{L}(V)$ 가 각각의 $v\in V$ 에 대해
 
@@ -358,22 +358,22 @@ $$
 :::
 
 
-많은 선형대수학 교재에서 linear isometry 를 isometry 라고 소개한다. 정확한 의미의 isometry 는 거리공간에서 거리를 보존하는 함수이며 여기에 대해서는 [Isometry](../part2/ch2_04_symmetry.qmd#sec-isometry) 에서 다루기로 한다. 
+많은 선형대수학 교재에서 linear isometry 를 isometry 라고 소개한다. 정확한 의미의 isometry 는 거리공간에서 거리를 보존하는 함수이며 여기에 대해서는 [Isometry](../part2/ch2_04_symmetry.qmd#sec-LA_isometry) 에서 다루기로 한다. 
 
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-properties_of_isometry}
+::: {#prp-LA_properties_of_isometry}
 
 연산지 $S\in \mathcal{L}(V)$ 에 대해 다음은 동치이다.  
 
-&emsp; ($1$) $S$ 는 linear isometry이다.
+&emsp;($1$) $S$ 는 linear isometry이다.
 
-&emsp; ($2$) $\langle S(u),\, S(v)\rangle = \langle u,\,v\rangle$
+&emsp;($2$) $\langle S(u),\, S(v)\rangle = \langle u,\,v\rangle$
 
-&emsp; ($3$) 정규직교벡터의 집합 $\{e_1,\ldots,\,e_n \}$ 에 대해 $\{ S(e_1),\ldots,\,S(e_n)\}$ 도 정규직교벡터의 집합이다.
+&emsp;($3$) 정규직교벡터의 집합 $\{e_1,\ldots,\,e_n \}$ 에 대해 $\{ S(e_1),\ldots,\,S(e_n)\}$ 도 정규직교벡터의 집합이다.
 
-&emsp; ($4$) $S^\ast = S^{-1}$ 이다.
+&emsp;($4$) $S^\ast = S^{-1}$ 이다.
 
 :::
 
@@ -447,7 +447,7 @@ $S\in \mathcal{L}(V)$ 가 linear isometry 이면 $S^\ast$ 도 linear isometry �
 
 ::: {.solution}
 
-@prp-properties_of_isometry 에서 보였듯이 $S$ 가 linear isometry 이면 $S^\ast =S^{-1}$ 이다. 따라서
+@prp-LA_properties_of_isometry 에서 보였듯이 $S$ 가 linear isometry 이면 $S^\ast =S^{-1}$ 이다. 따라서
 $$
 \|S^\ast u\|^2 = \langle S^\ast u,\, S^\ast u\rangle = \langle u | SS^\ast (u)\rangle = \|u\|^2
 $$
@@ -465,7 +465,7 @@ $S,\,T\in\mathcal{L}(V)$ 이 linear isometry 이면 $ST$ 도 linear isometry 임
 
 ::: {.solution}
 
-@prp-properties_of_isometry 에 의해 $S^{-1}=S^\ast$ 이면 $S$ 가 linear isometry 인 것을 이용한다.
+@prp-LA_properties_of_isometry 에 의해 $S^{-1}=S^\ast$ 이면 $S$ 가 linear isometry 인 것을 이용한다.
 $$
 (ST)^{-1}= T^{-1}S^{-1}=T^\ast S^\ast = (ST)^\ast
 $$
@@ -474,7 +474,7 @@ $$
 
 </br>
 
-### 유니타리 행렬과 직교 행렬 {#sec-part1_unitary_matrix_and_orthogonal_matrix}
+### 유니타리 행렬과 직교 행렬 {#sec-LA_unitary_matrix_and_orthogonal_matrix}
 
 ::: {.callout-caution}
 
@@ -485,7 +485,7 @@ $$
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
-::: {#def-orthogonal_operator}
+::: {#def-LA_orthogonal_operator}
 
 #### 유니타리행렬과 직교행렬
 
@@ -496,13 +496,13 @@ $\mathbb{C}$-벡터공간에서 정의된 linear isometry 를 **유니타리 연
 
 </br>
 
-### Isometry 와 정규직교기저
+### Isometry 와 정규직교기저 {#sec-LA_isometry_and_orthonormal_bais}
 
 정규직교기저간의 기저 변환과 isometry 에 대한 두가지를 보인다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-isometry_orthonormal_basis}
+::: {#prp-LA_isometry_orthonormal_basis}
 $\boldsymbol{S}$ 가 linear isometry 일 때 $\boldsymbol{S}$ 의 각 열벡터의 집합은 정규직교기저이며, 정규직교기저를 각 열벡터로 갖는 행렬은 linear isometry 이다.
 :::
 
@@ -528,7 +528,7 @@ $$
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-transform_between_orthonormal_basis_is_linear_isometry}
+::: {#prp-LA_transform_between_orthonormal_basis_is_linear_isometry}
 정규직교기저간의 변환행렬은 linear isometry 이다.
 :::
 
@@ -572,7 +572,7 @@ $\det(\boldsymbol{S}^\ast \boldsymbol{S})=\det(\boldsymbol{S}^\ast) \det(\boldsy
 
 </br>
 
-### Linear Isometry 와 행렬의 변환
+### Linear Isometry 와 행렬의 변환 {#sec-LA_linear_isomeetry_and_matrix_transform}
 
 $n$ 차원 벡터공간 $V$ 에서 정의된 연산자 $T$ 와 정규직교기저 $\{u_1,\ldots,\,u_n\}$ 를 생각하자. 이 정규직교기저에서 $T$ 의 행렬표현이 $\boldsymbol{A}$ 이며, 닮을변환을 나타내는 $\boldsymbol{P}$ 에 의해 기저가 변화했을 때의 행렬표현은 $\boldsymbol{P}^{-1}\boldsymbol{AP}$ 임을 안다. $\boldsymbol{P}$ 가 isometry 이면 $\boldsymbol{P}^{-1}=\boldsymbol{P}^\ast$ 이므로 기저가 변환된 행렬은 $\boldsymbol{P}^\ast \boldsymbol{AP}$ 이다.
 
@@ -684,7 +684,7 @@ $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음을 �
 
 ::: {.solution}
 
-$(\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}$ 이므로 둘중 하나만 보이면 된다. ($1$) 은 @thm-kernel_image_of_adjoint_operator ($3$) 으로부터 쉽게 보일 수 있다.
+$(\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}$ 이므로 둘중 하나만 보이면 된다. ($1$) 은 @thm-LA_kernel_image_of_adjoint_operator ($3$) 으로부터 쉽게 보일 수 있다.
 
 :::
 
@@ -708,7 +708,7 @@ $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음을 �
 
 ::: {.solution}
 
-($1$)  @thm-rank_nullity 에 의해 $m=\text{nullity}(\boldsymbol{A}^\ast) + \text{rank}(\boldsymbol{A}^\ast)$ 이며 @thm-kernel_image_of_adjoint_operator 에 의해 $\text{nullity} (\boldsymbol{A}) = n-\text{rank}(\boldsymbol{A}^\ast)$ 이므로 ($1$) 이 성립한다.
+($1$)  @thm-LA_rank_nullity 에 의해 $m=\text{nullity}(\boldsymbol{A}^\ast) + \text{rank}(\boldsymbol{A}^\ast)$ 이며 @thm-LA_kernel_image_of_adjoint_operator 에 의해 $\text{nullity} (\boldsymbol{A}) = n-\text{rank}(\boldsymbol{A}^\ast)$ 이므로 ($1$) 이 성립한다.
 
 
 ($2$) $\text{ker} (\boldsymbol{A}^\ast) = (\text{im} (\boldsymbol{A}))^\perp$ 이므로 $\text{nullity}(\boldsymbol{A}^\ast) = m - \text{rank}(\boldsymbol{A})$ 이다. ($1$) 에 $\text{nullity} (\boldsymbol{A}) = n-\text{rank}(\boldsymbol{A}^\ast)$ 과 함께 대입하면 ($2$) 를 얻는다.

@@ -338,14 +338,14 @@ window.Quarto = {
   <ul>
   <li><a href="#adjoint-연산자와-행렬" id="toc-adjoint-연산자와-행렬" class="nav-link active" data-scroll-target="#adjoint-연산자와-행렬"><span class="header-section-number">6.1</span> Adjoint 연산자와 행렬</a>
   <ul class="collapse">
-  <li><a href="#sec-adjoint_operator" id="toc-sec-adjoint_operator" class="nav-link" data-scroll-target="#sec-adjoint_operator"><span class="header-section-number">6.1.1</span> Adjoint operator</a></li>
+  <li><a href="#sec-LA_adjoint_operator" id="toc-sec-LA_adjoint_operator" class="nav-link" data-scroll-target="#sec-LA_adjoint_operator"><span class="header-section-number">6.1.1</span> Adjoint operator</a></li>
   </ul></li>
-  <li><a href="#sec-hermitian_matrix" id="toc-sec-hermitian_matrix" class="nav-link" data-scroll-target="#sec-hermitian_matrix"><span class="header-section-number">6.2</span> 에르미트 행렬 (Hermitian matrix)</a></li>
-  <li><a href="#sec-linear_isometry" id="toc-sec-linear_isometry" class="nav-link" data-scroll-target="#sec-linear_isometry"><span class="header-section-number">6.3</span> Linear Isometry</a>
+  <li><a href="#sec-LA_hermitian_matrix" id="toc-sec-LA_hermitian_matrix" class="nav-link" data-scroll-target="#sec-LA_hermitian_matrix"><span class="header-section-number">6.2</span> 에르미트 행렬 (Hermitian matrix)</a></li>
+  <li><a href="#sec-LA_linear_isometry" id="toc-sec-LA_linear_isometry" class="nav-link" data-scroll-target="#sec-LA_linear_isometry"><span class="header-section-number">6.3</span> Linear Isometry</a>
   <ul class="collapse">
-  <li><a href="#sec-part1_unitary_matrix_and_orthogonal_matrix" id="toc-sec-part1_unitary_matrix_and_orthogonal_matrix" class="nav-link" data-scroll-target="#sec-part1_unitary_matrix_and_orthogonal_matrix"><span class="header-section-number">6.3.1</span> 유니타리 행렬과 직교 행렬</a></li>
-  <li><a href="#isometry-와-정규직교기저" id="toc-isometry-와-정규직교기저" class="nav-link" data-scroll-target="#isometry-와-정규직교기저"><span class="header-section-number">6.3.2</span> Isometry 와 정규직교기저</a></li>
-  <li><a href="#linear-isometry-와-행렬의-변환" id="toc-linear-isometry-와-행렬의-변환" class="nav-link" data-scroll-target="#linear-isometry-와-행렬의-변환"><span class="header-section-number">6.3.3</span> Linear Isometry 와 행렬의 변환</a></li>
+  <li><a href="#sec-LA_unitary_matrix_and_orthogonal_matrix" id="toc-sec-LA_unitary_matrix_and_orthogonal_matrix" class="nav-link" data-scroll-target="#sec-LA_unitary_matrix_and_orthogonal_matrix"><span class="header-section-number">6.3.1</span> 유니타리 행렬과 직교 행렬</a></li>
+  <li><a href="#sec-LA_isometry_and_orthonormal_bais" id="toc-sec-LA_isometry_and_orthonormal_bais" class="nav-link" data-scroll-target="#sec-LA_isometry_and_orthonormal_bais"><span class="header-section-number">6.3.2</span> Isometry 와 정규직교기저</a></li>
+  <li><a href="#sec-LA_linear_isomeetry_and_matrix_transform" id="toc-sec-LA_linear_isomeetry_and_matrix_transform" class="nav-link" data-scroll-target="#sec-LA_linear_isomeetry_and_matrix_transform"><span class="header-section-number">6.3.3</span> Linear Isometry 와 행렬의 변환</a></li>
   </ul></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul>
@@ -384,13 +384,13 @@ window.Quarto = {
 <p><br></p>
 <section id="adjoint-연산자와-행렬" class="level2 page-columns page-full" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="adjoint-연산자와-행렬"><span class="header-section-number">6.1</span> Adjoint 연산자와 행렬</h2>
-<section id="sec-adjoint_operator" class="level3 page-columns page-full" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="sec-adjoint_operator"><span class="header-section-number">6.1.1</span> Adjoint operator</h3>
+<section id="sec-LA_adjoint_operator" class="level3 page-columns page-full" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="sec-LA_adjoint_operator"><span class="header-section-number">6.1.1</span> Adjoint operator</h3>
 <p><span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에 대해 다음의 성질을 만족하는 <span class="math inline">\(L^\ast : V \to U\)</span> 를 <span class="math inline">\(L\)</span> 에 대한 adjoint function 이라고 한다.</p>
 <p><span id="eq-adjoint_function"><span class="math display">\[
 \langle L (u),\,v \rangle = \langle u,\, L^\ast (v) \rangle.
 \tag{6.1}\]</span></span></p>
-<p>우선 고정된 <span class="math inline">\(v\)</span> 에 대해 <span class="math inline">\(\phi (u) = \langle Lu,\,v\rangle\)</span> 는 선형 범함수(<a href="#exr-adjoint_operator_1" class="quarto-xref">연습문제&nbsp;<span>6.1</span></a>) 이며 <a href="ch1_05_innerproduct.html#thm-part1_reisz_representation_theorem_1" class="quarto-xref">정리&nbsp;<span>5.3</span></a> 에 의해 <span class="math inline">\(\phi(u) = \langle u, w\rangle\)</span> 인 <span class="math inline">\(w\in U\)</span> 가 유일하게 존재한다. 이제 함수 <span class="math inline">\(L^\ast : V \to U\)</span> 를 <span class="math inline">\(L^\ast( v)= w\)</span> 인 함수로 생각 할 수 있다. (뭔가 이상한가? 이상해야 하는데..) 이 <span class="math inline">\(L^\ast\)</span> 를 <span class="math inline">\(L\)</span> 에 대한 adjoint function 이라고 한다.</p>
+<p>우선 고정된 <span class="math inline">\(v\)</span> 에 대해 <span class="math inline">\(\phi (u) = \langle Lu,\,v\rangle\)</span> 는 선형 범함수(<a href="#exr-adjoint_operator_1" class="quarto-xref">연습문제&nbsp;<span>6.1</span></a>) 이며 <a href="ch1_05_innerproduct.html#thm-LA_reisz_representation_theorem_1" class="quarto-xref">정리&nbsp;<span>5.3</span></a> 에 의해 <span class="math inline">\(\phi(u) = \langle u, w\rangle\)</span> 인 <span class="math inline">\(w\in U\)</span> 가 유일하게 존재한다. 이제 함수 <span class="math inline">\(L^\ast : V \to U\)</span> 를 <span class="math inline">\(L^\ast( v)= w\)</span> 인 함수로 생각 할 수 있다. (뭔가 이상한가? 이상해야 하는데..) 이 <span class="math inline">\(L^\ast\)</span> 를 <span class="math inline">\(L\)</span> 에 대한 adjoint function 이라고 한다.</p>
 <p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-adjoint_operator_1" class="theorem exercise">
@@ -408,7 +408,7 @@ window.Quarto = {
 </div>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-adjoint_transformation" class="theorem proposition">
+<div id="prp-LA_adjoint_transformation" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 6.1</strong></span> 위에서 정의된 <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에 대한 adjoint function <span class="math inline">\(L^\ast\)</span> 는 선형사상이다.</p>
 </div>
 </div>
@@ -430,7 +430,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>여기서 한가지 짚어야 할 것이 있다. 우리는 리츠의 표현정리(<a href="ch1_05_innerproduct.html#thm-part1_reisz_representation_theorem_1" class="quarto-xref">정리&nbsp;<span>5.3</span></a>) 를 이용하였는데 이 정리는 유한차원 벡터공간에서만 성립한다. 실제로 adjoint 는 유한차원 벡터공간에서만 유일하게 정해지며, 무한차원벡터공간에서는 유일하지 않을 수 있다(<span class="citation" data-cites="Hoffman1971">Hoffman and Kunze (<a href="../../references.html#ref-Hoffman1971" role="doc-biblioref">1971</a>)</span> . pp 295)</p>
+<p>여기서 한가지 짚어야 할 것이 있다. 우리는 리츠의 표현정리(<a href="ch1_05_innerproduct.html#thm-LA_reisz_representation_theorem_1" class="quarto-xref">정리&nbsp;<span>5.3</span></a>) 를 이용하였는데 이 정리는 유한차원 벡터공간에서만 성립한다. 실제로 adjoint 는 유한차원 벡터공간에서만 유일하게 정해지며, 무한차원벡터공간에서는 유일하지 않을 수 있다(<span class="citation" data-cites="Hoffman1971">Hoffman and Kunze (<a href="../../references.html#ref-Hoffman1971" role="doc-biblioref">1971</a>)</span> . pp 295)</p>
 </div>
 </div>
 </div>
@@ -441,7 +441,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-part1_adjoint" class="theorem definition">
+<div id="def-LA_adjoint" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 6.1 (Adjoint)</strong></span> 내적벡터공간 <span class="math inline">\(U,\,V\)</span> 에서 정의된 <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에 대해 <span class="math inline">\(\langle L(u),\, v\rangle = \langle u,\,L^\ast(v)\rangle\)</span> 을 만족하는 <span class="math inline">\(L^\ast \in \mathcal{L}(V,\,U)\)</span> 가 존재하며 <span class="math inline">\(L^\ast\)</span> 를 <span class="math inline">\(L\)</span> 의 <strong>adjoint</strong> 라고 한다.</p>
 </div>
 </div>
@@ -449,7 +449,7 @@ window.Quarto = {
 </div>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-adjoint_matrix" class="theorem proposition">
+<div id="prp-LA_adjoint_matrix" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 6.2</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 이며 <span class="math inline">\(\mathcal{B}_U=(e_1,\ldots,\,e_n)\)</span>, <span class="math inline">\(\mathcal{B}_V=(f_1,\ldots,\,f_n)\)</span> 이 각각 <span class="math inline">\(U,\,V\)</span> 에서의 정규직교기저라고 하자. <span class="math inline">\(\boldsymbol{A} = [L]_{\mathcal{B}_U,\mathcal{B}_V}\)</span>, <span class="math inline">\(\boldsymbol{A}^\ast = [L^\ast]_{\mathcal{B}_V,\mathcal{B}_U}\)</span> 라면 다음이 성립한다.</p>
 <p><span id="eq-adjoint_matrix"><span class="math display">\[
 (\boldsymbol{A}^\ast)_{ij} = \overline{(\boldsymbol{A})_{ji}}.
@@ -471,7 +471,7 @@ A_{ji}=\langle L(e_i),\, f_j\rangle = \langle e_i,\, L^\ast(f_j)\rangle = \overl
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-adjoint_matrix" class="theorem definition">
+<div id="def-LA_adjoint_matrix" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 6.2 (Adjoint matrix)</strong></span> 행렬 <span class="math inline">\(\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
 (\boldsymbol{A}^\ast)_{ij} = \overline{A_{ji}}
@@ -500,13 +500,13 @@ A_{ji}=\langle L(e_i),\, f_j\rangle = \langle e_i,\, L^\ast(f_j)\rangle = \overl
 </div>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-properties_of_adjoint_operator" class="theorem proposition">
+<div id="prp-LA_properties_of_adjoint_operator" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 6.3</strong></span> 다음이 성립한다.</p>
-<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(L,\, M\in \mathcal{L}(U,\,V)\)</span> 일 때 <span class="math inline">\((L+M)^\ast = L^\ast + M^\ast\)</span> 이다.</p>
-<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(L \in \mathcal{L}(U,\,V)\)</span>, <span class="math inline">\(\lambda \in \mathbb{F}\)</span> 일 때 <span class="math inline">\((\lambda L)^\ast = \overline{\lambda}L^\ast\)</span>.</p>
-<p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(L \in \mathcal{L}(U,\,V)\)</span> 일 때 <span class="math inline">\((L^\ast)^\ast = L\)</span>.</p>
-<p>  (<span class="math inline">\(4\)</span>) 항등연산자 <span class="math inline">\(I\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(I^\ast =I\)</span>.</p>
-<p>  (<span class="math inline">\(5\)</span>) <span class="math inline">\(M\in \mathcal{L}(U, V),\, L\in \mathcal{L}(V,\,W)\)</span> 에 대해 <span class="math inline">\((LM)^\ast = M^\ast L^\ast\)</span> 이다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(L,\, M\in \mathcal{L}(U,\,V)\)</span> 일 때 <span class="math inline">\((L+M)^\ast = L^\ast + M^\ast\)</span> 이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L \in \mathcal{L}(U,\,V)\)</span>, <span class="math inline">\(\lambda \in \mathbb{F}\)</span> 일 때 <span class="math inline">\((\lambda L)^\ast = \overline{\lambda}L^\ast\)</span>.</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(L \in \mathcal{L}(U,\,V)\)</span> 일 때 <span class="math inline">\((L^\ast)^\ast = L\)</span>.</p>
+<p> (<span class="math inline">\(4\)</span>) 항등연산자 <span class="math inline">\(I\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(I^\ast =I\)</span>.</p>
+<p> (<span class="math inline">\(5\)</span>) <span class="math inline">\(M\in \mathcal{L}(U, V),\, L\in \mathcal{L}(V,\,W)\)</span> 에 대해 <span class="math inline">\((LM)^\ast = M^\ast L^\ast\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -519,7 +519,7 @@ A_{ji}=\langle L(e_i),\, f_j\rangle = \langle e_i,\, L^\ast(f_j)\rangle = \overl
 </div>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-kernel_image_of_adjoint_operator" class="theorem">
+<div id="thm-LA_kernel_image_of_adjoint_operator" class="theorem">
 <p><span class="theorem-title"><strong>정리 6.1 (Adjoint 의 kernel 과 치역)</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 일 때 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\ker (L^\ast) = (\text{im} (L))^\perp\)</span></p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\text{im} (L^\ast) = (\ker (L))^\perp\)</span>,</p>
@@ -537,21 +537,21 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 &amp;\iff v \in \left(\text{im}(L)\right)^\perp
 \end{aligned}
 \]</span></p>
-<p>(<span class="math inline">\(2\)</span>) (<span class="math inline">\(1\)</span>) 의 결과에 <span class="math inline">\(L\)</span> 대신 <span class="math inline">\(L^\ast\)</span> 를 넣으면 <span class="math inline">\(\ker(L) = (\text{im}(L^\ast))^\perp\)</span> 이다. <a href="ch1_05_innerproduct.html#cor-dimension_relation_of_orthogonal_complement" class="quarto-xref">따름정리&nbsp;<span>5.2</span></a> 에서 부분공간 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\((U^\perp)^\perp = U\)</span> 임을 이용하면 <span class="math inline">\(2\)</span> 를 얻는다.</p>
+<p>(<span class="math inline">\(2\)</span>) (<span class="math inline">\(1\)</span>) 의 결과에 <span class="math inline">\(L\)</span> 대신 <span class="math inline">\(L^\ast\)</span> 를 넣으면 <span class="math inline">\(\ker(L) = (\text{im}(L^\ast))^\perp\)</span> 이다. <a href="ch1_05_innerproduct.html#cor-LA_dimension_relation_of_orthogonal_complement" class="quarto-xref">따름정리&nbsp;<span>5.2</span></a> 에서 부분공간 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\((U^\perp)^\perp = U\)</span> 임을 이용하면 <span class="math inline">\(2\)</span> 를 얻는다.</p>
 <p>(<span class="math inline">\(3\)</span>), (<span class="math inline">\(4\)</span>) 는 (<span class="math inline">\(1\)</span>), (<span class="math inline">\(2\)</span>) 의 결과에서 <span class="math inline">\(L\)</span> 대신에 <span class="math inline">\(L^\ast\)</span> 를 넣으면 보일 수 있다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 </section>
 </section>
-<section id="sec-hermitian_matrix" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="sec-hermitian_matrix"><span class="header-section-number">6.2</span> 에르미트 행렬 (Hermitian matrix)</h2>
+<section id="sec-LA_hermitian_matrix" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="sec-LA_hermitian_matrix"><span class="header-section-number">6.2</span> 에르미트 행렬 (Hermitian matrix)</h2>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-hermitian_matrix" class="theorem definition">
+<div id="def-LA_hermitian_matrix" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 6.3 (에르미트 연산자, 에르미트 행렬, 대칭행렬)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(L^\ast = L\)</span> 일 때 <span class="math inline">\(L\)</span> 을 <strong>에르미트 연산자(hermitian operator)</strong> 혹은 <strong>self-adjoint operator</strong> 라고 한다. <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\boldsymbol{A}^\ast = \boldsymbol{A}\)</span> 이면 이 행렬을 <strong>에르미트 행렬(Hermitian matrix)</strong> 혹은 <strong>self-adjoint matrix</strong> 이라 한다. 특별히 <span class="math inline">\(\mathbb{F}=\mathbb{R}\)</span> 일 경우에는 <strong>대칭행렬 (Symmetric matrix)</strong> 이라 한다.</p>
 </div>
 </div>
@@ -561,11 +561,11 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 <p><span class="math inline">\(\boldsymbol{A}\)</span> 가 에르미트 행렬일 경우 <span class="math inline">\((\boldsymbol{A}^\ast)_{ij} = \overline{A_{ji}} = A_{ij}\)</span> 를 만족한다. 대칭행렬의 경우에는 <span class="math inline">\(A_{ij} = A_{ji}\)</span> 이다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-peroperties_hermitian_operator" class="theorem proposition">
+<div id="prp-LA_peroperties_hermitian_operator" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 6.4 (에르미트 연산자의 성질)</strong></span> 에르미트 연산자 <span class="math inline">\(L \in \mathcal{L}(V)\)</span> 에 대해 대해 다음이 성립한다.</p>
-<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\langle L(v_1),\, v_2\rangle = \langle v_1,\, L(v_2)\rangle\)</span> 이다.</p>
-<p>  (<span class="math inline">\(2\)</span>) 고유값은 항상 실수이다.</p>
-<p>  (<span class="math inline">\(3\)</span>) 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\langle L(v_1),\, v_2\rangle = \langle v_1,\, L(v_2)\rangle\)</span> 이다.</p>
+<p> (<span class="math inline">\(2\)</span>) 고유값은 항상 실수이다.</p>
+<p> (<span class="math inline">\(3\)</span>) 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.</p>
 </div>
 </div>
 <p><br></p>
@@ -586,10 +586,10 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 </div>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-hermite_tvv" class="theorem proposition">
+<div id="prp-LA_hermite_tvv" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 6.5</strong></span> 복소내적벡터공간 <span class="math inline">\(U\)</span> 에서 정의된 연산자 <span class="math inline">\(L\in \mathcal{L}(U)\)</span> 에 대해 다음 두 명제는 동치이다.</p>
-<p>  (<span class="math inline">\(1\)</span>) 임의의 <span class="math inline">\(u\in U\)</span> 에 대해 <span class="math inline">\(\langle L(u),\, u\rangle\)</span> 은 실수이다.</p>
-<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 는 에르미트 연산자이다.</p>
+<p> (<span class="math inline">\(1\)</span>) 임의의 <span class="math inline">\(u\in U\)</span> 에 대해 <span class="math inline">\(\langle L(u),\, u\rangle\)</span> 은 실수이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 는 에르미트 연산자이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -610,15 +610,15 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 </div>
 <p><br></p>
 </section>
-<section id="sec-linear_isometry" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="sec-linear_isometry"><span class="header-section-number">6.3</span> Linear Isometry</h2>
+<section id="sec-LA_linear_isometry" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="sec-LA_linear_isometry"><span class="header-section-number">6.3</span> Linear Isometry</h2>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-linear_isometry" class="theorem definition">
+<div id="def-LA_linear_isometry" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 6.4</strong></span> 내적벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산지 <span class="math inline">\(S\in \mathcal{L}(V)\)</span> 가 각각의 <span class="math inline">\(v\in V\)</span> 에 대해</p>
 <p><span class="math display">\[
 \|S(v)\|^2 = \|v\|^2
@@ -628,15 +628,15 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 </div>
 </div>
 </div>
-<p>많은 선형대수학 교재에서 linear isometry 를 isometry 라고 소개한다. 정확한 의미의 isometry 는 거리공간에서 거리를 보존하는 함수이며 여기에 대해서는 <a href="../../src/part2/ch2_04_symmetry.html#sec-isometry">Isometry</a> 에서 다루기로 한다.</p>
+<p>많은 선형대수학 교재에서 linear isometry 를 isometry 라고 소개한다. 정확한 의미의 isometry 는 거리공간에서 거리를 보존하는 함수이며 여기에 대해서는 <a href="../../src/part2/ch2_04_symmetry.html#sec-LA_isometry">Isometry</a> 에서 다루기로 한다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-properties_of_isometry" class="theorem proposition">
+<div id="prp-LA_properties_of_isometry" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 6.6</strong></span> 연산지 <span class="math inline">\(S\in \mathcal{L}(V)\)</span> 에 대해 다음은 동치이다.</p>
-<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(S\)</span> 는 linear isometry이다.</p>
-<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\langle S(u),\, S(v)\rangle = \langle u,\,v\rangle\)</span></p>
-<p>  (<span class="math inline">\(3\)</span>) 정규직교벡터의 집합 <span class="math inline">\(\{e_1,\ldots,\,e_n \}\)</span> 에 대해 <span class="math inline">\(\{ S(e_1),\ldots,\,S(e_n)\}\)</span> 도 정규직교벡터의 집합이다.</p>
-<p>  (<span class="math inline">\(4\)</span>) <span class="math inline">\(S^\ast = S^{-1}\)</span> 이다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(S\)</span> 는 linear isometry이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\langle S(u),\, S(v)\rangle = \langle u,\,v\rangle\)</span></p>
+<p> (<span class="math inline">\(3\)</span>) 정규직교벡터의 집합 <span class="math inline">\(\{e_1,\ldots,\,e_n \}\)</span> 에 대해 <span class="math inline">\(\{ S(e_1),\ldots,\,S(e_n)\}\)</span> 도 정규직교벡터의 집합이다.</p>
+<p> (<span class="math inline">\(4\)</span>) <span class="math inline">\(S^\ast = S^{-1}\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -684,7 +684,7 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-properties_of_isometry" class="quarto-xref">명제&nbsp;<span>6.6</span></a> 에서 보였듯이 <span class="math inline">\(S\)</span> 가 linear isometry 이면 <span class="math inline">\(S^\ast =S^{-1}\)</span> 이다. 따라서 <span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-LA_properties_of_isometry" class="quarto-xref">명제&nbsp;<span>6.6</span></a> 에서 보였듯이 <span class="math inline">\(S\)</span> 가 linear isometry 이면 <span class="math inline">\(S^\ast =S^{-1}\)</span> 이다. 따라서 <span class="math display">\[
 \|S^\ast u\|^2 = \langle S^\ast u,\, S^\ast u\rangle = \langle u | SS^\ast (u)\rangle = \|u\|^2
 \]</span></p>
 <p>이므로 <span class="math inline">\(S^\ast\)</span> 도 linear isometry 이다. <span class="math inline">\(\square\)</span></p>
@@ -697,13 +697,13 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-properties_of_isometry" class="quarto-xref">명제&nbsp;<span>6.6</span></a> 에 의해 <span class="math inline">\(S^{-1}=S^\ast\)</span> 이면 <span class="math inline">\(S\)</span> 가 linear isometry 인 것을 이용한다. <span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-LA_properties_of_isometry" class="quarto-xref">명제&nbsp;<span>6.6</span></a> 에 의해 <span class="math inline">\(S^{-1}=S^\ast\)</span> 이면 <span class="math inline">\(S\)</span> 가 linear isometry 인 것을 이용한다. <span class="math display">\[
 (ST)^{-1}= T^{-1}S^{-1}=T^\ast S^\ast = (ST)^\ast
 \]</span></p>
 </div>
 <p><br></p>
-<section id="sec-part1_unitary_matrix_and_orthogonal_matrix" class="level3" data-number="6.3.1">
-<h3 data-number="6.3.1" class="anchored" data-anchor-id="sec-part1_unitary_matrix_and_orthogonal_matrix"><span class="header-section-number">6.3.1</span> 유니타리 행렬과 직교 행렬</h3>
+<section id="sec-LA_unitary_matrix_and_orthogonal_matrix" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="sec-LA_unitary_matrix_and_orthogonal_matrix"><span class="header-section-number">6.3.1</span> 유니타리 행렬과 직교 행렬</h3>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -724,7 +724,7 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-orthogonal_operator" class="theorem definition">
+<div id="def-LA_orthogonal_operator" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 6.5 (유니타리행렬과 직교행렬)</strong></span> <span class="math inline">\(\mathbb{C}\)</span>-벡터공간에서 정의된 linear isometry 를 <strong>유니타리 연산자/행렬 (unitary operator/matrix)</strong> 라 하고 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간에서 정의된 linear isometry 를 <strong>직교 연산자/행렬 (orthogonal operator/matrix)</strong> 라 한다. 유니타리 행렬에 의한 행렬/벡터의 변환을 <strong>유니타리 변환 (unitary transformation)</strong>, 직교행렬에 의핸 행렬/벡터의 변환을 <strong>직교 변환 (orthogonal transformation)</strong>이라고 한다.</p>
 </div>
 </div>
@@ -732,12 +732,12 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 </div>
 <p><br></p>
 </section>
-<section id="isometry-와-정규직교기저" class="level3" data-number="6.3.2">
-<h3 data-number="6.3.2" class="anchored" data-anchor-id="isometry-와-정규직교기저"><span class="header-section-number">6.3.2</span> Isometry 와 정규직교기저</h3>
+<section id="sec-LA_isometry_and_orthonormal_bais" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2" class="anchored" data-anchor-id="sec-LA_isometry_and_orthonormal_bais"><span class="header-section-number">6.3.2</span> Isometry 와 정규직교기저</h3>
 <p>정규직교기저간의 기저 변환과 isometry 에 대한 두가지를 보인다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-isometry_orthonormal_basis" class="theorem proposition">
+<div id="prp-LA_isometry_orthonormal_basis" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 6.7</strong></span> <span class="math inline">\(\boldsymbol{S}\)</span> 가 linear isometry 일 때 <span class="math inline">\(\boldsymbol{S}\)</span> 의 각 열벡터의 집합은 정규직교기저이며, 정규직교기저를 각 열벡터로 갖는 행렬은 linear isometry 이다.</p>
 </div>
 </div>
@@ -755,7 +755,7 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-transform_between_orthonormal_basis_is_linear_isometry" class="theorem proposition">
+<div id="prp-LA_transform_between_orthonormal_basis_is_linear_isometry" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 6.8</strong></span> 정규직교기저간의 변환행렬은 linear isometry 이다.</p>
 </div>
 </div>
@@ -787,8 +787,8 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 </div>
 <p><br></p>
 </section>
-<section id="linear-isometry-와-행렬의-변환" class="level3" data-number="6.3.3">
-<h3 data-number="6.3.3" class="anchored" data-anchor-id="linear-isometry-와-행렬의-변환"><span class="header-section-number">6.3.3</span> Linear Isometry 와 행렬의 변환</h3>
+<section id="sec-LA_linear_isomeetry_and_matrix_transform" class="level3" data-number="6.3.3">
+<h3 data-number="6.3.3" class="anchored" data-anchor-id="sec-LA_linear_isomeetry_and_matrix_transform"><span class="header-section-number">6.3.3</span> Linear Isometry 와 행렬의 변환</h3>
 <p><span class="math inline">\(n\)</span> 차원 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(T\)</span> 와 정규직교기저 <span class="math inline">\(\{u_1,\ldots,\,u_n\}\)</span> 를 생각하자. 이 정규직교기저에서 <span class="math inline">\(T\)</span> 의 행렬표현이 <span class="math inline">\(\boldsymbol{A}\)</span> 이며, 닮을변환을 나타내는 <span class="math inline">\(\boldsymbol{P}\)</span> 에 의해 기저가 변화했을 때의 행렬표현은 <span class="math inline">\(\boldsymbol{P}^{-1}\boldsymbol{AP}\)</span> 임을 안다. <span class="math inline">\(\boldsymbol{P}\)</span> 가 isometry 이면 <span class="math inline">\(\boldsymbol{P}^{-1}=\boldsymbol{P}^\ast\)</span> 이므로 기저가 변환된 행렬은 <span class="math inline">\(\boldsymbol{P}^\ast \boldsymbol{AP}\)</span> 이다.</p>
 <p><br></p>
 </section>
@@ -853,7 +853,7 @@ L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}\)</span> 이므로 둘중 하나만 보이면 된다. (<span class="math inline">\(1\)</span>) 은 <a href="#thm-kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> (<span class="math inline">\(3\)</span>) 으로부터 쉽게 보일 수 있다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}\)</span> 이므로 둘중 하나만 보이면 된다. (<span class="math inline">\(1\)</span>) 은 <a href="#thm-LA_kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> (<span class="math inline">\(3\)</span>) 으로부터 쉽게 보일 수 있다.</p>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
@@ -865,7 +865,7 @@ L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <a href="ch1_02_linear_map.html#thm-rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a> 에 의해 <span class="math inline">\(m=\text{nullity}(\boldsymbol{A}^\ast) + \text{rank}(\boldsymbol{A}^\ast)\)</span> 이며 <a href="#thm-kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> 에 의해 <span class="math inline">\(\text{nullity} (\boldsymbol{A}) = n-\text{rank}(\boldsymbol{A}^\ast)\)</span> 이므로 (<span class="math inline">\(1\)</span>) 이 성립한다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <a href="ch1_02_linear_map.html#thm-LA_rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a> 에 의해 <span class="math inline">\(m=\text{nullity}(\boldsymbol{A}^\ast) + \text{rank}(\boldsymbol{A}^\ast)\)</span> 이며 <a href="#thm-LA_kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> 에 의해 <span class="math inline">\(\text{nullity} (\boldsymbol{A}) = n-\text{rank}(\boldsymbol{A}^\ast)\)</span> 이므로 (<span class="math inline">\(1\)</span>) 이 성립한다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\text{ker} (\boldsymbol{A}^\ast) = (\text{im} (\boldsymbol{A}))^\perp\)</span> 이므로 <span class="math inline">\(\text{nullity}(\boldsymbol{A}^\ast) = m - \text{rank}(\boldsymbol{A})\)</span> 이다. (<span class="math inline">\(1\)</span>) 에 <span class="math inline">\(\text{nullity} (\boldsymbol{A}) = n-\text{rank}(\boldsymbol{A}^\ast)\)</span> 과 함께 대입하면 (<span class="math inline">\(2\)</span>) 를 얻는다.</p>
 </div>
 <p><br></p>

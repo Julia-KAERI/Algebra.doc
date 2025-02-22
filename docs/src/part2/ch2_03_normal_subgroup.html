@@ -318,12 +318,12 @@ window.Quarto = {
   <ul>
   <li><a href="#정규부분군" id="toc-정규부분군" class="nav-link active" data-scroll-target="#정규부분군"><span class="header-section-number">11.1</span> 정규부분군</a>
   <ul class="collapse">
-  <li><a href="#sec-normal_subgroup" id="toc-sec-normal_subgroup" class="nav-link" data-scroll-target="#sec-normal_subgroup"><span class="header-section-number">11.1.1</span> Conjugate 와 정규부분군</a></li>
+  <li><a href="#sec-MA_normal_subgroup" id="toc-sec-MA_normal_subgroup" class="nav-link" data-scroll-target="#sec-MA_normal_subgroup"><span class="header-section-number">11.1.1</span> Conjugate 와 정규부분군</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
   <li><a href="#대응-정리" id="toc-대응-정리" class="nav-link" data-scroll-target="#대응-정리"><span class="header-section-number">11.2</span> 대응 정리</a>
   <ul class="collapse">
-  <li><a href="#sec-correnspodence_theorem_1" id="toc-sec-correnspodence_theorem_1" class="nav-link" data-scroll-target="#sec-correnspodence_theorem_1"><span class="header-section-number">11.2.1</span> 대응 정리</a></li>
+  <li><a href="#sec-MA_correnspodence_theorem_1" id="toc-sec-MA_correnspodence_theorem_1" class="nav-link" data-scroll-target="#sec-MA_correnspodence_theorem_1"><span class="header-section-number">11.2.1</span> 대응 정리</a></li>
   <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
   </ul></li>
   <li><a href="#product-group" id="toc-product-group" class="nav-link" data-scroll-target="#product-group"><span class="header-section-number">11.3</span> Product Group</a>
@@ -363,26 +363,35 @@ window.Quarto = {
 </header>
 
 
+<div class="hidden">
+<p>% %</p>
+%
+<p><span class="math display">\[
+\DeclarePairedDelimiters{\set}{\{}{\}}
+\DeclareMathOperator*{\argmax}{argmax}
+\]</span></p>
+</div>
+<p><br></p>
 <section id="정규부분군" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="정규부분군"><span class="header-section-number">11.1</span> 정규부분군</h2>
-<section id="sec-normal_subgroup" class="level3" data-number="11.1.1">
-<h3 data-number="11.1.1" class="anchored" data-anchor-id="sec-normal_subgroup"><span class="header-section-number">11.1.1</span> Conjugate 와 정규부분군</h3>
+<section id="sec-MA_normal_subgroup" class="level3" data-number="11.1.1">
+<h3 data-number="11.1.1" class="anchored" data-anchor-id="sec-MA_normal_subgroup"><span class="header-section-number">11.1.1</span> Conjugate 와 정규부분군</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-normal_subgroups" class="theorem definition">
+<div id="def-MA_normal_subgroups" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 11.1 (Conjugate 와 정규부분군)</strong></span> <span class="math inline">\(a,\,g\)</span> 가 군 <span class="math inline">\(G\)</span> 의 원소일 때 <span class="math inline">\(gag^{-1}\)</span> 을 <span class="math inline">\(g\)</span> 에 의한 <span class="math inline">\(a\)</span> 의 <strong>conjugate</strong> 라고 한다. <span class="math inline">\(N\le G\)</span> 가 모든 <span class="math inline">\(a\in N\)</span> 과 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gag^{-1}\in N\)</span> 일 때 <span class="math inline">\(N\)</span> 을 <span class="math inline">\(G\)</span> 의 <strong>정규부분군(normal subgroup)</strong> 이라고 하며 <span class="math inline">\(N \trianglelefteq G\)</span> 라고 표기한다.</p>
 </div>
 </div>
 </div>
 </div>
-<p>즉 <span class="math inline">\(G\)</span> 의 부분군 <span class="math inline">\(N\)</span> 이 모든 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gNg^{-1}\subset N\)</span> 이면 <span class="math inline">\(N \trianglelefteq G\)</span> 이다. 우리는 잠시 후 <a href="#prp-normal_subgroup_condition" class="quarto-xref">명제&nbsp;<span>11.3</span></a> 에서 <span class="math inline">\(gNg^{-1} \subset N\)</span> 이면 <span class="math inline">\(gNg^{-1}= N\)</span> 이라는 것을 알게 된다.</p>
+<p>즉 <span class="math inline">\(G\)</span> 의 부분군 <span class="math inline">\(N\)</span> 이 모든 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gNg^{-1}\subset N\)</span> 이면 <span class="math inline">\(N \trianglelefteq G\)</span> 이다. 우리는 잠시 후 <a href="#prp-MA_normal_subgroup_condition" class="quarto-xref">명제&nbsp;<span>11.3</span></a> 에서 <span class="math inline">\(gNg^{-1} \subset N\)</span> 이면 <span class="math inline">\(gNg^{-1}= N\)</span> 이라는 것을 알게 된다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-conjugate_subgroup" class="theorem proposition">
+<div id="prp-MA_conjugate_subgroup" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 11.1</strong></span> <span class="math inline">\(H \le G\)</span> 일 때 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gHg^{-1}= \{ ghg^{-1}: h\in H\}\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군이다. 이렇게 정의된 <span class="math inline">\(gHg^{-1}\)</span> 을 <strong>cojugate subgroup</strong> 이라고 한다.</p>
 </div>
 </div>
@@ -392,7 +401,7 @@ window.Quarto = {
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-kernel_and_normal_subgroup" class="theorem proposition">
+<div id="prp-MA_kernel_and_normal_subgroup" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 11.2</strong></span> <span class="math inline">\(\varphi \in \text{Hom}\, (G,\,G')\)</span> 일 때 <span class="math inline">\(\ker \varphi \trianglelefteq G\)</span> 이다.</p>
 </div>
 </div>
@@ -402,7 +411,7 @@ window.Quarto = {
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-normal_subgroup_and_S3" class="theorem example">
+<div id="exm-MA_normal_subgroup_and_S3" class="theorem example">
 <p><span class="theorem-title"><strong>보기 11.1</strong></span> <span class="math inline">\(S_3 = \{1, x, x^2, y, xy, x^2y\}\)</span> 를 생각하자. <span class="math inline">\(x^2y=yx\)</span> 를 만족한다. 이 때 <span class="math inline">\(\langle x \rangle \trianglelefteq G\)</span> 이지만 <span class="math inline">\(\langle y \rangle\)</span> 은 <span class="math inline">\(G\)</span> 의 정규부분이 아니다. 예를 들어 <span class="math inline">\(xyx^{-1}= xyx^2 =x^2y \not\in \langle y \rangle\)</span> 이다.</p>
 </div>
 </div>
@@ -423,13 +432,13 @@ Z_G = \{ z\in G: \forall g\in G,\, zg = gz \}.
 </div>
 </div>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-center_of_group_is_normal_subgroup" class="theorem example">
+<div id="exm-MA_center_of_group_is_normal_subgroup" class="theorem example">
 <p><span class="theorem-title"><strong>보기 11.2</strong></span> <span class="math inline">\(z\in Z_G\)</span> 일 때 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(gzg^{-1}= zgg^{-1}=z\in Z_G\)</span> 이므로 <span class="math inline">\(Z_G \trianglelefteq G\)</span> 이다.</p>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-normal_subgroup_condition" class="theorem proposition">
+<div id="prp-MA_normal_subgroup_condition" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 11.3</strong></span> <span class="math inline">\(H \le G\)</span> 일 때 다음 명제들은 동치이다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(H \trianglelefteq G\)</span>,</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\forall g\in G,\, gHg^{-1}=H\)</span>,</p>
@@ -446,19 +455,19 @@ Z_G = \{ z\in G: \forall g\in G,\, zg = gz \}.
 <p>다음은 별도로 언급할 가치가 있다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="cor-normal_subgroup_condition" class="theorem corollary">
+<div id="cor-MA_normal_subgroup_condition" class="theorem corollary">
 <p><span class="theorem-title"><strong>따름정리 11.1</strong></span> <span class="math inline">\(H\le G\)</span> 일 때 <span class="math inline">\(H \trianglelefteq G\)</span> 일 필요충분조건은 <span class="math inline">\(H\)</span> 에 대한 왼쪽 잉여군의 집합과 <span class="math inline">\(H\)</span> 에 대한 오른쪽 잉여군의 집합이 같은 것이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(H\)</span> 에 대한 왼쪽 잉여군의 집합과 <span class="math inline">\(H\)</span> 에 대한 오른쪽 잉여군의 집합이 같은 것의 필요충분조건은 <a href="#prp-normal_subgroup_condition" class="quarto-xref">명제&nbsp;<span>11.3</span></a> 의 (<span class="math inline">\(3\)</span>) 인 것을 보이자. <span class="math inline">\(L_H\)</span> 를 왼쪽 잉여군의 집합, <span class="math inline">\(R_H\)</span> 를 오른쪽 잉여군의 집합이라고 하자.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(H\)</span> 에 대한 왼쪽 잉여군의 집합과 <span class="math inline">\(H\)</span> 에 대한 오른쪽 잉여군의 집합이 같은 것의 필요충분조건은 <a href="#prp-MA_normal_subgroup_condition" class="quarto-xref">명제&nbsp;<span>11.3</span></a> 의 (<span class="math inline">\(3\)</span>) 인 것을 보이자. <span class="math inline">\(L_H\)</span> 를 왼쪽 잉여군의 집합, <span class="math inline">\(R_H\)</span> 를 오른쪽 잉여군의 집합이라고 하자.</p>
 <p>(<span class="math inline">\(3\)</span>) 이 성립함을 가정하자. <span class="math inline">\(gH\in L_H\)</span> 이면 <span class="math inline">\(gH=Hg\)</span> 이므로 <span class="math inline">\(gH \in R_H\)</span> 이다. 따라서 <span class="math inline">\(L_H \subset R_H\)</span> 이며 같은 방법으로 <span class="math inline">\(R_H \subset L_H\)</span> 임을 보일 수 있으므로 <span class="math inline">\(L_H = R_H\)</span> 이다.</p>
 <p>이제 <span class="math inline">\(L_H = R_H\)</span> 임을 가정하자. <span class="math inline">\(gH\in L_H\)</span> 이면 어떤 <span class="math inline">\(Hg'\in R_H\)</span> 에 대해 <span class="math inline">\(gH = Hg'\)</span> 이다. 그런데 <span class="math inline">\(g\in gH\)</span> 이므로 <span class="math inline">\(g\in Hg'\)</span> 이어야 하며 따라서 <span class="math inline">\(Hg' = Hg\)</span> 이다. 즉 (<span class="math inline">\(3\)</span>) 이 성립한다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-subgroup_of_unique_order_is_normal" class="theorem proposition">
+<div id="prp-MA_subgroup_of_unique_order_is_normal" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 11.4</strong></span> <span class="math inline">\(H\le G\)</span> 이며 <span class="math inline">\(H\)</span> 가 <span class="math inline">\(|H|\)</span> order 를 갖는 <span class="math inline">\(G\)</span> 의 유일한 부분군이면 <span class="math inline">\(H \trianglelefteq G\)</span> 이다.</p>
 </div>
 </div>
@@ -555,28 +564,28 @@ MS = E_1 \cdots E_m S = E_1 \cdots E_{m-1}SE_m = \cdots = SE_1 \cdots E_m = SM
 </section>
 <section id="대응-정리" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="대응-정리"><span class="header-section-number">11.2</span> 대응 정리</h2>
-<section id="sec-correnspodence_theorem_1" class="level3" data-number="11.2.1">
-<h3 data-number="11.2.1" class="anchored" data-anchor-id="sec-correnspodence_theorem_1"><span class="header-section-number">11.2.1</span> 대응 정리</h3>
+<section id="sec-MA_correnspodence_theorem_1" class="level3" data-number="11.2.1">
+<h3 data-number="11.2.1" class="anchored" data-anchor-id="sec-MA_correnspodence_theorem_1"><span class="header-section-number">11.2.1</span> 대응 정리</h3>
 <p><span class="math inline">\(\varphi \in \text{Hom}(G,G')\)</span> 이며 <span class="math inline">\(H \le G\)</span> 일 때 <span class="math inline">\(\varphi\)</span> 의 정의역을 <span class="math inline">\(H\)</span> 로 제한하는 함수를 <span class="math inline">\(\varphi|_H\)</span> 로 쓰자. 즉 <span class="math inline">\(h\in H\)</span> 에 대해 <span class="math inline">\(\varphi|_H(h) =\varphi(h)\)</span> 이다. 이 때 (당연하게도) <span class="math inline">\(\ker (\varphi|_H) = \ker \varphi \cap H\)</span> 이다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-restriction_homomorphsm_1" class="theorem proposition">
+<div id="prp-MA_restriction_homomorphsm_1" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 11.5</strong></span> <span class="math inline">\(G,\,G'\)</span> 이 유한군이고 <span class="math inline">\(H \le G\)</span> 라고 하자. <span class="math inline">\(\varphi \in \text{Hom}(G, G')\)</span> 이며 <span class="math inline">\(\gcd (|H|, |G'|)=1\)</span> 이면 <span class="math inline">\(H \le \ker \varphi\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="ch2_02_homomorphisms.html#thm-orders_in_group_homomorphism" class="quarto-xref">정리&nbsp;<span>10.2</span></a> 에 따라 <span class="math inline">\(|\text{im}(\varphi|_H)| {\large \mid} |H|\)</span> 이며 <span class="math inline">\(|\text{im}(\varphi|_H)| {\large \mid} |G'|\)</span> 이어야 한다. 따라서 <span class="math inline">\(\text{im}(\varphi_H) = \{1_G'\}\)</span>. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="ch2_02_homomorphisms.html#thm-MA_orders_in_group_homomorphism" class="quarto-xref">정리&nbsp;<span>10.2</span></a> 에 따라 <span class="math inline">\(|\text{im}(\varphi|_H)| {\large \mid} |H|\)</span> 이며 <span class="math inline">\(|\text{im}(\varphi|_H)| {\large \mid} |G'|\)</span> 이어야 한다. 따라서 <span class="math inline">\(\text{im}(\varphi_H) = \{1_G'\}\)</span>. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-image_of_sign_homomorphism" class="theorem example">
-<p><span class="theorem-title"><strong>보기 11.3</strong></span> 집합 <span class="math inline">\(\{1,\,-1\}\)</span> 은 곱하기 연산에 대해 군이다. 우리는 <a href="../../src/part1/ch1_03_determinant.html">행렬식</a> 에서 <span class="math inline">\(\text{sgn}\)</span> 함수에 대해 알았보았다. <span class="math inline">\(\text{sgn} : S_n \to (\{1,\,-1\}, \times)\)</span> 가 준동형사상이라는 것은 쉽게 보일 수 있다. 만약 <span class="math inline">\(S_n\)</span> 의 부분군이 홀수개의 원소를 포함한다면 <a href="#prp-restriction_homomorphsm_1" class="quarto-xref">명제&nbsp;<span>11.5</span></a> 에 따라 <span class="math inline">\(\ker (\text{sgn})\)</span> 즉, <span class="math inline">\(A_n\)</span> 에 포함된다. 예를 들어 홀수인 <span class="math inline">\(k\)</span> 에 대한 <span class="math inline">\(k\)</span>-cycle 의 경우 order <span class="math inline">\(k\)</span> 부분군이며 따라서 짝순열(even pertumation) 이다.</p>
+<div id="exm-MA_image_of_sign_homomorphism" class="theorem example">
+<p><span class="theorem-title"><strong>보기 11.3</strong></span> 집합 <span class="math inline">\(\{1,\,-1\}\)</span> 은 곱하기 연산에 대해 군이다. 우리는 <a href="../../src/part1/ch1_03_determinant.html">행렬식</a> 에서 <span class="math inline">\(\text{sgn}\)</span> 함수에 대해 알았보았다. <span class="math inline">\(\text{sgn} : S_n \to (\{1,\,-1\}, \times)\)</span> 가 준동형사상이라는 것은 쉽게 보일 수 있다. 만약 <span class="math inline">\(S_n\)</span> 의 부분군이 홀수개의 원소를 포함한다면 <a href="#prp-MA_restriction_homomorphsm_1" class="quarto-xref">명제&nbsp;<span>11.5</span></a> 에 따라 <span class="math inline">\(\ker (\text{sgn})\)</span> 즉, <span class="math inline">\(A_n\)</span> 에 포함된다. 예를 들어 홀수인 <span class="math inline">\(k\)</span> 에 대한 <span class="math inline">\(k\)</span>-cycle 의 경우 order <span class="math inline">\(k\)</span> 부분군이며 따라서 짝순열(even pertumation) 이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-restriction_homomorphism_2" class="theorem proposition">
+<div id="prp-MA_restriction_homomorphism_2" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 11.6</strong></span> <span class="math inline">\(\varphi \in \text{Hom} (G, G')\)</span> 이고 <span class="math inline">\(K=\ker \varphi\)</span> 라 하자. <span class="math inline">\(H'\le G'\)</span> 에 대해 <span class="math inline">\(H=\varphi^{-1}(H')\)</span> 라 하자. 이 때 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(K \le H\le G\)</span> 이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(H'\trianglelefteq G'\)</span> 이면 <span class="math inline">\(H \trianglelefteq G\)</span> 이다.</p>
@@ -595,24 +604,24 @@ MS = E_1 \cdots E_m S = E_1 \cdots E_{m-1}SE_m = \cdots = SE_1 \cdots E_m = SM
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-correspondence_theorem_of_groups" class="theorem">
+<div id="thm-MA_correspondence_theorem_of_groups" class="theorem">
 <p><span class="theorem-title"><strong>정리 11.1 (대응 정리 (Correspondence Theorem ))</strong></span> <span class="math inline">\(\varphi \in \text{Hom}(G,G')\)</span> 이며 전사이고 <span class="math inline">\(K = \ker \varphi\)</span> 라 하자. 이 때 [<span class="math inline">\(K\)</span> 를 포함하는 <span class="math inline">\(G\)</span> 의 부분군의 집합] 과 [<span class="math inline">\(G'\)</span> 의 부분군의 집합] 사이에 일대일 대응이 존재한다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\varphi\)</span> 가 전사이므로 <span class="math inline">\(\varphi (\varphi^{-1}(H')) = H'\)</span> 이다. 또한 <span class="math inline">\(H \subset \varphi^{-1}(\varphi(H))\)</span> 이다 (<span class="math inline">\(\varphi\)</span> 가 단사이면 등호가 성립한다). 이제 <span class="math inline">\(\varphi^{-1}(\varphi (H)) \subset H\)</span> 임을 보이자. <span class="math inline">\(x\in \varphi^{-1}(\varphi (H))\)</span> 이면 <span class="math inline">\(\varphi (x) \in \varphi (H)\)</span> 이어야 하며, 따라서 어떤 <span class="math inline">\(h\in H\)</span> 에 대해 <span class="math inline">\(\varphi (x) = \varphi (h)\)</span> 이어야 한다. <span class="math inline">\(h^{-1}x\in K\le H\)</span> 이며 <span class="math inline">\(h\in H\)</span> 이므로 <span class="math inline">\(x \in H\)</span> 이다. 즉 <span class="math inline">\(\varphi^{-1}(\varphi(H)) = H\)</span> 이다.</p>
-<p><span class="math inline">\(G'\)</span> 의 부분군의 집합을 <span class="math inline">\(P\)</span>, <span class="math inline">\(K\)</span> 를 포함하는 <span class="math inline">\(G\)</span> 의 부분군의 집합을 <span class="math inline">\(Q\)</span> 라고 할 때 <a href="#prp-restriction_homomorphism_2" class="quarto-xref">명제&nbsp;<span>11.6</span></a> 에 의해 함수 <span class="math inline">\(\Psi : P \to Q\)</span> 를 <span class="math inline">\(\Psi(H') = \varphi^{-1}(H')\)</span> 으로 정의 할 수 있다. 임의의 <span class="math inline">\(H\in Q\)</span> 에 대해 <span class="math inline">\(\varphi (H) \in P\)</span> 이며 <span class="math inline">\(\varphi^{-1}(\varphi (H)) = H\)</span> 이므로 <span class="math inline">\(\Psi\)</span> 는 전사이다. <span class="math inline">\(\varphi^{-1}(H'_1) \ne \varphi^{-1}(H'_2)\)</span> 이면 <span class="math inline">\(\varphi\)</span> 가 전사이므로 <span class="math inline">\(H'_1\ne H'_2\)</span> 이다. 즉 <span class="math inline">\(\Psi\)</span> 는 단사이다. 따라서 <span class="math inline">\(P\)</span> 와 <span class="math inline">\(Q\)</span> 사이에 일대일 대응이 존재한다.</p>
+<p><span class="math inline">\(G'\)</span> 의 부분군의 집합을 <span class="math inline">\(P\)</span>, <span class="math inline">\(K\)</span> 를 포함하는 <span class="math inline">\(G\)</span> 의 부분군의 집합을 <span class="math inline">\(Q\)</span> 라고 할 때 <a href="#prp-MA_restriction_homomorphism_2" class="quarto-xref">명제&nbsp;<span>11.6</span></a> 에 의해 함수 <span class="math inline">\(\Psi : P \to Q\)</span> 를 <span class="math inline">\(\Psi(H') = \varphi^{-1}(H')\)</span> 으로 정의 할 수 있다. 임의의 <span class="math inline">\(H\in Q\)</span> 에 대해 <span class="math inline">\(\varphi (H) \in P\)</span> 이며 <span class="math inline">\(\varphi^{-1}(\varphi (H)) = H\)</span> 이므로 <span class="math inline">\(\Psi\)</span> 는 전사이다. <span class="math inline">\(\varphi^{-1}(H'_1) \ne \varphi^{-1}(H'_2)\)</span> 이면 <span class="math inline">\(\varphi\)</span> 가 전사이므로 <span class="math inline">\(H'_1\ne H'_2\)</span> 이다. 즉 <span class="math inline">\(\Psi\)</span> 는 단사이다. 따라서 <span class="math inline">\(P\)</span> 와 <span class="math inline">\(Q\)</span> 사이에 일대일 대응이 존재한다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="cor-correnspondence_theorem_of_groups" class="theorem corollary">
-<p><span class="theorem-title"><strong>따름정리 11.2</strong></span> <a href="#thm-correspondence_theorem_of_groups" class="quarto-xref">정리&nbsp;<span>11.1</span></a> 조건에서 <span class="math inline">\(|\varphi^{-1}(H') | = |H'||K|\)</span> 이다.</p>
+<div id="cor-MA_correnspondence_theorem_of_groups" class="theorem corollary">
+<p><span class="theorem-title"><strong>따름정리 11.2</strong></span> <a href="#thm-MA_correspondence_theorem_of_groups" class="quarto-xref">정리&nbsp;<span>11.1</span></a> 조건에서 <span class="math inline">\(|\varphi^{-1}(H') | = |H'||K|\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\varphi|_H \in \text{Hom}(H,\, H')\)</span> 이며 전사이고 <span class="math inline">\(\varphi^{-1}(H')=H\)</span> 이다. 또한 <span class="math inline">\(K = \ker \varphi = \ker \varphi|_H\)</span>, <span class="math inline">\(\text{im}\, \varphi|_H = H'\)</span> 이므로 <a href="ch2_02_homomorphisms.html#thm-orders_in_group_homomorphism" class="quarto-xref">정리&nbsp;<span>10.2</span></a> 에 따라</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\varphi|_H \in \text{Hom}(H,\, H')\)</span> 이며 전사이고 <span class="math inline">\(\varphi^{-1}(H')=H\)</span> 이다. 또한 <span class="math inline">\(K = \ker \varphi = \ker \varphi|_H\)</span>, <span class="math inline">\(\text{im}\, \varphi|_H = H'\)</span> 이므로 <a href="ch2_02_homomorphisms.html#thm-MA_orders_in_group_homomorphism" class="quarto-xref">정리&nbsp;<span>10.2</span></a> 에 따라</p>
 <p><span class="math display">\[
 |H| = |\varphi^{-1}(H')|=|H'|\,|K|
 \]</span></p>
@@ -676,7 +685,7 @@ Q= \{ H_0 = G, H_1 = \{1_G, x^2, x^4, x^6, x^8, x^{10}\}, H_2=\{1_G, x^3, x^6, x
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-external_product_of_groups" class="theorem definition">
+<div id="def-MA_external_product_of_groups" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 11.3 (External product of groups)</strong></span> 군 <span class="math inline">\(G,\,G'\)</span> 의 데카르트곱 <span class="math inline">\(G\times G'\)</span> 에 아래와 같은 곱연산을 부여한 것을 <span class="math inline">\(G\)</span> 와 <span class="math inline">\(G'\)</span> 의 <strong>External product</strong> 라고 한다.</p>
 <p><span class="math display">\[
 (a,\,a')(b,\,b')=(ab,\,ab')
@@ -690,13 +699,13 @@ Q= \{ H_0 = G, H_1 = \{1_G, x^2, x^4, x^6, x^8, x^{10}\}, H_2=\{1_G, x^3, x^6, x
 <p>다음은 쉽게 보일 수 있다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-external_product_of_groups_is_a_group" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 11.7</strong></span> <a href="#def-external_product_of_groups" class="quarto-xref">정의&nbsp;<span>11.3</span></a> 에 의해 정의된 <span class="math inline">\(G \times G'\)</span> 은 군이다.</p>
+<div id="prp-MA_external_product_of_groups_is_a_group" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 11.7</strong></span> <a href="#def-MA_external_product_of_groups" class="quarto-xref">정의&nbsp;<span>11.3</span></a> 에 의해 정의된 <span class="math inline">\(G \times G'\)</span> 은 군이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-isomorphic_to_external_product" class="theorem proposition">
+<div id="prp-MA_isomorphic_to_external_product" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 11.8</strong></span> <span class="math inline">\(r\)</span> 과 <span class="math inline">\(s\)</span> 가 서로소인 두 정수일 때 계수가 <span class="math inline">\(rs\)</span> 인 순환군은 계수가 <span class="math inline">\(r\)</span>, <span class="math inline">\(s\)</span> 인 두 순환군의 external product 와 동형이다.</p>
 </div>
 </div>
@@ -710,7 +719,7 @@ Q= \{ H_0 = G, H_1 = \{1_G, x^2, x^4, x^6, x^8, x^{10}\}, H_2=\{1_G, x^3, x^6, x
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-inner_product_group" class="theorem proposition">
+<div id="prp-MA_inner_product_group" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 11.9</strong></span> <span class="math inline">\(H\le G,\, K \le G\)</span> 일 때 <span class="math inline">\(f:H \times K \to G\)</span> 를 <span class="math inline">\(f(h, k)=hk\)</span> 로 정의하자. <span class="math inline">\(HK=\{hk|h\in H,\, k \in K\}\)</span> 라 할 때 <span class="math inline">\(\text{im}\, (f) = HK\)</span> 이다. 이 때 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(f\)</span> 가 단사일 필요충분조건은 <span class="math inline">\(H \cap K = \{1_G\}\)</span> 이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(f\)</span> 가 준동형사상일 필요충분조건은 모든 <span class="math inline">\(h\in H,\, k\in K\)</span> 에 대해 <span class="math inline">\(hk = kh\)</span> 인 것이다.</p>
@@ -736,8 +745,8 @@ Q= \{ H_0 = G, H_1 = \{1_G, x^2, x^4, x^6, x^8, x^{10}\}, H_2=\{1_G, x^3, x^6, x
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
-<div id="exm-multiplicaiton_map_and_homomorphism" class="theorem example">
-<p><span class="theorem-title"><strong>보기 11.4</strong></span> <a href="#prp-inner_product_group" class="quarto-xref">명제&nbsp;<span>11.9</span></a> 의 <span class="math inline">\(f\)</span> 는 동형사상이 아니더라도 전단사 일 수 있다. 예를 들어 <span class="math inline">\(S_3 = \{1,\, x,\,x^2,\,y,\,xy,\,x^2y\}\)</span> 를 생각하자. 여기서 <span class="math inline">\(x^3=y^2=1\)</span> 이며 <span class="math inline">\(x^2y=yx\)</span> 이다. <span class="math inline">\(H=\langle x\rangle,\, K = \langle y \rangle\)</span> 에 대해 <span class="math inline">\(f:H \times K \to S_3\)</span> 를 <span class="math inline">\(f(h, k) = hk\)</span> 로 정의하자. <span class="math inline">\(f\)</span> 는 전단사이지만 <span class="math inline">\(xy\ne yx\)</span> 이므로 <span class="math inline">\(f \notin \text{Hom}(H \times K,\, G)\)</span> 이다.</p>
+<div id="exm-MA_multiplicaiton_map_and_homomorphism" class="theorem example">
+<p><span class="theorem-title"><strong>보기 11.4</strong></span> <a href="#prp-MA_inner_product_group" class="quarto-xref">명제&nbsp;<span>11.9</span></a> 의 <span class="math inline">\(f\)</span> 는 동형사상이 아니더라도 전단사 일 수 있다. 예를 들어 <span class="math inline">\(S_3 = \{1,\, x,\,x^2,\,y,\,xy,\,x^2y\}\)</span> 를 생각하자. 여기서 <span class="math inline">\(x^3=y^2=1\)</span> 이며 <span class="math inline">\(x^2y=yx\)</span> 이다. <span class="math inline">\(H=\langle x\rangle,\, K = \langle y \rangle\)</span> 에 대해 <span class="math inline">\(f:H \times K \to S_3\)</span> 를 <span class="math inline">\(f(h, k) = hk\)</span> 로 정의하자. <span class="math inline">\(f\)</span> 는 전단사이지만 <span class="math inline">\(xy\ne yx\)</span> 이므로 <span class="math inline">\(f \notin \text{Hom}(H \times K,\, G)\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -746,7 +755,7 @@ Q= \{ H_0 = G, H_1 = \{1_G, x^2, x^4, x^6, x^8, x^{10}\}, H_2=\{1_G, x^3, x^6, x
 <p>군의 부분군 <span class="math inline">\(H,\,K\)</span> 과 그 곱집합 <span class="math inline">\(HK\)</span> 을 통해 군에 대해 중요한 것을 알 수 있다. 이제 몇가지를 알아보도록 하자.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-herstein_lem_2_5_1" class="theorem proposition">
+<div id="prp-MA_herstein_lem_2_5_1" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 11.10</strong></span> <span class="math inline">\(H\le G,\, K\le G\)</span> 일 때, <span class="math inline">\(HK = KH \iff HK \le G\)</span> 이다.</p>
 </div>
 </div>
@@ -757,7 +766,7 @@ Q= \{ H_0 = G, H_1 = \{1_G, x^2, x^4, x^6, x^8, x^{10}\}, H_2=\{1_G, x^3, x^6, x
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-herstein_thm_2_5_1" class="theorem proposition">
+<div id="prp-MA_herstein_thm_2_5_1" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 11.11</strong></span> <span class="math inline">\(H,\, K\)</span> 가 <span class="math inline">\(G\)</span> 의 유한부분군일 때 다음이 성립함을 보여라.</p>
 <p><span class="math display">\[
 |HK| = \dfrac{|H||K|}{|H \cap K|}.
@@ -766,7 +775,7 @@ Q= \{ H_0 = G, H_1 = \{1_G, x^2, x^4, x^6, x^8, x^{10}\}, H_2=\{1_G, x^3, x^6, x
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(f:H \times K \to HK\)</span> 를 <span class="math inline">\(f(h,\,k) = hk\)</span> 로 정의하자. <span class="math inline">\(H \cap K = \{1_G\}\)</span> 이면 <a href="#prp-inner_product_group" class="quarto-xref">명제&nbsp;<span>11.9</span></a> 에 의해 <span class="math inline">\(|H||K|=|HK|\)</span> 이다. 이제 한 <span class="math inline">\(|f^{-1}(\{hk\})| =  |H \cap K|\)</span> 임을 보이면 된다.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(f:H \times K \to HK\)</span> 를 <span class="math inline">\(f(h,\,k) = hk\)</span> 로 정의하자. <span class="math inline">\(H \cap K = \{1_G\}\)</span> 이면 <a href="#prp-MA_inner_product_group" class="quarto-xref">명제&nbsp;<span>11.9</span></a> 에 의해 <span class="math inline">\(|H||K|=|HK|\)</span> 이다. 이제 한 <span class="math inline">\(|f^{-1}(\{hk\})| =  |H \cap K|\)</span> 임을 보이면 된다.</p>
 <p><span class="math inline">\(x\in H\cap K\)</span> 라고 하자. <span class="math inline">\(hk = (hx)(x^{-1}k)\)</span> 이며 <span class="math inline">\(hx\in H,\, x^{-1}k\in K\)</span> 이므로 <span class="math inline">\(f^{-1}(\{hk\})\)</span> 는 최소한 <span class="math inline">\(|H \cap K|\)</span> 개의 원소를 가진다. 이제 <span class="math inline">\(hk = h'k'\)</span> 이라고 하자. <span class="math inline">\(h^{-1}h' = kk'^{-1}\in H\cap K\)</span> 이다. <span class="math inline">\(y=h^{-1}h' = kk'^{-1}\)</span> 이라고 하면, <span class="math inline">\(h'=hy,\, k'=y^{-1}k\)</span> 즉 <span class="math inline">\(hk=h'k'\)</span> 이면 어떤 <span class="math inline">\(y\in H \cap K\)</span> 에 대해 <span class="math inline">\(h'=hy,\, k'=y^{-1}k\)</span> 이다. 따라서 <span class="math inline">\(|f^{-1}(\{hk\})| =  |H \cap K|\)</span> 이며 주어진 식이 성립한다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
@@ -793,7 +802,7 @@ Q= \{ H_0 = G, H_1 = \{1_G, x^2, x^4, x^6, x^8, x^{10}\}, H_2=\{1_G, x^3, x^6, x
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-inner_product_group" class="quarto-xref">명제&nbsp;<span>11.9</span></a> 에 따라 <span class="math inline">\(H\cap K = \{1_G\}\)</span>, <span class="math inline">\(HK=G\)</span>, <span class="math inline">\(H \trianglelefteq G,\, K \trianglelefteq G\)</span> 임을 보이면 된다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-MA_inner_product_group" class="quarto-xref">명제&nbsp;<span>11.9</span></a> 에 따라 <span class="math inline">\(H\cap K = \{1_G\}\)</span>, <span class="math inline">\(HK=G\)</span>, <span class="math inline">\(H \trianglelefteq G,\, K \trianglelefteq G\)</span> 임을 보이면 된다.</p>
 <p>(<span class="math inline">\(1\)</span>) OK</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(k=\begin{bmatrix} 1 &amp; a \\ 0 &amp; 1 \end{bmatrix} \in K\)</span>, <span class="math inline">\(h = \begin{bmatrix} b &amp; 0 \\ 0 &amp; c \end{bmatrix} \in K\)</span> 에 대해 <span class="math inline">\(k^{-1} = \begin{bmatrix} 1 &amp; -a \\ 0 &amp; 1 \end{bmatrix}\)</span> 이며, <span class="math inline">\(khk^{-1}= \begin{bmatrix} b &amp; ac-ab \\ 0 &amp; c \end{bmatrix} \notin H\)</span> 이므로 <span class="math inline">\(H\)</span> 는 <span class="math inline">\(G\)</span> 의 정규부분군이 아니다.</p>
 <p>(<span class="math inline">\(3\)</span>) OK</p>
@@ -820,7 +829,7 @@ Q= \{ H_0 = G, H_1 = \{1_G, x^2, x^4, x^6, x^8, x^{10}\}, H_2=\{1_G, x^3, x^6, x
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>order 3 부분군과 order 5 부분군은 cyclic group 이다. <span class="math inline">\(A=\langle a \rangle\)</span> 를 order 3 부분군, <span class="math inline">\(B=\langle b \rangle\)</span> 를 order 5 부분군이라고 하자. <span class="math inline">\(bab^{-1}\)</span> 은 <span class="math inline">\(a\)</span> 이거나 <span class="math inline">\(a^2\)</span> 이다. <span class="math inline">\(bab^{-1}=a\)</span> 이면 <span class="math inline">\(ab=ba\)</span> 이므로 <span class="math inline">\(AB=BA\)</span> 이며, 따라서 <a href="#prp-herstein_lem_2_5_1" class="quarto-xref">명제&nbsp;<span>11.10</span></a> 에 따라 <span class="math inline">\(AB\le G\)</span> 이다. <span class="math inline">\(bab^{-1}=a^2\)</span> 이면 <span class="math inline">\(a^2b=a^{-1}b=ba\)</span> 이다. 따라서 <span class="math inline">\(AB=BA\)</span> 이며 <span class="math inline">\(AB\le G\)</span> 이다. <span class="math inline">\(AB = \langle ab\rangle\)</span> 이며 <span class="math inline">\(o(ab)=15\)</span> 이다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>order 3 부분군과 order 5 부분군은 cyclic group 이다. <span class="math inline">\(A=\langle a \rangle\)</span> 를 order 3 부분군, <span class="math inline">\(B=\langle b \rangle\)</span> 를 order 5 부분군이라고 하자. <span class="math inline">\(bab^{-1}\)</span> 은 <span class="math inline">\(a\)</span> 이거나 <span class="math inline">\(a^2\)</span> 이다. <span class="math inline">\(bab^{-1}=a\)</span> 이면 <span class="math inline">\(ab=ba\)</span> 이므로 <span class="math inline">\(AB=BA\)</span> 이며, 따라서 <a href="#prp-MA_herstein_lem_2_5_1" class="quarto-xref">명제&nbsp;<span>11.10</span></a> 에 따라 <span class="math inline">\(AB\le G\)</span> 이다. <span class="math inline">\(bab^{-1}=a^2\)</span> 이면 <span class="math inline">\(a^2b=a^{-1}b=ba\)</span> 이다. 따라서 <span class="math inline">\(AB=BA\)</span> 이며 <span class="math inline">\(AB\le G\)</span> 이다. <span class="math inline">\(AB = \langle ab\rangle\)</span> 이며 <span class="math inline">\(o(ab)=15\)</span> 이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
@@ -862,7 +871,7 @@ B &amp;= \{ (\varphi,\, \varphi') : \varphi \in \text{Hom}(H, G),\, \varphi' \in
 <section id="몫군과-canonical-map" class="level3" data-number="11.4.1">
 <h3 data-number="11.4.1" class="anchored" data-anchor-id="몫군과-canonical-map"><span class="header-section-number">11.4.1</span> 몫군과 canonical map</h3>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-product_of_cosets_of_normal_subgroup" class="theorem proposition">
+<div id="prp-MA_product_of_cosets_of_normal_subgroup" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 11.12</strong></span> <span class="math inline">\(N \trianglelefteq G\)</span> 이고 <span class="math inline">\(a,\, b\in G\)</span> 일 때 <span class="math inline">\((aN)(bN) = \{an_1bn_2 : n_1,\,n_2\in N\}=abN\)</span> 이다.</p>
 </div>
 </div>
@@ -871,11 +880,11 @@ B &amp;= \{ (\varphi,\, \varphi') : \varphi \in \text{Hom}(H, G),\, \varphi' \in
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(b^{-1}n_1b \in N\)</span> 이므로 <span class="math inline">\(n'=b^{-1}nb\)</span> 라 하자. <span class="math inline">\(an_1bn_2 = abb^{-1}n_1bn_2=abn_1'n_2 \in abN\)</span> 이므로 <span class="math inline">\((aN)(bN)\subset abN\)</span> 이다. <span class="math inline">\(abn\in abN\)</span> 에 대해 <span class="math inline">\(abn=(a1_G)(bn)\in (aN)(bN)\)</span> 이므로 <span class="math inline">\((aN)(bN) =abN\)</span> 이다.<span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p>이로부터 <span class="math inline">\(N \trianglelefteq G\)</span> 일 때 <span class="math inline">\(N\)</span> 에 의한 cosets 의 집합에 <a href="#prp-product_of_cosets_of_normal_subgroup" class="quarto-xref">명제&nbsp;<span>11.12</span></a> 에서와 같이 <span class="math inline">\((aN)(bN)=abN\)</span> 이라는 연산을 부여할 수 있다는 것을 즉, 이 연산이 잘 정의된다는 것을 알 수 있다. 이 때 <span class="math inline">\(N\)</span> 에 의한 <span class="math inline">\(G\)</span> 의 cosets 의 집합을 <span class="math inline">\(G/N\)</span> 이라고 하자.</p>
+<p>이로부터 <span class="math inline">\(N \trianglelefteq G\)</span> 일 때 <span class="math inline">\(N\)</span> 에 의한 cosets 의 집합에 <a href="#prp-MA_product_of_cosets_of_normal_subgroup" class="quarto-xref">명제&nbsp;<span>11.12</span></a> 에서와 같이 <span class="math inline">\((aN)(bN)=abN\)</span> 이라는 연산을 부여할 수 있다는 것을 즉, 이 연산이 잘 정의된다는 것을 알 수 있다. 이 때 <span class="math inline">\(N\)</span> 에 의한 <span class="math inline">\(G\)</span> 의 cosets 의 집합을 <span class="math inline">\(G/N\)</span> 이라고 하자.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-prouct_group" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 11.13</strong></span> <span class="math inline">\(N \trianglelefteq G\)</span> 일 때 <span class="math inline">\(G/N\)</span> 에 <a href="#prp-product_of_cosets_of_normal_subgroup" class="quarto-xref">명제&nbsp;<span>11.12</span></a> 의 연산을 부여하면 <span class="math inline">\(G/N\)</span> 은 군이다.</p>
+<div id="prp-MA_prouct_group" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 11.13</strong></span> <span class="math inline">\(N \trianglelefteq G\)</span> 일 때 <span class="math inline">\(G/N\)</span> 에 <a href="#prp-MA_product_of_cosets_of_normal_subgroup" class="quarto-xref">명제&nbsp;<span>11.12</span></a> 의 연산을 부여하면 <span class="math inline">\(G/N\)</span> 은 군이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -889,7 +898,7 @@ B &amp;= \{ (\varphi,\, \varphi') : \varphi \in \text{Hom}(H, G),\, \varphi' \in
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-quotient_group" class="theorem definition">
+<div id="def-MA_quotient_group" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 11.4 (몫군)</strong></span> 군 <span class="math inline">\(G\)</span> 와 그 정규부분군 <span class="math inline">\(N\)</span> 에 대해 <span class="math inline">\(G/N\)</span> 을 그 cosets 의 집합으로 정의하고 <span class="math inline">\(aN,\,bN\in G/N\)</span> 에 대해</p>
 <p><span class="math display">\[
 (aN)(bN) =  abN
@@ -901,7 +910,7 @@ B &amp;= \{ (\varphi,\, \varphi') : \varphi \in \text{Hom}(H, G),\, \varphi' \in
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-canonical_map_for_quotient_group" class="theorem proposition">
+<div id="prp-MA_canonical_map_for_quotient_group" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 11.14</strong></span> <span class="math inline">\(N \trianglelefteq G\)</span> 일 때 함수 <span class="math inline">\(\pi : G\to G/N\)</span> 을 <span class="math inline">\(\pi (g) = gN\)</span> 으로 정의하면 <span class="math inline">\(\pi\in \text{Hom}(G,\, G/N)\)</span> 이다. 군과 몫군 사이에 정의된 이 준동형사상을 <strong>canonical map</strong> 이라고 한다.</p>
 </div>
 </div>
@@ -910,7 +919,7 @@ B &amp;= \{ (\varphi,\, \varphi') : \varphi \in \text{Hom}(H, G),\, \varphi' \in
 <section id="제-1-동형정리" class="level3" data-number="11.4.2">
 <h3 data-number="11.4.2" class="anchored" data-anchor-id="제-1-동형정리"><span class="header-section-number">11.4.2</span> 제 1 동형정리</h3>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="lem-map_with_homomorphism_property" class="theorem lemma">
+<div id="lem-MA_map_with_homomorphism_property" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 11.1</strong></span> <span class="math inline">\(G\)</span> 가 군이고, <span class="math inline">\(Y\)</span> 는 연산에 대해 닫혀있는 집합이라고 하자. 각 군에서의 연산을 곱하기로 표현하자. 함수 <span class="math inline">\(\phi : G \to Y\)</span> 가 전사이며, 준동형사상과 같이 모든 <span class="math inline">\(g_1,\,g_2\in G\)</span> 에 대해 <span class="math inline">\(\phi(g_1)\phi(g_2) = \phi(g_1g_2)\)</span> 를 만족한다면 <span class="math inline">\(Y\)</span> 는 군이며 따라서 <span class="math inline">\(\phi \in \text{Hom}(G, Y)\)</span> 이다.</p>
 </div>
 </div>
@@ -927,13 +936,13 @@ y_1(y_2y_3) &amp;= \phi(g_1)(\phi(g_2)\phi(g_3))=\phi(g_1(g_2g_3))=\phi((g_1g_2)
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-first_isomorphism_theorem" class="theorem">
+<div id="thm-MA_first_isomorphism_theorem" class="theorem">
 <p><span class="theorem-title"><strong>정리 11.2 (제1 동형정리)</strong></span> <span class="math inline">\(\varphi \in \text{Hom}(G,\,G')\)</span> 이 전사이며 <span class="math inline">\(N = \ker \varphi\)</span> 라 하자. 이 때 <span class="math inline">\(G/N\)</span> 과 <span class="math inline">\(G'\)</span> 은 동형이다. 즉 <span class="math inline">\(G/N \cong G'\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-kernel_and_normal_subgroup" class="quarto-xref">명제&nbsp;<span>11.2</span></a> 에 따라 <span class="math inline">\(N = \ker \varphi  \trianglelefteq G\)</span> 이므로 몫군 <span class="math inline">\(G/N\)</span> 을 생각 할 수 있다. 함수 <span class="math inline">\(\theta : G/N \to G'\)</span> 을 <span class="math inline">\(\theta (gN)= \varphi(g)\)</span> 로 정의하자. <span class="math inline">\(g_1\ne g_2,\, g_1N=g_2N\)</span> 인 <span class="math inline">\(g_1,\,g_2\in G\)</span> 에 대해 <span class="math inline">\(g_1=g_2n,\, n\in N = \ker \varphi\)</span> 인 <span class="math inline">\(n\)</span> 이 존재하며 <span class="math inline">\(\varphi(g_1)= \varphi(g_2n)=\varphi(g_2)\)</span> 이므로 이 함수 <span class="math inline">\(\theta\)</span> 는 잘 정의된다. 또한</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-MA_kernel_and_normal_subgroup" class="quarto-xref">명제&nbsp;<span>11.2</span></a> 에 따라 <span class="math inline">\(N = \ker \varphi  \trianglelefteq G\)</span> 이므로 몫군 <span class="math inline">\(G/N\)</span> 을 생각 할 수 있다. 함수 <span class="math inline">\(\theta : G/N \to G'\)</span> 을 <span class="math inline">\(\theta (gN)= \varphi(g)\)</span> 로 정의하자. <span class="math inline">\(g_1\ne g_2,\, g_1N=g_2N\)</span> 인 <span class="math inline">\(g_1,\,g_2\in G\)</span> 에 대해 <span class="math inline">\(g_1=g_2n,\, n\in N = \ker \varphi\)</span> 인 <span class="math inline">\(n\)</span> 이 존재하며 <span class="math inline">\(\varphi(g_1)= \varphi(g_2n)=\varphi(g_2)\)</span> 이므로 이 함수 <span class="math inline">\(\theta\)</span> 는 잘 정의된다. 또한</p>
 <p><span class="math display">\[
 \theta(g_1N)\theta(g_2N) =  \varphi(g_1)\varphi(g_2) = \varphi(g_1g_2) = \theta(g_1g_2N)
 \]</span></p>
@@ -941,7 +950,7 @@ y_1(y_2y_3) &amp;= \phi(g_1)(\phi(g_2)\phi(g_3))=\phi(g_1(g_2g_3))=\phi((g_1g_2)
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="cor-first_isomorphism_theorem" class="theorem corollary">
+<div id="cor-MA_first_isomorphism_theorem" class="theorem corollary">
 <p><span class="theorem-title"><strong>따름정리 11.3</strong></span> <span class="math inline">\(\varphi \in \text{Hom}(G,\, G')\)</span> 이며 <span class="math inline">\(N =\ker \varphi\)</span> 이고 <span class="math inline">\(H' = \text{im}\,(\varphi)\)</span> 이면 <span class="math inline">\(G/N \cong H'\)</span> 이다.</p>
 </div>
 </div>
@@ -956,7 +965,7 @@ y_1(y_2y_3) &amp;= \phi(g_1)(\phi(g_2)\phi(g_3))=\phi(g_1(g_2g_3))=\phi((g_1g_2)
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(L_H\)</span> 를 <span class="math inline">\(H\)</span> 에 의한 <span class="math inline">\(G\)</span> 의 왼쪽 잉여류의 집합이라고 하고 위 명제의 대우명제를 증명한다. 즉. <span class="math inline">\(\forall a,\,b\in G\)</span> 에 대해 <span class="math inline">\((aH)(bH) \in L_H\)</span> 이면 <span class="math inline">\(H \trianglelefteq G\)</span> 임을 증명하자. 임의의 <span class="math inline">\(a,\,b\in G\)</span> 에 대해 <span class="math inline">\((aH)(bH)=cH\)</span> 인 <span class="math inline">\(c\in G\)</span> 가 존재한다고 하자. 즉 임의의 <span class="math inline">\(h_1,\,h_2\in H\)</span> 에 대해 <span class="math inline">\(ah_1bh_2 = ch_3\)</span> 를 만족하는 <span class="math inline">\(h_3\)</span> 가 존재하므로 <span class="math inline">\(h_1 b = a^{-1}c h_3 h_2^{-1}\)</span> 이다. 이로부터 <span class="math inline">\(Hb = a^{-1}cH\)</span> 임을 알며 이는 <span class="math inline">\(H\)</span> 에 대한 <span class="math inline">\(G\)</span> 의 왼쪽 잉여류의 집합과 오른쪽 잉여류의 집합이 같다는것을 뜻한다. <a href="#cor-normal_subgroup_condition" class="quarto-xref">따름정리&nbsp;<span>11.1</span></a> 로부터 <span class="math inline">\(H \trianglelefteq G\)</span> 이다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(L_H\)</span> 를 <span class="math inline">\(H\)</span> 에 의한 <span class="math inline">\(G\)</span> 의 왼쪽 잉여류의 집합이라고 하고 위 명제의 대우명제를 증명한다. 즉. <span class="math inline">\(\forall a,\,b\in G\)</span> 에 대해 <span class="math inline">\((aH)(bH) \in L_H\)</span> 이면 <span class="math inline">\(H \trianglelefteq G\)</span> 임을 증명하자. 임의의 <span class="math inline">\(a,\,b\in G\)</span> 에 대해 <span class="math inline">\((aH)(bH)=cH\)</span> 인 <span class="math inline">\(c\in G\)</span> 가 존재한다고 하자. 즉 임의의 <span class="math inline">\(h_1,\,h_2\in H\)</span> 에 대해 <span class="math inline">\(ah_1bh_2 = ch_3\)</span> 를 만족하는 <span class="math inline">\(h_3\)</span> 가 존재하므로 <span class="math inline">\(h_1 b = a^{-1}c h_3 h_2^{-1}\)</span> 이다. 이로부터 <span class="math inline">\(Hb = a^{-1}cH\)</span> 임을 알며 이는 <span class="math inline">\(H\)</span> 에 대한 <span class="math inline">\(G\)</span> 의 왼쪽 잉여류의 집합과 오른쪽 잉여류의 집합이 같다는것을 뜻한다. <a href="#cor-MA_normal_subgroup_condition" class="quarto-xref">따름정리&nbsp;<span>11.1</span></a> 로부터 <span class="math inline">\(H \trianglelefteq G\)</span> 이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
@@ -1010,8 +1019,8 @@ y_1(y_2y_3) &amp;= \phi(g_1)(\phi(g_2)\phi(g_3))=\phi(g_1(g_2g_3))=\phi((g_1g_2)
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_M_2" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.21 (Artin 2.M.2)</strong></span> 유한군 <span class="math inline">\(G\)</span> 에 대해 다음을 보여라.</p>
-<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(|G|\)</span> 가 짝수이면 order 2 인 성분을 포함함을 보여라.</p>
-<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(|G|=21\)</span> 이면 order 3 성분을 포함함을 보여라.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(|G|\)</span> 가 짝수이면 order 2 인 성분을 포함함을 보여라.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(|G|=21\)</span> 이면 order 3 성분을 포함함을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -1023,9 +1032,9 @@ y_1(y_2y_3) &amp;= \phi(g_1)(\phi(g_2)\phi(g_3))=\phi(g_1(g_2g_3))=\phi((g_1g_2)
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_M_3" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 11.22 (Artim 2.M.3)</strong></span> <span class="math inline">\(|G|=6\)</span> 일 때 아래의 경우에 대해 <span class="math inline">\(G\)</span> 를 분류하시오.</p>
-<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(G\)</span> 가 order 6 인 성분을 포함한다.</p>
-<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(G\)</span> 는 order 3 성분을 포함하며 order 6 성분을 포함하지 않는다.</p>
-<p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(G\)</span> 의 모든 성분은 order 가 1 이거나 2 이다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(G\)</span> 가 order 6 인 성분을 포함한다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(G\)</span> 는 order 3 성분을 포함하며 order 6 성분을 포함하지 않는다.</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(G\)</span> 의 모든 성분은 order 가 1 이거나 2 이다.</p>
 </div>
 </div>
 <p><br></p>

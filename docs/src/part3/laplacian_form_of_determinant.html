@@ -378,14 +378,14 @@ window.Quarto = {
 </ol>
 </div>
 </div>
-<p><a href="../../src/part3/bilinear_form.html#sec-alternating_form_and_determinant_of_matrix">교대형식과 행렬식</a> 에서 위의 조건을 만족하는 함수가 유일하다는 것을 보였다(<a href="bilinear_form.html#thm-uniqueness_of_determinant" class="quarto-xref">정리&nbsp;<span>15.2</span></a>). 즉 우리가 위의 조건을 만족하는 어떤 함수를 생각해낸다면 그것은 행렬식과 같다는 의미이다. 일단 우리는 이것을 인정하기로 하자.</p>
+<p><a href="../../src/part3/bilinear_form.html#sec-ALA_alternating_form_and_determinant_of_matrix">교대형식과 행렬식</a> 에서 위의 조건을 만족하는 함수가 유일하다는 것을 보였다(<a href="bilinear_form.html#thm-ALA_uniqueness_of_determinant" class="quarto-xref">정리&nbsp;<span>15.2</span></a>). 즉 우리가 위의 조건을 만족하는 어떤 함수를 생각해낸다면 그것은 행렬식과 같다는 의미이다. 일단 우리는 이것을 인정하기로 하자.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-part3_minor_of_matrix" class="theorem definition">
+<div id="def-ALA_part3_minor_of_matrix" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 16.1 (Minor)</strong></span> <span class="math inline">\(n \times n\)</span> 정사각 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 <span class="math inline">\(i\)</span> 번째 행과 <span class="math inline">\(j\)</span> 번째 열을 제거한 <span class="math inline">\((n-1)\times (n-1)\)</span> 행렬의 행렬식을 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 <span class="math inline">\((i,\,j)\)</span>-minor 라고 부르고 <span class="math inline">\(M_{ij}\)</span> 혹은 <span class="math inline">\(M_{ij}(\boldsymbol{A})\)</span> 라고 쓴다.</p>
 </div>
 </div>
@@ -398,13 +398,13 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-part3_minor_expansion" class="theorem definition">
+<div id="def-ALA_minor_expansion" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 16.2 (라플라스 전개)</strong></span> <span class="math inline">\(n\times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 <span class="math inline">\((i,\,j)\)</span>-minor 를 <span class="math inline">\(M_{ij}\)</span> 라고 할 때 아래 함수 <span class="math inline">\(D^{j}:\mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}\)</span> 를 <strong><span class="math inline">\(j\)</span>-번째 열에 대한 라플라스 전개</strong>라고 한다.</p>
-<p><span id="eq-part3_laplace_expansion_for_column"><span class="math display">\[
+<p><span id="eq-ALA_laplace_expansion_for_column"><span class="math display">\[
 D^j(\boldsymbol{A}) :=   \sum_{i=1}^n (-1)^{i+j} A_{ij}M_{ij}.
 \tag{16.1}\]</span></span></p>
 <p>같은 방법으로 <strong><span class="math inline">\(i\)</span>-번째 행에 대해 라플라스 전개</strong> <span class="math inline">\(D_i:\mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}\)</span> 를 아래와 같이 정의한다.</p>
-<p><span id="eq-part3_laplace_expansion_for_row"><span class="math display">\[
+<p><span id="eq-ALA_laplace_expansion_for_row"><span class="math display">\[
 D_i(\boldsymbol{A}) :=   \sum_{j=1}^n (-1)^{i+j} A_{ij}M_{ij}.
 \tag{16.2}\]</span></span></p>
 </div>
@@ -415,7 +415,7 @@ D_i(\boldsymbol{A}) :=   \sum_{j=1}^n (-1)^{i+j} A_{ij}M_{ij}.
 <p>우리는 이제 <span class="math inline">\(D_j(\boldsymbol{A})=D_i(\boldsymbol{A})=\det(\boldsymbol{A})\)</span> 임을 보일 것이다. 우선 행렬식의 조건 1. 은 충족한다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="lem-part3_laplace_expansion_and_k_laternating_form_0" class="theorem lemma">
+<div id="lem-ALA_laplace_expansion_and_k_laternating_form_0" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 16.1</strong></span> <span class="math inline">\(D_i(\boldsymbol{A}^T) = D^i (\boldsymbol{A})\)</span> 이다.</p>
 </div>
 </div>
@@ -429,7 +429,7 @@ D_i(\boldsymbol{A}^T) = \sum_{j=1}^n (-1) (\boldsymbol{A}^T)_{ij} M_{ij}(\boldsy
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="lem-part3_laplace_expansion_and_k_laternating_form_1" class="theorem lemma">
+<div id="lem-ALA_laplace_expansion_and_k_laternating_form_1" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 16.2</strong></span> <span class="math inline">\(D_i(\boldsymbol{I}_n)=D^j(\boldsymbol{I}_n)=1\)</span> 이다.</p>
 </div>
 </div>
@@ -445,7 +445,7 @@ D_i(\boldsymbol{I}_n) = (-1)^{2i} M_{ii}
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="lem-part3_laplace_expansion_and_k_laternating_form_2" class="theorem lemma">
+<div id="lem-ALA_laplace_expansion_and_k_laternating_form_2" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 16.3</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대한 <span class="math inline">\(D_i(\boldsymbol{A})\)</span> 는 <span class="math inline">\(n\)</span>-교대형식이다.</p>
 </div>
 </div>
@@ -463,7 +463,7 @@ D_i(\boldsymbol{B}) &amp;= \sum_{j=1}^n (-1)^{i+j} B_{ij} M_{ij}(\boldsymbol{B})
 D_{i}(\boldsymbol{B}) = D_i(\boldsymbol{A}) + cD_i (\boldsymbol{A}')
 \]</span></p>
 <p>이다. 즉 <span class="math inline">\(D_i\)</span> 는 <span class="math inline">\(n\)</span>-다중선형형식이다.</p>
-<p>이제 <span class="math inline">\(D_i\)</span> 가 교대형식이라는 것을 보이자. 교대형식은 두 열이 같을 때 그 값이 <span class="math inline">\(0\)</span> 이 된다(<a href="bilinear_form.html#prp-k_alternating_form" class="quarto-xref">명제&nbsp;<span>15.5</span></a>). <span class="math inline">\(k\)</span> 번째 열과 <span class="math inline">\(m(&gt;k)\)</span> 번째 열이 같다면 <span class="math inline">\(M_{ij}\)</span> 에서 <span class="math inline">\(j=k\)</span> 이거나 <span class="math inline">\(j=m\)</span> 일 경우를 제외하면 <span class="math inline">\(M\)</span> 을 계산하는데 포함되는 부분행렬에 같은 열이 최소한 두개 존재하므로 <span class="math inline">\(M_{ij}=0\)</span> 이된다. 따라서,</p>
+<p>이제 <span class="math inline">\(D_i\)</span> 가 교대형식이라는 것을 보이자. 교대형식은 두 열이 같을 때 그 값이 <span class="math inline">\(0\)</span> 이 된다(<a href="bilinear_form.html#prp-ALA_k_alternating_form" class="quarto-xref">명제&nbsp;<span>15.5</span></a>). <span class="math inline">\(k\)</span> 번째 열과 <span class="math inline">\(m(&gt;k)\)</span> 번째 열이 같다면 <span class="math inline">\(M_{ij}\)</span> 에서 <span class="math inline">\(j=k\)</span> 이거나 <span class="math inline">\(j=m\)</span> 일 경우를 제외하면 <span class="math inline">\(M\)</span> 을 계산하는데 포함되는 부분행렬에 같은 열이 최소한 두개 존재하므로 <span class="math inline">\(M_{ij}=0\)</span> 이된다. 따라서,</p>
 <p><span class="math display">\[
 D_{i}(\boldsymbol{A}) = (-1)^{i+k}A_{ik}M_{ik} + (-1)^{i+m}A_{im} M_{im}
 \]</span></p>
@@ -478,17 +478,17 @@ D_i(\boldsymbol{A}) = (-1)^{i+k} A_{ik}M_{ik} +(-1)^{i+2m-k-1}A_{ik}M_{ik} = 0
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-laplacian_expansion_and_determinant" class="theorem">
-<p><span class="theorem-title"><strong>정리 16.1</strong></span> <a href="#def-part3_minor_expansion" class="quarto-xref">정의&nbsp;<span>16.2</span></a> 의 <a href="#eq-part3_laplace_expansion_for_row" class="quarto-xref">식&nbsp;<span>16.2</span></a> 와 <a href="#eq-part3_laplace_expansion_for_column" class="quarto-xref">식&nbsp;<span>16.1</span></a> 은 모두 행렬식의 정의와 같다.</p>
+<div id="thm-ALA_laplacian_expansion_and_determinant" class="theorem">
+<p><span class="theorem-title"><strong>정리 16.1</strong></span> <a href="#def-ALA_minor_expansion" class="quarto-xref">정의&nbsp;<span>16.2</span></a> 의 <a href="#eq-ALA_laplace_expansion_for_row" class="quarto-xref">식&nbsp;<span>16.2</span></a> 와 <a href="#eq-ALA_laplace_expansion_for_column" class="quarto-xref">식&nbsp;<span>16.1</span></a> 은 모두 행렬식의 정의와 같다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#lem-part3_laplace_expansion_and_k_laternating_form_1" class="quarto-xref">보조정리&nbsp;<span>16.2</span></a> 과 <a href="#lem-part3_laplace_expansion_and_k_laternating_form_2" class="quarto-xref">보조정리&nbsp;<span>16.3</span></a> 에 의해 <span class="math inline">\(D_i(\boldsymbol{A})\)</span> 는 행렬식이다. 따라서 <span class="math inline">\(D_i(\boldsymbol{A})=D_i(\boldsymbol{A}^T)\)</span> 와 같다. 그런데 <a href="#lem-part3_laplace_expansion_and_k_laternating_form_0" class="quarto-xref">보조정리&nbsp;<span>16.1</span></a> 에 의해 <span class="math inline">\(D_i(\boldsymbol{A}^T)=D^i(\boldsymbol{A}^T)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#lem-ALA_laplace_expansion_and_k_laternating_form_1" class="quarto-xref">보조정리&nbsp;<span>16.2</span></a> 과 <a href="#lem-ALA_laplace_expansion_and_k_laternating_form_2" class="quarto-xref">보조정리&nbsp;<span>16.3</span></a> 에 의해 <span class="math inline">\(D_i(\boldsymbol{A})\)</span> 는 행렬식이다. 따라서 <span class="math inline">\(D_i(\boldsymbol{A})=D_i(\boldsymbol{A}^T)\)</span> 와 같다. 그런데 <a href="#lem-ALA_laplace_expansion_and_k_laternating_form_0" class="quarto-xref">보조정리&nbsp;<span>16.1</span></a> 에 의해 <span class="math inline">\(D_i(\boldsymbol{A}^T)=D^i(\boldsymbol{A}^T)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-part3_determinant_of_cartan_matrix" class="theorem exercise">
+<div id="exr-ALA_determinant_of_cartan_matrix" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 16.1 (카르탕 행렬 (Cartan matrix))</strong></span> <span class="math inline">\(n\ge 1\)</span> 에 대해 <span class="math inline">\(\boldsymbol{A}_n\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span>, <span class="math inline">\(n \ge 2\)</span> 에 대해 <span class="math inline">\(\boldsymbol{B}_n\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span>, <span class="math inline">\(n\ge 4\)</span> 에 대해 <span class="math inline">\(\boldsymbol{D}_n \in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 를 각각 아래와 같이 정의한다.</p>
 <p><span class="math display">\[
 \begin{aligned}

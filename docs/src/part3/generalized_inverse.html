@@ -316,9 +316,9 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#일반화된-역행렬" id="toc-일반화된-역행렬" class="nav-link active" data-scroll-target="#일반화된-역행렬"><span class="header-section-number">17.1</span> 일반화된 역행렬</a>
+  <li><a href="#sec-ALA_generalized_inverse" id="toc-sec-ALA_generalized_inverse" class="nav-link active" data-scroll-target="#sec-ALA_generalized_inverse"><span class="header-section-number">17.1</span> 일반화된 역행렬</a>
   <ul class="collapse">
-  <li><a href="#일반화된-역행렬-1" id="toc-일반화된-역행렬-1" class="nav-link" data-scroll-target="#일반화된-역행렬-1"><span class="header-section-number">17.1.1</span> 일반화된 역행렬</a></li>
+  <li><a href="#일반화된-역행렬" id="toc-일반화된-역행렬" class="nav-link" data-scroll-target="#일반화된-역행렬"><span class="header-section-number">17.1.1</span> 일반화된 역행렬</a></li>
   </ul></li>
   <li><a href="#펜로즈-역행렬" id="toc-펜로즈-역행렬" class="nav-link" data-scroll-target="#펜로즈-역행렬"><span class="header-section-number">17.2</span> 펜로즈 역행렬</a>
   <ul class="collapse">
@@ -352,8 +352,17 @@ window.Quarto = {
 </header>
 
 
-<section id="일반화된-역행렬" class="level2" data-number="17.1">
-<h2 data-number="17.1" class="anchored" data-anchor-id="일반화된-역행렬"><span class="header-section-number">17.1</span> 일반화된 역행렬</h2>
+<div class="hidden">
+<p>% %</p>
+%
+<p><span class="math display">\[
+\DeclarePairedDelimiters{\set}{\{}{\}}
+\DeclareMathOperator*{\argmax}{argmax}
+\]</span></p>
+</div>
+<p><br></p>
+<section id="sec-ALA_generalized_inverse" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="sec-ALA_generalized_inverse"><span class="header-section-number">17.1</span> 일반화된 역행렬</h2>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -369,15 +378,15 @@ window.Quarto = {
 </div>
 </div>
 <p><br></p>
-<section id="일반화된-역행렬-1" class="level3" data-number="17.1.1">
-<h3 data-number="17.1.1" class="anchored" data-anchor-id="일반화된-역행렬-1"><span class="header-section-number">17.1.1</span> 일반화된 역행렬</h3>
+<section id="일반화된-역행렬" class="level3" data-number="17.1.1">
+<h3 data-number="17.1.1" class="anchored" data-anchor-id="일반화된-역행렬"><span class="header-section-number">17.1.1</span> 일반화된 역행렬</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-part3_generalized_inverse" class="theorem definition">
+<div id="def-ALA_generalized_inverse" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 17.1 (일반화된 역행렬)</strong></span> 행렬 <span class="math inline">\(A \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(AGA=A\)</span> 를 만족하는 행렬 <span class="math inline">\(G \in \mathcal{M}_{n \times m}(\mathbb{F})\)</span> 를 <span class="math inline">\(A\)</span> 에 대한 <strong>일반화된 역행렬(generalized inverse matrix)</strong> 라고 한다. <span class="math inline">\(A\)</span> 의 일반화된 역행렬을 <span class="math inline">\(A^{-}\)</span> 로 표기한다.</p>
 </div>
 </div>
@@ -385,7 +394,7 @@ window.Quarto = {
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_generalized_inverse_of_invertible_matrix" class="theorem proposition">
+<div id="prp-ALA_generalized_inverse_of_invertible_matrix" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.1</strong></span> <span class="math inline">\(A\)</span> 가 가역행렬이면 <span class="math inline">\(G=A^{-1}\)</span> 이다.</p>
 </div>
 </div>
@@ -397,7 +406,7 @@ AGA = A \implies AGAA^{-1} = AA^{-1} \implies AG= I_n \qquad \square
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_gim_1" class="theorem proposition">
+<div id="prp-ALA_gim_1" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.2</strong></span> <span class="math inline">\(AA^-\)</span> 는 와 <span class="math inline">\(A^-A\)</span> 는 projection 이다.</p>
 </div>
 </div>
@@ -414,7 +423,7 @@ AGA = A \implies AGAA^{-1} = AA^{-1} \implies AG= I_n \qquad \square
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_gim_2" class="theorem proposition">
+<div id="prp-ALA_gim_2" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.3</strong></span> <span class="math inline">\(A\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 이고 <span class="math inline">\(G=A^-\)</span> 일 때 임의의 <span class="math inline">\(y\in \mathcal{M}_m(\mathbb{F})\)</span> 에 대해 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(Ax=y\)</span> 가 해 <span class="math inline">\(x\in \mathcal{M}_n(\mathbb{F})\)</span> 를 가질 필요충분조건은 <span class="math inline">\(AGy = y\)</span> 이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(Ax=y\)</span> 가 해를 가지고 있을 때 <span class="math inline">\(x_1\in \mathcal{M}_n(\mathbb{F})\)</span> 가 해일 필요충분조건은 <span class="math inline">\(x_1\)</span> 이 어떤 <span class="math inline">\(z\in \mathcal{M}_n(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(x_1=Gy+(I-GA)z\)</span> 일 때이다.</p>
@@ -427,7 +436,7 @@ AGA = A \implies AGAA^{-1} = AA^{-1} \implies AG= I_n \qquad \square
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-part3_gim_abcd" class="theorem">
+<div id="thm-ALA_gim_abcd" class="theorem">
 <p><span class="theorem-title"><strong>정리 17.1</strong></span> <span class="math inline">\(A\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 가 <span class="math inline">\(r=\text{rank}(A)\)</span> 일 때 적절한 행교환 <span class="math inline">\(P_1\)</span> 과 열교환 <span class="math inline">\(P_2\)</span>, 가역행렬 <span class="math inline">\(R\in \mathcal{M}_{r \times r}(\mathbb{F})\)</span> 과, 어떤 <span class="math inline">\(B=\mathcal{M}_{r\times (n-r)}(\mathbb{F})\)</span>, <span class="math inline">\(C=\mathcal{M}_{(m-r)\times r}(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
 P_1AP_2=\begin{bmatrix} R &amp; B \\ C &amp; CR^{-1}B \end{bmatrix}
@@ -445,8 +454,8 @@ A_1 = \begin{bmatrix} R &amp; B \\ C &amp; D \end{bmatrix}
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-part3_gim" class="theorem">
-<p><span class="theorem-title"><strong>정리 17.2</strong></span> <a href="#thm-part3_gim_abcd" class="quarto-xref">정리&nbsp;<span>17.1</span></a> 의 notation 에 대해 <span class="math inline">\(G_0 = \begin{bmatrix} R^{-1} &amp; 0 \\ 0 &amp; 0 \end{bmatrix} \in \mathcal{M}_{n \times m}(\mathbb{F})\)</span> 를 생각하자. 이 때 <span class="math inline">\(G=P_2G_0 {P_1}\)</span> 이 <span class="math inline">\(A\)</span> 의 일반화된 역행렬이다.</p>
+<div id="thm-ALA_gim" class="theorem">
+<p><span class="theorem-title"><strong>정리 17.2</strong></span> <a href="#thm-ALA_gim_abcd" class="quarto-xref">정리&nbsp;<span>17.1</span></a> 의 notation 에 대해 <span class="math inline">\(G_0 = \begin{bmatrix} R^{-1} &amp; 0 \\ 0 &amp; 0 \end{bmatrix} \in \mathcal{M}_{n \times m}(\mathbb{F})\)</span> 를 생각하자. 이 때 <span class="math inline">\(G=P_2G_0 {P_1}\)</span> 이 <span class="math inline">\(A\)</span> 의 일반화된 역행렬이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -461,7 +470,7 @@ AGA &amp;= \left({P_1}^{-1}\begin{bmatrix}R &amp; B \\ C &amp; CR^{-1}B\end{bmat
 \]</span></p>
 </div>
 <p><br></p>
-<p><a href="#thm-part3_gim" class="quarto-xref">정리&nbsp;<span>17.2</span></a> 은 일반적인 행렬에 대해 최소한 하나의 일반화된 역행렬이 존재한다는 것을 보장한다.</p>
+<p><a href="#thm-ALA_gim" class="quarto-xref">정리&nbsp;<span>17.2</span></a> 은 일반적인 행렬에 대해 최소한 하나의 일반화된 역행렬이 존재한다는 것을 보장한다.</p>
 <p><br></p>
 </section>
 </section>
@@ -475,7 +484,7 @@ AGA &amp;= \left({P_1}^{-1}\begin{bmatrix}R &amp; B \\ C &amp; CR^{-1}B\end{bmat
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-part3_penrose_inverse" class="theorem definition">
+<div id="def-ALA_penrose_inverse" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 17.2 (펜로즈 역행렬)</strong></span> 행렬 <span class="math inline">\(A \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 다음의 네 조건을 만족하는 <span class="math inline">\(G\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 를 <span class="math inline">\(A\)</span> 에 대한 <strong>펜로즈 역행렬(Penrose inverse matrix)</strong>, <strong>무어-펜로즈 역행렬(Moore-Penrose inverse matrix)</strong> 혹은 <strong>유사 역행렬(pseudoinverse matrix)</strong> 라고 <span class="math inline">\(A^+\)</span> 로 표기한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(AGA = A\)</span>.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(GAG = G\)</span>.</p>
@@ -488,7 +497,7 @@ AGA &amp;= \left({P_1}^{-1}\begin{bmatrix}R &amp; B \\ C &amp; CR^{-1}B\end{bmat
 <p>(<span class="math inline">\(1\)</span>) 은 <span class="math inline">\(G=A^-\)</span> 를 의미하며 (<span class="math inline">\(2\)</span>) 는 <span class="math inline">\(A=G^-\)</span> 를 의미한다. (<span class="math inline">\(3\)</span>) 은 <span class="math inline">\(AG\)</span> 가 에르미트 행렬이며 projection 임을 의미하며 <span class="math inline">\(4\)</span> 는 <span class="math inline">\(GA\)</span> 가 에르미트 행렬이며 projection 임을 의미한다. 즉 펜로즈 역행렬은 일반화된 역행렬보다 조건이 좀 더 까다롭다. 또한 펜로즈 역행렬은 여러가지 좋은 성질을 가지고 있다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_uniqueness_of_penrose_inverse" class="theorem proposition">
+<div id="prp-ALA_uniqueness_of_penrose_inverse" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.4</strong></span> 펜로즈 역행렬은 유일하다.</p>
 </div>
 </div>
@@ -515,7 +524,7 @@ G_1 = G_1AG_1 = G_1(AG_1) = G_1AG_2 = (G_1A)G_2  = G_2AG_2 = G_2
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_penrose_inverse_for_diagonal_matrix" class="theorem proposition">
+<div id="prp-ALA_penrose_inverse_for_diagonal_matrix" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.5</strong></span> <span class="math inline">\(D \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 가 대각성분이 아닌 성분이 모두 <span class="math inline">\(0\)</span> 인 일반화된 대각행렬일 때 <span class="math inline">\(D\)</span> 의 펜로즈 역행렬 <span class="math inline">\(D^{+} \in \mathcal{M}_{n \times m}(\mathbb{F})\)</span> 는 다음과 같다.</p>
 <p><span class="math display">\[
 (D^+)_{ij} = \left\{\begin{array}{ll} 1/D_{ij} \qquad &amp;\text{if } i=j \text{ and } D_{ij} \neq 0\\0 &amp;\text{otherwise}.  \end{array}\right.
@@ -524,7 +533,7 @@ G_1 = G_1AG_1 = G_1(AG_1) = G_1AG_2 = (G_1A)G_2  = G_2AG_2 = G_2
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#def-part3_penrose_inverse" class="quarto-xref">정의&nbsp;<span>17.2</span></a> 의 각 조건을 만족함을 보이자.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#def-ALA_penrose_inverse" class="quarto-xref">정의&nbsp;<span>17.2</span></a> 의 각 조건을 만족함을 보이자.</p>
 <p>우선 <span class="math inline">\((DD^+)_{ij} = \sum_k D_{ik}D^{+}_{kj}= D_{ij}\delta_{ij}\)</span> 이며 <span class="math inline">\((D^+D)= D_{ij}\delta_{ij}\)</span> 이다.</p>
 <p>(<span class="math inline">\(1\)</span>) <span class="math inline">\((DD^+D)_{ij} = \sum_{k,l} D_{ik}D^+{kl}D_{lj} = D_{ii}D^+{ii}D_{ii} \delta_{ij}= D_{ij}\delta_{ij}\)</span></p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\((D^+DD^+)_{ij} = \sum_{k,l} D^+_{ik}D{kl}D^+_{lj} = D^+_{ii}D_{ii}D^+_{ii} \delta_{ij}= D^+_{ij}\delta_{ij}\)</span></p>
@@ -537,13 +546,13 @@ G_1 = G_1AG_1 = G_1(AG_1) = G_1AG_2 = (G_1A)G_2  = G_2AG_2 = G_2
 <h3 data-number="17.2.2" class="anchored" data-anchor-id="펜로즈-역행렬과-특이값-분해"><span class="header-section-number">17.2.2</span> 펜로즈 역행렬과 특이값 분해</h3>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="thm-part3_psudo_invserse" class="theorem">
+<div id="thm-ALA_psudo_invserse" class="theorem">
 <p><span class="theorem-title"><strong>정리 17.3</strong></span> 특이값 분해 <span class="math inline">\(A = U \Sigma V^\ast\)</span> 에 대해 <span class="math inline">\(A^+ = V\Sigma^+U^\ast\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#def-part3_penrose_inverse" class="quarto-xref">정의&nbsp;<span>17.2</span></a> 의 각 조건을 만족함을 보이자.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#def-ALA_penrose_inverse" class="quarto-xref">정의&nbsp;<span>17.2</span></a> 의 각 조건을 만족함을 보이자.</p>
 <p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(AA^+A= (U\Sigma V^\ast) (V\Sigma^+ U^\ast) (U \Sigma V^\ast)= U(\Sigma \Sigma^+ \Sigma)V^\ast = U\Sigma V^\ast = A\)</span>.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(A^+AA^+ = (V\Sigma^+ U^\ast)(U\Sigma V^\ast) (V\Sigma^+ U^\ast) = V\Sigma^+\Sigma \Sigma^+ U^\ast = A^+\)</span>.</p>
 <p>(<span class="math inline">\(3\)</span>) <span class="math inline">\(AA^+ =  (U\Sigma V^\ast) (V\Sigma^+ U^\ast) = U\Sigma \Sigma^+ U^\ast = (U\Sigma \Sigma^+ U^\ast)^\ast = (AA^+)^\ast\)</span> 이므로 에르미트 행렬이다. 또한 <span class="math inline">\((AA^+)^2 = AA^+\)</span> 이므로 projecion 이다.</p>
@@ -555,7 +564,7 @@ G_1 = G_1AG_1 = G_1(AG_1) = G_1AG_2 = (G_1A)G_2  = G_2AG_2 = G_2
 <h3 data-number="17.2.3" class="anchored" data-anchor-id="펜로즈-역행렬의-항등식"><span class="header-section-number">17.2.3</span> 펜로즈 역행렬의 항등식</h3>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-part3_penrose_inverse_and_adjoint" class="theorem exercise">
+<div id="exr-ALA_penrose_inverse_and_adjoint" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 17.1</strong></span> <span class="math inline">\((A^\ast)^+ = (A^+)^\ast\)</span> 임을 보여라.</p>
 </div>
 </div>
@@ -568,7 +577,7 @@ G_1 = G_1AG_1 = G_1(AG_1) = G_1AG_2 = (G_1A)G_2  = G_2AG_2 = G_2
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-part3_basic_properties_of_penrose_inverse_1" class="theorem exercise">
+<div id="exr-ALA_basic_properties_of_penrose_inverse_1" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 17.2</strong></span> 행렬 <span class="math inline">\(A\)</span> 와 그 펜로즈 역행럴 <span class="math inline">\(A^+\)</span> 에 대해 다음이 성립함을 보여라.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(A^+ = A^+ {A^+}^\ast A^\ast\)</span>.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(A^+ = A^\ast {A^+}^\ast A^+\)</span>.</p>
@@ -590,14 +599,14 @@ G_1 = G_1AG_1 = G_1(AG_1) = G_1AG_2 = (G_1A)G_2  = G_2AG_2 = G_2
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_basic_properties_of_penrose_inverse_2" class="theorem proposition">
+<div id="prp-ALA_basic_properties_of_penrose_inverse_2" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.6</strong></span> <span class="math inline">\(A\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(A^+ = A^\ast (AA^\ast)^+ = (A^\ast A)^+ A^\ast\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) 우선 <span class="math inline">\(A^+ = A^\ast (AA^\ast)^+\)</span> 를 보인다. <span class="math inline">\(D = A^\ast(AA^\ast)^+\)</span> 라 하자. <span class="math inline">\(D\)</span> 가 <a href="#def-part3_penrose_inverse" class="quarto-xref">정의&nbsp;<span>17.2</span></a> 를 따르는 <span class="math inline">\(A\)</span> 의 펜로즈 역행렬임을 보인다.</p>
-<p>(<span class="math inline">\(1-1\)</span>) <span id="eq-part3_prp_basic_properties_of_penrose_inverse_2_1"><span class="math display">\[
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) 우선 <span class="math inline">\(A^+ = A^\ast (AA^\ast)^+\)</span> 를 보인다. <span class="math inline">\(D = A^\ast(AA^\ast)^+\)</span> 라 하자. <span class="math inline">\(D\)</span> 가 <a href="#def-ALA_penrose_inverse" class="quarto-xref">정의&nbsp;<span>17.2</span></a> 를 따르는 <span class="math inline">\(A\)</span> 의 펜로즈 역행렬임을 보인다.</p>
+<p>(<span class="math inline">\(1-1\)</span>) <span id="eq-ALA_prp_basic_properties_of_penrose_inverse_2_1"><span class="math display">\[
 \begin{aligned}
 AA^\ast = (AA^\ast)(AA^\ast)^+(AA^\ast) &amp;\iff AA^\ast = ADAA^\ast \iff (I-AD)AA^\ast = 0
 \end{aligned}
@@ -606,7 +615,7 @@ AA^\ast = (AA^\ast)(AA^\ast)^+(AA^\ast) &amp;\iff AA^\ast = ADAA^\ast \iff (I-AD
 <p><span class="math display">\[
 XAA^\ast = 0 \implies XAA^\ast X^\ast = 0 \implies (XA)(XA)^\ast = 0
 \]</span></p>
-<p>이므로 <span class="math inline">\(XA=0\)</span> 이다. 즉 <a href="#eq-part3_prp_basic_properties_of_penrose_inverse_2_1" class="quarto-xref">식&nbsp;<span>17.1</span></a> 에 대해 <span class="math inline">\((I-AD)A=0 \implies ADA=A\)</span>.</p>
+<p>이므로 <span class="math inline">\(XA=0\)</span> 이다. 즉 <a href="#eq-ALA_prp_basic_properties_of_penrose_inverse_2_1" class="quarto-xref">식&nbsp;<span>17.1</span></a> 에 대해 <span class="math inline">\((I-AD)A=0 \implies ADA=A\)</span>.</p>
 <p>(<span class="math inline">\(1-2\)</span>) 같은 방법으로</p>
 <p><span class="math display">\[
 (AA^\ast)^+ = (AA^\ast)^+(AA^\ast)(AA^\ast)^+ \implies A^\ast(AA^\ast)^+ = [A^\ast(AA^\ast)^+]A[A^\ast(AA^\ast)^+] \implies D=DAD
@@ -640,7 +649,7 @@ A^\ast A = (A^\ast A)(A^\ast A)^+ (A^\ast A) \iff A^\ast A =  A^\ast A D A \iff 
 <p>역행렬과는 달리 일반적으로 <span class="math inline">\((AB)^+ \ne B^+ A^+\)</span> 이다. 그러나 특별한 경우에 등식이 성립한다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_product_of_penrose_inverse" class="theorem proposition">
+<div id="prp-ALA_product_of_penrose_inverse" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.7</strong></span> <span class="math inline">\(A\in \mathcal{M}_{m \times n}(\mathbb{F}),\, B\in \mathcal{M}_{n \times k}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(A\)</span> 의 모든 열벡터가 northonormal 하면 <span class="math inline">\((AB)^+ = B^+ A^+\)</span> 이다.</p>
 </div>
 </div>
@@ -659,7 +668,7 @@ DCD &amp;= B^+ A^\ast AB B^+A^\ast = B^+ A^\ast = D, \\
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="prp-part3_product_of_penrose_inverse" class="theorem proposition">
+<div id="prp-ALA_product_of_penrose_inverse" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.8</strong></span> <span class="math inline">\(A\in \mathcal{M}_{m \times n}(\mathbb{F}),\, B\in \mathcal{M}_{n \times k}(\mathbb{F})\)</span> 에 <span class="math inline">\(\text{rank}(A) = \text{rank}(B) = n\)</span> 일 때 <span class="math inline">\((AB)^+ = B^+ A^+\)</span> 이다.</p>
 </div>
 </div>
