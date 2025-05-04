@@ -16,6 +16,8 @@ crossref:
 
 [어떤 집합과 집합에서의 연산이 잘 정의되어 있을때 둘을 같이 묶어서 대수적 구조(algebraic structure) 라고 한다. 대표적인 우리는 이미 체(field), 벡터공간(vector space), 군(groups)이라는 대수적 구조가 존재한다는 것을 알고 있다. 준동형사상은 대수적 구조 사이에 대수적 구조의 연산을 보존하는 함수를 통칭한다. 그리고 이 준동형사상이 전단사일 경우에는 동형사상(isomorphism) 이라고 한다. 우리는 이미 @def-LA_isomorphism_in_vector_space 에서 벡터공간에서의 동형사상에 대해 다루었다. 당연히 군에 대해서도 동형사상이 매우 중요하며 앞으로 나올 것이다.]{.aside}
 
+</br>
+
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-MA_homomorphisms_in_groups}
 #### 준동형사상
@@ -42,6 +44,7 @@ $G$ 에서 $G'$ 으로의 준 동형사상의 집합을 $\text{Hom}\, (G,G')$ �
 :::
 
 </br>
+
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-MA_homomorphism1}
@@ -76,7 +79,9 @@ $\varphi :G \to G'$ 이 준동형사상일 때 다음이 성립한다.
 
 :::
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-MA_kernel_and_images_of_group}
 

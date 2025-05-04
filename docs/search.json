@@ -10,6 +10,26 @@
     ]
   },
   {
+    "objectID": "src/part1/part1.html",
+    "href": "src/part1/part1.html",
+    "title": "I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지",
+    "section": "",
+    "text": "Todo\n1부(Part I)는 선형대수학의 기초를 다룬다. 선형대수학은 벡터와 벡터공간, 그리고 선형사상을 다루는 수학의 분야라고 정의 할 수 있다. 많은 수학, 자연과학 및 공학 분야에 이용된다. 최소한의 추상화를 통해 선형대수학의 가장 큰 핵심인 고유값 분해까지 진행하는 것을 목표로 한다.",
+    "crumbs": [
+      "I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지"
+    ]
+  },
+  {
+    "objectID": "src/part1/part1.html#todo",
+    "href": "src/part1/part1.html#todo",
+    "title": "I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지",
+    "section": "",
+    "text": "\\(\\tr\\) 의 정의",
+    "crumbs": [
+      "I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지"
+    ]
+  },
+  {
     "objectID": "src/part1/ch1_01_vectorspace.html",
     "href": "src/part1/ch1_01_vectorspace.html",
     "title": "1  벡터와 벡터공간",
@@ -91,7 +111,7 @@
     "href": "src/part1/ch1_02_linear_map.html",
     "title": "2  선형사상",
     "section": "",
-    "text": "2.1 선형사상의 정의과 기본적인 성질",
+    "text": "2.1 선형사상의 정의과 기본적인 성질\n우리는 앞서 벡터공간과 기저, 차원에 대해 알아보았다. 이제 벡터공간에 대한 함수가운데 가장 기본적이며 중요한 함수인 선형사상에 대해 알아보려 한다.",
     "crumbs": [
       "I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>선형사상</span>"
@@ -157,7 +177,7 @@
     "href": "src/part1/ch1_03_determinant.html",
     "title": "3  가우스 조단 소거법과 행렬식",
     "section": "",
-    "text": "3.1 기본 행 연산",
+    "text": "3.1 기본 행 연산\n이제 가우스 조단 소거법에 대해 알아보자. 가우스 조단 소거법을 통해 행 간소 사다리꼴을 구하는 것은 선형방정식을 푸는 것 뿐만 아니라 행렬의 여러가지 성질에 대한 통찰을 줄 수 있다. 또한 행렬식을 통해 정사각행렬의 다양한 성질에 대해 알아볼 것이다. 대표적으로 행렬식은 어떤 행렬이 가역인지 아닌지를 쉽게 보일 수 있다.",
     "crumbs": [
       "I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>가우스 조단 소거법과 행렬식</span>"
@@ -465,7 +485,7 @@
     "href": "src/part1/ch1_07_spectrum_theorem.html",
     "title": "7  스펙트럼 정리",
     "section": "",
-    "text": "7.1 정규연산자와 정규행렬",
+    "text": "7.1 정규연산자와 정규행렬\n여기서는 복수체와 실수체에서의 스펙트럼 정리를 알아본다. 아마 선형대수학에서 가장 중요한 것을 꼽으라면 스펙트럼 정리일 것이다.",
     "crumbs": [
       "I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>스펙트럼 정리</span>"
@@ -560,6 +580,16 @@
     ]
   },
   {
+    "objectID": "src/part2/part2.html",
+    "href": "src/part2/part2.html",
+    "title": "II. 군 (Groups)",
+    "section": "",
+    "text": "2부에서는 군(Groups) 에 대해 다룬다. 지금까지 다뤄온 행렬, 즉 선형연산자들 가운데 특별한 성질을 가지는 것들의 집합이 군을 이루며, 따라서 1부의 선형대수학적 지식이 많이 필요하다. 또한 1부에서 사용했던 많은 기법과 용어들이 그대로 사용되거나, 더 정확한 의미가 밝혀지기도 한다.\n2부부터는 벡터와 행렬의 표기법상에 변형을 주고자 한다. 지금까지는 벡터와 선형사상의 행렬표현을 \\(\\boldsymbol{v}\\) 나 \\(\\boldsymbol{A}\\) 와 같이 굵은글씨체를 사용했지만 이제는 때에 따라 \\(v\\) 나 \\(A\\) 와 같은 일반 글씨체를 사용하도록 한다.",
+    "crumbs": [
+      "II. 군 (Groups)"
+    ]
+  },
+  {
     "objectID": "src/part2/ch2_01_groups.html",
     "href": "src/part2/ch2_01_groups.html",
     "title": "9  군의 기초",
@@ -608,7 +638,7 @@
     "href": "src/part2/ch2_02_homomorphisms.html#준-동형사상",
     "title": "10  군에서의 준동형사상과 동형사상",
     "section": "",
-    "text": "10.1.1 준 동형 사상\n어떤 집합과 집합에서의 연산이 잘 정의되어 있을때 둘을 같이 묶어서 대수적 구조(algebraic structure) 라고 한다. 대표적인 우리는 이미 체(field), 벡터공간(vector space), 군(groups)이라는 대수적 구조가 존재한다는 것을 알고 있다. 준동형사상은 대수적 구조 사이에 대수적 구조의 연산을 보존하는 함수를 통칭한다. 그리고 이 준동형사상이 전단사일 경우에는 동형사상(isomorphism) 이라고 한다. 우리는 이미 정의 2.9 에서 벡터공간에서의 동형사상에 대해 다루었다. 당연히 군에 대해서도 동형사상이 매우 중요하며 앞으로 나올 것이다.\n\n\n\n\n\n\n\n정의 10.1 (준동형사상) 군 \\(G,\\,G'\\) 에 대해 함수 \\(\\varphi :G \\to G'\\) 이 모든 \\(a,\\,b\\in G\\) 에 대해\n\\[\n\\varphi(ab) = \\varphi(a)\\varphi(b)\n\\]\n일 때 \\(\\varphi\\) 를 준동형사상(homomophism) 이라고 한다. 또한 선형사상에서와 같이 \\(\\ker \\varphi\\) 와 \\(\\text{im}\\,\\varphi\\) 를 다음과 같이 정의한다.\n\\[\n\\begin{aligned}\n\\ker (\\varphi) &= \\{x\\in G: \\varphi (x) = 1_{G'}\\}, \\\\\n\\text{im} (\\varphi) &= \\{\\varphi(x) : x\\in G\\}.\n\\end{aligned}\n\\]\n\\(G\\) 에서 \\(G'\\) 으로의 준 동형사상의 집합을 \\(\\text{Hom}\\, (G,G')\\) 이라고 쓴다. 자기 자신으로의 준동형사상일 경우는 \\(\\text{Hom}\\, (G)\\) 라고 한다.\n\n\n\n\n\n\n\n보기 10.1 \\(\\varphi :G \\to G'\\) 이 \\(\\varphi(g)=1_{G'}\\) 일 때 \\(\\varphi\\) 를 사소한 준동형사상 (trivial homomorphism)이라고 한다. \\(H \\le G\\) 일 때 \\(\\psi: H \\to G\\) 가 포함사상(inclusion map) \\(\\psi (h) = h\\) 이라면 \\(\\psi\\) 도 준동형사상이다.\n\n\n\n\n\n명제 10.1 \\(\\varphi :G \\to G'\\) 이 준동형사상일 때 다음이 성립한다.\n (\\(1\\)) \\(a_1,\\ldots,\\,a_k \\in G\\) 에 대해 \\(\\varphi(a_1\\cdots a_k) = \\varphi(a_1)\\cdots \\varphi(a_k)\\) 이다.\n (\\(2\\)) \\(\\varphi(1_G)=1_{G'}\\) 이다.\n (\\(3\\)) \\(\\varphi(a^{-1}) =  (\\varphi(a))^{-1}\\) 이다.\n\n\n\n\n(증명). (\\(1\\)) 은 induction 으로 보일 수 있다.\n(\\(2\\)) \\(\\varphi(1_G)= \\varphi(1_G 1_G) = \\varphi(1_G)\\varphi(1_G)\\) 이므로 \\(\\varphi(1_G)=1_{G'}\\) 이다.\n(\\(3\\)) \\(1_{G'} = \\varphi(1_G) = \\varphi(aa^{-1}) = \\varphi(a)\\varphi(a^{-1})\\) 이므로 \\(\\varphi(a^{-1})=(\\varphi(a))^{-1}\\) 이다. \\(\\square\\)\n\n\n\n\n명제 10.2 준동형사상 \\(\\varphi : G\\to G'\\) 에 대해 \\(\\ker \\varphi\\) 는 \\(G\\) 의 부분군이며 \\(\\text{im}\\, \\varphi\\) 는 \\(G'\\) 의 부분군이다.\n\n\n\n\n(증명). \\(\\ker \\varphi \\le G\\) 임을 보이자. \\(a,\\, b\\in \\ker \\varphi\\) 이면 \\(\\varphi(ab)= \\varphi (a)\\varphi (b) = 1 \\cdot 1 =1\\) 이므로 \\(ab\\in \\ker \\varphi\\) 이다. 즉 \\(\\ker \\varphi\\) 는 연산에 대해 닫혀 있다.\n\\(1\\in \\ker \\varphi\\) 이며 \\(a\\in \\ker \\varphi\\) 일 때 \\(1 = \\varphi (1)= \\varphi (aa^{-1}) = \\varphi(a) \\varphi(a^{-1}) = \\varphi(a^{-1})\\) 이므로 \\(a^{-1}\\in \\ker \\varphi\\) 이다. 따라서 \\(\\ker \\varphi \\le G\\) 이다.\n이제 \\(\\text{im}\\, \\varphi \\le G'\\) 임을 보이자. \\(x',\\,y' \\in \\text{im}\\,\\varphi\\) 라면 어떤 \\(x,\\,y\\in G\\) 에 대해 \\(x'=\\varphi (x),\\, y'=\\varphi (y)\\) 이다. \\(\\varphi(xy)=x'y' \\in \\text{im}\\,\\varphi\\) 이므로 \\(\\text{im}\\,\\varphi\\) 는 연산에 대해 닫혀 있다. \\(\\varphi(1_G)=1_{G'}\\in \\text{im}\\,\\varphi\\) 이다. \\(x'\\in \\text{im}\\,\\varphi\\) 이면 어떤 \\(x\\in G\\) 에 대해 \\(x'=\\varphi(x)\\) 이며 \\(\\varphi(x^{-1})=(x')^{-1}\\in \\text{im}\\,\\varphi\\) 이므로 \\(\\text{im}\\, \\varphi \\le G'\\) 이다. \\(\\square\\)\n\n\n\n\n연습문제\n\n\n연습문제 10.1 (Artin 2.5.1) \\(\\varphi \\in \\text{Hom}\\,(G,\\,G')\\) 이 전사인 준동형사상이라고 하자. \\(G\\) 가 순환군이면 \\(G'\\) 도 순환군임을 보이시오. \\(G\\) 가 아벨군이면 \\(G'\\) 도 아벨군임을 보이시오.\n\n\n\n\n(해답). \\(G=\\langle g\\rangle\\) 이라 하자. \\(\\varphi\\) 가 전사이므로 임의의 \\(y\\in G'\\) 에 대해 \\(\\varphi (x)=y\\) 인 \\(x\\in G\\) 가 존재하며 \\(G\\) 가 순환군이므로 어떤 자연수 \\(n\\) 에 대해 \\(x=g^n\\) 이며 \\(y = (\\varphi (g))^n\\) 이다. 즉 \\(G' = \\langle \\varphi(g) \\rangle\\) 이다.\n\\(G\\) 가 아벨군이라 하자. 임의의 \\(y_1,\\,y_2\\in G'\\) 에 대해 \\(\\varphi(x_1)=y_1,\\, \\varphi (x_2)=y_2\\) 를 만족하는 \\(x_1,\\,x_2\\in G\\) 가 존재한다.\n\\[\ny_1y_2 = \\varphi (x_1x_2)=\\varphi(x_2x_1)= y_2y_1\n\\]\n이므로 \\(G'\\) 은 아벨군이다.\n\n\n\n\n연습문제 10.2 (Artin 2.5.3) \\(U\\) 는 \\(A=\\begin{bmatrix} a& b \\\\ 0 & d\\end{bmatrix}\\) 꼴의 \\(2\\times 2\\) 가역행렬로 이루어진 군이며 \\(\\varphi : U \\to \\mathbb{R}^\\times\\) 는 \\(A \\rightsquigarrow a^2\\) 인 함수이다. \\(\\varphi\\) 는 준동형사상임을 보이고 \\(\\ker \\varphi\\) 와 \\(\\text{im}\\,\\varphi\\) 를 구하시오.\n\n\n\n\n(해답). \\(1_U = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1\\end{bmatrix}\\) 이다. \\(U\\) 가 군일 조건은 \\(ad\\ne 0\\) 이다.\n\\[\n\\begin{aligned}\n\\varphi \\left(\\begin{bmatrix} a& b \\\\ 0 & d\\end{bmatrix} \\begin{bmatrix} a' & b' \\\\ 0 & d'\\end{bmatrix}\\right) & = \\varphi \\left(\\begin{bmatrix} aa' & ab'+bd' \\\\ 0 & dd'\\end{bmatrix}\\right) \\\\\n&= (aa')^2 = a^2 a'^2 = \\varphi \\left(\\begin{bmatrix} a& b \\\\ 0 & d\\end{bmatrix}\\right) \\varphi \\left( \\begin{bmatrix} a' & b' \\\\ 0 & d'\\end{bmatrix}\\right)\n\\end{aligned}\n\\]\n이므로 \\(\\varphi\\) 는 준동형사상이다. 또한 \\(\\mathbb{R}^\\times\\) 의 항등원은 \\(1\\) 이므로\n\\[\n\\begin{aligned}\n\\ker \\varphi &= \\left\\{ \\begin{bmatrix} 1 & b \\\\ 0 & d\\end{bmatrix} : b\\in \\mathbb{R},\\, d\\in \\mathbb{R}-\\{0\\}\\right\\}, \\\\\n\\text{im}\\, \\varphi &= \\{x\\in \\mathbb{R}: x&gt;0\\}\n\\end{aligned}\n\\]\n이다.",
+    "text": "10.1.1 준 동형 사상\n어떤 집합과 집합에서의 연산이 잘 정의되어 있을때 둘을 같이 묶어서 대수적 구조(algebraic structure) 라고 한다. 대표적인 우리는 이미 체(field), 벡터공간(vector space), 군(groups)이라는 대수적 구조가 존재한다는 것을 알고 있다. 준동형사상은 대수적 구조 사이에 대수적 구조의 연산을 보존하는 함수를 통칭한다. 그리고 이 준동형사상이 전단사일 경우에는 동형사상(isomorphism) 이라고 한다. 우리는 이미 정의 2.9 에서 벡터공간에서의 동형사상에 대해 다루었다. 당연히 군에 대해서도 동형사상이 매우 중요하며 앞으로 나올 것이다.\n\n\n\n\n\n\n\n\n정의 10.1 (준동형사상) 군 \\(G,\\,G'\\) 에 대해 함수 \\(\\varphi :G \\to G'\\) 이 모든 \\(a,\\,b\\in G\\) 에 대해\n\\[\n\\varphi(ab) = \\varphi(a)\\varphi(b)\n\\]\n일 때 \\(\\varphi\\) 를 준동형사상(homomophism) 이라고 한다. 또한 선형사상에서와 같이 \\(\\ker \\varphi\\) 와 \\(\\text{im}\\,\\varphi\\) 를 다음과 같이 정의한다.\n\\[\n\\begin{aligned}\n\\ker (\\varphi) &= \\{x\\in G: \\varphi (x) = 1_{G'}\\}, \\\\\n\\text{im} (\\varphi) &= \\{\\varphi(x) : x\\in G\\}.\n\\end{aligned}\n\\]\n\\(G\\) 에서 \\(G'\\) 으로의 준 동형사상의 집합을 \\(\\text{Hom}\\, (G,G')\\) 이라고 쓴다. 자기 자신으로의 준동형사상일 경우는 \\(\\text{Hom}\\, (G)\\) 라고 한다.\n\n\n\n\n\n\n\n보기 10.1 \\(\\varphi :G \\to G'\\) 이 \\(\\varphi(g)=1_{G'}\\) 일 때 \\(\\varphi\\) 를 사소한 준동형사상 (trivial homomorphism)이라고 한다. \\(H \\le G\\) 일 때 \\(\\psi: H \\to G\\) 가 포함사상(inclusion map) \\(\\psi (h) = h\\) 이라면 \\(\\psi\\) 도 준동형사상이다.\n\n\n\n\n\n명제 10.1 \\(\\varphi :G \\to G'\\) 이 준동형사상일 때 다음이 성립한다.\n (\\(1\\)) \\(a_1,\\ldots,\\,a_k \\in G\\) 에 대해 \\(\\varphi(a_1\\cdots a_k) = \\varphi(a_1)\\cdots \\varphi(a_k)\\) 이다.\n (\\(2\\)) \\(\\varphi(1_G)=1_{G'}\\) 이다.\n (\\(3\\)) \\(\\varphi(a^{-1}) =  (\\varphi(a))^{-1}\\) 이다.\n\n\n\n\n(증명). (\\(1\\)) 은 induction 으로 보일 수 있다.\n(\\(2\\)) \\(\\varphi(1_G)= \\varphi(1_G 1_G) = \\varphi(1_G)\\varphi(1_G)\\) 이므로 \\(\\varphi(1_G)=1_{G'}\\) 이다.\n(\\(3\\)) \\(1_{G'} = \\varphi(1_G) = \\varphi(aa^{-1}) = \\varphi(a)\\varphi(a^{-1})\\) 이므로 \\(\\varphi(a^{-1})=(\\varphi(a))^{-1}\\) 이다. \\(\\square\\)\n\n\n\n\n명제 10.2 준동형사상 \\(\\varphi : G\\to G'\\) 에 대해 \\(\\ker \\varphi\\) 는 \\(G\\) 의 부분군이며 \\(\\text{im}\\, \\varphi\\) 는 \\(G'\\) 의 부분군이다.\n\n\n\n\n(증명). \\(\\ker \\varphi \\le G\\) 임을 보이자. \\(a,\\, b\\in \\ker \\varphi\\) 이면 \\(\\varphi(ab)= \\varphi (a)\\varphi (b) = 1 \\cdot 1 =1\\) 이므로 \\(ab\\in \\ker \\varphi\\) 이다. 즉 \\(\\ker \\varphi\\) 는 연산에 대해 닫혀 있다.\n\\(1\\in \\ker \\varphi\\) 이며 \\(a\\in \\ker \\varphi\\) 일 때 \\(1 = \\varphi (1)= \\varphi (aa^{-1}) = \\varphi(a) \\varphi(a^{-1}) = \\varphi(a^{-1})\\) 이므로 \\(a^{-1}\\in \\ker \\varphi\\) 이다. 따라서 \\(\\ker \\varphi \\le G\\) 이다.\n이제 \\(\\text{im}\\, \\varphi \\le G'\\) 임을 보이자. \\(x',\\,y' \\in \\text{im}\\,\\varphi\\) 라면 어떤 \\(x,\\,y\\in G\\) 에 대해 \\(x'=\\varphi (x),\\, y'=\\varphi (y)\\) 이다. \\(\\varphi(xy)=x'y' \\in \\text{im}\\,\\varphi\\) 이므로 \\(\\text{im}\\,\\varphi\\) 는 연산에 대해 닫혀 있다. \\(\\varphi(1_G)=1_{G'}\\in \\text{im}\\,\\varphi\\) 이다. \\(x'\\in \\text{im}\\,\\varphi\\) 이면 어떤 \\(x\\in G\\) 에 대해 \\(x'=\\varphi(x)\\) 이며 \\(\\varphi(x^{-1})=(x')^{-1}\\in \\text{im}\\,\\varphi\\) 이므로 \\(\\text{im}\\, \\varphi \\le G'\\) 이다. \\(\\square\\)\n\n\n\n\n연습문제\n\n\n연습문제 10.1 (Artin 2.5.1) \\(\\varphi \\in \\text{Hom}\\,(G,\\,G')\\) 이 전사인 준동형사상이라고 하자. \\(G\\) 가 순환군이면 \\(G'\\) 도 순환군임을 보이시오. \\(G\\) 가 아벨군이면 \\(G'\\) 도 아벨군임을 보이시오.\n\n\n\n\n(해답). \\(G=\\langle g\\rangle\\) 이라 하자. \\(\\varphi\\) 가 전사이므로 임의의 \\(y\\in G'\\) 에 대해 \\(\\varphi (x)=y\\) 인 \\(x\\in G\\) 가 존재하며 \\(G\\) 가 순환군이므로 어떤 자연수 \\(n\\) 에 대해 \\(x=g^n\\) 이며 \\(y = (\\varphi (g))^n\\) 이다. 즉 \\(G' = \\langle \\varphi(g) \\rangle\\) 이다.\n\\(G\\) 가 아벨군이라 하자. 임의의 \\(y_1,\\,y_2\\in G'\\) 에 대해 \\(\\varphi(x_1)=y_1,\\, \\varphi (x_2)=y_2\\) 를 만족하는 \\(x_1,\\,x_2\\in G\\) 가 존재한다.\n\\[\ny_1y_2 = \\varphi (x_1x_2)=\\varphi(x_2x_1)= y_2y_1\n\\]\n이므로 \\(G'\\) 은 아벨군이다.\n\n\n\n\n연습문제 10.2 (Artin 2.5.3) \\(U\\) 는 \\(A=\\begin{bmatrix} a& b \\\\ 0 & d\\end{bmatrix}\\) 꼴의 \\(2\\times 2\\) 가역행렬로 이루어진 군이며 \\(\\varphi : U \\to \\mathbb{R}^\\times\\) 는 \\(A \\rightsquigarrow a^2\\) 인 함수이다. \\(\\varphi\\) 는 준동형사상임을 보이고 \\(\\ker \\varphi\\) 와 \\(\\text{im}\\,\\varphi\\) 를 구하시오.\n\n\n\n\n(해답). \\(1_U = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1\\end{bmatrix}\\) 이다. \\(U\\) 가 군일 조건은 \\(ad\\ne 0\\) 이다.\n\\[\n\\begin{aligned}\n\\varphi \\left(\\begin{bmatrix} a& b \\\\ 0 & d\\end{bmatrix} \\begin{bmatrix} a' & b' \\\\ 0 & d'\\end{bmatrix}\\right) & = \\varphi \\left(\\begin{bmatrix} aa' & ab'+bd' \\\\ 0 & dd'\\end{bmatrix}\\right) \\\\\n&= (aa')^2 = a^2 a'^2 = \\varphi \\left(\\begin{bmatrix} a& b \\\\ 0 & d\\end{bmatrix}\\right) \\varphi \\left( \\begin{bmatrix} a' & b' \\\\ 0 & d'\\end{bmatrix}\\right)\n\\end{aligned}\n\\]\n이므로 \\(\\varphi\\) 는 준동형사상이다. 또한 \\(\\mathbb{R}^\\times\\) 의 항등원은 \\(1\\) 이므로\n\\[\n\\begin{aligned}\n\\ker \\varphi &= \\left\\{ \\begin{bmatrix} 1 & b \\\\ 0 & d\\end{bmatrix} : b\\in \\mathbb{R},\\, d\\in \\mathbb{R}-\\{0\\}\\right\\}, \\\\\n\\text{im}\\, \\varphi &= \\{x\\in \\mathbb{R}: x&gt;0\\}\n\\end{aligned}\n\\]\n이다.",
     "crumbs": [
       "II. 군 (Groups)",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>군에서의 준동형사상과 동형사상</span>"
@@ -744,6 +774,16 @@
     "crumbs": [
       "II. 군 (Groups)",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Symmetry</span>"
+    ]
+  },
+  {
+    "objectID": "src/part3/part3.html",
+    "href": "src/part3/part3.html",
+    "title": "III. 심화 선형대수학",
+    "section": "",
+    "text": "이제 3부를 시작하도록 한다. 1부와 2부에서 배운 내용을 바탕으로 선형대수학의 추상적인 주제들을 다룬다.",
+    "crumbs": [
+      "III. 심화 선형대수학"
     ]
   },
   {
@@ -1160,46 +1200,6 @@
     "text": "Hoffman, K., and R. A. Kunze. 1971. Linear Algebra.\nPrentice-Hall. https://books.google.co.kr/books?id=I4kQAQAAIAAJ.\n\n\nRudin, W. 1976. Principles of Mathematical Analysis. Third.\nInternational Series in Pure and Applied Mathematics. McGraw-Hill.",
     "crumbs": [
       "References"
-    ]
-  },
-  {
-    "objectID": "src/part1/part1.html",
-    "href": "src/part1/part1.html",
-    "title": "I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지",
-    "section": "",
-    "text": "Todo",
-    "crumbs": [
-      "I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지"
-    ]
-  },
-  {
-    "objectID": "src/part1/part1.html#todo",
-    "href": "src/part1/part1.html#todo",
-    "title": "I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지",
-    "section": "",
-    "text": "\\(\\tr\\) 의 정의",
-    "crumbs": [
-      "I. 선형대수학의 기초 : 벡터공간에서 특이값 분해까지"
-    ]
-  },
-  {
-    "objectID": "src/part2/part2.html",
-    "href": "src/part2/part2.html",
-    "title": "II. 군 (Groups)",
-    "section": "",
-    "text": "2부에서는 군(Groups) 에 대해 다룬다. 지금까지 다뤄온 행렬, 즉 선형연산자들 가운데 특별한 성질을 가지는 것들의 집합이 군을 이루며, 따라서 1부의 선형대수학적 지식이 많이 필요하다. 또한 1부에서 사용했던 많은 기법과 용어들이 그대로 사용되거나, 더 정확한 의미가 밝혀지기도 한다.\n2부부터는 벡터와 행렬의 표기법상에 변형을 주고자 한다. 지금까지는 벡터와 선형사상의 행렬표현을 \\(\\boldsymbol{v}\\) 나 \\(\\boldsymbol{A}\\) 와 같이 굵은글씨체를 사용했지만 이제는 때에 따라 \\(v\\) 나 \\(A\\) 와 같은 일반 글씨체를 사용하도록 한다.",
-    "crumbs": [
-      "II. 군 (Groups)"
-    ]
-  },
-  {
-    "objectID": "src/part3/part3.html",
-    "href": "src/part3/part3.html",
-    "title": "III. 심화 선형대수학",
-    "section": "",
-    "text": "이제 3부를 시작하도록 한다. 1부와 2부에서 배운 내용을 바탕으로 선형대수학의 추상적인 주제들을 다룬다.",
-    "crumbs": [
-      "III. 심화 선형대수학"
     ]
   }
 ]
