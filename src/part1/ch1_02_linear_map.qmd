@@ -310,10 +310,10 @@ $$
 [L]_{\mathcal{B}_U,\mathcal{B}_V} = \begin{bmatrix} A_{11} & \cdots & A_{1j} & \cdots &A_{1n} \\ \vdots & & \vdots & & \vdots  \\ A_{i1} & \cdots  & A_{ij} & \cdots & A_{in} \\\vdots & & \vdots & & \vdots  \\ A_{m1} & \cdots & A_{mj} & \cdots & A_{mn}\end{bmatrix} .
 $$
 
-우리는 $[u]_{\mathcal{B}_U} = \begin{bmatrix} a_1 \\ \vdots \\a_m \end{bmatrix}$ 임을 안다. 만약 우리가 $m \times n$ 행렬 $\boldsymbol{A}$ 와 $n \times l$ 행렬 $\boldsymbol{B}$ 의 행렬의 곱을 다음과 같이 정의한다고 하자.
+우리는 $[u]_{\mathcal{B}_U} = \begin{bmatrix} a_1 \\ \vdots \\a_m \end{bmatrix}$ 임을 안다. 만약 우리가 $m \times n$ 행렬 $\bf{A}$ 와 $n \times l$ 행렬 $\bf{B}$ 의 행렬의 곱을 다음과 같이 정의한다고 하자.
 
 $$
-(\boldsymbol{AB})_{ij} := \sum_{k=1}^n A_{ik}B_{kj}
+(\bf{AB})_{ij} := \sum_{k=1}^n A_{ik}B_{kj}
 $$
 
 그렇다면, $[L]_{\mathcal{B}_U,\mathcal{B}_V}$ 와 $[u]_{\mathcal{B}_U}$ 의 곱은 $m \times 1$ 행렬이 되며,
@@ -333,10 +333,10 @@ $$
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-LA_multiplication_of_matrix}
 
-$m \times n$ 행렬 $\boldsymbol{A}$ 와 $n \times l$ 행렬 $\boldsymbol{B}$ 의 곱 $\boldsymbol{AB}$ 는 다음과 같이 정의된다.
+$m \times n$ 행렬 $\bf{A}$ 와 $n \times l$ 행렬 $\bf{B}$ 의 곱 $\bf{AB}$ 는 다음과 같이 정의된다.
 
 $$
-(\boldsymbol{AB})_{ij} := \sum_{k=1}^n A_{ik}B_{kj} 
+(\bf{AB})_{ij} := \sum_{k=1}^n A_{ik}B_{kj} 
 $$ {#eq-multiplication_of_matrix}
 :::
 :::
@@ -345,7 +345,7 @@ $$ {#eq-multiplication_of_matrix}
 
 ### 선형사상의 합의 행렬표현 {#sec-LA_matrix_representation_of_sum_of_linear_map}
 
-$L,\,K \in \mathcal{L}(U,\,V)$ 이고 $U,\,V$ 의 기저 $\mathcal{B}_U,\,\mathcal{B}_V$ 에 대해 $\boldsymbol{L}=[L]_{\mathcal{B}_U,\mathcal{B}_V}$, $\boldsymbol{K} =[K]_{\mathcal{B}_U,\mathcal{B}_V}$ 라 하자. $(L+K)(u)= L(u)+ K(u)$  이므로,
+$L,\,K \in \mathcal{L}(U,\,V)$ 이고 $U,\,V$ 의 기저 $\mathcal{B}_U,\,\mathcal{B}_V$ 에 대해 $\bf{L}=[L]_{\mathcal{B}_U,\mathcal{B}_V}$, $\bf{K} =[K]_{\mathcal{B}_U,\mathcal{B}_V}$ 라 하자. $(L+K)(u)= L(u)+ K(u)$  이므로,
 
 $$
 \begin{aligned}
@@ -355,13 +355,13 @@ $$
 \end{aligned}
 $$
 
-이다. 이로부터 $(\boldsymbol{L}+\boldsymbol{K})_{ij} = L_{ij} + K_{ij}$ 로 정의하는 것이 자연스럽다는 것을 알 수 있다.
+이다. 이로부터 $(\bf{L}+\bf{K})_{ij} = L_{ij} + K_{ij}$ 로 정의하는 것이 자연스럽다는 것을 알 수 있다.
 
 </br>
 
 ### 선형사상의 합성의 행렬표현 {#sec-LA_matrix_representation_of_compostion_of_linear_map}
 
-$L\in \mathcal{L}(U,\, W),\, K \in \mathcal{L}(W, V)$ 라 하자. $U,\,V,\,W$ 의 한 기저를 $\mathcal{B}_U =(u_j),\,\mathcal{B}_V = (v_i),\,\mathcal{B}_W = (w_k)$ 라 하자. 이 기저에서의 $L$ 와 $K$ 의 행렬표현을 $\boldsymbol{L},\,\boldsymbol{K}$ 라 하고, $(L\circ K)\in \mathcal{L}(U, V)$ 에 대한 행렬표현 $\boldsymbol{M}$ 를 알아보자.
+$L\in \mathcal{L}(U,\, W),\, K \in \mathcal{L}(W, V)$ 라 하자. $U,\,V,\,W$ 의 한 기저를 $\mathcal{B}_U =(u_j),\,\mathcal{B}_V = (v_i),\,\mathcal{B}_W = (w_k)$ 라 하자. 이 기저에서의 $L$ 와 $K$ 의 행렬표현을 $\bf{L},\,\bf{K}$ 라 하고, $(L\circ K)\in \mathcal{L}(U, V)$ 에 대한 행렬표현 $\bf{M}$ 를 알아보자.
 
 $$
 \begin{aligned}
@@ -379,19 +379,19 @@ $$
 \end{aligned}
 $$
 
-이다. @def-LA_multiplication_of_matrix 에 의해 선형사상의 합성은 각 선형사상의 행렬표현의 곱임을 알 수 있다. $\boldsymbol{K}$ 가 $K\in \mathcal{L}(W,\,V)$ 의 행렬표현이며, $\boldsymbol{L}$ 가 $L\in \mathcal{L}(U,\,W)$ 의 행렬표현이므로 $\boldsymbol{K}$ 의 열의 갯수와 $\boldsymbol{L}$ 의 행의 갯수는 $\text{dim}(W)$ 와 같아야 한다. 
+이다. @def-LA_multiplication_of_matrix 에 의해 선형사상의 합성은 각 선형사상의 행렬표현의 곱임을 알 수 있다. $\bf{K}$ 가 $K\in \mathcal{L}(W,\,V)$ 의 행렬표현이며, $\bf{L}$ 가 $L\in \mathcal{L}(U,\,W)$ 의 행렬표현이므로 $\bf{K}$ 의 열의 갯수와 $\bf{L}$ 의 행의 갯수는 $\text{dim}(W)$ 와 같아야 한다. 
 
 </br>
 
 ### 선형 사상의 스칼라곱  {#sec-LA_scalar_multiplication_of_linear_map}
 
-$\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $L \in \mathcal{L}(U,\,V)$ 일 때 $[L]_{\mathcal{B}_U,\mathcal{B}_V} = \boldsymbol{L}$ 이며 $c\in \mathbb{F}$ 라 하자.
+$\mathbb{F}$-벡터공간 $U,\,V$ 에 대해 $L \in \mathcal{L}(U,\,V)$ 일 때 $[L]_{\mathcal{B}_U,\mathcal{B}_V} = \bf{L}$ 이며 $c\in \mathbb{F}$ 라 하자.
 
 $$
 (c L)(u_i) = c \left( L(u_i)\right) = \sum_j c L_{ji}v_j
 $$
 
-이므로 $(c \boldsymbol{L})_{ij} = c L_{ij}$ 임을 알 수 있다.
+이므로 $(c \bf{L})_{ij} = c L_{ij}$ 임을 알 수 있다.
 
 </br>
 
@@ -401,7 +401,7 @@ $$
 
 #### 항등 행렬 (identity matrix)
 
-벡터공간 $V$ 에 대해 $I\in \mathcal{L}(V)$ 가 $I(v)=v$ 일 때, 즉 $I$ 가 항등사상일 때 이에 대한 행렬표현 $\boldsymbol{I}=[I]$ 를 항등행렬이라 한다. 어떤 기저 $\mathcal{B}_V = \{v_i\}$ 에 대해서도 $I(v_i) = v_i$ 이므로 $(\boldsymbol{I})_{ij} = \delta_{ij}$ 이다. 
+벡터공간 $V$ 에 대해 $I\in \mathcal{L}(V)$ 가 $I(v)=v$ 일 때, 즉 $I$ 가 항등사상일 때 이에 대한 행렬표현 $\bf{I}=[I]$ 를 항등행렬이라 한다. 어떤 기저 $\mathcal{B}_V = \{v_i\}$ 에 대해서도 $I(v_i) = v_i$ 이므로 $(\bf{I})_{ij} = \delta_{ij}$ 이다. 
 :::
 :::
 
@@ -409,38 +409,38 @@ $$
 
 ### 행렬의 행벡터와 열벡터 {#sec-LA_column_vector_and_row_vector}
 
-$\mathcal{M}_{1\times n}(\mathbb{F})$ 과 $\mathcal{M}_{n \times 1}(\mathbb{F})=\mathcal{M}_n(\mathbb{F})$ 이 벡터공간임을 안다. 행렬 $\boldsymbol{A}$ 의 $i,\,j$ 성분을 $A_{ij}$ 혹은 $A_{i,j}$  로 표현할 수 있듯이 $\boldsymbol{A}$ 의 $i$ 번째 행을 $\boldsymbol{A}_{i,:}$ 혹은 $\boldsymbol{A}_{i:}$ 라 쓰고 $j$ 번째 열을 $\boldsymbol{A}_{:,j}$ 혹은 $\boldsymbol{A}_{:j}$ 라 쓰기로 하자. 각각의 $\boldsymbol{A}_{:i}$ 와 $\boldsymbol{A}_{j:}$ 를 행벡터와 열벡터로 간주한다. 즉 $m\times n$ 행렬의 경우 $\boldsymbol{A}_{:i}\in \mathcal{M}_m(\mathbb{F})$ 이며 $\boldsymbol{A}_{i:}\in \mathcal{M}_{1 \times n}(\mathbb{F})$ 이다. 많은 경우 계산을 하는데 도움이 된다.
+$\mathcal{M}_{1\times n}(\mathbb{F})$ 과 $\mathcal{M}_{n \times 1}(\mathbb{F})=\mathcal{M}_n(\mathbb{F})$ 이 벡터공간임을 안다. 행렬 $\bf{A}$ 의 $i,\,j$ 성분을 $A_{ij}$ 혹은 $A_{i,j}$  로 표현할 수 있듯이 $\bf{A}$ 의 $i$ 번째 행을 $\bf{A}_{i,:}$ 혹은 $\bf{A}_{i:}$ 라 쓰고 $j$ 번째 열을 $\bf{A}_{:,j}$ 혹은 $\bf{A}_{:j}$ 라 쓰기로 하자. 각각의 $\bf{A}_{:i}$ 와 $\bf{A}_{j:}$ 를 행벡터와 열벡터로 간주한다. 즉 $m\times n$ 행렬의 경우 $\bf{A}_{:i}\in \mathcal{M}_m(\mathbb{F})$ 이며 $\bf{A}_{i:}\in \mathcal{M}_{1 \times n}(\mathbb{F})$ 이다. 많은 경우 계산을 하는데 도움이 된다.
 
-**1.** $m \times n$ 행렬 $\boldsymbol{A}$ 과 $n \times p$ 행렬 $\boldsymbol{B}$ 를 생각하자. 이 때,
+**1.** $m \times n$ 행렬 $\bf{A}$ 과 $n \times p$ 행렬 $\bf{B}$ 를 생각하자. 이 때,
 
 $$
-(\boldsymbol{AB})_{ij} = \sum_k A_{ik}B_{kj} = \boldsymbol{A}_{i:}\boldsymbol{B}_{:j}
+(\bf{AB})_{ij} = \sum_k A_{ik}B_{kj} = \bf{A}_{i:}\bf{B}_{:j}
 $$ 
 
 임을 알 수 있다. 또한, 
 
 $$
 \begin{aligned}
-(\boldsymbol{AB})_{:i} &= \boldsymbol{A}(\boldsymbol{B})_{:i} \\
-(\boldsymbol{AB})_{j:} & = (\boldsymbol{A})_{j:}\boldsymbol{B}
+(\bf{AB})_{:i} &= \bf{A}(\bf{B})_{:i} \\
+(\bf{AB})_{j:} & = (\bf{A})_{j:}\bf{B}
 \end{aligned}
 $$
 
 이다. 즉, 
 
 $$
-\boldsymbol{AB} =  \begin{bmatrix} \boldsymbol{AB}_{:1} & \cdots & \boldsymbol{AB}_{:n} \end{bmatrix} =  \begin{bmatrix} \boldsymbol{A}_{1:}\boldsymbol{B} \\ \vdots \\ \boldsymbol{A}_{m:} \boldsymbol{B} \end{bmatrix}
+\bf{AB} =  \begin{bmatrix} \bf{AB}_{:1} & \cdots & \bf{AB}_{:n} \end{bmatrix} =  \begin{bmatrix} \bf{A}_{1:}\bf{B} \\ \vdots \\ \bf{A}_{m:} \bf{B} \end{bmatrix}
 $$
 
 이다. 위의 개념은 많은 경우 편리하게 사용된다.
 
-**2.** $m\times n$ 행렬 $\boldsymbol{A}$ 와 $n \times 1$ 행렬 $\boldsymbol{c}$ 를 생각하자. $c_i$ 를 $\boldsymbol{c}$ 의 $i$ 번째 성분이라 하면,
+**2.** $m\times n$ 행렬 $\bf{A}$ 와 $n \times 1$ 행렬 $\bf{c}$ 를 생각하자. $c_i$ 를 $\bf{c}$ 의 $i$ 번째 성분이라 하면,
 
 $$
-\boldsymbol{Ac} = c_1 \boldsymbol{A}_{:1} + \cdots + c_n\boldsymbol{A}_{:n}
+\bf{Ac} = c_1 \bf{A}_{:1} + \cdots + c_n\bf{A}_{:n}
 $$
 
-이다. 즉 $\boldsymbol{Ac}$ 는 $\boldsymbol{A}$ 의 열벡터들의 선형결합이다.
+이다. 즉 $\bf{Ac}$ 는 $\bf{A}$ 의 열벡터들의 선형결합이다.
 
 </br>
 
@@ -957,7 +957,7 @@ $$
 
 ### 가역사상과 역행렬 {#sec-LA_invertible_map_and_inverse_matrix}
 
-$L\in \mathcal{L}(U,\,V)$ 가 가역사상이라고 하자. 이 때 임의의 $u\in U,\, v\in V$ 에 대해 $(L^{-1}\circ T )(u)=u$ 이고 $(L \circ L^{-1}) (v)= v$ 이다. $\mathcal{B}_U,\,\mathcal{B}_V$ 가 각각 $U,\,V$ 의 기저라고 하자. $\boldsymbol{L}=[L]_{\mathcal{B}_U, \mathcal{B}_V}$ 에 대해 $[L^{-1}]_{\mathcal{B}_V,\mathcal{B}_U} =\boldsymbol{L}^{-1}$ 이라고 쓰는 것은 자연스럽다. 또한 $\boldsymbol{LL}^{-1} = \boldsymbol{L}^{-1}\boldsymbol{L} = \boldsymbol{I}$ 라는 것을 알 수 있다. 이 때 $\boldsymbol{L}^{-1}$ 을 $\boldsymbol{L}$ 의 **역행렬 (inverse matrix)** 라 한다.
+$L\in \mathcal{L}(U,\,V)$ 가 가역사상이라고 하자. 이 때 임의의 $u\in U,\, v\in V$ 에 대해 $(L^{-1}\circ T )(u)=u$ 이고 $(L \circ L^{-1}) (v)= v$ 이다. $\mathcal{B}_U,\,\mathcal{B}_V$ 가 각각 $U,\,V$ 의 기저라고 하자. $\bf{L}=[L]_{\mathcal{B}_U, \mathcal{B}_V}$ 에 대해 $[L^{-1}]_{\mathcal{B}_V,\mathcal{B}_U} =\bf{L}^{-1}$ 이라고 쓰는 것은 자연스럽다. 또한 $\bf{LL}^{-1} = \bf{L}^{-1}\bf{L} = \bf{I}$ 라는 것을 알 수 있다. 이 때 $\bf{L}^{-1}$ 을 $\bf{L}$ 의 **역행렬 (inverse matrix)** 라 한다.
 
 
 </br>
@@ -970,22 +970,22 @@ $$
 P(u_i) = \sum_{j=1}^n P_{ji}u_j = v_i
 $$
 
-그렇다면 $u_i = P^{-1}(P(u_i)) = P^{-1}(v_i)$ 이다. $\boldsymbol{u}_i=[u_i]_{\mathcal{B}_1}$, $\boldsymbol{v}_i = [v_i]_{\mathcal{B}_1}$, $\boldsymbol{P}=[P]_{\mathcal{B}_1}$ 라면 $\boldsymbol{v}_i = \boldsymbol{Pu}_i$ 이다. 그런데 $\boldsymbol{u}_i =[u_i]_{\mathcal{B}_1}$ 은 표준기저 $\boldsymbol{e}_i$ 이므로 $\boldsymbol{v}_i$ 는 $\boldsymbol{P}$ 의 $i$ 번 째 열 $\boldsymbol{P}_{:i}$ 이다. 이것은 앞으로도 매우 중요하므로 뒤에 별도로 다시 언급하겠다.
+그렇다면 $u_i = P^{-1}(P(u_i)) = P^{-1}(v_i)$ 이다. $\bf{u}_i=[u_i]_{\mathcal{B}_1}$, $\bf{v}_i = [v_i]_{\mathcal{B}_1}$, $\bf{P}=[P]_{\mathcal{B}_1}$ 라면 $\bf{v}_i = \bf{Pu}_i$ 이다. 그런데 $\bf{u}_i =[u_i]_{\mathcal{B}_1}$ 은 표준기저 $\bf{e}_i$ 이므로 $\bf{v}_i$ 는 $\bf{P}$ 의 $i$ 번 째 열 $\bf{P}_{:i}$ 이다. 이것은 앞으로도 매우 중요하므로 뒤에 별도로 다시 언급하겠다.
 
-이제 $\mathcal{B}_2$ 기저에서 $u_i$ 와 $v_i$ 를 표현해보자. $[v_i]_{\mathcal{B}_2} = \boldsymbol{e}_i$ 임은 자명하다. 
+이제 $\mathcal{B}_2$ 기저에서 $u_i$ 와 $v_i$ 를 표현해보자. $[v_i]_{\mathcal{B}_2} = \bf{e}_i$ 임은 자명하다. 
 
 $$
 \begin{aligned}
-u_i &= \sum_j \delta_{ji}u_j = \sum_j (\boldsymbol{P}\boldsymbol{P}^{-1})_{ji}u_j \\
+u_i &= \sum_j \delta_{ji}u_j = \sum_j (\bf{P}\bf{P}^{-1})_{ji}u_j \\
 &= \sum_j \sum_k P_{jk}P^{-1}_{ki}u_j = \sum_k P^{-1}_{ki} \left(\sum_{j} P_{jk}u_j\right) \\
 &= \sum_k P_{ki}^{-1} v_k 
 \end{aligned}
 $$
 
-이므로 $[u_i]_{\mathcal{B}_2} = \boldsymbol{P}^{-1}[v_i]_{\mathcal{B}_2}$ 이다. 즉 $[u_i]_{\mathcal{B}_2}$ 는 $\boldsymbol{P}^{-1}$ 의 $i$ 번째 열이다.
+이므로 $[u_i]_{\mathcal{B}_2} = \bf{P}^{-1}[v_i]_{\mathcal{B}_2}$ 이다. 즉 $[u_i]_{\mathcal{B}_2}$ 는 $\bf{P}^{-1}$ 의 $i$ 번째 열이다.
 
 
-이제 연산자 $L\in \mathcal{L}(U)$ 이 $L(u_i) = \sum_j A_{ij}u_j$ 로 정의되었으며 이 연산자의 $\mathcal{B}_1$ 기저에서의 행렬표현을 $\boldsymbol{A}$ 라 하자. 즉 $\boldsymbol{A} = [L]_{\mathcal{B}_1}$ 이다. 이 때,
+이제 연산자 $L\in \mathcal{L}(U)$ 이 $L(u_i) = \sum_j A_{ij}u_j$ 로 정의되었으며 이 연산자의 $\mathcal{B}_1$ 기저에서의 행렬표현을 $\bf{A}$ 라 하자. 즉 $\bf{A} = [L]_{\mathcal{B}_1}$ 이다. 이 때,
 
 $$
 \begin{aligned}
@@ -995,10 +995,10 @@ L(v_i) &= L(P(u_i)) = TL\left( \sum_{k=1}^n  P_{ki}u_k\right) = \sum_{k=1}^n P_{
 \end{aligned}
 $$
 
-이다. 이로부터 $[L]_{\mathcal{B}_2} = \boldsymbol{P}^{-1}\boldsymbol{AP}$ 임을 알 수 있다. 즉 두 기저 $\mathcal{B}_1 =\{u_i\}$, $\mathcal{B}_2 = \{P(u_i)\}$ 사이에,
+이다. 이로부터 $[L]_{\mathcal{B}_2} = \bf{P}^{-1}\bf{AP}$ 임을 알 수 있다. 즉 두 기저 $\mathcal{B}_1 =\{u_i\}$, $\mathcal{B}_2 = \{P(u_i)\}$ 사이에,
 
 $$
-[L]_{\mathcal{B_1}} = \boldsymbol{A} \iff [L]_{\mathcal{B}_2} = \boldsymbol{P}^{-1}\boldsymbol{AP}
+[L]_{\mathcal{B_1}} = \bf{A} \iff [L]_{\mathcal{B}_2} = \bf{P}^{-1}\bf{AP}
 $$
 
 의 관계가 성립한다. 즉 어떤 기저와 그 기저에서의 선형변환을 나타내는 행렬을 안다면, 변화된 기저에서의 선형변환을 나타내는 행렬도 알 수 있다. 이런 기저의 변환을 행렬의 닮음 변환 (similarity transformation) 이라 한다.
@@ -1025,7 +1025,7 @@ $K=P^{-1}\circ L \circ P$ 라면 그 행렬표현도 $[K] = [P^{-1}][L][P]$ 일 
 
 #### 행렬의 닮음과 닮음변환
 
-행렬 $\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 에 대해 어떤 가역행렬 $\boldsymbol{P}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 이 존재하여 $\boldsymbol{A}=\boldsymbol{P}^{-1}\boldsymbol{BP}$ 가 성립할 때 두 행렬 $\boldsymbol{A}$ 와 $\boldsymbol{B}$ 는 닮았다고 하며 $\boldsymbol{P}^{-1}\boldsymbol{AP}$ 를 $\boldsymbol{A}$ 의 **닮음변환(similarity transformation)** 이라고 한다. 
+행렬 $\bf{A},\,\bf{B}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 에 대해 어떤 가역행렬 $\bf{P}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 이 존재하여 $\bf{A}=\bf{P}^{-1}\bf{BP}$ 가 성립할 때 두 행렬 $\bf{A}$ 와 $\bf{B}$ 는 닮았다고 하며 $\bf{P}^{-1}\bf{AP}$ 를 $\bf{A}$ 의 **닮음변환(similarity transformation)** 이라고 한다. 
 
 :::
 :::
@@ -1037,26 +1037,26 @@ $K=P^{-1}\circ L \circ P$ 라면 그 행렬표현도 $[K] = [P^{-1}][L][P]$ 일 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_basis_transoframtion_by_similarity_transformation}
-$\boldsymbol{P}$ 가 가역행렬일 때 $\boldsymbol{P}$ 의 각 열은 표준기저가 이 변환에 의해 변환된 새로운 기저이다.
+$\bf{P}$ 가 가역행렬일 때 $\bf{P}$ 의 각 열은 표준기저가 이 변환에 의해 변환된 새로운 기저이다.
 :::
 
 </div></br>
 
 ::: {.proof}
-표준기저 $\{\boldsymbol{e}_i\}$ 에 대해 $\boldsymbol{Pe}_i = \boldsymbol{P}_{:i}$ 이다. $\boldsymbol{P}$ 가 가역행렬이므로 열벡터의 집합은 선형독립이다. $\square$ 
+표준기저 $\{\bf{e}_i\}$ 에 대해 $\bf{Pe}_i = \bf{P}_{:i}$ 이다. $\bf{P}$ 가 가역행렬이므로 열벡터의 집합은 선형독립이다. $\square$ 
 :::
 
 </br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-LA_similarity_equivalence}
 
-두 정사각 행렬 $\boldsymbol{A},\,\boldsymbol{B}$ 가 닮았을 때 $\boldsymbol{A} \sim \boldsymbol{B}$ 라 표현한다고 하자. 이 때 다음이 성립함을 보여라.
+두 정사각 행렬 $\bf{A},\,\bf{B}$ 가 닮았을 때 $\bf{A} \sim \bf{B}$ 라 표현한다고 하자. 이 때 다음이 성립함을 보여라.
 
-&emsp;($1$) $\boldsymbol{A} \sim \boldsymbol{A}$ 이다.
+&emsp;($1$) $\bf{A} \sim \bf{A}$ 이다.
 
-&emsp;($2$) $\boldsymbol{A} \sim \boldsymbol{B}$ 이면 $\boldsymbol{B} \sim \boldsymbol{A}$ 이다.
+&emsp;($2$) $\bf{A} \sim \bf{B}$ 이면 $\bf{B} \sim \bf{A}$ 이다.
 
-&emsp;($3$) $\boldsymbol{A} \sim \boldsymbol{B}$ 이고 $\boldsymbol{B} \sim \boldsymbol{C}$ 이면 $\boldsymbol{C} \sim \boldsymbol{A}$ 이다.
+&emsp;($3$) $\bf{A} \sim \bf{B}$ 이고 $\bf{B} \sim \bf{C}$ 이면 $\bf{C} \sim \bf{A}$ 이다.
 
 :::
 

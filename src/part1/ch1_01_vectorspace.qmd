@@ -25,15 +25,15 @@ crossref:
 수(Number), 기호, 수식 등의 수학적 대상을 2차원 격자에 배치한 것을 **행렬(matrix)** 이라고 한다. $m\times n$ 행렬은 세로로 $m$ 칸, 가로로 $n$ 칸의 격자에 배치한 행렬이다. 예를 들어, 
 
 $$
-\boldsymbol{A} = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6\end{bmatrix}
+\bf{A} = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6\end{bmatrix}
 $$
 
-은 $2 \times 3$ 행렬이다. 행렬에서 가로로 된 한 줄을 행이라 하고, 세로로 된 한 줄을 열이라 한다. 행렬 $\boldsymbol{A}$ 에서 $\begin{bmatrix} 1 & 2 & 3\end{bmatrix}$ 는 행이고, $\begin{bmatrix} 1 \\ 4 \end{bmatrix}$ 는 열이다. 행렬을 이루는 각각의 수학적 대상을 **원소(element)** 혹은 **성분(entry)** 이라 한다. 행렬 $\boldsymbol{A}$ 는 $1$, $2$, $3$, $4$, $5$, $6$ 의 $6$ 개의 성분을 가지며, 보통 $m\times n$ 행렬은 $mn$ 개의 성분을 가진다. 
+은 $2 \times 3$ 행렬이다. 행렬에서 가로로 된 한 줄을 행이라 하고, 세로로 된 한 줄을 열이라 한다. 행렬 $\bf{A}$ 에서 $\begin{bmatrix} 1 & 2 & 3\end{bmatrix}$ 는 행이고, $\begin{bmatrix} 1 \\ 4 \end{bmatrix}$ 는 열이다. 행렬을 이루는 각각의 수학적 대상을 **원소(element)** 혹은 **성분(entry)** 이라 한다. 행렬 $\bf{A}$ 는 $1$, $2$, $3$, $4$, $5$, $6$ 의 $6$ 개의 성분을 가지며, 보통 $m\times n$ 행렬은 $mn$ 개의 성분을 가진다. 
 
-$(\boldsymbol{A})_{ij}$ 혹은 기울어진 일반글씨체의 $A_{ij}$ 는 행렬 $\boldsymbol{A}$ 의 $i$ 번째 행, $j$ 번째 열을 지칭한다. 행은 위부터 $1,\,2,\ldots$ 순서로 세며, 열은 왼쪽부터 $1,\,2,\ldots$ 의 순서로 센다. 즉 $A_{11}=1$ 이며 $A_{23}=6$ 이다. 
+$(\bf{A})_{ij}$ 혹은 기울어진 일반글씨체의 $A_{ij}$ 는 행렬 $\bf{A}$ 의 $i$ 번째 행, $j$ 번째 열을 지칭한다. 행은 위부터 $1,\,2,\ldots$ 순서로 세며, 열은 왼쪽부터 $1,\,2,\ldots$ 의 순서로 센다. 즉 $A_{11}=1$ 이며 $A_{23}=6$ 이다. 
 
 ::: {.callout-warning appearance="simple" icon="false"}
-여기서 행렬을 표기할때는 $\boldsymbol{A}$ 와 같은 기울어진 굵은 글씨체 대문자를 쓰지만, 행렬의 성분을 표기할때는 편의에 따라 $(\boldsymbol{A})_{ij},\, \boldsymbol{A}_{ij}$ 나, 혼동의 여지가 없다고 판단될 경우 $A_{ij}$ 와 같이 일반글씨체 대문자를 사용하도록 하겠다.
+여기서 행렬을 표기할때는 $\bf{A}$ 와 같은 기울어진 굵은 글씨체 대문자를 쓰지만, 행렬의 성분을 표기할때는 편의에 따라 $(\bf{A})_{ij},\, \bf{A}_{ij}$ 나, 혼동의 여지가 없다고 판단될 경우 $A_{ij}$ 와 같이 일반글씨체 대문자를 사용하도록 하겠다.
 :::
 
 실수 성분을 갖는 $m \times n$ 행렬 전체의 집합을 $\mathcal{M}_{m \times n}(\mathbb{R})$ 으로 표기한다. 마찬가지로 복소수 성분을 갖는 $m \times n$ 행렬 전체의 집합을 $\mathcal{M}_{m \times n}(\mathbb{C})$ 으로 표기하도록 한다.
@@ -251,15 +251,15 @@ $$
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-LA_vectorspace_matrix}
-실계수를 갖는 $m \times n$ 행렬의 집합을 $\mathcal{M}_{m \times n}(\mathbb{R})$ 이이라고 하기로 하였다. $\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{R})$ 일 때 두 행렬을 더하면 그 결과는 같은 크기의 행렬이며 더하여 나온 행렬의 성분은 같은 위치에서의 $\boldsymbol{A}$ 와 $\boldsymbol{B}$ 의 성분의 합으로 정의하자. 즉,
+실계수를 갖는 $m \times n$ 행렬의 집합을 $\mathcal{M}_{m \times n}(\mathbb{R})$ 이이라고 하기로 하였다. $\bf{A},\,\bf{B}\in \mathcal{M}_{m \times n}(\mathbb{R})$ 일 때 두 행렬을 더하면 그 결과는 같은 크기의 행렬이며 더하여 나온 행렬의 성분은 같은 위치에서의 $\bf{A}$ 와 $\bf{B}$ 의 성분의 합으로 정의하자. 즉,
 
 $$
-(\boldsymbol{A}+\boldsymbol{B})_{ij} = (\boldsymbol{A})_{ij} + (\boldsymbol{B})_{ij}
+(\bf{A}+\bf{B})_{ij} = (\bf{A})_{ij} + (\bf{B})_{ij}
 $$
 이라 정의한다. 스칼라와 행렬의 곱셈은 행렬의 각 성분의 스칼라곱으로 정의하자. 즉, 
 
 $$
-(a\boldsymbol{A})_{ij} = a(\boldsymbol{A})_{ij}
+(a\bf{A})_{ij} = a(\bf{A})_{ij}
 $$
 
 이라 정의하자. 그렇다면 $\mathcal{M}_{m \times n}(\mathbb{R})$ 은 $\mathbb{R}$-벡터공간이다. $\mathcal{M}_{m \times n}(\mathbb{C})$ 이 $\mathbb{C}$-벡터공간임은 쉽게 보일 수 있다. 즉 체 $\mathbb{F}$ 를 원소로 갖는 $m\times n$ 행렬의 집합을 $\mathcal{M}_{m \times n}(\mathbb{F})$ 이라 하면 $\mathcal{M}_{m \times n}(\mathbb{F})$ 은 $\mathbb{F}$-벡터공간이다.
@@ -812,7 +812,7 @@ $$
 
 ::: {#exm-LA_dimension_of_matrix_space}
 
-우리는 @exm-LA_vectorspace_matrix 에서 $\mathbb{F}$ 의 의 원소를 성분으로 갖는 행렬의 집합 $\mathcal{M}_{m\times n}(\mathbb{F})$ 가 벡터공간이라는 것을 알았다. $1 \le i \le m$, $1 \le j \le n$ 에 대해 $\boldsymbol{E}^{(i,j)}$ 을 $i$ 행 $j$ 열 성분은 $1$ 이며 나머지 성분은 모두 $0$ 인 $m \times n$ 행렬이라 하자. 즉 $\mathbb{F}^{2 \times 3}$ 에서 $\boldsymbol{E}^{(2, 1)} = \begin{bmatrix} 0 & 0 & 0 \\ 1 & 0 & 0\end{bmatrix}$ 이다. $\mathbb{F}^{m \times n}$ 에서 $\mathcal{B}=\left\{\boldsymbol{E}^{(i, j)} : 1\le i \le m,\, 1 \le j \le n\right\}$ 는 선형독립이다. 또한 $\mathcal{B}$ 가 $\mathcal{M}_{m\times n}(\mathbb{F})$ 을 span 한다. $\mathcal{B}$ 의 원소의 갯수는 $mn$ 이므로 $\dim (\mathcal{M}_{m\times n}(\mathbb{F}))=mn$ 이다.
+우리는 @exm-LA_vectorspace_matrix 에서 $\mathbb{F}$ 의 의 원소를 성분으로 갖는 행렬의 집합 $\mathcal{M}_{m\times n}(\mathbb{F})$ 가 벡터공간이라는 것을 알았다. $1 \le i \le m$, $1 \le j \le n$ 에 대해 $\bf{E}^{(i,j)}$ 을 $i$ 행 $j$ 열 성분은 $1$ 이며 나머지 성분은 모두 $0$ 인 $m \times n$ 행렬이라 하자. 즉 $\mathbb{F}^{2 \times 3}$ 에서 $\bf{E}^{(2, 1)} = \begin{bmatrix} 0 & 0 & 0 \\ 1 & 0 & 0\end{bmatrix}$ 이다. $\mathbb{F}^{m \times n}$ 에서 $\mathcal{B}=\left\{\bf{E}^{(i, j)} : 1\le i \le m,\, 1 \le j \le n\right\}$ 는 선형독립이다. 또한 $\mathcal{B}$ 가 $\mathcal{M}_{m\times n}(\mathbb{F})$ 을 span 한다. $\mathcal{B}$ 의 원소의 갯수는 $mn$ 이므로 $\dim (\mathcal{M}_{m\times n}(\mathbb{F}))=mn$ 이다.
 
 :::
 
@@ -898,7 +898,7 @@ $$
 
 가 된다. 즉 $\mathbb{R}^3$ 에서의 $\hat{e}_2=(0, 1, 0)$ 이다. $\mathbb{F}^n$ 에서의 표준 기저 벡터의 집합 $\{\hat{e}_1,\,\hat{e}_2,\ldots,\,\hat{e}_n\}$ 은 $\mathbb{F}^n$ 의 기저이다. 이 기저를 **표준기저 (standard basis)** 라고 한다.
 
-열벡터의 벡터공간 $\mathcal{M}_n (\mathbb{F})$ 의 표준기저벡터 $\boldsymbol{e}_i$ 는 $i$ 번째 성분만 $1$ 이며 나머지 성분은 $0$ 인 $n \times 1$ 행렬이다. $\mathbb{F}^n$ 에서와 마찬가지로 $\{\boldsymbol{e}_1,\ldots,\boldsymbol{e}_n\}$ 이 $\mathcal{M}_{n}(\mathbb{F})$ 의 기저이며 이를 $\mathcal{M}_n(\mathbb{F})$ 의 표준기저라고 한다.
+열벡터의 벡터공간 $\mathcal{M}_n (\mathbb{F})$ 의 표준기저벡터 $\bf{e}_i$ 는 $i$ 번째 성분만 $1$ 이며 나머지 성분은 $0$ 인 $n \times 1$ 행렬이다. $\mathbb{F}^n$ 에서와 마찬가지로 $\{\bf{e}_1,\ldots,\bf{e}_n\}$ 이 $\mathcal{M}_{n}(\mathbb{F})$ 의 기저이며 이를 $\mathcal{M}_n(\mathbb{F})$ 의 표준기저라고 한다.
 
 :::
 :::
@@ -916,7 +916,7 @@ $$
 
 ::: {#exm-LA_stadard_basis_2}
 
-벡터공간 $V$ 의 기저 $\mathcal{B}_V=(v_i)$ 에 대해 기저의 행렬표현은 표준기저이다. 즉 $[v_i]_{\mathcal{B}_V} = \boldsymbol{e}_i$ 이다.
+벡터공간 $V$ 의 기저 $\mathcal{B}_V=(v_i)$ 에 대해 기저의 행렬표현은 표준기저이다. 즉 $[v_i]_{\mathcal{B}_V} = \bf{e}_i$ 이다.
 
 :::
 
