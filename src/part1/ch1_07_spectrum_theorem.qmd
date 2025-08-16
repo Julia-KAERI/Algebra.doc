@@ -24,7 +24,7 @@ crossref:
 ::: {#def-LA_normal_matrix}
 ### 정규 행렬
 
-내적벡터공간에서 정의된 $L\in \mathcal{L}(U,\,V)$ 가 $LL^\ast = L^\ast L$ 일 때 $L$ 을 **정규연산자(normal operator)** 라고 한다. 마찬가지로 정사각 행렬 $\boldsymbol{L}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 $\boldsymbol{LL}^\ast = \boldsymbol{L}^\ast \boldsymbol{L}$ 일 때 $\boldsymbol{L}$ 을 **정규 행렬(normal matrix)** 라 한다. 
+내적벡터공간에서 정의된 $L\in \mathcal{L}(U,\,V)$ 가 $LL^\ast = L^\ast L$ 일 때 $L$ 을 **정규연산자(normal operator)** 라고 한다. 마찬가지로 정사각 행렬 $\bf{L}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 $\bf{LL}^\ast = \bf{L}^\ast \bf{L}$ 일 때 $\bf{L}$ 을 **정규 행렬(normal matrix)** 라 한다. 
 :::
 :::
 
@@ -48,18 +48,18 @@ crossref:
 
 ::: {#prp-LA_condition_of_normal_matrix}
 
-$\boldsymbol{A}$ 가 정규행렬일 필요충분인 조건은 모든 $\boldsymbol{v}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\|\boldsymbol{Av}\| = \|\boldsymbol{A}^\ast \boldsymbol{v}\|$ 이다.
+$\bf{A}$ 가 정규행렬일 필요충분인 조건은 모든 $\bf{v}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\|\bf{Av}\| = \|\bf{A}^\ast \bf{v}\|$ 이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 $$
 \begin{aligned}
-\boldsymbol{A} \text{ is normal} &\iff  \boldsymbol{A}^\ast \boldsymbol{A} - \boldsymbol{A}\boldsymbol{A}^\ast = \boldsymbol{0} \\
-&\iff \langle (\boldsymbol{A}^\ast \boldsymbol{A} - \boldsymbol{A}\boldsymbol{A}^\ast)\boldsymbol{v} ,\, \boldsymbol{v} \rangle  = \boldsymbol{0} \\
-&\iff \langle \boldsymbol{A}^\ast \boldsymbol{A} \boldsymbol{v},\, \boldsymbol{v} \rangle = \langle \boldsymbol{AA}^\ast \boldsymbol{v} ,\, \boldsymbol{v}\rangle \\
-& \iff \|\boldsymbol{Av}\|^2 = \|\boldsymbol{A}^\ast \boldsymbol{v}\|^2
+\bf{A} \text{ is normal} &\iff  \bf{A}^\ast \bf{A} - \bf{A}\bf{A}^\ast = \bf{0} \\
+&\iff \langle (\bf{A}^\ast \bf{A} - \bf{A}\bf{A}^\ast)\bf{v} ,\, \bf{v} \rangle  = \bf{0} \\
+&\iff \langle \bf{A}^\ast \bf{A} \bf{v},\, \bf{v} \rangle = \langle \bf{AA}^\ast \bf{v} ,\, \bf{v}\rangle \\
+& \iff \|\bf{Av}\|^2 = \|\bf{A}^\ast \bf{v}\|^2
 \end{aligned}
 $$
 
@@ -81,8 +81,7 @@ $\F$-벡터공간 $L\in \mathcal{L}(V)$ 가 정규연산자일 때 다음이 성
 
 :::
 
-</div></br>
-
+</div>
 ::: {.proof}
 
 전체적으로 @thm-LA_kernel_image_of_adjoint_operator 를 참고하라.
@@ -114,32 +113,29 @@ $L$ 이 정규연산자이면 $L^\ast$ 와 같은 고유벡터를 가지며 이�
 
 </div>
 
-</br>
-
 ::: {.proof}
 $L-cI$ 가 정규연산자이므로 @prp-LA_condition_of_normal_matrix 로부터 $0 = \|(L-cI)v\| = \|(L-cI)^\ast v\|$. $\square$ 
 
 :::
 
-</br>
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_orthogonality_of_normal_matrix}
-정규행렬 $\boldsymbol{A}$ 의 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.
+정규행렬 $\bf{A}$ 의 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
-$\lambda_1,\,\lambda_2$ 가 서로 다른 $\boldsymbol{A}$ 의 고유값이고 이에 대한 고유벡터가 $\boldsymbol{v}_1,\,\boldsymbol{v}_2$ 라 하자.
+$\lambda_1,\,\lambda_2$ 가 서로 다른 $\bf{A}$ 의 고유값이고 이에 대한 고유벡터가 $\bf{v}_1,\,\bf{v}_2$ 라 하자.
 
 $$
 \begin{aligned}
-(\lambda_1-\lambda_2)\langle \boldsymbol{v}_1,\,\boldsymbol{v}_2\rangle &= \langle \boldsymbol{Av}_1,\,\boldsymbol{v}_2\rangle - \langle \boldsymbol{v}_1,\, \boldsymbol{A}^\ast \boldsymbol{v}_2 \rangle =  \langle \boldsymbol{Av}_1,\,\boldsymbol{v}_2\rangle - \langle \boldsymbol{A} \boldsymbol{v}_1,\, \boldsymbol{v}_2 \rangle = \boldsymbol{0}
+(\lambda_1-\lambda_2)\langle \bf{v}_1,\,\bf{v}_2\rangle &= \langle \bf{Av}_1,\,\bf{v}_2\rangle - \langle \bf{v}_1,\, \bf{A}^\ast \bf{v}_2 \rangle =  \langle \bf{Av}_1,\,\bf{v}_2\rangle - \langle \bf{A} \bf{v}_1,\, \bf{v}_2 \rangle = \bf{0}
 \end{aligned}
 $$
 
-이며 $\lambda_1 \ne \lambda_2$ 이므로 $\langle \boldsymbol{v}_1,\,\boldsymbol{v}_2\rangle = 0$ 이다. $\square$
+이며 $\lambda_1 \ne \lambda_2$ 이므로 $\langle \bf{v}_1,\,\bf{v}_2\rangle = 0$ 이다. $\square$
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
@@ -150,17 +146,17 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof} 
 
-우리는 슈어 정리(@thm-LA_schure) 로부터 모든 복소행렬이 어떤 정규직교기저에서 상삼각행렬꼴로 나타남을 안다. 이 상삼각행렬을 $\boldsymbol{A}$ 라 하면 정규직교기저의 행렬형식은 표준기저 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 가 된다. $\boldsymbol{Ae}_j$ 는 $\boldsymbol{A}$ 의 $j$ 번째 열벡터 $\boldsymbol{A}_{:j}$ 이며, $\boldsymbol{A}$ 가 상삼각행렬 이므로 $\|\boldsymbol{Ae}_j\|^2 = \sum_{i=1}^j |A_{ij}|^2$ 이다. $\boldsymbol{A}^\ast$ 는 하삼각행렬이며, 땨라서 
+우리는 슈어 정리(@thm-LA_schure) 로부터 모든 복소행렬이 어떤 정규직교기저에서 상삼각행렬꼴로 나타남을 안다. 이 상삼각행렬을 $\bf{A}$ 라 하면 정규직교기저의 행렬형식은 표준기저 $\{\bf{e}_1,\ldots,\,\bf{e}_n\}$ 가 된다. $\bf{Ae}_j$ 는 $\bf{A}$ 의 $j$ 번째 열벡터 $\bf{A}_{:j}$ 이며, $\bf{A}$ 가 상삼각행렬 이므로 $\|\bf{Ae}_j\|^2 = \sum_{i=1}^j |A_{ij}|^2$ 이다. $\bf{A}^\ast$ 는 하삼각행렬이며, 땨라서 
 
 $$
-\|\boldsymbol{A}^\ast\boldsymbol{e}_j\|^2= \sum_{i=j}^n \left|(\boldsymbol{A}^\ast)_{ij}\right|^2 = \sum_{i=j}^n |A_{ji}|^2
+\|\bf{A}^\ast\bf{e}_j\|^2= \sum_{i=j}^n \left|(\bf{A}^\ast)_{ij}\right|^2 = \sum_{i=j}^n |A_{ji}|^2
 $$
 
-이다. 정규행렬의 정의에 의해 $\|\boldsymbol{Ae}_j\|^2 = \|\boldsymbol{A}^\ast \boldsymbol{e}_j\|^2$ 이어야 한다. $j=1$ 인 경우 
+이다. 정규행렬의 정의에 의해 $\|\bf{Ae}_j\|^2 = \|\bf{A}^\ast \bf{e}_j\|^2$ 이어야 한다. $j=1$ 인 경우 
 
 $$
 |A_{11}|^2 = |A_{11}|^2 + \cdots + |A_{1n}|^2 
@@ -172,7 +168,7 @@ $$
 |A_{12}|^2 + |A_{22}|^2 = |A_{22}|^2 + \cdots + |A_{2n}|^2
 $$
 
-인데 $j=1$ 인 경우에서 $A_{12}=0$ 임을 보였으므로 $A_{23}= \cdots = A_{2n}=0$ 임을 안다. 이것을 계속 반복해보면 $\boldsymbol{A}$ 가 대각행렬임을 알 수 있다. $\square$ 
+인데 $j=1$ 인 경우에서 $A_{12}=0$ 임을 보였으므로 $A_{23}= \cdots = A_{2n}=0$ 임을 안다. 이것을 계속 반복해보면 $\bf{A}$ 가 대각행렬임을 알 수 있다. $\square$ 
 :::
 
 </br>
@@ -189,7 +185,7 @@ $\C$ 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 에 대해 다음�
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -222,21 +218,19 @@ $n\ge 2$ 에 대해 $n\times n$ 정규행렬의 집합은 $\mathcal{M}_{n \times
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
-$\boldsymbol{A},\,\boldsymbol{B} \in \mathcal{M}_{n\times n} (\mathbb{F})$ 의 정규행렬이라고 하자. $c\in \mathbb{F}$ 에 대해
+$\bf{A},\,\bf{B} \in \mathcal{M}_{n\times n} (\mathbb{F})$ 의 정규행렬이라고 하자. $c\in \mathbb{F}$ 에 대해
 
 $$
-(\boldsymbol{A}+c\boldsymbol{B})(\boldsymbol{A}+c\boldsymbol{B})^\ast - (\boldsymbol{A}+c\boldsymbol{B})^\ast(\boldsymbol{A}+c\boldsymbol{B}) = \overline{c}(\boldsymbol{AB}^\ast - \boldsymbol{B}^\ast \boldsymbol{A})+c(\boldsymbol{BA}^\ast - \boldsymbol{A}^\ast\boldsymbol{B})
+(\bf{A}+c\bf{B})(\bf{A}+c\bf{B})^\ast - (\bf{A}+c\bf{B})^\ast(\bf{A}+c\bf{B}) = \overline{c}(\bf{AB}^\ast - \bf{B}^\ast \bf{A})+c(\bf{BA}^\ast - \bf{A}^\ast\bf{B})
 $$
 
-이므로 $\boldsymbol{A}+c\boldsymbol{B}$ 가 정규행렬이 되지 않는다.
+이므로 $\bf{A}+c\bf{B}$ 가 정규행렬이 되지 않는다.
 ::: 
 
-</br>
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_A_19}
 
@@ -246,7 +240,7 @@ $L\in \mathcal{L}(V)$ 이고 모든 $v\in V$ 에 대해 $\|L^\ast v\|\le \|Lv\|$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -272,7 +266,7 @@ $P\in \mathcal{L}(V)$ 가 $P^2=P$ 일 때 다음이 동치인 것을 보여라.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -285,21 +279,25 @@ $P\in \mathcal{L}(V)$ 가 $P^2=P$ 일 때 다음이 동치인 것을 보여라.
 
 ::: {#exr-axler_7_A_12}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 정규행렬이고 $3$ 과 $4$ 를 고유값으로 가진다고 하자. 이 때 $\boldsymbol{u}\in \mathcal{M}_n(\mathbb{F})$, $\|\boldsymbol{u}\|=\sqrt{2}$, $\|\boldsymbol{Au}\|=5$ 인 $\boldsymbol{u}$ 가 존재함을 보여라.
+#### Axler 7.A.12
+
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 정규행렬이고 $3$ 과 $4$ 를 고유값으로 가진다고 하자. 이 때 $\bf{u}\in \mathcal{M}_n(\mathbb{F})$, $\|\bf{u}\|=\sqrt{2}$, $\|\bf{Au}\|=5$ 인 $\bf{u}$ 가 존재함을 보여라.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
-$3$ 을 고유값으로 가지고 크기가 $1$ 인 벡터를 $\boldsymbol{u}_1$ 이라 하고 $4$ 를 유값으로 가지고 크기가 $1$ 인 벡터를 $\boldsymbol{u}_2$ 라고 하자. 서로 다른 고유값을 가진 정규벡터의 고유벡터이므로 $\boldsymbol{u}_1$ 과 $\boldsymbol{u}_2$ 는 직교한다. $\boldsymbol{u}=\boldsymbol{u}_1+\boldsymbol{u}_2$ 라고 하면, $\|\boldsymbol{u}\|=2$ 이며, $\|\boldsymbol{Au}\|^2 = 5$ 이다. 
+$3$ 을 고유값으로 가지고 크기가 $1$ 인 벡터를 $\bf{u}_1$ 이라 하고 $4$ 를 유값으로 가지고 크기가 $1$ 인 벡터를 $\bf{u}_2$ 라고 하자. 서로 다른 고유값을 가진 정규벡터의 고유벡터이므로 $\bf{u}_1$ 과 $\bf{u}_2$ 는 직교한다. $\bf{u}=\bf{u}_1+\bf{u}_2$ 라고 하면, $\|\bf{u}\|=2$ 이며, $\|\bf{Au}\|^2 = 5$ 이다. 
 
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler_7_A_15}
+
+#### Axler 7.A.15
 
 $\mathbb{F}$-내적벡터공간 $V$ 와 $u,\,x\in V$ 에 대해 $T\in \mathcal{L}(V)$ 를 
 
@@ -315,7 +313,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -364,57 +362,59 @@ $$
 
 ::: {#exr-axler_7_A_16}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 정규연산자일 때 다음을 보이시오.
+#### Axler 7.A.16
 
-&emsp; ($1$) $\text{im}(\boldsymbol{A}) = \text{im}(\boldsymbol{A}^\ast)$.
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 정규연산자일 때 다음을 보이시오.
 
-&emsp; ($2$) 양의 정수 $k$ 에 대해 $\ker (\boldsymbol{A}^k) = \ker (\boldsymbol{A})$ 이며 $\text{im}(\boldsymbol{A}^k) = \text{im}(\boldsymbol{A})$.
+&emsp; ($1$) $\text{im}(\bf{A}) = \text{im}(\bf{A}^\ast)$.
+
+&emsp; ($2$) 양의 정수 $k$ 에 대해 $\ker (\bf{A}^k) = \ker (\bf{A})$ 이며 $\text{im}(\bf{A}^k) = \text{im}(\bf{A})$.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
-($1$) @prp-LA_condition_of_normal_matrix 로부터 $v\in \ker (\boldsymbol{A})$ 이면 $0=\|\boldsymbol{Av}\|=\|\boldsymbol{A}^\ast \boldsymbol{v}\|$ 이므로 $\boldsymbol{v} \in \ker (\boldsymbol{A}^\ast)$ 임을 안다. $(\boldsymbol{A}^\ast)^\ast = \boldsymbol{A}$ 이므로 $\ker (\boldsymbol{A})= \ker(\boldsymbol{A}^\ast)$ 이다. 또한 @thm-LA_kernel_image_of_adjoint_operator 로부터
+($1$) @prp-LA_condition_of_normal_matrix 로부터 $v\in \ker (\bf{A})$ 이면 $0=\|\bf{Av}\|=\|\bf{A}^\ast \bf{v}\|$ 이므로 $\bf{v} \in \ker (\bf{A}^\ast)$ 임을 안다. $(\bf{A}^\ast)^\ast = \bf{A}$ 이므로 $\ker (\bf{A})= \ker(\bf{A}^\ast)$ 이다. 또한 @thm-LA_kernel_image_of_adjoint_operator 로부터
 
 $$
-\text{im}(\boldsymbol{A}) = (\ker (\boldsymbol{A}^\ast))^\perp = (\ker (\boldsymbol{A}))^\perp = \text{im}(\boldsymbol{A}^\ast)
+\text{im}(\bf{A}) = (\ker (\bf{A}^\ast))^\perp = (\ker (\bf{A}))^\perp = \text{im}(\bf{A}^\ast)
 $$
 
 임을 안다. 
 
-($2$) $k$ 에 대한 induction 을 사용한다. $\ker (\boldsymbol{A})\subseteq \ker(\boldsymbol{A}^k)$ 임은 자명하므로 $\ker(\boldsymbol{A}^k) \subseteq  \ker(\boldsymbol{A})$ 만 보이면 된다. $\boldsymbol{A}$ 가 정규행렬이라면 양의 정수 $k$ 에 대해 $(\boldsymbol{A}^\ast)^k\boldsymbol{A}^k = (\boldsymbol{A}^\ast\boldsymbol{A})^k$ 임은 쉽게 보일 수 있다. 또한
+($2$) $k$ 에 대한 induction 을 사용한다. $\ker (\bf{A})\subseteq \ker(\bf{A}^k)$ 임은 자명하므로 $\ker(\bf{A}^k) \subseteq  \ker(\bf{A})$ 만 보이면 된다. $\bf{A}$ 가 정규행렬이라면 양의 정수 $k$ 에 대해 $(\bf{A}^\ast)^k\bf{A}^k = (\bf{A}^\ast\bf{A})^k$ 임은 쉽게 보일 수 있다. 또한
 
 $$
 \begin{aligned}
-\|\boldsymbol{A}^2\boldsymbol{v}\|= \langle \boldsymbol{A}^2 \boldsymbol{v}, \boldsymbol{A}^2 \boldsymbol{v} \rangle = \langle \boldsymbol{A}^\ast \boldsymbol{Av},\boldsymbol{A}^\ast \boldsymbol{Av}\rangle  = \|\boldsymbol{A}^\ast \boldsymbol{Av}\|^2
+\|\bf{A}^2\bf{v}\|= \langle \bf{A}^2 \bf{v}, \bf{A}^2 \bf{v} \rangle = \langle \bf{A}^\ast \bf{Av},\bf{A}^\ast \bf{Av}\rangle  = \|\bf{A}^\ast \bf{Av}\|^2
 \end{aligned}
 $$
 
-이므로 $\ker (\boldsymbol{A}^2) = \ker (\boldsymbol{A}^\ast \boldsymbol{A})$ 이며, 
+이므로 $\ker (\bf{A}^2) = \ker (\bf{A}^\ast \bf{A})$ 이며, 
 
 $$
-\boldsymbol{v}\in \ker (\boldsymbol{A}^\ast\boldsymbol{A}) \implies \langle \boldsymbol{A}^\ast \boldsymbol{Av}, \boldsymbol{v}\rangle = 0 \implies \|\boldsymbol{Av}\|^2=0
+\bf{v}\in \ker (\bf{A}^\ast\bf{A}) \implies \langle \bf{A}^\ast \bf{Av}, \bf{v}\rangle = 0 \implies \|\bf{Av}\|^2=0
 $$
 
-이므로 $\ker (\boldsymbol{A}^2)\subseteq \ker(\boldsymbol{A})$ 임을 안다. $\ker(\boldsymbol{A}) \subseteq \ker(\boldsymbol{A}^2)$ 임은 자명하므로 $\ker(\boldsymbol{A}) = \ker(\boldsymbol{A}^2)$ 이다. 이제 $\ker(\boldsymbol{A}^k) =  \ker(\boldsymbol{A})$ 임을 가정하자.
+이므로 $\ker (\bf{A}^2)\subseteq \ker(\bf{A})$ 임을 안다. $\ker(\bf{A}) \subseteq \ker(\bf{A}^2)$ 임은 자명하므로 $\ker(\bf{A}) = \ker(\bf{A}^2)$ 이다. 이제 $\ker(\bf{A}^k) =  \ker(\bf{A})$ 임을 가정하자.
 
 $$
-\boldsymbol{v}\in \ker (\boldsymbol{A}^{k+1}) \implies \boldsymbol{A}^k(\boldsymbol{A}\boldsymbol{v}) = \boldsymbol{0} \implies \boldsymbol{Av} \in \ker (\boldsymbol{A}^k) \implies \boldsymbol{Av} \in \ker (\boldsymbol{A})
+\bf{v}\in \ker (\bf{A}^{k+1}) \implies \bf{A}^k(\bf{A}\bf{v}) = \bf{0} \implies \bf{Av} \in \ker (\bf{A}^k) \implies \bf{Av} \in \ker (\bf{A})
 $$
 
-이므로 $\boldsymbol{v}\in \ker(\boldsymbol{A}^2) = \ker(\boldsymbol{A})$ 이다. 
+이므로 $\bf{v}\in \ker(\bf{A}^2) = \ker(\bf{A})$ 이다. 
 
-이제 $\text{im}(\boldsymbol{A}^k) = \text{im}(\boldsymbol{A})$ 임을 보이자. 우리는 앞서 $\ker (\boldsymbol{A}) = \ker (\boldsymbol{A}^\ast)$ 임을 보였다. $\boldsymbol{A}$ 가 정규행렬이라면 $\boldsymbol{A}^\ast$ 도 정규행렬이므로 
+이제 $\text{im}(\bf{A}^k) = \text{im}(\bf{A})$ 임을 보이자. 우리는 앞서 $\ker (\bf{A}) = \ker (\bf{A}^\ast)$ 임을 보였다. $\bf{A}$ 가 정규행렬이라면 $\bf{A}^\ast$ 도 정규행렬이므로 
 
 $$
-\ker (\boldsymbol{A}^k) = \ker (\boldsymbol{A}) =\ker (\boldsymbol{A}^\ast) = \ker ((\boldsymbol{A}^\ast)^k) =  \ker ((\boldsymbol{A}^k)^\ast)
+\ker (\bf{A}^k) = \ker (\bf{A}) =\ker (\bf{A}^\ast) = \ker ((\bf{A}^\ast)^k) =  \ker ((\bf{A}^k)^\ast)
 $$
 
 이다. 따라서
 $$
-\text{im}(\boldsymbol{A}^k) = (\ker ((\boldsymbol{A}^k)^\ast))^\perp = (\ker (\boldsymbol{A}^\ast)) = \text{im}(\boldsymbol{A})
+\text{im}(\bf{A}^k) = (\ker ((\bf{A}^k)^\ast))^\perp = (\ker (\bf{A}^\ast)) = \text{im}(\bf{A})
 $$
 
 이다. 
@@ -425,17 +425,19 @@ $$
 
 ::: {#exr-axler_7_A_18}
 
-$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 표준기저 $(\boldsymbol{e}_1, \ldots,\,\boldsymbol{e}_n)$ 에 대해 $\|\boldsymbol{Ae}_i\| = \|\boldsymbol{A}^\ast \boldsymbol{e}_i\|$ $(i=1,\ldots,\,n)$ 이면 $\boldsymbol{A}$ 가 정규행렬인가? 
+#### Axler 7.A.18
+
+$\bf{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 표준기저 $(\bf{e}_1, \ldots,\,\bf{e}_n)$ 에 대해 $\|\bf{Ae}_i\| = \|\bf{A}^\ast \bf{e}_i\|$ $(i=1,\ldots,\,n)$ 이면 $\bf{A}$ 가 정규행렬인가? 
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
 (<u>*이게 맞다면 텍스트에 명제로 나왔겠지?*</u>) 
 
-$\boldsymbol{A}= \left[\begin{array}{rr} 1 & -1 \\ 1 & -1\end{array}\right]$ 에 대해 $\|\boldsymbol{Ae}_1\| = \|\boldsymbol{Ae}_2\| = \sqrt{2}$ 이지만 $\boldsymbol{AA}^\ast - \boldsymbol{A}^\ast\boldsymbol{A} = \left[\begin{array}{rr} 0 & 4 \\ 4 & 0\end{array}\right] \ne \boldsymbol{0}$ 이다. 
+$\bf{A}= \left[\begin{array}{rr} 1 & -1 \\ 1 & -1\end{array}\right]$ 에 대해 $\|\bf{Ae}_1\| = \|\bf{Ae}_2\| = \sqrt{2}$ 이지만 $\bf{AA}^\ast - \bf{A}^\ast\bf{A} = \left[\begin{array}{rr} 0 & 4 \\ 4 & 0\end{array}\right] \ne \bf{0}$ 이다. 
 
 :::
 
@@ -443,15 +445,17 @@ $\boldsymbol{A}= \left[\begin{array}{rr} 1 & -1 \\ 1 & -1\end{array}\right]$ 에
 
 ::: {#exr-axler_7_B_1}
 
+#### Axler 7.B.1
+
 대칭행렬이 아니면서 행렬의 고유벡터로 이루어진 기저를 갖도록 하는 정사각행렬이 존재하는가?
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
-$\boldsymbol{A} = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatrix}$ 는 $\boldsymbol{Ae}_1 = \boldsymbol{e}_1$, $\boldsymbol{A}(\boldsymbol{e}_1 + \boldsymbol{e}_2) = 2(\boldsymbol{e}_1 + \boldsymbol{e}_2)$, $\boldsymbol{Ae}_3 = 3\boldsymbol{e}_3$ 인데 대칭행렬이 아니다. 
+$\bf{A} = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatrix}$ 는 $\bf{Ae}_1 = \bf{e}_1$, $\bf{A}(\bf{e}_1 + \bf{e}_2) = 2(\bf{e}_1 + \bf{e}_2)$, $\bf{Ae}_3 = 3\bf{e}_3$ 인데 대칭행렬이 아니다. 
 
 :::
 
@@ -465,10 +469,12 @@ $\boldsymbol{A} = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatri
 
 ::: {#exr-axler_7_B_4}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때 $\boldsymbol{A}$ 가 정규행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 $\mathcal{M}_n(\mathbb{C})$ 는 모든 $\boldsymbol{A}$ 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.
+#### Axler 7.B.4
+
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때 $\bf{A}$ 가 정규행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 $\mathcal{M}_n(\mathbb{C})$ 는 모든 $\bf{A}$ 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -480,10 +486,12 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때 $\boldsymbol{A}
 
 ::: {#exr-axler_7_B_5}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 일 때 $\boldsymbol{A}$ 가 대칭행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 $\mathcal{M}_n(\mathbb{R})$ 는 모든 $\boldsymbol{A}$ 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.
+#### Axler 7.B.5
+
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 일 때 $\bf{A}$ 가 대칭행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 $\mathcal{M}_n(\mathbb{R})$ 는 모든 $\bf{A}$ 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -503,53 +511,53 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 일 때 $\boldsymbol{A}
 
 #### 복소수체에서 정의된 행렬에 대한 스펙트럼 정리
 
-$\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 행렬에 대해 다음 세 명제는 동치이다.
+$\bf{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 행렬에 대해 다음 세 명제는 동치이다.
 
-&emsp;($1$) $\boldsymbol{A}$ 는 정규행렬이다.
+&emsp;($1$) $\bf{A}$ 는 정규행렬이다.
 
-&emsp;($2$) $\boldsymbol{A}$ 는 unitary 변환에 의해 대각행렬로 표현된다.
+&emsp;($2$) $\bf{A}$ 는 unitary 변환에 의해 대각행렬로 표현된다.
 
-&emsp;($3$) $\boldsymbol{A}$ 의 고유벡터로 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저를 구성 할 수 있다.
+&emsp;($3$) $\bf{A}$ 의 고유벡터로 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저를 구성 할 수 있다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
 ($1 \implies 2$) 는 @prp-LA_diagonality_of_norma_matrix 에서 보였다.
 
-($2\implies 3$) $\boldsymbol{A}$ 가 unitary 행렬 $\boldsymbol{P}$ 에 의해 대각행렬로 변환된다고 하자. 즉 $\boldsymbol{P}^{-1}\boldsymbol{AP}=\boldsymbol{D}$ 는 대각행렬이다. 대각행렬이 주어졌을 때, 표준정규직교벡터 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 는 $\lambda_i = D_{ii}$ 를 고유값으로 갖는 대각행렬의 고유벡터이다. 여기서
+($2\implies 3$) $\bf{A}$ 가 unitary 행렬 $\bf{P}$ 에 의해 대각행렬로 변환된다고 하자. 즉 $\bf{P}^{-1}\bf{AP}=\bf{D}$ 는 대각행렬이다. 대각행렬이 주어졌을 때, 표준정규직교벡터 $\{\bf{e}_1,\ldots,\,\bf{e}_n\}$ 는 $\lambda_i = D_{ii}$ 를 고유값으로 갖는 대각행렬의 고유벡터이다. 여기서
 
 $$
-\boldsymbol{APe}_i = \boldsymbol{P}\boldsymbol{P}^{-1}\boldsymbol{APe}_i= \boldsymbol{PDe}_i=\lambda_i \boldsymbol{Pe}_i
+\bf{APe}_i = \bf{P}\bf{P}^{-1}\bf{APe}_i= \bf{PDe}_i=\lambda_i \bf{Pe}_i
 $$
 
-이므로 $\boldsymbol{Pe}_i$ 는 $\boldsymbol{A}$ 의 고유벡터이다. $\boldsymbol{P}$ 가 linear isometry 이므로 $\{\boldsymbol{Pe}_1,\ldots,\,\boldsymbol{Pe}_n\}$ 은 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_n(\mathbb{C})$ 의 정규직교기저이다.
+이므로 $\bf{Pe}_i$ 는 $\bf{A}$ 의 고유벡터이다. $\bf{P}$ 가 linear isometry 이므로 $\{\bf{Pe}_1,\ldots,\,\bf{Pe}_n\}$ 은 $\bf{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_n(\mathbb{C})$ 의 정규직교기저이다.
 
-($3. \implies 1.$) $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 이 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저라 하자. 이 때 $\boldsymbol{u}_i$ 의 고유값은 $\lambda_i$ 라 하자.  
+($3. \implies 1.$) $\{\bf{e}_1,\ldots,\,\bf{e}_n\}$ 이 $\bf{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저라 하자. 이 때 $\bf{u}_i$ 의 고유값은 $\lambda_i$ 라 하자.  
 
 $$
-\langle \boldsymbol{A}^\ast \boldsymbol{e}_i,\,\boldsymbol{e}_j\rangle = \langle \boldsymbol{e}_i,\, \boldsymbol{Ae}_j\rangle = \overline{\lambda_j} \delta_{ij}
+\langle \bf{A}^\ast \bf{e}_i,\,\bf{e}_j\rangle = \langle \bf{e}_i,\, \bf{Ae}_j\rangle = \overline{\lambda_j} \delta_{ij}
 $$
 
 이다. 즉,
 
 $$
-\boldsymbol{A}^\ast \boldsymbol{e}_i = \overline{\lambda_i} \boldsymbol{e}_i
+\bf{A}^\ast \bf{e}_i = \overline{\lambda_i} \bf{e}_i
 $$
 
-이다. $\boldsymbol{u} = \sum_i u_i \boldsymbol{e}_i$ 에 대해,
+이다. $\bf{u} = \sum_i u_i \bf{e}_i$ 에 대해,
 
 $$
 \begin{aligned}
-\|\boldsymbol{A}^\ast \boldsymbol{u} \|^2 &=  \left\langle \boldsymbol{A}^\ast \left(\sum_i u_i \boldsymbol{e}_i \right),\, \boldsymbol{A}^\ast \left(\sum_j u_j \boldsymbol{e}_j \right) \right\rangle \\
-&=\sum_{i,\,j} u_i \overline{u_j} \left\langle \boldsymbol{A}^\ast\boldsymbol{e}_i,\, \boldsymbol{A}^\ast \boldsymbol{e}_j\right\rangle \\
+\|\bf{A}^\ast \bf{u} \|^2 &=  \left\langle \bf{A}^\ast \left(\sum_i u_i \bf{e}_i \right),\, \bf{A}^\ast \left(\sum_j u_j \bf{e}_j \right) \right\rangle \\
+&=\sum_{i,\,j} u_i \overline{u_j} \left\langle \bf{A}^\ast\bf{e}_i,\, \bf{A}^\ast \bf{e}_j\right\rangle \\
 &= \sum_{i} |u_i|^2 |\lambda_i|^2 \\
-&= \|\boldsymbol{A}\boldsymbol{u}\|^2
+&= \|\bf{A}\bf{u}\|^2
 \end{aligned}
 $$
 
-이므로 $\boldsymbol{A}$ 는 정규행렬이다. $\square$
+이므로 $\bf{A}$ 는 정규행렬이다. $\square$
 
 :::
 
@@ -563,22 +571,23 @@ $$
 
 ::: {#exr-hermitian_normal}
 
-복소 정사각 행렬 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 이 정규행렬이며 그 고유값이 모두 실수이면 $\boldsymbol{A}$ 는 에르미트 행렬임을 보여라.
+복소 정사각 행렬 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 이 정규행렬이며 그 고유값이 모두 실수이면 $\bf{A}$ 는 에르미트 행렬임을 보여라.
 
 :::
 
-</div></br>
+</div>
+
 ::: {.solution}
 
-$\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 이 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저이고 $\boldsymbol{e}_i$ 의 고유값은 $\lambda_i$ 라 하자. @prp-LA_hermite_tvv 에서 보았듯이 임의의 $\boldsymbol{u} \in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \boldsymbol{Au},\boldsymbol{u}\rangle$ 이 실수이면 $\boldsymbol{A}$ 는 에르미트 행렬이다. $\boldsymbol{u}= \sum_i^n u_i \boldsymbol{e}_i$ 라 하면,
+$\{\bf{e}_1,\ldots,\,\bf{e}_n\}$ 이 $\bf{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저이고 $\bf{e}_i$ 의 고유값은 $\lambda_i$ 라 하자. @prp-LA_hermite_tvv 에서 보았듯이 임의의 $\bf{u} \in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \bf{Au},\bf{u}\rangle$ 이 실수이면 $\bf{A}$ 는 에르미트 행렬이다. $\bf{u}= \sum_i^n u_i \bf{e}_i$ 라 하면,
 
 $$
 \begin{aligned}
-\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle = \sum_i \lambda_i |u_i|^2 \in \mathbb{R}
+\langle \bf{Au},\, \bf{u}\rangle = \sum_i \lambda_i |u_i|^2 \in \mathbb{R}
 \end{aligned}
 $$
 
-이다. 즉 $\boldsymbol{A}$ 는 에르미트 행렬이다. $\square$
+이다. 즉 $\bf{A}$ 는 에르미트 행렬이다. $\square$
 :::
 
 </br>
@@ -588,51 +597,51 @@ $$
 
 ### 미리 알아야 할 것들
 
-실수체에서 정의된 행렬 $\boldsymbol{A}$ 가 에르미트 행렬이면 대칭행렬이며, 대칭행렬이면 에르미트 행렬이다. 실수체에서 정의된 스펙트럼 정리를 증명하기 위해서는 몇가지 미리 증명해야 할 것이 있다.
+실수체에서 정의된 행렬 $\bf{A}$ 가 에르미트 행렬이면 대칭행렬이며, 대칭행렬이면 에르미트 행렬이다. 실수체에서 정의된 스펙트럼 정리를 증명하기 위해서는 몇가지 미리 증명해야 할 것이 있다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-LA_invirtible_deformation}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 행렬에 대해 $\boldsymbol{A}$ 가 대칭행렬이고 실수 $b,\,c$ 가 $b^2-4c <0$ 일 때 
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 행렬에 대해 $\bf{A}$ 가 대칭행렬이고 실수 $b,\,c$ 가 $b^2-4c <0$ 일 때 
 
 $$
-\boldsymbol{A}^2+b\boldsymbol{A}+c\boldsymbol{I}_n
+\bf{A}^2+b\bf{A}+c\bf{I}_n
 $$
 
 은 가역행렬이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
-영벡터가 아닌 벡터 $\boldsymbol{v}\in \mathbb{R}^{n}$ 에 대해
+영벡터가 아닌 벡터 $\bf{v}\in \mathbb{R}^{n}$ 에 대해
 
 $$
 \begin{aligned}
-\langle (\boldsymbol{A}^2+b\boldsymbol{A}+c\boldsymbol{I}_n) \boldsymbol{v},\, \boldsymbol{v} \rangle &= \langle \boldsymbol{Av},\,\boldsymbol{Av} \rangle + b\langle \boldsymbol{Av},\,\boldsymbol{v} \rangle + c\langle \boldsymbol{v},\,\boldsymbol{v} \rangle \\
-&= \|\boldsymbol{Av}\|^2 + b\langle \boldsymbol{Av}, \,\boldsymbol{v}\rangle + c\langle \boldsymbol{v},\,\boldsymbol{v}\rangle
+\langle (\bf{A}^2+b\bf{A}+c\bf{I}_n) \bf{v},\, \bf{v} \rangle &= \langle \bf{Av},\,\bf{Av} \rangle + b\langle \bf{Av},\,\bf{v} \rangle + c\langle \bf{v},\,\bf{v} \rangle \\
+&= \|\bf{Av}\|^2 + b\langle \bf{Av}, \,\bf{v}\rangle + c\langle \bf{v},\,\bf{v}\rangle
 \end{aligned}
 $$
 
 이다. 코시-슈바르츠 부등식으로부터,
 
 $$
-|b\langle \boldsymbol{Av},\,\boldsymbol{v}\rangle | \le |b| \cdot \|\boldsymbol{Av}\|\|\boldsymbol{v}\|
+|b\langle \bf{Av},\,\bf{v}\rangle | \le |b| \cdot \|\bf{Av}\|\|\bf{v}\|
 $$
 
-임을 안다. 즉 $b\langle \boldsymbol{Av},\,\boldsymbol{v}\rangle  \ge -|b| \|\boldsymbol{Av}\|\|\boldsymbol{v}\|$ 이며,
+임을 안다. 즉 $b\langle \bf{Av},\,\bf{v}\rangle  \ge -|b| \|\bf{Av}\|\|\bf{v}\|$ 이며,
 
 $$
 \begin{aligned}
-\langle (\boldsymbol{A}^2+b\boldsymbol{A}+c\boldsymbol{I}_n) \boldsymbol{v},\, \boldsymbol{v} \rangle  & = \|\boldsymbol{Av}\|^2 + b\langle \boldsymbol{Av} ,\,\boldsymbol{v}\rangle + c\langle \boldsymbol{v},\,\boldsymbol{v}\rangle \\
-& \ge \|\boldsymbol{Av}\|^2-|b|\|\boldsymbol{Av}\|\|\boldsymbol{v}\| + c\|\boldsymbol{v}\|^2 \\
-&= \left(\|\boldsymbol{Av}\| - \dfrac{|b|\|\boldsymbol{v}\|}{2}\right)^2 + \left(c-\dfrac{b^2}{4}\right)\|\boldsymbol{Av}\|^2 >0
+\langle (\bf{A}^2+b\bf{A}+c\bf{I}_n) \bf{v},\, \bf{v} \rangle  & = \|\bf{Av}\|^2 + b\langle \bf{Av} ,\,\bf{v}\rangle + c\langle \bf{v},\,\bf{v}\rangle \\
+& \ge \|\bf{Av}\|^2-|b|\|\bf{Av}\|\|\bf{v}\| + c\|\bf{v}\|^2 \\
+&= \left(\|\bf{Av}\| - \dfrac{|b|\|\bf{v}\|}{2}\right)^2 + \left(c-\dfrac{b^2}{4}\right)\|\bf{Av}\|^2 >0
 \end{aligned}
 $$
 
-이다. $\ker (\boldsymbol{A}^2+b\boldsymbol{A}+c\boldsymbol{I}_n) =\{0\}$ 이므로 $\boldsymbol{A}^2+b\boldsymbol{A}+c\boldsymbol{I}_n$ 는 가역행렬이다. $\square$
+이다. $\ker (\bf{A}^2+b\bf{A}+c\bf{I}_n) =\{0\}$ 이므로 $\bf{A}^2+b\bf{A}+c\bf{I}_n$ 는 가역행렬이다. $\square$
 
 :::
 
@@ -648,7 +657,7 @@ $$
 이 때, $c,\,\lambda_1,\ldots,\,\lambda_m,\,b_1,\ldots,\,b_M,\,c_1,\ldots,\,c_M$ 은 실수이며, $i=1,\ldots,\,M$ 에 대해 $b_i^2<4c$ 이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -675,29 +684,29 @@ $$
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-LA_hermitian_real_matrix_eigenvalue}
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬이면 고유값을 가진다.
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬이면 고유값을 가진다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
-영벡터가 아닌 $\boldsymbol{v} \in \mathcal{M}_{n }(\mathbb{R})$ 을 생각하자. $\{\boldsymbol{v},\, \boldsymbol{Av},\ldots,\, \boldsymbol{A}^n \boldsymbol{v}\}$ 는 포함된 벡터의 갯수가 $n$ 보다 많으므로 선형종속이며, 따라서
+영벡터가 아닌 $\bf{v} \in \mathcal{M}_{n }(\mathbb{R})$ 을 생각하자. $\{\bf{v},\, \bf{Av},\ldots,\, \bf{A}^n \bf{v}\}$ 는 포함된 벡터의 갯수가 $n$ 보다 많으므로 선형종속이며, 따라서
 
 $$
-0=c_0 \boldsymbol{v} + c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n \boldsymbol{v}
+0=c_0 \bf{v} + c_1 \bf{Av} + \cdots + c_n \bf{A}^n \bf{v}
 $$
 
 를 만족하는 nontrivial 한 $\{c_i\}$ 가 존재한다. @lem-LA_factorization_of_polinomial 에 의해,
 
 $$
 \begin{aligned}
-c_0 \boldsymbol{v} + & c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n\boldsymbol{v} \\
-&= c(\boldsymbol{A}-\lambda_1 \boldsymbol{I})\cdots (\boldsymbol{A}-\lambda_m \boldsymbol{I}) (\boldsymbol{A}^2 +b_1 \boldsymbol{A}+c_1\boldsymbol{I})\cdots (\boldsymbol{A}^2 +b_M \boldsymbol{A}+c_M\boldsymbol{I})\boldsymbol{v}
+c_0 \bf{v} + & c_1 \bf{Av} + \cdots + c_n \bf{A}^n\bf{v} \\
+&= c(\bf{A}-\lambda_1 \bf{I})\cdots (\bf{A}-\lambda_m \bf{I}) (\bf{A}^2 +b_1 \bf{A}+c_1\bf{I})\cdots (\bf{A}^2 +b_M \bf{A}+c_M\bf{I})\bf{v}
 \end{aligned}
 $$
 
-로 분해 할 수 있다. 이 때 $i=1,\ldots,\,M$ 에 대해 $b_i^2<4c_i$ 이다. @lem-LA_invirtible_deformation 에 의해 $(\boldsymbol{A}^2 +b_i\boldsymbol{A}+c_i\boldsymbol{I})$ 꼴의 행렬은 가역이다. 그렇다면 최소한 하나의 $\boldsymbol{A}-\lambda_j \boldsymbol{I}$ 꼴의 행렬이 가역행렬이 아니며, 이 때의 $\lambda_j$ 가 고유값이다. 즉 $\boldsymbol{A}$ 는 고유값을 가진다.$\square$
+로 분해 할 수 있다. 이 때 $i=1,\ldots,\,M$ 에 대해 $b_i^2<4c_i$ 이다. @lem-LA_invirtible_deformation 에 의해 $(\bf{A}^2 +b_i\bf{A}+c_i\bf{I})$ 꼴의 행렬은 가역이다. 그렇다면 최소한 하나의 $\bf{A}-\lambda_j \bf{I}$ 꼴의 행렬이 가역행렬이 아니며, 이 때의 $\lambda_j$ 가 고유값이다. 즉 $\bf{A}$ 는 고유값을 가진다.$\square$
 
 :::
 
@@ -705,34 +714,34 @@ $$
 
 ::: {#lem-LA_self_adjoint_matrix_and_invariable_space}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬 이고 $U\le \mathcal{M}_n(\mathbb{R})$ 가 $\boldsymbol{A}$ 에 대한 불변부분공간일 때,
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬 이고 $U\le \mathcal{M}_n(\mathbb{R})$ 가 $\bf{A}$ 에 대한 불변부분공간일 때,
 
-&emsp;($1$) $U^\perp$ 도 $\boldsymbol{A}$에 대한 불변부분공간이다.
+&emsp;($1$) $U^\perp$ 도 $\bf{A}$에 대한 불변부분공간이다.
 
-&emsp;($2$) $\boldsymbol{A}|_U$ 도 대칭행렬 이다.
+&emsp;($2$) $\bf{A}|_U$ 도 대칭행렬 이다.
 
-&emsp;($3$) $\boldsymbol{A}|_{U^\perp}$ 도 대칭행렬 이다.
+&emsp;($3$) $\bf{A}|_{U^\perp}$ 도 대칭행렬 이다.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
-($1$) $\boldsymbol{u}\in U,\, \boldsymbol{v}\in U^\perp$ 라 하자. $\boldsymbol{Au}\in U$ 이며 $\boldsymbol{A}$ 가 에르미트 행렬이므로,
+($1$) $\bf{u}\in U,\, \bf{v}\in U^\perp$ 라 하자. $\bf{Au}\in U$ 이며 $\bf{A}$ 가 에르미트 행렬이므로,
 
 $$
-\langle \boldsymbol{Av},\, \boldsymbol{u}\rangle = \langle \boldsymbol{v},\, \boldsymbol{Au}\rangle =0
+\langle \bf{Av},\, \bf{u}\rangle = \langle \bf{v},\, \bf{Au}\rangle =0
 $$
 
-이다. 따라서 $U^\perp$ 도 $\boldsymbol{A}$ 에 대한 불변부분공간이다.
+이다. 따라서 $U^\perp$ 도 $\bf{A}$ 에 대한 불변부분공간이다.
 
-($2$) $\boldsymbol{u}_1,\,\boldsymbol{u}_2\in U$ 에 대해,
+($2$) $\bf{u}_1,\,\bf{u}_2\in U$ 에 대해,
 
 $$
-\langle \boldsymbol{A}|_U \boldsymbol{u}_1,\,\boldsymbol{u}_2\rangle = \langle \boldsymbol{Au}_1,\, \boldsymbol{u}_2 \rangle = \langle \boldsymbol{u}_1,\, \boldsymbol{Au}_2\rangle = \langle \boldsymbol{u}_1,\,\boldsymbol{A}|_U\boldsymbol{u}_2\rangle
+\langle \bf{A}|_U \bf{u}_1,\,\bf{u}_2\rangle = \langle \bf{Au}_1,\, \bf{u}_2 \rangle = \langle \bf{u}_1,\, \bf{Au}_2\rangle = \langle \bf{u}_1,\,\bf{A}|_U\bf{u}_2\rangle
 $$
 
-이므로 $\boldsymbol{A}|_U$ 도 대칭행렬 이다.
+이므로 $\bf{A}|_U$ 도 대칭행렬 이다.
 
 ($3$) ($1$), ($2$) 로 부터 자명하다. $\square$
 
@@ -744,29 +753,29 @@ $$
 
 ::: {#lem-LA_matrix_under_two_invariant_subspace}
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 가 대칭행렬이고 $U,\,V \le \mathcal{M}_{n}(\mathbb{R})$ 가 $\boldsymbol{A}$ 에 대한 불변부분공간이며 $\mathcal{M}_{n }(\mathbb{R})= U \oplus V$ 이면 $\boldsymbol{A}$ 는 어떤 직교변환에 의해 블럭대각행렬이 된다.
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 가 대칭행렬이고 $U,\,V \le \mathcal{M}_{n}(\mathbb{R})$ 가 $\bf{A}$ 에 대한 불변부분공간이며 $\mathcal{M}_{n }(\mathbb{R})= U \oplus V$ 이면 $\bf{A}$ 는 어떤 직교변환에 의해 블럭대각행렬이 된다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
-$\boldsymbol{u}\in U$ 이면 $\boldsymbol{Au}\in U$ 이고 $\boldsymbol{v}\in V$ 이면 $\boldsymbol{Av}\in V$ 이다. $\mathcal{M}_{n }(\mathbb{R}) = U \oplus V$ 이므로 $U$ 의 정규직교기저 $\{\boldsymbol{e}_i\}$ 와 $V$ 의 정규직교기저 $\{\boldsymbol{f}_j\}$ 에 대해 $\{\boldsymbol{e}_i\}\cup \{\boldsymbol{f}_j\}$ 는 $\mathcal{M}_{n }(\mathbb{R})$ 의 기저이며 이 기저로의 직교변환에 대해 $\boldsymbol{A}$ 는 블럭대각행렬이 된다. $\square$ 
+$\bf{u}\in U$ 이면 $\bf{Au}\in U$ 이고 $\bf{v}\in V$ 이면 $\bf{Av}\in V$ 이다. $\mathcal{M}_{n }(\mathbb{R}) = U \oplus V$ 이므로 $U$ 의 정규직교기저 $\{\bf{e}_i\}$ 와 $V$ 의 정규직교기저 $\{\bf{f}_j\}$ 에 대해 $\{\bf{e}_i\}\cup \{\bf{f}_j\}$ 는 $\mathcal{M}_{n }(\mathbb{R})$ 의 기저이며 이 기저로의 직교변환에 대해 $\bf{A}$ 는 블럭대각행렬이 된다. $\square$ 
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-LA_symmetric_matrix_digoalization} 
-$\boldsymbol{A}$ 가 대칭행렬이면 어떤 직교 변환에 의해 대각행렬이 된다.
+$\bf{A}$ 가 대칭행렬이면 어떤 직교 변환에 의해 대각행렬이 된다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
-$n$ 에 대한 수학적 귀납법을 이용한다. $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬이라고 하자. $n=1$ 일 때는 스스로 대각행렬이다. 이제 $k<n$ 인 대칭행렬은 어떤 직교 변환에 의해 대각행렬이 된다고 가정하자.
+$n$ 에 대한 수학적 귀납법을 이용한다. $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬이라고 하자. $n=1$ 일 때는 스스로 대각행렬이다. 이제 $k<n$ 인 대칭행렬은 어떤 직교 변환에 의해 대각행렬이 된다고 가정하자.
 
-$\boldsymbol{A}$ 가 $n \times n$ 대칭 행렬일 때 고유값이 항상 존재하며 고유값에 대한 고유벡터 가운데 하나 $\boldsymbol{u}_1$ 를 이용하여 $U=\text{span}(\boldsymbol{u}_1)$ 를 만들면 $U$ 은 불변부분공간이며 @lem-LA_self_adjoint_matrix_and_invariable_space 에서 보였듯이 $U^\perp$ 도 불변부분공간이다. $\mathcal{M}_{n \times n}(\mathbb{R}) = U \otimes U^\perp$ 이므로 @lem-LA_matrix_under_two_invariant_subspace 에서 보였듯이 어떤 직교 변환에 의해 $1$ 행렬과 $(n-1)\times (n-1)$ 행렬로 블록대각행렬이 된다. $(n-1)\times (n-1)$ 행렬은 귀납법의 가정에 의해 대각행렬이 되므로 $\boldsymbol{A}$ 는 대각행렬이 된다. $\square$
+$\bf{A}$ 가 $n \times n$ 대칭 행렬일 때 고유값이 항상 존재하며 고유값에 대한 고유벡터 가운데 하나 $\bf{u}_1$ 를 이용하여 $U=\text{span}(\bf{u}_1)$ 를 만들면 $U$ 은 불변부분공간이며 @lem-LA_self_adjoint_matrix_and_invariable_space 에서 보였듯이 $U^\perp$ 도 불변부분공간이다. $\mathcal{M}_{n \times n}(\mathbb{R}) = U \otimes U^\perp$ 이므로 @lem-LA_matrix_under_two_invariant_subspace 에서 보였듯이 어떤 직교 변환에 의해 $1$ 행렬과 $(n-1)\times (n-1)$ 행렬로 블록대각행렬이 된다. $(n-1)\times (n-1)$ 행렬은 귀납법의 가정에 의해 대각행렬이 되므로 $\bf{A}$ 는 대각행렬이 된다. $\square$
 
 :::
 
@@ -776,36 +785,36 @@ $\boldsymbol{A}$ 가 $n \times n$ 대칭 행렬일 때 고유값이 항상 존�
 
 #### 실수체($\mathbb{R}$) 에서 정의된 행렬의 스펙트럼 정리
 
-$\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{R})$ 행렬에 대해 다음 세 명제는 동치이다.
+$\bf{A} \in \mathcal{M}_{n \times n}(\mathbb{R})$ 행렬에 대해 다음 세 명제는 동치이다.
 
-&emsp;($1$) $\boldsymbol{A}$ 는 대칭행렬이다.
+&emsp;($1$) $\bf{A}$ 는 대칭행렬이다.
 
-&emsp;($2$) $\boldsymbol{A}$ 는 직교변환에 의해 대각행렬로 표현된다.
+&emsp;($2$) $\bf{A}$ 는 직교변환에 의해 대각행렬로 표현된다.
 
-&emsp;($3$) $\boldsymbol{A}$ 의 고유벡터로 $\mathcal{M}_{n }(\mathbb{R})$ 의 정규직교기저를 구성 할 수 있다.
+&emsp;($3$) $\bf{A}$ 의 고유벡터로 $\mathcal{M}_{n }(\mathbb{R})$ 의 정규직교기저를 구성 할 수 있다.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 ($1\implies 2$) 는 앞에서 보였다.
 
-($2 \implies 3$) $\boldsymbol{A}$ 가 orthognal 행렬 $\boldsymbol{P}$ 에 의해 대각행렬로 변환된다고 하자. 즉 $\boldsymbol{P}^{-1}\boldsymbol{AP}=\boldsymbol{D}$ 는 대각행렬이다. 대각행렬이 주어졌을 때, 표준정규직교벡터 $\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}$ 는 $\lambda_i = D_{ii}$ 를 고유값으로 갖는 대각행렬의 고유벡터이다. 여기서
+($2 \implies 3$) $\bf{A}$ 가 orthognal 행렬 $\bf{P}$ 에 의해 대각행렬로 변환된다고 하자. 즉 $\bf{P}^{-1}\bf{AP}=\bf{D}$ 는 대각행렬이다. 대각행렬이 주어졌을 때, 표준정규직교벡터 $\{\bf{e}_1,\ldots,\,\bf{e}_n\}$ 는 $\lambda_i = D_{ii}$ 를 고유값으로 갖는 대각행렬의 고유벡터이다. 여기서
 
 $$
-\boldsymbol{APe}_i = \boldsymbol{P}\boldsymbol{P}^{-1}\boldsymbol{APe}_i= \boldsymbol{PDe}_i=\lambda_i \boldsymbol{Pe}_i
+\bf{APe}_i = \bf{P}\bf{P}^{-1}\bf{APe}_i= \bf{PDe}_i=\lambda_i \bf{Pe}_i
 $$
 
-이므로 $\boldsymbol{Pe}_i$ 는 $\boldsymbol{A}$ 의 고유벡터이다. $\boldsymbol{P}$ 가 linear isometry 이므로 $\{\boldsymbol{Pe}_1,\ldots,\,\boldsymbol{Pe}_n\}$ 은 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{R})$ 의 정규직교기저이다.
+이므로 $\bf{Pe}_i$ 는 $\bf{A}$ 의 고유벡터이다. $\bf{P}$ 가 linear isometry 이므로 $\{\bf{Pe}_1,\ldots,\,\bf{Pe}_n\}$ 은 $\bf{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{R})$ 의 정규직교기저이다.
 
-($3 \implies 1$) $\{\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n\}$ 이 $\boldsymbol{A}$ 의 고유벡터로 이루어진 $\mathbb{R}^n$ 의 정규직교기저라 하자. 이 때 $\boldsymbol{u}_i$ 의 고유값은 $\lambda_i$ 라 하자.  $\lambda_i$ 는 실수이므로,
+($3 \implies 1$) $\{\bf{u}_1,\ldots,\,\bf{u}_n\}$ 이 $\bf{A}$ 의 고유벡터로 이루어진 $\mathbb{R}^n$ 의 정규직교기저라 하자. 이 때 $\bf{u}_i$ 의 고유값은 $\lambda_i$ 라 하자.  $\lambda_i$ 는 실수이므로,
 
 $$
-\langle \boldsymbol{A}^\ast \boldsymbol{u}_i,\,\boldsymbol{u}_j\rangle = \langle \boldsymbol{u}_i,\, \boldsymbol{Au}_j\rangle = \lambda_j \delta_{ij} = \lambda_i \delta_{ij} = \langle \boldsymbol{Au}_i,\, \boldsymbol{u}_j\rangle
+\langle \bf{A}^\ast \bf{u}_i,\,\bf{u}_j\rangle = \langle \bf{u}_i,\, \bf{Au}_j\rangle = \lambda_j \delta_{ij} = \lambda_i \delta_{ij} = \langle \bf{Au}_i,\, \bf{u}_j\rangle
 $$
 
-이다. 즉 $\boldsymbol{A}=\boldsymbol{A}^\ast$ 이며 $\boldsymbol{A}$ 가 실행렬이므로 $\boldsymbol{A}$ 는 대칭행렬이다. $\square$
+이다. 즉 $\bf{A}=\bf{A}^\ast$ 이며 $\bf{A}$ 가 실행렬이므로 $\bf{A}$ 는 대칭행렬이다. $\square$
 
 :::
 
