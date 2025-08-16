@@ -593,7 +593,7 @@ $$
 
 ::: {#thm-LA_reisz_representation_theorem_1}
 
-#### Riesz 의 표현 정리 1 (Reisz Representation theorem 1)
+#### Riesz 의 표현 정리 1 (Reisz Representation theorem 1) {#sec-LA_Reisz_representation_theorem_1}
 
 유한차원 내적벡터공간 $V$ 에서 정의된 선형 범함수 $\varphi$ 는 어떤 벡터 $v\in V$ 에 대한 내적으로 표현 될 수 있다. 즉,
 
