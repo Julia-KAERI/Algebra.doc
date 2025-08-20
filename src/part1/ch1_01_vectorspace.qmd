@@ -76,7 +76,7 @@ $$
 
 이다. 이것을 간략히 하여 $\mathbb{R}^3$ 로 표현 할 수 있다. 우리는 이로부터 $\mathbb{C}^4$ 가 어떤 것을 의미하는지 알 수 있을 것이다. 
 
-집합 $V_1,\ldots,\,V_m$ 에 대해 $V=V_1 \times \cdots \times V_m$ 이라 하자. $v\in V$ 라면 $v=(v_1,\ldots,\,v_m)$ 이며 $v_i \in V_i$ 이다. 이 때 $v_i$ 를 $v$ 의 $i$ 번째 **성분**, 혹은 $i$ 번째 **좌표**라고 한다.
+집합 $V_1,\ldots,\,V_m$ 에 대해 $V=V_1 \times \cdots \times V_m$ 이라 하자. $v\in V$ 라면 $v=(v_1,\ldots,\,v_m)$ 이며 $v_i \in V_i$ 이다. 이 때 $v_i$ 를 $v$ 의 $i$ 번째 **성분(component)**, 혹은 $i$ 번째 **좌표(coordinate)**라고 한다.
 
 :::
 :::
@@ -109,39 +109,7 @@ $$
 
 ## 벡터공간과 벡터 
 
-
 ### 벡터공간 {#sec-LA_vector_space}
-
-벡터공간을 정의하기 위해서는 어떤 집합 $V$ 와 체(field) $\mathbb{F}$, 그리고 $V$ 의 원소끼리의 덧셈과, $V$ 의 원소와 $\mathbb{F}$ 의 원소의 곱이 정의되어야 한다. 이 때, 집합 $V$ 과 체 $\mathbb{F}$ 에 대해 아래의 성질을 만족하면 집합 $V$ 를 $\mathbb{F}$ 위에서의 **벡터공간(vector space)**  혹은 **$\mathbb{F}$-벡터공간** 이라 한다.
-
-1. $V$ 의 원소 $v$ 와 $\mathbb{F}$ 의 원소 $a$ 의 곱은 $av$ 라 쓰며 $V$ 에 포함된다.
-
-2. $V$ 는 덧셈에 대해 닫혀 있다.
-
-3. $V$ 의 두 원소 사이의 덧셈에 대한 교환법칙이 성립한다. 즉 $u,\,v\in V$ 일 때 $u + v = v + u$ 이다.
-
-4. $V$ 의 원소사이의 덧셈에 대해 결합법칙이 성립한다. 즉 $u,\,v,\,w \in V$ 일 때 $(u+v)+w = u+(v+w)$ 이다.
-
-5. $V$ 의 원소와 두 두 스칼라 사이에 곱셈에 대한 결합법칙이 성립한다. 즉 $v\in V$ 이고 $a,\,b\in V$ 일 때 $a(bv)=(ab)v$ 이다.
-
-6. 어떤 $0_V \in V$ 가 존재하여 모든 $v\in V$ 에 대해 $v+0_V = 0_V +v= v$ 이다.
-
-7. 각각의 $v\in V$ 에 대해 $v+w=w+v=0_V$ 을 만족하는 $w\in V$ 가 존재한다. 이 때 $v$ 의 덧셈에 대한 역원을 $-v$ 라고 쓴다.
-
-8. 체의 곱셈에 대한 항등원 $1_\mathbb{F}$ 에 대해 $v\in V$ 이면 $1_\mathbb{F} v = v$ 이다.
-
-9. 다음과 같은 분배법칙을 만족한다.
-
-$$
-u,\,v \in V,\, a,\, b\in \mathbb{F} \implies a(u+v)=au + av,\, (a+b)v = av+bv
-$$
-
-이 조건을 만족하는 벡터공간 $V$ 의 원소를 **벡터 (vector)** 라 한다. 6. 에 나오는 벡터공간 $V$ 에서 덧셈에 대한 항등원인 벡터를 영벡터라 하고 $0_V$ 라 쓴다. 혼돈의 여지가 없을 경우는 단순히 $0$ 으로만 쓸 수 도 있다.
-
-
-이것을 수학적으로 다시 정리하면 다음과 같다.
-
-</br>
 
 ::: {.callout-note appearance="minimal"}
 
@@ -156,14 +124,13 @@ $$
 
 &emsp;($3$) $\exists 0_V\in V\, \forall v\in V,\, v + 0_V=0_V+v = v$,
 
-&emsp;($4$) $\forall v\in V \;\exists w\in V$ s.t. $v + w = 0_V$,
+&emsp;($4$) $\forall v\in V \;\exists (-v) \in V$ s.t. $v + (-v) = 0_V$,
 
 &emsp;($5$) $\forall v \in V \implies 1v =v$,
 
 &emsp;($6$)  $u,\,v \in V,\, a,\, b\in \mathbb{F} \implies a(u+v)=au + av,\, (a+b)v = av+bv$.
 
 벡터공간 $V$ 가 정의되었을 때 벡터공간의 원소를 **벡터(vector)** 라 한다. $\mathbb{R}$ 위에서의 벡터 공간을 **실벡터공간(real vector space)** 혹은 **$\mathbb{R}$-벡터공간**, $\mathbb{C}$ 위에서의 벡터 공간을 **복소벡터공간(complex vector space)** 혹은 **$\mathbb{C}$-벡터공간** 이라 한다. 
-
 :::
 
 :::
@@ -187,7 +154,7 @@ $$
 
 &emsp;($1$) 영벡터는 유일하다.
   
-&emsp;($2$) $0v = 0_V$
+&emsp;($2$) $0\cdot v = 0_V$
   
 &emsp;($3$) $(-1)v = -v$
 :::

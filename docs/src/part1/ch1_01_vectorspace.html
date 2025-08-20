@@ -447,7 +447,7 @@ A \times B = \{(a,\,b) : a\in A,\, b \in B\}
 \mathbb{R}\times \mathbb{R} \times \mathbb{R} = \{ (x_1,\,x_2,\,x_3) : x_1\in\mathbb{R},\, x_2\in\mathbb{R},\, x_3\in \mathbb{R}\}
 \]</span></p>
 <p>이다. 이것을 간략히 하여 <span class="math inline">\(\mathbb{R}^3\)</span> 로 표현 할 수 있다. 우리는 이로부터 <span class="math inline">\(\mathbb{C}^4\)</span> 가 어떤 것을 의미하는지 알 수 있을 것이다.</p>
-<p>집합 <span class="math inline">\(V_1,\ldots,\,V_m\)</span> 에 대해 <span class="math inline">\(V=V_1 \times \cdots \times V_m\)</span> 이라 하자. <span class="math inline">\(v\in V\)</span> 라면 <span class="math inline">\(v=(v_1,\ldots,\,v_m)\)</span> 이며 <span class="math inline">\(v_i \in V_i\)</span> 이다. 이 때 <span class="math inline">\(v_i\)</span> 를 <span class="math inline">\(v\)</span> 의 <span class="math inline">\(i\)</span> 번째 <strong>성분</strong>, 혹은 <span class="math inline">\(i\)</span> 번째 <strong>좌표</strong>라고 한다.</p>
+<p>집합 <span class="math inline">\(V_1,\ldots,\,V_m\)</span> 에 대해 <span class="math inline">\(V=V_1 \times \cdots \times V_m\)</span> 이라 하자. <span class="math inline">\(v\in V\)</span> 라면 <span class="math inline">\(v=(v_1,\ldots,\,v_m)\)</span> 이며 <span class="math inline">\(v_i \in V_i\)</span> 이다. 이 때 <span class="math inline">\(v_i\)</span> 를 <span class="math inline">\(v\)</span> 의 <span class="math inline">\(i\)</span> 번째 <strong>성분(component)</strong>, 혹은 <span class="math inline">\(i\)</span> 번째 <strong>좌표(coordinate)</strong>라고 한다.</p>
 </div>
 </div>
 </div>
@@ -490,24 +490,6 @@ A \times B = \{(a,\,b) : a\in A,\, b \in B\}
 <h2 data-number="1.2" class="anchored" data-anchor-id="벡터공간과-벡터"><span class="header-section-number">1.2</span> 벡터공간과 벡터</h2>
 <section id="sec-LA_vector_space" class="level3" data-number="1.2.1">
 <h3 data-number="1.2.1" class="anchored" data-anchor-id="sec-LA_vector_space"><span class="header-section-number">1.2.1</span> 벡터공간</h3>
-<p>벡터공간을 정의하기 위해서는 어떤 집합 <span class="math inline">\(V\)</span> 와 체(field) <span class="math inline">\(\mathbb{F}\)</span>, 그리고 <span class="math inline">\(V\)</span> 의 원소끼리의 덧셈과, <span class="math inline">\(V\)</span> 의 원소와 <span class="math inline">\(\mathbb{F}\)</span> 의 원소의 곱이 정의되어야 한다. 이 때, 집합 <span class="math inline">\(V\)</span> 과 체 <span class="math inline">\(\mathbb{F}\)</span> 에 대해 아래의 성질을 만족하면 집합 <span class="math inline">\(V\)</span> 를 <span class="math inline">\(\mathbb{F}\)</span> 위에서의 <strong>벡터공간(vector space)</strong> 혹은 <strong><span class="math inline">\(\mathbb{F}\)</span>-벡터공간</strong> 이라 한다.</p>
-<ol type="1">
-<li><p><span class="math inline">\(V\)</span> 의 원소 <span class="math inline">\(v\)</span> 와 <span class="math inline">\(\mathbb{F}\)</span> 의 원소 <span class="math inline">\(a\)</span> 의 곱은 <span class="math inline">\(av\)</span> 라 쓰며 <span class="math inline">\(V\)</span> 에 포함된다.</p></li>
-<li><p><span class="math inline">\(V\)</span> 는 덧셈에 대해 닫혀 있다.</p></li>
-<li><p><span class="math inline">\(V\)</span> 의 두 원소 사이의 덧셈에 대한 교환법칙이 성립한다. 즉 <span class="math inline">\(u,\,v\in V\)</span> 일 때 <span class="math inline">\(u + v = v + u\)</span> 이다.</p></li>
-<li><p><span class="math inline">\(V\)</span> 의 원소사이의 덧셈에 대해 결합법칙이 성립한다. 즉 <span class="math inline">\(u,\,v,\,w \in V\)</span> 일 때 <span class="math inline">\((u+v)+w = u+(v+w)\)</span> 이다.</p></li>
-<li><p><span class="math inline">\(V\)</span> 의 원소와 두 두 스칼라 사이에 곱셈에 대한 결합법칙이 성립한다. 즉 <span class="math inline">\(v\in V\)</span> 이고 <span class="math inline">\(a,\,b\in V\)</span> 일 때 <span class="math inline">\(a(bv)=(ab)v\)</span> 이다.</p></li>
-<li><p>어떤 <span class="math inline">\(0_V \in V\)</span> 가 존재하여 모든 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(v+0_V = 0_V +v= v\)</span> 이다.</p></li>
-<li><p>각각의 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(v+w=w+v=0_V\)</span> 을 만족하는 <span class="math inline">\(w\in V\)</span> 가 존재한다. 이 때 <span class="math inline">\(v\)</span> 의 덧셈에 대한 역원을 <span class="math inline">\(-v\)</span> 라고 쓴다.</p></li>
-<li><p>체의 곱셈에 대한 항등원 <span class="math inline">\(1_\mathbb{F}\)</span> 에 대해 <span class="math inline">\(v\in V\)</span> 이면 <span class="math inline">\(1_\mathbb{F} v = v\)</span> 이다.</p></li>
-<li><p>다음과 같은 분배법칙을 만족한다.</p></li>
-</ol>
-<p><span class="math display">\[
-u,\,v \in V,\, a,\, b\in \mathbb{F} \implies a(u+v)=au + av,\, (a+b)v = av+bv
-\]</span></p>
-<p>이 조건을 만족하는 벡터공간 <span class="math inline">\(V\)</span> 의 원소를 <strong>벡터 (vector)</strong> 라 한다. 6. 에 나오는 벡터공간 <span class="math inline">\(V\)</span> 에서 덧셈에 대한 항등원인 벡터를 영벡터라 하고 <span class="math inline">\(0_V\)</span> 라 쓴다. 혼돈의 여지가 없을 경우는 단순히 <span class="math inline">\(0\)</span> 으로만 쓸 수 도 있다.</p>
-<p>이것을 수학적으로 다시 정리하면 다음과 같다.</p>
-<p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -519,7 +501,7 @@ u,\,v \in V,\, a,\, b\in \mathbb{F} \implies a(u+v)=au + av,\, (a+b)v = av+bv
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(u,\,v \in V ,\, a\in \mathbb{F} \implies u+v = v+u \in V\)</span>, <span class="math inline">\(av\in V\)</span>,</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(u,\,v,\,w \in V,\, a,\, b\in \mathbb{F} \implies (u + v) + w = u+(v+w)\)</span>, <span class="math inline">\((ab)v = a(bv)\)</span>,</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\exists 0_V\in V\, \forall v\in V,\, v + 0_V=0_V+v = v\)</span>,</p>
-<p> (<span class="math inline">\(4\)</span>) <span class="math inline">\(\forall v\in V \;\exists w\in V\)</span> s.t. <span class="math inline">\(v + w = 0_V\)</span>,</p>
+<p> (<span class="math inline">\(4\)</span>) <span class="math inline">\(\forall v\in V \;\exists (-v) \in V\)</span> s.t. <span class="math inline">\(v + (-v) = 0_V\)</span>,</p>
 <p> (<span class="math inline">\(5\)</span>) <span class="math inline">\(\forall v \in V \implies 1v =v\)</span>,</p>
 <p> (<span class="math inline">\(6\)</span>) <span class="math inline">\(u,\,v \in V,\, a,\, b\in \mathbb{F} \implies a(u+v)=au + av,\, (a+b)v = av+bv\)</span>.</p>
 <p>벡터공간 <span class="math inline">\(V\)</span> 가 정의되었을 때 벡터공간의 원소를 <strong>벡터(vector)</strong> 라 한다. <span class="math inline">\(\mathbb{R}\)</span> 위에서의 벡터 공간을 <strong>실벡터공간(real vector space)</strong> 혹은 <strong><span class="math inline">\(\mathbb{R}\)</span>-벡터공간</strong>, <span class="math inline">\(\mathbb{C}\)</span> 위에서의 벡터 공간을 <strong>복소벡터공간(complex vector space)</strong> 혹은 <strong><span class="math inline">\(\mathbb{C}\)</span>-벡터공간</strong> 이라 한다.</p>
@@ -545,7 +527,7 @@ u,\,v \in V,\, a,\, b\in \mathbb{F} \implies a(u+v)=au + av,\, (a+b)v = av+bv
 <div id="prp-LA_zero_one_vector" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 1.1</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 와 <span class="math inline">\(v\in V\)</span> 그리고 영벡터 <span class="math inline">\(O_V\)</span> 에 대해 다음이 성립한다.</p>
 <p> (<span class="math inline">\(1\)</span>) 영벡터는 유일하다.</p>
-<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(0v = 0_V\)</span></p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(0\cdot v = 0_V\)</span></p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\((-1)v = -v\)</span></p>
 </div>
 </div>
