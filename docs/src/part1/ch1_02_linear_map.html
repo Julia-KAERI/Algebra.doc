@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -32,16 +32,15 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <link href="../../src/part1/ch1_03_determinant.html" rel="next">
 <link href="../../src/part1/ch1_01_vectorspace.html" rel="prev">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-b467865d89f01302b3bb45791fa41ab5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -102,7 +101,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -342,10 +341,9 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#sec-LA_isomorphism_of_linear_map" id="toc-sec-LA_isomorphism_of_linear_map" class="nav-link" data-scroll-target="#sec-LA_isomorphism_of_linear_map"><span class="header-section-number">2.4.1</span> 동형사상과 동형</a></li>
   <li><a href="#sec-LA_dimension_of_linear_map_space" id="toc-sec-LA_dimension_of_linear_map_space" class="nav-link" data-scroll-target="#sec-LA_dimension_of_linear_map_space"><span class="header-section-number">2.4.2</span> 선형사상공간의 차원</a></li>
-  <li><a href="#동형사상인-연산자의-성질" id="toc-동형사상인-연산자의-성질" class="nav-link" data-scroll-target="#동형사상인-연산자의-성질"><span class="header-section-number">2.4.3</span> 동형사상인 연산자의 성질</a></li>
-  <li><a href="#곱공간" id="toc-곱공간" class="nav-link" data-scroll-target="#곱공간"><span class="header-section-number">2.4.4</span> 곱공간</a></li>
-  <li><a href="#sec-LA_invertible_map_and_inverse_matrix" id="toc-sec-LA_invertible_map_and_inverse_matrix" class="nav-link" data-scroll-target="#sec-LA_invertible_map_and_inverse_matrix"><span class="header-section-number">2.4.5</span> 가역사상과 역행렬</a></li>
-  <li><a href="#sec-LA_matrix_transform_by_basis_transform" id="toc-sec-LA_matrix_transform_by_basis_transform" class="nav-link" data-scroll-target="#sec-LA_matrix_transform_by_basis_transform"><span class="header-section-number">2.4.6</span> 기저의 변화에 따른 행렬의 변화</a></li>
+  <li><a href="#sec-LA_properties_of_isomorphism" id="toc-sec-LA_properties_of_isomorphism" class="nav-link" data-scroll-target="#sec-LA_properties_of_isomorphism"><span class="header-section-number">2.4.3</span> 동형사상인 연산자의 성질</a></li>
+  <li><a href="#sec-LA_product_space" id="toc-sec-LA_product_space" class="nav-link" data-scroll-target="#sec-LA_product_space"><span class="header-section-number">2.4.4</span> 곱공간</a></li>
+  <li><a href="#sec-LA_matrix_transform_by_basis_transform" id="toc-sec-LA_matrix_transform_by_basis_transform" class="nav-link" data-scroll-target="#sec-LA_matrix_transform_by_basis_transform"><span class="header-section-number">2.4.5</span> 기저의 변화에 따른 행렬의 변화</a></li>
   </ul></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul>
@@ -399,7 +397,7 @@ window.Quarto = {
 <p><span id="eq-def_linear_map"><span class="math display">\[
 L(u_1+ c u_2) = L(u_1) + c L(u_2).
 \tag{2.1}\]</span></span></p>
-<p>이면 <span class="math inline">\(L\)</span> 을 <span class="math inline">\(U\)</span> 에서 <span class="math inline">\(V\)</span> 로의 <strong>선형 사상(linear map)</strong> 혹은 <strong>선형 변환 (linear transformation)</strong> 이라 한다. 그리고 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U,\,V\)</span> 에 대해 <span class="math inline">\(U\mapsto V\)</span> 인 선형사상의 집합을 <span class="math inline">\(\mathcal{L}(U,\,V)\)</span> 라고 쓴다.</p>
+<p>이면 <span class="math inline">\(L\)</span> 을 <span class="math inline">\(U\)</span> 에서 <span class="math inline">\(V\)</span> 로의 <strong>선형 사상(linear map)</strong> 혹은 <strong>선형 변환 (linear transformation)</strong> 이라 한다. 그리고 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U,\,V\)</span> 에 대해 <span class="math inline">\(U\mapsto V\)</span> 인 선형사상의 집합을 <span class="math inline">\(\mathcal{L}(U,\,V)\)</span> 라고 쓴다. 자기 자신으로의 선형변환은 특별히 <strong>선형 연산자(Linear operator)</strong> 혹은 <strong>연산자(Operator)</strong> 라 하며 벡터공간 <span class="math inline">\(V\)</span> 에서의 선형 연산자의 집합을 <span class="math inline">\(\mathcal{L}(V)\)</span> 라 쓴다.</p>
 </div>
 </div>
 </div>
@@ -407,13 +405,13 @@ L(u_1+ c u_2) = L(u_1) + c L(u_2).
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-LA_zero_map" class="theorem example">
-<p><span class="theorem-title"><strong>보기 2.1</strong></span> 함수 <span class="math inline">\(L:U \to V\)</span> 가 모든 <span class="math inline">\(u\in U\)</span> 에 대해 <span class="math inline">\(L(u)=0_V\)</span> 일 때 이 <span class="math inline">\(L\)</span> 를 <strong>영사상(zero map)</strong> 이라 부르며 <span class="math inline">\(0(u)\)</span> 와 같이 표기한다. 영사상이 선형사상이다.</p>
+<p><span class="theorem-title"><strong>보기 2.1</strong></span> 함수 <span class="math inline">\(L:U \to V\)</span> 가 모든 <span class="math inline">\(u\in U\)</span> 에 대해 <span class="math inline">\(L(u)=0_V\)</span> 일 때 이 <span class="math inline">\(L\)</span> 를 <strong>영사상(zero map)</strong> 이라 부르며 <span class="math inline">\(0(u)\)</span> 와 같이 표기한다. 그리고 영사상은 선형사상이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-LA_T_zero" class="theorem example">
-<p><span class="theorem-title"><strong>보기 2.2</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 일 때 <span class="math inline">\(L(0_U) = 0_V\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>보기 2.2</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 일 때 <span class="math inline">\(L(0_U) = L(0_U+0_U)= L(0_U)+ L(0_U)\)</span> 이므로 <span class="math inline">\(L(0_U)=0_V\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -423,19 +421,6 @@ L(u_1+ c u_2) = L(u_1) + c L(u_2).
 </div>
 </div>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div id="def-LA_operator" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 2.2 (연산자)</strong></span> 자기 자신으로의 선형변환은 특별히 <strong>선형 연산자(Linear operator)</strong> 혹은 <strong>연산자(Operator)</strong> 라 하며 벡터공간 <span class="math inline">\(V\)</span> 에서의 선형 연산자의 집합을 <span class="math inline">\(\mathcal{L}(V)\)</span> 라 쓴다.</p>
-</div>
-</div>
-</div>
-</div>
-<br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-LA_derivative_integral_as_operator" class="theorem example">
 <p><span class="theorem-title"><strong>보기 2.4</strong></span> 실수 전체 구간에서 무한번 미분 가능한 <span class="math inline">\(\mathbb{R} \mapsto \mathbb{R}\)</span> 실함수의 집합을 <span class="math inline">\(C_\mathbb{R}^{\infty}\)</span> 라고 한다. <span class="math inline">\(C_\mathbb{R}^\infty\)</span> 는 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간임을 쉽게 보일 수 있다. <span class="math inline">\(f\in C_\mathbb{R}^{\infty}\)</span> 에 대한 미분연산자를 <span class="math inline">\(\mathcal{D}\)</span> 라고 하자. 즉 <span class="math inline">\((\mathcal{Df})(x)= f'(x)\)</span> 이다. <span class="math inline">\(f,\,g\in C_\mathbb{R}^\infty,\, c\in \mathbb{R}\)</span> 에 대해 <span class="math inline">\(\mathcal{D}(f+cg) = f'+cg'\in C_\mathbb{R}^\infty\)</span> 이므로 <span class="math inline">\(\mathcal{D} \in \mathcal{L}(C_\mathbb{R}^\infty)\)</span> 이다. 또한 <span class="math inline">\(\mathcal{I}:C_\mathbb{R}^\infty \to C^\infty\)</span> 를 <span class="math inline">\((\mathcal{I}f)(x)=\int_{0}^x f(x)\,dx\)</span> 로 정의하자. <span class="math inline">\(\mathcal{I}\in \mathcal{L}(C_\mathbb{R}^\infty)\)</span> 임을 알 수 있다.</p>
@@ -446,16 +431,15 @@ L(u_1+ c u_2) = L(u_1) + c L(u_2).
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_linearmap_basis" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 2.1</strong></span> 유한차원 벡터공간 <span class="math inline">\(U\)</span> 의 기저 <span class="math inline">\(\{u_1,\ldots,\,u_n\}\)</span> 와 벡터공간 <span class="math inline">\(V\)</span> 를 생각하자. <span class="math inline">\(v_1,\ldots,\,v_n\in V\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>명제 2.1</strong></span> 유한차원 벡터공간 <span class="math inline">\(U\)</span> 의 기저 <span class="math inline">\((u_1,\ldots,\,u_n)\)</span> 와 벡터공간 <span class="math inline">\(V\)</span> 를 생각하자. <span class="math inline">\(v_1,\ldots,\,v_n\in V\)</span> 에 대해</p>
 <p><span class="math display">\[
 L(u_i) = v_i
 \]</span></p>
 <p>를 만족하는 선형사상 <span class="math inline">\(L:U \to V\)</span> 는 존재하며 유일하다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(u\in U\)</span> 는 <span class="math inline">\(\{u_1,\ldots,u_n\}\)</span> 의 선형결합으로 유일하게 표현된다. <span class="math inline">\(u= a_1 u_1 + \cdots + a_n u_n\)</span> 와 <span class="math inline">\(\{v_1,\ldots,\,v_n\}\subset V\)</span> 에 대해 함수 <span class="math inline">\(L:U \to V\)</span> 를 다음과 같이 정의하자.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(u\in U\)</span> 는 <span class="math inline">\((u_1,\ldots,u_n)\)</span> 의 선형결합으로 유일하게 표현된다. <span class="math inline">\(u= a_1 u_1 + \cdots + a_n u_n\)</span> 와 <span class="math inline">\(\{v_1,\ldots,\,v_n\}\subset V\)</span> 에 대해 함수 <span class="math inline">\(L:U \to V\)</span> 를 다음과 같이 정의하자.</p>
 <p><span class="math display">\[
 L(u)=L(a_1u_1 + \cdots + a_n u_n) = a_1v_1 + \cdots + a_n v_n
 \]</span></p>
@@ -477,8 +461,8 @@ K(a_1u_1 + \cdots + a_n u_n) = a_1 v_1 + \cdots + a_n v_n
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-LA_identity_operator" class="theorem example">
-<p><span class="theorem-title"><strong>보기 2.5 (항등사상)</strong></span> <span class="math inline">\(I_U\in \mathcal{L}(U)\)</span> 일 때 모든 <span class="math inline">\(u\in u\)</span> 에 대해 <span class="math inline">\(I_U(u) = u\)</span> 이면 <span class="math inline">\(I_U\)</span> 를 벡터공간 <span class="math inline">\(U\)</span> 에서의 <strong>항등 사상 (identity operator)</strong> 이라고 한다. 항등사상은 선형사상임은 자명하다. 또한 <span class="math inline">\(L\in \mathcal{L}(U)\)</span> 일 때 다음 두 명제가 동치이다.</p>
-<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 은 항등사상이다.</p>
+<p><span class="theorem-title"><strong>보기 2.5 (항등연산자)</strong></span> <span class="math inline">\(I_U\in \mathcal{L}(U)\)</span> 일 때 모든 <span class="math inline">\(u\in u\)</span> 에 대해 <span class="math inline">\(I_U(u) = u\)</span> 이면 <span class="math inline">\(I_U\)</span> 를 벡터공간 <span class="math inline">\(U\)</span> 에서의 <strong>항등 연산자 (identity operator)</strong> 이라고 한다. 항등사상은 선형사상임은 자명하다. 또한 <span class="math inline">\(L\in \mathcal{L}(U)\)</span> 일 때 다음 두 명제가 동치이다.</p>
+<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 은 항등연산자이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(U\)</span> 의 기저 <span class="math inline">\(\{u_i\}\)</span> 에 대해 <span class="math inline">\(L(u_i) = u_i,\, i=1,\,2,\ldots\)</span> 이다.</p>
 </div>
 </div>
@@ -490,9 +474,15 @@ K(a_1u_1 + \cdots + a_n u_n) = a_1 v_1 + \cdots + a_n v_n
 </div>
 <div class="callout-body-container">
 <div id="def-LA_restriction" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 2.3 (한정 사상)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(U \le V\)</span> 라 하자. 이 때 <span class="math inline">\(L\)</span> 의 정의역(domain) 을 <span class="math inline">\(U\)</span> 로 제한하는 <span class="math inline">\(L|_U\in \mathcal{L}(U,\,W)\)</span> 를 생각할 수 있다. 즉, <span class="math inline">\(L|_U(u)=L(u)\)</span> 이며 이것을 <strong>한정 사상(restriction)</strong> 이라 한다.</p>
+<p><span class="theorem-title"><strong>정의 2.2 (한정 사상)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(U \le V\)</span> 라 하자. 이 때 <span class="math inline">\(L\)</span> 의 정의역(domain) 을 <span class="math inline">\(U\)</span> 로 제한하는 <span class="math inline">\(L|_U\in \mathcal{L}(U,\,W)\)</span> 를 생각할 수 있다. 즉, <span class="math inline">\(L|_U(u)=L(u)\)</span> 이며 이것을 <strong>한정 사상(restriction)</strong> 이라 한다.</p>
 </div>
 </div>
+</div>
+</div>
+다음은 쉽게 보일 수 있다.
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-LA_restriction_is_linear" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 2.2</strong></span> 선형 사상에 대한 한정 사상 역시 선형 사상이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -508,10 +498,10 @@ K(a_1u_1 + \cdots + a_n u_n) = a_1 v_1 + \cdots + a_n v_n
 </div>
 <div class="callout-body-container">
 <div id="def-LA_sum_prod_linear_map" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 2.4 (선형사상의 합과 스칼라곱)</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U,\,V\)</span> 와 <span class="math inline">\(L,\,K\in \mathcal{L}(U,\,V),\, u\in V,\, c \in \mathbb{F}\)</span> 에 대해, 선형사상의 합과 스칼라곱은 다음과 같이 정의된다.</p>
+<p><span class="theorem-title"><strong>정의 2.3 (선형사상의 합과 스칼라곱)</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U,\,V\)</span> 와 <span class="math inline">\(L,\,K\in \mathcal{L}(U,\,V),\, u\in V,\, c \in \mathbb{F}\)</span> 에 대해, 선형사상의 합과 스칼라곱은 다음과 같이 정의된다.</p>
 <p><span class="math display">\[
 \begin{aligned}
-(L+K)(u) &amp; := L(u) + K(u)\\
+(L+K)(u) &amp; := L(u) + K(u)\\[0.4em]
 (c L)(u) &amp; := c (L(u))
 \end{aligned}
 \]</span></p>
@@ -523,18 +513,17 @@ K(a_1u_1 + \cdots + a_n u_n) = a_1 v_1 + \cdots + a_n v_n
 <p>우리는 이것으로부터 간단하게 선형사상의 아주 중요한 성질을 알 수 있다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_LUV_vector_space" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 2.2 (<span class="math inline">\(\mathcal{L}(U,\,V)\)</span> 는 벡터공간이다)</strong></span> <span class="math inline">\(U,\,V\)</span> 가 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간일 때, 위에서 정의된 선형사상의 합과 스칼라곱에 의해 <span class="math inline">\(\mathcal{L}(U,\,V)\)</span> 는 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간이다.</p>
+<p><span class="theorem-title"><strong>명제 2.3 (<span class="math inline">\(\mathcal{L}(U,\,V)\)</span> 는 벡터공간이다)</strong></span> <span class="math inline">\(U,\,V\)</span> 가 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간일 때, 위에서 정의된 선형사상의 합과 스칼라곱에 의해 <span class="math inline">\(\mathcal{L}(U,\,V)\)</span> 는 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(L,\,K\in \mathcal{L}(U,\,V)\)</span>, <span class="math inline">\(a,\,b\in \mathbb{F}\)</span> 라 하자. <span class="math inline">\(u_1,\,u_i \in U\)</span> 에 대해 <span class="math inline">\(L(u_1) = v_1\)</span>, <span class="math inline">\(L(u_2) = v_2\)</span>, <span class="math inline">\(K(u_1) = v'_1\)</span>, <span class="math inline">\(K(u_2) = v'_2\)</span> 라 하자. <span class="math display">\[
 \begin{aligned}
-(L+K)(u_1 + b u_2) &amp;= L(u_1 + b u_2) + K(u_1+ b u_2) \\
-&amp;= v_1+ b v_2 +v'_1+ b v'_2  \\
-&amp; = (L+K)(u_1) + b  (L+K)(u_2) \\
-(c L)( u_1 + b u_2) &amp;= c (L(u_1+ b u_2))= c (v_1 + b v_2) \\
-&amp;= c v_1 + cb v_2  \\
+(L+K)(u_1 + b u_2) &amp;= L(u_1 + b u_2) + K(u_1+ b u_2) \\[0.3em]
+&amp;= v_1+ b v_2 +v'_1+ b v'_2  \\[0.3em]
+&amp; = (L+K)(u_1) + b  (L+K)(u_2) \\[0.3em]
+(c L)( u_1 + b u_2) &amp;= c (L(u_1+ b u_2))= c (v_1 + b v_2) \\[0.3em]
+&amp;= c v_1 + cb v_2  \\[0.3em]
 &amp;= c L(u_1) + b \left(c L (u_2)\right)
 \end{aligned}
 \]</span></p>
@@ -552,15 +541,14 @@ K(a_1u_1 + \cdots + a_n u_n) = a_1 v_1 + \cdots + a_n v_n
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_product_map" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 2.3</strong></span> 선형사상의 합성도 선형사상이다.</p>
+<p><span class="theorem-title"><strong>명제 2.4</strong></span> 선형사상의 합성도 선형사상이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U,\,V,\,W\)</span> 와 <span class="math inline">\(c\in \mathbb{F}\)</span> 를 생각하자. <span class="math inline">\(L \in \mathcal{L}(U,\,V),\, K\in\mathcal{L}(V,\,W)\)</span> 에 대해 <span class="math display">\[
 \begin{aligned}
-(L\circ K)(u_1 + c u_2) &amp;= L(K(u_1+ c u_2)) = L(K(u_1)+ K(c u_2)) \\
-&amp;= (L\circ K)(u_1) + c (L\circ K)(u_2)\\
+(L\circ K)(u_1 + c u_2) &amp;= L(K(u_1+ c u_2)) = L(K(u_1)+ K(c u_2)) \\[0.3em]
+&amp;= (L\circ K)(u_1) + c (L\circ K)(u_2)
 \end{aligned}
 \]</span></p>
 <p>이므로 <span class="math inline">\(L\circ K\in \mathcal{L}(U, W)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
@@ -568,18 +556,17 @@ K(a_1u_1 + \cdots + a_n u_n) = a_1 v_1 + \cdots + a_n v_n
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_product_map" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 2.4</strong></span> 선형사상에 대해서는 다음이 성립한다. <span class="math display">\[
+<p><span class="theorem-title"><strong>명제 2.5</strong></span> 선형사상에 대해서는 다음이 성립한다. <span class="math display">\[
 \begin{aligned}
-(L_1 \circ L_2) \circ L_3 &amp;= L_1 \circ  (L_2 \circ L_3) \\
-(L_1+L_2) \circ K &amp;= L_1 \circ K + L_2  \circ K \\
+(L_1 \circ L_2) \circ L_3 &amp;= L_1 \circ  (L_2 \circ L_3) \\[0.3em]
+(L_1+L_2) \circ K &amp;= L_1 \circ K + L_2  \circ K \\[0.3em]
 L\circ (K_1 +K_2) &amp;= L \circ K_1 + L \circ K_2
 \end{aligned}
 \]</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>증명은 생략한다.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span>trivial</p>
 </div>
 <p><br></p>
 </section>
@@ -606,7 +593,7 @@ L(u_j) = A_{1j}v_1 + \cdots + A_{nj} v_n = \sum_{i=1}^m A_{ij} v_i
 <p><span class="math inline">\(u \in U\)</span> 는 <span class="math inline">\((u_j)\)</span> 의 선형결합이므로 <span class="math inline">\(u= \sum_j a_j u_j\)</span> 라 하면,</p>
 <p><span class="math display">\[
 \begin{aligned}
-L(u) &amp;= T \left( \sum_{j=1}^n a_j u_j \right) = \sum_{j=1}^n a_j L(u_j) = \sum_{j=1}^n \sum_{i=1}^m a_j A_{ij} v_i = \sum_{i=1}^m \left(\sum_{j=1}^n A_{ij}a_j\right)v_i
+L(u) &amp;= L \left( \sum_{j=1}^n a_j u_j \right) = \sum_{j=1}^n a_j L(u_j) = \sum_{j=1}^n \sum_{i=1}^m a_j A_{ij} v_i = \sum_{i=1}^m \left(\sum_{j=1}^n A_{ij}a_j\right)v_i
 \end{aligned}
 \]</span></p>
 <p>이다. <span class="math inline">\(b_i = \displaystyle \sum_{j} A_{ij}a_j\)</span> 라 하면 <span class="math inline">\(L(u) = \sum_i b_i v_i\)</span> 이므로</p>
@@ -637,7 +624,7 @@ L(u) &amp;= T \left( \sum_{j=1}^n a_j u_j \right) = \sum_{j=1}^n a_j L(u_j) = \s
 </div>
 <div class="callout-body-container">
 <div id="def-LA_multiplication_of_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 2.5</strong></span> <span class="math inline">\(m \times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 와 <span class="math inline">\(n \times l\)</span> 행렬 <span class="math inline">\(\boldsymbol{B}\)</span> 의 곱 <span class="math inline">\(\boldsymbol{AB}\)</span> 는 다음과 같이 정의된다.</p>
+<p><span class="theorem-title"><strong>정의 2.4</strong></span> <span class="math inline">\(m \times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 와 <span class="math inline">\(n \times l\)</span> 행렬 <span class="math inline">\(\boldsymbol{B}\)</span> 의 곱 <span class="math inline">\(\boldsymbol{AB}\)</span> 는 다음과 같이 정의된다.</p>
 <p><span id="eq-multiplication_of_matrix"><span class="math display">\[
 (\boldsymbol{AB})_{ij} := \sum_{k=1}^n A_{ik}B_{kj}
 \tag{2.2}\]</span></span></p>
@@ -676,7 +663,7 @@ K(w_k) &amp;= \sum_{i} K_{ik}v_i
 &amp;= \sum_k L_{kj} \sum_i K_{ik} v_i = \sum_i \left(\sum_k K_{ik}L_{kj}\right)v_i \\
 \end{aligned}
 \]</span></p>
-<p>이다. <a href="#def-LA_multiplication_of_matrix" class="quarto-xref">정의&nbsp;<span>2.5</span></a> 에 의해 선형사상의 합성은 각 선형사상의 행렬표현의 곱임을 알 수 있다. <span class="math inline">\(\boldsymbol{K}\)</span> 가 <span class="math inline">\(K\in \mathcal{L}(W,\,V)\)</span> 의 행렬표현이며, <span class="math inline">\(\boldsymbol{L}\)</span> 가 <span class="math inline">\(L\in \mathcal{L}(U,\,W)\)</span> 의 행렬표현이므로 <span class="math inline">\(\boldsymbol{K}\)</span> 의 열의 갯수와 <span class="math inline">\(\boldsymbol{L}\)</span> 의 행의 갯수는 <span class="math inline">\(\text{dim}(W)\)</span> 와 같아야 한다.</p>
+<p>이다. <a href="#def-LA_multiplication_of_matrix" class="quarto-xref">정의&nbsp;<span>2.4</span></a> 에 의해 선형사상의 합성은 각 선형사상의 행렬표현의 곱임을 알 수 있다. <span class="math inline">\(\boldsymbol{K}\)</span> 가 <span class="math inline">\(K\in \mathcal{L}(W,\,V)\)</span> 의 행렬표현이며, <span class="math inline">\(\boldsymbol{L}\)</span> 가 <span class="math inline">\(L\in \mathcal{L}(U,\,W)\)</span> 의 행렬표현이므로 <span class="math inline">\(\boldsymbol{K}\)</span> 의 열의 갯수와 <span class="math inline">\(\boldsymbol{L}\)</span> 의 행의 갯수는 <span class="math inline">\(\text{dim}(W)\)</span> 와 같아야 한다.</p>
 <p><br></p>
 </section>
 <section id="sec-LA_scalar_multiplication_of_linear_map" class="level3" data-number="2.2.4">
@@ -697,7 +684,7 @@ K(w_k) &amp;= \sum_{i} K_{ik}v_i
 </div>
 <div class="callout-body-container">
 <div id="def-LA_identity_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 2.6 (항등 행렬 (identity matrix))</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(I\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(I(v)=v\)</span> 일 때, 즉 <span class="math inline">\(I\)</span> 가 항등사상일 때 이에 대한 행렬표현 <span class="math inline">\(\boldsymbol{I}=[I]\)</span> 를 항등행렬이라 한다. 어떤 기저 <span class="math inline">\(\mathcal{B}_V = \{v_i\}\)</span> 에 대해서도 <span class="math inline">\(I(v_i) = v_i\)</span> 이므로 <span class="math inline">\((\boldsymbol{I})_{ij} = \delta_{ij}\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>정의 2.5 (항등 행렬 (identity matrix))</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(I\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(I(v)=v\)</span> 일 때, 즉 <span class="math inline">\(I\)</span> 가 항등사상일 때 이에 대한 행렬표현 <span class="math inline">\(\boldsymbol{I}=[I]\)</span> 를 항등행렬이라 한다. 어떤 기저 <span class="math inline">\(\mathcal{B}_V = \{v_i\}\)</span> 에 대해서도 <span class="math inline">\(I(v_i) = v_i\)</span> 이므로 <span class="math inline">\((\boldsymbol{I})_{ij} = \delta_{ij}\)</span> 이다. 차원을 같이 표기할때는 <span class="math inline">\(\boldsymbol{I}_n\)</span> 과 같이 표기하기로 한다.</p>
 </div>
 </div>
 </div>
@@ -742,7 +729,7 @@ K(w_k) &amp;= \sum_{i} K_{ik}v_i
 </div>
 <div class="callout-body-container">
 <div id="def-LA_ker_range" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 2.7 (<span class="math inline">\(\text{ker}\)</span> 와 <span class="math inline">\(\text{im}\)</span>)</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에 대해 <span class="math inline">\(L\)</span> 의 kernel (<span class="math inline">\(\ker (L)\)</span>) 과 image (<span class="math inline">\(\text{im}(L)\)</span>) 는 다음과 같이 정의된다.</p>
+<p><span class="theorem-title"><strong>정의 2.6 (<span class="math inline">\(\text{ker}\)</span> 와 <span class="math inline">\(\text{im}\)</span>)</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에 대해 <span class="math inline">\(L\)</span> 의 kernel <span class="math inline">\(\ker (L)\)</span> 과 image <span class="math inline">\(\text{im}(L)\)</span> 는 다음과 같이 정의된다.</p>
 <p><span class="math display">\[
 \begin{aligned}
 \ker (L) &amp;:= \{ u\in U : L(u) = 0_V\} ,\\[0.3em]
@@ -755,11 +742,10 @@ K(w_k) &amp;= \sum_{i} K_{ik}v_i
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-<div id="lem-LA_ker_range_subspace" class="theorem lemma">
-<p><span class="theorem-title"><strong>보조정리 2.1</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 일 때, <span class="math inline">\(\ker (L) \le U\)</span> 이며 <span class="math inline">\(\text{im} (L) \le V\)</span> 의 부분공간이다.</p>
+<div id="prp-LA_ker_range_subspace" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 2.6</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 일 때, <span class="math inline">\(\ker (L) \le U\)</span> 이며 <span class="math inline">\(\text{im} (L) \le V\)</span> 의 부분공간이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\ker (L) \subset U\)</span> 임은 자명하다. <span class="math inline">\(L(0_U)=0_V\)</span> 이므로 <span class="math inline">\(0_U \in \ker (L)\)</span> 이다. <span class="math inline">\(u_1,\,u_2\in \ker (L),\, c \in \mathbb{F}\)</span> 일 때,</p>
 <p><span class="math display">\[
@@ -776,7 +762,7 @@ L(u_1 + c u_2) = L(u_1)+ c L(u_2) = 0_V
 </div>
 <div class="callout-body-container">
 <div id="def-LA_nullity_rank" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 2.8 (<strong>nullity</strong> 와 <strong>rank</strong>)</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에서 <span class="math inline">\(\ker (L)\)</span> 의 차원을 <span class="math inline">\(\text{nullity}(L)\)</span> 라 하고 <span class="math inline">\(\text{im}(L)\)</span> 의 차원을 <span class="math inline">\(\text{rank}(L)\)</span> 라 한다.</p>
+<p><span class="theorem-title"><strong>정의 2.7 (<strong>nullity</strong> 와 <strong>rank</strong>)</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에서 <span class="math inline">\(\ker (L)\)</span> 의 차원을 <span class="math inline">\(\text{nullity}(L)\)</span> 라 하고 <span class="math inline">\(\text{im}(L)\)</span> 의 차원을 <span class="math inline">\(\text{rank}(L)\)</span> 라 한다.</p>
 <p><span class="math display">\[
 \begin{aligned}
 \text{nullity}(L) &amp;:= \dim (\ker (L)), \\[0.3em]
@@ -799,9 +785,8 @@ L(u_1 + c u_2) = L(u_1)+ c L(u_2) = 0_V
 \]</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\ker (L)\)</span> 는 <span class="math inline">\(U\)</span> 의 부분공간이다(<a href="#lem-LA_ker_range_subspace" class="quarto-xref">보조정리&nbsp;<span>2.1</span></a>). <span class="math inline">\(\text{nullity}(L)=m\)</span> 이라 하고 <span class="math inline">\(\ker (L)\)</span> 의 기저를 <span class="math inline">\((u_1,\ldots,u_m )\)</span> 이라 하자. 이 기저를 확장하여 <span class="math inline">\(U\)</span> 의 기저를 이루는 벡터 <span class="math inline">\((u_1,\ldots,\,u_m,\,w_1,\ldots,w_n)\)</span> 를 구할 수 있다(<a href="ch1_01_vectorspace.html#lem-LA_basis_expansion" class="quarto-xref">보조정리&nbsp;<span>1.1</span></a>). 그렇다면 <span class="math inline">\(\dim (U) = m + n\)</span> 이다. 이제 <span class="math inline">\(\text{rank}(L)=n\)</span> 임을 보이면 된다.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\ker (L)\)</span> 는 <span class="math inline">\(U\)</span> 의 부분공간이다(<a href="#prp-LA_ker_range_subspace" class="quarto-xref">명제&nbsp;<span>2.6</span></a>). <span class="math inline">\(\text{nullity}(L)=m\)</span> 이라 하고 <span class="math inline">\(\ker (L)\)</span> 의 기저를 <span class="math inline">\((u_1,\ldots,u_m )\)</span> 이라 하자. 이 기저를 확장하여 <span class="math inline">\(U\)</span> 의 기저를 이루는 벡터 <span class="math inline">\((u_1,\ldots,\,u_m,\,w_1,\ldots,w_n)\)</span> 를 구할 수 있다(<a href="ch1_01_vectorspace.html#lem-LA_basis_expansion" class="quarto-xref">보조정리&nbsp;<span>1.1</span></a>). 그렇다면 <span class="math inline">\(\dim (U) = m + n\)</span> 이다. 이제 <span class="math inline">\(\text{rank}(L)=n\)</span> 임을 보이면 된다.</p>
 <p>임의의 <span class="math inline">\(v = a_1 u_1 + \cdots a_m u_m + b_1 w_1 + \cdots + b_n w_n\)</span> 에 대해 <span class="math inline">\(L(v)=a_1 L(w_1) + \cdots + a_n L(w_n)\)</span> 이다. 즉 <span class="math inline">\(\{L(w_1),\ldots,L(w_n)\}\)</span> 이 <span class="math inline">\(\text{im}(L)\)</span> 를 span 한다. 이제 <span class="math inline">\(\{L(w_1),\ldots,L(w_n)\}\)</span> 이 선형 독립임을 보이자. <span class="math inline">\(c_1 L(w_1) + \cdots + c_n L(w_n) = 0_V\)</span> 인 <span class="math inline">\(c_1,\ldots,c_n \in \mathbb{F}\)</span> 를 찾자. <span class="math inline">\(c_1 L(w_1) + \cdots + c_n L(w_n) = 0_V\)</span> 라면 <span class="math inline">\(L(c_1 w_1 + \cdots + c_n w_n) = 0_V\)</span> 이므로 <span class="math inline">\(c_1T(w_1) + \cdots + c_n T(w_n) \in \ker (T)\)</span> 이어야 한다. 따라서,</p>
 <p><span class="math display">\[
 c_1 w_1 + \cdots + c_n w_1 = d_1 u_1 + \cdots +d_m u_m
@@ -831,7 +816,7 @@ c_1 w_1 + \cdots + c_n w_1 = d_1 u_1 + \cdots +d_m u_m
 </div>
 <div class="callout-body-container">
 <div id="def-LA_isomorphism_in_vector_space" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 2.9 (가역사상/동형사상)</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에 대한 역사상은 <span class="math inline">\(T^{-1}\)</span> 로 표기하며, 역변환이 존재하는 선형 사상을 <strong>가역 사상(invertible map)</strong> 혹은 <strong>동형사상(isomorphism)</strong> 이라 한다. 그리고 두 벡터공간 사이에 가역인 사상이 존재하면 두 벡터공간이 <strong>동형(isomorphic)</strong> 이라고 한다. 두 벡터공간 <span class="math inline">\(U,\,V\)</span> 가 동형일 때 <span class="math inline">\(U \cong V\)</span> 라고 쓴다.</p>
+<p><span class="theorem-title"><strong>정의 2.8 (가역사상/동형사상)</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에 대한 역사상은 <span class="math inline">\(T^{-1}\)</span> 로 표기하며, 역변환이 존재하는 선형 사상을 <strong>가역 사상(invertible map)</strong> 혹은 <strong>동형사상(isomorphism)</strong> 이라 한다. 그리고 두 벡터공간 사이에 가역인 사상이 존재하면 두 벡터공간이 <strong>동형(isomorphic)</strong> 이라고 한다. 두 벡터공간 <span class="math inline">\(U,\,V\)</span> 가 동형일 때 <span class="math inline">\(U \cong V\)</span> 라고 쓴다.</p>
 </div>
 </div>
 </div>
@@ -852,10 +837,9 @@ c_1 w_1 + \cdots + c_n w_1 = d_1 u_1 + \cdots +d_m u_m
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_condition_of_injectivity" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 2.5</strong></span> 선형사상 <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 가 단사(injection) 일 필요충분조건은 <span class="math inline">\(\text{nullity} (L) = 0\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>명제 2.7</strong></span> 선형사상 <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 가 단사(injection) 일 필요충분조건은 <span class="math inline">\(\text{nullity} (L) = 0\)</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(L\)</span> 이 단사라 하자. <span class="math inline">\(L(u)=0_V\)</span> 인 <span class="math inline">\(u\)</span> 는 <span class="math inline">\(0_U\)</span> 뿐이므로 <span class="math inline">\(\ker (L) = \{0_U\}\)</span> 이다. 따라서 <span class="math inline">\(\text{nullity} (L) = 0\)</span> 이다.</p>
 <p><span class="math inline">\(\text{nullity}(L)=0\)</span> 이면 <span class="math inline">\(\ker (L)=\{0_U\}\)</span> 이다. <span class="math inline">\(L(u_1)=L(u_2)\)</span> <span class="math inline">\(\implies\)</span> <span class="math inline">\(L(u_1-u_2)=0_V\)</span> 이므로 <span class="math inline">\(u_1 =u_2\)</span> 이다. 즉 <span class="math inline">\(L\)</span> 는 단사이다. <span class="math inline">\(\square\)</span></p>
@@ -863,12 +847,11 @@ c_1 w_1 + \cdots + c_n w_1 = d_1 u_1 + \cdots +d_m u_m
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_same_dim_vs" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 2.6</strong></span> 두 유한차원 벡터공간 <span class="math inline">\(U,\,V\)</span> 에 대해 다음은 동치이다.</p>
+<p><span class="theorem-title"><strong>명제 2.8</strong></span> 두 유한차원 벡터공간 <span class="math inline">\(U,\,V\)</span> 에 대해 다음은 동치이다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\dim (U) = \dim (V)\)</span>,</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(U \cong V\)</span>.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(m=\dim (U),\, n = \dim (V)\)</span> 이며 <span class="math inline">\((u_i),\,(v_j)\)</span> 가 각각의 기저라 하자.</p>
 <p>(1 <span class="math inline">\(\implies\)</span> 2) <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 를 <span class="math inline">\(L({u_i}) =v_i, \, i=1,\ldots, m=n\)</span> 로 정의하면, <span class="math inline">\(\ker (L) = \{0_U\}\)</span> 이므로 단사이고, <span class="math inline">\(\text{im}(L) = V\)</span> 이므로 전사이다. 따라서 <span class="math inline">\(U \cong V\)</span> 이다.</p>
@@ -880,7 +863,6 @@ c_1 w_1 + \cdots + c_n w_1 = d_1 u_1 + \cdots +d_m u_m
 </div>
 <p><br></p>
 <p>이로부터 자연스럽게 아래의 결론이 나온다.</p>
-<br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="cor-LA_isomorphism_U_F" class="theorem corollary">
 <p><span class="theorem-title"><strong>따름정리 2.2</strong></span> <span class="math inline">\(n\)</span> 차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U\)</span> 와 <span class="math inline">\(\mathcal{M}_{n}(\mathbb{F})\)</span>, <span class="math inline">\(\mathcal{M}_{1 \times n}(\mathbb{F})\)</span> 은 동형이다.</p>
@@ -889,10 +871,9 @@ c_1 w_1 + \cdots + c_n w_1 = d_1 u_1 + \cdots +d_m u_m
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-LA_linearity_of_inverse_map" class="theorem lemma">
-<p><span class="theorem-title"><strong>보조정리 2.2</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 가 동형사상일 때 <span class="math inline">\(L^{-1}\)</span> 도 동형사상이다.</p>
+<p><span class="theorem-title"><strong>보조정리 2.1</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 가 동형사상일 때 <span class="math inline">\(L^{-1}\)</span> 도 동형사상이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>우선 <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 가 동형사상이면 <span class="math inline">\(L^{-1}\)</span> 이 선형사상임을 보이자. <span class="math inline">\(u_1,\,u_2 \in U\)</span> 에 대해 <span class="math inline">\(v_1 = L(u_1),\, v_2 = L(u_2)\)</span> 이며 <span class="math inline">\(c \in \mathbb{F}\)</span>라 하자. <span class="math inline">\(L\)</span> 이 선형사상이므로 <span class="math inline">\(L(u_1 + c u_2) = v_1 +c v_2\)</span> 이다. 즉,</p>
 <p><span class="math display">\[
@@ -903,6 +884,8 @@ L^{-1}(v_1 + c v_2) &amp;= u_1 + c u_2 = L^{-1}(u_1) + c L^{-1}(u_2)
 <p>이다. 즉 <span class="math inline">\(L^{-1}\)</span> 은 선형사상이다. <span class="math inline">\((L^{-1})^{-1}=L\)</span> 이므로 <span class="math inline">\(L^{-1}\)</span> 도 동형사상이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
+<p><span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 가 동형사상, 즉 가역사상이라고 하자. 이 때 임의의 <span class="math inline">\(u\in U,\, v\in V\)</span> 에 대해 <span class="math inline">\((L^{-1}\circ L )(u)=u\)</span> 이고 <span class="math inline">\((L \circ L^{-1}) (v)= v\)</span> 이다. <span class="math inline">\(\mathcal{B}_U,\,\mathcal{B}_V\)</span> 가 각각 <span class="math inline">\(U,\,V\)</span> 의 기저라고 하자. <span class="math inline">\(\boldsymbol{L}=[L]_{\mathcal{B}_U, \mathcal{B}_V}\)</span> 에 대해 <span class="math inline">\([L^{-1}]_{\mathcal{B}_V,\mathcal{B}_U} =\boldsymbol{L}^{-1}\)</span> 이라고 쓰는 것은 자연스럽다. 또한 <span class="math inline">\(\boldsymbol{LL}^{-1} = \boldsymbol{L}^{-1}\boldsymbol{L} = \boldsymbol{I}\)</span> 라는 것을 알 수 있다. 이 때 <span class="math inline">\(\boldsymbol{L}^{-1}\)</span> 을 <span class="math inline">\(\boldsymbol{L}\)</span> 의 <strong>역행렬 (inverse matrix)</strong> 라 한다.</p>
+<p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-LA_basis-tranformations" class="theorem">
 <p><span class="theorem-title"><strong>정리 2.2 (가역사상과 기저의 변환)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 에 대해 다음 두 명제는 동치이다.</p>
@@ -910,7 +893,6 @@ L^{-1}(v_1 + c v_2) &amp;= u_1 + c u_2 = L^{-1}(u_1) + c L^{-1}(u_2)
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 는 <span class="math inline">\(V\)</span> 의 기저를 <span class="math inline">\(W\)</span> 의 기저로 변환한다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(1 <span class="math inline">\(\implies\)</span> 2) <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\{v_1,\ldots,\,v_m\}\)</span> 에 대해 <span class="math inline">\(\text{nullity} (L) = 0\)</span> 이므로 <a href="#cor-LA_range_independence" class="quarto-xref">따름정리&nbsp;<span>2.1</span></a> 에 따라 <span class="math inline">\(\{L(v_1),\ldots,\, L(v_m)\}\)</span> 은 선형독립이다. <span class="math inline">\(L\)</span> 이 전사이므로 <span class="math inline">\(\{L(v_1),\ldots,\, L(v_m)\}\)</span> 는 역시 <span class="math inline">\(V\)</span> 의 기저이다.</p>
 <p>(2 <span class="math inline">\(\implies\)</span> 1) <span class="math inline">\(L\)</span> 가 <span class="math inline">\(V\)</span> 의 기저를 <span class="math inline">\(W\)</span> 로 기저로 변환하므로 <span class="math inline">\(\text{im}\, (L)=W\)</span> 이다. 따라서 <span class="math inline">\(L\)</span> 은 전사이다. <span class="math inline">\(V\)</span> 의 기저 벡터중 <span class="math inline">\(L\)</span> 에 의해 영벡터가 되는 것이 없으므로 (영벡터를 포함하는 벡터의 집합은 무조건 선형종속이므로 기저가 될 수 없다) <span class="math inline">\(\text{nullity}(L) = 0\)</span> 이다. 따라서 <span class="math inline">\(L\)</span> 은 단사이다. 즉 <span class="math inline">\(L\)</span> 는 동형사상이다. <span class="math inline">\(\square\)</span></p>
@@ -919,7 +901,7 @@ L^{-1}(v_1 + c v_2) &amp;= u_1 + c u_2 = L^{-1}(u_1) + c L^{-1}(u_2)
 </section>
 <section id="sec-LA_dimension_of_linear_map_space" class="level3" data-number="2.4.2">
 <h3 data-number="2.4.2" class="anchored" data-anchor-id="sec-LA_dimension_of_linear_map_space"><span class="header-section-number">2.4.2</span> 선형사상공간의 차원</h3>
-<p>우리는 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U,\,V\)</span> 에 대해 <span class="math inline">\(\mathcal{L}(U,\,V)\)</span> 가 벡터공간이라는 것을 안다(<a href="#prp-LA_LUV_vector_space" class="quarto-xref">명제&nbsp;<span>2.2</span></a>). 또한 <span class="math inline">\(\mathbb{F}\)</span> 의 원소를 성분으로 갖는 <span class="math inline">\(m \times n\)</span> 행렬의 집합 <span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{F})\)</span> 도 벡터공간이라는 것을 안다 (<a href="ch1_01_vectorspace.html#exm-LA_vectorspace_matrix" class="quarto-xref">보기&nbsp;<span>1.5</span></a>). <span class="math inline">\(n = \dim (U),\, m = \dim (V)\)</span> 이고 <span class="math inline">\(\mathcal{B}_U = (u_i)\)</span>, <span class="math inline">\(\mathcal{B}_V = (v_j)\)</span> 가 각각 <span class="math inline">\(U,\,V\)</span> 의 기저라고 하자. <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 의 행렬표현 <span class="math inline">\([L]_{\mathcal{B}_U,\,\mathcal{B}_V}\)</span> 를 생각하면 <span class="math inline">\([-]_{\mathcal{B}_U,\,\mathcal{B}_V}\)</span> 는 <span class="math inline">\(\mathcal{L}(U,\,V) \mapsto\mathcal{M}_{\dim V \times \dim U}(\mathbb{F})\)</span> 함수이다. <span class="math inline">\(L,\, K\in \mathcal{L}(U,\,V)\)</span>, <span class="math inline">\(c \in \mathbb{F}\)</span> 에 대해</p>
+<p>우리는 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U,\,V\)</span> 에 대해 <span class="math inline">\(\mathcal{L}(U,\,V)\)</span> 가 벡터공간이라는 것을 안다(<a href="#prp-LA_LUV_vector_space" class="quarto-xref">명제&nbsp;<span>2.3</span></a>). 또한 <span class="math inline">\(\mathbb{F}\)</span> 의 원소를 성분으로 갖는 <span class="math inline">\(m \times n\)</span> 행렬의 집합 <span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{F})\)</span> 도 벡터공간이라는 것을 안다 (<a href="ch1_01_vectorspace.html#exm-LA_vectorspace_matrix" class="quarto-xref">보기&nbsp;<span>1.5</span></a>). <span class="math inline">\(n = \dim (U),\, m = \dim (V)\)</span> 이고 <span class="math inline">\(\mathcal{B}_U = (u_i)\)</span>, <span class="math inline">\(\mathcal{B}_V = (v_j)\)</span> 가 각각 <span class="math inline">\(U,\,V\)</span> 의 기저라고 하자. <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 의 행렬표현 <span class="math inline">\([L]_{\mathcal{B}_U,\,\mathcal{B}_V}\)</span> 를 생각하면 <span class="math inline">\([-]_{\mathcal{B}_U,\,\mathcal{B}_V}\)</span> 는 <span class="math inline">\(\mathcal{L}(U,\,V) \mapsto\mathcal{M}_{\dim V \times \dim U}(\mathbb{F})\)</span> 함수이다. <span class="math inline">\(L,\, K\in \mathcal{L}(U,\,V)\)</span>, <span class="math inline">\(c \in \mathbb{F}\)</span> 에 대해</p>
 <p><span class="math display">\[
 \left[ L + c K \right]_{\mathcal{B}_U, \mathcal{B}_V} = [L]_{\mathcal{B}_U, \mathcal{B}_V} + [c K]_{\mathcal{B}_U, \mathcal{B}_V} = [L]_{\mathcal{B}_U, \mathcal{B}_V} + c [K]_{\mathcal{B}_U, \mathcal{B}_V}
 \]</span></p>
@@ -927,7 +909,7 @@ L^{-1}(v_1 + c v_2) &amp;= u_1 + c u_2 = L^{-1}(u_1) + c L^{-1}(u_2)
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-LA_MM_linearmap" class="theorem lemma">
-<p><span class="theorem-title"><strong>보조정리 2.3</strong></span> <span class="math inline">\(\mathbb{F}\)</span> 에서 정의된 유한차원 벡터공간 <span class="math inline">\(U,\,V\)</span> 와 그 순서기저 <span class="math inline">\(\mathcal{B}_U,\, \mathcal{B}_V\)</span> 에 대해 <span class="math inline">\([L] = [L]_{\mathcal{B}_U,\,\mathcal{B}_V}\)</span> 는 <span class="math inline">\(\mathcal{L}(U,\,V) \to \mathcal{M}_{\dim V \times \dim U}(\mathbb{F})\)</span> 인 선형사상이다.</p>
+<p><span class="theorem-title"><strong>보조정리 2.2</strong></span> <span class="math inline">\(\mathbb{F}\)</span> 에서 정의된 유한차원 벡터공간 <span class="math inline">\(U,\,V\)</span> 와 그 순서기저 <span class="math inline">\(\mathcal{B}_U,\, \mathcal{B}_V\)</span> 에 대해 <span class="math inline">\([L] = [L]_{\mathcal{B}_U,\,\mathcal{B}_V}\)</span> 는 <span class="math inline">\(\mathcal{L}(U,\,V) \to \mathcal{M}_{\dim V \times \dim U}(\mathbb{F})\)</span> 인 선형사상이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -938,12 +920,11 @@ L^{-1}(v_1 + c v_2) &amp;= u_1 + c u_2 = L^{-1}(u_1) + c L^{-1}(u_2)
 <p><span class="theorem-title"><strong>정리 2.3</strong></span> <span class="math inline">\(n\)</span> 차원 벡터공간 <span class="math inline">\(U\)</span> 와 <span class="math inline">\(m\)</span> 차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(\mathcal{L}(U,\,V)\)</span> 는 <span class="math inline">\(\mathcal{M}_{m\times n}(\mathbb{F})\)</span> 와 동형이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(U,\,V\)</span> 의 기저를 각각 <span class="math inline">\(\mathcal{B}_U = (u_i),\,\mathcal{B}_V = (v_j)\)</span> 라 할 때 <span class="math inline">\(\Phi: \mathcal{L}(U,\,V) \to \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 를 <span class="math inline">\(\Phi(L) = [L]_{\mathcal{B}_U, \mathcal{B}_V}\)</span> 로 정의한다. <a href="#lem-LA_MM_linearmap" class="quarto-xref">보조정리&nbsp;<span>2.3</span></a> 으로부터 <span class="math inline">\(\Phi\)</span> 는 선형사상임을 안다. <span class="math inline">\(\ker (\Phi) = \{0_U\}\)</span> 이므로 단사(injective)이다. 모든 <span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 상응하는 <span class="math inline">\(L\)</span> 가 존재하므로 전사(surjective)이다. 즉 <span class="math inline">\(\Phi\)</span> 는 동형사상이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(U,\,V\)</span> 의 기저를 각각 <span class="math inline">\(\mathcal{B}_U = (u_i),\,\mathcal{B}_V = (v_j)\)</span> 라 할 때 <span class="math inline">\(\Phi: \mathcal{L}(U,\,V) \to \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 를 <span class="math inline">\(\Phi(L) = [L]_{\mathcal{B}_U, \mathcal{B}_V}\)</span> 로 정의한다. <a href="#lem-LA_MM_linearmap" class="quarto-xref">보조정리&nbsp;<span>2.2</span></a> 으로부터 <span class="math inline">\(\Phi\)</span> 는 선형사상임을 안다. <span class="math inline">\(\ker (\Phi) = \{0_U\}\)</span> 이므로 단사(injective)이다. 모든 <span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 상응하는 <span class="math inline">\(L\)</span> 가 존재하므로 전사(surjective)이다. 즉 <span class="math inline">\(\Phi\)</span> 는 동형사상이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p>위의 정리와 <a href="#prp-LA_same_dim_vs" class="quarto-xref">명제&nbsp;<span>2.6</span></a> 로부터 다음을 알 수 있다.</p>
+<p>위의 정리와 <a href="#prp-LA_same_dim_vs" class="quarto-xref">명제&nbsp;<span>2.8</span></a> 로부터 다음을 알 수 있다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="cor-LA_dimension_of_LUV" class="theorem corollary">
@@ -964,8 +945,8 @@ L(u)=v \iff [L]_{\mathcal{B}_U, \mathcal{B}_V}[u]_{\mathcal{B}_U} = [v]_{\mathca
 <p>라는 것도 안다. 이것은 근본적으로 선형사상과 행렬이 같은것이며, 벡터와 열벡터가 같은것임을 말해준다.</p>
 <p><br></p>
 </section>
-<section id="동형사상인-연산자의-성질" class="level3" data-number="2.4.3">
-<h3 data-number="2.4.3" class="anchored" data-anchor-id="동형사상인-연산자의-성질"><span class="header-section-number">2.4.3</span> 동형사상인 연산자의 성질</h3>
+<section id="sec-LA_properties_of_isomorphism" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="sec-LA_properties_of_isomorphism"><span class="header-section-number">2.4.3</span> 동형사상인 연산자의 성질</h3>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-LA_isomorphic_linear_map" class="theorem">
 <p><span class="theorem-title"><strong>정리 2.4</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에서의 선형 연산자 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 다음 세 명제는 동치이다.</p>
@@ -974,7 +955,6 @@ L(u)=v \iff [L]_{\mathcal{B}_U, \mathcal{B}_V}[u]_{\mathcal{B}_U} = [v]_{\mathca
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(L\)</span> 는 전사이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>함수가 가역이면 전단사이고, 전단사 이면 가역이다. 따라서 <span class="math inline">\(L\)</span> 가 전사라는 것과 단사라는 것이 동치임을 보이면 된다. Rank-nullity 정리(<a href="#thm-LA_rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a>) 로부터</p>
 <p><span class="math display">\[
@@ -1002,8 +982,8 @@ L \text{ 이 전사} &amp;\iff \text{rank} (L) = \dim V \\
 </div>
 <p><br></p>
 </section>
-<section id="곱공간" class="level3" data-number="2.4.4">
-<h3 data-number="2.4.4" class="anchored" data-anchor-id="곱공간"><span class="header-section-number">2.4.4</span> 곱공간</h3>
+<section id="sec-LA_product_space" class="level3" data-number="2.4.4">
+<h3 data-number="2.4.4" class="anchored" data-anchor-id="sec-LA_product_space"><span class="header-section-number">2.4.4</span> 곱공간</h3>
 <p>우리는 앞서 데카르트곱에 대해 알아보았다. 이제 벡터공간의 데카르트곱이 벡터공간이 되도록 확장하는 것을 알아보도록 하자.</p>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
@@ -1013,7 +993,7 @@ L \text{ 이 전사} &amp;\iff \text{rank} (L) = \dim V \\
 </div>
 <div class="callout-body-container">
 <div id="def-LA_product_space" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 2.10 (곱공간)</strong></span> <span class="math inline">\(V_1,\ldots,\,V_m\)</span> 이 각각 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간일 때 <strong>곱공간(product space)</strong> <span class="math inline">\(V_1 \times \cdots \times V_m\)</span> 은 다음과 같이 집합과 덧셈과 스칼라곱이 정의된 집합이다.</p>
+<p><span class="theorem-title"><strong>정의 2.9 (곱공간)</strong></span> <span class="math inline">\(V_1,\ldots,\,V_m\)</span> 이 각각 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간일 때 <strong>곱공간(product space)</strong> <span class="math inline">\(V_1 \times \cdots \times V_m\)</span> 은 다음과 같이 집합과 덧셈과 스칼라곱이 정의된 집합이다.</p>
 <p><strong>1.</strong> 집합의 정의</p>
 <p><span class="math display">\[
 \begin{aligned}V_1 \times \cdots \times V_m = \{(v_1,\ldots,v_m): v_1\in V_1,\ldots,\,v_m \in V_m\} \\
@@ -1037,48 +1017,45 @@ c(v_1,\ldots,\,v_m) = (c v_1,\ldots,\,c v_m)
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_product_space" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 2.7</strong></span> 곱공간은 벡터공간이다.</p>
+<p><span class="theorem-title"><strong>명제 2.9</strong></span> 곱공간은 벡터공간이다.</p>
 </div>
 </div>
 <p><br></p>
-<p>우리는 <span class="math inline">\(\mathbb{F}\)</span> 가 벡터공간임을 안다. 위의 <a href="#def-LA_product_space" class="quarto-xref">정의&nbsp;<span>2.10</span></a> 의 정의에 따라 곱공간 <span class="math inline">\(\mathbb{F}^n\)</span> 을 벡터공간으로 볼 수 있다. 실제로 우리가 수학 및 여러 다양한 분야에서 사용하는 <span class="math inline">\(\mathbb{F}^n\)</span> 은 벡터공간으로서의 <span class="math inline">\(\mathbb{F}^n\)</span> 이며 실제로는 앞으로 배울 내적이 정의된 내적벡터공간으로서의 <span class="math inline">\(\mathbb{F}^n\)</span> 이다.</p>
+<p>우리는 <span class="math inline">\(\mathbb{F}\)</span> 가 벡터공간임을 안다. 위의 <a href="#def-LA_product_space" class="quarto-xref">정의&nbsp;<span>2.9</span></a> 의 정의에 따라 곱공간 <span class="math inline">\(\mathbb{F}^n\)</span> 을 벡터공간으로 볼 수 있다. 실제로 우리가 수학 및 여러 다양한 분야에서 사용하는 <span class="math inline">\(\mathbb{F}^n\)</span> 은 벡터공간으로서의 <span class="math inline">\(\mathbb{F}^n\)</span> 이며 실제로는 앞으로 배울 내적이 정의된 내적벡터공간으로서의 <span class="math inline">\(\mathbb{F}^n\)</span> 이다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_dimension_of_product_space" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 2.8</strong></span> <span class="math inline">\(V_1,\ldots,\,V_m\)</span> 이 유한차원 벡터공간일 때, <span class="math display">\[
+<p><span class="theorem-title"><strong>명제 2.10</strong></span> <span class="math inline">\(V_1,\ldots,\,V_m\)</span> 이 유한차원 벡터공간일 때, <span class="math display">\[
 \dim (V_1 \times \cdots \times V_m) = \dim V_1 + \cdots + \dim V_m
 \]</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\((v^{(i)}_1,\ldots,\,v^{(i)}_{m_i})\)</span> 를 <span class="math inline">\(V_i\)</span> 의 기저라고 하면 <span class="math inline">\(\dim (V_i)=m_i\)</span> 이다. <span class="math inline">\(v\in V_1 \times \cdots \times V_m\)</span> 의 <span class="math inline">\(i\)</span> 번째 성분을 기술하는데 <span class="math inline">\(m_i\)</span> 개의 기저벡터가 필요하므로 <span class="math inline">\(V_1 \times \cdots \times V_m\)</span> 를 기술하는 데는 <span class="math inline">\(\dim V_1 + \cdots + \dim V_m\)</span> 개의 벡터가 필요하다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\left(v^{(i)}_1,\ldots,\,v^{(i)}_{m_i}\right)\)</span> 를 <span class="math inline">\(V_i\)</span> 의 기저라고 하면 <span class="math inline">\(\dim (V_i)=m_i\)</span> 이다. <span class="math inline">\(v\in V_1 \times \cdots \times V_m\)</span> 의 <span class="math inline">\(i\)</span> 번째 성분을 기술하는데 <span class="math inline">\(m_i\)</span> 개의 기저벡터가 필요하므로 <span class="math inline">\(V_1 \times \cdots \times V_m\)</span> 를 기술하는 데는 <span class="math inline">\(\dim V_1 + \cdots + \dim V_m\)</span> 개의 벡터가 필요하다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_map_product_space" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 2.9</strong></span> <span class="math inline">\(U_1,\ldots,\,U_m\)</span> 이 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U\)</span> 의 부분공간일 때 다음과 같이 정의된 함수 <span class="math inline">\(\Phi :  U_1 \times \cdots \times U_m  \to  U_1 + \cdots + U_m\)</span> 는 선형사상이다.</p>
+<p><span class="theorem-title"><strong>명제 2.11</strong></span> <span class="math inline">\(U_1,\ldots,\,U_m\)</span> 이 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(U\)</span> 의 부분공간일 때 다음과 같이 정의된 함수 <span class="math inline">\(\Phi :  U_1 \times \cdots \times U_m  \to  U_1 + \cdots + U_m\)</span> 는 선형사상이다.</p>
 <p><span class="math display">\[
 \Phi(u_1,\ldots,u_m) = u_1 + \cdots + u_m
 \]</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(U = U_1 \times \cdots \times U_m\)</span> 에 대해 <span class="math inline">\(u,\,u'\in U,\, c \in \mathbb{F}\)</span> 일 때 <span class="math inline">\(\phi (u+c u') = \phi(u) + c\phi (u')\)</span> 인 것을 쉽게 보일 수 있다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_product_space_and_direct_sum" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 2.10</strong></span> 위에서 정의된 <span class="math inline">\(\Phi\)</span> 가 단사인 것의 필요충분조건은 <span class="math inline">\(U_1+ \cdots +U_m\)</span> 이 <a href="#직합">직합(direct sum)</a> 인 것이다.</p>
+<p><span class="theorem-title"><strong>명제 2.12</strong></span> 위에서 정의된 <span class="math inline">\(\Phi\)</span> 가 단사인 것의 필요충분조건은 <span class="math inline">\(U_1+ \cdots +U_m\)</span> 이 <a href="#직합">직합(direct sum)</a> 인 것이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="ch1_01_vectorspace.html#thm-LA_directsum" class="quarto-xref">정리&nbsp;<span>1.1</span></a> 에 의해 <span class="math inline">\(U_1 + \cdots + U_m\)</span> 이 직합일 필요충분조건은 <span class="math inline">\(0\)</span> 을 각각의 <span class="math inline">\(u_i\in U_i\)</span> 의 합으로 나타내는 방법이 모든 <span class="math inline">\(u_i=0\)</span> 인 것 뿐이다. 따라서,</p>
 <p><span class="math display">\[
 \begin{aligned}
-U_1 + \cdots + U_m \text{ 이 직합} &amp; \iff  u_1 + \cdots + u_m = 0 \implies  u_1 = \cdots = u_m =0\\
+U_1 + \cdots + U_m \text{ 이 직합} &amp; \iff  [u_1 + \cdots + u_m = 0 \implies  u_1 = \cdots = u_m =0]\\
 &amp; \iff \ker \phi =\{(0,\ldots,\,0)\} \\
 &amp; \iff  \Phi \text{ 가 단사.}\qquad \square
 \end{aligned}
@@ -1087,32 +1064,22 @@ U_1 + \cdots + U_m \text{ 이 직합} &amp; \iff  u_1 + \cdots + u_m = 0 \implie
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_directsum_condition" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 2.11</strong></span> 유한차원 벡터공간 <span class="math inline">\(U\)</span> 의 부분공간 <span class="math inline">\(U_1,\ldots,\,U_m\)</span> 에 대해 <span class="math inline">\(U_1 + \cdots + U_m\)</span> 이 직합일 필요충분조건은 <span class="math display">\[
+<p><span class="theorem-title"><strong>명제 2.13</strong></span> 유한차원 벡터공간 <span class="math inline">\(U\)</span> 의 부분공간 <span class="math inline">\(U_1,\ldots,\,U_m\)</span> 에 대해 <span class="math inline">\(U_1 + \cdots + U_m\)</span> 이 직합일 필요충분조건은 <span class="math display">\[
 \dim (U_1 + \cdots + U_m) = \dim U_1 + \cdots + \dim U_m
 \]</span></p>
 <p>이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-LA_map_product_space" class="quarto-xref">명제&nbsp;<span>2.9</span></a> 에서 정의된 <span class="math inline">\(\Phi\)</span> 를 생각한다. <a href="#prp-LA_product_space_and_direct_sum" class="quarto-xref">명제&nbsp;<span>2.10</span></a> 에 의해 <span class="math inline">\(U_1+\cdots + U_m\)</span> 이 직합일 필요충분조건이 <span class="math inline">\(\Phi\)</span> 가 단사인 것이며, <span class="math inline">\(U_1 \times \cdots \times U_m\)</span> 과 <span class="math inline">\(U_1 + \cdots + U_m\)</span> 이 유한차원 벡터공간이므로 <span class="math inline">\(\Phi\)</span> 가 단사인 것의 필요충분조건은 <span class="math display">\[
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-LA_map_product_space" class="quarto-xref">명제&nbsp;<span>2.11</span></a> 에서 정의된 <span class="math inline">\(\Phi\)</span> 를 생각한다. <a href="#prp-LA_product_space_and_direct_sum" class="quarto-xref">명제&nbsp;<span>2.12</span></a> 에 의해 <span class="math inline">\(U_1+\cdots + U_m\)</span> 이 직합일 필요충분조건이 <span class="math inline">\(\Phi\)</span> 가 단사인 것이며, <span class="math inline">\(U_1 \times \cdots \times U_m\)</span> 과 <span class="math inline">\(U_1 + \cdots + U_m\)</span> 이 유한차원 벡터공간이므로 <span class="math inline">\(\Phi\)</span> 가 단사인 것의 필요충분조건은 <span class="math display">\[
 \dim (U_1 + \cdots + U_m) = \dim U_1 + \cdots + \dim U_m
 \]</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 </section>
-<section id="sec-LA_invertible_map_and_inverse_matrix" class="level3" data-number="2.4.5">
-<h3 data-number="2.4.5" class="anchored" data-anchor-id="sec-LA_invertible_map_and_inverse_matrix"><span class="header-section-number">2.4.5</span> 가역사상과 역행렬</h3>
-<p><span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 가 가역사상이라고 하자. 이 때 임의의 <span class="math inline">\(u\in U,\, v\in V\)</span> 에 대해 <span class="math inline">\((L^{-1}\circ T )(u)=u\)</span> 이고 <span class="math inline">\((L \circ L^{-1}) (v)= v\)</span> 이다. <span class="math inline">\(\mathcal{B}_U,\,\mathcal{B}_V\)</span> 가 각각 <span class="math inline">\(U,\,V\)</span> 의 기저라고 하자. <span class="math inline">\(\boldsymbol{L}=[L]_{\mathcal{B}_U, \mathcal{B}_V}\)</span> 에 대해 <span class="math inline">\([L^{-1}]_{\mathcal{B}_V,\mathcal{B}_U} =\boldsymbol{L}^{-1}\)</span> 이라고 쓰는 것은 자연스럽다. 또한 <span class="math inline">\(\boldsymbol{LL}^{-1} = \boldsymbol{L}^{-1}\boldsymbol{L} = \boldsymbol{I}\)</span> 라는 것을 알 수 있다. 이 때 <span class="math inline">\(\boldsymbol{L}^{-1}\)</span> 을 <span class="math inline">\(\boldsymbol{L}\)</span> 의 <strong>역행렬 (inverse matrix)</strong> 라 한다.</p>
-<p><br></p>
-</section>
-<section id="sec-LA_matrix_transform_by_basis_transform" class="level3" data-number="2.4.6">
-<h3 data-number="2.4.6" class="anchored" data-anchor-id="sec-LA_matrix_transform_by_basis_transform"><span class="header-section-number">2.4.6</span> 기저의 변화에 따른 행렬의 변화</h3>
-<p><span class="math inline">\(U\)</span> 가 <span class="math inline">\(n\)</span> 차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간이며 <span class="math inline">\(\mathcal{B}_1 = (u_1,\ldots,u_n)\)</span> 이 <span class="math inline">\(U\)</span> 의 기저라고 하자. <span class="math inline">\(P\in \mathcal{L}(U)\)</span> 가 가역이면 <a href="#cor-LA_basis_transformation" class="quarto-xref">따름정리&nbsp;<span>2.4</span></a> 에서 보았듯이 <span class="math inline">\(\mathcal{B}_2= (P(u_1),\ldots, P(u_n) )\)</span> 도 <span class="math inline">\(U\)</span> 의 기저이다. <span class="math inline">\(v_i = T(u_i)\)</span> 라고 할 때 <span class="math inline">\(P\)</span> 가 다음과 같이 정의된다고 하자.</p>
-<p><span class="math display">\[
-P(u_i) = \sum_{j=1}^n P_{ji}u_j = v_i
-\]</span></p>
-<p>그렇다면 <span class="math inline">\(u_i = P^{-1}(P(u_i)) = P^{-1}(v_i)\)</span> 이다. <span class="math inline">\(\boldsymbol{u}_i=[u_i]_{\mathcal{B}_1}\)</span>, <span class="math inline">\(\boldsymbol{v}_i = [v_i]_{\mathcal{B}_1}\)</span>, <span class="math inline">\(\boldsymbol{P}=[P]_{\mathcal{B}_1}\)</span> 라면 <span class="math inline">\(\boldsymbol{v}_i = \boldsymbol{Pu}_i\)</span> 이다. 그런데 <span class="math inline">\(\boldsymbol{u}_i =[u_i]_{\mathcal{B}_1}\)</span> 은 표준기저 <span class="math inline">\(\boldsymbol{e}_i\)</span> 이므로 <span class="math inline">\(\boldsymbol{v}_i\)</span> 는 <span class="math inline">\(\boldsymbol{P}\)</span> 의 <span class="math inline">\(i\)</span> 번 째 열 <span class="math inline">\(\boldsymbol{P}_{:i}\)</span> 이다. 이것은 앞으로도 매우 중요하므로 뒤에 별도로 다시 언급하겠다.</p>
+<section id="sec-LA_matrix_transform_by_basis_transform" class="level3" data-number="2.4.5">
+<h3 data-number="2.4.5" class="anchored" data-anchor-id="sec-LA_matrix_transform_by_basis_transform"><span class="header-section-number">2.4.5</span> 기저의 변화에 따른 행렬의 변화</h3>
+<p><span class="math inline">\(U\)</span> 가 <span class="math inline">\(n\)</span> 차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간이며 <span class="math inline">\(\mathcal{B}_1 = (u_1,\ldots,u_n)\)</span> 이 <span class="math inline">\(U\)</span> 의 기저라고 하자. <span class="math inline">\(P\in \mathcal{L}(U)\)</span> 가 가역이면 <a href="#cor-LA_basis_transformation" class="quarto-xref">따름정리&nbsp;<span>2.4</span></a> 에서 보았듯이 <span class="math inline">\(\mathcal{B}_2= (P(u_1),\ldots, P(u_n) )\)</span> 도 <span class="math inline">\(U\)</span> 의 기저이다. <span class="math inline">\(v_i = P(u_i)\)</span> 라면 <span class="math inline">\(u_i = P^{-1}(P(u_i)) = P^{-1}(v_i)\)</span> 이다. <span class="math inline">\(\boldsymbol{u}_i=[u_i]_{\mathcal{B}_1}\)</span>, <span class="math inline">\(\boldsymbol{v}_i = [v_i]_{\mathcal{B}_1}\)</span>, <span class="math inline">\(\boldsymbol{P}=[P]_{\mathcal{B}_1}\)</span> 라면 <span class="math inline">\(\boldsymbol{v}_i = \boldsymbol{Pu}_i\)</span> 이다. 그런데 <span class="math inline">\(\boldsymbol{u}_i =[u_i]_{\mathcal{B}_1}\)</span> 은 표준기저 <span class="math inline">\(\boldsymbol{e}_i\)</span> 이므로 <span class="math inline">\(\boldsymbol{v}_i\)</span> 는 <span class="math inline">\(\boldsymbol{P}\)</span> 의 <span class="math inline">\(i\)</span> 번 째 열 <span class="math inline">\(\boldsymbol{P}_{:i}\)</span> 이다. 이것은 앞으로도 매우 중요하므로 뒤에 별도로 다시 언급하겠다.</p>
 <p>이제 <span class="math inline">\(\mathcal{B}_2\)</span> 기저에서 <span class="math inline">\(u_i\)</span> 와 <span class="math inline">\(v_i\)</span> 를 표현해보자. <span class="math inline">\([v_i]_{\mathcal{B}_2} = \boldsymbol{e}_i\)</span> 임은 자명하다.</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1122,19 +1089,19 @@ u_i &amp;= \sum_j \delta_{ji}u_j = \sum_j (\boldsymbol{P}\boldsymbol{P}^{-1})_{j
 \end{aligned}
 \]</span></p>
 <p>이므로 <span class="math inline">\([u_i]_{\mathcal{B}_2} = \boldsymbol{P}^{-1}[v_i]_{\mathcal{B}_2}\)</span> 이다. 즉 <span class="math inline">\([u_i]_{\mathcal{B}_2}\)</span> 는 <span class="math inline">\(\boldsymbol{P}^{-1}\)</span> 의 <span class="math inline">\(i\)</span> 번째 열이다.</p>
-<p>이제 연산자 <span class="math inline">\(L\in \mathcal{L}(U)\)</span> 이 <span class="math inline">\(L(u_i) = \sum_j A_{ij}u_j\)</span> 로 정의되었으며 이 연산자의 <span class="math inline">\(\mathcal{B}_1\)</span> 기저에서의 행렬표현을 <span class="math inline">\(\boldsymbol{A}\)</span> 라 하자. 즉 <span class="math inline">\(\boldsymbol{A} = [L]_{\mathcal{B}_1}\)</span> 이다. 이 때,</p>
+<p>이제 연산자 <span class="math inline">\(L\in \mathcal{L}(U)\)</span> 이 <span class="math inline">\(L(u_i) = \sum_j A_{ij}u_j\)</span> 로 정의되었으며 이 연산자의 <span class="math inline">\(\mathcal{B}_1\)</span> 기저에서의 행렬표현을 <span class="math inline">\(\boldsymbol{L}\)</span> 라 하자. 즉 <span class="math inline">\(\boldsymbol{L} = [L]_{\mathcal{B}_1}\)</span> 이다. 이 때,</p>
 <p><span class="math display">\[
 \begin{aligned}
 L(v_i) &amp;= L(P(u_i)) = TL\left( \sum_{k=1}^n  P_{ki}u_k\right) = \sum_{k=1}^n P_{ki} L(u_k) \\
-&amp;= \sum_k P_{ki} \left(  \sum_l A_{lk}u_l \right)= \sum_k P_{ki}\left(\sum_l A_{lk} \sum_{j} (P^{-1})_{jl} v_j\right) \\
-&amp;= \sum_j \left( \sum_l \sum_k (P^{-1})_{jl} A_{lk} P_{ki}\right) v_j
+&amp;= \sum_k P_{ki} \left(  \sum_l L_{lk}u_l \right)= \sum_k P_{ki}\left(\sum_l L_{lk} \sum_{j} (P^{-1})_{jl} v_j\right) \\
+&amp;= \sum_j \left( \sum_l \sum_k (P^{-1})_{jl} L_{lk} P_{ki}\right) v_j
 \end{aligned}
 \]</span></p>
-<p>이다. 이로부터 <span class="math inline">\([L]_{\mathcal{B}_2} = \boldsymbol{P}^{-1}\boldsymbol{AP}\)</span> 임을 알 수 있다. 즉 두 기저 <span class="math inline">\(\mathcal{B}_1 =\{u_i\}\)</span>, <span class="math inline">\(\mathcal{B}_2 = \{P(u_i)\}\)</span> 사이에,</p>
+<p>이다. 이로부터 <span class="math inline">\([L]_{\mathcal{B}_2} = \boldsymbol{P}^{-1}\boldsymbol{LP}\)</span> 임을 알 수 있다. 즉 두 기저 <span class="math inline">\(\mathcal{B}_1 =\{u_i\}\)</span>, <span class="math inline">\(\mathcal{B}_2 = \{P(u_i)\}\)</span> 사이에,</p>
 <p><span class="math display">\[
-[L]_{\mathcal{B_1}} = \boldsymbol{A} \iff [L]_{\mathcal{B}_2} = \boldsymbol{P}^{-1}\boldsymbol{AP}
+[L]_{\mathcal{B_1}} = \boldsymbol{L} \iff [L]_{\mathcal{B}_2} = \boldsymbol{P}^{-1}\boldsymbol{LP}
 \]</span></p>
-<p>의 관계가 성립한다. 즉 어떤 기저와 그 기저에서의 선형변환을 나타내는 행렬을 안다면, 변화된 기저에서의 선형변환을 나타내는 행렬도 알 수 있다. 이런 기저의 변환을 행렬의 닮음 변환 (similarity transformation) 이라 한다.</p>
+<p>의 관계가 성립한다. 즉 어떤 기저와 그 기저에서의 선형변환을 나타내는 행렬을 안다면, 변화된 기저에서의 선형변환을 나타내는 행렬도 알 수 있다. 이런 기저의 변환을 행렬의 <strong>닮음 변환 (similarity transformation)</strong> 이라 한다.</p>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -1143,7 +1110,7 @@ L(v_i) &amp;= L(P(u_i)) = TL\left( \sum_{k=1}^n  P_{ki}u_k\right) = \sum_{k=1}^n
 </div>
 <div class="callout-body-container">
 <div id="def-LA_similarity_transformation_of_linear_operator" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 2.11 (연산자의 닮음과 닮음변환)</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 두 연산자 <span class="math inline">\(L,\,K\in \mathcal{L}(V)\)</span> 에 대해 어떤 가역 연산자 <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 가 존재하여 <span class="math inline">\(K=P^{-1}\circ L \circ P\)</span> 라면 두 연산자 <span class="math inline">\(L\)</span> 과 <span class="math inline">\(K\)</span> 는 닮았다고 하며 <span class="math inline">\(P^{-1}\circ L \circ P\)</span> 를 <span class="math inline">\(L\)</span> 의 <strong>닮음변환 (similarity transfroamtion)</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 2.10 (연산자의 닮음과 닮음변환)</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 두 연산자 <span class="math inline">\(L,\,K\in \mathcal{L}(V)\)</span> 에 대해 어떤 가역 연산자 <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 가 존재하여 <span class="math inline">\(K=P^{-1}\circ L \circ P\)</span> 라면 두 연산자 <span class="math inline">\(L\)</span> 과 <span class="math inline">\(K\)</span> 는 닮았다고 하며 <span class="math inline">\(P^{-1}\circ L \circ P\)</span> 를 <span class="math inline">\(L\)</span> 의 <strong>닮음변환 (similarity transfroamtion)</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>
@@ -1156,7 +1123,7 @@ L(v_i) &amp;= L(P(u_i)) = TL\left( \sum_{k=1}^n  P_{ki}u_k\right) = \sum_{k=1}^n
 </div>
 <div class="callout-body-container">
 <div id="def-LA_similarity_transformation" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 2.12 (행렬의 닮음과 닮음변환)</strong></span> 행렬 <span class="math inline">\(\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 에 대해 어떤 가역행렬 <span class="math inline">\(\boldsymbol{P}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 이 존재하여 <span class="math inline">\(\boldsymbol{A}=\boldsymbol{P}^{-1}\boldsymbol{BP}\)</span> 가 성립할 때 두 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 와 <span class="math inline">\(\boldsymbol{B}\)</span> 는 닮았다고 하며 <span class="math inline">\(\boldsymbol{P}^{-1}\boldsymbol{AP}\)</span> 를 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <strong>닮음변환(similarity transformation)</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 2.11 (행렬의 닮음과 닮음변환)</strong></span> 행렬 <span class="math inline">\(\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 에 대해 어떤 가역행렬 <span class="math inline">\(\boldsymbol{P}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 이 존재하여 <span class="math inline">\(\boldsymbol{A}=\boldsymbol{P}^{-1}\boldsymbol{BP}\)</span> 가 성립할 때 두 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 와 <span class="math inline">\(\boldsymbol{B}\)</span> 는 닮았다고 하며 <span class="math inline">\(\boldsymbol{P}^{-1}\boldsymbol{AP}\)</span> 를 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <strong>닮음변환(similarity transformation)</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>
@@ -1166,20 +1133,19 @@ L(v_i) &amp;= L(P(u_i)) = TL\left( \sum_{k=1}^n  P_{ki}u_k\right) = \sum_{k=1}^n
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_basis_transoframtion_by_similarity_transformation" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 2.12</strong></span> <span class="math inline">\(\boldsymbol{P}\)</span> 가 가역행렬일 때 <span class="math inline">\(\boldsymbol{P}\)</span> 의 각 열은 표준기저가 이 변환에 의해 변환된 새로운 기저이다.</p>
+<p><span class="theorem-title"><strong>명제 2.14</strong></span> <span class="math inline">\(\boldsymbol{P}\)</span> 가 가역행렬일 때 <span class="math inline">\(\boldsymbol{P}\)</span> 의 각 열은 표준기저가 이 변환에 의해 변환된 새로운 기저이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>표준기저 <span class="math inline">\(\{\boldsymbol{e}_i\}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{Pe}_i = \boldsymbol{P}_{:i}\)</span> 이다. <span class="math inline">\(\boldsymbol{P}\)</span> 가 가역행렬이므로 열벡터의 집합은 선형독립이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span>표준기저 <span class="math inline">\((\boldsymbol{e}_i)\)</span> 에 대해 <span class="math inline">\(\boldsymbol{Pe}_i = \boldsymbol{P}_{:i}\)</span> 이다. <span class="math inline">\(\boldsymbol{P}\)</span> 가 가역행렬이므로 열벡터의 집합은 선형독립이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-LA_similarity_equivalence" class="theorem example">
-<p><span class="theorem-title"><strong>보기 2.6</strong></span> 두 정사각 행렬 <span class="math inline">\(\boldsymbol{A},\,\boldsymbol{B}\)</span> 가 닮았을 때 <span class="math inline">\(\boldsymbol{A} \sim \boldsymbol{B}\)</span> 라 표현한다고 하자. 이 때 다음이 성립함을 보여라.</p>
-<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{A} \sim \boldsymbol{A}\)</span> 이다.</p>
-<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{A} \sim \boldsymbol{B}\)</span> 이면 <span class="math inline">\(\boldsymbol{B} \sim \boldsymbol{A}\)</span> 이다.</p>
-<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\boldsymbol{A} \sim \boldsymbol{B}\)</span> 이고 <span class="math inline">\(\boldsymbol{B} \sim \boldsymbol{C}\)</span> 이면 <span class="math inline">\(\boldsymbol{C} \sim \boldsymbol{A}\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>보기 2.6</strong></span> 두 연산자 <span class="math inline">\(L,\, K\)</span> 가 닮았을 때 <span class="math inline">\(L \sim K\)</span> 라 표현한다고 하자. 이 때 다음이 성립함을 보여라.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(L \sim K\)</span> 이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L \sim K\)</span> 이면 <span class="math inline">\(K \sim L\)</span> 이다.</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(L \sim K\)</span> 이고 <span class="math inline">\(K \sim M\)</span> 이면 <span class="math inline">\(M \sim L\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -1194,7 +1160,6 @@ L(v_i) &amp;= L(P(u_i)) = TL\left( \sum_{k=1}^n  P_{ki}u_k\right) = \sum_{k=1}^n
 <p><span class="theorem-title"><strong>연습문제 2.1</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 벡터공간이고 <span class="math inline">\(L\in \mathcal{L}(V, W)\)</span> 이다. <span class="math inline">\(V\)</span> 의 어떤 부분공간 <span class="math inline">\(U\)</span> 는 <span class="math inline">\(U \cap \ker (L)=\{0\}\)</span> 이며 <span class="math inline">\(\text{im}\,(L)=\{L(u) : u \in U\}\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\ker (L)\)</span> 의 기저 <span class="math inline">\((v_1,\ldots,\,v_m)\)</span> 을 확장하여 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\((v_1,\ldots,\,v_m,\,u_1,\ldots,\,u_n)\)</span> 을 구성 할 수 있다(<a href="ch1_01_vectorspace.html#lem-LA_basis_expansion" class="quarto-xref">보조정리&nbsp;<span>1.1</span></a>). <span class="math inline">\(U=\text{span}(u_1,\ldots,\,u_n)\)</span> 이라 놓으면 된다.</p>
 </div>
@@ -1206,7 +1171,6 @@ L(v_i) &amp;= L(P(u_i)) = TL\left( \sum_{k=1}^n  P_{ki}u_k\right) = \sum_{k=1}^n
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(U \mapsto V\)</span> 로의 전사인 선형사상이 존재할 필요충분조건은 <span class="math inline">\(\dim(U) \ge \dim (V)\)</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 라고 하자. <span class="math inline">\(\dim(V) \ge \text{rank}\,(L) = \dim(U)-\text{nullity}\, (L)\)</span> 임을 안다. <span class="math inline">\(L\)</span> 이 단사이면 <span class="math inline">\(\text{nullity}\,(L)=0\)</span> 이므로 <span class="math inline">\(\dim(V) \ge \dim (U)\)</span> 이다. <span class="math inline">\(n=\dim (V)\ge \dim (U)=m\)</span> 이라고 하자. <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\((v_1,\ldots,\,v_n)\)</span> 과 <span class="math inline">\(U\)</span> 의 기저 <span class="math inline">\((u_1,\ldots,\,u_m)\)</span> 에 대해 <span class="math inline">\(L(u_i)=v_i\)</span>, <span class="math inline">\(i=1,\ldots,\,m\)</span> 는 단사인 선형사상이다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 이 전사이면 <span class="math inline">\(\dim(V) = \text{rank}\, (L) = \dim(U) - \text{nullity}\,(L)\)</span> 에 따라 <span class="math inline">\(\dim(U) \ge \dim(V)\)</span> 이다. <span class="math inline">\(m = \dim(U) \ge \dim(V) = n\)</span> 이라 하면 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\((v_1,\ldots,\,v_n)\)</span> 과 <span class="math inline">\(U\)</span> 의 기저 <span class="math inline">\((u_1,\ldots,\,u_m)\)</span> 에 대해</p>
@@ -1223,7 +1187,6 @@ L(u_i)=\left\{\begin{array}{ll} v_i \qquad &amp;i=1,\ldots,\,n \\ 0_V &amp; i &g
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L^{-1}(\{v\})\)</span> 와 <span class="math inline">\(\ker (L)\)</span> 사이에 전단사 함수가 존재한다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(A = \{u+x: x\in \ker (L)\}\)</span> 라 하자. <span class="math inline">\(y \in A\)</span> 에 대해 <span class="math inline">\(L(y) = v\)</span> 이므로 <span class="math inline">\(A \subset L^{-1}(\{v\})\)</span> 이다. <span class="math inline">\(y\in U - A\)</span> 에 대해 <span class="math inline">\(y-u\not\in \ker{L}\)</span> 이므로 <span class="math inline">\(L(y)\ne v\)</span> 이다. 따라서 <span class="math inline">\(L^{-1}(\{v\}) = A\)</span> 이다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(f:A \to \ker (T)\)</span> 를 <span class="math inline">\(f(y) = y-u\)</span> 로 정의하자. 임의의 <span class="math inline">\(x\in \ker (T)\)</span> 에 대해 <span class="math inline">\(u+x\in A\)</span> 이므로 <span class="math inline">\(f\)</span> 는 전사이다. <span class="math inline">\(y_1-u=y_2-y \implies y_1 = y_2\)</span> 이므로 <span class="math inline">\(f\)</span> 는 단사이다.</p>
@@ -1231,12 +1194,11 @@ L(u_i)=\left\{\begin{array}{ll} v_i \qquad &amp;i=1,\ldots,\,n \\ 0_V &amp; i &g
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_3_B_24" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 2.4</strong></span> <span class="math inline">\(W\)</span> 가 유한차원 벡터공간이고 <span class="math inline">\(L,\,K\in \mathcal{L}(V, W)\)</span> 일 때 다음은 동치임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 2.4 (Axler 3.B.24)</strong></span> <span class="math inline">\(W\)</span> 가 유한차원 벡터공간이고 <span class="math inline">\(L,\,K\in \mathcal{L}(V, W)\)</span> 일 때 다음은 동치임을 보여라.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\ker (L) \subset \ker (K)\)</span>,</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(K= S L\)</span> 가 되도록 하는 어떤 <span class="math inline">\(S\in \mathcal{L}(W)\)</span> 가 존재한다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) <span class="math inline">\(\text{im}(L)\le W\)</span> 이므로 <span class="math inline">\(\text{im}(L)\)</span> 은 유한차원이다. <span class="math inline">\((w_1,\ldots,\,w_m)\)</span> 을 <span class="math inline">\(\text{im}(L)\)</span> 의 기저라고 하자. 각각의 <span class="math inline">\(L^{-1}(\{w_i\})\)</span> <span class="math inline">\((i=1,\ldots,\,m)\)</span> 에서 하나의 벡터를 골라 <span class="math inline">\(v_i\)</span> 라고 하자. <span class="math inline">\(0_V = c_1v_1 + \cdots c_m v_m\)</span> 이라고 하면 <span class="math inline">\(0_W = \sum_{i=1}^m c_i L(v_i) = \sum_{i=1}^m c_i w_i\)</span> 이므로 <span class="math inline">\(c_1=\cdots =c_m=0\)</span> 이다. 즉 <span class="math inline">\(\{v_1,\ldots,\,v_m\}\)</span> 은 선형독립이다.</p>
 <p>이제 <span class="math inline">\(v\in V\)</span> 는 <span class="math inline">\(v=\sum_{i=1}^m c_iv_i + u,\,u\in \ker (L)\)</span> 로 쓸 수 있다. <span class="math inline">\(\ker (L)\subset \ker (K)\)</span> 이므로, <span class="math inline">\(K(v) = \sum_{i=1}^m c_i K(v_i)\)</span> 이다.</p>
@@ -1250,12 +1212,11 @@ S(w_i) = \left\{\begin{array}{ll} K(v_i)\qquad &amp;;i \le m \\ 0 &amp;; i&gt;m\
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_3_B_25" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 2.5</strong></span> <span class="math inline">\(V\)</span> 가 유한차원벡터공간이고 <span class="math inline">\(L,\,K\in \mathcal{L}(V,W)\)</span> 일 때 다음은 동치임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 2.5 (Axler 3.B.25)</strong></span> <span class="math inline">\(V\)</span> 가 유한차원벡터공간이고 <span class="math inline">\(L,\,K\in \mathcal{L}(V,W)\)</span> 일 때 다음은 동치임을 보여라.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\text{im}(L) \subset \text{im}(K)\)</span>,</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(L = KS\)</span> 가 되도록 하는 어떤 <span class="math inline">\(S\in \mathcal{L}(V)\)</span> 가 존재한다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\implies 2\)</span> ) <span class="math inline">\(\text{im}(L)\)</span> 의 기저 <span class="math inline">\((w_1,\ldots,\,w_m)\)</span> 을 생각하자. <span class="math inline">\(L^{-1}(\{w_i\})\)</span> 에서 하나의 벡터를 선택하여 <span class="math inline">\(v_i\)</span> 라고 하면 <span class="math inline">\((v_1,\ldots,\,v_m)\)</span> 은 선형 독립임을 안다(<a href="#exr-axler_3_B_24" class="quarto-xref">연습문제&nbsp;<span>2.4</span></a>). <span class="math inline">\((w_1,\ldots,\,w_m)\)</span> 을 확장하여 <span class="math inline">\((w_1,\ldots,w_m,\, w_{m+1},\ldots, w_{n})\)</span> 이 <span class="math inline">\(\text{im}(K)\)</span> 의 기저가 되도록 하고 <span class="math inline">\(L\)</span> 에서와 같은 방법으로 <span class="math inline">\((u_1,\ldots,u_m, u_{m+1}, \ldots, u_{n})\)</span> 을 얻는다. 또한 선형독립인 이 벡터를 확장하여 <span class="math inline">\((v_1,\ldots,\,v_m,\ldots,\,v_n, \ldots,v_N)\)</span> 이 <span class="math inline">\(V\)</span> 의 기저가 되도록 할 수 있다. 이제</p>
 <p><span class="math display">\[
@@ -1267,14 +1228,13 @@ S(v_i) = \left\{\begin{array}{ll} u_i, \qquad &amp;;\text{if } i \le m, \\ 0 &am
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_3_B_28" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 2.6</strong></span> <span class="math inline">\(L\in \mathcal{L}(V, W)\)</span> 이고 <span class="math inline">\((w_1,\ldots\,w_m)\)</span> 이 <span class="math inline">\(\text{im}(L)\)</span> 의 기저라고 하자. 어떤 <span class="math inline">\(\varphi_1,\ldots,\,\varphi_m \in \mathcal{L}(V, \mathbb{F})\)</span> 가 존재하여 모든 <span class="math inline">\(v\in V\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>연습문제 2.6 (Axler 3.B.28)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V, W)\)</span> 이고 <span class="math inline">\((w_1,\ldots\,w_m)\)</span> 이 <span class="math inline">\(\text{im}(L)\)</span> 의 기저라고 하자. 어떤 <span class="math inline">\(\varphi_1,\ldots,\,\varphi_m \in \mathcal{L}(V, \mathbb{F})\)</span> 가 존재하여 모든 <span class="math inline">\(v\in V\)</span> 에 대해</p>
 <p><span class="math display">\[
 L(v) = \varphi_1 (v) w_1 + \cdots + \varphi_m (v)w_n
 \]</span></p>
 <p>을 만족함을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(L^{-1}(\{w_j\})\)</span> 가운데 하나의 벡터를 선택하여 <span class="math inline">\(v_1\)</span> 이라고 하면 <span class="math inline">\(\{v_1,\ldots,\,v_m\}\)</span> 은 선형 독립이다(<a href="#exr-axler_3_B_24" class="quarto-xref">연습문제&nbsp;<span>2.4</span></a>). 이를 확장하여 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\((v_1,\,v_2,\ldots)\)</span> 를 얻을 수 있다. <span class="math inline">\(\phi_i \in \mathcal{L}(V, \mathbb{F})\)</span>, <span class="math inline">\((i=1,\ldots,\,m)\)</span> 를 다음과 같이 정의하자.</p>
 <p><span class="math display">\[
@@ -1300,7 +1260,6 @@ V = \ker (\varphi) \oplus \{au : a\in \mathbb{F}\}
 <p>임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(U=\{au:a\in \mathbb{F}\}\)</span> 라고 하자. <span class="math inline">\(\ker (\varphi) \cap U=\{0_V\}\)</span> 이므로 <span class="math inline">\(\ker (\varphi) + U = \ker (\varphi)\oplus U\)</span> 이다. <span class="math inline">\(\varphi \ne 0\)</span> 이므로 <span class="math inline">\(\text{rank}(\varphi)=1\)</span> 이며 따라서 <span class="math inline">\(u\)</span> 의 스칼라곱이 아닌 벡터는 모두 <span class="math inline">\(\ker (\varphi)\)</span> 에 포함된다. 즉 <span class="math inline">\(V = \ker (\varphi)\oplus U\)</span> 이다.</p>
 </div>
@@ -1310,7 +1269,6 @@ V = \ker (\varphi) \oplus \{au : a\in \mathbb{F}\}
 <p><span class="theorem-title"><strong>연습문제 2.8</strong></span> <span class="math inline">\(\varphi_1,\,\varphi_2 \in \mathcal{L}(V,\mathbb{F})\)</span> 이며 <span class="math inline">\(\ker (\varphi_1) = \ker (\varphi_2)\)</span> 라면 어떤 <span class="math inline">\(c\in \mathbb{F}\)</span> 에 대해 <span class="math inline">\(\varphi_1 = c\varphi_2\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(u\notin \ker (\varphi_2) \iff u \not\in \ker (\varphi_2)\)</span> 이며 <a href="#exr-axler_3_B_29" class="quarto-xref">연습문제&nbsp;<span>2.7</span></a> 에 의해 <span class="math inline">\(\text{im}(\varphi_1) =  \text{im}(\varphi_2) = \{au\}\)</span> 이다. 따라서 <span class="math inline">\(\varphi_1 = c\varphi_2\)</span> 를 만족하는 <span class="math inline">\(c\in \mathbb{F}\)</span> 가 존재한다.</p>
 </div>
@@ -1320,7 +1278,6 @@ V = \ker (\varphi) \oplus \{au : a\in \mathbb{F}\}
 <p><span class="theorem-title"><strong>연습문제 2.9</strong></span> 유한차원 벡터공간 <span class="math inline">\(U\)</span> 에서 정의된 연산자 <span class="math inline">\(K,\,L\in \mathcal{L}(U)\)</span> 에 대해 <span class="math inline">\(K,\,L\)</span> 이 각각 가역일 필요충분조건은 <span class="math inline">\(KL\)</span> 이 가역인것임을 보이시오.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(K,\,L\)</span> 이 전사이면 <span class="math inline">\(KL\)</span> 도 전사이다. <span class="math inline">\(KL\)</span> 이 전사이면 <span class="math inline">\(K, L\)</span> 도 각각 전사이다. 유한차원 벡터공간에서의 연산자므로 전사이면 전단사이다.</p>
 </div>
@@ -1330,7 +1287,6 @@ V = \ker (\varphi) \oplus \{au : a\in \mathbb{F}\}
 <p><span class="theorem-title"><strong>연습문제 2.10</strong></span> 유한차원 벡터공간 <span class="math inline">\(U\)</span> 에서 정의된 연산자 <span class="math inline">\(K, L\in \mathcal{L}(U)\)</span> 에 대해 <span class="math inline">\(KL=I\)</span> 일 필요충분조건은 <span class="math inline">\(LK=I\)</span> 인것임을 보이시오.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(\implies\)</span>) <span class="math inline">\(KL=I\)</span> 임을 가정하자. <a href="#exr-axler_3_8_9" class="quarto-xref">연습문제&nbsp;<span>2.9</span></a> 에 의해 <span class="math inline">\(K,\,L\)</span> 도 가역이다. 모든 <span class="math inline">\(u\in U\)</span> 에 대해 <span class="math inline">\(KL(u)=u\)</span> 이며 <span class="math inline">\(K\)</span> 가 가역이므로 <span class="math inline">\(K(v)=u\)</span> 인 <span class="math inline">\(v\in V\)</span> 가 유일하게 정해지며 따라서 <span class="math inline">\(L(u)=v\)</span> 이다. <span class="math inline">\(LK(v) = v\)</span> 이므로 <span class="math inline">\(LK=I\)</span> 이다.</p>
 <p>(<span class="math inline">\(\,\Longleftarrow\,\)</span>) <span class="math inline">\(K,\,L\)</span> 을 바꿔서 위의 증명을 그대로 쓸 수 있다.</p>
@@ -1341,7 +1297,6 @@ V = \ker (\varphi) \oplus \{au : a\in \mathbb{F}\}
 <p><span class="theorem-title"><strong>연습문제 2.11</strong></span> 유한차원 벡터공간 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\(R, S, T = \mathcal{L}(U)\)</span> 일 때 <span class="math inline">\(RST=I\)</span> 이면 <span class="math inline">\(S\)</span> 는 가역이며 <span class="math inline">\(S^{-1}= TR\)</span> 임을 보여라. <span class="math inline">\(U\)</span> 가 유한차원이라는 조건이 없다면 성립하지 않을 수도 있음을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(U\)</span> 가 유한차원 벡터공간이고 <span class="math inline">\(RST=I\)</span> 이면 <span class="math inline">\(RST\)</span> 모두 가역이며, <span class="math inline">\(S=R^{-1}T^{-1}\)</span> 이므로 <span class="math inline">\(S^{-1}= TR\)</span> 이다.</p>
 <p>이제 <span class="math inline">\(U = \mathbb{R}^\infty\)</span> 라고 하자.</p>
@@ -1357,25 +1312,23 @@ T &amp; = I
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_3_D_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 2.12</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 벡터공간이고 <span class="math inline">\(U \le V\)</span> 이며 <span class="math inline">\(S\in \mathcal{L}(U, V)\)</span> 일 때 다음이 동치임을 보이시오.</p>
+<p><span class="theorem-title"><strong>연습문제 2.12 (Axler 3.D.3)</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 벡터공간이고 <span class="math inline">\(U \le V\)</span> 이며 <span class="math inline">\(S\in \mathcal{L}(U, V)\)</span> 일 때 다음이 동치임을 보이시오.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(S\)</span> 는 단사이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) 모든 <span class="math inline">\(u\in U\)</span> 에 대해 <span class="math inline">\(T(u) = S(u)\)</span> 를 만족하는 가역인 <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 가 존재한다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) <span class="math inline">\(U\)</span> 의 기저 <span class="math inline">\(\{ u_1,\ldots,\,u_m \}\)</span> 에 대해 <span class="math inline">\(S(u_i) = v_i\)</span> 라고 하자. <span class="math inline">\(S\)</span> 가 동형이므로 <span class="math inline">\(\{v_1,\ldots,\,v_m \}\)</span> 도 선형 독립이다. <span class="math inline">\(\{u_1,\ldots,\,u_m\}\)</span> 을 확장하여 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\{u_1,\ldots,\,u_m,\,u_{m+1}, \ldots, v_n\}\)</span> 을 구성 할 수 있으며, <span class="math inline">\(\{v_1,\ldots,\,v_m\}\)</span> 을 확장하여 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\{v_1,\ldots,\,v_m,\,v_{m+1}, \ldots, v_m\}\)</span> 을 구성 할 수 있다. 이 때 <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 를 <span class="math inline">\(T(u_i) = v_i\)</span> <span class="math inline">\((i=1,\ldots,\,m)\)</span> 으로 정의하면 된다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) <span class="math inline">\(U\)</span> 의 기저 <span class="math inline">\((u_1,\ldots,\,u_m )\)</span> 에 대해 <span class="math inline">\(v_i=S(u_i)\)</span> 라고 하자. <span class="math inline">\(S\)</span> 가 동형이므로 <span class="math inline">\(\{v_1,\ldots,\,v_m \}\)</span> 도 선형 독립이다. <span class="math inline">\(\{u_1,\ldots,\,u_m\}\)</span> 을 확장하여 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\{u_1,\ldots,\,u_m,\,u_{m+1}, \ldots, v_n\}\)</span> 을 구성 할 수 있으며, <span class="math inline">\(\{v_1,\ldots,\,v_m\}\)</span> 을 확장하여 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\{v_1,\ldots,\,v_m,\,v_{m+1}, \ldots, v_m\}\)</span> 을 구성 할 수 있다. 이 때 <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 를 <span class="math inline">\(T(u_i) = v_i\)</span> <span class="math inline">\((i=1,\ldots,\,m)\)</span> 으로 정의하면 된다.</p>
 <p>(<span class="math inline">\(2 \implies 1\)</span>) <span class="math inline">\(T\)</span> 가 가역이므로 <span class="math inline">\(T\)</span> 는 단사이다. <span class="math inline">\(S\)</span> 가 단사가 아니라면 <span class="math inline">\(T\)</span> 도 단사가 아니므로 <span class="math inline">\(S\)</span> 는 단사이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_3_D_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 2.13</strong></span> <span class="math inline">\(W\)</span> 가 유한차원벡터공간이며 <span class="math inline">\(L,\,K\in \mathcal{L}(V, W)\)</span> 일 때 다음이 동치임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 2.13 (Axler 3.D.4)</strong></span> <span class="math inline">\(W\)</span> 가 유한차원벡터공간이며 <span class="math inline">\(L,\,K\in \mathcal{L}(V, W)\)</span> 일 때 다음이 동치임을 보여라.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\ker (L) = \ker (K)\)</span>,</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(L = SK\)</span> 가 되도록 하는 가역연산자 <span class="math inline">\(S\in \mathcal{L}(W)\)</span> 가 존재한다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) <a href="#exr-axler_3_B_24" class="quarto-xref">연습문제&nbsp;<span>2.4</span></a> 로 부터 <span class="math inline">\(K = S_1L\)</span>, <span class="math inline">\(L = S_2K\)</span> 를 만족하는 <span class="math inline">\(S_1,\,S_2\in \mathcal{L}(W)\)</span> 가 존재하며 <span class="math inline">\(K = S_1S_2K\)</span> 이므로 <span class="math inline">\(S_1S_2\)</span> 는 가역이다. 따라서 <span class="math inline">\(S_1,\,S_2\)</span> 각각 가역이다.</p>
 <p>(<span class="math inline">\(2 \implies 1\)</span>) 자명하다.</p>
@@ -1383,12 +1336,11 @@ T &amp; = I
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_3_D_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 2.14</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 벡터공간이며 <span class="math inline">\(L,\,K\in \mathcal{L}(V, W)\)</span> 일 때 다음이 동치임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 2.14 (Axler 3.D.5)</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 벡터공간이며 <span class="math inline">\(L,\,K\in \mathcal{L}(V, W)\)</span> 일 때 다음이 동치임을 보여라.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\text{im}(L) = \text{im}(K)\)</span>,</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(L = KS\)</span> 를 만족하는 가역연산자 <span class="math inline">\(S\in \mathcal{L}(V)\)</span> 가 존재한다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) <a href="#exr-axler_3_B_25" class="quarto-xref">연습문제&nbsp;<span>2.5</span></a> 로부터 <span class="math inline">\(L = KS_2\)</span>, <span class="math inline">\(K = LS_1\)</span> 이 되도록 하는 <span class="math inline">\(S_1,\,S_2\in \mathcal{L}(V)\)</span> 가 존재함을 안다. <span class="math inline">\(L = L S_1S_2\)</span> 이므로 <span class="math inline">\(S_1S_2\)</span> 는 가역이다. 따라서 <span class="math inline">\(S_1, S_2\)</span> 는 각각 가역이다.</p>
 <p>(<span class="math inline">\(2 \implies 1\)</span>) 자명하다.</p>
@@ -1396,12 +1348,11 @@ T &amp; = I
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_3_D_6" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 2.15</strong></span> <span class="math inline">\(V, W\)</span> 가 유한차원 벡터공간이며 <span class="math inline">\(L,\,K\in \mathcal{L}(V, W)\)</span> 일 때 다음이 동치임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 2.15 (Axler 3.D.6)</strong></span> <span class="math inline">\(V, W\)</span> 가 유한차원 벡터공간이며 <span class="math inline">\(L,\,K\in \mathcal{L}(V, W)\)</span> 일 때 다음이 동치임을 보여라.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\text{nullity}(L) = \text{nullity}(K)\)</span>.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(L = SKR\)</span> 을 만족하는 가역연산자 <span class="math inline">\(S\in \mathcal{L}(W),\, R\in \mathcal{L}(V)\)</span> 가 존재한다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) <span class="math inline">\(\ker (L)\)</span> 을 <span class="math inline">\(\ker (K)\)</span> 로 변환하는 연산자 <span class="math inline">\(R\in \mathcal{L}(V)\)</span> 가 존재한다. 즉 <span class="math inline">\(\ker (K) =  \ker (KR)\)</span> 이다. <a href="#exr-axler_3_D_4" class="quarto-xref">연습문제&nbsp;<span>2.13</span></a> 에 의해 <span class="math inline">\(L = SKR\)</span> 을 만족하는 <span class="math inline">\(\in \mathcal{L}(W)\)</span> 가 존재한다.</p>
 <p>(<span class="math inline">\(2 \implies 1\)</span>) 자명하다.</p>
@@ -1409,30 +1360,11 @@ T &amp; = I
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_3_D_16" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 2.16</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이 모든 <span class="math inline">\(S\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(SL=LS\)</span> 이면 <span class="math inline">\(L\)</span> 은 항등사상 <span class="math inline">\(I\)</span> 의 스칼라곱임을 보여라. 즉 어떤 스칼라 <span class="math inline">\(c\)</span> 에 대해 <span class="math inline">\(L=cI\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 2.16 (Axler 3.D.16)</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이 모든 <span class="math inline">\(S\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(SL=LS\)</span> 이면 <span class="math inline">\(L\)</span> 은 항등사상 <span class="math inline">\(I\)</span> 의 스칼라곱임을 보여라. 즉 어떤 스칼라 <span class="math inline">\(c\)</span> 에 대해 <span class="math inline">\(L=cI\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\((v_1,\ldots,\,v_n)\)</span> 을 생각한다. <span class="math inline">\(S_j (v_k) = \delta_{jk}v_k\)</span> 는 선형연산자이다. 그리고 <span class="math inline">\(L(v_i) = \sum_{k=1}^n A_{ki} v_k\)</span> 라고 하자.</p>
-<p><span class="math display">\[
-\begin{aligned}
-S_jL(v_i) &amp;= A_{ji}v_j ,\\
-LS_j (v_i) &amp;= L(\delta_{ij}v_i)=\delta_{ij}\left(\sum_{k=1}^n A_{ki}v_k\right),
-\end{aligned}
-\]</span></p>
-<p>이며, <span class="math inline">\(S_jT = TS_j\)</span> 로부터 <span class="math inline">\(i\ne j\)</span> 에 대해 <span class="math inline">\(A_{ij}=0\)</span> 이라는 것을 알 수 있다. 즉 <span class="math inline">\(L(v_i) = c_i v_i\)</span> 이다. 이제 <span class="math inline">\(S_{ij} \in \mathcal{L}(V)\)</span> 를 다음과 같이 정의하자.</p>
-<p><span class="math display">\[
-S_{ij}(v_k) =\left\{\begin{array}{ll} v_i, \qquad &amp;;\text{if } k = j \\ v_j, &amp;; \text{if } k = i, \\ 0 &amp;;\text{otherwise}. \end{array}\right.
-\]</span></p>
-<p>그렇다면,</p>
-<p><span class="math display">\[
-\begin{aligned}
-S_{ij}L(v_i) &amp;= S_{ij}(c_iv_i)= c_iv_j, \\
-LS_{ij}(v_j) &amp;= L(v_j) = c_j v_j
-\end{aligned}
-\]</span></p>
-<p>이므로 <span class="math inline">\(c_i = c_j\)</span> 이다. 따라서 <span class="math inline">\(T=cI\)</span> 꼴이어야 한다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(L\)</span> 이 <span class="math inline">\(cI\)</span> 이면 <span class="math inline">\(SL = LS\)</span> 이다. 이제 <span class="math inline">\(L\)</span> 이 항등사상의 스칼라곱 아니라고 가정하자. <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B}=(u_i)\)</span> 에 대해 <span class="math inline">\(Lu_i \notin \text{span}(u_i)\)</span> 인 <span class="math inline">\(u_i\in \mathcal{B}\)</span> 가 존재한다. 일반성을 잃지 않고 <span class="math inline">\(Lu_1\notin \text{span}(u_1)\)</span> 이라고 할 수 있다. <span class="math inline">\(S(u_1) = u_1\)</span> 이며 <span class="math inline">\(L(u_1)\in \ker S\)</span> 인 <span class="math inline">\(S\)</span> 가 존재하며 <span class="math inline">\(LS(u_i)\ne 0_V\)</span> 이지만 <span class="math inline">\(SL(u_i) = 0_V\)</span> 이므로 <span class="math inline">\(SL \ne LS\)</span> 이다.</p>
 </div>
 
 
@@ -1440,242 +1372,236 @@ LS_{ij}(v_j) &amp;= L(v_j) = c_j v_j
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
       }
-      return false;
-    }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "복사완료!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "복사완료!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
-    }
-    const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
-        }
-        return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
         }
       }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
     }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
     }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
       } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
         }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
       }
     }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
           }
         } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
+          // See if we can fetch this
+          fetch(url.split('#')[0])
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
+            const note = htmlDoc.getElementById(id);
             if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
+              const html = processXRef(id, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1683,161 +1609,185 @@ LS_{ij}(v_j) &amp;= L(v_j) = c_j v_j
             instance.show();
           });
         }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
       } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
             }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
         });
       }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
     }
-  });
-  </script>
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../src/part1/ch1_01_vectorspace.html" class="pagination-link" aria-label="벡터와 벡터공간">

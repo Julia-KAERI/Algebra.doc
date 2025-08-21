@@ -130,7 +130,7 @@ $V$ 가 $\mathbb{F}$-내적벡터공간이며 $u,\,v,\,w \in V,\, c \in \mathbb{
 내적벡터 공간 $V$ 에서의 영벡터가 아닌 벡터의 집합 $\{v_1,\ldots,\,v_n\}$ 이 직교하는 벡터의 집합이면 선형 독립이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 $\sum_i c_i v_i = 0_V$ 이라 하자. 선택된 $v_j$ 에 내적을 취하면,
@@ -149,11 +149,12 @@ $$
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#cor-LA_number_of_orthogonal_vectors}
+
 유한차원 내적벡터공간에서 직교하는 벡터의 갯수는 그 차원보다 많을 수 없다.
+
 :::
 
-</div></br>
-
+</div>
 :::{.proof}
 @lem-LA_number_of_basis 를 보라.
 :::
@@ -228,7 +229,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -259,7 +260,7 @@ $\mathbb{F}$-내적벡터공간에서 $\sqrt{\langle v,\, v\rangle}$ 은 거리�
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -312,7 +313,7 @@ $$
 &emsp;($4$) 평행사변형 공식 : $\|u+v\|^2+\|u-v\|^2 = 2\|u\|^2+2\|v\|^2$.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 ($1$), ($2$), ($3$) 은 이미 보였다. ($4$) 는 쉽게 보일 수 있다.
@@ -375,7 +376,7 @@ $\{e_1,\ldots,\,e_m\}$ 이 $\mathbb{F}$-내적벡터공간 $V$ 에서의 정규�
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -419,7 +420,7 @@ $(e_1,\ldots,\,e_n)$ 이 $\mathbb{F}$-내적벡터공간 $V$ 에서의 정규직
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -433,7 +434,7 @@ $(e_1,\ldots,\,e_n)$ 이 $\mathbb{F}$-내적벡터공간 $V$ 에서의 정규직
 
 ### 정규직교기저벡터에 대한 연산자의 행렬 표현 {#sec-LA_matrix_representation_of_operator_using_orthonormal_basis}
 
-$L\in \mathcal{L}(V)$ 라 하자. $\mathcal{B}=(e_i)$ 이 정규직교기저벡터일 때 $L$ 는
+$L\in \mathcal{L}(V)$ 라 하자. 정규직교기저 $\mathcal{B}=(e_i)$ 에 대해
 
 $$
 L(e_j) = \sum_{k=1}^n A_{kj}e_k
@@ -454,10 +455,7 @@ $$
 이다.
 
 </br>
-
-
 정규직교기저를 이용하면 내적이나 행렬 계산을 포함한 많은 것이 편해진다. 그렇다면 당연한 질문을 던질 수 있다. 어떤 조건에서 정규직교기저를 얻을 수 있는가? 답은 언제나이다. 내적벡터공간에서는 어떤 기저든 한 기저를 구했다면 그 기저를 바탕으로 정규직교기저를 얻을 수 있다. 한 기저에서 정규직교기저를 구하는 방법은 여러가지가 있지만 그중에서 한가지를 알아보도록 하자.
-
 
 </br>
 
@@ -506,7 +504,7 @@ $$
 위 과정을 통해 얻은 $\{e_1,\ldots,\,e_m\}$ 은 orthonomal 하다. 즉, $\langle e_i,\, e_j\rangle = \delta_{ij}$ 이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 $e_k = \dfrac{u_k}{\|u_k\|}$ 로 정의되었으므로 $\|e_k\|^2=1$ 이다. 따라서 $i\ne j$ 일 때 $\langle e_i,\, e_j\rangle = 0$ 임을 보이면 된다. 수학적 귀납법을 통해 보일 것이며 우선 $\langle u_2,\,u_1\rangle = 0$ 임을 보이자.
@@ -543,7 +541,7 @@ $$
 $V$ 가 유한차원 내적벡터공간이며 $\mathcal{B}_V= (v_i)$ 가 $V$ 의 기저일 때 $\mathcal{B}_V$ 로부터 정규직교기저를 얻을 수 있다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 $\mathcal{B}_V$ 는 선형독립이므로 Gram-Schmidt 과정을 통해 얻은 정규직교벡터는 $V$ 의 정규직교기저이다. $\square$
@@ -563,10 +561,10 @@ $\mathcal{B}_V$ 는 선형독립이므로 Gram-Schmidt 과정을 통해 얻은 �
 유한차원 $\mathbb{C}$-내적벡터공간 $V$ 에서 정의된 연산자 $L\in \mathcal{L}(V)$ 는 어떤 정규직교기저에서 상삼각행렬로 표현된다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
-$V$ 를 $n$ 차원 $\mathbb{C}$-내적벡터공간이라 하자. @thm-LA_uppertriangular_matrix_complex_field 에서 $L\in \mathcal{L}(V)$ 는 어떤 기저 에서 상삼각행렬로 표현된다는 것을 보였다. 이 기저를 $\mathcal{B}_V = \{v_1,\ldots,\,v_n\}$ 이라 하고, 그람-슈미트 과정을 통해 얻은 정규직교기저를 $\{e_1,\ldots,\,e_n\}$ 이라 하자. 즉 $e_i \in \text{span}(v_1,\ldots,\,v_i)$ 이다. 그렇다면, 그람 슈미트 과정으로부터
+$V$ 를 $n$ 차원 $\mathbb{C}$-내적벡터공간이라 하자. @thm-LA_uppertriangular_matrix_complex_field 에서 $L\in \mathcal{L}(V)$ 는 어떤 기저 에서 상삼각행렬로 표현된다는 것을 보였다. 이 기저를 $\mathcal{B}_V = (v_1,\ldots,\,v_n )$ 라고 하고, 그람-슈미트 과정을 통해 얻은 정규직교기저를 $(e_1,\ldots,\,e_n)$ 라고 하자. 즉 $e_i \in \text{span}(v_1,\ldots,\,v_i)$ 이다. 그렇다면, 그람 슈미트 과정으로부터
 
 $$
 \text{span}(e_1,\ldots,\,e_j) = \text{span}(v_1,\ldots,\,v_j), \quad j=1,\ldots, n
@@ -605,17 +603,16 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
-$(e_1,\ldots,\,e_n)$ 이 $V$ 의 정규직교기저라 하자. $u=\sum a_i e_i$ 라고 하면 
+$V$ 의 정규직교기저 $(e_1,\ldots,\,e_n)$ 에 대해 $u=\sum a_i e_i$ 라고 하면 
 
 $$
 \begin{aligned}
 \varphi (u) &= \varphi \left(\sum_i a_i e_i\right) = \sum_i a_i \varphi(e_i) = \sum_i \langle u,\,e_i\rangle  \varphi(e_i) \\ 
-&= \sum_i \langle u,\, \overline{\varphi (e_i)}e_i \rangle \\ 
-&= \left\langle u,\, \sum_i \overline{\varphi(e_i)} \, e_i \right\rangle
+&= \sum_i \langle u,\, \overline{\varphi (e_i)}e_i \rangle = \left\langle u,\, \sum_i \overline{\varphi(e_i)} \, e_i \right\rangle
 \end{aligned}
 $$
 
@@ -656,8 +653,6 @@ $$
 
 </div>
 
-</br>
-
 ::: {.proof}
 
 평행사변형 공식으로 부터
@@ -697,7 +692,7 @@ $$
 $$
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -757,7 +752,7 @@ $\mathbb{R}$-거리벡터공간 $V$ 에 대해 다음은 동치이다.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -792,8 +787,6 @@ $$
 
 </div>
 
-</br>
-
 ::: {.proof}
 
 $\psi$ 를 실수부 $\psi_R$ 과 허수부 $\psi_I$ 로 분리하자. 즉
@@ -820,7 +813,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 @lem-LA_jordan_von_neumann_3 의 증명과 같이 $\psi_R$ 과 $\psi_I$ 를 정의하자. $\psi_R(cu, v) = c\psi_R (u, v)$ 는 실벡터 거리공간에서의 경우와 마찬가지이다. $\psi_I (u, v) = \psi _I (u, iv)$ 이므로 $\psi_I (cu, v) = c\psi_I (u, v)$ 이다. 따라서 $\psi (cu, v) =  c\psi (u, v)$ 이다. $\square$
@@ -873,6 +866,8 @@ $$
 
 ## 직교 여공간 (Orthogonal complement) 과 Orthogonal projection
 
+### 직교 여공간 (#sec-LA_orthogonal_complement)
+
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-LA_orthogonal_complement}
 
@@ -898,7 +893,7 @@ $$
 
 &emsp;($2$) $U^\perp$ 는 $V$ 의 부분벡터공간이다.
 
-&emsp;($3$) $U \cap U^\perp  \subset \{0_V\}$,
+&emsp;($3$) $U \cap U^\perp  = \{0_V\}$,
 
 &emsp;($4$) $U\subset W \implies W^\perp \subset U^\perp$,
 
@@ -906,7 +901,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -932,7 +927,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 $U$ 의 정규직교기저를 찾아 $\{e_1,\ldots,\,e_n\}$ 이라 하자. $v\in V$ 에 대해 $u=\sum_{i=1}^n \langle v,\, e_i\rangle$, $w=v-u$ 라고 하면 $j=1,\ldots,\,n$ 에 대해
@@ -945,9 +940,7 @@ $$
 
 :::
 
-</br>
-
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-LA_orthogonal_space_in_infinite_dimensional_vector_space}
 
@@ -1006,7 +999,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 @prp-LA_generated_subspace_and_orthogonal_compliment 에 따라 $V=U\oplus U^\perp$ 이다. 이제 $U$ 의 정규직교기저 $\{e_1,\ldots,\,e_n\}$ 과 $U^\perp$ 의 정규직교 기저 $\{f_1,\ldots,\,f_m\}$ 에 대해 $u = \sum_i a_i e_i + \sum_j b_j f_j$ 를 만족하는 $a_i,\, b_j$ 가 존재한다. $u= \sum_i a_i e_i$ 이며 $w=\sum_j b_j f_j$ 이다. 이 때 $u,\,w$ 가 유일하게 정해진다는 것은 자명하다. $\square$
@@ -1050,7 +1043,7 @@ $\text{im}(P)$ 는 $P$-불변 부분 공간이다.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -1075,10 +1068,14 @@ $u\in \text{im}(P)$ 이면 $P(v)=u$ 인 $v\in V$ 가 존재하며, $P(u)=P^2(v) 
 :::
 :::
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br>
+
+아래 명제들은 projection 의 성질이며 증명은 쉽다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_properties_of_orghogonal_projection}
-$U$ 가 $V$ 의 유한차원 부분벡터공간 일 때 다음이 성립한다. 증명은 쉬우므로 생략한다.
+$U$ 가 $V$ 의 유한차원 부분벡터공간 일 때 다음이 성립한다. 
 
 &emsp;($1$) $u \in U \implies P_U (u) = u$.
 
@@ -1122,7 +1119,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 

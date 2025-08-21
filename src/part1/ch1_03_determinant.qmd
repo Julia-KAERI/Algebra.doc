@@ -51,7 +51,7 @@ $$
 기본행 연산은 행렬에 대한 선형 연산이며, 가역연산이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -301,7 +301,6 @@ $n$ 이 1 이상의 자연수일 때 $\{1,\ldots,\,n\} \mapsto \{1, \ldots,\,n\}
 
 대칭군 (symmetric group) 이라는 이름에서 알 수 있듯이, $S_n$ 은 2부에서 다룰 군(group) 이라는 수학적 구조에 속한다. 하지만 여기서는 특별히 군에 대해 이야기 하지 않을 것이기 때문에 대칭군 이라는 이름을 가지는 집합 정도로 이해하면 되겠다.
 
-
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-LA_symmetric_groups}
@@ -309,7 +308,6 @@ $n$ 이 1 이상의 자연수일 때 $\{1,\ldots,\,n\} \mapsto \{1, \ldots,\,n\}
 $n=3$ 일 때 $\sigma (1) = 1,\, \sigma(2) = 3,\, \sigma(3)=2$ 인 $\sigma$ 는 $S_3$ 의 원소이지만 $\tau(1)=2$, $\tau(2)=2$, $\tau(3)=1$ 은 전단사 함수가 아니기 때문에 $S_3$ 의 원소가 아니다. 
 
 :::
-
 
 </div><br>
 
@@ -323,10 +321,7 @@ $S_n$ 은 함수의 집합이므로 그 원소들에 대한 함수의 합성과 
 
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-LA_two_line_notation}
-
-#### 두줄표기법 (two-line notation)
+#### **I. 두줄표기법**
 
 $\sigma \in S_n$ 일 때 $1,\,2,\,\ldots,\,n$ 과 $\sigma(1),\,\sigma(2),\ldots,\, \sigma(n)$ 을 두줄로 아래와 같이 표기할 수 있다.
 
@@ -336,15 +331,10 @@ $$
 
 예를 들어 $\sigma = \begin{pmatrix} 1 & 2 & 3 & 4 \\ 2 & 3 & 1 & 4\end{pmatrix}$ 는 $\sigma(1)=2,\, \sigma (2)=3,\,\sigma(3)=1,\,\sigma(4)=4$ 이다. 
 
-:::
-:::
-
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-LA_cyclic_notation}
 
-#### 순환 표기법 (cyclic notation)
+#### **II. 순환 표기법**
 
 $\sigma = (1,\,3,\,2) \in S_5$ 의 경우 $\sigma(1) = 3$, $\sigma(3)=2$, $\sigma(2)=1$, $\sigma (4)=4$, $\sigma(5)=5$ 가 된다. 즉, $\sigma = (i_1,\,i_2,\ldots,\,i_m) \in S_n,\, m \le n$ 의 경우
 
@@ -359,12 +349,7 @@ $$
 $$
 가 된다. 
 
-
-
 $(1, 3, 2)(4, 2)$ 처럼 순열을 곱하는 것처럼 쓰면 합성함수처럼 생각한다. $\sigma_1 = (1, 3, 2),\, \sigma_2=(4, 2)$ 에 대해 $\sigma = \sigma_1 \circ \sigma_2 =  (1, 3, 2)(4, 2)$ 이다. 즉 $\sigma(2) = \sigma_1(\sigma_2(2))=\sigma_1(4) = 4$ 이다. 
-
-:::
-:::
 
 
 </br>
@@ -374,7 +359,7 @@ $(1, 3, 2)(4, 2)$ 처럼 순열을 곱하는 것처럼 쓰면 합성함수처럼
 
 #### $k$-cycle 과 호환
 
-이제 
+순열
 
 $$
 \sigma = \begin{pmatrix} 1 & 2 & 3 & 4 & 5  \\ 2 & 3 & 1 & 5 & 4\end{pmatrix}
@@ -388,6 +373,8 @@ $$
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_basic_properties_of_permutation}
+
+#### 대칭군의 기본 성질
 
 $S_n$ 에 대해 다음이 성립한다.
 
@@ -407,7 +394,7 @@ $S_n$ 에 대해 다음이 성립한다.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 ($1$), ($2$), ($3$) 의 증명은 쉬우므로 생략한다.
@@ -430,7 +417,6 @@ $$
 
 ### 순열의 분해 {#sec-LA_decomposition_of_permutation}
 
-</br>
 
 두 cycle $\sigma_1,\, \sigma_2 \in S_n$ 에 대해 $\sigma_1,\,\sigma_2$ 에 겹치는 정수가 없을 때 두 cycle 을 **disjoint** 하다고 한다. 모든 순열은 disjoint 한 cycle 의 합성으로 표현 할 수 있다는 것은 쉽게 알 수 있다. 또한 $\sigma,\, \tau$ 가 disjoint 한 두 cycle 일 때 $\sigma \circ \tau = \tau \circ \sigma$ 임을 쉽게 예상 할 수 있다. 그러나 서로 disjoint 하지 않은 두 cycle 에 대해서는 교환법칙이 성립하지 않을 수 있다.
 
@@ -450,7 +436,7 @@ $\sigma = (1, 3, 2),\, \tau = (2, 4)$ 라 하자. $2$ 가 $\sigma,\,\tau$ 에 �
 순열의 분해는 유일하다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 $\sigma \in S_n$ 이 $\sigma_1 \cdots \sigma_m$ 과 $\tau_1\cdots \tau_n$ 으로 분해된다고 하자. 즉 $\sigma_1,\ldots,\,\sigma_m$ 은 서로 disjoint 하고 $\tau_1,\ldots,\,\tau_n$ 도 서로 disjoint 하다. $i \in \sigma_1$ 이면 $i\in \tau_k$ 가 존재해야 한다. 그리고 $\sigma(i)\in \sigma_1,\, \sigma(i)\in \tau_k$ 이어야 하며 (이 논리를 계속 따라가면), 따라서 $\sigma_1 = \tau_k$ 이어야 한다. 즉 모든 $\sigma_j,\,i=1,\ldots,\,m$ 에 대해 어떤 $\tau_p,\, p=1,\ldots,\,m$ 가 존재하여 $\sigma_j = \tau_p$ 이어야 한다. 역으로 모든 $\tau_p$ 에 대해 어떤 $\sigma_j$ 가 존재하여 $\tau_p = \sigma_j$ 이어야 한다. $\square$
@@ -462,7 +448,7 @@ $\sigma \in S_n$ 이 $\sigma_1 \cdots \sigma_m$ 과 $\tau_1\cdots \tau_n$ 으로
 모든 순열은 호환(transposition) 의 합성으로 표현 할 수 있다. 이 호환의 합성은 유일하지 않다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 우리는 앞서 모든 순열이 disjoint cycles 의 합성으로 분해된다는 것을 보았다. 따라서 임의의 $k$-cycle 이 호환의 합성으로 표현될 수 있다는 것을 아래와 같이 보이면 된다.
@@ -499,7 +485,7 @@ $$
 호환 $\tau_1,\ldots,\,\tau_m \in S_n$ 이 $\tau_m \cdots \tau_1=i_d$ 이면 $m$ 은 항상 짝수이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 $\sigma =\tau_m \cdots \tau_1$ 이라 하자. $\tau_1,\ldots,\,\tau_m$ 가운데 나타나는 자연수중 하나인 $p$ 를 선택하자 $p$ 가 나오는 $\tau$ 의 가장 작은 인덱스 $j$ 는 $m$ 이 아닌데 만약 $p$ 가 $m$ 에만 나온다면 $\sigma (p) \ne p$ 이기 때문이다. 즉 $j\le m-1$ 이다. 이 때 가능한 $\tau_{j+1}\circ \tau_j$ 는 아래의 네가지 형태중 하나이다.
@@ -522,7 +508,7 @@ $$
 순열을 분해했을 때의 호환의 갯수의 짝수/홀수 여부는 순열을 어떻게 분해하더라도 불변이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -555,10 +541,9 @@ $$
 :::
 :::
 
-
 </br>
 
-$\text{sgn}$ 함수에 대한 몇가지 성질을 보자.
+$\text{sgn}$ 함수에 대한 몇가지 성질을 보자. 증명은 쉬우므로 생략한다.
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -571,10 +556,6 @@ $\sigma,\, \tau \in S_n$ 에 대해 다음이 성립한다.
 :::
 
 </div></br>
-
-증명은 쉬우므로 생략한다.
-
-</br>
 
 ## 대칭군을 이용한 행렬식 {#sec-LA_determinant_definition_using_symmetric_group}
 
@@ -618,7 +599,7 @@ $$
 임을 보여라.
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 $e_{ij} = (\hat{\boldsymbol{e}}_i)_j = \delta_{ij}$ 라 하면, 
@@ -641,7 +622,7 @@ $$
 임을 보여라.
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 $\text{sgn}(\tau \circ \tau^{-1})=1$ 이므로 임의의 $\sigma\in S_n$ 에 대해  $\text{sgn}(\sigma) = \text{sgn}(\tau) \,\text{sgn}(\sigma \circ \tau^{-1})$ 임을 이용한다. 우선 정의에 의해
@@ -688,7 +669,7 @@ $$
 이 성립한다. 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 호환 $\tau = (i,\,j)$ 를 생각하면 $\text{sgn}(\tau) =  -1$ 이므로 첫번째 식을 증명한다. $\boldsymbol{a}_i = \boldsymbol{a}_j$ 이면 $\det (\ldots,\boldsymbol{a},\ldots,\,\boldsymbol{a},\ldots) = - \det (\ldots,\boldsymbol{a},\ldots,\,\boldsymbol{a},\ldots)$ 이므로 행렬식이 $0$ 이다. $\square$
@@ -702,7 +683,7 @@ $$
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_bilinearity_of_determinant}
-$\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n\in \mathcal{M}_{1\times n}(\mathbb{F})$, $c \in \mathbb{F}$ 와 임의의 $1\le j \le n$ 에서의 $\boldsymbol{a}'_j \in \mathbb{F}^{1\times n}$ 에 대해 다음이 성립한다.
+$\boldsymbol{a}_1,\ldots,\,\boldsymbol{a}_n\in \mathcal{M}_{1\times n}(\mathbb{F})$, $c \in \mathbb{F}$ 와 임의의 $1\le j \le n$ 에서의 $\boldsymbol{a}'_j \in \mathcal{M}_{1\times n}(\F)$ 에 대해 다음이 성립한다.
 
 $$
 \begin{aligned}
@@ -712,7 +693,7 @@ $$
 $$
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 $$
@@ -748,7 +729,7 @@ $\boldsymbol{a}_1,\ldots,\boldsymbol{a}_n\in \mathcal{M}_{1\times n}(\mathbb{F})
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -820,10 +801,7 @@ $\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 라고 하자. @def-LA_e
 
 :::
 
-
 </br>
-
-
 
 이제 행렬식에서 중요한 결과 몇가지를 차례로 보일 것이다.
 
@@ -857,7 +835,6 @@ $\boldsymbol{A}$ 가 $m \times n$ 행렬 $\boldsymbol{B}$ 가 $n \times l$ 행�
 
 &emsp; ($3$) $(\boldsymbol{AB})^T = \boldsymbol{B}^T\boldsymbol{A}^T$
 
-
 쉽게 증명 할 수 있으므로 ($\text{3}$) 만을 증명한다.
 
 $$
@@ -865,7 +842,6 @@ $$
 \left(\left( \boldsymbol{AB} \right)^T \right)_{ij} = (\boldsymbol{AB})_{ji} = \sum_{k=1}^n A_{jk} B_{ki} = \sum_{k=1}^n \left( \boldsymbol{B}^T\right)_{ik}\left(\boldsymbol{A}^T\right)_{kj} = (\boldsymbol{B}^T\boldsymbol{A}^T)_{ij}
 \end{aligned}
 $$
-
 
 :::
 
@@ -877,7 +853,7 @@ $$
 $n\times n$ 행렬 $\boldsymbol{A}$ 에 대해 $\det (\boldsymbol{A}^T) = \det (\boldsymbol{A})$ 이다.
 
 :::
-</div></br>
+</div>
 
 ::: {.proof}
 전치행렬 $\boldsymbol{A}^T$ 의 행렬식은 
@@ -932,7 +908,7 @@ $\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 라고 하자.
 정사각행렬 $\boldsymbol{A}$ 의 행벡터가 선형 종속일 경우 그 행렬식은 $0$ 이다. $\boldsymbol{A}$ 의 열벡터가 선형 종속이어도 그 행렬식은 $0$ 이다. 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -949,7 +925,7 @@ $\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 라고 하자.
 $n \times n$ 행렬 $\boldsymbol{A},\,\boldsymbol{B}$ 에 대해 $\det (\boldsymbol{AB})= \det(\boldsymbol{A})\det (\boldsymbol{B})$ 이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -994,8 +970,7 @@ $$
 $n\times n$ 행렬 $\boldsymbol{A}$ 가 가역행렬일 때 $\det (\boldsymbol{A}^{-1}) = \dfrac{1}{\det (\boldsymbol{A})}$ 이다.
 :::
 
-</div></br>
-
+</div>
 ::: {.proof}
 $\boldsymbol{AA}^{-1}=\boldsymbol{I}$ 이며 $\det (\boldsymbol{I})=1$ 이므로,
 
@@ -1006,6 +981,13 @@ $$
 
 이다. $\square$
 :::
+
+</br>
+
+### 연산자의 행렬식 {#sec-LA_determinant_of_linear_operator}
+
+연산자 $L\in \mathcal{L}(V)$ 를 생각하자. $V$ 의 두 기저 $\mathcal{B},\,\mathcal{B}'$ 에 대한 $L$ 의 행렬 표현 $[L]_\mathcal{B}$ 와 $[L]_{\mathcal{B}'}$ 을 생각하자. 우리는 어떤 가역 행렬 $\bf{P}$ 에 대해 $[L]_{\mathcal{B}'} = \bf{P}[L]_\mathcal{B}\bf{P}^{-1}$ 임을 안다. @cor-LA_derterminant_of_inverse_matrix 에 따라 $\det ([L]_\mathcal{B}) = \det ([L]_{\mathcal{B}'})$ 이다. 즉 우리는 어떤 연산자의 행렬표현의 행렬식은 그 기저가 무엇이든 불변이다. 따라서 우리는 연산자 $L$ 의 행렬식을 정의 할 수 있다. 어떤 기저에서든 $L$ 의 행렬표현의 행렬식을 $L$ 의 행렬식이라고 하고 $\det (L)$ 로 표기한다.
+
 
 </br>
 
@@ -1140,7 +1122,7 @@ $\boldsymbol{B} \in \mathcal{M}_{m \times m}(\mathbb{F}),\, \boldsymbol{D}\in \m
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -1185,14 +1167,14 @@ $$
 임을 보여라. 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
-$\boldsymbol{B}$ 가 가역행렬이 아니라면 가우스 소거법으로 $1$ 행부터 $m$ 행 까지 중에 $0$ 으로만 이루어지 행을 만들 수 있으며 따라서 행렬식은 $0$ 이다. $\boldsymbol{A}$ 가 가역행렬이라면 
+$\boldsymbol{B}$ 가 가역행렬이 아니라면 가우스 소거법으로 $1$ 행부터 $m$ 행 까지 중에 $0$ 으로만 이루어지 행을 만들 수 있으며 따라서 행렬식은 $0$ 이다. $\boldsymbol{B}$ 가 가역행렬이라면 
 
 $$
-\begin{bmatrix}\boldsymbol{I}_m & \boldsymbol{0} \\ -\boldsymbol{CA}^{-1} & \boldsymbol{I}_n \end{bmatrix} \begin{bmatrix} \boldsymbol{A} & \boldsymbol{0}\\  \boldsymbol{C} & \boldsymbol{B} \end{bmatrix} = \begin{bmatrix} \boldsymbol{A} & \boldsymbol{0} \\ \boldsymbol{0} & \boldsymbol{B}\end{bmatrix}
+\begin{bmatrix}\boldsymbol{I}_m & \boldsymbol{0} \\ -\boldsymbol{CB}^{-1} & \boldsymbol{I}_n \end{bmatrix} \begin{bmatrix} \boldsymbol{B} & \boldsymbol{0}\\  \boldsymbol{C} & \boldsymbol{D} \end{bmatrix} = \begin{bmatrix} \boldsymbol{B} & \boldsymbol{0} \\ \boldsymbol{0} & \boldsymbol{D}\end{bmatrix}
 $$
 
 첫번째 행렬은 하삼각행렬이므로 행렬식은 대각성분의 곱인 $1$ 이다. @prp-LA_determinant_of_block_matrix 을 보라.
@@ -1273,10 +1255,10 @@ $\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\ker (\bol
 
 $$ 
 \begin{aligned}
-\ker (\boldsymbol{A}) &= \{ \boldsymbol{x} \in \mathcal{M}_{n}(\mathbb{F}) : \boldsymbol{Ax} = \boldsymbol{0}\}, \\
-\text{im} (\boldsymbol{A}) & = \{ \boldsymbol{Ax} : \boldsymbol{x} \in \mathcal{M}_n(\mathbb{F})\}, \\
-\text{nullity} (\boldsymbol{A}) &= \dim (\ker (\boldsymbol{A})), \\
-\text{rank} (\boldsymbol{A}) & =  \dim (\text{im} (\boldsymbol{A})).
+\ker (\boldsymbol{A}) &:= \{ \boldsymbol{x} \in \mathcal{M}_{n}(\mathbb{F}) : \boldsymbol{Ax} = \boldsymbol{0}\}, \\[0.4em]
+\text{im} (\boldsymbol{A}) &:= \{ \boldsymbol{Ax} : \boldsymbol{x} \in \mathcal{M}_n(\mathbb{F})\}, \\[0.4em]
+\text{nullity} (\boldsymbol{A}) &:= \dim (\ker (\boldsymbol{A})), \\[0.4em]
+\text{rank} (\boldsymbol{A}) &:=  \dim (\text{im} (\boldsymbol{A})).
 \end{aligned}
 $$
 
@@ -1292,7 +1274,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 $\boldsymbol{A} = \begin{bmatrix} \boldsymbol{A}_{:1} & \cdots & \boldsymbol{A}_{:n}\end{bmatrix}$ 이고 $\boldsymbol{x} = \begin{bmatrix} x_1  & \cdots & x_n\end{bmatrix}^T$ 라 하면, 
@@ -1315,7 +1297,7 @@ $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 어떤 가역 변�
 
 $$
 \begin{aligned} 
-\ker (\boldsymbol{A}) &= \ker (\boldsymbol{SA}), \\
+\ker (\boldsymbol{A}) &= \ker (\boldsymbol{SA}), \\[0.4em]
 \text{rank} (\boldsymbol{A}) &= \text{rank} (\boldsymbol{SA})
 \end{aligned}
 $$
@@ -1323,7 +1305,7 @@ $$
 이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -1349,7 +1331,7 @@ $$
 $$
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -1389,7 +1371,7 @@ $$
 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 의 행공간은 행 기본연산에 의해 변하지 않는다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 $\boldsymbol{A}$ 가 행 기본 연산에 의해 변환된 행렬을 $\boldsymbol{A}'$ 이라 하자. 우리는 $\text{rank}(\boldsymbol{A})=\text{rank}(\boldsymbol{A}')$ 임을 알고 있다. $\boldsymbol{a}$ 가 $\boldsymbol{A}'$ 의 행공간에 포함된다면 모든 $\boldsymbol{A}_{j:}$ 는 $\boldsymbol{A}$ 의 행공간에 포함되므로 $\boldsymbol{a}$ 역시 $\boldsymbol{A}$ 의 행공간에 포함된다. 즉 $\boldsymbol{A}'$ 은 $\boldsymbol{A}$ 의 부분공간이다. 그런데 두 행공간의 차원이 같으므로 두 행공간은 같다. $\square$
@@ -1438,7 +1420,7 @@ $$
 행렬의 행 간소 사다리꼴은 유일하다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 행렬 $\boldsymbol{A}$ 의 두 행간소 사다리꼴 형태를 $\boldsymbol{S}$ 와 $\boldsymbol{T}$ 라 하자. 
@@ -1477,7 +1459,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 기본행렬의 곱 $\boldsymbol{E}$ 에 의해 행 간소 사다리꼴 $\boldsymbol{A}'$ 으로 변화하였다고 하자. @prp-LA_rank_of_matrix 에 따라 가역행렬이라면 $\text{nullity} (\boldsymbol{A})=0$ 이므로 $\boldsymbol{A}'$ 에 $0$ 으로만 이루어진 행이 없어야 한다. 행 간소 사다리꼴이므로 $i$ 행에서 첫번째 $1$ 의 위치를 $l_i$ 라 하면 $l_i \ge i (i=1,\ldots, n)$ 이다. 또한 $\boldsymbol{A}$ 가 정사각 행렬이며 $0$ 행이 없어야 하므로 $l_n \le n$ 이다. 이 두가지로부터 $l_i = i,\, i = 1,\ldots, n$ 임을 알 수 있으며 이런 행 간소 사다리꼴은 항등행렬 $\boldsymbol{I}_n$ 뿐이다. 즉 $\boldsymbol{EA}=\boldsymbol{I}_n$ 
@@ -1499,7 +1481,7 @@ $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음은 �
 &emsp;($2$) $\det (\boldsymbol{A}) \ne 0$.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -1538,7 +1520,7 @@ $\boldsymbol{A}$ 가 가역행렬인 경우 그 행 간소 사다리꼴이 단�
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -1582,8 +1564,7 @@ $$
 
 ::: {#exr-determinant_with_standard_vector}
 
-$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 의 첫번째 행이 $c\boldsymbol{e}_1$, 즉 첫번째 열이 $c$ 이며 나머지 열은 $0$ 이라면 $\boldsymbol{A}$ 의 행렬식은 $\boldsymbol{A}$ 에서 $1$ 행과 $1$ 열을 제외한 $(n-1)\times (n-1)$ 행렬의 행렬식과 같다는 것을 보여라.
-
+$\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 의 첫번째 행이 $c\boldsymbol{e}_1$, 즉 첫번째 열이 $c$ 이며 나머지 열은 $0$ 이라면 $\boldsymbol{A}$ 의 행렬식은 $\boldsymbol{A}$ 에서 $1$ 행과 $1$ 열을 제외한 $(n-1)\times (n-1)$ 행렬의 행렬식에 $c$ 를 곱한것과 같다는 것을 보여라.
 :::
 
 </div></br>
@@ -1630,7 +1611,7 @@ $$ {#eq-determinant_of_vandermond_matrix}
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 

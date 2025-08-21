@@ -175,7 +175,7 @@ $$
 </br>
 
 
-### 중요한 벡터공간들
+### 중요한 벡터공간들 {#sec-LA_important_vector_spaces}
 
 아래의 보기는 앞으로 자주 등장할 벡터공간이다. 
 
@@ -263,14 +263,11 @@ $C_{(a,\,b)}$ 를 $(a,\,b)$ 구간에서 연속인 실함수의 집합이라고 
 
 #### 부분공간 
 
-$V$ 가 $\mathbb{F}$-벡터공간이라 하자. $U$ 가 $V$ 의 부분분집합이며, $\mathbb{F}$-벡터공간일 때 $U$ 를 $V$ 의 **부분공간 (subspace)** 혹은 **부분벡터공간** 이라 한다.
+$V$ 가 $\mathbb{F}$-벡터공간이라 하자. $U$ 가 $V$ 의 부분분집합이며, $\mathbb{F}$-벡터공간일 때 $U$ 를 $V$ 의 **부분공간 (subspace)** 혹은 **부분벡터공간** 이라 하고 $U \le V$ 로 표기한다.
 :::
 :::
 
-$U$ 가 $V$ 의 부분공간 일 때 $U\le V$ 라 표기하겠다.
-
-</br>
-<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
 ::: {#exm-LA_subspace_0}
 벡터공간 $V$ 는 자기 자신의 부분공간이다. $V$ 가 벡터공간일 때 $\{0_V\}$ 도 $V$ 의 부분공간이다.
@@ -308,16 +305,12 @@ $U,\,V$ 가 벡터공간일 때 $U \cap V$ 도 벡터공간이다.
 $\mathbb{C}^2$ 는 $\mathbb{C}$-벡터공간이다. $\mathbb{R}^2$ 는 $\mathbb{C}^2$ 의 부분집합이지만 $\mathbb{C}$-벡터공간이 아니므로 ($i(1,\,1) = (i,\, ,i) \not\in \mathbb{R}^2$) $\mathbb{C}^2$ 의 부분공간이 아니다. 그러나, $\mathbb{C}^2$ 는 $\mathbb{R}$-벡터공간이기도 하다. 그렇다면 $\mathbb{R}^2$ 는 $\mathbb{R}$- 벡터공간 $\mathbb{C}^2$ 의 부분공간이 된다.
 
 
-요컨데, $\mathbb{C}$ 위에서의 $\mathbb{C}^2$ 와 $\mathbb{R}$ 위에서의 $\mathbb{C}^2$ 는 다른 벡터공간이며, 부분집합이 부분공간인지 아닌지를 따질 때에 어떤 체(field) 위에서의 벡터공간인지가 중요하다. 엄밀하게 말하면 체 $\mathbb{F}$ 위에서의 벡터공간 $V$ 에서 벡터합 $+$ 와 벡터의 스칼라곱 $\cdot$ 이 정의되었을 때 $(V,\,\mathbb{F},\, +,\, \cdot)$ 과 같이 써야한다. 여기서는 이렇게 까지는 하지 않겠다.
+요컨데, $\mathbb{C}$ 위에서의 $\mathbb{C}^2$ 와 $\mathbb{R}$ 위에서의 $\mathbb{C}^2$ 는 다른 벡터공간이며, 부분집합이 부분공간인지 아닌지를 따질 때에 어떤 체(field) 위에서의 벡터공간인지가 중요하다. 엄밀하게 말하면 체 $\mathbb{F}$ 위에서의 벡터공간 $V$ 에서 벡터합 $+$ 와 벡터의 스칼라곱 $\cdot$ 이 정의되었을 때 $(V,\,\mathbb{F},\, +,\, \cdot)$ 과 같이 표기 할 수 있지만 여기서는 이렇게 까지는 하지 않겠다.
 :::
 
 </div></br>
 
-::: {.callout-warning appearance="simple" icon="false"}
-명제, 정리, 보조정리, 따름정리 등에 대한 증명이 아주 쉬운 경우는 언급도 없이 증명을 생략 할 수 있다.
-:::
-
-</br>
+다음은 쉽게 증명 할 수 있다.
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -329,7 +322,7 @@ $\mathbb{C}^2$ 는 $\mathbb{C}$-벡터공간이다. $\mathbb{R}^2$ 는 $\mathbb{
 
 </div></br>
 
-### 합공간과 직합 {#sec-direct_sum}
+### 합공간과 직합 {#sec-LA_direct_sum}
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-LA_sum_of_subspace}
@@ -383,7 +376,7 @@ $V$ 의 부분공간 $V_1,\ldots,\,V_m$ 에 대해 다음은 동치이다.
 &emsp;($2$) $v_i\in V_i$ 에 대해 $v_1+\cdots + v_m = 0_V$ 인 경우는 $v_1 = \cdots = v_m = 0_V$ 뿐이다.
 
 :::
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -394,12 +387,12 @@ $V$ 의 부분공간 $V_1,\ldots,\,V_m$ 에 대해 다음은 동치이다.
 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
-::: {#prp-LA_condition_for_direct_sum}
 
+::: {#prp-LA_condition_for_direct_sum}
 
 $V_1,\,V_2$ 가 $V$ 의 부분공간일 때 $V_1+ V_2 = V_1\oplus V_2$ 일 필요충분조건은 $V_1 \cap V_2 = \{0_V\}$ 이다.
 :::
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -429,7 +422,7 @@ $$
 이라면, $v$ 는 $\{v_1,\ldots,v_m\}$ 의 **선형결합** 이라고 하고, $\{v_1,\ldots,\,v_m\}$ 가 $v$ 를 **span** 한다라고 한다. 또한 $\{v_1,\ldots,\,v_m\}$ 으로 span 할 수 있는 모든 벡터의 집합을 $\text{span} (v_1,\ldots,\,v_m)$ 이라 표현한다. 즉,
 
 $$
-\text{span}(v_1,\ldots,\,v_m) = \{a_1v_1 + \cdots + a_m v_m \mid a_1,\ldots,a_m \in \mathbb{F}\}
+\text{span}(v_1,\ldots,\,v_m) := \{a_1v_1 + \cdots + a_m v_m \mid a_1,\ldots,a_m \in \mathbb{F}\}
 $$
 
 이다.
@@ -440,13 +433,14 @@ $$
 </br>
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-LA_span_minimal_subspace}
 
 $\mathbb{F}$-벡터공간 $V$ 에 대해 $v_1,\ldots,\,v_m\in V$ 일 때 $\text{span}(v_1,\ldots,\,v_m)$ 은 $V$ 의 부분공간이며 또한 $v_1,\ldots,\,v_m$ 을 포함하는 가장 작은 $V$ 의 부분공간이다.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -463,7 +457,7 @@ $\mathbb{F}$-벡터공간 $V$ 에 대해 $v_1,\ldots,\,v_m\in V$ 일 때 $\text{
 
 #### 집합으로 부터 생성된 부분공간
 
-벡터공간 $V$ 의 부분집합 $U$ 를 생각하자. $U$ 는 부분벡터공간일 수도 있고 아닐 수도 있다. 우리는 $U$ 에 속하는 모든 벡터의 선형결합으로 이루어지는 집합을 생각 할 수 있다. 이 집합을 $U$ 에 의해 **생성된 부분공간** 이라고 한다. 이것을 이제 $\langle U \rangle$ 이라 쓰자. 아직 우리는 이것이 부분공간이라는 것을 보이지 않았지만 쉽게 보일 수 있다.
+벡터공간 $V$ 의 부분집합 $U$ 를 생각하자. $U$ 는 부분벡터공간일 수도 있고 아닐 수도 있다. $\text{span} (U)$ 는 $V$ 의 부분공간이며 (@exr-LA_generated_subspace) $U$ 에 의해 **생성되는 부분공간 (generated subspace)** 이라고 한다.
 
 :::
 
@@ -481,7 +475,7 @@ $U$ 가 벡터공간 $V$ 의 부분집합일 때 $\langle U \rangle = \text{span
 </br>
 
 
-### 유한차원 벡터공간과 무한차원 벡터공간, 선형독립과 선형종속
+### 유한차원 벡터공간과 무한차원 벡터공간, 선형독립과 선형종속 {#sec-LA_finite_dimensional_vector_space_and_dependency}
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-LA_finite_dimensional_vector_space}
@@ -512,7 +506,7 @@ $$
 a_1 v_1 + \cdots + a_m v_m = 0_V \implies a_1 = \cdots = a_m = 0
 $$
 
-이면 $\{v_1,\ldots,\,v_m\}$ 를 **선형 독립**이라 한다. 선형 독립이 아닌 벡터의 집합을 **선형 종속** 이라 한다.
+이면 $\{v_1,\ldots,\,v_m\}$ 이 **선형 독립(be linearly independent)** 이라고 한다. 선형 독립이 아닐 경우 **선형 종속(be linearly dependent)** 이라고 한다.
 :::
 :::
 
@@ -521,37 +515,31 @@ $$
 
 뒤에 나오겠지만 선형 독립인 벡터의 집합은 벡터공간을 이해하는데 매우 중요하다. 우리는 선형독립인 벡터들에 대해 다음을 보일 수 있다.
 
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 
-::: {#exr-LA_zero_vector_dependent}
-$0$ 벡터가 포함된 벡터의 집합은 선형종속이다.
+::: {#exm-LA_zero_vector_dependent}
+#### 0 벡터와 선형 종속
+
+$0$ 벡터가 포함된 벡터의 집합은 선형종속이다. 벡터공간 $V$ 의 임의의 벡터의 집합 $\{v_1,\ldots,\,v_m\}$ 에 대해
+$c \cdot 0_V + 0 v_1 + \cdots + 0 v_m = 0$ 은 모든 $c\in \mathbb{F}$ 에 대해 성립한다. 
 :::
-</div></br>
-
-::: {.solution}
-벡터공간 $V$ 의 임의의 벡터의 집합 $\{v_1,\ldots,\,v_m\}$ 에 대해
-
-$$
-c \cdot 0_V + 0 v_1 + \cdots + 0 v_m = 0
-$$
-
-은 모든 $c\in \mathbb{F}$ 에 대해 성립한다. $\square$
-:::
+</div>
 
 </br>
+
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_unique_span}
 $\mathbb{F}$-벡터공간 $V$ 의 부분집합 $\{v_1,\ldots,\,v_n\}$ 이 선형독립이고 $v\in \text{span}(v_1,\ldots,v_n)$ 일 때, $v$ 를 $\{v_1,\ldots,\,v_n\}$ 의 선형결합으로 표현하는 방법은 유일하다.
 :::
-</div></br>
+</div>
 
 ::: {.proof}
 우선 @def-LA_independency 에 따라 $0_V$ 을 $\{v_1,\ldots,\,v_n\}$ 의 선형결합으로 표현하는 방법이 유일하다. $v\in \text{span}(v_1,\ldots,\,v_n)$ 일 때,
 
 $$
 \begin{aligned}
-v &= a_1 v_1 + \cdots + a_n v_n \\ &= b_1v_1 + \cdots + b_n v_n
+v = a_1 v_1 + \cdots + a_n v_n = b_1v_1 + \cdots + b_n v_n
 \end{aligned}
 $$
 
@@ -562,7 +550,7 @@ $$
 
 </br>
 
-이제 벡터들의 집합이 선형 독립인지 종속인지가 그 $\text{span}$ 에 미치는 영향을 알아보자. 우선 $\{v_1,\ldots,\,v_m\}$ 이 선형 종속이라고 하자. 
+이제 벡터들의 집합이 선형 독립인지 종속인지가 그 $\text{span}$ 에 미치는 영향을 알아보자. 우선 영벡터가 아닌 벡터의 집합 $\{v_1,\ldots,\,v_m\}$ 이 선형 종속이라고 하자. 
 $$
 a_1v_1 + \cdots + a_m v_m = 0
 $$
@@ -585,13 +573,13 @@ $$
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_vector_dependency_and_span}
-벡터공간 $V$ 와 $V_0 = \{v_1,\ldots,\,v_n\} \subset V$ 에 대해 다음은 동치이다.
+벡터공간 $V$ 와 영벡터가 아닌 벡터의 집합 $V_0 = \{v_1,\ldots,\,v_n\} \subset V$ 에 대해 다음은 동치이다.
 
 &emsp;($1$) $V_0$ 가 선형 종속이다
 
 &emsp;($2$) $\text{span}(V_0) = \text{span}(V_0-\{v_k\})$ 인 $v_k \in V_0$ 가 존재한다.
 :::
-</div></br>
+</div>
 
 ::: {.proof}
  (1 $\implies$ 2) 앞에서 보였다.
@@ -606,7 +594,7 @@ $$
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#cor-LA_vector_independency_and_span}
-벡터공간 $V$ 와 $V_0 = \{v_1,\ldots,\,v_n\} \subset V$ 에 대해 다음은 동치이다.
+벡터공간 $V$ 와 영벡터가 아닌 벡터의 집합 $V_0 = \{v_1,\ldots,\,v_n\} \subset V$ 에 대해 다음은 동치이다.
 
 &emsp;(1) $V_0$ 가 선형 독립이다
 
@@ -655,17 +643,18 @@ $v\in V$ 를 $V$ 의 기저인 $\{v_1,\ldots,\,v_m\}$ 의 선형결합으로 표
 
 </div></br>
 
-보통 집합은 원소가 나열되는 순서가 중요하지 않지만 기저를 다룰 경우 기저를 이루는 벡터의 순서가 중요할 수 있다. 순서가 정해진 기저를 **순서 기저(ordered basis)** 라고 한다. 대부분의 경우 기저를 표현할 때, 기저의 순서가 꼭 필요하지 않더라도 순서기저로 이해해도 상관 없으며 앞으로 특별한 언급이 없을 경우 기저를 순서기저로 간주할 경우 $(v_1,\,v_2,\ldots)$ 와 같이 표현하도록 한다. 다만 순서가 중요하지 않을 경우나 혼동의 여지가 없을 경우에는 $\{v_1,\,v_2,\ldots\}$ 와 같이 쓸수도 있도록 하자.
+보통 집합은 원소가 나열되는 순서가 중요하지 않지만 기저를 다룰 경우 기저를 이루는 벡터의 순서가 중요한 경우가 있다. 대표적인 경우가 뒤에 나오겠지만 벡터를 행렬로 표현하는 경우이다. 순서가 정해진 기저를 **순서 기저(ordered basis)** 라고 한다. 대부분의 경우 기저를 표현할 때, 기저의 순서가 꼭 필요하지 않더라도 순서기저로 이해해도 상관 없으며 앞으로 특별한 언급이 없을 경우 기저를 순서기저로 간주할 경우 $(v_1,\,v_2,\ldots)$ 와 같이 표현하도록 한다. 다만 순서가 중요하지 않을 경우나 혼동의 여지가 없을 경우에는 $\{v_1,\,v_2,\ldots\}$ 와 같이 쓸 수 있다.
 
 </br>
-
-### Span 하는 벡터로부터 기저를 추출하기
 
 유한개의 벡터의 집합 $\{u_1,\ldots,u_m\}$ 이 벡터공간 $V$ 를 span 하면 $V$ 는 유한차원 벡터공간이다. 만약 이 $\{u_i\}$ 가 선형종속이면 적절한 벡터를 제거하여 $V$ 를 span 하게 할 수 있다(@prp-LA_vector_dependency_and_span). 더 이상 제거할 수 없을 때 이 집합은 선형 독립(@cor-LA_vector_independency_and_span)이며 $V$ 의 기저이다. 우리는 이로부터 다음을 알 수 있다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-LA_finitebasis}
+
+#### 유한차원 벡터공간의 기저 정리
+
 유한차원 벡터공간은 유한개의 벡터로 이루어진 기저를 갖는다. 
 :::
 
@@ -675,7 +664,7 @@ $v\in V$ 를 $V$ 의 기저인 $\{v_1,\ldots,\,v_m\}$ 의 선형결합으로 표
 
 </br>
 
-### 유한차원 벡터공간의 차원
+### 유한차원 벡터공간의 차원 {#sec-LA_dimension_of_vector_space}
 
 우리는 이제 기저(basis) 라는 개념을 통해 어떤 벡터공간은 유한개의 벡터의 선형결합으로 모두 표현할 수 있다는 것을 알게되었다. 기저는 벡터공간을 설명하는데 매우 중요하며 앞으로 벡터와 벡터공간의 성질, 특히 유한차원 벡터공간의 성질은 많은 경우 기저를 이용하여 보이게 된다. 또한 기저를 통해 차원(dimension) 이라는, 벡터공간의 아주 중요한 성질을 말할 수 있게 된다.
 
@@ -686,7 +675,7 @@ $v\in V$ 를 $V$ 의 기저인 $\{v_1,\ldots,\,v_m\}$ 의 선형결합으로 표
 유한차원 벡터공간 $V$ 의 부분집합 $\mathcal{B}_0=\{u_1,\ldots,\,u_m\}$ 이 선형독립일 때 $\mathcal{B}_0$ 를 포함하는 $V$ 의 기저가 존재한다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -720,10 +709,22 @@ $$
 유한차원 벡터공간 $V$ 에 속하는 선형독립인 벡터 $\{v_1,\ldots,\,v_m\}$ 을 생각하자. 벡터의 집합 $\{u_1,\ldots,\,u_n\}$ 이 $V$ 를 span 할 때, $V$ 에 포함되는 선형독립인 벡터의 갯수는 벡터공간을 span 하는 벡터의 갯수보다 항상 작거나 같다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
-$\mathcal{B}_0=\{u_1,\ldots,\,u_n\}$ 라 하자. $\text{span}(\mathcal{B}_0)=V$ 이므로 $\mathcal{B}_0 \cup \{v_1\}$ 도 $V$ 를 span 한다. 또한 $v_1 \in \text{span}(\mathcal{B}_0)$ 이므로 $\mathcal{B}_0 \cup \{v_1\}$ 은 선형 종속이다. 이제 $\{u_i\}$ 가운데 하나를 $\mathcal{B}_0\cup \{v_1\}$ 에서 제거하여 $V$ 를 span 하도록 할 수 있다. 이것을 $\mathcal{B}_1$ 이라 하자. 이렇게 $V$ 를 span 하는 $\mathcal{B}_i$ 에 $v_i$ 를 넣고 $\mathcal{B}_i$ 에 남아있는 $u_i$ 가운데 span 에 영향을 주지 않는 것을 골라 하나씩 뺄 수 있다. 만약 $n<m$ 이라면 선형독립인 $\{v_1,\ldots,\,v_m\}$ 에서 몇개를 빼서 $V$ 를 span 할 수 있다는 뜻이므로 모순이다. 따라서 $m \le n$ 이다. 즉 $V$ 에서 정의된 선형독립 인 벡터집합의 벡터의 개수는 $V$ 를 span 할 수 있는 벡터의 숫자보다 항장 작거나 같다. $\square$
+
+우선 다음을 보이자.
+
+> $\text{span} (u_1,\ldots,\,u_k,\,v_1,\ldots,\,v_l)=V$ 이고 $v_{l+1}\in V$ 에 대해 $\{v_1,\ldots,\,v_{l+1}\}$ 이 선형 독립일 때 어떤 $u_m$ 에 대해
+>$$
+>\text{span} (\{u_1,\ldots,u_k,v_1,\ldots,v_{k+1}\}-\{u_j\})=V
+>$$
+>이다.
+
+$\{u_1,\ldots,\,u_k,v_1,\ldots,\,v_{l+1}\}$ 은 선형 종속이므로 이 가운데 하나를 제거하여도 span 에는 영향이 없다. $\sum_{i=1}^k c_i u_i + \sum_{j=1}^l d_j v_j=0$ 이라고 하자. 모든 $c_i=0$ 이라면 모든 $d_i=0$ 이므로 선형 종속이 아니게 되어 모순이다. 따라서 어떤 $c_m\ne 0$ 이며 이 $m$ 에 대해 $u_m$ 을 제거해도 span 에 영향을 주지 않는다.
+
+
+$\mathcal{B}_0=\{u_1,\ldots,\,u_n\}$ 라 하자. 이 명제에 따라 $\mathcal{B}_0$ 에서 $v_1$ 을 추가하고 $\mathcal{B}_0$ 에서 $\{u_1,\ldots,\,u_n\}$ 에서 하나를 뺀 $\mathcal{B}_1$ 이 $V$ 를 span 하게 할 수 있다. $\mathcal{B}_j$ 에 $v_{j+1}$ 을 추가하고 $\mathcal{B}_j$ 에 남아있는 $\{u_i\}$ 가운데 하나를 뺀 $\mathcal{B}_{j+1}$ 가 역시 $V$ 를 span 하게 할 수 있다. 만약 $n<m$ 이라면 선형독립인 $\{v_1,\ldots,\,v_m\}$ 에서 몇개를 빼서 $V$ 를 span 할 수 있다는 뜻이므로 모순이다. 따라서 $m \le n$ 이다. 즉 $V$ 에서 정의된 선형독립 인 벡터집합의 벡터의 개수는 $V$ 를 span 할 수 있는 벡터의 숫자보다 항장 작거나 같다. $\square$
 :::
 
 </br>
@@ -735,7 +736,7 @@ $\mathcal{B}_0=\{u_1,\ldots,\,u_n\}$ 라 하자. $\text{span}(\mathcal{B}_0)=V$ 
 ::: {#thm-LA_basis_equality}
 유한차원 벡터공간 $V$ 의 기저를 이루는 벡터의 개수는 항상 동일하다.
 :::
-</div></br>
+</div>
 
 ::: {.proof}
 $\mathcal{B}_1 = (v_1,\ldots,\,v_m)$ 과 $\mathcal{B}_2 = (v'_1,\ldots,\,v'_n)$ 가 유한차원 벡터공간 $V$ 의 기저라 하자. $\mathcal{B}_1$ 이 선형독립인 벡터의 집합이고 $\mathcal{B}_2$ 가 $V$ 를 span 하므로 $m\le n$ 이다. 또한 같은 논리도 $n \le m$ 이다. 즉 $m=n$ 이며, 따라서 두 기저에 포함된 벡터의 갯수는 같다. $\square$
@@ -761,7 +762,7 @@ $W$ 가 $V$ 의 부분공간이면 $\dim (W) \le \dim (V)$ 이고 $\dim (W)= \di
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -783,11 +784,11 @@ $$
 
 :::
 
-</div></br>
+</div>
 
-### 합공간의 차원
+</br>
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_dim_sum}
 $U_1,\,U_2$ 가 유한차원 부분공간 $V$ 의 부분공간일 때 다음이 성립한다.
@@ -797,7 +798,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 두 벡터공간 $U,\,V$ 의 교집합은 $U$ 와 $V$ 각각의 부분공간이다. (즉 벡터공간이다. @exm-LA_intersection_of_two_spaces) $\dim (U_1 \cap U_2) = m$ 이라 할 때 $U_1 \cap U_2$ 의 기저 $\{w_1,\ldots,\,w_m\}$ 을 잡는다. 이를 확장하여 $U_1$ 의 기저 $\{w_1,\ldots,\,w_m,\,u_1,\ldots,\,u_k\}$  와 $U_2$ 의 기저 $\{ w_1,\ldots,\,w_m,\,u_1,\ldots,u_n \}$ 을 구성 할 수 있다.
@@ -848,7 +849,6 @@ $$
 $n$ 차원 벡터를 행렬로 표형할때는 일반적으로 위와 같은 $n \times 1$ 행렬를 사용한다. 또한 열벡터를 아래에서 위로 길게 보이는 것을 피하기 위해 $[v]_\mathcal{B} = \begin{bmatrix} a_1 & \cdots & a_n \end{bmatrix}^T$ 처럼 전치행렬을 사용하여 표현하기도 한다. 여기서 항상 조심해야 할 것은 벡터의 행렬표현은 특정한 순서기저에서의 행렬표현라는 것이다. 기저가 바뀌면 행렬표현도 바뀐다. 
 
 </br>
-
 
 ### 열벡터와 표준 기저 {#sec-LA_column_vector_and_standard_basis}
 
@@ -925,7 +925,7 @@ $$
 
 벡터공간 $V$ 의 두 부분공간 $U_1$, $U_2$ 에 대해 $(U_1 \cup U_2) \le V$ 일 필요충분조건은 $U_1 \le U_2$ 이거나 $U_2 \le U_1$ 인 것을 보여라.
 :::
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -941,7 +941,7 @@ $U_1 \le U_2$ 일 때 $(U_1 \cup U_2) \le V$ 인 것은 자명하다. $u_1 \in U
 $U, V$ 가 벡터공간 $W$ 의 부분공간이며 $W=U \oplus V$ 라고 하자. $(u_1,\ldots,\,u_n)$ 이 $U$ 의 기저이고 $(v_1, \ldots,\,v_m)$ 이 $V$ 의 기저이면 $(u_1,\ldots,\,u_n,\,v_1,\ldots,\,v_m)$ 은 $W$ 의 기저임을 보여라.
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
