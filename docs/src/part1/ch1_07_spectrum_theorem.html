@@ -366,7 +366,6 @@ window.Quarto = {
 <p><br></p>
 <section id="정규연산자와-정규행렬" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="정규연산자와-정규행렬"><span class="header-section-number">7.1</span> 정규연산자와 정규행렬</h2>
-<p><br></p>
 <section id="sec-LA_normal_operator" class="level3" data-number="7.1.1">
 <h3 data-number="7.1.1" class="anchored" data-anchor-id="sec-LA_normal_operator"><span class="header-section-number">7.1.1</span> 정규 연산자와 행렬</h3>
 <div class="callout callout-style-simple callout-note no-icon">
@@ -392,65 +391,64 @@ window.Quarto = {
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_condition_of_normal_matrix" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.2</strong></span> <span class="math inline">\(\boldsymbol{A}\)</span> 가 정규행렬일 필요충분인 조건은 모든 <span class="math inline">\(\boldsymbol{v}\in \mathcal{M}_{n }(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\|\boldsymbol{Av}\| = \|\boldsymbol{A}^\ast \boldsymbol{v}\|\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>명제 7.2</strong></span> <span class="math inline">\(M\in \mathcal{L}(V)\)</span> 가 정규연산자일 필요충분인 조건은 모든 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\|Mv\| = \|M^\ast v\|\)</span> 인 것이다.</p>
 </div>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math display">\[
 \begin{aligned}
-\boldsymbol{A} \text{ is normal} &amp;\iff  \boldsymbol{A}^\ast \boldsymbol{A} - \boldsymbol{A}\boldsymbol{A}^\ast = \boldsymbol{0} \\
-&amp;\iff \langle (\boldsymbol{A}^\ast \boldsymbol{A} - \boldsymbol{A}\boldsymbol{A}^\ast)\boldsymbol{v} ,\, \boldsymbol{v} \rangle  = \boldsymbol{0} \\
-&amp;\iff \langle \boldsymbol{A}^\ast \boldsymbol{A} \boldsymbol{v},\, \boldsymbol{v} \rangle = \langle \boldsymbol{AA}^\ast \boldsymbol{v} ,\, \boldsymbol{v}\rangle \\
-&amp; \iff \|\boldsymbol{Av}\|^2 = \|\boldsymbol{A}^\ast \boldsymbol{v}\|^2
+M \text{ is normal} &amp;\iff \langle (M^\ast M - MM^\ast)v ,\, v \rangle  = 0 \\[0.3em]
+&amp;\iff \langle M^\ast M v,\, v \rangle = \langle MM^\ast v ,\, v\rangle \\
+&amp; \iff \|Mv\|^2 = \|M^\ast v\|^2
 \end{aligned}
 \]</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_part1_properties_of_normal_operator" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.3</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 정규연산자일 때 다음이 성립한다.</p>
-<p> (<span class="math inline">\(a\)</span>) <span class="math inline">\(\ker (L) = \ker (L^\ast)\)</span>.</p>
-<p> (<span class="math inline">\(b\)</span>) <span class="math inline">\(\text{im}(L) = \text{im} (L^\ast)\)</span>.</p>
-<p> (<span class="math inline">\(c\)</span>) <span class="math inline">\(V = \ker (L) \oplus \text{im}(L)\)</span>.</p>
-<p> (<span class="math inline">\(d\)</span>) <span class="math inline">\(c\in \mathbb{F}\)</span> 일 때 <span class="math inline">\(L-c I\)</span> 도 정규연산자이다.</p>
+<p><span class="theorem-title"><strong>명제 7.3</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(M\in \mathcal{L}(V)\)</span> 가 정규연산자일 때 다음이 성립한다.</p>
+<p> (<span class="math inline">\(a\)</span>) <span class="math inline">\(\ker (M) = \ker (M^\ast)\)</span>.</p>
+<p> (<span class="math inline">\(b\)</span>) <span class="math inline">\(\text{im}(M) = \text{im} (M^\ast)\)</span>.</p>
+<p> (<span class="math inline">\(c\)</span>) <span class="math inline">\(V = \ker (M) \oplus \text{im}(M)\)</span>.</p>
+<p> (<span class="math inline">\(d\)</span>) <span class="math inline">\(c\in \mathbb{F}\)</span> 일 때 <span class="math inline">\(M-c I\)</span> 도 정규연산자이다.</p>
 </div>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>전체적으로 <a href="ch1_06_operators_on_innerproduct_space.html#thm-LA_kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> 를 참고하라.</p>
 <p>(<span class="math inline">\(a\)</span>) <a href="#prp-LA_condition_of_normal_matrix" class="quarto-xref">명제&nbsp;<span>7.2</span></a></p>
-<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(\text{im}(L) = (\ker (L^\ast))^\perp = (\ker (L))^\perp = \text{im}(L^\ast)\)</span>.</p>
-<p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(V=(\ker (L)) \oplus (\ker (L))^\perp = (\ker (L)) \oplus (\ker (L^\ast))^\perp = \ker (L)\oplus \text{im}(L)\)</span></p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(\text{im}(M) = (\ker (M^\ast))^\perp = (\ker (M))^\perp = \text{im}(M^\ast)\)</span>.</p>
+<p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(V=(\ker (M)) \oplus (\ker (M))^\perp = (\ker (M)) \oplus (\ker (M^\ast))^\perp = \ker (M)\oplus \text{im}(M)\)</span></p>
 <p>(<span class="math inline">\(d\)</span>)</p>
 <p><span class="math display">\[
 \begin{aligned}
-(L-cI)(L-cI)^\ast &amp;= (L-cI)(L^\ast - \overline{c}I) = LL^\ast - \overline{c}L + cL^\ast -|c|^2 \\[0.3em]
-&amp;=L^\ast L  - \overline{c}L + cL^\ast -|c|^2 = (L-cI)^\ast (L-cI)
+(M-cI)(M-cI)^\ast &amp;= (M-cI)(M^\ast - \overline{c}I) = MM^\ast - \overline{c}L + cM^\ast -|c|^2 \\[0.3em]
+&amp;=M^\ast M  - \overline{c}M + cM^\ast -|c|^2 = (M-cI)^\ast (M-cI)
 \end{aligned}
 \]</span></p>
 </div>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_eigenvectors_or_normal_matrix_and_adjoint" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.4</strong></span> <span class="math inline">\(L\)</span> 이 정규연산자이면 <span class="math inline">\(L^\ast\)</span> 와 같은 고유벡터를 가지며 이에 대한 고유값은 서로 복소 공액이다.</p>
+<p><span class="theorem-title"><strong>명제 7.4</strong></span> <span class="math inline">\(M\)</span> 이 정규연산자이면 <span class="math inline">\(M^\ast\)</span> 와 같은 고유벡터를 가지며 이에 대한 고유값은 서로 복소 공액이다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(L-cI\)</span> 가 정규연산자이므로 <a href="#prp-LA_condition_of_normal_matrix" class="quarto-xref">명제&nbsp;<span>7.2</span></a> 로부터 <span class="math inline">\(0 = \|(L-cI)v\| = \|(L-cI)^\ast v\|\)</span>. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(M-cI\)</span> 가 정규연산자이므로 <a href="#prp-LA_condition_of_normal_matrix" class="quarto-xref">명제&nbsp;<span>7.2</span></a> 로부터 <span class="math inline">\(0 = \|(M-cI)v\| = \|(M-cI)^\ast v\|\)</span>. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_orthogonality_of_normal_matrix" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.5</strong></span> 정규행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.</p>
+<p><span class="theorem-title"><strong>명제 7.5</strong></span> 정규연산자 <span class="math inline">\(M\)</span> 의 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\lambda_1,\,\lambda_2\)</span> 가 서로 다른 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유값이고 이에 대한 고유벡터가 <span class="math inline">\(\boldsymbol{v}_1,\,\boldsymbol{v}_2\)</span> 라 하자.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(M\)</span> 의 고유값 <span class="math inline">\(c_1,\,c_2\)</span> 에 대한 고유벡터 <span class="math inline">\(v_1,\,v_2\)</span> 를 생각하자. 이 때 <span class="math inline">\(c_1\ne c_2\)</span> 이다.</p>
 <p><span class="math display">\[
 \begin{aligned}
-(\lambda_1-\lambda_2)\langle \boldsymbol{v}_1,\,\boldsymbol{v}_2\rangle &amp;= \langle \boldsymbol{Av}_1,\,\boldsymbol{v}_2\rangle - \langle \boldsymbol{v}_1,\, \boldsymbol{A}^\ast \boldsymbol{v}_2 \rangle =  \langle \boldsymbol{Av}_1,\,\boldsymbol{v}_2\rangle - \langle \boldsymbol{A} \boldsymbol{v}_1,\, \boldsymbol{v}_2 \rangle = \boldsymbol{0}
+(c_1-c_2)\langle v_1,\,v_2\rangle &amp;= \langle Mv_1,\,v_2\rangle - \langle v_1,\, M^\ast v_2 \rangle =  \langle Mv_1,\,v_2\rangle - \langle Mv_1,\, v_2 \rangle = 0
 \end{aligned}
 \]</span></p>
-<p>이며 <span class="math inline">\(\lambda_1 \ne \lambda_2\)</span> 이므로 <span class="math inline">\(\langle \boldsymbol{v}_1,\,\boldsymbol{v}_2\rangle = 0\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p>이며 <span class="math inline">\(c_1 \ne c_2\)</span> 이므로 <span class="math inline">\(\langle v_1,\,v_2\rangle = 0\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
@@ -459,7 +457,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>우리는 슈어 정리(<a href="ch1_05_innerproduct.html#thm-LA_schure" class="quarto-xref">정리&nbsp;<span>5.2</span></a>) 로부터 모든 복소행렬이 어떤 정규직교기저에서 상삼각행렬꼴로 나타남을 안다. 이 상삼각행렬을 <span class="math inline">\(\boldsymbol{A}\)</span> 라 하면 정규직교기저의 행렬형식은 표준기저 <span class="math inline">\(\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}\)</span> 가 된다. <span class="math inline">\(\boldsymbol{Ae}_j\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <span class="math inline">\(j\)</span> 번째 열벡터 <span class="math inline">\(\boldsymbol{A}_{:j}\)</span> 이며, <span class="math inline">\(\boldsymbol{A}\)</span> 가 상삼각행렬 이므로 <span class="math inline">\(\|\boldsymbol{Ae}_j\|^2 = \sum_{i=1}^j |A_{ij}|^2\)</span> 이다. <span class="math inline">\(\boldsymbol{A}^\ast\)</span> 는 하삼각행렬이며, 땨라서</p>
+<p><span class="proof-title"><em>(증명)</em>. </span>우리는 슈어 정리(<a href="ch1_05_innerproduct.html#thm-LA_schure" class="quarto-xref">정리&nbsp;<span>5.2</span></a>) 로부터 모든 복소행렬이 어떤 정규직교기저에서 상삼각행렬꼴로 나타남을 안다. 이 상삼각행렬을 <span class="math inline">\(\boldsymbol{A}\)</span> 라 하면 정규직교기저의 행렬형식은 표준기저 <span class="math inline">\((\boldsymbol{e}_i)\)</span> 가 된다. <span class="math inline">\(\boldsymbol{Ae}_j\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <span class="math inline">\(j\)</span> 번째 열벡터 <span class="math inline">\(\boldsymbol{A}_{:j}\)</span> 이며, <span class="math inline">\(\boldsymbol{A}\)</span> 가 상삼각행렬 이므로 <span class="math inline">\(\|\boldsymbol{Ae}_j\|^2 = \sum_{i=1}^j |A_{ij}|^2\)</span> 이다. <span class="math inline">\(\boldsymbol{A}^\ast\)</span> 는 하삼각행렬이며, 땨라서</p>
 <p><span class="math display">\[
 \|\boldsymbol{A}^\ast\boldsymbol{e}_j\|^2= \sum_{i=j}^n \left|(\boldsymbol{A}^\ast)_{ij}\right|^2 = \sum_{i=j}^n |A_{ji}|^2
 \]</span></p>
@@ -498,13 +496,13 @@ AB-BA &amp;= \dfrac{LL-LL^\ast + L^\ast L - L^\ast L^\ast - LL + L^\ast L - LL^\
 <h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_A_18" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.1 (Axler4th 7.A.18)</strong></span> <span class="math inline">\(n\ge 2\)</span> 에 대해 <span class="math inline">\(n\times n\)</span> 정규행렬의 집합은 <span class="math inline">\(\mathcal{M}_{n \times n}(\mathbb{F})\)</span> 의 부분공간이 되지 않음을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.1 (Axler4th 7.A.18)</strong></span> 2보다 큰 차원의 벡터공간 <span class="math inline">\(V\)</span> 에 대한 정규연산자의 집합은 <span class="math inline">\(\mathcal{L}(V)\)</span> 의 부분공간이 될 수 없다.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\boldsymbol{A},\,\boldsymbol{B} \in \mathcal{M}_{n\times n} (\mathbb{F})\)</span> 의 정규행렬이라고 하자. <span class="math inline">\(c\in \mathbb{F}\)</span> 에 대해</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(A,\,B \in \mathcal{L}(V)\)</span> 가 가 정규연산자이며 <span class="math inline">\(c\in \mathbb{F}\)</span> 라고 하자.</p>
 <p><span class="math display">\[
-(\boldsymbol{A}+c\boldsymbol{B})(\boldsymbol{A}+c\boldsymbol{B})^\ast - (\boldsymbol{A}+c\boldsymbol{B})^\ast(\boldsymbol{A}+c\boldsymbol{B}) = \overline{c}(\boldsymbol{AB}^\ast - \boldsymbol{B}^\ast \boldsymbol{A})+c(\boldsymbol{BA}^\ast - \boldsymbol{A}^\ast\boldsymbol{B})
+(A+c B)(A+cB)^\ast - (A+cB)^\ast(A+cB) = \overline{c}(AB^\ast - B^\ast A)+c(BA^\ast - A^\ast B)
 \]</span></p>
 <p>이므로 <span class="math inline">\(\boldsymbol{A}+c\boldsymbol{B}\)</span> 가 정규행렬이 되지 않는다.</p>
 </div>

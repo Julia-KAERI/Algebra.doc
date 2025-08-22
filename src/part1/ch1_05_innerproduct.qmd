@@ -67,9 +67,9 @@ $$
 
 ::: {#exm-LA_euclidean_innerproduct}
 
-#### 유클리드 공간
+#### 스칼라곱과 유클리드 공간
 
-$\mathbb{R}^n$ 에서 $x = (x_1,\ldots,\,x_n)$, $y=(y_1,\ldots,\,y_n)\in \mathbb{R}^n$ 의 내적을 $\langle x,\, y \rangle =  \sum_{i=1}^n x_i y_i$ 로 정의할 수 있으며 이렇게 내적이 정의된 공간을 **유클리드 공간 (Euclidean sapce)** 이라고 한다. 
+$\mathbb{R}^n$ 에서 $x = (x_1,\ldots,\,x_n)$, $y=(y_1,\ldots,\,y_n)\in \mathbb{R}^n$ 의 내적을 $\langle x,\, y \rangle =  \sum_{i=1}^n x_i y_i$ 로 정의할 수 있으며 이렇게 정의된 내적을 **스칼라곱(scalar product)** 혹은 **dot product** 라고 하고, 이렇게 스칼라곱으로 내적이 정의된 $\R^n$ 을 **유클리드 공간 (Euclidean sapce)** 이라고 한다. 
 :::
 
 </div></br>
@@ -622,7 +622,7 @@ $$
 
 ::: {.callout-warning appearance="minimal" icon="false"}
 
-Reitz 의 표현정리는 유한차원 내적벡터공간에서만 성립하며 무한차원에서는 성립하지 않는다. @exr-axler_6_B_15 를 보라.
+Reitz 의 표현정리는 유한차원 내적벡터공간에서만 성립하며 무한차원에서는 성립하지 않는다. @exr-LA_axler_6_B_15 를 보라.
 :::
 
 </br>
@@ -866,7 +866,7 @@ $$
 
 ## 직교 여공간 (Orthogonal complement) 과 Orthogonal projection
 
-### 직교 여공간 (#sec-LA_orthogonal_complement)
+### 직교 여공간 {#sec-LA_orthogonal_complement}
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-LA_orthogonal_complement}
@@ -1161,7 +1161,7 @@ $$
 
 </br>
 
-$\F=\R$ 일 경우는 $\Phi$ 가 선형사상이 되어 쉽게 풀 수 있다. @exr-axler4_6_C_13 을 보라.
+$\F=\R$ 일 경우는 $\Phi$ 가 선형사상이 되어 쉽게 풀 수 있다. @exr-LA_axler4_6_C_13 을 보라.
 
 
 
@@ -1188,9 +1188,7 @@ $$
 :::
 :::
 
-</br>
-
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_distance_to_subspace}
 $V$ 가 유한차원 내적벡터공간이고 $v\in V$, 이며 $U$ 가 $V$ 의 부분공간일 때, $v$ 에서 $U$ 까지의 거리는 $v$ 에서 $P_U (v)$ 까지의 거리와 같다. 즉, 
@@ -1202,7 +1200,7 @@ $$
 이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -1267,9 +1265,9 @@ $L\in \mathcal{L}(V,\,W)$ 일 때 $L|_{(\ker (L))^\perp}$ 는 $(\ker L)^\perp \m
 
 :::
 
-</div></br>
+</div>
 
-::: {.solution}
+::: {.proof}
 
 $L|_{(\ker (L))^\perp}$ 가 $(\ker (L))^\perp \mapsto \text{im}(L)$ 전단사 임을 보이면 된다. $v\in \ker \left(L|_{(\ker (L))^\perp}\right)$ 이면 $v\in (\ker (L))^\perp \cap \ker (L)$ 이므로 $v=0$ 이다. 즉 $L|_{(\ker (L))^\perp}$ 는 단사이다. 
 
@@ -1306,9 +1304,7 @@ $$
 :::
 :::
 
-</br>
-
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-LA_pseudoinverse_2}
 
@@ -1320,7 +1316,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -1345,7 +1341,7 @@ $$
 &emsp;($3$) $L^+L = P_{(\ker (L))^\perp}$ 이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -1374,7 +1370,7 @@ $$
 &emsp;($2$) $L$ 이 단사이면 $L^+L=I_V$ 이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 *trivial*
@@ -1394,7 +1390,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -1432,7 +1428,7 @@ $$
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler4_6_C_1}
+::: {#exr-LA_axler4_6_C_1}
 #### Axler4th 6.C.1
 
 $v_1,\ldots\,v_m\in V$ 일 때 다음을 보여라.
@@ -1443,7 +1439,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1452,29 +1448,25 @@ $x\in\{v_1,\ldots,\,v_m\}^\perp$ 이면 임의의 $v\in \text{span}(v_1,\ldots,\
 $y \in \left(\text{span}(v_1,\ldots,\,v_m)\right)^\perp$ 이면 당연히 $i=1,\ldots,\,m$ 에 대해 $\langle y,\,v_i\rangle = 0$ 이므로 $y\in \{v_1,\ldots,\,v_m\}^\perp$ 이다. 즉 $\left(\text{span}(v_1,\ldots,\,v_m)\right)^\perp \subset\{v_1,\ldots,\,v_m\}^\perp$ 이다.
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-axler4_6_C_2}
+::: {#exr-LA_axler4_6_C_2}
 #### Axler4th 6.C.2
 
 $U\le V$ 이고 $(u_1,\ldots,\,u_m)$ 이 $U$ 의 기저이며 $(u_1,\ldots,\,u_m,\,v_1,\ldots,\,v_n)$ 이 $V$ 의 기저라고 하자. 그람 슈미트 과정이 여기에 적용되어 정규직교기저 $(e_1,\ldots,\,e_m,\, f_1,\ldots,\,f_n)$ 을 구성한다면 $(e_1,\ldots,\,e_m)$ 은 $U$ 의 정규직교기저이며 $(f_1,\ldots,\,f_m)$ 은 $U^\perp$ 의 정규직교기저임을 보여라.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
 그람 슈미트 과정에서 우리는 $\text{span}(u_1,\ldots,\,u_m) = \text{span}(e_1,\ldots,e_m)$ 임을 안다. 따라서 $(e_1,\ldots,\,e_m)$ 은 $U$ 의 정규직교기저이고, 이로부터 $(f_1,\ldots,\,f_m)$ 은 $U^\perp$ 의 정규직교기저임을 안다.
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-axler4_6_C_4}
+::: {#exr-LA_axler4_6_C_4}
 #### Axler4th 6.C.4
 
 $e_1,\ldots,\,e_n \in V$ 가 $k=1,\ldots,\,n$ 에 대해 $\|e_k\|=1$ 이며 모든 $v\in V$ 에 대해
@@ -1487,7 +1479,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1495,9 +1487,7 @@ $v=e_j$ 라면 $1=\|e_j\|^2 = \|e_j\|^2 + \sum_{i=1,\,i\ne j}^n |\langle e_j,\,e
 
 :::
 
-</br>
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler4_6_C_5}
 #### Axler4th 6.C.5
@@ -1515,11 +1505,9 @@ $v\in V$ 에 대해 $v=u+w,\, u\in U,\, w\in U^\perp$ 가 유일하게 정해지
 
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-axler4_6_C_6}
+::: {#exr-LA_axler4_6_C_6}
 #### Axler4th 6.C.6
 
 $V$ 가 유한차원 벡터공간이며 $L\in \mathcal{L}(V,\,W)$ 일 때 다음이 성립함을 보여라.
@@ -1530,25 +1518,23 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
 trivial
 :::
 
-</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-axler4_6_C_7}
+::: {#exr-LA_axler4_6_C_7}
 #### Axler4th 6.C.7
 
 $X,\,Y$ 가 $V$ 의 유한차원 부분공간일 때 $P_XP_Y=0$ 일 필요충분조건은 모든 $x\in X,\, y\in Y$ 에 대해 $\langle x,\,y\rangle =0$ 인 것임을 보여라.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1557,9 +1543,7 @@ $P_XP_Y=0$ 이면 $Y \le X^\perp$ 이므로 모든 $x\in X,\, y\in Y$ 에 대해
 모든 $x\in X,\, y\in Y$ 에 대해 $\langle x,\, y\rangle =0$ 이면 $P_XP_Y=0$ 임은 자명하다. 
 :::
 
-</br>
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler4_6_C_8}
 #### Axler4th 6.C.8
@@ -1580,7 +1564,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1589,9 +1573,7 @@ $V=U\oplus U^\perp$ 이므로 $v=x+y$ 인 $x\in U,\, y\in U^\perp$ 가 유일하
 :::
 
 
-</br>
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler4_6_C_9}
 #### Axler4th 6.C.9
@@ -1600,7 +1582,7 @@ $V=U\oplus U^\perp$ 이므로 $v=x+y$ 인 $x\in U,\, y\in U^\perp$ 가 유일하
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1614,9 +1596,7 @@ $$
 
 :::
 
-</br>
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler4_6_C_11}
 
@@ -1630,7 +1610,7 @@ $U$ 가 $V$ 의 유한차원 부분공간이며 $L\in \mathcal{L}(V)$ 일 때 �
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1639,8 +1619,7 @@ $U$ 가 $V$ 의 유한차원 부분공간이며 $L\in \mathcal{L}(V)$ 일 때 �
 ($b \implies a$) $P_U L P_U = L P_U$ 라고 하자. $u\in U$ 에 대해 $Lu \not\in U$ 이면 $P_ULP_U \ne LP_U$ 이므로 모순. 따라서 $U$ 는 $L$ 부분공간이다.
 :::
 
-</br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler4_6_C_12}
 
@@ -1654,7 +1633,7 @@ $V$ 가 유한차원이며 $L\in \mathcal{L}(V)$ 이고 $U\le V$ 라고 하자. 
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1663,10 +1642,9 @@ $V$ 가 유한차원이며 $L\in \mathcal{L}(V)$ 이고 $U\le V$ 라고 하자. 
 ($b\implies a$) $P_UL = LP_U$ 임을 가정하자. $u\in U$ 라면 $LP_U u = Lu \in \text{im}{P_UL} \le U$ 이므로 $U$ 는 $L$-불변부분공간이다. $v\in U^\perp$ 라면 $LP_U=0_V$ 이므로 $P_ULv=0_V$ 이어야 하며 따라서 $Lv\in U^\perp$ 이다. 즉 $U^\perp$ 도 $L$-불변부분공간이다.
 :::
 
-</br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler4_6_C_13}
+::: {#exr-LA_axler4_6_C_13}
 
 #### Axler4th 6.C.13
 
@@ -1684,7 +1662,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1700,10 +1678,9 @@ $$
 
 :::
 
-</br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler4_6_C_14}
+::: {#exr-LA_axler4_6_C_14}
 
 #### Axler4th 6.C.14
 
@@ -1711,7 +1688,7 @@ $(e_1,\ldots,\,e_n)$ 이 $V$ 의 정규직교기저라고 하자. 이 정규직�
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1724,10 +1701,9 @@ $$
 이다. 
 :::
 
-</br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler4_6_C_15}
+::: {#exr-LA_axler4_6_C_15}
 
 #### Axler4th 6.C.15
 
@@ -1741,7 +1717,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 $v=(1,2,3,4)$ 라고 하자. $e_1 = \left(\dfrac{1}{\sqrt{2}},\dfrac{1}{\sqrt{2}}, 0, 0\right)$ 과 $e_2 = \left(0,\,0,\dfrac{1}{\sqrt{5}},\dfrac{2}{\sqrt{5}}, 0, 0\right)$ 는 $U$ 의 정규직교기저이며, $\|u-(1,2,3,4)\|$ 를 최소화 하는 $u$ 는 $P_U(1,2,3,4)$ 이므로,
@@ -1754,11 +1730,9 @@ $$
 
 :::
 
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-</br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-axler4_6_C_19}
+::: {#exr-LA_axler4_6_C_19}
 
 #### Axler4th 6.C.10
 
@@ -1766,8 +1740,7 @@ $V$ 는 유한차원 벡터공간이며 $L\in \mathcal{L}(V)$ 는 projection 이
 
 :::
 
-</div></br>
-
+</div>
 ::: {.solution}
 
 $L$ 이 projection 이므로 $L^2=L$ 이며 $L = P_{\text{im}(L)}$ 이다. 또한 $(\ker (L))^\perp = \text{im}(L)$ 이므로 $L|_{(\ker L)^\perp} = I|_{\text{im}(L)}$ 이다. @def-LA_pseudo_inverse 로 부터 $L^+w = L$ 이다.
@@ -1777,7 +1750,7 @@ $L$ 이 projection 이므로 $L^2=L$ 이며 $L = P_{\text{im}(L)}$ 이다. 또�
 </br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler4_6_C_20}
+::: {#exr-LA_axler4_6_C_20}
 
 #### Axler4th 6.C.20
 
@@ -1789,7 +1762,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1808,10 +1781,9 @@ $$
 
 :::
 
-</br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler4_6_C_22}
+::: {#exr-LA_axler4_6_C_22}
 
 #### Axler4th 6.C.22
 
@@ -1823,7 +1795,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 @lem-LA_pseudoinverse_3 ($2$) 로부터 $LL^+=P_{\text{im}(L)}$ 이므로
@@ -1840,10 +1812,9 @@ $$
 
 :::
 
-</br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler4_6_C_23}
+::: {#exr-LA_axler4_6_C_23}
 
 #### Axler4th 6.C.23
 
@@ -1855,7 +1826,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1865,7 +1836,7 @@ $$
 M^+v = \left(M|_{(\ker M)^\perp} \right)^{-1} P_{\text{im}(M)} v
 $$
 
-@exr-axler4_6_C_20 에서 보였듯이 $\text{im}(M) = \text{im}(L^+) = (\ker L)^\perp$ 이므로 
+@exr-LA_axler4_6_C_20 에서 보였듯이 $\text{im}(M) = \text{im}(L^+) = (\ker L)^\perp$ 이므로 
 
 $$
 P_{\text{im}(M)}v= P_{\text{im}(L^+)}v = P_{(\ker L)^\perp} v = 0_W
@@ -1874,7 +1845,7 @@ $$
 이다. 즉 $v\in \ker L \implies \left(L^+\right)^+v = 0_W$ 이다. 
 
 
-이제 $v\in (\ker L)^\perp$ 인 경우를 생각해보자. 앞서 보았듯이 $P_{\text{im}(M)}=P_{(\ker L)^\perp}$ 이므로 $M^+v = \left(M|_{(\ker M)^\perp} \right)^{-1}v$ 이다. 역시 @exr-axler4_6_C_20 에서 보였듯이 $(\ker L^+)=(\text{im}(L))^\perp$ 이며 @cor-LA_dimension_relation_of_orthogonal_complement ($2$) 로부터
+이제 $v\in (\ker L)^\perp$ 인 경우를 생각해보자. 앞서 보았듯이 $P_{\text{im}(M)}=P_{(\ker L)^\perp}$ 이므로 $M^+v = \left(M|_{(\ker M)^\perp} \right)^{-1}v$ 이다. 역시 @exr-LA_axler4_6_C_20 에서 보였듯이 $(\ker L^+)=(\text{im}(L))^\perp$ 이며 @cor-LA_dimension_relation_of_orthogonal_complement ($2$) 로부터
 $(\ker L^+)^\perp=\left((\text{im}(L))^\perp\right)^\perp = \text{im}(L)$ 이므로
 
 $$
@@ -1905,14 +1876,14 @@ $$
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_A_5}
+::: {#exr-LA_axler_6_A_5}
 #### Axler 6.A.5
 
 $T\in \mathcal{L}(V)$ 이며 모든 $v\in V$ 에 대해 $\|T(v)\|\le \|v\|$ 이다. 이 때 $T-\sqrt{2}I$ 는 가역임을 보여라.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1921,13 +1892,14 @@ $(T-\sqrt{2}I)(v)=0_V$ 라 하자. $v\ne 0_V$ 이면 $\|\sqrt{2}I(v)\|=\sqrt{2}\
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_A_6}
+::: {#exr-LA_axler_6_A_6}
 #### Axler 6.A.6
 
 $u,\,v\in V$ 일 때 $\langle u,\,v\rangle=0$ 일 필요충분조건은 모든 $a\in \mathbb{F}$ 에 대해 $\|u\| \le\|u+av\|$ 임을 보여라.
 
 :::
-</div></br>
+
+</div>
 
 ::: {.solution}
 $\langle u,\,v\rangle =0$ 이면 $\|u+av\|^2-\|u\|^2 = |a|^2\|v\|^2 \ge 0$ 이다.  따라서 $\|u+av\| \ge \|u\|$ 이다.
@@ -1950,7 +1922,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_A_9}
+::: {#exr-LA_axler_6_A_9}
 
 #### Axler 6.A.9
 
@@ -1961,7 +1933,7 @@ $$
 $$
 
 :::
-</div><./br>
+</div>
 
 ::: {.solution}
 
@@ -1979,7 +1951,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_A_11}
+::: {#exr-LA_axler_6_A_11}
 
 #### Axler 6.A.11
 
@@ -1991,7 +1963,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -2005,7 +1977,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_A_18}
+::: {#exr-LA_axler_6_A_18}
 
 #### Axler 6.A.18
 
@@ -2013,7 +1985,7 @@ $p>0$ 라고 하자. $\mathbb{R}^2$ 에서 노름이 $\|(x,\,y)\| = (x^p+y^p)^{1
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -2023,7 +1995,7 @@ $u=(1, 0), v=(0, 1)$ 이라 하자. $\|u+v\|^2+\|u-v\|^2 = 2\|u\|^2+2\|v\|^2$ �
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler-6_A_19_20}
+::: {#exr-LA_axler-6_A_19_20}
 
 내적벡터공간에서 내적을 노름의 합으로 표현 할 수 있다. 
 
@@ -2041,7 +2013,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -2072,13 +2044,13 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-operator_orthogonal_to_every_vector}
+::: {#exr-LA_operator_orthogonal_to_every_vector}
 
 내적 $\mathbb{F}$-벡터공간에서 정의된 연산자 $T\in \mathcal{L}(V)$ 가 모든 $v\in V$ 에 대해 $\langle Tv,\,v\rangle = 0$ 이면 $T=0$ 임을 보여라.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -2103,7 +2075,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_A_22}
+::: {#exr-LA_axler_6_A_22}
 $a_1,\ldots,\,a_n\in\mathbb{R}$ 에 대해 다음이 성립함을 보이시오.
 
 $$
@@ -2112,7 +2084,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -2127,7 +2099,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_A_27}
+::: {#exr-LA_axler_6_A_27}
 
 #### Alxer 6.A.27, 28
 벡터공간 $V$ 의 부분집합 $C$ 가 $u,\,v\in C \implies \frac{1}{2}(u+v)\in C$ 를 만족한다고 하자. 이 때 임의의 $w\in V$ 에 대해 $\|w-v\|$ 를 최소로 하는 $u\in C$ 가 많아야 하나만 존재한다는 것을 보여라. 이것을 보이기 위해 우선 $u,\,v,\,w\in V$ 에 대해
@@ -2140,7 +2112,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution} 
 
@@ -2166,7 +2138,7 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_B_4}
+::: {#exr-LA_axler_6_B_4}
 
 $[-\pi,\,\pi]$ 구간에서 연속인 $\mathbb{R}\mapsto\mathbb{R}$ 함수의 집합 $C_{[-\pi,\pi]}$ 는 벡터공간이며 여기에 내적을 다음과 같이 부여하면 내적벡터공간이 된다.
 
@@ -2184,7 +2156,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -2205,8 +2177,9 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_B_10}
+::: {#exr-LA_axler_6_B_10}
 
+#### Axler 6.B.10
 내적벡터공간 $V$ 에서 선형독립인 $\{v_1,\ldots,\,v_m\}$ 를 생각하자. 이 때, 
 
 $$
@@ -2217,7 +2190,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -2246,13 +2219,15 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_B_11}
+::: {#exr-LA_axler_6_B_11}
+
+#### Axler 6.B.11
 
 벡터 공간 $V$ 에 두가지의 내적 ${\langle \cdot ,\cdot \rangle}_1$ 과 ${\langle \cdot,  \cdot \rangle}_2$ 가 부여되며 $\langle v, w\rangle_1 = 0 \iff \langle v, w\rangle_2=0$ 가 성립한다면 모든 $v,\,w\in V$ 에 대해 어떤 상수 $c$ 가 존재하여 $\langle v, w \rangle_1 = c\langle v, w \rangle_2$ 이어야 함을 보여라.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -2264,13 +2239,15 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_B_12}
+::: {#exr-LA_axler_6_B_12}
+
+#### Axler 6.B.12
 
 유한차원 벡터공간 $V$ 에 두가지의 내적 ${\langle \cdot , \cdot \rangle}_1$ 과 ${\langle \cdot,  \cdot \rangle}_2$ 가 부여되었다고 하자. 각각의 내적에 대한 노름 $\| \cdot \|_1$ 과 $\|\cdot \|_2$ 을 생각 할 수 있다. 이 때 어떤 양수 $c$ 가 존재하여 모든 $v\in V$ 에 대해 $\|v\|_1 \le c\|v\|_2$ 가 성립함을 보여라.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -2298,13 +2275,15 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_B_13}
+::: {#exr-LA_axler_6_B_13}
+
+#### Axler 6.B.13
 
 내적벡터공간 $V$ 에 대해 $\{v_1,\ldots,\,v_m\}\in V$ 는 선형독립이다. 모든 $i=1,\ldots,m$ 에 대해 $\langle w, v_i\rangle >0$ 인 $w\in V$ 가 존재함을 보여라.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -2335,7 +2314,9 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_B_14}
+::: {#exr-LA_axler_6_B_14}
+
+#### Axler 6.B.14
 
 $\{e_1,\ldots,\,e_n\}$ 이 $V$ 의 정규직교기저이며 $\{v_1,\ldots,\,v_n\} \subset V$ 는
 
@@ -2347,7 +2328,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -2376,7 +2357,9 @@ $$
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_B_15}
+::: {#exr-LA_axler_6_B_15}
+
+#### Axler 6.B.15
 
 $C_{[-1, 1]}$ 은 $[-1,\,1]$ 구간에서 연속인 실함수의 집합이며 여기서의 내적 $\langle f,\, g \rangle$ 은 다음과 같이 정의되었다.
 
@@ -2388,7 +2371,7 @@ $\phi \in \mathcal{L}(C_{[-1, 1]}, \mathbb{R})$ 이 $\phi (f) = 0$ 으로 정의
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -2398,13 +2381,15 @@ $\phi \in \mathcal{L}(C_{[-1, 1]}, \mathbb{R})$ 이 $\phi (f) = 0$ 으로 정의
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_C_2}
+::: {#exr-LA_axler_6_C_2}
+
+#### Axler 6.C.2
 
 $U$ 가 $V$ 의 유한차원 부분공간일 때 $U^\perp = \{0_V\} \iff U=V$ 임을 보여라. 
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -2415,13 +2400,15 @@ $U^\perp = \{0_V\}$ 이면 $U$ 의 정규직교기저 $\mathcal{B}=\{e_1,\ldots,
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_6_C_7}
+::: {#exr-LA_axler_6_C_7}
+
+#### Axler 6.C.7
 
 유한차원 내적공간 $V$ 에 대해 $P\in \mathcal{L}(V)$ 가 $P^2=P$ 이며 $\ker (P)$ 의 모든 벡터는 $\text{im}(P)$ 의 모든 벡터에 대해 직교한다고 하자. 그렇다면 어떤 $U\le V$ 에 대해 $P=P_U$ 임을 보이시오.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 

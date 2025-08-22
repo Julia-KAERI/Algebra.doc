@@ -193,7 +193,7 @@ $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한�
 
 ($3$) @thm-LA_kernel_image_of_adjoint_operator 과 ($2$) 로부터 $\text{im}(\bf{A}^\ast \bf{A}) = (\ker(\bf{A}^\ast \bf{A}))^\perp = (\ker (\bf{A}))^\perp = \text{im}(\bf{A}^\ast)$ 임을 안다. 
 
-($4$) @exr-axler4th_7_A_7 로부터 $\text{rank}(\bf{A}) = \text{rank}(\bf{A}^\ast)$. ($3$) 으로부터 $\text{rank}(\bf{A}^\ast) = \text{rank}(\bf{A}^\ast \bf{A})$. $\square$
+($4$) @exr-LA_axler4th_7_A_7 로부터 $\text{rank}(\bf{A}) = \text{rank}(\bf{A}^\ast)$. ($3$) 으로부터 $\text{rank}(\bf{A}^\ast) = \text{rank}(\bf{A}^\ast \bf{A})$. $\square$
 
 :::
 

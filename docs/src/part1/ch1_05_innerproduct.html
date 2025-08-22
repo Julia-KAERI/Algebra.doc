@@ -351,7 +351,7 @@ window.Quarto = {
   <li><a href="#sec-jordan_von_neumann_theorem" id="toc-sec-jordan_von_neumann_theorem" class="nav-link" data-scroll-target="#sec-jordan_von_neumann_theorem"><span class="header-section-number">5.4</span> 조르당-폰 노이만 정리</a></li>
   <li><a href="#직교-여공간-orthogonal-complement-과-orthogonal-projection" id="toc-직교-여공간-orthogonal-complement-과-orthogonal-projection" class="nav-link" data-scroll-target="#직교-여공간-orthogonal-complement-과-orthogonal-projection"><span class="header-section-number">5.5</span> 직교 여공간 (Orthogonal complement) 과 Orthogonal projection</a>
   <ul class="collapse">
-  <li><a href="#직교-여공간-sec-la_orthogonal_complement" id="toc-직교-여공간-sec-la_orthogonal_complement" class="nav-link" data-scroll-target="#직교-여공간-sec-la_orthogonal_complement"><span class="header-section-number">5.5.1</span> 직교 여공간 (#sec-LA_orthogonal_complement)</a></li>
+  <li><a href="#sec-LA_orthogonal_complement" id="toc-sec-LA_orthogonal_complement" class="nav-link" data-scroll-target="#sec-LA_orthogonal_complement"><span class="header-section-number">5.5.1</span> 직교 여공간</a></li>
   <li><a href="#sec-LA_orthogonal_projection" id="toc-sec-LA_orthogonal_projection" class="nav-link" data-scroll-target="#sec-LA_orthogonal_projection"><span class="header-section-number">5.5.2</span> Orthogonal projection</a></li>
   </ul></li>
   <li><a href="#최소화문제와-의사역행렬" id="toc-최소화문제와-의사역행렬" class="nav-link" data-scroll-target="#최소화문제와-의사역행렬"><span class="header-section-number">5.6</span> 최소화문제와 의사역행렬</a>
@@ -435,7 +435,7 @@ window.Quarto = {
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-LA_euclidean_innerproduct" class="theorem example">
-<p><span class="theorem-title"><strong>보기 5.2 (유클리드 공간)</strong></span> <span class="math inline">\(\mathbb{R}^n\)</span> 에서 <span class="math inline">\(x = (x_1,\ldots,\,x_n)\)</span>, <span class="math inline">\(y=(y_1,\ldots,\,y_n)\in \mathbb{R}^n\)</span> 의 내적을 <span class="math inline">\(\langle x,\, y \rangle =  \sum_{i=1}^n x_i y_i\)</span> 로 정의할 수 있으며 이렇게 내적이 정의된 공간을 <strong>유클리드 공간 (Euclidean sapce)</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>보기 5.2 (스칼라곱과 유클리드 공간)</strong></span> <span class="math inline">\(\mathbb{R}^n\)</span> 에서 <span class="math inline">\(x = (x_1,\ldots,\,x_n)\)</span>, <span class="math inline">\(y=(y_1,\ldots,\,y_n)\in \mathbb{R}^n\)</span> 의 내적을 <span class="math inline">\(\langle x,\, y \rangle =  \sum_{i=1}^n x_i y_i\)</span> 로 정의할 수 있으며 이렇게 정의된 내적을 <strong>스칼라곱(scalar product)</strong> 혹은 <strong>dot product</strong> 라고 하고, 이렇게 스칼라곱으로 내적이 정의된 <span class="math inline">\(\mathbb{R}^n\)</span> 을 <strong>유클리드 공간 (Euclidean sapce)</strong> 이라고 한다.</p>
 </div>
 </div>
 <p><br></p>
@@ -820,7 +820,7 @@ u_k = v_{k} - \sum_{j=1}^{k-1} \text{Proj}_{e_j} v_k = v_k-\sum_{j=1}^{k-1} \lef
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Reitz 의 표현정리는 유한차원 내적벡터공간에서만 성립하며 무한차원에서는 성립하지 않는다. <a href="#exr-axler_6_B_15" class="quarto-xref">연습문제&nbsp;<span>5.33</span></a> 를 보라.</p>
+<p>Reitz 의 표현정리는 유한차원 내적벡터공간에서만 성립하며 무한차원에서는 성립하지 않는다. <a href="#exr-LA_axler_6_B_15" class="quarto-xref">연습문제&nbsp;<span>5.33</span></a> 를 보라.</p>
 </div>
 </div>
 </div>
@@ -975,8 +975,8 @@ g(x)-g(x_0) = \phi(xu, v) - \phi (x_0u, v) = \phi((x-x_0)u, v)
 </section>
 <section id="직교-여공간-orthogonal-complement-과-orthogonal-projection" class="level2" data-number="5.5">
 <h2 data-number="5.5" class="anchored" data-anchor-id="직교-여공간-orthogonal-complement-과-orthogonal-projection"><span class="header-section-number">5.5</span> 직교 여공간 (Orthogonal complement) 과 Orthogonal projection</h2>
-<section id="직교-여공간-sec-la_orthogonal_complement" class="level3" data-number="5.5.1">
-<h3 data-number="5.5.1" class="anchored" data-anchor-id="직교-여공간-sec-la_orthogonal_complement"><span class="header-section-number">5.5.1</span> 직교 여공간 (#sec-LA_orthogonal_complement)</h3>
+<section id="sec-LA_orthogonal_complement" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="sec-LA_orthogonal_complement"><span class="header-section-number">5.5.1</span> 직교 여공간</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1168,7 +1168,7 @@ u = \left( u - \dfrac{\varphi (u)}{\varphi (v)} v \right) + \dfrac{\varphi(u)}{\
 <p>이며, 이로부터 우리는 임의의 <span class="math inline">\(\varphi \in V^\ast\)</span> 에 대해 내적으로 표현되는 <span class="math inline">\(\varphi_v\)</span> 를 얻었다. 즉 <span class="math inline">\(\Phi\)</span> 는 전사이며, 따라서 <span class="math inline">\(\Phi\)</span> 는 전단사이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p><span class="math inline">\(\mathbb{F}=\mathbb{R}\)</span> 일 경우는 <span class="math inline">\(\Phi\)</span> 가 선형사상이 되어 쉽게 풀 수 있다. <a href="#exr-axler4_6_C_13" class="quarto-xref">연습문제&nbsp;<span>5.11</span></a> 을 보라.</p>
+<p><span class="math inline">\(\mathbb{F}=\mathbb{R}\)</span> 일 경우는 <span class="math inline">\(\Phi\)</span> 가 선형사상이 되어 쉽게 풀 수 있다. <a href="#exr-LA_axler4_6_C_13" class="quarto-xref">연습문제&nbsp;<span>5.11</span></a> 을 보라.</p>
 <p><br></p>
 </section>
 </section>
@@ -1192,7 +1192,7 @@ u = \left( u - \dfrac{\varphi (u)}{\varphi (v)} v \right) + \dfrac{\varphi(u)}{\
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_distance_to_subspace" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 5.13</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 내적벡터공간이고 <span class="math inline">\(v\in V\)</span>, 이며 <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 부분공간일 때, <span class="math inline">\(v\)</span> 에서 <span class="math inline">\(U\)</span> 까지의 거리는 <span class="math inline">\(v\)</span> 에서 <span class="math inline">\(P_U (v)\)</span> 까지의 거리와 같다. 즉,</p>
@@ -1202,7 +1202,6 @@ u = \left( u - \dfrac{\varphi (u)}{\varphi (v)} v \right) + \dfrac{\varphi(u)}{\
 <p>이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>임의의 <span class="math inline">\(u\in U\)</span> 에 대해 <span class="math inline">\(\|v-P_U (v)\| \le \|v-u\|\)</span> 임을 보이면 된다. <span class="math inline">\(\|P_Uv - u\| \ge 0\)</span> 이므로,</p>
 <p><span class="math display">\[
@@ -1242,9 +1241,8 @@ Lx = b
 <p><span class="theorem-title"><strong>명제 5.14</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 일 때 <span class="math inline">\(L|_{(\ker (L))^\perp}\)</span> 는 <span class="math inline">\((\ker L)^\perp \mapsto \text{im}(L)\)</span> 동형사상이다.</p>
 </div>
 </div>
-<p><br></p>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(L|_{(\ker (L))^\perp}\)</span> 가 <span class="math inline">\((\ker (L))^\perp \mapsto \text{im}(L)\)</span> 전단사 임을 보이면 된다. <span class="math inline">\(v\in \ker \left(L|_{(\ker (L))^\perp}\right)\)</span> 이면 <span class="math inline">\(v\in (\ker (L))^\perp \cap \ker (L)\)</span> 이므로 <span class="math inline">\(v=0\)</span> 이다. 즉 <span class="math inline">\(L|_{(\ker (L))^\perp}\)</span> 는 단사이다.</p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(L|_{(\ker (L))^\perp}\)</span> 가 <span class="math inline">\((\ker (L))^\perp \mapsto \text{im}(L)\)</span> 전단사 임을 보이면 된다. <span class="math inline">\(v\in \ker \left(L|_{(\ker (L))^\perp}\right)\)</span> 이면 <span class="math inline">\(v\in (\ker (L))^\perp \cap \ker (L)\)</span> 이므로 <span class="math inline">\(v=0\)</span> 이다. 즉 <span class="math inline">\(L|_{(\ker (L))^\perp}\)</span> 는 단사이다.</p>
 <p>또한 <span class="math inline">\(\text{im}\left( L|_{(\ker (L))^\perp}\right) \subset \text{im}(L)\)</span> 임은 자명하다. <span class="math inline">\(w\in \text{im}(L)\)</span> 이면 <span class="math inline">\(w = Lv\)</span> 인 <span class="math inline">\(v\in \mathcal{M}_{n}(\mathbb{F})\)</span> 가 존재하며 <a href="#prp-LA_generated_subspace_and_orthogonal_compliment" class="quarto-xref">명제&nbsp;<span>5.9</span></a> 에 따라 어떤 <span class="math inline">\(x\in\ker L,\, (\ker L)^\perp\)</span> 에 대해 <span class="math inline">\(v=x+y\)</span> 이다. 이 때 <span class="math inline">\(L|_{(\ker (L))^\perp} y = w\)</span> 이므로 <span class="math inline">\(w\in \text{im}\left( L|_{(\ker (L))^\perp}\right)\)</span> 이며 따라서 <span class="math inline">\(\text{im}\left( L|_{(\ker (L))^\perp}\right) = \text{im}(L)\)</span> 이다. 즉 <span class="math inline">\(L\in \mathcal{M}_{m\times n}(\mathbb{F})\)</span> 전사이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
@@ -1269,7 +1267,7 @@ L^+ w = \left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1} P_{\text{im}(L)} w.
 </div>
 </div>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-LA_pseudoinverse_2" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 5.6</strong></span> 위의 <a href="#def-LA_pseudo_inverse" class="quarto-xref">정의&nbsp;<span>5.9</span></a> 에서</p>
@@ -1277,7 +1275,6 @@ L^+ w = \left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1} P_{\text{im}(L)} w.
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(w\in \text{im}(L)\)</span> 이면 <span class="math inline">\(Ly = w\)</span> 를 만족하는 <span class="math inline">\(y\in (\ker L)^\perp\)</span> 는 <span class="math inline">\(y=L^+w\)</span> 가 유일하다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(w\in (\text{im}(L))^\perp\)</span> 이면 <span class="math inline">\(P_{\text{im}(L)}w=0_W\)</span> 이므로 <span class="math inline">\(L^+w=0_V\)</span> 이다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(w\in \text{im}(L)\)</span> 이면 <span class="math inline">\(P_{\text{im}(L)}w=w\)</span> 이다. <span class="math inline">\(V = (\ker L) \oplus (\ker L)^\perp\)</span> 이므로 모든 <span class="math inline">\(x\in \ker L\)</span> 과 어떤 유일한 <span class="math inline">\(y\in (\ker L)^\perp\)</span> 에 대해 <span class="math inline">\(w=L(x+y)\)</span> 이며 <span class="math inline">\(\left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1}w=y\)</span> 이므로 <span class="math inline">\(LL^+w = Ly = w\)</span> 이다. <span class="math inline">\(\square\)</span></p>
@@ -1291,7 +1288,6 @@ L^+ w = \left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1} P_{\text{im}(L)} w.
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(L^+L = P_{(\ker (L))^\perp}\)</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 이 가역사상이면 <span class="math inline">\(\ker L = \{0_V\}\)</span> 이므로 <span class="math inline">\((\ker L)^\perp = V\)</span> 이고 <span class="math inline">\(P_{\text{im}(L)} = P_W = I\)</span> 이다. 따라서 <span class="math inline">\(L^+ = L^{-1}\)</span> 이다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(w\in \text{im}(L)\)</span> 이면 <a href="#lem-LA_pseudoinverse_2" class="quarto-xref">보조정리&nbsp;<span>5.6</span></a> (<span class="math inline">\(2\)</span>) 에서 보였듯이 <span class="math inline">\(LL^+w = w\)</span> 이다. <span class="math inline">\(w\in (\text{im}(L))^\perp\)</span> 이면 역시 <a href="#lem-LA_pseudoinverse_2" class="quarto-xref">보조정리&nbsp;<span>5.6</span></a> (<span class="math inline">\(2\)</span>) 에서 보였듯이 <span class="math inline">\(LL^+w=0_W\)</span> 이다. 즉 <span class="math inline">\(LL^+ = P_{\text{im}(L)}\)</span> 이다.</p>
@@ -1307,7 +1303,6 @@ L^+ w = \left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1} P_{\text{im}(L)} w.
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 이 단사이면 <span class="math inline">\(L^+L=I_V\)</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><em>trivial</em></p>
 </div>
@@ -1319,7 +1314,6 @@ L^+ w = \left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1} P_{\text{im}(L)} w.
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(x\in L^+ b+\ker L\)</span> 이면 <span class="math inline">\(\|L^+b\|\le \|x\|\)</span> 이며 등호는 <span class="math inline">\(x=L^+b\)</span> 일 때만 성립한다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(x\in V\)</span> 에 대해 <span class="math inline">\(Lx-b = (Lx - LL^+b) + (LL^+b -b)\)</span> 이다. <a href="#lem-LA_pseudoinverse_3" class="quarto-xref">보조정리&nbsp;<span>5.7</span></a> (<span class="math inline">\(2\)</span>) 에 따라 <span class="math inline">\((Lx-LL^+b) \in \text{im} (L)\)</span> 이며 <span class="math inline">\((LL^+b - b)\in (\text{im}L)^\perp\)</span> 이다. 따라서</p>
 <p><span class="math display">\[
@@ -1351,31 +1345,29 @@ L^+ w = \left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1} P_{\text{im}(L)} w.
 <section id="연습문제" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler4_6_C_1" class="theorem exercise">
+<div id="exr-LA_axler4_6_C_1" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.1 (Axler4th 6.C.1)</strong></span> <span class="math inline">\(v_1,\ldots\,v_m\in V\)</span> 일 때 다음을 보여라.</p>
 <p><span class="math display">\[
 \{v_1,\ldots,\,v_m\}^\perp = \left(\text{span}(v_1,\ldots,\,v_m)\right)^\perp.
 \]</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(x\in\{v_1,\ldots,\,v_m\}^\perp\)</span> 이면 임의의 <span class="math inline">\(v\in \text{span}(v_1,\ldots,\,v_m)\)</span> 에 대해 <span class="math inline">\(\langle x,\, v\rangle = \left\langle x,\, \sum_{j=1}^m v_j\right\rangle = 0\)</span> 이므로 <span class="math inline">\(x\in \left(\text{span}(v_1,\ldots,\,v_m)\right)^\perp\)</span> 이다. 즉 <span class="math inline">\(\{v_1,\ldots,\,v_m\}^\perp \subset \left(\text{span}(v_1,\ldots,\,v_m)\right)^\perp\)</span> 이다.</p>
 <p><span class="math inline">\(y \in \left(\text{span}(v_1,\ldots,\,v_m)\right)^\perp\)</span> 이면 당연히 <span class="math inline">\(i=1,\ldots,\,m\)</span> 에 대해 <span class="math inline">\(\langle y,\,v_i\rangle = 0\)</span> 이므로 <span class="math inline">\(y\in \{v_1,\ldots,\,v_m\}^\perp\)</span> 이다. 즉 <span class="math inline">\(\left(\text{span}(v_1,\ldots,\,v_m)\right)^\perp \subset\{v_1,\ldots,\,v_m\}^\perp\)</span> 이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler4_6_C_2" class="theorem exercise">
+<div id="exr-LA_axler4_6_C_2" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.2 (Axler4th 6.C.2)</strong></span> <span class="math inline">\(U\le V\)</span> 이고 <span class="math inline">\((u_1,\ldots,\,u_m)\)</span> 이 <span class="math inline">\(U\)</span> 의 기저이며 <span class="math inline">\((u_1,\ldots,\,u_m,\,v_1,\ldots,\,v_n)\)</span> 이 <span class="math inline">\(V\)</span> 의 기저라고 하자. 그람 슈미트 과정이 여기에 적용되어 정규직교기저 <span class="math inline">\((e_1,\ldots,\,e_m,\, f_1,\ldots,\,f_n)\)</span> 을 구성한다면 <span class="math inline">\((e_1,\ldots,\,e_m)\)</span> 은 <span class="math inline">\(U\)</span> 의 정규직교기저이며 <span class="math inline">\((f_1,\ldots,\,f_m)\)</span> 은 <span class="math inline">\(U^\perp\)</span> 의 정규직교기저임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>그람 슈미트 과정에서 우리는 <span class="math inline">\(\text{span}(u_1,\ldots,\,u_m) = \text{span}(e_1,\ldots,e_m)\)</span> 임을 안다. 따라서 <span class="math inline">\((e_1,\ldots,\,e_m)\)</span> 은 <span class="math inline">\(U\)</span> 의 정규직교기저이고, 이로부터 <span class="math inline">\((f_1,\ldots,\,f_m)\)</span> 은 <span class="math inline">\(U^\perp\)</span> 의 정규직교기저임을 안다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler4_6_C_4" class="theorem exercise">
+<div id="exr-LA_axler4_6_C_4" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.3 (Axler4th 6.C.4)</strong></span> <span class="math inline">\(e_1,\ldots,\,e_n \in V\)</span> 가 <span class="math inline">\(k=1,\ldots,\,n\)</span> 에 대해 <span class="math inline">\(\|e_k\|=1\)</span> 이며 모든 <span class="math inline">\(v\in V\)</span> 에 대해</p>
 <p><span class="math display">\[
 \|v\|^2 = |\langle v,\,e_1\rangle|^2 + \cdots + |\langle v,\,e_n\rangle|^2
@@ -1383,11 +1375,10 @@ L^+ w = \left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1} P_{\text{im}(L)} w.
 <p>라면 <span class="math inline">\(e_1,\ldots,\,e_n\)</span> 이 <span class="math inline">\(V\)</span> 의 정규직교기저임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(v=e_j\)</span> 라면 <span class="math inline">\(1=\|e_j\|^2 = \|e_j\|^2 + \sum_{i=1,\,i\ne j}^n |\langle e_j,\,e_i\rangle |^2\)</span> 이므로 <span class="math inline">\(|\langle e_i,\,e_j\rangle|^2 = \delta_{ij}\)</span> 이다. 즉 <span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 은 정규직교벡터이다. <span class="math inline">\(\dim (V)&gt; n\)</span> 이면 어떤 <span class="math inline">\(\|v\|^2 &gt; \sum_{i=1}^n |\langle v,\,e_i\rangle|^2\)</span> 이어야 하므로 <span class="math inline">\(\dim (V) = n\)</span> 이다. 즉 <span class="math inline">\((e_1,\ldots,\,e_n)\)</span> 은 <span class="math inline">\(V\)</span> 의 정규직교기저이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_6_C_5" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.4 (Axler4th 6.C.5)</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 벡터공간이며 <span class="math inline">\(U\le V\)</span> 이다. <span class="math inline">\(P_{U^\perp}= I-P_U\)</span> 임을 보여라.</p>
@@ -1397,31 +1388,29 @@ L^+ w = \left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1} P_{\text{im}(L)} w.
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(v=u+w,\, u\in U,\, w\in U^\perp\)</span> 가 유일하게 정해지며 <span class="math inline">\(P_U (v) = u\)</span> 이고, <span class="math inline">\(P_{U^\perp}=w\)</span> 이다. 따라서 <span class="math inline">\(P_{U^\perp} + P_U = I\)</span> 이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler4_6_C_6" class="theorem exercise">
+<div id="exr-LA_axler4_6_C_6" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.5 (Axler4th 6.C.6)</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 벡터공간이며 <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 일 때 다음이 성립함을 보여라.</p>
 <p><span class="math display">\[
 L = LP_{(\ker L)^\perp} = P_{\text{im}(L)}L
 \]</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>trivial</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler4_6_C_7" class="theorem exercise">
+<div id="exr-LA_axler4_6_C_7" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.6 (Axler4th 6.C.7)</strong></span> <span class="math inline">\(X,\,Y\)</span> 가 <span class="math inline">\(V\)</span> 의 유한차원 부분공간일 때 <span class="math inline">\(P_XP_Y=0\)</span> 일 필요충분조건은 모든 <span class="math inline">\(x\in X,\, y\in Y\)</span> 에 대해 <span class="math inline">\(\langle x,\,y\rangle =0\)</span> 인 것임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(P_XP_Y=0\)</span> 이면 <span class="math inline">\(Y \le X^\perp\)</span> 이므로 모든 <span class="math inline">\(x\in X,\, y\in Y\)</span> 에 대해 <span class="math inline">\(\langle x,\,y \rangle = 0\)</span> 이다.</p>
 <p>모든 <span class="math inline">\(x\in X,\, y\in Y\)</span> 에 대해 <span class="math inline">\(\langle x,\, y\rangle =0\)</span> 이면 <span class="math inline">\(P_XP_Y=0\)</span> 임은 자명하다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_6_C_8" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.7 (Axler4th 6.C.8)</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 유한차원 부분벡터공간이고 <span class="math inline">\(v\in V\)</span> 라고 하자. <span class="math inline">\(\varphi \in U^\ast\)</span> 를</p>
@@ -1435,17 +1424,15 @@ L = LP_{(\ker L)^\perp} = P_{\text{im}(L)}L
 <p>을 만족하는 <span class="math inline">\(w\in U\)</span> 가 존재해야 한다. <span class="math inline">\(w=P_Uv\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(V=U\oplus U^\perp\)</span> 이므로 <span class="math inline">\(v=x+y\)</span> 인 <span class="math inline">\(x\in U,\, y\in U^\perp\)</span> 가 유일하게 존재한다. <span class="math inline">\(\langle u,\,y\rangle = 0\)</span> 이므로 <span class="math inline">\(\langle u,\, v\rangle = \langle u,\,y\rangle\)</span> 이며 <span class="math inline">\(y=P_U v\)</span> 이므로 <span class="math inline">\(w=y=P_Uv\)</span> 이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_6_C_9" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.8 (Axler4th 6.C.9)</strong></span> 유한차원 내적 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 projection <span class="math inline">\(P\)</span> 가 모든 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\|Pv\| \le \|v\|\)</span> 라고 하자. <span class="math inline">\(P=P_U\)</span> 인 어떤 <span class="math inline">\(U\le V\)</span> 가 존재함을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(U = \text{im}(P)\)</span> 라고 하자. <span class="math inline">\(u\in U\)</span> 이면 어떤 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(u=Pv\)</span> 이다. 이 때</p>
 <p><span class="math display">\[
@@ -1453,7 +1440,7 @@ L = LP_{(\ker L)^\perp} = P_{\text{im}(L)}L
 \]</span></p>
 <p>이다. 또한 당연히 <span class="math inline">\(v\not\in U\)</span> 이면 <span class="math inline">\(\|Pv\|=\|0_V\| = 0\)</span> 이다. 따라서 <span class="math inline">\(P=P_U\)</span> 이다.</p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_6_C_11" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.9 (Axler4th 6.C.11)</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 유한차원 부분공간이며 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 일 때 다음이 동치임을 보여라.</p>
@@ -1461,7 +1448,6 @@ L = LP_{(\ker L)^\perp} = P_{\text{im}(L)}L
 <p> (<span class="math inline">\(b\)</span>) <span class="math inline">\(P_U L P_U = L P_U\)</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\implies b\)</span>) <span class="math inline">\(U\)</span> 가 <span class="math inline">\(L\)</span> 불변부분공간이라고 하자. <span class="math inline">\(v \in V\)</span> 에 대해 <span class="math inline">\(P_Uv = u \in U\)</span> 라 하자. <span class="math inline">\(P_ULP_U(v) = P_UL(u)=L(u)\)</span> 이며 <span class="math inline">\(LP_U(v)= L(u)\)</span> 이므로 <span class="math inline">\(P_ULP_U = LP_U\)</span> 이다.</p>
 <p>(<span class="math inline">\(b \implies a\)</span>) <span class="math inline">\(P_U L P_U = L P_U\)</span> 라고 하자. <span class="math inline">\(u\in U\)</span> 에 대해 <span class="math inline">\(Lu \not\in U\)</span> 이면 <span class="math inline">\(P_ULP_U \ne LP_U\)</span> 이므로 모순. 따라서 <span class="math inline">\(U\)</span> 는 <span class="math inline">\(L\)</span> 부분공간이다.</p>
@@ -1474,14 +1460,13 @@ L = LP_{(\ker L)^\perp} = P_{\text{im}(L)}L
 <p> (<span class="math inline">\(b\)</span>) <span class="math inline">\(P_UL = LP_U\)</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\implies b\)</span>) <span class="math inline">\(v\in V\)</span> 라면 어떤 <span class="math inline">\(x \in U,\, y\in U^\perp\)</span> 에 대해 <span class="math inline">\(v=x+y\)</span> 이며 이를 만족하는 <span class="math inline">\(x,\,y\)</span> 는 유일함을 안다. <span class="math inline">\(P_ULv = LP_Uv = Lx\)</span> 이다.</p>
 <p>(<span class="math inline">\(b\implies a\)</span>) <span class="math inline">\(P_UL = LP_U\)</span> 임을 가정하자. <span class="math inline">\(u\in U\)</span> 라면 <span class="math inline">\(LP_U u = Lu \in \text{im}{P_UL} \le U\)</span> 이므로 <span class="math inline">\(U\)</span> 는 <span class="math inline">\(L\)</span>-불변부분공간이다. <span class="math inline">\(v\in U^\perp\)</span> 라면 <span class="math inline">\(LP_U=0_V\)</span> 이므로 <span class="math inline">\(P_ULv=0_V\)</span> 이어야 하며 따라서 <span class="math inline">\(Lv\in U^\perp\)</span> 이다. 즉 <span class="math inline">\(U^\perp\)</span> 도 <span class="math inline">\(L\)</span>-불변부분공간이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler4_6_C_13" class="theorem exercise">
+<div id="exr-LA_axler4_6_C_13" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.11 (Axler4th 6.C.13)</strong></span> <span class="math inline">\(V\)</span> 는 유한차원 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간이며 각각의 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\varphi_v \in \mathcal{L}(V,\,\mathbb{R})\)</span> 을</p>
 <p><span class="math display">\[
 \varphi_v(u):= \langle u,\,v\rangle
@@ -1491,7 +1476,6 @@ L = LP_{(\ker L)^\perp} = P_{\text{im}(L)}L
 <p> (<span class="math inline">\(b\)</span>) (<span class="math inline">\(a\)</span>) 를 이용하여 <span class="math inline">\(v\mapsto \varphi_v\)</span> 가 <span class="math inline">\(V \mapsto V^\ast\)</span> 동형사상임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(v,\,v'\in V\)</span> 에 대해 <span class="math inline">\(\varphi_v=\varphi_{v'}\)</span> 이면 모든 <span class="math inline">\(u\in V\)</span> 에 대해 <span class="math inline">\(\langle u,\,v\rangle = \langle u,\,v'\rangle\)</span> 이므로 <span class="math inline">\(v=v'\)</span> 이다.</p>
 <p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(\Phi : V \to V^\ast\)</span> 를 <span class="math inline">\(\Phi(v) = \varphi_v\)</span> 라고 하자. <span class="math inline">\(v_1,\,v_2\in V,\, c\in \mathbb{R}\)</span> 에 대해 <span class="math inline">\(\Phi (v_1+cv_2) = \varphi_{v_1+cv_2}\)</span> 이며,</p>
@@ -1502,11 +1486,10 @@ L = LP_{(\ker L)^\perp} = P_{\text{im}(L)}L
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler4_6_C_14" class="theorem exercise">
+<div id="exr-LA_axler4_6_C_14" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.12 (Axler4th 6.C.14)</strong></span> <span class="math inline">\((e_1,\ldots,\,e_n)\)</span> 이 <span class="math inline">\(V\)</span> 의 정규직교기저라고 하자. 이 정규직교기저의 쌍대기저는 Reisz 의 표현정리 2 (<a href="#thm-LA_reisz_representation_theorem_2" class="quarto-xref">정리&nbsp;<span>5.6</span></a>) 에서의 범함수의 그것과 같음을 보여랴.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(e_i\)</span> 의 쌍대벡터를 <span class="math inline">\(e^\ast_i\)</span> 라고 하고 <span class="math inline">\(\varphi_i(u)= \langle u,\,e_i\rangle\)</span> 이라고 하자.</p>
 <p><span class="math display">\[
@@ -1516,7 +1499,7 @@ L = LP_{(\ker L)^\perp} = P_{\text{im}(L)}L
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler4_6_C_15" class="theorem exercise">
+<div id="exr-LA_axler4_6_C_15" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.13 (Axler4th 6.C.15)</strong></span> <span class="math inline">\(\mathbb{R}^4\)</span> 에서</p>
 <p><span class="math display">\[
 U = \text{span}((1,1,0,0),\, (1,1,1,2))
@@ -1524,7 +1507,6 @@ U = \text{span}((1,1,0,0),\, (1,1,1,2))
 <p>일 때 <span class="math inline">\(\|u-(1,2,3,4)\|\)</span> 를 최소화 하는 <span class="math inline">\(u\in U\)</span> 를 찾아라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(v=(1,2,3,4)\)</span> 라고 하자. <span class="math inline">\(e_1 = \left(\dfrac{1}{\sqrt{2}},\dfrac{1}{\sqrt{2}}, 0, 0\right)\)</span> 과 <span class="math inline">\(e_2 = \left(0,\,0,\dfrac{1}{\sqrt{5}},\dfrac{2}{\sqrt{5}}, 0, 0\right)\)</span> 는 <span class="math inline">\(U\)</span> 의 정규직교기저이며, <span class="math inline">\(\|u-(1,2,3,4)\|\)</span> 를 최소화 하는 <span class="math inline">\(u\)</span> 는 <span class="math inline">\(P_U(1,2,3,4)\)</span> 이므로,</p>
 <p><span class="math display">\[
@@ -1534,24 +1516,22 @@ u=\langle v,\,e_1\rangle e_1 + \langle v,\,e_2\rangle e_2 = \left(\dfrac{3}{2}, 
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler4_6_C_19" class="theorem exercise">
+<div id="exr-LA_axler4_6_C_19" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.14 (Axler4th 6.C.10)</strong></span> <span class="math inline">\(V\)</span> 는 유한차원 벡터공간이며 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 는 projection 이면 <span class="math inline">\(L^+=L\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(L\)</span> 이 projection 이므로 <span class="math inline">\(L^2=L\)</span> 이며 <span class="math inline">\(L = P_{\text{im}(L)}\)</span> 이다. 또한 <span class="math inline">\((\ker (L))^\perp = \text{im}(L)\)</span> 이므로 <span class="math inline">\(L|_{(\ker L)^\perp} = I|_{\text{im}(L)}\)</span> 이다. <a href="#def-LA_pseudo_inverse" class="quarto-xref">정의&nbsp;<span>5.9</span></a> 로 부터 <span class="math inline">\(L^+w = L\)</span> 이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler4_6_C_20" class="theorem exercise">
+<div id="exr-LA_axler4_6_C_20" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.15 (Axler4th 6.C.20)</strong></span> <span class="math inline">\(V\)</span> 가 유한차원벡터공간이며 <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 일 때 다음이 성립함을 보여라.</p>
 <p><span class="math display">\[
 \ker (L^+) = (\text{im}(L))^\perp\qquad \text{and} \qquad \text{im}(L^+) = (\ker L)^\perp,
 \]</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(\ker (L^+) = (\text{im}(L))^\perp\)</span> 를 보이자. <a href="#def-LA_pseudo_inverse" class="quarto-xref">정의&nbsp;<span>5.9</span></a> 로부터 <span class="math inline">\(L^+w = 0_V \iff P_{\text{im}(L)}= 0_V\)</span> 따라서 <span class="math inline">\(\ker (L^+) = (\text{im}(L))^\perp\)</span></p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\text{im}(L^+) = (\ker L)^\perp\)</span> 를 보이자.<span class="math inline">\(u\in \text{im}(L^+)\)</span> 이면 <span class="math inline">\(u\in \text{im}\left((L|_{(\ker L)^\perp})^{-1}\right)\)</span> 이므로 <span class="math inline">\(u\in (\ker L)^\perp\)</span> 이다. 즉 <span class="math inline">\(\text{im}(L^+) \subset (\ker L)^\perp\)</span> 이다.</p>
@@ -1563,14 +1543,13 @@ L^+w = \left(L|_{(\ker L)^\perp}\right)^{-1}P_{\text{im}L}w = \left(L|_{(\ker L)
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler4_6_C_22" class="theorem exercise">
+<div id="exr-LA_axler4_6_C_22" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.16 (Axler4th 6.C.22)</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 벡터공간이며 <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 일 때 다음이 성립함을 보여라.</p>
 <p><span class="math display">\[
 LL^+L = L,\qquad L^+LL^+ = L^+.
 \]</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><a href="#lem-LA_pseudoinverse_3" class="quarto-xref">보조정리&nbsp;<span>5.7</span></a> (<span class="math inline">\(2\)</span>) 로부터 <span class="math inline">\(LL^+=P_{\text{im}(L)}\)</span> 이므로</p>
 <p><span class="math display">\[
@@ -1583,25 +1562,24 @@ L^+LL^+ = P_{(\text{ker}L)^\perp} L^+ = L^+.
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler4_6_C_23" class="theorem exercise">
+<div id="exr-LA_axler4_6_C_23" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.17 (Axler4th 6.C.23)</strong></span> <span class="math inline">\(V,\,W\)</span> 가 유한차원 벡터공간이며 <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 일 때 다음이 성립함을 보여라.</p>
 <p><span class="math display">\[
 \left(L^+\right)^+ = L.
 \]</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(M=L^+\)</span> 라고 하면 <span class="math inline">\(M^+\in \mathcal{L}(W,\,V)\)</span> 이다. <span class="math inline">\(v\in V\)</span> 에 대해</p>
 <p><span class="math display">\[
 M^+v = \left(M|_{(\ker M)^\perp} \right)^{-1} P_{\text{im}(M)} v
 \]</span></p>
-<p><a href="#exr-axler4_6_C_20" class="quarto-xref">연습문제&nbsp;<span>5.15</span></a> 에서 보였듯이 <span class="math inline">\(\text{im}(M) = \text{im}(L^+) = (\ker L)^\perp\)</span> 이므로</p>
+<p><a href="#exr-LA_axler4_6_C_20" class="quarto-xref">연습문제&nbsp;<span>5.15</span></a> 에서 보였듯이 <span class="math inline">\(\text{im}(M) = \text{im}(L^+) = (\ker L)^\perp\)</span> 이므로</p>
 <p><span class="math display">\[
 P_{\text{im}(M)}v= P_{\text{im}(L^+)}v = P_{(\ker L)^\perp} v = 0_W
 \]</span></p>
 <p>이다. 즉 <span class="math inline">\(v\in \ker L \implies \left(L^+\right)^+v = 0_W\)</span> 이다.</p>
-<p>이제 <span class="math inline">\(v\in (\ker L)^\perp\)</span> 인 경우를 생각해보자. 앞서 보았듯이 <span class="math inline">\(P_{\text{im}(M)}=P_{(\ker L)^\perp}\)</span> 이므로 <span class="math inline">\(M^+v = \left(M|_{(\ker M)^\perp} \right)^{-1}v\)</span> 이다. 역시 <a href="#exr-axler4_6_C_20" class="quarto-xref">연습문제&nbsp;<span>5.15</span></a> 에서 보였듯이 <span class="math inline">\((\ker L^+)=(\text{im}(L))^\perp\)</span> 이며 <a href="#cor-LA_dimension_relation_of_orthogonal_complement" class="quarto-xref">따름정리&nbsp;<span>5.2</span></a> (<span class="math inline">\(2\)</span>) 로부터 <span class="math inline">\((\ker L^+)^\perp=\left((\text{im}(L))^\perp\right)^\perp = \text{im}(L)\)</span> 이므로</p>
+<p>이제 <span class="math inline">\(v\in (\ker L)^\perp\)</span> 인 경우를 생각해보자. 앞서 보았듯이 <span class="math inline">\(P_{\text{im}(M)}=P_{(\ker L)^\perp}\)</span> 이므로 <span class="math inline">\(M^+v = \left(M|_{(\ker M)^\perp} \right)^{-1}v\)</span> 이다. 역시 <a href="#exr-LA_axler4_6_C_20" class="quarto-xref">연습문제&nbsp;<span>5.15</span></a> 에서 보였듯이 <span class="math inline">\((\ker L^+)=(\text{im}(L))^\perp\)</span> 이며 <a href="#cor-LA_dimension_relation_of_orthogonal_complement" class="quarto-xref">따름정리&nbsp;<span>5.2</span></a> (<span class="math inline">\(2\)</span>) 로부터 <span class="math inline">\((\ker L^+)^\perp=\left((\text{im}(L))^\perp\right)^\perp = \text{im}(L)\)</span> 이므로</p>
 <p><span class="math display">\[
 \left(M|_{(\ker M)^\perp}\right)^{-1} = \left(\left.L^+\right|_{\text{im}(L)}\right)^{-1}
 \]</span></p>
@@ -1622,21 +1600,19 @@ v\in (\ker L)^\perp \implies \left(\left.L^+\right|_{\text{im}(L)}\right)^{-1}v 
 <section id="연습문제-1" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h2>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_A_5" class="theorem exercise">
+<div id="exr-LA_axler_6_A_5" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.18 (Axler 6.A.5)</strong></span> <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 이며 모든 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\|T(v)\|\le \|v\|\)</span> 이다. 이 때 <span class="math inline">\(T-\sqrt{2}I\)</span> 는 가역임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((T-\sqrt{2}I)(v)=0_V\)</span> 라 하자. <span class="math inline">\(v\ne 0_V\)</span> 이면 <span class="math inline">\(\|\sqrt{2}I(v)\|=\sqrt{2}\|v\| &gt; \|v\| \ge \|T(v)\|\)</span> 이므로 성립하지 않는다. <span class="math inline">\(\ker (T-\sqrt{2}I)=\{0_V\}\)</span> 이므로 가역이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_A_6" class="theorem exercise">
+<div id="exr-LA_axler_6_A_6" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.19 (Axler 6.A.6)</strong></span> <span class="math inline">\(u,\,v\in V\)</span> 일 때 <span class="math inline">\(\langle u,\,v\rangle=0\)</span> 일 필요충분조건은 모든 <span class="math inline">\(a\in \mathbb{F}\)</span> 에 대해 <span class="math inline">\(\|u\| \le\|u+av\|\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\langle u,\,v\rangle =0\)</span> 이면 <span class="math inline">\(\|u+av\|^2-\|u\|^2 = |a|^2\|v\|^2 \ge 0\)</span> 이다. 따라서 <span class="math inline">\(\|u+av\| \ge \|u\|\)</span> 이다.</p>
 <p>모든 <span class="math inline">\(a\in \mathbb{F}\)</span> 에 대해 <span class="math inline">\(\|u\|\le \|u+av\|\)</span> 라고 하자.</p>
@@ -1651,14 +1627,13 @@ v\in (\ker L)^\perp \implies \left(\left.L^+\right|_{\text{im}(L)}\right)^{-1}v 
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_A_9" class="theorem exercise">
+<div id="exr-LA_axler_6_A_9" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.20 (Axler 6.A.9)</strong></span> <span class="math inline">\(u,\,v\in V\)</span> 이고 <span class="math inline">\(\|u\|\le 1\)</span> 이며 <span class="math inline">\(\|v\|\le 1\)</span> 이면 다음이 성립함을 보여라.</p>
 <p><span class="math display">\[
 \sqrt{1-\|u\|^2}\sqrt{1-\|v\|^2} \le 1-|\langle u,\,v\rangle |.
 \]</span></p>
 </div>
 </div>
-<p>&lt;./br&gt;</p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>우선 <span class="math inline">\(\|u\|^2+\|v\|^2 \ge 2\|u\|\|v\|\)</span> 임을 안다. 또한 <span class="math inline">\(\|u\|\|v\| \ge |\langle u,\,v\rangle|\)</span> 임을 안다.</p>
 <p><span class="math display">\[
@@ -1671,14 +1646,13 @@ v\in (\ker L)^\perp \implies \left(\left.L^+\right|_{\text{im}(L)}\right)^{-1}v 
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_A_11" class="theorem exercise">
+<div id="exr-LA_axler_6_A_11" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.21 (Axler 6.A.11)</strong></span> 양수 <span class="math inline">\(a,\,b,\,c,\,d\)</span> 에 대해 다음이 성립함을 보여라.</p>
 <p><span class="math display">\[
 16 \le (a+b+c+d) \left( \dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}+\dfrac{1}{d} \right)
 \]</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(x,\,y\in \mathbb{R}^4\)</span> 이며 <span class="math inline">\(x=(\sqrt{a},\,\sqrt{b},\,\sqrt{c},\,\sqrt{d})\)</span>, <span class="math inline">\(y=(1/\sqrt{a},\,1/\sqrt{b},\,1/\sqrt{c}\,1/\sqrt{d})\)</span> 라 하면, <span class="math inline">\(|\langle x,\,y\rangle|^2 \le \|a\|^2\|b\|^2\)</span> 이므로,</p>
 <p><span class="math display">\[
@@ -1687,17 +1661,16 @@ v\in (\ker L)^\perp \implies \left(\left.L^+\right|_{\text{im}(L)}\right)^{-1}v 
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_A_18" class="theorem exercise">
+<div id="exr-LA_axler_6_A_18" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.22 (Axler 6.A.18)</strong></span> <span class="math inline">\(p&gt;0\)</span> 라고 하자. <span class="math inline">\(\mathbb{R}^2\)</span> 에서 노름이 <span class="math inline">\(\|(x,\,y)\| = (x^p+y^p)^{1/p}\)</span> 가 되도록 하는 노름은 <span class="math inline">\(p=2\)</span> 일 때만 존재함을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(u=(1, 0), v=(0, 1)\)</span> 이라 하자. <span class="math inline">\(\|u+v\|^2+\|u-v\|^2 = 2\|u\|^2+2\|v\|^2\)</span> 이므로, <span class="math inline">\(2 + (1+(-1)^p)^{2/p}= 4\)</span> 이어야 한다. 즉 <span class="math inline">\(1+(-1)^p = 2^{2/p}\)</span> 이어야 하며, 이를 만족하는 <span class="math inline">\(p\)</span> 는 <span class="math inline">\(2\)</span> 뿐이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler-6_A_19_20" class="theorem exercise">
+<div id="exr-LA_axler-6_A_19_20" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.23</strong></span> 내적벡터공간에서 내적을 노름의 합으로 표현 할 수 있다.</p>
 <p> (<span class="math inline">\(1\)</span>) 내적이 정의된 실벡터공간 <span class="math inline">\(V\)</span> 에서 <span class="math inline">\(u,\,v\in V\)</span> 에 대해 다음이 성랍함을 보여라.</p>
 <p><span class="math display">\[
@@ -1709,7 +1682,6 @@ v\in (\ker L)^\perp \implies \left(\left.L^+\right|_{\text{im}(L)}\right)^{-1}v 
 \]</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) 실벡터 공간에서 <span class="math inline">\(\langle u,\,v\rangle = \langle v,\, u\rangle\)</span> 이다. 따라서,</p>
 <p><span class="math display">\[
@@ -1732,11 +1704,10 @@ v\in (\ker L)^\perp \implies \left(\left.L^+\right|_{\text{im}(L)}\right)^{-1}v 
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-operator_orthogonal_to_every_vector" class="theorem exercise">
+<div id="exr-LA_operator_orthogonal_to_every_vector" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.24</strong></span> 내적 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간에서 정의된 연산자 <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 가 모든 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\langle Tv,\,v\rangle = 0\)</span> 이면 <span class="math inline">\(T=0\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(T\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(0\)</span> 라는 것은 모든 <span class="math inline">\(u,\,v \in V\)</span> 에 대해 <span class="math inline">\(\langle Tu,\,v\rangle =0\)</span> 인것과 동치이다. <span class="math inline">\(\mathbb{F}=\mathbb{R}\)</span> 일 경우,</p>
 <p><span class="math display">\[
@@ -1753,14 +1724,13 @@ v\in (\ker L)^\perp \implies \left(\left.L^+\right|_{\text{im}(L)}\right)^{-1}v 
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_A_22" class="theorem exercise">
+<div id="exr-LA_axler_6_A_22" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.25</strong></span> <span class="math inline">\(a_1,\ldots,\,a_n\in\mathbb{R}\)</span> 에 대해 다음이 성립함을 보이시오.</p>
 <p><span class="math display">\[
 \left(\dfrac{\sum_{i=1}^n a_n}{n}\right)^2 \le \dfrac{\sum_{i=1}^n a_n^2}{n}
 \]</span></p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(u,\,v\in \mathbb{R}^n\)</span> 을 <span class="math inline">\(u=(a_1,\ldots,\,a_n)\)</span>, <span class="math inline">\(v=(1,\ldots,\,1)\)</span> 이라 하자. <span class="math inline">\(\langle u,\,v\rangle = \sum a_n\)</span>, <span class="math inline">\(\|u\|\|v\| = \sqrt{n}\left(\sum a_n^2\right)\)</span> 이며 코시-슈바르츠 부등식에 따라 <span class="math inline">\(|\langle u, v \rangle | \le \|u\|\)</span> 이므로,</p>
 <p><span class="math display">\[
@@ -1770,7 +1740,7 @@ v\in (\ker L)^\perp \implies \left(\left.L^+\right|_{\text{im}(L)}\right)^{-1}v 
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_A_27" class="theorem exercise">
+<div id="exr-LA_axler_6_A_27" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.26 (Alxer 6.A.27, 28)</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 의 부분집합 <span class="math inline">\(C\)</span> 가 <span class="math inline">\(u,\,v\in C \implies \frac{1}{2}(u+v)\in C\)</span> 를 만족한다고 하자. 이 때 임의의 <span class="math inline">\(w\in V\)</span> 에 대해 <span class="math inline">\(\|w-v\|\)</span> 를 최소로 하는 <span class="math inline">\(u\in C\)</span> 가 많아야 하나만 존재한다는 것을 보여라. 이것을 보이기 위해 우선 <span class="math inline">\(u,\,v,\,w\in V\)</span> 에 대해</p>
 <p><span class="math display">\[
 \left\|w-\frac{1}{2}(u+v)\right\|^2 = \dfrac{\left(\|w-u\|^2 + \|w-v\|^2\right)}{2} - \dfrac{\|u-v\|^2}{4}
@@ -1778,7 +1748,6 @@ v\in (\ker L)^\perp \implies \left(\left.L^+\right|_{\text{im}(L)}\right)^{-1}v 
 <p>임을 보이고 필요하다면 이것을 이용하시오.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>평행사변형 공식 <span class="math inline">\(\|u+v\|^2 +\|u-v\|^2 = 2\|u\|^2+2\|v\|^2\)</span> 를 이용한다.</p>
 <p><span class="math display">\[
@@ -1796,7 +1765,7 @@ v\in (\ker L)^\perp \implies \left(\left.L^+\right|_{\text{im}(L)}\right)^{-1}v 
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_B_4" class="theorem exercise">
+<div id="exr-LA_axler_6_B_4" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 5.27</strong></span> <span class="math inline">\([-\pi,\,\pi]\)</span> 구간에서 연속인 <span class="math inline">\(\mathbb{R}\mapsto\mathbb{R}\)</span> 함수의 집합 <span class="math inline">\(C_{[-\pi,\pi]}\)</span> 는 벡터공간이며 여기에 내적을 다음과 같이 부여하면 내적벡터공간이 된다.</p>
 <p><span class="math display">\[
 \langle f,\, g\rangle = \int_{-\pi}^\pi f(x)\, g(x)\, dx.
@@ -1808,7 +1777,6 @@ v\in (\ker L)^\perp \implies \left(\left.L^+\right|_{\text{im}(L)}\right)^{-1}v 
 <p>는 <span class="math inline">\(C_{[-\pi,\,\pi]}\)</span> 에서의 정규직교벡터의 집합임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>계산해 보면</p>
 <p><span class="math display">\[
@@ -1823,15 +1791,14 @@ v\in (\ker L)^\perp \implies \left(\left.L^+\right|_{\text{im}(L)}\right)^{-1}v 
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_B_10" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.28</strong></span> 내적벡터공간 <span class="math inline">\(V\)</span> 에서 선형독립인 <span class="math inline">\(\{v_1,\ldots,\,v_m\}\)</span> 를 생각하자. 이 때,</p>
+<div id="exr-LA_axler_6_B_10" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 5.28 (Axler 6.B.10)</strong></span> 내적벡터공간 <span class="math inline">\(V\)</span> 에서 선형독립인 <span class="math inline">\(\{v_1,\ldots,\,v_m\}\)</span> 를 생각하자. 이 때,</p>
 <p><span class="math display">\[
 \text{span}(v_1,\ldots,\,v_j) = \text{span}(e_1,\ldots,\,e_j),\qquad \forall j=1,\ldots,\,m
 \]</span></p>
 <p>를 만족하는 정규직교벡터의 집합 <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 은 모두 <span class="math inline">\(2^m\)</span> 가지임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>Induction 을 통해 보이자. <span class="math inline">\(m=1\)</span> 일 경우 <span class="math inline">\(\text{span}(v_1)= \text{span}(e_1),\, \|e_1\|=1\)</span> 인 <span class="math inline">\(e_1\)</span> 은 <span class="math inline">\(\pm v_1 /\|v_1\|\)</span> 뿐이다. <span class="math inline">\(m=n\)</span> 일 때 성립함을 가정하자. 선형 독립인 <span class="math inline">\(\{v_1,\ldots,\,v_{n+1}\}\)</span> 을 생각한다. 가정에 의해</p>
 <p><span class="math display">\[
@@ -1849,22 +1816,20 @@ e_{n+1} = \dfrac{1}{c_{n+1}} \left(v_{n+1} - \sum_{k=1}^n \langle v_{n+1}, e_k\r
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_B_11" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.29</strong></span> 벡터 공간 <span class="math inline">\(V\)</span> 에 두가지의 내적 <span class="math inline">\({\langle \cdot ,\cdot \rangle}_1\)</span> 과 <span class="math inline">\({\langle \cdot,  \cdot \rangle}_2\)</span> 가 부여되며 <span class="math inline">\(\langle v, w\rangle_1 = 0 \iff \langle v, w\rangle_2=0\)</span> 가 성립한다면 모든 <span class="math inline">\(v,\,w\in V\)</span> 에 대해 어떤 상수 <span class="math inline">\(c\)</span> 가 존재하여 <span class="math inline">\(\langle v, w \rangle_1 = c\langle v, w \rangle_2\)</span> 이어야 함을 보여라.</p>
+<div id="exr-LA_axler_6_B_11" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 5.29 (Axler 6.B.11)</strong></span> 벡터 공간 <span class="math inline">\(V\)</span> 에 두가지의 내적 <span class="math inline">\({\langle \cdot ,\cdot \rangle}_1\)</span> 과 <span class="math inline">\({\langle \cdot,  \cdot \rangle}_2\)</span> 가 부여되며 <span class="math inline">\(\langle v, w\rangle_1 = 0 \iff \langle v, w\rangle_2=0\)</span> 가 성립한다면 모든 <span class="math inline">\(v,\,w\in V\)</span> 에 대해 어떤 상수 <span class="math inline">\(c\)</span> 가 존재하여 <span class="math inline">\(\langle v, w \rangle_1 = c\langle v, w \rangle_2\)</span> 이어야 함을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>영벡터가 아닌 <span class="math inline">\(w\in V\)</span> 를 고정하고 <span class="math inline">\(\phi_w (v) = \langle v,w\rangle_1,\, \psi_w(v) = \langle v, w\rangle_2\)</span> 라고 하자. <span class="math inline">\(\phi_w,\,\psi_w \in \mathcal{L}(V, \mathbb{F})\)</span> 이다. <span class="math inline">\(\ker (\phi_w) = \ker (\psi_w)\)</span> 이면 <a href="ch1_02_linear_map.html#exr-axler_3_B_30" class="quarto-xref">연습문제&nbsp;<span>2.8</span></a> 에서 보였듯이 어떤 <span class="math inline">\(c_w\in \mathbb{F}\)</span> 에 대해서 <span class="math inline">\(\phi_w (v) = c_w\psi_w (v)\)</span> 이다. 역시 영벡터가 아닌 <span class="math inline">\(u\in V\)</span> 를 고정하고 <span class="math inline">\(\phi_u(v)= \langle v, u\rangle_1\)</span>, <span class="math inline">\(\psi_u(v)= \langle v, u \rangle_2\)</span> 라고 하자. <span class="math inline">\(w\)</span> 를 고정했을 때와 같이 어떤 <span class="math inline">\(c_w\in\mathbb{F}\)</span> 에 대해 <span class="math inline">\(\phi _u (v) = c_u \psi_u (v)\)</span> 이다.</p>
 <p>내적의 정의에 의해 <span class="math inline">\(\phi_w(w)&gt;0, \psi_w(w)&gt;0\)</span> 이므로 <span class="math inline">\(c_w\)</span> 는 양의 실수이다. 같은 이유로 <span class="math inline">\(c_u\)</span> 도 양의 실수이다. 또한 내적의 정의로부터 <span class="math inline">\(\phi_u(w) = \overline{\phi_w(u)}\)</span> 이고 <span class="math inline">\(\psi_u (w)= \overline{\psi_w(u)}\)</span> 인데 전자로부터 <span class="math inline">\(c_u \psi_u (w) = c_w\overline{\psi_w(u)}\)</span> 이므로 <span class="math inline">\(c_u = c_w\)</span> 이다. <span class="math inline">\(c=c_w\)</span> 라고 하자. <span class="math inline">\(u, w\)</span> 는 영벡터가 아닌 임의의 <span class="math inline">\(V\)</span> 의 벡터이므로 <span class="math inline">\(\langle v, w \rangle_1 = c\langle v, w \rangle_2\)</span> 이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_B_12" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.30</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 두가지의 내적 <span class="math inline">\({\langle \cdot , \cdot \rangle}_1\)</span> 과 <span class="math inline">\({\langle \cdot,  \cdot \rangle}_2\)</span> 가 부여되었다고 하자. 각각의 내적에 대한 노름 <span class="math inline">\(\| \cdot \|_1\)</span> 과 <span class="math inline">\(\|\cdot \|_2\)</span> 을 생각 할 수 있다. 이 때 어떤 양수 <span class="math inline">\(c\)</span> 가 존재하여 모든 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\|v\|_1 \le c\|v\|_2\)</span> 가 성립함을 보여라.</p>
+<div id="exr-LA_axler_6_B_12" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 5.30 (Axler 6.B.12)</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 두가지의 내적 <span class="math inline">\({\langle \cdot , \cdot \rangle}_1\)</span> 과 <span class="math inline">\({\langle \cdot,  \cdot \rangle}_2\)</span> 가 부여되었다고 하자. 각각의 내적에 대한 노름 <span class="math inline">\(\| \cdot \|_1\)</span> 과 <span class="math inline">\(\|\cdot \|_2\)</span> 을 생각 할 수 있다. 이 때 어떤 양수 <span class="math inline">\(c\)</span> 가 존재하여 모든 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\|v\|_1 \le c\|v\|_2\)</span> 가 성립함을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((u_1,\ldots,\,u_n)\)</span> 을 <span class="math inline">\(\langle \cdot, \cdot \rangle_2\)</span> 에서의 정규직교기저라고 하고 <span class="math inline">\(M= \max\{{\|u_i\|_1} : i=1,\ldots,n\}\)</span> 이라고 하자. <span class="math inline">\(v=\sum_{i=1}^n a_i u_i\)</span> 라면 <span class="math inline">\(\|v\|_2 = \sqrt{\sum_{i=1}^n |a_i|^2}\)</span> 이며,</p>
 <p><span class="math display">\[
@@ -1882,11 +1847,10 @@ e_{n+1} = \dfrac{1}{c_{n+1}} \left(v_{n+1} - \sum_{k=1}^n \langle v_{n+1}, e_k\r
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_B_13" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.31</strong></span> 내적벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(\{v_1,\ldots,\,v_m\}\in V\)</span> 는 선형독립이다. 모든 <span class="math inline">\(i=1,\ldots,m\)</span> 에 대해 <span class="math inline">\(\langle w, v_i\rangle &gt;0\)</span> 인 <span class="math inline">\(w\in V\)</span> 가 존재함을 보여라.</p>
+<div id="exr-LA_axler_6_B_13" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 5.31 (Axler 6.B.13)</strong></span> 내적벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(\{v_1,\ldots,\,v_m\}\in V\)</span> 는 선형독립이다. 모든 <span class="math inline">\(i=1,\ldots,m\)</span> 에 대해 <span class="math inline">\(\langle w, v_i\rangle &gt;0\)</span> 인 <span class="math inline">\(w\in V\)</span> 가 존재함을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>그람 슈미트 방법을 통해 <span class="math inline">\(\{v_1,\ldots,\,v_m\}\)</span> 로부터 정규직교벡터 <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 을 얻을 수 있으며 이 벡터들은 다음의 성질을 만족한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\langle e_i, e_j \rangle = \delta_{ij}\)</span>,</p>
@@ -1903,15 +1867,14 @@ e_{n+1} = \dfrac{1}{c_{n+1}} \left(v_{n+1} - \sum_{k=1}^n \langle v_{n+1}, e_k\r
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_B_14" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.32</strong></span> <span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 이 <span class="math inline">\(V\)</span> 의 정규직교기저이며 <span class="math inline">\(\{v_1,\ldots,\,v_n\} \subset V\)</span> 는</p>
+<div id="exr-LA_axler_6_B_14" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 5.32 (Axler 6.B.14)</strong></span> <span class="math inline">\(\{e_1,\ldots,\,e_n\}\)</span> 이 <span class="math inline">\(V\)</span> 의 정규직교기저이며 <span class="math inline">\(\{v_1,\ldots,\,v_n\} \subset V\)</span> 는</p>
 <p><span class="math display">\[
 \| e_i - v_i \| &lt; \dfrac{1}{\sqrt{n}},\qquad i=1,\ldots,\,n
 \]</span></p>
 <p>을 만족한다고 하자. 이 때 <span class="math inline">\(\{v_1,\ldots,\,v_n\}\)</span> 은 <span class="math inline">\(V\)</span> 의 기저임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(u_1,\ldots,\,u_n\in V\)</span> 일 때 <span class="math inline">\(\|u_1+u_2\| \le \|u_1\| + \|u_2\|\)</span> 로부터</p>
 <p><span class="math display">\[
@@ -1929,35 +1892,32 @@ e_{n+1} = \dfrac{1}{c_{n+1}} \left(v_{n+1} - \sum_{k=1}^n \langle v_{n+1}, e_k\r
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_B_15" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.33</strong></span> <span class="math inline">\(C_{[-1, 1]}\)</span> 은 <span class="math inline">\([-1,\,1]\)</span> 구간에서 연속인 실함수의 집합이며 여기서의 내적 <span class="math inline">\(\langle f,\, g \rangle\)</span> 은 다음과 같이 정의되었다.</p>
+<div id="exr-LA_axler_6_B_15" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 5.33 (Axler 6.B.15)</strong></span> <span class="math inline">\(C_{[-1, 1]}\)</span> 은 <span class="math inline">\([-1,\,1]\)</span> 구간에서 연속인 실함수의 집합이며 여기서의 내적 <span class="math inline">\(\langle f,\, g \rangle\)</span> 은 다음과 같이 정의되었다.</p>
 <p><span class="math display">\[
 \langle f,\,g\rangle = \int_{-1}^1 f(x)\, g(x)\,dx.
 \]</span></p>
 <p><span class="math inline">\(\phi \in \mathcal{L}(C_{[-1, 1]}, \mathbb{R})\)</span> 이 <span class="math inline">\(\phi (f) = 0\)</span> 으로 정의 되었을 때 모든 <span class="math inline">\(f\in C_{[-1, 1]}\)</span> 에 대해 <span class="math inline">\(\phi (f)= \langle f,\, g\rangle\)</span> 을 만족하는 <span class="math inline">\(g\in C_{[-1, 1]}\)</span> 은 존재하지 않는다는 것을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><em>to be done.</em></p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_C_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.34</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 유한차원 부분공간일 때 <span class="math inline">\(U^\perp = \{0_V\} \iff U=V\)</span> 임을 보여라.</p>
+<div id="exr-LA_axler_6_C_2" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 5.34 (Axler 6.C.2)</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 유한차원 부분공간일 때 <span class="math inline">\(U^\perp = \{0_V\} \iff U=V\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(U^\perp = \{0_V\}\)</span> 이면 <span class="math inline">\(U\)</span> 의 정규직교기저 <span class="math inline">\(\mathcal{B}=\{e_1,\ldots,\,e_m\}\)</span> 에 대해 <span class="math inline">\(v\in V \implies v \in \text{span}(\mathcal{B})\)</span> 이므로 <span class="math inline">\(U=V\)</span> 이다. <span class="math inline">\(U=V\)</span> 라면 <span class="math inline">\(U^\perp \{0_V\}\)</span> 임은 자명하다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_6_C_7" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 5.35</strong></span> 유한차원 내적공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(P^2=P\)</span> 이며 <span class="math inline">\(\ker (P)\)</span> 의 모든 벡터는 <span class="math inline">\(\text{im}(P)\)</span> 의 모든 벡터에 대해 직교한다고 하자. 그렇다면 어떤 <span class="math inline">\(U\le V\)</span> 에 대해 <span class="math inline">\(P=P_U\)</span> 임을 보이시오.</p>
+<div id="exr-LA_axler_6_C_7" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 5.35 (Axler 6.C.7)</strong></span> 유한차원 내적공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(P^2=P\)</span> 이며 <span class="math inline">\(\ker (P)\)</span> 의 모든 벡터는 <span class="math inline">\(\text{im}(P)\)</span> 의 모든 벡터에 대해 직교한다고 하자. 그렇다면 어떤 <span class="math inline">\(U\le V\)</span> 에 대해 <span class="math inline">\(P=P_U\)</span> 임을 보이시오.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\ker (P)\)</span> 와 <span class="math inline">\(\text{im}(P)\)</span> 가 직교하므로 <a href="ch1_02_linear_map.html#thm-LA_rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a> 에 의해 <span class="math inline">\(\ker (P) \cap \text{im}(P) =\{0_V\}\)</span> 이다. 또한 <span class="math inline">\(\text{im}(P_U)=U\)</span> 이므로 <span class="math inline">\(U=\text{im}(P)\)</span> 라 놓으며 조건을 만족한다.</p>
 </div>

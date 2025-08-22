@@ -17,9 +17,8 @@ crossref:
 
 ## 정규연산자와 정규행렬
 
-</br>
-
 ### 정규 연산자와 행렬 {#sec-LA_normal_operator}
+
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-LA_normal_matrix}
 ### 정규 행렬
@@ -48,7 +47,7 @@ crossref:
 
 ::: {#prp-LA_condition_of_normal_matrix}
 
-$\bf{A}$ 가 정규행렬일 필요충분인 조건은 모든 $\bf{v}\in \mathcal{M}_{n }(\mathbb{F})$ 에 대해 $\|\bf{Av}\| = \|\bf{A}^\ast \bf{v}\|$ 이다.
+$M\in \mathcal{L}(V)$ 가 정규연산자일 필요충분인 조건은 모든 $v\in V$ 에 대해 $\|Mv\| = \|M^\ast v\|$ 인 것이다.
 :::
 
 </div>
@@ -56,10 +55,9 @@ $\bf{A}$ 가 정규행렬일 필요충분인 조건은 모든 $\bf{v}\in \mathca
 ::: {.proof}
 $$
 \begin{aligned}
-\bf{A} \text{ is normal} &\iff  \bf{A}^\ast \bf{A} - \bf{A}\bf{A}^\ast = \bf{0} \\
-&\iff \langle (\bf{A}^\ast \bf{A} - \bf{A}\bf{A}^\ast)\bf{v} ,\, \bf{v} \rangle  = \bf{0} \\
-&\iff \langle \bf{A}^\ast \bf{A} \bf{v},\, \bf{v} \rangle = \langle \bf{AA}^\ast \bf{v} ,\, \bf{v}\rangle \\
-& \iff \|\bf{Av}\|^2 = \|\bf{A}^\ast \bf{v}\|^2
+M \text{ is normal} &\iff \langle (M^\ast M - MM^\ast)v ,\, v \rangle  = 0 \\[0.3em]
+&\iff \langle M^\ast M v,\, v \rangle = \langle MM^\ast v ,\, v\rangle \\
+& \iff \|Mv\|^2 = \|M^\ast v\|^2
 \end{aligned}
 $$
 
@@ -69,15 +67,15 @@ $$
 
 ::: {#prp-LA_part1_properties_of_normal_operator}
 
-$\F$-벡터공간 $L\in \mathcal{L}(V)$ 가 정규연산자일 때 다음이 성립한다.
+$\F$-벡터공간 $V$ 에 대해 $M\in \mathcal{L}(V)$ 가 정규연산자일 때 다음이 성립한다.
 
-&emsp;($a$) $\ker (L) = \ker (L^\ast)$.
+&emsp;($a$) $\ker (M) = \ker (M^\ast)$.
 
-&emsp;($b$) $\text{im}(L) = \text{im} (L^\ast)$.
+&emsp;($b$) $\text{im}(M) = \text{im} (M^\ast)$.
 
-&emsp;($c$) $V = \ker (L) \oplus \text{im}(L)$.
+&emsp;($c$) $V = \ker (M) \oplus \text{im}(M)$.
 
-&emsp;($d$) $c\in \mathbb{F}$ 일 때 $L-c I$ 도 정규연산자이다.
+&emsp;($d$) $c\in \mathbb{F}$ 일 때 $M-c I$ 도 정규연산자이다.
 
 :::
 
@@ -88,16 +86,16 @@ $\F$-벡터공간 $L\in \mathcal{L}(V)$ 가 정규연산자일 때 다음이 성
 
 ($a$) @prp-LA_condition_of_normal_matrix
 
-($b$) $\text{im}(L) = (\ker (L^\ast))^\perp = (\ker (L))^\perp = \text{im}(L^\ast)$.
+($b$) $\text{im}(M) = (\ker (M^\ast))^\perp = (\ker (M))^\perp = \text{im}(M^\ast)$.
 
-($c$) $V=(\ker (L)) \oplus (\ker (L))^\perp = (\ker (L)) \oplus (\ker (L^\ast))^\perp = \ker (L)\oplus \text{im}(L)$
+($c$) $V=(\ker (M)) \oplus (\ker (M))^\perp = (\ker (M)) \oplus (\ker (M^\ast))^\perp = \ker (M)\oplus \text{im}(M)$
 
 ($d$) 
 
 $$
 \begin{aligned}
-(L-cI)(L-cI)^\ast &= (L-cI)(L^\ast - \overline{c}I) = LL^\ast - \overline{c}L + cL^\ast -|c|^2 \\[0.3em]
-&=L^\ast L  - \overline{c}L + cL^\ast -|c|^2 = (L-cI)^\ast (L-cI)
+(M-cI)(M-cI)^\ast &= (M-cI)(M^\ast - \overline{c}I) = MM^\ast - \overline{c}L + cM^\ast -|c|^2 \\[0.3em]
+&=M^\ast M  - \overline{c}M + cM^\ast -|c|^2 = (M-cI)^\ast (M-cI)
 \end{aligned}
 $$
 
@@ -108,34 +106,34 @@ $$
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_eigenvectors_or_normal_matrix_and_adjoint}
-$L$ 이 정규연산자이면 $L^\ast$ 와 같은 고유벡터를 가지며 이에 대한 고유값은 서로 복소 공액이다. 
+$M$ 이 정규연산자이면 $M^\ast$ 와 같은 고유벡터를 가지며 이에 대한 고유값은 서로 복소 공액이다. 
 :::
 
 </div>
 
 ::: {.proof}
-$L-cI$ 가 정규연산자이므로 @prp-LA_condition_of_normal_matrix 로부터 $0 = \|(L-cI)v\| = \|(L-cI)^\ast v\|$. $\square$ 
+$M-cI$ 가 정규연산자이므로 @prp-LA_condition_of_normal_matrix 로부터 $0 = \|(M-cI)v\| = \|(M-cI)^\ast v\|$. $\square$ 
 
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_orthogonality_of_normal_matrix}
-정규행렬 $\bf{A}$ 의 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.
+정규연산자 $M$ 의 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.
 :::
 
 </div>
 
 ::: {.proof}
-$\lambda_1,\,\lambda_2$ 가 서로 다른 $\bf{A}$ 의 고유값이고 이에 대한 고유벡터가 $\bf{v}_1,\,\bf{v}_2$ 라 하자.
+$M$ 의 고유값 $c_1,\,c_2$ 에 대한 고유벡터 $v_1,\,v_2$ 를 생각하자. 이 때 $c_1\ne c_2$ 이다.
 
 $$
 \begin{aligned}
-(\lambda_1-\lambda_2)\langle \bf{v}_1,\,\bf{v}_2\rangle &= \langle \bf{Av}_1,\,\bf{v}_2\rangle - \langle \bf{v}_1,\, \bf{A}^\ast \bf{v}_2 \rangle =  \langle \bf{Av}_1,\,\bf{v}_2\rangle - \langle \bf{A} \bf{v}_1,\, \bf{v}_2 \rangle = \bf{0}
+(c_1-c_2)\langle v_1,\,v_2\rangle &= \langle Mv_1,\,v_2\rangle - \langle v_1,\, M^\ast v_2 \rangle =  \langle Mv_1,\,v_2\rangle - \langle Mv_1,\, v_2 \rangle = 0
 \end{aligned}
 $$
 
-이며 $\lambda_1 \ne \lambda_2$ 이므로 $\langle \bf{v}_1,\,\bf{v}_2\rangle = 0$ 이다. $\square$
+이며 $c_1 \ne c_2$ 이므로 $\langle v_1,\,v_2\rangle = 0$ 이다. $\square$
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
@@ -150,7 +148,7 @@ $$
 
 ::: {.proof} 
 
-우리는 슈어 정리(@thm-LA_schure) 로부터 모든 복소행렬이 어떤 정규직교기저에서 상삼각행렬꼴로 나타남을 안다. 이 상삼각행렬을 $\bf{A}$ 라 하면 정규직교기저의 행렬형식은 표준기저 $\{\bf{e}_1,\ldots,\,\bf{e}_n\}$ 가 된다. $\bf{Ae}_j$ 는 $\bf{A}$ 의 $j$ 번째 열벡터 $\bf{A}_{:j}$ 이며, $\bf{A}$ 가 상삼각행렬 이므로 $\|\bf{Ae}_j\|^2 = \sum_{i=1}^j |A_{ij}|^2$ 이다. $\bf{A}^\ast$ 는 하삼각행렬이며, 땨라서 
+우리는 슈어 정리(@thm-LA_schure) 로부터 모든 복소행렬이 어떤 정규직교기저에서 상삼각행렬꼴로 나타남을 안다. 이 상삼각행렬을 $\bf{A}$ 라 하면 정규직교기저의 행렬형식은 표준기저 $(\bf{e}_i)$ 가 된다. $\bf{Ae}_j$ 는 $\bf{A}$ 의 $j$ 번째 열벡터 $\bf{A}_{:j}$ 이며, $\bf{A}$ 가 상삼각행렬 이므로 $\|\bf{Ae}_j\|^2 = \sum_{i=1}^j |A_{ij}|^2$ 이다. $\bf{A}^\ast$ 는 하삼각행렬이며, 땨라서 
 
 $$
 \|\bf{A}^\ast\bf{e}_j\|^2= \sum_{i=j}^n \left|(\bf{A}^\ast)_{ij}\right|^2 = \sum_{i=j}^n |A_{ji}|^2
@@ -214,17 +212,17 @@ $$
 
 #### Axler4th 7.A.18
 
-$n\ge 2$ 에 대해 $n\times n$ 정규행렬의 집합은 $\mathcal{M}_{n \times n}(\mathbb{F})$ 의 부분공간이 되지 않음을 보여라.
+2보다 큰 차원의 벡터공간 $V$ 에 대한 정규연산자의 집합은 $\mathcal{L}(V)$ 의 부분공간이 될 수 없다.
 
 :::
 
 </div>
 
 ::: {.solution}
-$\bf{A},\,\bf{B} \in \mathcal{M}_{n\times n} (\mathbb{F})$ 의 정규행렬이라고 하자. $c\in \mathbb{F}$ 에 대해
+$A,\,B \in \mathcal{L}(V)$ 가 가 정규연산자이며 $c\in \mathbb{F}$ 라고 하자.
 
 $$
-(\bf{A}+c\bf{B})(\bf{A}+c\bf{B})^\ast - (\bf{A}+c\bf{B})^\ast(\bf{A}+c\bf{B}) = \overline{c}(\bf{AB}^\ast - \bf{B}^\ast \bf{A})+c(\bf{BA}^\ast - \bf{A}^\ast\bf{B})
+(A+c B)(A+cB)^\ast - (A+cB)^\ast(A+cB) = \overline{c}(AB^\ast - B^\ast A)+c(BA^\ast - A^\ast B)
 $$
 
 이므로 $\bf{A}+c\bf{B}$ 가 정규행렬이 되지 않는다.
