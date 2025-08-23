@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -32,15 +32,16 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <link href="../../src/part1/ch1_05_innerproduct.html" rel="next">
 <link href="../../src/part1/ch1_03_determinant.html" rel="prev">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b467865d89f01302b3bb45791fa41ab5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -101,7 +102,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -189,13 +190,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part1/ch1_07_spectrum_theorem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">스펙트럼 정리</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/part1/ch1_08_svd.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">특이값 분해</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">스펙트럼 정리와 특이값 분해</span></span></a>
   </div>
 </li>
       </ul>
@@ -212,25 +207,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_01_groups.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_02_homomorphisms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">군에서의 준동형사상과 동형사상</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군에서의 준동형사상과 동형사상</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_03_normal_subgroup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">정규부분군과 몫군</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">정규부분군과 몫군</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_04_symmetry.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Symmetry</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Symmetry</span></span></a>
   </div>
 </li>
       </ul>
@@ -247,49 +242,49 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/quotient_space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">몫공간과 몫사상</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">몫공간과 몫사상</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/dual_space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">쌍대공간과 쌍대 사상</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">쌍대공간과 쌍대 사상</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/bilinear_form.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/laplacian_form_of_determinant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/generalized_inverse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/characteristic_polynomial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">특성다항식, 최소다항식과 케일리-해밀턴 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">특성다항식, 최소다항식과 케일리-해밀턴 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/generalized_eigenspace.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">일반화된 고유공간과 조르당 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">일반화된 고유공간과 조르당 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/tensor_product.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">텐서곱</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">텐서곱</span></span></a>
   </div>
 </li>
       </ul>
@@ -297,7 +292,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -974,7 +969,7 @@ E(\lambda_1,L) + \cdots + E(\lambda_m,L) = \bigoplus_{i=1}^m E(\lambda_i,L)
 </div>
 <div class="callout-body-container">
 <div id="def-LA_diagonalizable_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.7 (대각화 가능 행렬)</strong></span> 정사각 행렬이 어떤 대각행렬과 닮았다면 그 정사각 행렬을 <strong>대각화 가능 행렬 (Diagonalizable matrix)</strong> 라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 4.7 (대각화 가능)</strong></span> 연산자 <span class="math inline">\(L\)</span> 이 어떤 기저에서의 행렬표현이 대각행렬일 때 이 연산자를 <strong>대각화 가능하다(be diagonalizable)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
@@ -982,34 +977,30 @@ E(\lambda_1,L) + \cdots + E(\lambda_m,L) = \bigoplus_{i=1}^m E(\lambda_i,L)
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-LA_diagonalizability" class="theorem">
-<p><span class="theorem-title"><strong>정리 4.5</strong></span> 정사각 행렬 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 이 서로 다른 고유값 <span class="math inline">\(\lambda_1,\ldots,\,\lambda_m\)</span> 을 가질 때 다음은 동치이다.</p>
-<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 는 대각화 가능 행렬이다.</p>
-<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터로 이루어진 <span class="math inline">\(\mathcal{M}_{n}(\mathbb{F})\)</span> 의 기저가 존재한다.</p>
-<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\mathcal{M}_n (\mathbb{F}) = E(\lambda_1, \boldsymbol{A}) \oplus \cdots \oplus E(\lambda_m, \boldsymbol{A})\)</span></p>
+<p><span class="theorem-title"><strong>정리 4.5</strong></span> 유한차원 벡터공간에서의 연산자 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이 서로 다른 고유값 <span class="math inline">\(\lambda_1,\ldots,\,\lambda_m\)</span> 을 가질 때 다음은 동치이다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 는 대각화 가능하다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 의 고유벡터로 이루어진 <span class="math inline">\(V\)</span> 의 기저가 존재한다.</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(V= E(\lambda_1, L) \oplus \cdots \oplus E(\lambda_m, L)\)</span></p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) 대각 행렬 <span class="math inline">\(\boldsymbol{D}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{D} = \boldsymbol{P}^{-1}\boldsymbol{AP}\)</span> 라고 하자. <span class="math inline">\(\boldsymbol{D}\hat{\boldsymbol{e}}_i = D_{ii}\hat{\boldsymbol{e}}_i\)</span> 이므로,</p>
-<p><span class="math display">\[
-\boldsymbol{APe}_i = \boldsymbol{PDe}_i = D_{ii}\boldsymbol{Pe}_i
-\]</span></p>
-<p>이며, 따라서 <span class="math inline">\(\boldsymbol{Pe}_i\)</span> 는 <span class="math inline">\(D_{ii}\)</span> 를 고유값으로 갖는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터이다. <span class="math inline">\(\boldsymbol{P}\)</span> 가 가역행렬이므로 <span class="math inline">\(\{\boldsymbol{P}\hat{\boldsymbol{e}}_1,\ldots,\boldsymbol{P}\hat{\boldsymbol{e}}_1\}\)</span> 는 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})\)</span> 의 기저이다.</p>
-<p>(<span class="math inline">\(2 \implies 3\)</span>) <span class="math inline">\((\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n)\)</span> 이 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터이며 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})\)</span> 의 기저일 때 같은 고유값 <span class="math inline">\(\lambda_j\)</span> 를 갖는 <span class="math inline">\(\boldsymbol{u}_i\)</span> 들은 <span class="math inline">\(E(\lambda_j, \boldsymbol{A})\)</span> 의 기저이다. 임의의 <span class="math inline">\(\lambda_{j_1}\le \lambda_{j_2}\)</span> 일 때 <span class="math inline">\(E(\lambda_{j_1}, \boldsymbol{A})\cap E(\lambda_{j_2})= \{\boldsymbol{0}\}\)</span> 이므로, <span class="math inline">\(\mathcal{M}_n (\mathbb{F}) = E(\lambda_1, \boldsymbol{A}) \oplus \cdots \oplus E(\lambda_m, \boldsymbol{A})\)</span> 이다.</p>
-<p>(<span class="math inline">\(3 \implies 1\)</span>) 각각의 <span class="math inline">\(E(\lambda_i, \boldsymbol{A})\)</span> 의 기저벡터를 모아 <span class="math inline">\((\boldsymbol{u}_1,\ldots,\boldsymbol{u}_n)\)</span> 을 만들었을 때 <span class="math inline">\(\boldsymbol{U} = \begin{bmatrix} \boldsymbol{u}_1 &amp; \cdots &amp; \boldsymbol{u}_n\end{bmatrix}\)</span> 라 하자. <span class="math inline">\(\boldsymbol{U}\)</span> 는 가역이며, <span class="math inline">\(\boldsymbol{U}^{-1}\boldsymbol{AU}\)</span> 는 대각행렬이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\implies 2\)</span>) <span class="math inline">\(n=\dim (V)\)</span> 일 때 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 에 대해 <span class="math inline">\([L]_{\mathcal{B}}\)</span> 가 대각행렬이라고하자. <span class="math inline">\([L]_\mathcal{B}\hat{\boldsymbol{e}}_i=\lambda_i \hat{\boldsymbol{e}}_i\)</span> 이므로 <span class="math inline">\(\mathcal{B}\)</span> 는 <span class="math inline">\(L\)</span> 의 고유벡터로 이루어진 <span class="math inline">\(V\)</span> 의 기저이다.</p>
+<p>(<span class="math inline">\(2\implies 3\)</span>) trivial.</p>
+<p>(<span class="math inline">\(3\implies 1\)</span>) 각각의 <span class="math inline">\(E(\lambda_i,\,L)\)</span> 의 기저를 <span class="math inline">\(\mathcal{B}_i=\left(v^{(i)}_j\right)\)</span> 라고 하자. <span class="math inline">\(\mathcal{B}=\bigcup_{i=1}^m \mathcal{B}_j\)</span> 는 <span class="math inline">\(V\)</span> 의 기저이며 <span class="math inline">\(L(v^{(i)}_j) = \lambda_jv^{(i)}_j\)</span> 이므로 <span class="math inline">\([L]_\mathcal{B}\)</span> 는 대각행렬이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="cor-LA_diagoalizability_of_dimV_distinct_eigenvalues_1" class="theorem corollary">
-<p><span class="theorem-title"><strong>따름정리 4.1</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 가 <span class="math inline">\(n\)</span> 개의 서로 다른 고유값을 가지면 <span class="math inline">\(\boldsymbol{A}\)</span> 는 대각화 가능 행렬이다.</p>
+<p><span class="theorem-title"><strong>따름정리 4.1</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(\dim (V) = n\)</span> 일 때 <span class="math inline">\(L\)</span> 에 대해 서로 다른 <span class="math inline">\(n\)</span> 개의 고유값이 존재하면 <span class="math inline">\(L\)</span> 는 대각화 가능하다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-LA_eigenvector_linear_independence" class="quarto-xref">명제&nbsp;<span>4.3</span></a> 에서 보였듯이 서로 다른 고유값을 갖는 고유벡터는 선형독립이므로 이 <span class="math inline">\(n\)</span> 개의 고유벡터는 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})\)</span> 의 기저이다. 따라서 <span class="math inline">\(\boldsymbol{A}\)</span> 는 대각화 가능 행렬이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-LA_eigenvector_linear_independence" class="quarto-xref">명제&nbsp;<span>4.3</span></a> 에서 보였듯이 서로 다른 고유값을 갖는 고유벡터는 선형독립이므로 <span class="math inline">\(L\)</span> 은 대각화 가능하다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="cor-LA_diagoalizability_of_dimV_distinct_eigenvalues_2" class="theorem corollary">
-<p><span class="theorem-title"><strong>따름정리 4.2</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 의 특성다항식 <span class="math inline">\(p_{\boldsymbol{A}}\)</span> 가 <span class="math inline">\(n\)</span> 개의 서로 다른 해를 <span class="math inline">\(\mathbb{F}\)</span> 에서 가지면 <span class="math inline">\(\boldsymbol{A}\)</span> 는 대각화 가능 행렬이다.</p>
+<p><span class="theorem-title"><strong>따름정리 4.2</strong></span> <span class="math inline">\(n\)</span> 차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간에서 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(L \in \mathcal{L}(V)\)</span> 의 특성다항식 <span class="math inline">\(p_{L}\)</span> 이 <span class="math inline">\(n\)</span> 개의 서로 다른 해를 <span class="math inline">\(\mathbb{F}\)</span> 에서 가지면 <span class="math inline">\(L\)</span> 는 대각화 가능 행렬이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -1019,57 +1010,55 @@ E(\lambda_1,L) + \cdots + E(\lambda_m,L) = \bigoplus_{i=1}^m E(\lambda_i,L)
 <h2 class="unnumbered anchored" data-anchor-id="연습문제-2">연습문제</h2>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-linearly_independency_and_distict_eigenvalues" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.19</strong></span> <span class="math inline">\(\{\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_m \} \subset \mathcal{M}_n(\mathbb{F})\)</span> 이 선형독립일 필요충분 조건은 위 벡터들이 서로 다른 고유값을 갖는 고유벡터가 되도록 하는 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 가 존재하는 것임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.19</strong></span> <span class="math inline">\(\{v_1,\ldots,\,v_m \} \subset V\)</span> 이 선형독립일 필요충분 조건은 위 벡터들이 서로 다른 고유값을 갖는 고유벡터가 되도록 하는 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 존재하는 것임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>서로 다른 고유값을 갖는 고유벡터의 집합은 선형독립이라는 것을 안다(<a href="#prp-LA_eigenvector_linear_independence" class="quarto-xref">명제&nbsp;<span>4.3</span></a>). 따라서 <span class="math inline">\(\{\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_m \}\)</span> 가 선형독립이면 이 벡터들이 각각 다른 고유값을 갖는 고유벡터가 되는 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 가 존재함을 보이면 된다. <span class="math inline">\(\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_m\)</span> 을 확장하여 기저 <span class="math inline">\(\{\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_n\}\)</span> 을 구성하고 <span class="math inline">\(\boldsymbol{P}= \begin{bmatrix} \boldsymbol{v}_1 &amp; \cdots &amp; \boldsymbol{v}_n\end{bmatrix}\)</span> 라 하자. <span class="math inline">\(\boldsymbol{P}^{-1}\)</span> 은 <span class="math inline">\(\boldsymbol{v}_i\)</span> 를 표준기저 <span class="math inline">\(\hat{\boldsymbol{e}}_i\)</span> 로 변환해주는 연산자이다.</p>
-<p>행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 를 <span class="math inline">\(1\)</span> 행 <span class="math inline">\(1\)</span> 열 부터 <span class="math inline">\(m\)</span> 행 <span class="math inline">\(m\)</span> 열 까지는 <span class="math inline">\(A_{ij}= j\delta_{ij}\)</span> 가 되도록 하고 <span class="math inline">\(m+1\)</span> 행 <span class="math inline">\(m+1\)</span> 열부터는 임의의 값을 가지는 블럭대각행렬이라 하자. <span class="math inline">\(\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_m\)</span> 은 은 각각 <span class="math inline">\(1,\ldots,m\)</span> 의 고유값을 가지므로 <span class="math inline">\(\boldsymbol{PAP}^{-1}\)</span> 은 <span class="math inline">\(\boldsymbol{v}_1,\ldots,\boldsymbol{v}_m\)</span> 이 각각 <span class="math inline">\(1,\ldots,\,m\)</span> 의 고유값을 갖는 행렬이다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>서로 다른 고유값을 갖는 고유벡터의 집합은 선형독립이라는 것을 안다(<a href="#prp-LA_eigenvector_linear_independence" class="quarto-xref">명제&nbsp;<span>4.3</span></a>). 따라서 <span class="math inline">\(\{v_1,\ldots,\,v_m \}\)</span> 가 선형독립이면 이 벡터들이 각각 다른 고유값을 갖는 고유벡터가 되는 연산자 <span class="math inline">\(L\)</span> 이 존재함을 보이면 된다. <span class="math inline">\(v_1,\ldots,\,v_m\)</span> 을 확장하여 기저 <span class="math inline">\(\mathcal{B}=\{v_1,\ldots,\,v_n\}\)</span> 을 구성할 수 있다. <span class="math inline">\(Lv_i = iv_i (i=1,\ldots,\,n)\)</span> 인 선형연산자가 그것이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_5_B_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.20 (Axler 5.B.1)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 가 어떤 자연수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(\boldsymbol{A}^n=\boldsymbol{0}\)</span> 이라고 하자. <span class="math inline">\(\boldsymbol{I}_n-\boldsymbol{A}\)</span> 는 가역행렬이며 다음이 성립함을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.20 (Axler 5.B.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 어떤 자연수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(L^n=0\)</span> 이라고 하자. <span class="math inline">\(I-L\)</span> 는 가역행렬이며 다음이 성립함을 보여라.</p>
 <p><span class="math display">\[
-(\boldsymbol{I}_n-\boldsymbol{A})^{-1} = \boldsymbol{I}_n+ \boldsymbol{A} + \cdots + \boldsymbol{A}^{n-1}.
+(I-L)^{-1} = I +  L + \cdots + L^{n-1}.
 \]</span></p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((\boldsymbol{I}_n-\boldsymbol{A})(\boldsymbol{I}_n + \boldsymbol{A} + \cdots + \boldsymbol{A}^{n-1}) = \boldsymbol{I}_n- \boldsymbol{A}^n=\boldsymbol{I}_n\)</span></p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((I-L)(I + L + \cdots + L^{n-1}) = I- L^n=I\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_5_b_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.21 (Axler 5.B.4)</strong></span> <span class="math inline">\(\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 가 <span class="math inline">\(\boldsymbol{P}^2=\boldsymbol{P}\)</span> 일 때 <span class="math inline">\(\boldsymbol{P}\)</span> 를 <strong>projection</strong> 이라고 한다. <span class="math inline">\(\boldsymbol{P}\)</span> 가 projection 일 때 <span class="math inline">\(\mathcal{M}_n (\mathbb{F})=(\ker (\boldsymbol{P})) \oplus (\text{im}(\boldsymbol{P}))\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.21 (Axler 5.B.4)</strong></span> <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(P^2=P\)</span> 일 때 <span class="math inline">\(P\)</span> 를 <strong>사영연산자(projection)</strong> 이라고 한다. <span class="math inline">\(P\)</span> 가 projection 일 때 <span class="math inline">\(V=(\ker (P)) \oplus (\text{im}(P))\)</span> 임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\boldsymbol{u}\in \ker (\boldsymbol{P})\cap \text{im}(\boldsymbol{P})\)</span> 라 하자. <span class="math inline">\(\boldsymbol{Pu}=\boldsymbol{0}\)</span> 이며 <span class="math inline">\(\boldsymbol{Pv}=\boldsymbol{u}\)</span> 인 <span class="math inline">\(\boldsymbol{u}\)</span> 가 존재해야 한다. 그런데 <span class="math inline">\(\boldsymbol{P}^2\boldsymbol{v} = \boldsymbol{Pu}=\boldsymbol{0}\)</span> 이며 <span class="math inline">\(\boldsymbol{P}^2\boldsymbol{v} = \boldsymbol{Pv}\)</span> 이므로 <span class="math inline">\(\boldsymbol{u}=\boldsymbol{0}\)</span> 이다. 즉 <span class="math inline">\(\ker (\boldsymbol{P})\cap \text{im}(\boldsymbol{P}) = \{\boldsymbol{0}\}\)</span> 이다. <a href="ch1_02_linear_map.html#thm-LA_rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a> 에 의해 <span class="math inline">\(\mathcal{M}_n (\mathbb{F})=(\ker (\boldsymbol{P})) \oplus (\text{im}(\boldsymbol{P}))\)</span> 이다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(u\in \ker (P)\cap \text{im}(P)\)</span> 라 하자. <span class="math inline">\(P(u)=0_V\)</span> 이며 <span class="math inline">\(P(v)=u\)</span> 인 <span class="math inline">\(u\)</span> 가 존재해야 한다. 그런데 <span class="math inline">\(P^2(v) = P(u)=0_V\)</span> 이며 <span class="math inline">\(P^2(v) = P(v)\)</span> 이므로 <span class="math inline">\(u=0_V\)</span> 이다. 즉 <span class="math inline">\(\ker (P)\cap \text{im}(P) = \{0_V\}\)</span> 이다. <a href="ch1_02_linear_map.html#thm-LA_rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a> 에 의해 <span class="math inline">\(V=(\ker (P)) \oplus (\text{im}(P))\)</span> 이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_5_c_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.22 (Axler 5.C.1)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 가 대각화 가능 행렬이면 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})=\ker (\boldsymbol{A})\oplus \text{im}(\boldsymbol{A})\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.22 (Axler 5.C.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 대각화 가능하면 <span class="math inline">\(V=\ker (L)\oplus \text{im}(L)\)</span> 임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\ker (\boldsymbol{A})\)</span> 와 <span class="math inline">\(\text{im}(\boldsymbol{A})\)</span> 모두 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})\)</span> 의 부분공간이다. <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터로 이루어진 <span class="math inline">\(\mathcal{M}_n (\mathbb{F})\)</span> 의 기저 <span class="math inline">\(\{\boldsymbol{u}_1, \ldots,\, \boldsymbol{u}_n\}\)</span> 을 생각 할 수 있다. <span class="math inline">\(\boldsymbol{x}\in \ker (\boldsymbol{A})\cap \text{im}(\boldsymbol{A})\)</span> 이라고 하자. <span class="math inline">\(\boldsymbol{x}\in \ker (\boldsymbol{A})\)</span> 이므로 <span class="math inline">\(\boldsymbol{Ax}=\boldsymbol{0}\)</span> 이며 <span class="math inline">\(\boldsymbol{x}\in \text{im}(\boldsymbol{A})\)</span> 이므로 <span class="math inline">\(\boldsymbol{Ay}=\boldsymbol{x}\)</span> 를 만족하는 <span class="math inline">\(\boldsymbol{y}\)</span> 가 존재해야 한다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 대각화 가능 행렬이므로 고유값 <span class="math inline">\(\lambda_i\)</span> 를 갖는 고유벡터 <span class="math inline">\(\boldsymbol{u}_i\)</span> 가 기저가 되며 따라서 <span class="math inline">\(\boldsymbol{y}=\sum_i c_i \boldsymbol{u}_i\)</span> 로 표현 할 수 있다. <span class="math inline">\(\boldsymbol{Ay} = \sum_i c_i \lambda_i \boldsymbol{u}_i = \boldsymbol{x}\)</span>, <span class="math inline">\(\boldsymbol{A}^2\boldsymbol{y} = \sum_i c_i \lambda_i^2 \boldsymbol{u}_i = \boldsymbol{0}\)</span> 이므로 <span class="math inline">\(\boldsymbol{y}\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 고유값이 <span class="math inline">\(0\)</span> 인 벡터의 선형결합이다. 따라서 <span class="math inline">\(\boldsymbol{y}\in \ker (\boldsymbol{A})\)</span> 이며 <span class="math inline">\(\boldsymbol{x}=\boldsymbol{0}\)</span> 이다.</p>
-<p><a href="ch1_02_linear_map.html#thm-LA_rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a> 에 의해 <span class="math inline">\(n=\text{nullity}(\boldsymbol{A})+\text{rank}(\boldsymbol{A})\)</span> 이며 <span class="math inline">\(\ker (\boldsymbol{A}) \cap \text{im}(\boldsymbol{A})=\{\boldsymbol{0}\}\)</span> 이므로 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})=\ker (\boldsymbol{A})\oplus \text{im}(\boldsymbol{A})\)</span> 이다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#thm-LA_diagonalizability" class="quarto-xref">정리&nbsp;<span>4.5</span></a> 로부터 <span class="math inline">\(\ker (L) = E(0,\,L)\)</span> 이며 <span class="math inline">\(\text{im}(L)= \bigoplus_{i=1,\, \lambda_i \ne 0}^n E(\lambda_i,\,L)\)</span> 임을 안다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axer_5_c_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.23 (Axler 5.C.3)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 다음 세 명제는 동치임을 보여라.</p>
-<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\mathcal{M}_{n}(\mathbb{F}) = \ker (\boldsymbol{A})\oplus \text{im}(\boldsymbol{A})\)</span>.</p>
-<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\mathcal{M}_{n}(\mathbb{F}) = \ker (\boldsymbol{A}) + \text{im}(\boldsymbol{A})\)</span>.</p>
-<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\ker (\boldsymbol{A}) \cap \text{im}(\boldsymbol{A}) = \{\boldsymbol{0}\}\)</span>.</p>
+<p><span class="theorem-title"><strong>연습문제 4.23 (Axler 5.C.3)</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(L\)</span> 에 대해 다음 세 명제는 동치임을 보여라.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(V = \ker (L)\oplus \text{im}(L)\)</span>.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(V = \ker (L) + \text{im}(L)\)</span>.</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\ker (L) \cap \text{im}(L) = \{0_V\}\)</span>.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\implies 2\)</span>) 가정에 의해 <span class="math inline">\(\ker (\boldsymbol{A})\cap \text{im}(\boldsymbol{A})= \{\boldsymbol{0}\}\)</span> 이다. <a href="ch1_01_vectorspace.html#prp-LA_condition_for_direct_sum" class="quarto-xref">명제&nbsp;<span>1.4</span></a> 의해 <span class="math inline">\(\ker (\boldsymbol{A}) + \text{im}(\boldsymbol{A}) = \ker (\boldsymbol{A})\oplus \text{im}(\boldsymbol{A}) = \mathcal{M}_{n}(\mathbb{F})\)</span> 이다.</p>
-<p>(<span class="math inline">\(2\implies 3\)</span>) <a href="ch1_02_linear_map.html#thm-LA_rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a> 에 의해 <span class="math inline">\(\ker (\boldsymbol{A}) \cap \text{im}(\boldsymbol{A}) = \{\boldsymbol{0}\}\)</span> 이다.</p>
-<p>(<span class="math inline">\(3 \implies 1\)</span>) <span class="math inline">\(\ker (\boldsymbol{A})\)</span> 와 <span class="math inline">\(\text{im}(\boldsymbol{A})\)</span> 는 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})\)</span> 의 부분공간이며 가정에 의해 <span class="math inline">\(\ker (\boldsymbol{A}) + \text{im}(\boldsymbol{A}) = \ker (\boldsymbol{A}) \oplus \text{im}(\boldsymbol{A})\)</span> 도 부분공간이다. <a href="ch1_02_linear_map.html#thm-LA_rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a> 에 의해 <span class="math inline">\(\mathcal{M}_{n}(\mathbb{F}) = \ker (\boldsymbol{A})\oplus \text{im}(\boldsymbol{A})\)</span> 이다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\implies 2\)</span>) <span class="math inline">\(\oplus\)</span> 의 정의에 의해 <span class="math inline">\(\ker (L)\cap \text{im}(A)= \{0_V\}\)</span> 이다. <a href="ch1_01_vectorspace.html#prp-LA_condition_for_direct_sum" class="quarto-xref">명제&nbsp;<span>1.4</span></a> 의해 <span class="math inline">\(\ker (L) + \text{im}(L) = \ker (L)\oplus \text{im}(L) = V\)</span> 이다.</p>
+<p>(<span class="math inline">\(2\implies 3\)</span>) <a href="ch1_02_linear_map.html#thm-LA_rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a> 에 의해 <span class="math inline">\(\ker (L) \cap \text{im}(L) = \{0_V\}\)</span> 이다.</p>
+<p>(<span class="math inline">\(3 \implies 1\)</span>) <span class="math inline">\(\ker (L) \le V\)</span> 과 <span class="math inline">\(\text{im}(L) \le V\)</span> 이며 <span class="math inline">\(\ker (L) + \text{im}(L) = \ker (L) \oplus \text{im}(L)\)</span> 도 <span class="math inline">\(V\)</span> 의 부분공간이다. <a href="ch1_02_linear_map.html#thm-LA_rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a> 에 의해 <span class="math inline">\(V = \ker (L)\oplus \text{im}(L)\)</span> 이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
@@ -1144,236 +1133,242 @@ f_1 = 1,\qquad f_2=1,\qquad f_{n+2} = f_{n+1} +f_n.
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "복사완료!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "복사완료!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
       }
+      return false;
     }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
         }
-        return container.innerHTML
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1381,185 +1376,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../src/part1/ch1_03_determinant.html" class="pagination-link" aria-label="가우스 조단 소거법과 행렬식">

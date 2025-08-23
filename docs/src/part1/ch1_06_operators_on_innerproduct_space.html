@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -52,15 +52,16 @@ div.csl-indent {
 <meta name="quarto:offset" content="../../">
 <link href="../../src/part1/ch1_07_spectrum_theorem.html" rel="next">
 <link href="../../src/part1/ch1_05_innerproduct.html" rel="prev">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b467865d89f01302b3bb45791fa41ab5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -121,7 +122,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -209,13 +210,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part1/ch1_07_spectrum_theorem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">스펙트럼 정리</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/part1/ch1_08_svd.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">특이값 분해</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">스펙트럼 정리와 특이값 분해</span></span></a>
   </div>
 </li>
       </ul>
@@ -232,25 +227,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_01_groups.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_02_homomorphisms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">군에서의 준동형사상과 동형사상</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군에서의 준동형사상과 동형사상</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_03_normal_subgroup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">정규부분군과 몫군</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">정규부분군과 몫군</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_04_symmetry.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Symmetry</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Symmetry</span></span></a>
   </div>
 </li>
       </ul>
@@ -267,49 +262,49 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/quotient_space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">몫공간과 몫사상</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">몫공간과 몫사상</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/dual_space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">쌍대공간과 쌍대 사상</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">쌍대공간과 쌍대 사상</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/bilinear_form.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/laplacian_form_of_determinant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/generalized_inverse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/characteristic_polynomial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">특성다항식, 최소다항식과 케일리-해밀턴 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">특성다항식, 최소다항식과 케일리-해밀턴 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/generalized_eigenspace.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">일반화된 고유공간과 조르당 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">일반화된 고유공간과 조르당 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/tensor_product.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">텐서곱</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">텐서곱</span></span></a>
   </div>
 </li>
       </ul>
@@ -317,7 +312,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -336,18 +331,27 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#adjoint-연산자와-행렬" id="toc-adjoint-연산자와-행렬" class="nav-link active" data-scroll-target="#adjoint-연산자와-행렬"><span class="header-section-number">6.1</span> Adjoint 연산자와 행렬</a>
+  <li><a href="#adjoint-연산자" id="toc-adjoint-연산자" class="nav-link active" data-scroll-target="#adjoint-연산자"><span class="header-section-number">6.1</span> Adjoint 연산자</a>
   <ul class="collapse">
-  <li><a href="#sec-LA_adjoint_operator" id="toc-sec-LA_adjoint_operator" class="nav-link" data-scroll-target="#sec-LA_adjoint_operator"><span class="header-section-number">6.1.1</span> Adjoint operator</a></li>
+  <li><a href="#sec-LA_adjoint_operator" id="toc-sec-LA_adjoint_operator" class="nav-link" data-scroll-target="#sec-LA_adjoint_operator"><span class="header-section-number">6.1.1</span> Adjoint 연산자</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
-  <li><a href="#sec-LA_hermitian_operator" id="toc-sec-LA_hermitian_operator" class="nav-link" data-scroll-target="#sec-LA_hermitian_operator"><span class="header-section-number">6.2</span> 에르미트 연산자</a></li>
+  <li><a href="#에르미트-연산자" id="toc-에르미트-연산자" class="nav-link" data-scroll-target="#에르미트-연산자"><span class="header-section-number">6.2</span> 에르미트 연산자</a>
+  <ul class="collapse">
+  <li><a href="#sec-LA_hermitian_operator" id="toc-sec-LA_hermitian_operator" class="nav-link" data-scroll-target="#sec-LA_hermitian_operator"><span class="header-section-number">6.2.1</span> 에르미트 연산자</a></li>
+  <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
+  </ul></li>
   <li><a href="#linear-isometry" id="toc-linear-isometry" class="nav-link" data-scroll-target="#linear-isometry"><span class="header-section-number">6.3</span> Linear Isometry</a>
   <ul class="collapse">
   <li><a href="#sec-LA_linear_isometry" id="toc-sec-LA_linear_isometry" class="nav-link" data-scroll-target="#sec-LA_linear_isometry"><span class="header-section-number">6.3.1</span> Linear Isometry</a></li>
   <li><a href="#sec-LA_isometry_and_orthonormal_bais" id="toc-sec-LA_isometry_and_orthonormal_bais" class="nav-link" data-scroll-target="#sec-LA_isometry_and_orthonormal_bais"><span class="header-section-number">6.3.2</span> Isometry 와 정규직교기저</a></li>
   <li><a href="#sec-LA_linear_isomeetry_and_matrix_transform" id="toc-sec-LA_linear_isomeetry_and_matrix_transform" class="nav-link" data-scroll-target="#sec-LA_linear_isomeetry_and_matrix_transform"><span class="header-section-number">6.3.3</span> Linear Isometry 와 행렬의 변환</a></li>
   </ul></li>
-  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
+  <li><a href="#정규연산자와-정규행렬" id="toc-정규연산자와-정규행렬" class="nav-link" data-scroll-target="#정규연산자와-정규행렬"><span class="header-section-number">6.4</span> 정규연산자와 정규행렬</a>
+  <ul class="collapse">
+  <li><a href="#sec-LA_normal_operator" id="toc-sec-LA_normal_operator" class="nav-link" data-scroll-target="#sec-LA_normal_operator"><span class="header-section-number">6.4.1</span> 정규 연산자와 행렬</a></li>
+  <li><a href="#연습문제-2" id="toc-연습문제-2" class="nav-link" data-scroll-target="#연습문제-2">연습문제</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -382,10 +386,10 @@ window.Quarto = {
 \]</span></p>
 </div>
 <p><br></p>
-<section id="adjoint-연산자와-행렬" class="level2 page-columns page-full" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="adjoint-연산자와-행렬"><span class="header-section-number">6.1</span> Adjoint 연산자와 행렬</h2>
+<section id="adjoint-연산자" class="level2 page-columns page-full" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="adjoint-연산자"><span class="header-section-number">6.1</span> Adjoint 연산자</h2>
 <section id="sec-LA_adjoint_operator" class="level3 page-columns page-full" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="sec-LA_adjoint_operator"><span class="header-section-number">6.1.1</span> Adjoint operator</h3>
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="sec-LA_adjoint_operator"><span class="header-section-number">6.1.1</span> Adjoint 연산자</h3>
 <p><span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에 대해 다음의 성질을 만족하는 <span class="math inline">\(L^\ast : V \to U\)</span> 를 <span class="math inline">\(L\)</span> 에 대한 adjoint function 이라고 한다.</p>
 <p><span id="eq-adjoint_function"><span class="math display">\[
 \langle L (u),\,v \rangle = \langle u,\, L^\ast (v) \rangle.
@@ -532,9 +536,81 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 </div>
 <p><br></p>
 </section>
+<section id="연습문제" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4_7_A_3" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.3 (Axler4th 7.A.3)</strong></span> <span class="math inline">\(c\)</span> 가 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 의 고유값이면 <span class="math inline">\(\overline{c}\)</span> 는 <span class="math inline">\(L^\ast\)</span> 의 고유값임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#thm-LA_kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> 로부터 <span class="math inline">\(\ker (L-cI) = (\text{im}(L^\ast - \overline{c}I))^\perp\)</span> 이다. 이로부터 <span class="math display">\[
+\text{nullity}(L-cI) = \dim (V) +\text{rank}(L^\ast - \overline{c}I) = \text{nullity}(L^\ast -\overline{c}I)
+\]</span></p>
+<p>임을 안다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4_7_A_4" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.4 (Axler4th 7.A.4)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(U\le V\)</span> 라고 하자. 이 때 <span class="math inline">\(U\)</span> 가 <span class="math inline">\(L\)</span>-불변일 필요충분조건은 <span class="math inline">\(U^\perp\)</span> 가 <span class="math inline">\(L^\ast\)</span>-불변인 것임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>모든 <span class="math inline">\(u\in U,\, w\in U^\perp\)</span> 에 대해 <span class="math inline">\(\langle Lu,\,w\rangle = 0\)</span> 이면 <span class="math inline">\(\langle u,\, L^\ast w\rangle =0\)</span> 이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4_7_A_5" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.5 (Axler4th 7.A.5)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이다. <span class="math inline">\((e_1,\ldots,\,e_n)\)</span> 이 <span class="math inline">\(V\)</span> 의 정규직교기저이고 <span class="math inline">\((f_1,\ldots,\,f_m)\)</span> 이 <span class="math inline">\(W\)</span> 의 정규직교기저일 때 다음이 성립함을 보여라.</p>
+<p><span class="math display">\[
+\|Le_1\|^2 + \cdots + \|Le_n\|^2 = \|L^\ast f_1\|^2 + \cdots \|L^\ast f_m\|^2
+\]</span></p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(Le_i = \sum_{j=1}^m A_{ji}f_j\)</span> 라면</p>
+<p><span class="math display">\[
+\|Le_1\|^2 + \cdots + \|Le_n\|^2 = \sum_{i=1}^n \sum_{j=1}^n |A_{ij}|^2
+\]</span></p>
+<p>이다. 또한 <span class="math inline">\(\langle Le_i,\,f_j\rangle = A_{ji}= \langle e_i,\, L^\ast f_j\rangle\)</span> 이므로</p>
+<p><span class="math display">\[
+L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
+\]</span></p>
+<p>이며, 따라서</p>
+<p><span class="math display">\[
+\|L^\ast f_1\|^2 + \cdots + \|L^\ast f_m\|^2 = \sum_{i=1}^n \sum_{j=1}^m \left|\overline{A_{ji}}\right|^2 = \sum_{i=1}^n \sum_{j=1}^n |A_{ij}|^2 = \|Le_1\|^2 + \cdots + \|Le_n\|^2
+\]</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4_7_A_6" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.6 (Axler4th 7.A.6)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 다음을 보여라.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 이 단사일 필요충분조건은 <span class="math inline">\(L^\ast\)</span> 가 전사인 것이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 가 전사일 필요충분조건은 <span class="math inline">\(L^\ast\)</span> 가 단사인 것이다.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((L^\ast)^\ast = L\)</span> 이므로 둘중 하나만 보이면 된다. (<span class="math inline">\(1\)</span>) 은 <a href="#thm-LA_kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> (<span class="math inline">\(3\)</span>) 으로부터 쉽게 보일 수 있다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4th_7_A_7" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.7 (Axler4th 7.A.7)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 에 대해 다음을 보여라.</p>
+<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\text{nullity}(L^\ast) = \text{nullity}(L) + \dim (W) - \dim (V)\)</span>,</p>
+<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\text{rank}(L^\ast) = \text{rank}(L)\)</span>.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <a href="ch1_02_linear_map.html#thm-LA_rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a> 에 의해 <span class="math inline">\(\dim(W)=\text{nullity}(L^\ast) + \text{rank}(L^\ast)\)</span> 이며 <a href="#thm-LA_kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> 에 의해 <span class="math inline">\(\text{nullity} (L) = \dim (V)-\text{rank}(L^\ast)\)</span> 이므로 (<span class="math inline">\(1\)</span>) 이 성립한다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\text{ker} (L^\ast) = (\text{im} (L))^\perp\)</span> 이므로 <span class="math inline">\(\text{nullity}(L^\ast) = \dim(W) - \text{rank}(L)\)</span> 이다. (<span class="math inline">\(1\)</span>) 에 <span class="math inline">\(\text{nullity} (L) = \dim(W)-\text{rank}(L^\ast)\)</span> 과 함께 대입하면 (<span class="math inline">\(2\)</span>) 를 얻는다.</p>
+</div>
+<p><br></p>
 </section>
-<section id="sec-LA_hermitian_operator" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="sec-LA_hermitian_operator"><span class="header-section-number">6.2</span> 에르미트 연산자</h2>
+</section>
+<section id="에르미트-연산자" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="에르미트-연산자"><span class="header-section-number">6.2</span> 에르미트 연산자</h2>
+<section id="sec-LA_hermitian_operator" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="sec-LA_hermitian_operator"><span class="header-section-number">6.2.1</span> 에르미트 연산자</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -597,6 +673,69 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 <p>이므로 <span class="math inline">\(\langle L(u),\, u\rangle\)</span> 는 실수이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+<div id="exm-LA_zero_map" class="theorem example">
+<p><span class="theorem-title"><strong>보기 6.1</strong></span> <span class="math inline">\(\boldsymbol{H}=\begin{bmatrix} 4 &amp; i \\ -i &amp; 2\end{bmatrix}\)</span> 는 에르미트 행렬이다. 그러나 가역변환 <span class="math inline">\(\boldsymbol{S}=\begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 1\end{bmatrix}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{SHS}^{-1}= \begin{bmatrix} 4-2 i &amp; -4.0 +\frac{i}{2} \\ -i  &amp; 2+2i\end{bmatrix}\)</span> 로 에르미트 행렬이 아니다. 즉 에르미트 연산자의 행렬형태는 에르미트 행렬이 아닐 수 있다.</p>
+</div>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-LA_hermitian_matrix_representation_and_hermitian_operator" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 6.6</strong></span> <span class="math inline">\(H\in \mathcal{L}(V)\)</span> 가 에르미트 연산자일 때 <span class="math inline">\(H\)</span> 의 정규직교기저에 대한 행렬표현은 에르미트 행렬이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\mathcal{B}=(e_1,\ldots,\,e_n)\)</span> 이 정규직교기저라고 하자. <span class="math inline">\(H(e_j) = \sum_k H_{kj}e_k\)</span> 일 때</p>
+<p><span class="math display">\[
+\langle H(e_j),\, e_i\rangle = \sum_k H_{kj}\langle e_k,\,e_i\rangle = H_{ij}
+\]</span></p>
+<p>이며</p>
+<p><span class="math display">\[
+\langle H(e_j),\,e_i\rangle = \langle e_j,\, H(e_i)\rangle = \sum_k \overline{H_{ki}}\langle e_j,\,e_k\rangle = \overline{H_{ji}}
+\]</span></p>
+<p>이다. 즉 에르미트 연산자의 정규직교기저에 대한 표현은 에르미트 행렬이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+</section>
+<section id="연습문제-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4th_7_A_9" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.8 (Axler4th 7.A.9)</strong></span> <span class="math inline">\(L,\, M \in \mathcal{V}\)</span> 가 에르미트 행렬이라고 하자. <span class="math inline">\(LM\)</span> 이 에르미트 행렬일 필요충분조건은 <span class="math inline">\(LM=ML\)</span> 임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((LM)^\ast = LM \iff M^\ast L^\ast = LM \iff ML= LM\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler_7_A_8_9" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.9 (Axler 7.A.8)</strong></span> <span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{R})\)</span> 에서의 에르미트 행렬의 집합은 벡터공간을 이룸을 보여라. <span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{C})\)</span> 에서의 에르미트 행렬의 집합은 벡터공간을 이루지 않음을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{R})\)</span> 에서의 에르미트 행렬의 집합은 대칭행렬의 집합이며 벡터공간을 이룬다는 것은 쉽게 보일 수 있다. <span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{C})\)</span> 의 경우,</p>
+<p><span class="math display">\[
+\left[\begin{array}{rr} 1 &amp; i \\ -i &amp; 1 \end{array}\right] + i \left[\begin{array}{rr} 1 &amp; 1 \\ 1 &amp; 2 \end{array}\right] = \left[\begin{array}{rr} 1+i &amp; 2i \\ 0 &amp; 1+i \end{array}\right]
+\]</span></p>
+<p>는 에르미트 행렬이 아니다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler_7_A_11" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.10 (Axler 7.A.11)</strong></span> 사영연산자 <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(P=P_U\)</span> 인 <span class="math inline">\(U\le V\)</span> 가 존재할 필요충분조건은 <span class="math inline">\(P\)</span> 가 에르미트 행렬임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(P=P_U\)</span> 인 <span class="math inline">\(U\le V\)</span> 가 존재한다고 하자. <span class="math inline">\(v_1,\,v_2\in V\)</span> 에 대해 <span class="math inline">\(v_1=u_1+w_1,\,v_2=u_2+w_2\)</span> 인 <span class="math inline">\(u_1,\,u_2\in U,\, w_1,\,w_2\in U^\perp\)</span> 가 유일하게 존재한다.</p>
+<p><span class="math display">\[
+\langle Pv_1,\,v_2\rangle = \langle u_1,\,v_2\rangle = \langle u_1,\,u_2\rangle = \langle u_1,\, Pv_2\rangle = \langle v_1,\, Pv_2\rangle
+\]</span></p>
+<p>이므로 <span class="math inline">\(P\)</span> 는 에르미트 연산자이다.</p>
+<p>이제 <span class="math inline">\(P\)</span> 가 에르미트 행렬이며 <span class="math inline">\(U=\text{im}(P)\)</span> 라고 하면 <span class="math inline">\(P=P_U\)</span> 이다.</p>
+</div>
+<p><br></p>
+</section>
 </section>
 <section id="linear-isometry" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="linear-isometry"><span class="header-section-number">6.3</span> Linear Isometry</h2>
@@ -634,7 +773,7 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_properties_of_isometry" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 6.6</strong></span> 연산지 <span class="math inline">\(S\in \mathcal{L}(V)\)</span> 에 대해 다음은 동치이다.</p>
+<p><span class="theorem-title"><strong>명제 6.7</strong></span> 연산지 <span class="math inline">\(S\in \mathcal{L}(V)\)</span> 에 대해 다음은 동치이다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(S\)</span> 는 linear isometry이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\langle S(u),\, S(v)\rangle = \langle u,\,v\rangle\)</span></p>
 <p> (<span class="math inline">\(3\)</span>) 정규직교벡터의 집합 <span class="math inline">\(\{e_1,\ldots,\,e_n \}\)</span> 에 대해 <span class="math inline">\(\{ S(e_1),\ldots,\,S(e_n)\}\)</span> 도 정규직교벡터의 집합이다.</p>
@@ -680,11 +819,11 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-LA_cojugate_of_isometry" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.3</strong></span> <span class="math inline">\(S\in \mathcal{L}(V)\)</span> 가 linear isometry 이면 <span class="math inline">\(S^\ast\)</span> 도 linear isometry 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 6.11</strong></span> <span class="math inline">\(S\in \mathcal{L}(V)\)</span> 가 linear isometry 이면 <span class="math inline">\(S^\ast\)</span> 도 linear isometry 임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-LA_properties_of_isometry" class="quarto-xref">명제&nbsp;<span>6.6</span></a> 에서 보였듯이 <span class="math inline">\(S\)</span> 가 linear isometry 이면 <span class="math inline">\(S^\ast =S^{-1}\)</span> 이다. 따라서 <span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-LA_properties_of_isometry" class="quarto-xref">명제&nbsp;<span>6.7</span></a> 에서 보였듯이 <span class="math inline">\(S\)</span> 가 linear isometry 이면 <span class="math inline">\(S^\ast =S^{-1}\)</span> 이다. 따라서 <span class="math display">\[
 \|S^\ast u\|^2 = \langle S^\ast u,\, S^\ast u\rangle = \langle u,\, SS^\ast (u)\rangle = \|u\|^2
 \]</span></p>
 <p>이므로 <span class="math inline">\(S^\ast\)</span> 도 linear isometry 이다. <span class="math inline">\(\square\)</span></p>
@@ -692,23 +831,15 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-LA_product_of_isometries" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.4</strong></span> <span class="math inline">\(S,\,T\in\mathcal{L}(V)\)</span> 이 linear isometry 이면 <span class="math inline">\(ST\)</span> 도 linear isometry 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 6.12</strong></span> <span class="math inline">\(S,\,T\in\mathcal{L}(V)\)</span> 이 linear isometry 이면 <span class="math inline">\(ST\)</span> 도 linear isometry 임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-LA_properties_of_isometry" class="quarto-xref">명제&nbsp;<span>6.6</span></a> 에 의해 <span class="math inline">\(S^{-1}=S^\ast\)</span> 이면 <span class="math inline">\(S\)</span> 가 linear isometry 인 것을 이용한다. <span class="math display">\[
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-LA_properties_of_isometry" class="quarto-xref">명제&nbsp;<span>6.7</span></a> 에 의해 <span class="math inline">\(S^{-1}=S^\ast\)</span> 이면 <span class="math inline">\(S\)</span> 가 linear isometry 인 것을 이용한다. <span class="math display">\[
 (ST)^{-1}= T^{-1}S^{-1}=T^\ast S^\ast = (ST)^\ast
 \]</span></p>
 </div>
 <p><br></p>
-<!-- 
-::: {.callout-caution}
-
-여러번 강조하고 또 강조했지만 선형사상과 벡터의 행렬표현은 특정 기저에 대한 표현이다. 우리는 정규직교기저를 배웠지만 지금까지는 굳이 행렬표현의 기저를 정규직교기저로 한정짓지 않았다. 하지만 이제부터는 특별한 언급이 없는 한 정규직교기저로 한정짓고자 한다. 즉 내적벡터공간에 대한 행렬과 벡터의 표현은 정규직교기저에 대한 표현이다. 따라서 내적은 dot product 와 같아진다. 
-
-:::
-
-</br> -->
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -729,7 +860,7 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_isometry_orthonormal_basis" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 6.7</strong></span> <span class="math inline">\(\boldsymbol{S}\)</span> 가 linear isometry 일 때 <span class="math inline">\(\boldsymbol{S}\)</span> 의 각 열벡터의 집합은 정규직교기저이며, 정규직교기저를 각 열벡터로 갖는 행렬은 linear isometry 이다.</p>
+<p><span class="theorem-title"><strong>명제 6.8</strong></span> <span class="math inline">\(\boldsymbol{S}\)</span> 가 linear isometry 일 때 <span class="math inline">\(\boldsymbol{S}\)</span> 의 각 열벡터의 집합은 정규직교기저이며, 정규직교기저를 각 열벡터로 갖는 행렬은 linear isometry 이다.</p>
 </div>
 </div>
 <div class="proof">
@@ -746,7 +877,7 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_transform_between_orthonormal_basis_is_linear_isometry" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 6.8</strong></span> 정규직교기저간의 변환행렬은 linear isometry 이다.</p>
+<p><span class="theorem-title"><strong>명제 6.9</strong></span> 정규직교기저간의 변환행렬은 linear isometry 이다.</p>
 </div>
 </div>
 <div class="proof">
@@ -761,7 +892,7 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-LA_determinant_of_isometry" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.5</strong></span> 직교행렬의 행렬식은 <span class="math inline">\(1\)</span> 혹은 <span class="math inline">\(-1\)</span> 이다. Unitary 행렬의 행렬식은 크기가 <span class="math inline">\(1\)</span> 인 복소수임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 6.13</strong></span> 직교행렬의 행렬식은 <span class="math inline">\(1\)</span> 혹은 <span class="math inline">\(-1\)</span> 이다. Unitary 행렬의 행렬식은 크기가 <span class="math inline">\(1\)</span> 인 복소수임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -775,110 +906,347 @@ v\in \ker (L^\ast) &amp; \iff L^\ast v=0_V  \\
 <p><br></p>
 </section>
 </section>
-<section id="연습문제" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h2>
+<section id="정규연산자와-정규행렬" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="정규연산자와-정규행렬"><span class="header-section-number">6.4</span> 정규연산자와 정규행렬</h2>
+<section id="sec-LA_normal_operator" class="level3" data-number="6.4.1">
+<h3 data-number="6.4.1" class="anchored" data-anchor-id="sec-LA_normal_operator"><span class="header-section-number">6.4.1</span> 정규 연산자와 행렬</h3>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-LA_normal_matrix" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 6.6 (정규 행렬)</strong></span> 내적벡터공간에서 정의된 <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 가 <span class="math inline">\(LL^\ast = L^\ast L\)</span> 일 때 <span class="math inline">\(L\)</span> 을 <strong>정규연산자(normal operator)</strong> 라고 한다. 마찬가지로 정사각 행렬 <span class="math inline">\(\boldsymbol{L}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 이 <span class="math inline">\(\boldsymbol{LL}^\ast = \boldsymbol{L}^\ast \boldsymbol{L}\)</span> 일 때 <span class="math inline">\(\boldsymbol{L}\)</span> 을 <strong>정규 행렬(normal matrix)</strong> 라 한다.</p>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>다음은 자연스럽다.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-LA_hermitian_is_normal" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 6.10</strong></span> 에르미트 연산자는 정규연산자이다. 또한 에르미트 행렬은 정규 행렬이다.</p>
+</div>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-LA_condition_of_normal_matrix" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 6.11</strong></span> <span class="math inline">\(N\in \mathcal{L}(V)\)</span> 가 정규연산자일 필요충분인 조건은 모든 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\|Nv\| = \|N^\ast v\|\)</span> 인 것이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math display">\[
+\begin{aligned}
+N \text{ is normal} &amp;\iff \langle (N^\ast N - NN^\ast)v ,\, v \rangle  = 0 \\[0.3em]
+&amp;\iff \langle N^\ast M v,\, v \rangle = \langle NN^\ast v ,\, v\rangle \\
+&amp; \iff \|Nv\|^2 = \|N^\ast v\|^2
+\end{aligned}
+\]</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-LA_part1_properties_of_normal_operator" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 6.12</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(N\in \mathcal{L}(V)\)</span> 가 정규연산자일 때 다음이 성립한다.</p>
+<p> (<span class="math inline">\(a\)</span>) <span class="math inline">\(\ker (N) = \ker (N^\ast)\)</span>.</p>
+<p> (<span class="math inline">\(b\)</span>) <span class="math inline">\(\text{im}(N) = \text{im} (N^\ast)\)</span>.</p>
+<p> (<span class="math inline">\(c\)</span>) <span class="math inline">\(V = \ker (N) \oplus \text{im}(N)\)</span>.</p>
+<p> (<span class="math inline">\(d\)</span>) <span class="math inline">\(c\in \mathbb{F}\)</span> 일 때 <span class="math inline">\(N-c I\)</span> 도 정규연산자이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>전체적으로 <a href="#thm-LA_kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> 를 참고하라.</p>
+<p>(<span class="math inline">\(a\)</span>) <a href="#prp-LA_condition_of_normal_matrix" class="quarto-xref">명제&nbsp;<span>6.11</span></a></p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(\text{im}(N) = (\ker (N^\ast))^\perp = (\ker (N))^\perp = \text{im}(N^\ast)\)</span>.</p>
+<p>(<span class="math inline">\(c\)</span>) <span class="math inline">\(V=(\ker (N)) \oplus (\ker (N))^\perp = (\ker (N)) \oplus (\ker (N^\ast))^\perp = \ker (N)\oplus \text{im}(N)\)</span></p>
+<p>(<span class="math inline">\(d\)</span>)</p>
+<p><span class="math display">\[
+\begin{aligned}
+(N-cI)(N-cI)^\ast &amp;= (N-cI)(N^\ast - \overline{c}I) = NN^\ast - \overline{c}L + cN^\ast -|c|^2 \\[0.3em]
+&amp;=N^\ast N  - \overline{c}N + cN^\ast -|c|^2 = (N-cI)^\ast (N-cI)
+\end{aligned}
+\]</span></p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-LA_eigenvectors_or_normal_matrix_and_adjoint" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 6.13</strong></span> <span class="math inline">\(N\)</span> 이 정규연산자이고 고유벡터 <span class="math inline">\(v\)</span> 에 대한 고유값이 <span class="math inline">\(c\)</span> 라면 <span class="math inline">\(N^\ast\)</span> 은 같은 고유벡터 <span class="math inline">\(v\)</span> 에 대해 고유값 <span class="math inline">\(\overline{c}\)</span> 를 가진다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(N-cI\)</span> 가 정규연산자이므로 <a href="#prp-LA_condition_of_normal_matrix" class="quarto-xref">명제&nbsp;<span>6.11</span></a> 로부터 <span class="math inline">\(0 = \|(N-cI)v\| = \|(N-cI)^\ast v\|\)</span>. <span class="math inline">\(\square\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-LA_orthogonality_of_normal_matrix" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 6.14</strong></span> 정규연산자 <span class="math inline">\(N\)</span> 의 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(N\)</span> 의 고유값 <span class="math inline">\(c_1,\,c_2\)</span> 에 대한 고유벡터 <span class="math inline">\(v_1,\,v_2\)</span> 를 생각하자. 이 때 <span class="math inline">\(c_1\ne c_2\)</span> 이다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+(c_1-c_2)\langle v_1,\,v_2\rangle &amp;= \langle Nv_1,\,v_2\rangle - \langle v_1,\, N^\ast v_2 \rangle =  \langle Nv_1,\,v_2\rangle - \langle Mv_1,\, v_2 \rangle = 0
+\end{aligned}
+\]</span></p>
+<p>이며 <span class="math inline">\(c_1 \ne c_2\)</span> 이므로 <span class="math inline">\(\langle v_1,\,v_2\rangle = 0\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-LA_diagonality_of_norma_matrix" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 6.15</strong></span> 정규행렬의 상삼각행렬꼴은 대각행렬이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>우리는 슈어 정리(<a href="ch1_05_innerproduct.html#thm-LA_schure" class="quarto-xref">정리&nbsp;<span>5.2</span></a>) 로부터 모든 복소행렬이 어떤 정규직교기저에서 상삼각행렬꼴로 나타남을 안다. 이 상삼각행렬을 <span class="math inline">\(\boldsymbol{A}\)</span> 라 하면 정규직교기저의 행렬형식은 표준기저 <span class="math inline">\((\boldsymbol{e}_i)\)</span> 가 된다. <span class="math inline">\(\boldsymbol{Ae}_j\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <span class="math inline">\(j\)</span> 번째 열벡터 <span class="math inline">\(\boldsymbol{A}_{:j}\)</span> 이며, <span class="math inline">\(\boldsymbol{A}\)</span> 가 상삼각행렬 이므로 <span class="math inline">\(\|\boldsymbol{Ae}_j\|^2 = \sum_{i=1}^j |A_{ij}|^2\)</span> 이다. <span class="math inline">\(\boldsymbol{A}^\ast\)</span> 는 하삼각행렬이며, 땨라서</p>
+<p><span class="math display">\[
+\|\boldsymbol{A}^\ast\boldsymbol{e}_j\|^2= \sum_{i=j}^n \left|(\boldsymbol{A}^\ast)_{ij}\right|^2 = \sum_{i=j}^n |A_{ji}|^2
+\]</span></p>
+<p>이다. 정규행렬의 정의에 의해 <span class="math inline">\(\|\boldsymbol{Ae}_j\|^2 = \|\boldsymbol{A}^\ast \boldsymbol{e}_j\|^2\)</span> 이어야 한다. <span class="math inline">\(j=1\)</span> 인 경우</p>
+<p><span class="math display">\[
+|A_{11}|^2 = |A_{11}|^2 + \cdots + |A_{1n}|^2
+\]</span></p>
+<p>이므로 <span class="math inline">\(A_{12} = \cdots = A_{1n}=0\)</span> 이며, <span class="math inline">\(j=2\)</span> 인 경우</p>
+<p><span class="math display">\[
+|A_{12}|^2 + |A_{22}|^2 = |A_{22}|^2 + \cdots + |A_{2n}|^2
+\]</span></p>
+<p>인데 <span class="math inline">\(j=1\)</span> 인 경우에서 <span class="math inline">\(A_{12}=0\)</span> 임을 보였으므로 <span class="math inline">\(A_{23}= \cdots = A_{2n}=0\)</span> 임을 안다. 이것을 계속 반복해보면 <span class="math inline">\(\boldsymbol{A}\)</span> 가 대각행렬임을 알 수 있다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-LA_part1_normal_operator_and_two_hermite_operator" class="theorem">
+<p><span class="theorem-title"><strong>정리 6.2</strong></span> <span class="math inline">\(\mathbb{C}\)</span> 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 다음은 동치이다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 은 정규연산자이다.</p>
+<p> (<span class="math inline">\(2\)</span>) 어떤 서로 commute 한 에르미트 연산자 <span class="math inline">\(A,\,B \in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(L=A+iB\)</span> 이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\implies 2\)</span>) <span class="math inline">\(L\)</span> 이 정규연산자라고 하자. <span class="math inline">\(A:=\dfrac{L+L^\ast}{2},\, B:= \dfrac{L-L^\ast}{2i}\)</span> 라고 하면 <span class="math inline">\(L = A+iB\)</span> 이며 <span class="math inline">\(A,\,B\)</span> 는 에르미트 연산자이다. 또한</p>
+<p><span class="math display">\[
+\begin{aligned}
+AB-BA &amp;= \dfrac{LL-LL^\ast + L^\ast L - L^\ast L^\ast - LL + L^\ast L - LL^\ast + L^\ast L^\ast}{4i} \\[0.3em]
+&amp;= \dfrac{L^\ast L - LL^\ast}{2i} = 0
+\end{aligned}
+\]</span></p>
+<p>이므로 <span class="math inline">\(A\)</span> 와 <span class="math inline">\(B\)</span> 는 commute 하다.</p>
+<p>(<span class="math inline">\(2\implies 1\)</span>) <span class="math inline">\(LL^\ast - L^\ast L = (A+iB)(A-iB)- (A-iB)(A+iB)= i(BA-AB)=0\)</span> 이므로 <span class="math inline">\(L\)</span> 은 정규연산자이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+</section>
+<section id="연습문제-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제-2">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-LA_axler4_7_A_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.6 (Axler4th 7.A.3)</strong></span> <span class="math inline">\(c\)</span> 가 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 의 고유값이면 <span class="math inline">\(\overline{c}\)</span> 는 <span class="math inline">\(L^\ast\)</span> 의 고유값임을 보여라.</p>
+<div id="exr-axler4_7_A_12" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.14 (Axler4th 7.A.12)</strong></span> <span class="math inline">\(B\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(B^\ast = -B\)</span> 일 때 <span class="math inline">\(B\)</span> 를 반대칭 연산자 (skew symmetric operator) 라고 한다. <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 정규연산자일 필요충분조건은 어떤 서로 commuting 하는 에르미트 연산자 <span class="math inline">\(A\)</span> 와 반대칭 연산자 <span class="math inline">\(B\)</span> 가 존재하여 <span class="math inline">\(L=A+B\)</span> 임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#thm-LA_kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> 로부터 <span class="math inline">\(\ker (L-cI) = (\text{im}(L^\ast - \overline{c}I))^\perp\)</span> 이다. 이로부터 <span class="math display">\[
-\text{nullity}(L-cI) = \dim (V) +\text{rank}(L^\ast - \overline{c}I) = \text{nullity}(L^\ast -\overline{c}I)
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(\implies\)</span>) 에르미트 <span class="math inline">\(A\)</span> 과 반대칭 <span class="math inline">\(B\)</span> 에 대해 <span class="math inline">\(L=A+B\)</span> 라고 하자. <span class="math inline">\((A+B)^\ast = A-B\)</span> 이며</p>
+<p><span class="math display">\[
+\begin{aligned}
+LL^\ast - L^\ast L &amp;= (A+B)(A+B)^\ast - (A+B)^\ast(A+B) =0
+\end{aligned}
+\]</span></p>
+<p>이므로 <span class="math inline">\(L\)</span> 은 정규연산자이다.</p>
+<p>(<span class="math inline">\(\impliedby\)</span>) <span class="math inline">\(L\)</span> 이 정규연산자라고가정하자. <span class="math inline">\(A=(L+L^\ast)/2,\, B=(L-L^\ast)/2\)</span> 라고 하면 <span class="math inline">\(A\)</span> 는 에르미트, <span class="math inline">\(B\)</span> 는 반대칭 연산자이고 <span class="math inline">\(L=A+B\)</span> 이다. 또한</p>
+<p><span class="math display">\[
+AB-BA = \dfrac{1}{2}(L^\ast L - LL^\ast ) = 0
+\]</span></p>
+<p>이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler4_7_A_18" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.15 (Axler4th 7.A.18)</strong></span> 2보다 큰 차원의 벡터공간 <span class="math inline">\(V\)</span> 에 대한 정규연산자의 집합은 <span class="math inline">\(\mathcal{L}(V)\)</span> 의 부분공간이 될 수 없다.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(A,\,B \in \mathcal{L}(V)\)</span> 가 가 정규연산자이며 <span class="math inline">\(c\in \mathbb{F}\)</span> 라고 하자.</p>
+<p><span class="math display">\[
+(A+c B)(A+cB)^\ast - (A+cB)^\ast(A+cB) = \overline{c}(AB^\ast - B^\ast A)+c(BA^\ast - A^\ast B)
+\]</span></p>
+<p>이므로 <span class="math inline">\(\boldsymbol{A}+c\boldsymbol{B}\)</span> 가 정규행렬이 되지 않는다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler_7_A_19" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.16 (Axler4th 7.A.19)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 모든 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\|L^\ast v\|\le \|Lv\|\)</span> 이면 <span class="math inline">\(L\)</span> 이 정규연산자임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\|L^\ast v\|\le \|Lv\|\)</span> 로부터 다음을 얻는다. <span class="math display">\[
+\begin{aligned}
+    \|L^* v\|^2 \leq \|L v\|^2 &amp;\Longleftrightarrow \langle L^\ast v,L^\ast v \rangle \leq \langle Lv,Lv \rangle \\
+    &amp;\Longleftrightarrow \langle LL^\ast v,v \rangle \leq \langle L^\ast Lv,v \rangle \\
+    &amp;\Longleftrightarrow \langle (L^\ast L - LL^\ast) v,v \rangle \leq 0.
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(n=\dim (V)\)</span> 라 하고 <span class="math inline">\(V\)</span> 의 정규직교 기저 <span class="math inline">\((e_i)\)</span> 를 생각하자. <span class="math inline">\(Le_i = \sum_j L_{ji}e_j\)</span> 라고 하면</p>
+<p><span class="math display">\[
+LL^\ast e_i = \sum_k \overline{L_{ik}}L(e_k)=\sum_k \sum_j \overline{L_{ik}}L_{jk} e_j
+\]</span></p>
+<p>이므로</p>
+<p><span class="math display">\[
+\sum_i \langle (LL^\ast - L^\ast L) e_i,\,e_i\rangle = \sum_i \left(\sum_k \overline{L_{ik}}L_{ik} - \overline{L_{ki}}L_{ki}\right) = 0
+\]</span></p>
+<p>이다. 또한 <span class="math inline">\(A=LL^\ast - L^\ast L\)</span> 에 대해 <span class="math inline">\(A^\ast = A\)</span> 이므로 <span class="math inline">\(A\)</span> 는 에르미트 연산자이다. 이제 모든 벡터 <span class="math inline">\(v\in V\)</span> 에 대해 (<span class="math inline">\(i\)</span>) <span class="math inline">\(\langle Av,\,v\rangle \le 0\)</span> 이며 (<span class="math inline">\(ii\)</span>) <span class="math inline">\(\text{tr}(A)=0\)</span> 인 에르미트 연산자는 <span class="math inline">\(0\)</span> 뿐임을 알아보자. 아래의 스펙트럼 정리에서 볼 수 있듯이 에르미트 연산자의 고유벡터로 이루어진 <span class="math inline">\(V\)</span> 의 기저가 존재한다. (<span class="math inline">\(i\)</span>) 조건에 의해 고유값은 모두 <span class="math inline">\(0\)</span> 보다 작거나 같아야 하며 (<span class="math inline">\(ii\)</span>) 조건에 의해 고유값의 합은 <span class="math inline">\(0\)</span> 이어야 한다. 이것을 만족하는 에르미트 행렬은 <span class="math inline">\(0\)</span> 행렬 뿐이며 따라서 <span class="math inline">\(\|L^\ast v\| = \|Lv\|\)</span> 이다. 즉 <span class="math inline">\(L\)</span> 은 정규연산자이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler4th_7_A_20" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.17 (Axler4th 7.A.20)</strong></span> <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(P^2=P\)</span> 일 때 다음이 동치인 것을 보여라.</p>
+<p> (<span class="math inline">\(a\)</span>) <span class="math inline">\(P\)</span> 는 에르미트이다.</p>
+<p> (<span class="math inline">\(b\)</span>) <span class="math inline">\(P\)</span> 는 정규연산자이다.</p>
+<p> (<span class="math inline">\(c\)</span>) 어떤 <span class="math inline">\(U\le V\)</span> 에 대해 <span class="math inline">\(P = P_U\)</span> 이다.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\implies b\)</span>) <span class="math inline">\(P^\ast P- PP^\ast = P^2-P^2 = 0\)</span></p>
+<p>(<span class="math inline">\(b\implies c\)</span>) <span class="math inline">\(U = \text{im}(P)\)</span> 라고 하자. <span class="math inline">\(u\in U\)</span> 에 대해 <span class="math inline">\(u=P(v)\)</span> 라고 하면 <span class="math inline">\(u=P(v)=P^2(v) = P(u)\)</span> 이다. <a href="#prp-LA_part1_properties_of_normal_operator" class="quarto-xref">명제&nbsp;<span>6.12</span></a> 의 (<span class="math inline">\(c\)</span>) 에 의해 <span class="math inline">\(V=\ker (P)\otimes \operatorname{im}(P)\)</span> 이므로 <span class="math inline">\(P=P_U\)</span> 이다.</p>
+<p>(<span class="math inline">\(c \implies a\)</span>) <a href="#exr-LA_axler_7_A_11" class="quarto-xref">연습문제&nbsp;<span>6.10</span></a></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler_7_A_12" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.18 (Axler 7.A.12)</strong></span> <span class="math inline">\(N\in \mathcal{L}(V)\)</span> 가 정규연산자이고 <span class="math inline">\(3\)</span> 과 <span class="math inline">\(4\)</span> 를 고유값으로 가진다고 하자. 이 때 <span class="math inline">\(\|u\|=\sqrt{2}\)</span>, <span class="math inline">\(\|Nu\|=5\)</span> 인 <span class="math inline">\(u\in V\)</span> 가 존재함을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(3\)</span> 을 고유값으로 가지고 크기가 <span class="math inline">\(1\)</span> 인 벡터를 <span class="math inline">\(u_1\)</span> 이라 하고 <span class="math inline">\(4\)</span> 를 유값으로 가지고 크기가 <span class="math inline">\(1\)</span> 인 벡터를 <span class="math inline">\(u_2\)</span> 라고 하자. 서로 다른 고유값을 가진 정규벡터의 고유벡터이므로 <span class="math inline">\(u_1\)</span> 과 <span class="math inline">\(u_2\)</span> 는 직교한다. <span class="math inline">\(u=u_1+u_2\)</span> 라고 하면, <span class="math inline">\(\|u\|=2\)</span> 이며, <span class="math inline">\(\|Nu\|^2 = 5\)</span> 이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler_7_A_15" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.19 (Axler 7.A.15)</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-내적벡터공간 <span class="math inline">\(V\)</span> 와 <span class="math inline">\(u,\,x\in V\)</span> 에 대해 <span class="math inline">\(T\in \mathcal{L}(V)\)</span> 를</p>
+<p><span class="math display">\[
+T(v) = \langle v,\, u\rangle x
+\]</span></p>
+<p>로 정의하자. 이 때 다음이 성립함을 보여라.</p>
+<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\mathbb{F}=\mathbb{R}\)</span> 일 때 <span class="math inline">\(T\)</span> 가 에르미트 연산자일 필요충분조건은 <span class="math inline">\(u,\,x\)</span> 가 선형종속인 것이다.</p>
+<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(T\)</span> 가 정규연산자일 필요충분조건은 <span class="math inline">\(u,\,x\)</span> 가 선형종속인 것이다.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(v,\,w\in V\)</span> 에 대해 <span class="math inline">\(\langle T^\ast(v), w\rangle = \langle v, T(w)\rangle\)</span> 이다. 따라서,</p>
+<p><span class="math display">\[
+\langle v,\, T(w)\rangle = \langle u,\,w\rangle \langle v,\,x\rangle
+\]</span></p>
+<p>로부터 <span class="math inline">\(T^\ast (v) = \langle v, x\rangle u\)</span> 임을 안다.</p>
+<p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(T\)</span> 가 에르미트 연산자라면 <span class="math inline">\(T=T^\ast\)</span> 이어야 하므로,</p>
+<p><span class="math display">\[
+0=(T-T^\ast)(v) = \langle v, u\rangle x - \langle v, x\rangle u
+\]</span></p>
+<p>으로부터 <span class="math inline">\(x= \dfrac{\langle v, u\rangle}{\langle v, x\rangle}u\)</span> 이어야 한다. 즉 <span class="math inline">\(u\)</span> 와 <span class="math inline">\(x\)</span> 는 선형 종속이어야 한다. 이제 <span class="math inline">\(u\)</span> 와 <span class="math inline">\(x\)</span> 가 선형종속이라고 하자. 즉 <span class="math inline">\(u=cx,\, c\in \mathbb{R}\)</span> 이라고 하자.</p>
+<p><span class="math display">\[
+(T-T^\ast)(v) = c\langle v, x\rangle x - c \langle v, x \rangle x = 0
+\]</span></p>
+<p>이므로 <span class="math inline">\(T=T^\ast\)</span> 이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(T\)</span> 가 정규연산자라고 하자. <span class="math inline">\(TT^\ast - T^\ast T=0\)</span> 이므로,</p>
+<p><span class="math display">\[
+\begin{aligned}
+0 &amp;= (TT^\ast - T^\ast T)(v) = T(\langle v, x \rangle u) - T^\ast (\langle v, u\rangle x)  \\
+&amp; = \langle v, x \rangle \|u\|^2 x - \langle v, u\rangle \|x\|^2 u
+\end{aligned}
+\]</span></p>
+<p>이다. 즉 <span class="math inline">\(x = \dfrac{\langle v, x\rangle \|u\|^2}{\langle v, u\rangle \|x\|^2} u\)</span> 이어야 하므로 선형종속이다. 이제 <span class="math inline">\(u=cx,\, c\in \mathbb{F}\)</span> 라고 하자.</p>
+<p><span class="math display">\[
+(TT^\ast - T^\ast T)(v) = T(c\langle v, x \rangle x) - T^\ast (c\langle v, x\rangle x) =  c^2\langle v, x \rangle^2 x - c^2\langle v, x \rangle^2 x = 0
+\]</span></p>
+<p>이므로 <span class="math inline">\(T\)</span> 는 정규연산자이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler_7_A_16" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.20 (Axler 7.A.16)</strong></span> <span class="math inline">\(N\in \mathcal{L}(V)\)</span> 가 정규연산자일 때 다음을 보이시오.</p>
+<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\text{im}(N) = \text{im}(N^\ast)\)</span>.</p>
+<p>  (<span class="math inline">\(2\)</span>) 양의 정수 <span class="math inline">\(k\)</span> 에 대해 <span class="math inline">\(\ker (N^k) = \ker (N)\)</span> 이며 <span class="math inline">\(\text{im}(N^k) = \text{im}(N)\)</span>.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <a href="#prp-LA_condition_of_normal_matrix" class="quarto-xref">명제&nbsp;<span>6.11</span></a> 를 보자. <span class="math inline">\(\|Nv\|=\|N^\ast v\|\)</span> 이므로 (<span class="math inline">\(1\)</span>) 이 성립함을 안다. 또한 <a href="#thm-LA_kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> 로부터</p>
+<p><span class="math display">\[
+\text{im}(N) = (\ker (N^\ast))^\perp = (\ker (N))^\perp = \text{im}(N^\ast)
 \]</span></p>
 <p>임을 안다.</p>
-</div>
-<p><br></p>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-LA_axler4_7_A_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.7 (Axler4th 7.A.4)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(U\le V\)</span> 라고 하자. 이 때 <span class="math inline">\(U\)</span> 가 <span class="math inline">\(L\)</span>-불변일 필요충분조건은 <span class="math inline">\(U^\perp\)</span> 가 <span class="math inline">\(L^\ast\)</span>-불변인 것임을 보여라.</p>
-</div>
-</div>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>모든 <span class="math inline">\(u\in U,\, w\in U^\perp\)</span> 에 대해 <span class="math inline">\(\langle Lu,\,w\rangle = 0\)</span> 이면 <span class="math inline">\(\langle u,\, L^\ast w\rangle =0\)</span> 이다.</p>
-</div>
-<p><br></p>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-LA_axler4_7_A_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.8 (Axler4th 7.A.5)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이다. <span class="math inline">\((e_1,\ldots,\,e_n)\)</span> 이 <span class="math inline">\(V\)</span> 의 정규직교기저이고 <span class="math inline">\((f_1,\ldots,\,f_m)\)</span> 이 <span class="math inline">\(W\)</span> 의 정규직교기저일 때 다음이 성립함을 보여라.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(k\)</span> 에 대한 induction 을 사용한다. <span class="math inline">\(\ker (N)\subseteq \ker(N^k)\)</span> 임은 자명하므로 <span class="math inline">\(\ker(N^k) \subseteq  \ker(N)\)</span> 만 보이면 된다. <span class="math inline">\(N\)</span> 이 정규연산자라면 양의 정수 <span class="math inline">\(k\)</span> 에 대해 <span class="math inline">\((N^\ast)^k N^k = (N^\ast N)^k\)</span> 임은 쉽게 보일 수 있다. 또한</p>
 <p><span class="math display">\[
-\|Le_1\|^2 + \cdots + \|Le_n\|^2 = \|L^\ast f_1\|^2 + \cdots \|L^\ast f_m\|^2
+\begin{aligned}
+\|N^2v\|^2= \langle N^2 v, N^2 v \rangle = \langle N^\ast Nv, N^\ast Nv\rangle  = \|N^\ast Nv\|^2
+\end{aligned}
 \]</span></p>
-</div>
-</div>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(Le_i = \sum_{j=1}^m A_{ji}f_j\)</span> 라면</p>
+<p>이므로 <span class="math inline">\(\ker (N^2) = \ker (N^\ast N)\)</span> 이며,</p>
 <p><span class="math display">\[
-\|Le_1\|^2 + \cdots + \|Le_n\|^2 = \sum_{i=1}^n \sum_{j=1}^n |A_{ij}|^2
+v\in \ker (N^\ast N) \implies \langle N^\ast Nv, v\rangle = 0 \implies \|Nv\|^2=0 \implies v\in \ker (N)
 \]</span></p>
-<p>이다. 또한 <span class="math inline">\(\langle Le_i,\,f_j\rangle = A_{ji}= \langle e_i,\, L^\ast f_j\rangle\)</span> 이므로</p>
+<p>이다. 이로부터 <span class="math inline">\(\ker (N^2)\subseteq \ker(N)\)</span> 임을 안다. <span class="math inline">\(\ker(N) \subseteq \ker(N^2)\)</span> 임은 자명하므로 <span class="math inline">\(\ker(N) = \ker(N^2)\)</span> 이다. 이제 <span class="math inline">\(\ker(N^k) =  \ker(N)\)</span> 임을 가정하자.</p>
 <p><span class="math display">\[
-L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
+v \in \ker (N^{k+1}) \implies N^k(Nv) = 0_V \implies Nv \in \ker (N^k) \implies Nv \in \ker (N)
 \]</span></p>
-<p>이며, 따라서</p>
-<p><span class="math display">\[
-\|L^\ast f_1\|^2 + \cdots + \|L^\ast f_m\|^2 = \sum_{i=1}^n \sum_{j=1}^m \left|\overline{A_{ji}}\right|^2 = \sum_{i=1}^n \sum_{j=1}^n |A_{ij}|^2 = \|Le_1\|^2 + \cdots + \|Le_n\|^2
-\]</span></p>
-</div>
-<p><br></p>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-LA_axler4_7_A_6" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.9 (Axler4th 7.A.6)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 다음을 보여라.</p>
-<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 이 단사일 필요충분조건은 <span class="math inline">\(L^\ast\)</span> 가 전사인 것이다.</p>
-<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 가 전사일 필요충분조건은 <span class="math inline">\(L^\ast\)</span> 가 단사인 것이다.</p>
-</div>
-</div>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((L^\ast)^\ast = L\)</span> 이므로 둘중 하나만 보이면 된다. (<span class="math inline">\(1\)</span>) 은 <a href="#thm-LA_kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> (<span class="math inline">\(3\)</span>) 으로부터 쉽게 보일 수 있다.</p>
-</div>
-<p><br></p>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-LA_axler4th_7_A_7" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.10 (Axler4th 7.A.7)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 에 대해 다음을 보여라.</p>
-<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\text{nullity}(L^\ast) = \text{nullity}(L) + \dim (W) - \dim (V)\)</span>,</p>
-<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\text{rank}(L^\ast) = \text{rank}(L)\)</span>.</p>
-</div>
-</div>
-<p><br></p>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <a href="ch1_02_linear_map.html#thm-LA_rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a> 에 의해 <span class="math inline">\(\dim(W)=\text{nullity}(L^\ast) + \text{rank}(L^\ast)\)</span> 이며 <a href="#thm-LA_kernel_image_of_adjoint_operator" class="quarto-xref">정리&nbsp;<span>6.1</span></a> 에 의해 <span class="math inline">\(\text{nullity} (L) = \dim (V)-\text{rank}(L^\ast)\)</span> 이므로 (<span class="math inline">\(1\)</span>) 이 성립한다.</p>
-<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\text{ker} (L^\ast) = (\text{im} (L))^\perp\)</span> 이므로 <span class="math inline">\(\text{nullity}(L^\ast) = \dim(W) - \text{rank}(L)\)</span> 이다. (<span class="math inline">\(1\)</span>) 에 <span class="math inline">\(\text{nullity} (L) = \dim(W)-\text{rank}(L^\ast)\)</span> 과 함께 대입하면 (<span class="math inline">\(2\)</span>) 를 얻는다.</p>
-</div>
-<p><br></p>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-LA_axler4th_7_A_9" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.11 (Axler4th 7.A.9)</strong></span> <span class="math inline">\(L,\, M \in \mathcal{V}\)</span> 가 에르미트 행렬이라고 하자. <span class="math inline">\(LM\)</span> 이 에르미트 행렬일 필요충분조건은 <span class="math inline">\(LM=ML\)</span> 임을 보여라.</p>
-</div>
-</div>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((LM)^\ast = LM \iff M^\ast L^\ast = LM \iff ML= LM\)</span></p>
+<p>이므로 <span class="math inline">\(v\in \ker(N^2) = \ker(N)\)</span> 이다. 즉 <span class="math inline">\(\ker (N^{k+1}) = \ker (N)\)</span> 이다. 따리서 양의 정수 <span class="math inline">\(k\)</span> 에 대해 <span class="math inline">\(\ker (N^k) = \ker (N)\)</span> 이다.</p>
+<p><a href="#prp-LA_part1_properties_of_normal_operator" class="quarto-xref">명제&nbsp;<span>6.12</span></a> (<span class="math inline">\(c\)</span>) 로부터 <span class="math inline">\(\text{im}(N^k) = (\ker (N^k))^\perp = (\ker (N))^\perp = \text{im}(N)\)</span> 이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-LA_axler_7_A_8_9" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.12 (Axler 7.A.8)</strong></span> <span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{R})\)</span> 에서의 에르미트 행렬의 집합은 벡터공간을 이룸을 보여라. <span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{C})\)</span> 에서의 에르미트 행렬의 집합은 벡터공간을 이루지 않음을 보여라.</p>
+<div id="exr-axler_7_A_18" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.21 (Axler 7.A.18)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 가 표준기저 <span class="math inline">\((\boldsymbol{e}_1, \ldots,\,\boldsymbol{e}_n)\)</span> 에 대해 <span class="math inline">\(\|\boldsymbol{Ae}_i\| = \|\boldsymbol{A}^\ast \boldsymbol{e}_i\|\)</span> <span class="math inline">\((i=1,\ldots,\,n)\)</span> 이면 <span class="math inline">\(\boldsymbol{A}\)</span> 가 정규행렬인가?</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{R})\)</span> 에서의 에르미트 행렬의 집합은 대칭행렬의 집합이며 벡터공간을 이룬다는 것은 쉽게 보일 수 있다. <span class="math inline">\(\mathcal{M}_{m \times n}(\mathbb{C})\)</span> 의 경우,</p>
-<p><span class="math display">\[
-\left[\begin{array}{rr} 1 &amp; i \\ -i &amp; 1 \end{array}\right] + i \left[\begin{array}{rr} 1 &amp; 1 \\ 1 &amp; 2 \end{array}\right] = \left[\begin{array}{rr} 1+i &amp; 2i \\ 0 &amp; 1+i \end{array}\right]
-\]</span></p>
-<p>는 에르미트 행렬이 아니다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>(<u><em>이게 맞다면 텍스트에 명제로 나왔겠지?</em></u>)</p>
+<p><span class="math inline">\(\boldsymbol{A}= \left[\begin{array}{rr} 1 &amp; -1 \\ 1 &amp; -1\end{array}\right]\)</span> 에 대해 <span class="math inline">\(\|\boldsymbol{Ae}_1\| = \|\boldsymbol{Ae}_2\| = \sqrt{2}\)</span> 이지만 <span class="math inline">\(\boldsymbol{AA}^\ast - \boldsymbol{A}^\ast\boldsymbol{A} = \left[\begin{array}{rr} 0 &amp; 4 \\ 4 &amp; 0\end{array}\right] \ne \boldsymbol{0}\)</span> 이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_7_A_11" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.13 (Axler 7.A.11)</strong></span> Projection <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(P=P|_U\)</span> 인 <span class="math inline">\(U\le V\)</span> 가 존재할 필요충분조건은 <span class="math inline">\(P\)</span> 가 에르미트 행렬임을 보여라.</p>
+<div id="exr-axler_7_B_1" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.22 (Axler 7.B.1)</strong></span> 대칭행렬이 아니면서 행렬의 고유벡터로 이루어진 기저를 갖도록 하는 정사각행렬이 존재하는가?</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(P=P|_U\)</span> 인 <span class="math inline">\(U\le V\)</span> 가 존재한다고 하자. <span class="math inline">\(v_1,\,v_2\in V\)</span> 에 대해 <span class="math inline">\(v_1=u_1+w_1,\,v_2=u_2+w_2\)</span> 인 <span class="math inline">\(u_1,\,u_2\in U,\, w_1,\,w_2\in U^\perp\)</span> 가 유일하게 존재한다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\boldsymbol{A} = \begin{bmatrix} 1 &amp; 1 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 3\end{bmatrix}\)</span> 는 <span class="math inline">\(\boldsymbol{Ae}_1 = \boldsymbol{e}_1\)</span>, <span class="math inline">\(\boldsymbol{A}(\boldsymbol{e}_1 + \boldsymbol{e}_2) = 2(\boldsymbol{e}_1 + \boldsymbol{e}_2)\)</span>, <span class="math inline">\(\boldsymbol{Ae}_3 = 3\boldsymbol{e}_3\)</span> 인데 대칭행렬이 아니다.</p>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>스펙트럼 정리가 이야기하는 것은 복소수체에서의 정규행렬, 실수체에서의 대칭행렬의 경우 행렬의 고유벡터로 정규직교기저를 구성할 수 있다는 것이다. 위의 문제의 경우는 대칭행렬이 아니므로 고유벡터로 정규직교기저를 구성할 수 없지만 기저는 구성 할 수 있다는 것이다.</p>
+</div>
+</div>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler_7_B_4" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.23 (Axler 7.B.4)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})\)</span> 일 때 <span class="math inline">\(\boldsymbol{A}\)</span> 가 정규행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 <span class="math inline">\(\mathcal{M}_n(\mathbb{C})\)</span> 는 모든 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="ch1_07_spectrum_theorem.html#thm-LA_spectrum_theorem_for_complex_vector_space" class="quarto-xref">정리&nbsp;<span>7.1</span></a></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler_7_B_5" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.24 (Axler 7.B.5)</strong></span> <span class="math inline">\(\boldsymbol{L}\in \mathcal{M}_{n \times n}(\mathbb{R})\)</span> 일 때 <span class="math inline">\(\boldsymbol{A}\)</span> 가 대칭행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 <span class="math inline">\(\mathcal{M}_n(\mathbb{R})\)</span> 는 모든 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="ch1_07_spectrum_theorem.html#thm-LA_spectrum_theorem_for_real_vector_space" class="quarto-xref">정리&nbsp;<span>7.2</span></a></p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_normal_matrix_and_operator" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 6.25</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 다음이 성립함을 보여라.</p>
+<p>(<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 의 어떤 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 에서의 행렬표현 <span class="math inline">\(\boldsymbol{L}\)</span> 이 정규행렬이면 다른 기저에서의 행렬표현도 정규행렬이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 의 어떤 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 에서의 행렬표현 <span class="math inline">\(\boldsymbol{L}\)</span> 이 에르미트 행렬일 때 다른 기저 <span class="math inline">\(\mathcal{B}'\)</span> 에서의 행렬표현도 에르미트 행렬일 필요충분조건은 두 기저 사이의 변환행렬이 linear isometry 의 <span class="math inline">\(0\)</span> 이 아닌 스칼라배인 것이다.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(n\times n\)</span> 가역행렬 <span class="math inline">\(\boldsymbol{S}\)</span> 에 대해 <span class="math inline">\(\mathcal{B}\)</span> 가 다른 기저 <span class="math inline">\(\mathcal{B}'\)</span> 으로 변환된다. <span class="math inline">\(\boldsymbol{v}_i = \boldsymbol{S}\boldsymbol{e}_i\)</span> 이면 <span class="math inline">\([L]_{\mathcal{B}'} = \boldsymbol{SLS}^{-1}\)</span> 이며</p>
 <p><span class="math display">\[
-\langle Pv_1,\,v_2\rangle = \langle u_1,\,v_2\rangle = \langle u_1,\,u_2\rangle = \langle u_1,\, Pv_2\rangle = \langle v_1,\, Pv_2\rangle
+[L]_{\mathcal{B'}}[L^\ast]_{\mathcal{B'}} - [L^\ast]_{\mathcal{B'}}[L]_{\mathcal{B'}} = \boldsymbol{S}(\boldsymbol{LL}^\ast - \boldsymbol{L}^\ast \boldsymbol{L})\boldsymbol{S}^{-1}=\boldsymbol{0}
 \]</span></p>
-<p>이므로 <span class="math inline">\(P\)</span> 는 에르미트 연산자이다.</p>
-<p>이제 <span class="math inline">\(P\)</span> 가 에르미트 행렬이며 <span class="math inline">\(U=\text{im}(P)\)</span> 라고 하면 <span class="math inline">\(P=P|_U\)</span> 이다.</p>
+<p>이다. 즉 어떤 기저에서의 행렬표현이 정규행렬이면 모든 기저에서의 행렬 표현 역시 정규행렬이다.</p>
+<p>(<span class="math inline">\(2\)</span>) $’=()</p>
 </div>
 
 
@@ -888,239 +1256,246 @@ Hoffman, K., and R. A. Kunze. 1971. <em>Linear Algebra</em>. Prentice-Hall. <a h
 </div>
 </div>
 </section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "복사완료!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "복사완료!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
       }
+      return false;
     }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
         }
-        return container.innerHTML
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1128,185 +1503,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../src/part1/ch1_05_innerproduct.html" class="pagination-link" aria-label="내적">
@@ -1314,8 +1665,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../src/part1/ch1_07_spectrum_theorem.html" class="pagination-link" aria-label="스펙트럼 정리">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">스펙트럼 정리</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../src/part1/ch1_07_spectrum_theorem.html" class="pagination-link" aria-label="스펙트럼 정리와 특이값 분해">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">스펙트럼 정리와 특이값 분해</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

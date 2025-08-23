@@ -11,9 +11,9 @@ crossref:
 
 </br>
 
-## Adjoint 연산자와 행렬
+## Adjoint 연산자
 
-### Adjoint operator {#sec-LA_adjoint_operator}
+### Adjoint 연산자 {#sec-LA_adjoint_operator}
 
 $L\in \mathcal{L}(U,\,V)$ 에 대해 다음의 성질을 만족하는 $L^\ast : V \to U$ 를 $L$ 에 대한 adjoint function 이라고 한다.
 
@@ -112,7 +112,6 @@ $$ {#eq-adjoint_matrix}
 $A_{ji}=\langle L(e_i),\, f_j\rangle = \langle e_i,\, L^\ast(f_j)\rangle = \overline{\langle L^\ast(f_j),\, e_i\rangle}=\overline{(\bf{A}^\ast)_{ij}} \qquad \square$
 
 :::
-
 
 </br>
 
@@ -236,8 +235,138 @@ $$
 
 </br>
 
-## 에르미트 연산자 {#sec-LA_hermitian_operator}
+### 연습문제 {.unnumbered}
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4_7_A_3}
+
+#### Axler4th 7.A.3
+
+$c$ 가 $L\in \mathcal{L}(V)$ 의 고유값이면 $\overline{c}$ 는 $L^\ast$ 의 고유값임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+@thm-LA_kernel_image_of_adjoint_operator 로부터 $\ker (L-cI) = (\text{im}(L^\ast - \overline{c}I))^\perp$ 이다. 이로부터 
+$$
+\text{nullity}(L-cI) = \dim (V) +\text{rank}(L^\ast - \overline{c}I) = \text{nullity}(L^\ast -\overline{c}I)
+$$ 
+
+임을 안다. 
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4_7_A_4}
+
+#### Axler4th 7.A.4
+
+$L\in \mathcal{L}(V)$ 이고 $U\le V$ 라고 하자. 이 때 $U$ 가 $L$-불변일 필요충분조건은 $U^\perp$ 가 $L^\ast$-불변인 것임을 보여라.
+:::
+
+</div>
+
+::: {.solution}
+
+모든 $u\in U,\, w\in U^\perp$ 에 대해 $\langle Lu,\,w\rangle = 0$ 이면 $\langle u,\, L^\ast w\rangle =0$ 이다. 
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4_7_A_5}
+
+#### Axler4th 7.A.5
+
+$L\in \mathcal{L}(V,\,W)$ 이다. $(e_1,\ldots,\,e_n)$ 이 $V$ 의 정규직교기저이고 $(f_1,\ldots,\,f_m)$ 이 $W$ 의 정규직교기저일 때 다음이 성립함을 보여라.
+
+$$
+\|Le_1\|^2 + \cdots + \|Le_n\|^2 = \|L^\ast f_1\|^2 + \cdots \|L^\ast f_m\|^2
+$$
+
+:::
+
+</div>
+
+::: {.solution}
+
+$Le_i = \sum_{j=1}^m A_{ji}f_j$ 라면 
+
+$$
+\|Le_1\|^2 + \cdots + \|Le_n\|^2 = \sum_{i=1}^n \sum_{j=1}^n |A_{ij}|^2
+$$
+
+이다. 또한 $\langle Le_i,\,f_j\rangle = A_{ji}= \langle e_i,\, L^\ast f_j\rangle$ 이므로
+
+$$
+L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
+$$
+
+이며, 따라서
+
+$$
+\|L^\ast f_1\|^2 + \cdots + \|L^\ast f_m\|^2 = \sum_{i=1}^n \sum_{j=1}^m \left|\overline{A_{ji}}\right|^2 = \sum_{i=1}^n \sum_{j=1}^n |A_{ij}|^2 = \|Le_1\|^2 + \cdots + \|Le_n\|^2
+$$
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4_7_A_6}
+
+#### Axler4th 7.A.6
+
+$L\in \mathcal{L}(V)$ 에 대해 다음을 보여라.
+
+&emsp;($1$) $L$ 이 단사일 필요충분조건은 $L^\ast$ 가 전사인 것이다.
+
+&emsp;($2$) $L$ 가 전사일 필요충분조건은 $L^\ast$ 가 단사인 것이다.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$(L^\ast)^\ast = L$ 이므로 둘중 하나만 보이면 된다. ($1$) 은 @thm-LA_kernel_image_of_adjoint_operator ($3$) 으로부터 쉽게 보일 수 있다.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4th_7_A_7}
+
+#### Axler4th 7.A.7
+
+$L\in \mathcal{L}(V,\,W)$ 에 대해 다음을 보여라.
+
+&emsp; ($1$) $\text{nullity}(L^\ast) = \text{nullity}(L) + \dim (W) - \dim (V)$, 
+
+&emsp; ($2$) $\text{rank}(L^\ast) = \text{rank}(L)$.
+
+:::
+
+</div>
+
+::: {.solution}
+
+($1$)  @thm-LA_rank_nullity 에 의해 $\dim(W)=\text{nullity}(L^\ast) + \text{rank}(L^\ast)$ 이며 @thm-LA_kernel_image_of_adjoint_operator 에 의해 $\text{nullity} (L) = \dim (V)-\text{rank}(L^\ast)$ 이므로 ($1$) 이 성립한다.
+
+
+($2$) $\text{ker} (L^\ast) = (\text{im} (L))^\perp$ 이므로 $\text{nullity}(L^\ast) = \dim(W) - \text{rank}(L)$ 이다. ($1$) 에 $\text{nullity} (L) = \dim(W)-\text{rank}(L^\ast)$ 과 함께 대입하면 ($2$) 를 얻는다.
+:::
+
+</br>
+
+## 에르미트 연산자 
+
+### 에르미트 연산자 {#sec-LA_hermitian_operator}
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-LA_hermitian_matrix}
 
@@ -329,6 +458,117 @@ $$
 
 이므로 $\langle L(u),\, u\rangle$ 는 실수이다. $\square$
 :::
+
+</br>
+
+<div class="border" style="background-color:#F2F4F4  ;padding:5px;">
+
+::: {#exm-LA_zero_map}
+
+$\bf{H}=\begin{bmatrix} 4 & i \\ -i & 2\end{bmatrix}$ 는 에르미트 행렬이다. 그러나 가역변환 $\bf{S}=\begin{bmatrix} 1 & 2 \\ 0 & 1\end{bmatrix}$ 에 대해 $\bf{SHS}^{-1}= \begin{bmatrix} 4-2 i & -4.0 +\frac{i}{2} \\ -i  & 2+2i\end{bmatrix}$ 로 에르미트 행렬이 아니다. 즉 에르미트 연산자의 행렬형태는 에르미트 행렬이 아닐 수 있다.
+:::
+
+</div>
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-LA_hermitian_matrix_representation_and_hermitian_operator}
+
+$H\in \mathcal{L}(V)$ 가 에르미트 연산자일 때 $H$ 의 정규직교기저에 대한 행렬표현은 에르미트 행렬이다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+$\mathcal{B}=(e_1,\ldots,\,e_n)$ 이 정규직교기저라고 하자. $H(e_j) = \sum_k H_{kj}e_k$ 일 때 
+
+$$
+\langle H(e_j),\, e_i\rangle = \sum_k H_{kj}\langle e_k,\,e_i\rangle = H_{ij}
+$$
+
+이며
+
+$$
+\langle H(e_j),\,e_i\rangle = \langle e_j,\, H(e_i)\rangle = \sum_k \overline{H_{ki}}\langle e_j,\,e_k\rangle = \overline{H_{ji}}
+$$
+
+이다. 즉 에르미트 연산자의 정규직교기저에 대한 표현은 에르미트 행렬이다. $\square$
+:::
+
+</br>
+
+### 연습문제 {.unnumbered}
+
+
+
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4th_7_A_9}
+
+#### Axler4th 7.A.9
+
+$L,\, M \in \mathcal{V}$ 가 에르미트 행렬이라고 하자. $LM$ 이 에르미트 행렬일 필요충분조건은 $LM=ML$ 임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution} 
+$(LM)^\ast = LM \iff M^\ast L^\ast = LM \iff ML= LM$
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler_7_A_8_9}
+
+#### Axler 7.A.8
+$\mathcal{M}_{m \times n}(\mathbb{R})$ 에서의 에르미트 행렬의 집합은 벡터공간을 이룸을 보여라. $\mathcal{M}_{m \times n}(\mathbb{C})$ 에서의 에르미트 행렬의 집합은 벡터공간을 이루지 않음을 보여라. 
+
+:::
+
+</div>
+
+::: {.solution}
+
+$\mathcal{M}_{m \times n}(\mathbb{R})$ 에서의 에르미트 행렬의 집합은 대칭행렬의 집합이며 벡터공간을 이룬다는 것은 쉽게 보일 수 있다. $\mathcal{M}_{m \times n}(\mathbb{C})$ 의 경우,
+
+$$
+\left[\begin{array}{rr} 1 & i \\ -i & 1 \end{array}\right] + i \left[\begin{array}{rr} 1 & 1 \\ 1 & 2 \end{array}\right] = \left[\begin{array}{rr} 1+i & 2i \\ 0 & 1+i \end{array}\right]
+$$
+
+는 에르미트 행렬이 아니다.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler_7_A_11}
+
+#### Axler 7.A.11
+
+사영연산자 $P\in \mathcal{L}(V)$ 에 대해 $P=P_U$ 인 $U\le V$ 가 존재할 필요충분조건은 $P$ 가 에르미트 행렬임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$P=P_U$ 인 $U\le V$ 가 존재한다고 하자. $v_1,\,v_2\in V$ 에 대해 $v_1=u_1+w_1,\,v_2=u_2+w_2$ 인 $u_1,\,u_2\in U,\, w_1,\,w_2\in U^\perp$ 가 유일하게 존재한다.
+
+$$
+\langle Pv_1,\,v_2\rangle = \langle u_1,\,v_2\rangle = \langle u_1,\,u_2\rangle = \langle u_1,\, Pv_2\rangle = \langle v_1,\, Pv_2\rangle
+$$
+
+이므로 $P$ 는 에르미트 연산자이다.
+
+이제 $P$ 가 에르미트 행렬이며 $U=\text{im}(P)$ 라고 하면 $P=P_U$ 이다.
+
+:::
+
 
 </br>
 
@@ -471,15 +711,6 @@ $$
 
 </br>
 
-<!-- 
-::: {.callout-caution}
-
-여러번 강조하고 또 강조했지만 선형사상과 벡터의 행렬표현은 특정 기저에 대한 표현이다. 우리는 정규직교기저를 배웠지만 지금까지는 굳이 행렬표현의 기저를 정규직교기저로 한정짓지 않았다. 하지만 이제부터는 특별한 언급이 없는 한 정규직교기저로 한정짓고자 한다. 즉 내적벡터공간에 대한 행렬과 벡터의 표현은 정규직교기저에 대한 표현이다. 따라서 내적은 dot product 와 같아진다. 
-
-:::
-
-</br> -->
-
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-LA_orthogonal_operator}
 
@@ -566,15 +797,204 @@ $n$ 차원 벡터공간 $V$ 에서 정의된 연산자 $T$ 와 정규직교기�
 
 </br>
 
-## 연습문제 {.unnumbered}
+## 정규연산자와 정규행렬
+
+### 정규 연산자와 행렬 {#sec-LA_normal_operator}
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-LA_normal_matrix}
+### 정규 행렬
+
+내적벡터공간에서 정의된 $L\in \mathcal{L}(U,\,V)$ 가 $LL^\ast = L^\ast L$ 일 때 $L$ 을 **정규연산자(normal operator)** 라고 한다. 마찬가지로 정사각 행렬 $\bf{L}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 $\bf{LL}^\ast = \bf{L}^\ast \bf{L}$ 일 때 $\bf{L}$ 을 **정규 행렬(normal matrix)** 라 한다. 
+:::
+:::
+
+</br>
+
+다음은 자연스럽다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-LA_hermitian_is_normal}
+
+에르미트 연산자는 정규연산자이다. 또한 에르미트 행렬은 정규 행렬이다. 
+
+:::
+
+</div>
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-LA_condition_of_normal_matrix}
+
+$N\in \mathcal{L}(V)$ 가 정규연산자일 필요충분인 조건은 모든 $v\in V$ 에 대해 $\|Nv\| = \|N^\ast v\|$ 인 것이다.
+:::
+
+</div>
+
+::: {.proof}
+$$
+\begin{aligned}
+N \text{ is normal} &\iff \langle (N^\ast N - NN^\ast)v ,\, v \rangle  = 0 \\[0.3em]
+&\iff \langle N^\ast M v,\, v \rangle = \langle NN^\ast v ,\, v\rangle \\
+& \iff \|Nv\|^2 = \|N^\ast v\|^2
+\end{aligned}
+$$
+
+:::
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-LA_part1_properties_of_normal_operator}
+
+$\F$-벡터공간 $V$ 에 대해 $N\in \mathcal{L}(V)$ 가 정규연산자일 때 다음이 성립한다.
+
+&emsp;($a$) $\ker (N) = \ker (N^\ast)$.
+
+&emsp;($b$) $\text{im}(N) = \text{im} (N^\ast)$.
+
+&emsp;($c$) $V = \ker (N) \oplus \text{im}(N)$.
+
+&emsp;($d$) $c\in \mathbb{F}$ 일 때 $N-c I$ 도 정규연산자이다.
+
+:::
+
+</div>
+::: {.proof}
+
+전체적으로 @thm-LA_kernel_image_of_adjoint_operator 를 참고하라.
+
+($a$) @prp-LA_condition_of_normal_matrix
+
+($b$) $\text{im}(N) = (\ker (N^\ast))^\perp = (\ker (N))^\perp = \text{im}(N^\ast)$.
+
+($c$) $V=(\ker (N)) \oplus (\ker (N))^\perp = (\ker (N)) \oplus (\ker (N^\ast))^\perp = \ker (N)\oplus \text{im}(N)$
+
+($d$) 
+
+$$
+\begin{aligned}
+(N-cI)(N-cI)^\ast &= (N-cI)(N^\ast - \overline{c}I) = NN^\ast - \overline{c}L + cN^\ast -|c|^2 \\[0.3em]
+&=N^\ast N  - \overline{c}N + cN^\ast -|c|^2 = (N-cI)^\ast (N-cI)
+\end{aligned}
+$$
+
+:::
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-LA_eigenvectors_or_normal_matrix_and_adjoint}
+$N$ 이 정규연산자이고 고유벡터 $v$ 에 대한 고유값이 $c$ 라면 $N^\ast$ 은 같은 고유벡터 $v$ 에 대해 고유값 $\overline{c}$ 를 가진다.
+:::
+
+</div>
+
+::: {.proof}
+$N-cI$ 가 정규연산자이므로 @prp-LA_condition_of_normal_matrix 로부터 $0 = \|(N-cI)v\| = \|(N-cI)^\ast v\|$. $\square$ 
+
+:::
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-LA_orthogonality_of_normal_matrix}
+정규연산자 $N$ 의 서로 다른 고유값을 갖는 두 고유벡터는 직교한다.
+:::
+
+</div>
+
+::: {.proof}
+$N$ 의 고유값 $c_1,\,c_2$ 에 대한 고유벡터 $v_1,\,v_2$ 를 생각하자. 이 때 $c_1\ne c_2$ 이다.
+
+$$
+\begin{aligned}
+(c_1-c_2)\langle v_1,\,v_2\rangle &= \langle Nv_1,\,v_2\rangle - \langle v_1,\, N^\ast v_2 \rangle =  \langle Nv_1,\,v_2\rangle - \langle Mv_1,\, v_2 \rangle = 0
+\end{aligned}
+$$
+
+이며 $c_1 \ne c_2$ 이므로 $\langle v_1,\,v_2\rangle = 0$ 이다. $\square$
+:::
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-LA_diagonality_of_norma_matrix}
+
+정규행렬의 상삼각행렬꼴은 대각행렬이다.
+
+:::
+
+</div>
+
+::: {.proof} 
+
+우리는 슈어 정리(@thm-LA_schure) 로부터 모든 복소행렬이 어떤 정규직교기저에서 상삼각행렬꼴로 나타남을 안다. 이 상삼각행렬을 $\bf{A}$ 라 하면 정규직교기저의 행렬형식은 표준기저 $(\bf{e}_i)$ 가 된다. $\bf{Ae}_j$ 는 $\bf{A}$ 의 $j$ 번째 열벡터 $\bf{A}_{:j}$ 이며, $\bf{A}$ 가 상삼각행렬 이므로 $\|\bf{Ae}_j\|^2 = \sum_{i=1}^j |A_{ij}|^2$ 이다. $\bf{A}^\ast$ 는 하삼각행렬이며, 땨라서 
+
+$$
+\|\bf{A}^\ast\bf{e}_j\|^2= \sum_{i=j}^n \left|(\bf{A}^\ast)_{ij}\right|^2 = \sum_{i=j}^n |A_{ji}|^2
+$$
+
+이다. 정규행렬의 정의에 의해 $\|\bf{Ae}_j\|^2 = \|\bf{A}^\ast \bf{e}_j\|^2$ 이어야 한다. $j=1$ 인 경우 
+
+$$
+|A_{11}|^2 = |A_{11}|^2 + \cdots + |A_{1n}|^2 
+$$
+
+이므로 $A_{12} = \cdots = A_{1n}=0$ 이며, $j=2$ 인 경우
+
+$$
+|A_{12}|^2 + |A_{22}|^2 = |A_{22}|^2 + \cdots + |A_{2n}|^2
+$$
+
+인데 $j=1$ 인 경우에서 $A_{12}=0$ 임을 보였으므로 $A_{23}= \cdots = A_{2n}=0$ 임을 안다. 이것을 계속 반복해보면 $\bf{A}$ 가 대각행렬임을 알 수 있다. $\square$ 
+:::
+
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-LA_part1_normal_operator_and_two_hermite_operator}
+
+$\C$ 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 에 대해 다음은 동치이다.
+
+&emsp;($1$) $L$ 은 정규연산자이다.
+
+&emsp;($2$) 어떤 서로 commute 한 에르미트 연산자 $A,\,B \in \mathcal{L}(V)$ 에 대해 $L=A+iB$ 이다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+($1\implies 2$) $L$ 이 정규연산자라고 하자. $A:=\dfrac{L+L^\ast}{2},\, B:= \dfrac{L-L^\ast}{2i}$ 라고 하면 $L = A+iB$ 이며 $A,\,B$ 는 에르미트 연산자이다. 또한
+
+$$
+\begin{aligned}
+AB-BA &= \dfrac{LL-LL^\ast + L^\ast L - L^\ast L^\ast - LL + L^\ast L - LL^\ast + L^\ast L^\ast}{4i} \\[0.3em]
+&= \dfrac{L^\ast L - LL^\ast}{2i} = 0
+\end{aligned}
+$$
+
+이므로 $A$ 와 $B$ 는 commute 하다.
+
+($2\implies 1$) $LL^\ast - L^\ast L = (A+iB)(A-iB)- (A-iB)(A+iB)= i(BA-AB)=0$ 이므로 $L$ 은 정규연산자이다. $\square$
+
+:::
+
+</br>
+
+### 연습문제 {.unnumbered}
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-LA_axler4_7_A_3}
+::: {#exr-axler4_7_A_12}
 
-#### Axler4th 7.A.3
+#### Axler4th 7.A.12
 
-$c$ 가 $L\in \mathcal{L}(V)$ 의 고유값이면 $\overline{c}$ 는 $L^\ast$ 의 고유값임을 보여라.
+$B\in \mathcal{L}(V)$ 가 $B^\ast = -B$ 일 때 $B$ 를 반대칭 연산자 (skew symmetric operator) 라고 한다. $L\in \mathcal{L}(V)$ 가 정규연산자일 필요충분조건은 어떤 서로 commuting 하는 에르미트 연산자 $A$ 와 반대칭 연산자 $B$ 가 존재하여 $L=A+B$ 임을 보여라.
 
 :::
 
@@ -582,150 +1002,258 @@ $c$ 가 $L\in \mathcal{L}(V)$ 의 고유값이면 $\overline{c}$ 는 $L^\ast$ �
 
 ::: {.solution}
 
-@thm-LA_kernel_image_of_adjoint_operator 로부터 $\ker (L-cI) = (\text{im}(L^\ast - \overline{c}I))^\perp$ 이다. 이로부터 
+($\implies$) 에르미트 $A$ 과 반대칭 $B$ 에 대해 $L=A+B$ 라고 하자. $(A+B)^\ast = A-B$ 이며
+
 $$
-\text{nullity}(L-cI) = \dim (V) +\text{rank}(L^\ast - \overline{c}I) = \text{nullity}(L^\ast -\overline{c}I)
-$$ 
+\begin{aligned}
+LL^\ast - L^\ast L &= (A+B)(A+B)^\ast - (A+B)^\ast(A+B) =0
+\end{aligned}
+$$
+
+이므로 $L$ 은 정규연산자이다. 
+
+($\impliedby$) $L$ 이 정규연산자라고가정하자. $A=(L+L^\ast)/2,\, B=(L-L^\ast)/2$ 라고 하면 $A$ 는 에르미트, $B$ 는 반대칭 연산자이고 $L=A+B$ 이다. 또한
+
+$$
+AB-BA = \dfrac{1}{2}(L^\ast L - LL^\ast ) = 0
+$$
+
+이다. 
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4_7_A_18}
+
+#### Axler4th 7.A.18
+
+2보다 큰 차원의 벡터공간 $V$ 에 대한 정규연산자의 집합은 $\mathcal{L}(V)$ 의 부분공간이 될 수 없다.
+
+:::
+
+</div>
+
+::: {.solution}
+$A,\,B \in \mathcal{L}(V)$ 가 가 정규연산자이며 $c\in \mathbb{F}$ 라고 하자.
+
+$$
+(A+c B)(A+cB)^\ast - (A+cB)^\ast(A+cB) = \overline{c}(AB^\ast - B^\ast A)+c(BA^\ast - A^\ast B)
+$$
+
+이므로 $\bf{A}+c\bf{B}$ 가 정규행렬이 되지 않는다.
+::: 
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler_7_A_19}
+
+#### Axler4th 7.A.19
+
+$L\in \mathcal{L}(V)$ 이고 모든 $v\in V$ 에 대해 $\|L^\ast v\|\le \|Lv\|$ 이면 $L$ 이 정규연산자임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$\|L^\ast v\|\le \|Lv\|$ 로부터 다음을 얻는다.
+$$
+\begin{aligned}
+    \|L^* v\|^2 \leq \|L v\|^2 &\Longleftrightarrow \langle L^\ast v,L^\ast v \rangle \leq \langle Lv,Lv \rangle \\ 
+    &\Longleftrightarrow \langle LL^\ast v,v \rangle \leq \langle L^\ast Lv,v \rangle \\ 
+    &\Longleftrightarrow \langle (L^\ast L - LL^\ast) v,v \rangle \leq 0.
+\end{aligned}
+$$
+
+$n=\dim (V)$ 라 하고 $V$ 의 정규직교 기저 $(e_i)$ 를 생각하자. $Le_i = \sum_j L_{ji}e_j$ 라고 하면
+
+$$
+LL^\ast e_i = \sum_k \overline{L_{ik}}L(e_k)=\sum_k \sum_j \overline{L_{ik}}L_{jk} e_j
+$$
+
+이므로 
+
+$$
+\sum_i \langle (LL^\ast - L^\ast L) e_i,\,e_i\rangle = \sum_i \left(\sum_k \overline{L_{ik}}L_{ik} - \overline{L_{ki}}L_{ki}\right) = 0
+$$
+
+이다. 또한 $A=LL^\ast - L^\ast L$ 에 대해 $A^\ast = A$ 이므로 $A$ 는 에르미트 연산자이다. 이제 모든 벡터 $v\in V$ 에 대해 ($i$) $\langle Av,\,v\rangle \le 0$ 이며 ($ii$) $\text{tr}(A)=0$ 인 에르미트 연산자는 $0$ 뿐임을 알아보자. 아래의 스펙트럼 정리에서 볼 수 있듯이 에르미트 연산자의 고유벡터로 이루어진 $V$ 의 기저가 존재한다. ($i$) 조건에 의해 고유값은 모두 $0$ 보다 작거나 같아야 하며 ($ii$) 조건에 의해 고유값의 합은 $0$ 이어야 한다. 이것을 만족하는 에르미트 행렬은 $0$ 행렬 뿐이며 따라서 $\|L^\ast v\| = \|Lv\|$ 이다. 즉 $L$ 은 정규연산자이다.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4th_7_A_20}
+
+#### Axler4th 7.A.20
+
+$P\in \mathcal{L}(V)$ 가 $P^2=P$ 일 때 다음이 동치인 것을 보여라.
+
+&emsp;($a$) $P$ 는 에르미트이다.
+
+&emsp;($b$) $P$ 는 정규연산자이다.
+
+&emsp;($c$) 어떤 $U\le V$ 에 대해 $P = P_U$ 이다.
+
+:::
+
+</div>
+
+::: {.solution}
+
+($a\implies b$) $P^\ast P- PP^\ast = P^2-P^2 = 0$ 
+
+($b\implies c$) $U = \text{im}(P)$ 라고 하자. $u\in U$ 에 대해 $u=P(v)$ 라고 하면 $u=P(v)=P^2(v) = P(u)$ 이다. @prp-LA_part1_properties_of_normal_operator 의 ($c$) 에 의해 $V=\ker (P)\otimes \im (P)$ 이므로 $P=P_U$ 이다. 
+
+($c \implies a$) @exr-LA_axler_7_A_11
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler_7_A_12}
+
+#### Axler 7.A.12
+
+$N\in \mathcal{L}(V)$ 가 정규연산자이고 $3$ 과 $4$ 를 고유값으로 가진다고 하자. 이 때 $\|u\|=\sqrt{2}$, $\|Nu\|=5$ 인 $u\in V$ 가 존재함을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$3$ 을 고유값으로 가지고 크기가 $1$ 인 벡터를 $u_1$ 이라 하고 $4$ 를 유값으로 가지고 크기가 $1$ 인 벡터를 $u_2$ 라고 하자. 서로 다른 고유값을 가진 정규벡터의 고유벡터이므로 $u_1$ 과 $u_2$ 는 직교한다. $u=u_1+u_2$ 라고 하면, $\|u\|=2$ 이며, $\|Nu\|^2 = 5$ 이다. 
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler_7_A_15}
+
+#### Axler 7.A.15
+
+$\mathbb{F}$-내적벡터공간 $V$ 와 $u,\,x\in V$ 에 대해 $T\in \mathcal{L}(V)$ 를 
+
+$$
+T(v) = \langle v,\, u\rangle x
+$$
+
+로 정의하자. 이 때 다음이 성립함을 보여라.
+
+&emsp; ($1$) $\mathbb{F}=\mathbb{R}$ 일 때 $T$ 가 에르미트 연산자일 필요충분조건은 $u,\,x$ 가 선형종속인 것이다.
+
+&emsp; ($2$) $T$ 가 정규연산자일 필요충분조건은 $u,\,x$ 가 선형종속인 것이다.
+
+:::
+
+</div>
+
+::: {.solution}
+
+ $v,\,w\in V$ 에 대해 $\langle T^\ast(v), w\rangle = \langle v, T(w)\rangle$ 이다. 따라서,
+
+$$
+\langle v,\, T(w)\rangle = \langle u,\,w\rangle \langle v,\,x\rangle
+$$
+
+로부터 $T^\ast (v) = \langle v, x\rangle u$ 임을 안다. 
+
+($1$) $T$ 가 에르미트 연산자라면 $T=T^\ast$ 이어야 하므로, 
+
+$$
+0=(T-T^\ast)(v) = \langle v, u\rangle x - \langle v, x\rangle u
+$$
+
+으로부터 $x= \dfrac{\langle v, u\rangle}{\langle v, x\rangle}u$ 이어야 한다. 즉 $u$ 와 $x$ 는 선형 종속이어야 한다. 이제 $u$ 와 $x$ 가 선형종속이라고 하자. 즉 $u=cx,\, c\in \mathbb{R}$ 이라고 하자.
+
+$$
+(T-T^\ast)(v) = c\langle v, x\rangle x - c \langle v, x \rangle x = 0 
+$$
+
+이므로 $T=T^\ast$ 이다.
+
+($2$) $T$ 가 정규연산자라고 하자. $TT^\ast - T^\ast T=0$ 이므로, 
+
+$$
+\begin{aligned}
+0 &= (TT^\ast - T^\ast T)(v) = T(\langle v, x \rangle u) - T^\ast (\langle v, u\rangle x)  \\
+& = \langle v, x \rangle \|u\|^2 x - \langle v, u\rangle \|x\|^2 u
+\end{aligned}
+$$
+
+이다. 즉 $x = \dfrac{\langle v, x\rangle \|u\|^2}{\langle v, u\rangle \|x\|^2} u$ 이어야 하므로 선형종속이다. 이제 $u=cx,\, c\in \mathbb{F}$ 라고 하자.  
+
+$$
+(TT^\ast - T^\ast T)(v) = T(c\langle v, x \rangle x) - T^\ast (c\langle v, x\rangle x) =  c^2\langle v, x \rangle^2 x - c^2\langle v, x \rangle^2 x = 0
+$$
+
+이므로 $T$ 는 정규연산자이다. 
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler_7_A_16}
+
+#### Axler 7.A.16
+
+$N\in \mathcal{L}(V)$ 가 정규연산자일 때 다음을 보이시오.
+
+&emsp; ($1$) $\text{im}(N) = \text{im}(N^\ast)$.
+
+&emsp; ($2$) 양의 정수 $k$ 에 대해 $\ker (N^k) = \ker (N)$ 이며 $\text{im}(N^k) = \text{im}(N)$.
+
+:::
+
+</div>
+
+::: {.solution}
+
+($1$) @prp-LA_condition_of_normal_matrix 를 보자. $\|Nv\|=\|N^\ast v\|$ 이므로 ($1$) 이 성립함을 안다. 또한 @thm-LA_kernel_image_of_adjoint_operator 로부터
+
+$$
+\text{im}(N) = (\ker (N^\ast))^\perp = (\ker (N))^\perp = \text{im}(N^\ast)
+$$
 
 임을 안다. 
 
-:::
-
-</br>
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-LA_axler4_7_A_4}
-
-#### Axler4th 7.A.4
-
-$L\in \mathcal{L}(V)$ 이고 $U\le V$ 라고 하자. 이 때 $U$ 가 $L$-불변일 필요충분조건은 $U^\perp$ 가 $L^\ast$-불변인 것임을 보여라.
-:::
-
-</div>
-
-::: {.solution}
-
-모든 $u\in U,\, w\in U^\perp$ 에 대해 $\langle Lu,\,w\rangle = 0$ 이면 $\langle u,\, L^\ast w\rangle =0$ 이다. 
-
-:::
-
-
-</br>
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-LA_axler4_7_A_5}
-
-#### Axler4th 7.A.5
-
-$L\in \mathcal{L}(V,\,W)$ 이다. $(e_1,\ldots,\,e_n)$ 이 $V$ 의 정규직교기저이고 $(f_1,\ldots,\,f_m)$ 이 $W$ 의 정규직교기저일 때 다음이 성립함을 보여라.
+($2$) $k$ 에 대한 induction 을 사용한다. $\ker (N)\subseteq \ker(N^k)$ 임은 자명하므로 $\ker(N^k) \subseteq  \ker(N)$ 만 보이면 된다. $N$ 이 정규연산자라면 양의 정수 $k$ 에 대해 $(N^\ast)^k N^k = (N^\ast N)^k$ 임은 쉽게 보일 수 있다. 또한
 
 $$
-\|Le_1\|^2 + \cdots + \|Le_n\|^2 = \|L^\ast f_1\|^2 + \cdots \|L^\ast f_m\|^2
+\begin{aligned}
+\|N^2v\|^2= \langle N^2 v, N^2 v \rangle = \langle N^\ast Nv, N^\ast Nv\rangle  = \|N^\ast Nv\|^2
+\end{aligned}
 $$
 
-:::
-
-</div>
-
-::: {.solution}
-
-$Le_i = \sum_{j=1}^m A_{ji}f_j$ 라면 
+이므로 $\ker (N^2) = \ker (N^\ast N)$ 이며, 
 
 $$
-\|Le_1\|^2 + \cdots + \|Le_n\|^2 = \sum_{i=1}^n \sum_{j=1}^n |A_{ij}|^2
+v\in \ker (N^\ast N) \implies \langle N^\ast Nv, v\rangle = 0 \implies \|Nv\|^2=0 \implies v\in \ker (N)
 $$
 
-이다. 또한 $\langle Le_i,\,f_j\rangle = A_{ji}= \langle e_i,\, L^\ast f_j\rangle$ 이므로
+이다. 이로부터 $\ker (N^2)\subseteq \ker(N)$ 임을 안다. $\ker(N) \subseteq \ker(N^2)$ 임은 자명하므로 $\ker(N) = \ker(N^2)$ 이다. 이제 $\ker(N^k) =  \ker(N)$ 임을 가정하자.
 
 $$
-L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
+v \in \ker (N^{k+1}) \implies N^k(Nv) = 0_V \implies Nv \in \ker (N^k) \implies Nv \in \ker (N)
 $$
 
-이며, 따라서
+이므로 $v\in \ker(N^2) = \ker(N)$ 이다. 즉 $\ker (N^{k+1}) = \ker (N)$ 이다. 따리서 양의 정수 $k$ 에 대해 $\ker (N^k) = \ker (N)$ 이다.
 
-$$
-\|L^\ast f_1\|^2 + \cdots + \|L^\ast f_m\|^2 = \sum_{i=1}^n \sum_{j=1}^m \left|\overline{A_{ji}}\right|^2 = \sum_{i=1}^n \sum_{j=1}^n |A_{ij}|^2 = \|Le_1\|^2 + \cdots + \|Le_n\|^2
-$$
-
-:::
-
-</br>
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-LA_axler4_7_A_6}
-
-#### Axler4th 7.A.6
-
-$L\in \mathcal{L}(V)$ 에 대해 다음을 보여라.
-
-&emsp;($1$) $L$ 이 단사일 필요충분조건은 $L^\ast$ 가 전사인 것이다.
-
-&emsp;($2$) $L$ 가 전사일 필요충분조건은 $L^\ast$ 가 단사인 것이다.
-
-:::
-
-</div>
-
-::: {.solution}
-
-$(L^\ast)^\ast = L$ 이므로 둘중 하나만 보이면 된다. ($1$) 은 @thm-LA_kernel_image_of_adjoint_operator ($3$) 으로부터 쉽게 보일 수 있다.
-
-:::
-
-</br>
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-LA_axler4th_7_A_7}
-
-#### Axler4th 7.A.7
-
-$L\in \mathcal{L}(V,\,W)$ 에 대해 다음을 보여라.
-
-&emsp; ($1$) $\text{nullity}(L^\ast) = \text{nullity}(L) + \dim (W) - \dim (V)$, 
-
-&emsp; ($2$) $\text{rank}(L^\ast) = \text{rank}(L)$.
-
-:::
-
-</div></br>
-
-::: {.solution}
-
-($1$)  @thm-LA_rank_nullity 에 의해 $\dim(W)=\text{nullity}(L^\ast) + \text{rank}(L^\ast)$ 이며 @thm-LA_kernel_image_of_adjoint_operator 에 의해 $\text{nullity} (L) = \dim (V)-\text{rank}(L^\ast)$ 이므로 ($1$) 이 성립한다.
-
-
-($2$) $\text{ker} (L^\ast) = (\text{im} (L))^\perp$ 이므로 $\text{nullity}(L^\ast) = \dim(W) - \text{rank}(L)$ 이다. ($1$) 에 $\text{nullity} (L) = \dim(W)-\text{rank}(L^\ast)$ 과 함께 대입하면 ($2$) 를 얻는다.
-:::
-
-</br>
-
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-LA_axler4th_7_A_9}
-
-#### Axler4th 7.A.9
-
-$L,\, M \in \mathcal{V}$ 가 에르미트 행렬이라고 하자. $LM$ 이 에르미트 행렬일 필요충분조건은 $LM=ML$ 임을 보여라.
-
-:::
-
-</div>
-
-::: {.solution} 
-$(LM)^\ast = LM \iff M^\ast L^\ast = LM \iff ML= LM$
+@prp-LA_part1_properties_of_normal_operator ($c$) 로부터 $\text{im}(N^k) = (\ker (N^k))^\perp = (\ker (N))^\perp = \text{im}(N)$ 이다.
 
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-LA_axler_7_A_8_9}
+::: {#exr-axler_7_A_18}
 
-#### Axler 7.A.8
-$\mathcal{M}_{m \times n}(\mathbb{R})$ 에서의 에르미트 행렬의 집합은 벡터공간을 이룸을 보여라. $\mathcal{M}_{m \times n}(\mathbb{C})$ 에서의 에르미트 행렬의 집합은 벡터공간을 이루지 않음을 보여라. 
+#### Axler 7.A.18
+
+$\bf{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 표준기저 $(\bf{e}_1, \ldots,\,\bf{e}_n)$ 에 대해 $\|\bf{Ae}_i\| = \|\bf{A}^\ast \bf{e}_i\|$ $(i=1,\ldots,\,n)$ 이면 $\bf{A}$ 가 정규행렬인가? 
 
 :::
 
@@ -733,23 +1261,19 @@ $\mathcal{M}_{m \times n}(\mathbb{R})$ 에서의 에르미트 행렬의 집합�
 
 ::: {.solution}
 
-$\mathcal{M}_{m \times n}(\mathbb{R})$ 에서의 에르미트 행렬의 집합은 대칭행렬의 집합이며 벡터공간을 이룬다는 것은 쉽게 보일 수 있다. $\mathcal{M}_{m \times n}(\mathbb{C})$ 의 경우,
+(<u>*이게 맞다면 텍스트에 명제로 나왔겠지?*</u>) 
 
-$$
-\left[\begin{array}{rr} 1 & i \\ -i & 1 \end{array}\right] + i \left[\begin{array}{rr} 1 & 1 \\ 1 & 2 \end{array}\right] = \left[\begin{array}{rr} 1+i & 2i \\ 0 & 1+i \end{array}\right]
-$$
-
-는 에르미트 행렬이 아니다.
+$\bf{A}= \left[\begin{array}{rr} 1 & -1 \\ 1 & -1\end{array}\right]$ 에 대해 $\|\bf{Ae}_1\| = \|\bf{Ae}_2\| = \sqrt{2}$ 이지만 $\bf{AA}^\ast - \bf{A}^\ast\bf{A} = \left[\begin{array}{rr} 0 & 4 \\ 4 & 0\end{array}\right] \ne \bf{0}$ 이다. 
 
 :::
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
-::: {#exr-axler_7_A_11}
+::: {#exr-axler_7_B_1}
 
-#### Axler 7.A.11
+#### Axler 7.B.1
 
-Projection $P\in \mathcal{L}(V)$ 에 대해 $P=P|_U$ 인 $U\le V$ 가 존재할 필요충분조건은 $P$ 가 에르미트 행렬임을 보여라.
+대칭행렬이 아니면서 행렬의 고유벡터로 이루어진 기저를 갖도록 하는 정사각행렬이 존재하는가?
 
 :::
 
@@ -757,15 +1281,78 @@ Projection $P\in \mathcal{L}(V)$ 에 대해 $P=P|_U$ 인 $U\le V$ 가 존재할 
 
 ::: {.solution}
 
-$P=P|_U$ 인 $U\le V$ 가 존재한다고 하자. $v_1,\,v_2\in V$ 에 대해 $v_1=u_1+w_1,\,v_2=u_2+w_2$ 인 $u_1,\,u_2\in U,\, w_1,\,w_2\in U^\perp$ 가 유일하게 존재한다.
+$\bf{A} = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3\end{bmatrix}$ 는 $\bf{Ae}_1 = \bf{e}_1$, $\bf{A}(\bf{e}_1 + \bf{e}_2) = 2(\bf{e}_1 + \bf{e}_2)$, $\bf{Ae}_3 = 3\bf{e}_3$ 인데 대칭행렬이 아니다. 
+
+:::
+
+::: {.callout-tip appearance="minimal" icon="false"}
+
+스펙트럼 정리가 이야기하는 것은 복소수체에서의 정규행렬, 실수체에서의 대칭행렬의 경우 행렬의 고유벡터로 정규직교기저를 구성할 수 있다는 것이다. 위의 문제의 경우는 대칭행렬이 아니므로 고유벡터로 정규직교기저를 구성할 수 없지만 기저는 구성 할 수 있다는 것이다.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler_7_B_4}
+
+#### Axler 7.B.4
+
+$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 일 때 $\bf{A}$ 가 정규행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 $\mathcal{M}_n(\mathbb{C})$ 는 모든 $\bf{A}$ 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.
+:::
+
+</div>
+
+::: {.solution}
+
+@thm-LA_spectrum_theorem_for_complex_vector_space 
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler_7_B_5}
+
+#### Axler 7.B.5
+
+$\bf{L}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 일 때 $\bf{A}$ 가 대칭행렬인것의 필요충분조건은 서로 다른 고유값을 갖는 고유벡터의 모든 쌍은 서로 직교하며 $\mathcal{M}_n(\mathbb{R})$ 는 모든 $\bf{A}$ 의 고유값에 대한 고유공간의 직합과 같다는 것임을 보여라.
+:::
+
+</div>
+
+::: {.solution}
+
+@thm-LA_spectrum_theorem_for_real_vector_space
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_normal_matrix_and_operator}
+
+유한차원 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 에 대해 다음이 성립함을 보여라.
+
+($1$) $L$ 의 어떤 기저 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 에서의 행렬표현 $\bf{L}$ 이 정규행렬이면 다른 기저에서의 행렬표현도 정규행렬이다.
+
+($2$) $L$ 의 어떤 기저 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 에서의 행렬표현 $\bf{L}$ 이 에르미트 행렬일 때 다른 기저 $\mathcal{B}'$ 에서의 행렬표현도 에르미트 행렬일 필요충분조건은 두 기저 사이의 변환행렬이 linear isometry 의 $0$ 이 아닌 스칼라배인 것이다.
+
+:::
+
+</div>
+
+::: {.solution}
+
+($1$) $n\times n$ 가역행렬 $\bf{S}$ 에 대해 $\mathcal{B}$ 가 다른 기저 $\mathcal{B}'$ 으로 변환된다. $\bf{v}_i = \bf{S}\bf{e}_i$ 이면 $[L]_{\mathcal{B}'} = \bf{SLS}^{-1}$ 이며
 
 $$
-\langle Pv_1,\,v_2\rangle = \langle u_1,\,v_2\rangle = \langle u_1,\,u_2\rangle = \langle u_1,\, Pv_2\rangle = \langle v_1,\, Pv_2\rangle
+[L]_{\mathcal{B'}}[L^\ast]_{\mathcal{B'}} - [L^\ast]_{\mathcal{B'}}[L]_{\mathcal{B'}} = \bf{S}(\bf{LL}^\ast - \bf{L}^\ast \bf{L})\bf{S}^{-1}=\bf{0}
 $$
 
-이므로 $P$ 는 에르미트 연산자이다.
+이다. 즉 어떤 기저에서의 행렬표현이 정규행렬이면 모든 기저에서의 행렬 표현 역시 정규행렬이다. 
 
-이제 $P$ 가 에르미트 행렬이며 $U=\text{im}(P)$ 라고 하면 $P=P|_U$ 이다.
+($2$) $\mathcal{B}'=(\)
+
+
+
 
 
 :::

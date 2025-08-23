@@ -20,7 +20,7 @@ book:
         - src/part1/ch1_05_innerproduct.qmd
         - src/part1/ch1_06_operators_on_innerproduct_space.qmd
         - src/part1/ch1_07_spectrum_theorem.qmd
-        - src/part1/ch1_08_svd.qmd
+        # - src/part1/ch1_08_svd.qmd
     - part: src/part2/part2.qmd
       chapters: 
         - src/part2/ch2_01_groups.qmd

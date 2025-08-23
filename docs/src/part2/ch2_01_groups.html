@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9&nbsp; 군의 기초 – 대수학</title>
+<title>8&nbsp; 군의 기초 – 대수학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,15 +32,16 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <link href="../../src/part2/ch2_02_homomorphisms.html" rel="next">
 <link href="../../src/part2/part2.html" rel="prev">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b467865d89f01302b3bb45791fa41ab5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -101,7 +102,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -110,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part2/part2.html">II. 군 (Groups)</a></li><li class="breadcrumb-item"><a href="../../src/part2/ch2_01_groups.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군의 기초</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part2/part2.html">II. 군 (Groups)</a></li><li class="breadcrumb-item"><a href="../../src/part2/ch2_01_groups.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군의 기초</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -189,13 +190,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part1/ch1_07_spectrum_theorem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">스펙트럼 정리</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/part1/ch1_08_svd.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">특이값 분해</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">스펙트럼 정리와 특이값 분해</span></span></a>
   </div>
 </li>
       </ul>
@@ -212,25 +207,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_01_groups.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_02_homomorphisms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">군에서의 준동형사상과 동형사상</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군에서의 준동형사상과 동형사상</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_03_normal_subgroup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">정규부분군과 몫군</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">정규부분군과 몫군</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_04_symmetry.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Symmetry</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Symmetry</span></span></a>
   </div>
 </li>
       </ul>
@@ -247,49 +242,49 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/quotient_space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">몫공간과 몫사상</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">몫공간과 몫사상</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/dual_space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">쌍대공간과 쌍대 사상</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">쌍대공간과 쌍대 사상</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/bilinear_form.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/laplacian_form_of_determinant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/generalized_inverse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/characteristic_polynomial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">특성다항식, 최소다항식과 케일리-해밀턴 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">특성다항식, 최소다항식과 케일리-해밀턴 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/generalized_eigenspace.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">일반화된 고유공간과 조르당 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">일반화된 고유공간과 조르당 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/tensor_product.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">텐서곱</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">텐서곱</span></span></a>
   </div>
 </li>
       </ul>
@@ -297,7 +292,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -316,20 +311,20 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#sec-MA_integers" id="toc-sec-MA_integers" class="nav-link active" data-scroll-target="#sec-MA_integers"><span class="header-section-number">9.1</span> 정수의 성질</a>
+  <li><a href="#sec-MA_integers" id="toc-sec-MA_integers" class="nav-link active" data-scroll-target="#sec-MA_integers"><span class="header-section-number">8.1</span> 정수의 성질</a>
   <ul class="collapse">
-  <li><a href="#sec-MA_divisor_and_gcd" id="toc-sec-MA_divisor_and_gcd" class="nav-link" data-scroll-target="#sec-MA_divisor_and_gcd"><span class="header-section-number">9.1.1</span> 약수와 최대공약수</a></li>
-  <li><a href="#sec-MA_prime_number_factorization" id="toc-sec-MA_prime_number_factorization" class="nav-link" data-scroll-target="#sec-MA_prime_number_factorization"><span class="header-section-number">9.1.2</span> 소수와 소인수 분해</a></li>
-  <li><a href="#sec-MA_modula_arithmetic" id="toc-sec-MA_modula_arithmetic" class="nav-link" data-scroll-target="#sec-MA_modula_arithmetic"><span class="header-section-number">9.1.3</span> 모듈라 산술</a></li>
+  <li><a href="#sec-MA_divisor_and_gcd" id="toc-sec-MA_divisor_and_gcd" class="nav-link" data-scroll-target="#sec-MA_divisor_and_gcd"><span class="header-section-number">8.1.1</span> 약수와 최대공약수</a></li>
+  <li><a href="#sec-MA_prime_number_factorization" id="toc-sec-MA_prime_number_factorization" class="nav-link" data-scroll-target="#sec-MA_prime_number_factorization"><span class="header-section-number">8.1.2</span> 소수와 소인수 분해</a></li>
+  <li><a href="#sec-MA_modula_arithmetic" id="toc-sec-MA_modula_arithmetic" class="nav-link" data-scroll-target="#sec-MA_modula_arithmetic"><span class="header-section-number">8.1.3</span> 모듈라 산술</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
-  <li><a href="#군의-정의와-기본-성질" id="toc-군의-정의와-기본-성질" class="nav-link" data-scroll-target="#군의-정의와-기본-성질"><span class="header-section-number">9.2</span> 군의 정의와 기본 성질</a>
+  <li><a href="#군의-정의와-기본-성질" id="toc-군의-정의와-기본-성질" class="nav-link" data-scroll-target="#군의-정의와-기본-성질"><span class="header-section-number">8.2</span> 군의 정의와 기본 성질</a>
   <ul class="collapse">
-  <li><a href="#sec-binary_operations" id="toc-sec-binary_operations" class="nav-link" data-scroll-target="#sec-binary_operations"><span class="header-section-number">9.2.1</span> 이항연산</a></li>
-  <li><a href="#sec-MA_groups_subgroups" id="toc-sec-MA_groups_subgroups" class="nav-link" data-scroll-target="#sec-MA_groups_subgroups"><span class="header-section-number">9.2.2</span> 군과 부분군</a></li>
-  <li><a href="#부분군" id="toc-부분군" class="nav-link" data-scroll-target="#부분군"><span class="header-section-number">9.2.3</span> 부분군</a></li>
-  <li><a href="#sec_part2_additive_groups_of_integers" id="toc-sec_part2_additive_groups_of_integers" class="nav-link" data-scroll-target="#sec_part2_additive_groups_of_integers"><span class="header-section-number">9.2.4</span> 정수의 덧셈군</a></li>
-  <li><a href="#순환군" id="toc-순환군" class="nav-link" data-scroll-target="#순환군"><span class="header-section-number">9.2.5</span> 순환군</a></li>
+  <li><a href="#sec-binary_operations" id="toc-sec-binary_operations" class="nav-link" data-scroll-target="#sec-binary_operations"><span class="header-section-number">8.2.1</span> 이항연산</a></li>
+  <li><a href="#sec-MA_groups_subgroups" id="toc-sec-MA_groups_subgroups" class="nav-link" data-scroll-target="#sec-MA_groups_subgroups"><span class="header-section-number">8.2.2</span> 군과 부분군</a></li>
+  <li><a href="#부분군" id="toc-부분군" class="nav-link" data-scroll-target="#부분군"><span class="header-section-number">8.2.3</span> 부분군</a></li>
+  <li><a href="#sec_part2_additive_groups_of_integers" id="toc-sec_part2_additive_groups_of_integers" class="nav-link" data-scroll-target="#sec_part2_additive_groups_of_integers"><span class="header-section-number">8.2.4</span> 정수의 덧셈군</a></li>
+  <li><a href="#순환군" id="toc-순환군" class="nav-link" data-scroll-target="#순환군"><span class="header-section-number">8.2.5</span> 순환군</a></li>
   <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
   </ul></li>
   </ul>
@@ -338,9 +333,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part2/part2.html">II. 군 (Groups)</a></li><li class="breadcrumb-item"><a href="../../src/part2/ch2_01_groups.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군의 기초</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part2/part2.html">II. 군 (Groups)</a></li><li class="breadcrumb-item"><a href="../../src/part2/ch2_01_groups.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군의 기초</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군의 기초</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군의 기초</span></h1>
 </div>
 
 
@@ -366,10 +361,10 @@ window.Quarto = {
 \]</span></p>
 </div>
 <p><br></p>
-<section id="sec-MA_integers" class="level2 page-columns page-full" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="sec-MA_integers"><span class="header-section-number">9.1</span> 정수의 성질</h2>
-<section id="sec-MA_divisor_and_gcd" class="level3 page-columns page-full" data-number="9.1.1">
-<h3 data-number="9.1.1" class="anchored" data-anchor-id="sec-MA_divisor_and_gcd"><span class="header-section-number">9.1.1</span> 약수와 최대공약수</h3>
+<section id="sec-MA_integers" class="level2 page-columns page-full" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="sec-MA_integers"><span class="header-section-number">8.1</span> 정수의 성질</h2>
+<section id="sec-MA_divisor_and_gcd" class="level3 page-columns page-full" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="sec-MA_divisor_and_gcd"><span class="header-section-number">8.1.1</span> 약수와 최대공약수</h3>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside">대수를 다루는데 앞으로 아래에 기술할 정수의 성질이 많이 사용된다.</span></div></div>
 <p>정수 <span class="math inline">\(a\)</span> 와 0이 아닌 정수 <span class="math inline">\(b\)</span> 가 주어졌다고 하자. <span class="math inline">\(a\)</span> 를 <span class="math inline">\(b\)</span> 로 나누었을 때 어떤 정수 <span class="math inline">\(m\)</span> 과 <span class="math inline">\(|b|\)</span> 보다 작은 <span class="math inline">\(0\)</span> 혹은 양의 정수 <span class="math inline">\(r\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -383,7 +378,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </div>
 <div class="callout-body-container">
 <div id="def-MA_divisor_gcd" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 9.1 (약수와 최대공약수)</strong></span> 정수 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(0\)</span> 이 아닌 정수 <span class="math inline">\(b\)</span> 가 주어졌을 때 어떤 정수 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(a=mb\)</span> 일 때 <span class="math inline">\(b\)</span> 를 <span class="math inline">\(a\)</span> 의 <strong>약수 (devisor)</strong>라고 하고 <span class="math inline">\(b \mid a\)</span> 라고 쓴다. <span class="math inline">\(b\)</span> 가 <span class="math inline">\(a\)</span> 의 약수가 아닐 때는 <span class="math inline">\(b \nmid a\)</span> 라고 쓴다.</p>
+<p><span class="theorem-title"><strong>정의 8.1 (약수와 최대공약수)</strong></span> 정수 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(0\)</span> 이 아닌 정수 <span class="math inline">\(b\)</span> 가 주어졌을 때 어떤 정수 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(a=mb\)</span> 일 때 <span class="math inline">\(b\)</span> 를 <span class="math inline">\(a\)</span> 의 <strong>약수 (devisor)</strong>라고 하고 <span class="math inline">\(b \mid a\)</span> 라고 쓴다. <span class="math inline">\(b\)</span> 가 <span class="math inline">\(a\)</span> 의 약수가 아닐 때는 <span class="math inline">\(b \nmid a\)</span> 라고 쓴다.</p>
 <p>주어진 정수 <span class="math inline">\(a,\,b\)</span> 에 대해 어떤 양의 정수 <span class="math inline">\(c\)</span> 가</p>
 <p> (<span class="math inline">\(1\)</span>). <span class="math inline">\(c\mid a,\, c\mid b\)</span>,</p>
 <p> (<span class="math inline">\(2\)</span>). <span class="math inline">\(\forall d\in \mathbb{Z},\, (d \mid a) \land (d \mid b) \implies d \mid c\)</span></p>
@@ -395,7 +390,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_divisor" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.1</strong></span> <span class="math inline">\(0\)</span> 이 아닌 <span class="math inline">\(a,\,b\in \mathbb{Z}\)</span> 에 대해 <span class="math inline">\(\gcd (a,\,b)\)</span> 는 존재하며, 어떤 정수 <span class="math inline">\(m_0,\, n_0\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>명제 8.1</strong></span> <span class="math inline">\(0\)</span> 이 아닌 <span class="math inline">\(a,\,b\in \mathbb{Z}\)</span> 에 대해 <span class="math inline">\(\gcd (a,\,b)\)</span> 는 존재하며, 어떤 정수 <span class="math inline">\(m_0,\, n_0\)</span> 에 대해</p>
 <p><span class="math display">\[
 \gcd (a,\,b) = m_0a + n_0b
 \]</span></p>
@@ -413,8 +408,8 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </div>
 <p><br></p>
 </section>
-<section id="sec-MA_prime_number_factorization" class="level3" data-number="9.1.2">
-<h3 data-number="9.1.2" class="anchored" data-anchor-id="sec-MA_prime_number_factorization"><span class="header-section-number">9.1.2</span> 소수와 소인수 분해</h3>
+<section id="sec-MA_prime_number_factorization" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="sec-MA_prime_number_factorization"><span class="header-section-number">8.1.2</span> 소수와 소인수 분해</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -422,17 +417,17 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </div>
 <div class="callout-body-container">
 <div id="def-MA_relatively_prime" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 9.2 (서로소)</strong></span> <span class="math inline">\(a,\,b\in\mathbb{Z}\)</span> 에 대해 <span class="math inline">\(\gcd (a,\,b)=1\)</span> 일 때 <span class="math inline">\(a,\,b\)</span> 는 <strong>서로소(relatively prime)</strong> 이라 한다.</p>
+<p><span class="theorem-title"><strong>정의 8.2 (서로소)</strong></span> <span class="math inline">\(a,\,b\in\mathbb{Z}\)</span> 에 대해 <span class="math inline">\(\gcd (a,\,b)=1\)</span> 일 때 <span class="math inline">\(a,\,b\)</span> 는 <strong>서로소(relatively prime)</strong> 이라 한다.</p>
 </div>
 </div>
 </div>
 </div>
 <p><br></p>
-<p>다음 명제는 <a href="#prp-MA_divisor" class="quarto-xref">명제&nbsp;<span>9.1</span></a> 에 의해 자명하다.</p>
+<p>다음 명제는 <a href="#prp-MA_divisor" class="quarto-xref">명제&nbsp;<span>8.1</span></a> 에 의해 자명하다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_relatively_prime" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.2</strong></span> <span class="math inline">\(a,\,b\in \mathbb{Z}\)</span> 가 서로소이면 <span class="math inline">\(ma+nb=1\)</span> 을 만족하는 <span class="math inline">\(m,\,n\in \mathbb{Z}\)</span> 가 존재한다.</p>
+<p><span class="theorem-title"><strong>명제 8.2</strong></span> <span class="math inline">\(a,\,b\in \mathbb{Z}\)</span> 가 서로소이면 <span class="math inline">\(ma+nb=1\)</span> 을 만족하는 <span class="math inline">\(m,\,n\in \mathbb{Z}\)</span> 가 존재한다.</p>
 </div>
 </div>
 <p><br></p>
@@ -443,7 +438,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </div>
 <div class="callout-body-container">
 <div id="def-group_prime" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 9.3 (소수)</strong></span> 어떤 <span class="math inline">\(1\)</span> 보다 큰 양의 정수 <span class="math inline">\(p\)</span> 가 <span class="math inline">\(\pm 1\)</span> 과 <span class="math inline">\(\pm p\)</span> 이외의 약수가 존재하지 않을 때 <span class="math inline">\(p\)</span> 를 <strong>소수(prime number)</strong> 라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 8.3 (소수)</strong></span> 어떤 <span class="math inline">\(1\)</span> 보다 큰 양의 정수 <span class="math inline">\(p\)</span> 가 <span class="math inline">\(\pm 1\)</span> 과 <span class="math inline">\(\pm p\)</span> 이외의 약수가 존재하지 않을 때 <span class="math inline">\(p\)</span> 를 <strong>소수(prime number)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
@@ -451,7 +446,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_prime_number_equivalence" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.3</strong></span> 다음 두 명제는 동치이다.</p>
+<p><span class="theorem-title"><strong>명제 8.3</strong></span> 다음 두 명제는 동치이다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(p\)</span> 는 소수이다.</p>
 <p> (<span class="math inline">\(2\)</span>) 임의의 정수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(\gcd (p, n)=1\)</span> 이거나 <span class="math inline">\(p \mid n\)</span> 이다.</p>
 </div>
@@ -464,27 +459,27 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_relatively_prime_2" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.4</strong></span> <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 가 서로소이고 <span class="math inline">\(a\mid bc\)</span> 이면 <span class="math inline">\(a\mid c\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>명제 8.4</strong></span> <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 가 서로소이고 <span class="math inline">\(a\mid bc\)</span> 이면 <span class="math inline">\(a\mid c\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-MA_relatively_prime" class="quarto-xref">명제&nbsp;<span>9.2</span></a> 에 의해 <span class="math inline">\(ma+nb=1\)</span> 을 만족하는 <span class="math inline">\(m,\,n\in \mathbb{Z}\)</span> 가 존재한다. <span class="math inline">\(mac+nbc=c\)</span> 이며 <span class="math inline">\(a\mid mac\)</span> 이고 가정에 의해 <span class="math inline">\(a\mid mbc\)</span> 이므로 <span class="math inline">\(a \mid c\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-MA_relatively_prime" class="quarto-xref">명제&nbsp;<span>8.2</span></a> 에 의해 <span class="math inline">\(ma+nb=1\)</span> 을 만족하는 <span class="math inline">\(m,\,n\in \mathbb{Z}\)</span> 가 존재한다. <span class="math inline">\(mac+nbc=c\)</span> 이며 <span class="math inline">\(a\mid mac\)</span> 이고 가정에 의해 <span class="math inline">\(a\mid mbc\)</span> 이므로 <span class="math inline">\(a \mid c\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="cor-MA_relatively_prime" class="theorem corollary">
-<p><span class="theorem-title"><strong>따름정리 9.1</strong></span> 소수 <span class="math inline">\(p\)</span> 가 어떤 정수의 곱 <span class="math inline">\(a,\,b\)</span> 를 나눈다면 <span class="math inline">\(p \mid a\)</span> 이거나 <span class="math inline">\(p \mid b\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>따름정리 8.1</strong></span> 소수 <span class="math inline">\(p\)</span> 가 어떤 정수의 곱 <span class="math inline">\(a,\,b\)</span> 를 나눈다면 <span class="math inline">\(p \mid a\)</span> 이거나 <span class="math inline">\(p \mid b\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(p\)</span> 가 소수이므로 <span class="math inline">\(p \nmid a\)</span> 라면 <a href="#prp-MA_prime_number_equivalence" class="quarto-xref">명제&nbsp;<span>9.3</span></a> 에 의해 <span class="math inline">\(\gcd (p,\,a)=1\)</span> 이다. <span class="math inline">\(mp+na=1\)</span> 을 만족하는 <span class="math inline">\(m,\,n\in \mathbb{Z}\)</span> 가 존재한다. <span class="math inline">\(mpb + nab = b\)</span> 이며 <span class="math inline">\(p \mid nab\)</span> 이므로 <span class="math inline">\(p\mid b\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(p\)</span> 가 소수이므로 <span class="math inline">\(p \nmid a\)</span> 라면 <a href="#prp-MA_prime_number_equivalence" class="quarto-xref">명제&nbsp;<span>8.3</span></a> 에 의해 <span class="math inline">\(\gcd (p,\,a)=1\)</span> 이다. <span class="math inline">\(mp+na=1\)</span> 을 만족하는 <span class="math inline">\(m,\,n\in \mathbb{Z}\)</span> 가 존재한다. <span class="math inline">\(mpb + nab = b\)</span> 이며 <span class="math inline">\(p \mid nab\)</span> 이므로 <span class="math inline">\(p\mid b\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-MA_prime_number_factorization" class="theorem">
-<p><span class="theorem-title"><strong>정리 9.1</strong></span> <span class="math inline">\(1\)</span> 보다 큰 양의 정수 <span class="math inline">\(a\)</span> 는 소수의 곱으로 유일하게 표현된다. 즉 <span class="math inline">\(a\in \mathbb{Z}_+\)</span> 은 어떤 소수 <span class="math inline">\(p_1,\ldots,\,p_m\)</span>, (<span class="math inline">\(p_1&lt; \cdots &lt;p_m\)</span>) 에 대해 <span class="math inline">\(a=p_1^{n_1} \cdots p_m^{n_m}\)</span> 이며 <span class="math inline">\(p_1,\ldots,\,p_m\)</span> 과 <span class="math inline">\(n_1,\ldots,\,n_m\)</span> 은 유일하게 정해진다.</p>
+<p><span class="theorem-title"><strong>정리 8.1</strong></span> <span class="math inline">\(1\)</span> 보다 큰 양의 정수 <span class="math inline">\(a\)</span> 는 소수의 곱으로 유일하게 표현된다. 즉 <span class="math inline">\(a\in \mathbb{Z}_+\)</span> 은 어떤 소수 <span class="math inline">\(p_1,\ldots,\,p_m\)</span>, (<span class="math inline">\(p_1&lt; \cdots &lt;p_m\)</span>) 에 대해 <span class="math inline">\(a=p_1^{n_1} \cdots p_m^{n_m}\)</span> 이며 <span class="math inline">\(p_1,\ldots,\,p_m\)</span> 과 <span class="math inline">\(n_1,\ldots,\,n_m\)</span> 은 유일하게 정해진다.</p>
 </div>
 </div>
 <p><br></p>
@@ -500,15 +495,15 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </div>
 <div class="callout-body-container">
 <div id="def-MA_prime" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 9.4 (소인수 분해)</strong></span> <a href="#thm-MA_prime_number_factorization" class="quarto-xref">정리&nbsp;<span>9.1</span></a> 에서와 같이 <span class="math inline">\(1\)</span> 보다 큰 양의 정수를 소수의 곱으로 표현하는 것을 <strong>소인수 분해 (prime factorization/integer factorization)</strong> 라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 8.4 (소인수 분해)</strong></span> <a href="#thm-MA_prime_number_factorization" class="quarto-xref">정리&nbsp;<span>8.1</span></a> 에서와 같이 <span class="math inline">\(1\)</span> 보다 큰 양의 정수를 소수의 곱으로 표현하는 것을 <strong>소인수 분해 (prime factorization/integer factorization)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
 </div>
 <p><br></p>
 </section>
-<section id="sec-MA_modula_arithmetic" class="level3" data-number="9.1.3">
-<h3 data-number="9.1.3" class="anchored" data-anchor-id="sec-MA_modula_arithmetic"><span class="header-section-number">9.1.3</span> 모듈라 산술</h3>
+<section id="sec-MA_modula_arithmetic" class="level3" data-number="8.1.3">
+<h3 data-number="8.1.3" class="anchored" data-anchor-id="sec-MA_modula_arithmetic"><span class="header-section-number">8.1.3</span> 모듈라 산술</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -516,7 +511,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </div>
 <div class="callout-body-container">
 <div id="def-MA_modula" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 9.5 (mod)</strong></span> 양의 정수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(n\mid (a-b)\)</span> 이면 <span class="math inline">\(a \equiv b \;(\text{mod}\;n)\)</span> 이라 한다. 정해진 양의 정수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(a\equiv b \;(\text{mod})\;n\)</span> 일 때 관계(relation) <span class="math inline">\(a\sim b\)</span> 를 정의 할 수 있다. 이 관계를 <strong>congruence modulo <span class="math inline">\(n\)</span></strong> 이라 한다.</p>
+<p><span class="theorem-title"><strong>정의 8.5 (mod)</strong></span> 양의 정수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(n\mid (a-b)\)</span> 이면 <span class="math inline">\(a \equiv b \;(\text{mod}\;n)\)</span> 이라 한다. 정해진 양의 정수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(a\equiv b \;(\text{mod})\;n\)</span> 일 때 관계(relation) <span class="math inline">\(a\sim b\)</span> 를 정의 할 수 있다. 이 관계를 <strong>congruence modulo <span class="math inline">\(n\)</span></strong> 이라 한다.</p>
 </div>
 </div>
 </div>
@@ -524,7 +519,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_modula" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.5</strong></span> 위에 정의된 congruence modulo <span class="math inline">\(n\)</span> 관계에 대해 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 8.5</strong></span> 위에 정의된 congruence modulo <span class="math inline">\(n\)</span> 관계에 대해 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) congruence modulo <span class="math inline">\(n\)</span> 관계는 동치관계를 정의한다.</p>
 <p>  (<span class="math inline">\(2\)</span>) 이 동치관계는 <span class="math inline">\(n\)</span> 개의 equivalence classes 를 갖는다.</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(a \equiv b \;(\text{mod}\;n)\)</span> 이며 <span class="math inline">\(c \equiv d \; (\text{mod}\; n)\)</span> 이면 <span class="math inline">\(a+c \equiv b+d \;(\text{mod}\;n)\)</span> 이고 <span class="math inline">\(ac \equiv bd \;(\text{mod}\; n)\)</span> 이다.</p>
@@ -536,7 +531,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(n \mid (a-a)\)</span> 와 <span class="math inline">\(n \mid (a-b) \implies n \mid (b-a)\)</span> 임은 자명하다. <span class="math inline">\(n\mid (a-b)\)</span> 이고 <span class="math inline">\(n \mid (b-c)\)</span> 라 하자. <span class="math inline">\(a-b=k_1n,\, b-c = k_2n\)</span> 이라 하면 <span class="math inline">\(a-c = (k_1 + k_2)n\)</span> 이므로 <span class="math inline">\(n \mid (a-c)\)</span> 이다. 따라서 congruence modulo <span class="math inline">\(n\)</span> 관계는 동치관계이다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\([a]=\{m\in \mathbb{Z} : n \mid (a-m)\}\)</span> 라 하자. <span class="math inline">\(x \in [a]\)</span> 일 필요충분조건은 <span class="math inline">\(x\)</span> 와 <span class="math inline">\(a\)</span> 를 <span class="math inline">\(n\)</span> 으로 나누었을 때의 나머지가 같다는 것은 쉽게 보일 수 있다. 또한 나머지는 <span class="math inline">\(0,\ldots,\,n-1\)</span> 중의 하나이며 각각의 나머지를 갖는 수가 존재하므로 congruence modulo <span class="math inline">\(n\)</span> 관계의 equivalence classes 의 갯수는 <span class="math inline">\(n\)</span> 개이다.</p>
 <p>(<span class="math inline">\(3\)</span>) <span class="math inline">\(n \mid (a-b),\, n \mid (c-d)\)</span> 이면 <span class="math inline">\(n \mid ((a-b)+ (c-d))\)</span> 이므로 <span class="math inline">\(n \mid ((a+c)- (b+d))\)</span> 이다. 즉 <span class="math inline">\(a+c \equiv b+d \; (\text{mod}\; n)\)</span> 이다. 또한 <span class="math inline">\(n \mid ((a-b)c + (c-d)b)\)</span> 이므로 <span class="math inline">\(n \mid (ac-bd)\)</span> 이다.</p>
-<p>(<span class="math inline">\(4\)</span>) <span class="math inline">\(n \mid a(b-c)\)</span> 이고 <span class="math inline">\(n\)</span> 과 <span class="math inline">\(a\)</span> 가 서로소 이므로 <a href="#prp-MA_relatively_prime" class="quarto-xref">명제&nbsp;<span>9.2</span></a> 에 의해 <span class="math inline">\(n \mid (b-c)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p>(<span class="math inline">\(4\)</span>) <span class="math inline">\(n \mid a(b-c)\)</span> 이고 <span class="math inline">\(n\)</span> 과 <span class="math inline">\(a\)</span> 가 서로소 이므로 <a href="#prp-MA_relatively_prime" class="quarto-xref">명제&nbsp;<span>8.2</span></a> 에 의해 <span class="math inline">\(n \mid (b-c)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>정수 <span class="math inline">\(n\)</span> 에 대해 congruence moduluo <span class="math inline">\(n\)</span> 에 의해 정해지는 equivalence class 의 집합을 <span class="math inline">\(J_n\)</span> 이라 하자. <span class="math inline">\(J_n = \{[0],\ldots,\,[n-1]\}\)</span> 로 쓸 수 있다. 이 때,</p>
@@ -550,17 +545,17 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_operation_of_congruence_class_1" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.6</strong></span> 위의 덧셈과 곱셈 연산은 잘 정의된다.</p>
+<p><span class="theorem-title"><strong>명제 8.6</strong></span> 위의 덧셈과 곱셈 연산은 잘 정의된다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(a,\,b\in [i],\, c,\,d\in [j]\)</span> 라 하자. <a href="#prp-MA_modula" class="quarto-xref">명제&nbsp;<span>9.5</span></a> 에서 보인 대로 <span class="math inline">\(a+c \equiv b+d \;(\text{mod}\; n)\)</span> 이며 <span class="math inline">\(ac \equiv bd \;(\text{mod}\;n)\)</span> 이므로 잘 정의된다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(a,\,b\in [i],\, c,\,d\in [j]\)</span> 라 하자. <a href="#prp-MA_modula" class="quarto-xref">명제&nbsp;<span>8.5</span></a> 에서 보인 대로 <span class="math inline">\(a+c \equiv b+d \;(\text{mod}\; n)\)</span> 이며 <span class="math inline">\(ac \equiv bd \;(\text{mod}\;n)\)</span> 이므로 잘 정의된다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_operation_of_congruence_class_2" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.7</strong></span> 위의 congruence class 의 연산에서 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 8.7</strong></span> 위의 congruence class 의 연산에서 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\([i] + [j] = [j]+[i]\)</span>,</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\([ij]=[ji]\)</span>,</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(([i]+[j])+[k] = [i] + ([j]+[k])\)</span>,</p>
@@ -586,7 +581,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-herstein_1_3_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.1 (Herstein 1.3.3)</strong></span> <span class="math inline">\(a,\,b\in \mathbb{Z}\)</span> 일 때 어떤 정수 <span class="math inline">\(d\)</span> 가 (1) <span class="math inline">\(a\mid d,\, b\mid d\)</span> 이며 <span class="math inline">\(\forall x\in \mathbb{Z},\, (a \mid x)\land (b \mid y)\implies (d \mid x)\)</span> 이면 <span class="math inline">\(d\)</span> 를 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 의 <strong>최소공배수 (least common multiplier)</strong> 라 하고 <span class="math inline">\(\text{lcm}(a,\,b)\)</span> 라 쓴다. 최소공배수가 존재하며 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 가 양의 정수일 때 <span class="math inline">\(\text{lcm}(a,\,b) = ab/\gcd(a,\,b)\)</span> 임을 보이시오.</p>
+<p><span class="theorem-title"><strong>연습문제 8.1 (Herstein 1.3.3)</strong></span> <span class="math inline">\(a,\,b\in \mathbb{Z}\)</span> 일 때 어떤 정수 <span class="math inline">\(d\)</span> 가 (1) <span class="math inline">\(a\mid d,\, b\mid d\)</span> 이며 <span class="math inline">\(\forall x\in \mathbb{Z},\, (a \mid x)\land (b \mid y)\implies (d \mid x)\)</span> 이면 <span class="math inline">\(d\)</span> 를 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 의 <strong>최소공배수 (least common multiplier)</strong> 라 하고 <span class="math inline">\(\text{lcm}(a,\,b)\)</span> 라 쓴다. 최소공배수가 존재하며 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 가 양의 정수일 때 <span class="math inline">\(\text{lcm}(a,\,b) = ab/\gcd(a,\,b)\)</span> 임을 보이시오.</p>
 </div>
 </div>
 <p><br></p>
@@ -598,7 +593,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-herstein_1_3_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.2 (Herstein 1.3.4)</strong></span> <span class="math inline">\(a\mid x,\, b\mid x\)</span> 이고 <span class="math inline">\(\gcd (a,\,b)=1\)</span> 이면 <span class="math inline">\((ab)\mid x\)</span> 임을 보이시오.</p>
+<p><span class="theorem-title"><strong>연습문제 8.2 (Herstein 1.3.4)</strong></span> <span class="math inline">\(a\mid x,\, b\mid x\)</span> 이고 <span class="math inline">\(\gcd (a,\,b)=1\)</span> 이면 <span class="math inline">\((ab)\mid x\)</span> 임을 보이시오.</p>
 </div>
 </div>
 <p><br></p>
@@ -608,7 +603,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-Herstein_1_3_9" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.3 (Herstein 1.3.9)</strong></span> <span class="math inline">\(n&gt;1\)</span> 이 소수인 것의 필요충분조건은 임의의 정수 <span class="math inline">\(a\)</span> 에 대해 <span class="math inline">\(\gcd (a,n)=1\)</span> 이거나 <span class="math inline">\(n \mid a\)</span> 인 것임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 8.3 (Herstein 1.3.9)</strong></span> <span class="math inline">\(n&gt;1\)</span> 이 소수인 것의 필요충분조건은 임의의 정수 <span class="math inline">\(a\)</span> 에 대해 <span class="math inline">\(\gcd (a,n)=1\)</span> 이거나 <span class="math inline">\(n \mid a\)</span> 인 것임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -618,7 +613,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-herstein_1_3_13" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.4 (Herstein 1.3.13)</strong></span> <a href="#def-MA_modula" class="quarto-xref">정의&nbsp;<span>9.5</span></a> 와 <a href="#prp-MA_modula" class="quarto-xref">명제&nbsp;<span>9.5</span></a> 에서 정의된 equvalence class 의 집합을 <span class="math inline">\(J_n\)</span> 이라 하자. 즉 <span class="math inline">\(J_n = \{[0],\ldots,\,[n-1]\}\)</span> 이다. <span class="math inline">\(\gcd (a,\,n)=1\)</span> 이라면 <span class="math inline">\([a][b]=1\)</span> 를 만족하는 <span class="math inline">\([b]\in J_n\)</span> 이 존재함을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 8.4 (Herstein 1.3.13)</strong></span> <a href="#def-MA_modula" class="quarto-xref">정의&nbsp;<span>8.5</span></a> 와 <a href="#prp-MA_modula" class="quarto-xref">명제&nbsp;<span>8.5</span></a> 에서 정의된 equvalence class 의 집합을 <span class="math inline">\(J_n\)</span> 이라 하자. 즉 <span class="math inline">\(J_n = \{[0],\ldots,\,[n-1]\}\)</span> 이다. <span class="math inline">\(\gcd (a,\,n)=1\)</span> 이라면 <span class="math inline">\([a][b]=1\)</span> 를 만족하는 <span class="math inline">\([b]\in J_n\)</span> 이 존재함을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -628,10 +623,10 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p><br></p>
 </section>
 </section>
-<section id="군의-정의와-기본-성질" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="군의-정의와-기본-성질"><span class="header-section-number">9.2</span> 군의 정의와 기본 성질</h2>
-<section id="sec-binary_operations" class="level3" data-number="9.2.1">
-<h3 data-number="9.2.1" class="anchored" data-anchor-id="sec-binary_operations"><span class="header-section-number">9.2.1</span> 이항연산</h3>
+<section id="군의-정의와-기본-성질" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="군의-정의와-기본-성질"><span class="header-section-number">8.2</span> 군의 정의와 기본 성질</h2>
+<section id="sec-binary_operations" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="sec-binary_operations"><span class="header-section-number">8.2.1</span> 이항연산</h3>
 <p>군에 들어가기에 앞서 이미 알고 있겠지만 이항연산을 정의한다.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -640,7 +635,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </div>
 <div class="callout-body-container">
 <div id="def-binary_operation" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 9.6 (이항연산 (binary operation))</strong></span> 집합 <span class="math inline">\(S\)</span> 에 대해 <span class="math inline">\(S\times S \mapsto S\)</span> 함수를 <strong>이항연산</strong> 이라고 한다. 관습적으로 이항연산을 <span class="math inline">\(a\cdot b\)</span>, <span class="math inline">\(ab\)</span>, <span class="math inline">\(a\ast b\)</span>, <span class="math inline">\(a \circ b\)</span>, <span class="math inline">\(a+b\)</span> 등으로 쓴다. 임의의 <span class="math inline">\(a,\,b,\,c\in S\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>정의 8.6 (이항연산 (binary operation))</strong></span> 집합 <span class="math inline">\(S\)</span> 에 대해 <span class="math inline">\(S\times S \mapsto S\)</span> 함수를 <strong>이항연산</strong> 이라고 한다. 관습적으로 이항연산을 <span class="math inline">\(a\cdot b\)</span>, <span class="math inline">\(ab\)</span>, <span class="math inline">\(a\ast b\)</span>, <span class="math inline">\(a \circ b\)</span>, <span class="math inline">\(a+b\)</span> 등으로 쓴다. 임의의 <span class="math inline">\(a,\,b,\,c\in S\)</span> 에 대해</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\((ab)c=a(bc)\)</span> 일 때 결합법칙을 만족한다고 한다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(ab=ba\)</span> 일 때 교환법칙을 만족한다고 한다.</p>
 </div>
@@ -650,8 +645,8 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p>일반적으로 이항연산은 결합법칙을 만족하도록 정의된다. 연산을 나타내는 기호 <span class="math inline">\(\cdot\)</span>, <span class="math inline">\(+\)</span>, <span class="math inline">\(\circ\)</span> 등을 선택하는 것은 보통 그 연산이 실수의 더하기나 곱하기와 혹은 함수의 합성 가운데 어떤 것과 유사한지에 따르며 정해진 규칙은 없다.</p>
 <p><br></p>
 </section>
-<section id="sec-MA_groups_subgroups" class="level3" data-number="9.2.2">
-<h3 data-number="9.2.2" class="anchored" data-anchor-id="sec-MA_groups_subgroups"><span class="header-section-number">9.2.2</span> 군과 부분군</h3>
+<section id="sec-MA_groups_subgroups" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="sec-MA_groups_subgroups"><span class="header-section-number">8.2.2</span> 군과 부분군</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -659,7 +654,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </div>
 <div class="callout-body-container">
 <div id="def-MA_groups" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 9.7 (군 (Groups))</strong></span> 집합 <span class="math inline">\(G\)</span> 에 이항연산 <span class="math inline">\(\cdot\)</span> 이 정의되어 있으며,</p>
+<p><span class="theorem-title"><strong>정의 8.7 (군 (Groups))</strong></span> 집합 <span class="math inline">\(G\)</span> 에 이항연산 <span class="math inline">\(\cdot\)</span> 이 정의되어 있으며,</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\forall a,\,b,\,c\in G,\, a\cdot (b \cdot c)=(a\cdot b)\cdot c\)</span>,</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\exists e\in G,\, \forall a\in G,\, a\cdot e=e\cdot a\)</span>,</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\forall a\in G,\, \exists a'\in G,\, a\cdot a' = a'\cdot a = e\)</span></p>
@@ -673,7 +668,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_uniqueness_of_identity_and_inverse" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.8</strong></span> <span class="math inline">\(G\)</span> 가 군 일 때</p>
+<p><span class="theorem-title"><strong>명제 8.8</strong></span> <span class="math inline">\(G\)</span> 가 군 일 때</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(G\)</span> 의 항등원은 유일하다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(a\in G\)</span> 에 대한 역원은 유일하다.</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(G\)</span> 의 항등원의 역원은 자기 자신이다.</p>
@@ -690,7 +685,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_cancelation_law" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.9 (제거 규칙)</strong></span> <span class="math inline">\(a,\,b,\,c\in G\)</span> 일 때 <span class="math inline">\(ac=bc\)</span> 이면 <span class="math inline">\(a=b\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>명제 8.9 (제거 규칙)</strong></span> <span class="math inline">\(a,\,b,\,c\in G\)</span> 일 때 <span class="math inline">\(ac=bc\)</span> 이면 <span class="math inline">\(a=b\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -705,7 +700,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </div>
 <div class="callout-body-container">
 <div id="def-MA_abelian_finite_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 9.8 (가환군, 유한군)</strong></span> <span class="math inline">\(\forall a,\,b\in G\)</span> 에 대해 <span class="math inline">\(ab=ba\)</span> 일 때 <span class="math inline">\(G\)</span> 를 <strong>가환군</strong> 혹은 <strong>아벨군</strong> 이라 한다. <span class="math inline">\(G\)</span> 가 유한집합일 때 <span class="math inline">\(G\)</span> 를 <strong>유한군</strong> 이라 한다. <span class="math inline">\(G\)</span> 가 유한군일 때 <span class="math inline">\(G\)</span> 의 원소의 갯수를 <span class="math inline">\(G\)</span> 의 <strong>order</strong> 라고 하며 <span class="math inline">\(|G|\)</span> 라고 쓴다.</p>
+<p><span class="theorem-title"><strong>정의 8.8 (가환군, 유한군)</strong></span> <span class="math inline">\(\forall a,\,b\in G\)</span> 에 대해 <span class="math inline">\(ab=ba\)</span> 일 때 <span class="math inline">\(G\)</span> 를 <strong>가환군</strong> 혹은 <strong>아벨군</strong> 이라 한다. <span class="math inline">\(G\)</span> 가 유한집합일 때 <span class="math inline">\(G\)</span> 를 <strong>유한군</strong> 이라 한다. <span class="math inline">\(G\)</span> 가 유한군일 때 <span class="math inline">\(G\)</span> 의 원소의 갯수를 <span class="math inline">\(G\)</span> 의 <strong>order</strong> 라고 하며 <span class="math inline">\(|G|\)</span> 라고 쓴다.</p>
 </div>
 </div>
 </div>
@@ -729,7 +724,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p>우리는 앞서 <a href="../../src/part1/ch1_03_determinant.html#def-symmetric_group">대칭군</a> <span class="math inline">\(S_n\)</span> 에 대해 알아보았다. 대칭군은 아주 중요한 군이기 때문에 다시 언급할 가치가 있다. <span class="math inline">\(S_n\)</span> 은 유한군이며 가환군이 아니라는 것을 알 수 있을 것이다.</p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-MA_S3" class="theorem example">
-<p><span class="theorem-title"><strong>보기 9.1</strong></span> 앞으로 자주 사용될 군중의 하나는 <span class="math inline">\(S_3\)</span> 이다. <span class="math inline">\(S_3 = \{e, (1, 2), (1, 3), (2, 3), (1,2, 3), (1, 3, 2) \}\)</span> 이며 이 때 <span class="math inline">\(x=(1, 2, 3)\)</span>, <span class="math inline">\(y=(1,2)\)</span> 으로 정하자. <span class="math inline">\(x^2 = (1, 3, 2),\, x^3 = e\)</span> 이며, <span class="math inline">\(xy=(1, 3)\)</span>, <span class="math inline">\(x^2y=(2, 3)\)</span> 이므로 <span class="math inline">\(S_3 = \{e, x, x^2, y, xy, x^2y\}\)</span> 로 쓸 수 있으며 <span class="math inline">\(x^2y=yx\)</span> 의 관계를 만족한다. 항등원을 <span class="math inline">\(1\)</span> 이라 표기하면 <span class="math inline">\(S_3 = \{1, x, x^2, y, xy, x^2y\}\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>보기 8.1</strong></span> 앞으로 자주 사용될 군중의 하나는 <span class="math inline">\(S_3\)</span> 이다. <span class="math inline">\(S_3 = \{e, (1, 2), (1, 3), (2, 3), (1,2, 3), (1, 3, 2) \}\)</span> 이며 이 때 <span class="math inline">\(x=(1, 2, 3)\)</span>, <span class="math inline">\(y=(1,2)\)</span> 으로 정하자. <span class="math inline">\(x^2 = (1, 3, 2),\, x^3 = e\)</span> 이며, <span class="math inline">\(xy=(1, 3)\)</span>, <span class="math inline">\(x^2y=(2, 3)\)</span> 이므로 <span class="math inline">\(S_3 = \{e, x, x^2, y, xy, x^2y\}\)</span> 로 쓸 수 있으며 <span class="math inline">\(x^2y=yx\)</span> 의 관계를 만족한다. 항등원을 <span class="math inline">\(1\)</span> 이라 표기하면 <span class="math inline">\(S_3 = \{1, x, x^2, y, xy, x^2y\}\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -745,7 +740,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </div>
 <div class="callout-body-container">
 <div id="def-MA_linear_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 9.9 (일반선형군, 특수선형군)</strong></span> <span class="math inline">\(\mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 속하는 가역행렬의 집합은 행렬의 곱셈 연산에 대해 군이며 이를 <strong>일반선형군 (general linear group)</strong> 이라고 하고 <span class="math inline">\(GL_n(\mathbb{F})\)</span> 라고 표기한다. 이 가운데 행렬식이 <span class="math inline">\(1\)</span> 인 행렬의 집합도 군이며 이를 <strong>특수선형군 (special linear group)</strong> 이라고 하며 <span class="math inline">\(SL_n(\mathbb{F})\)</span> 라고 표기한다.</p>
+<p><span class="theorem-title"><strong>정의 8.9 (일반선형군, 특수선형군)</strong></span> <span class="math inline">\(\mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 속하는 가역행렬의 집합은 행렬의 곱셈 연산에 대해 군이며 이를 <strong>일반선형군 (general linear group)</strong> 이라고 하고 <span class="math inline">\(GL_n(\mathbb{F})\)</span> 라고 표기한다. 이 가운데 행렬식이 <span class="math inline">\(1\)</span> 인 행렬의 집합도 군이며 이를 <strong>특수선형군 (special linear group)</strong> 이라고 하며 <span class="math inline">\(SL_n(\mathbb{F})\)</span> 라고 표기한다.</p>
 </div>
 </div>
 </div>
@@ -754,8 +749,8 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p><br></p>
 </section>
 </section>
-<section id="부분군" class="level3" data-number="9.2.3">
-<h3 data-number="9.2.3" class="anchored" data-anchor-id="부분군"><span class="header-section-number">9.2.3</span> 부분군</h3>
+<section id="부분군" class="level3" data-number="8.2.3">
+<h3 data-number="8.2.3" class="anchored" data-anchor-id="부분군"><span class="header-section-number">8.2.3</span> 부분군</h3>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -764,7 +759,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </div>
 <div class="callout-body-container">
 <div id="def-MA_subgroups" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 9.10 (부분군)</strong></span> <span class="math inline">\(H\)</span> 가 <span class="math inline">\(G\)</span> 의 부분집합이며 <span class="math inline">\(H\)</span> 스스로 군일 때 <span class="math inline">\(H\)</span> 를 <span class="math inline">\(G\)</span> 의 <strong>부분군(subgroup)</strong> 이라고 하며 <span class="math inline">\(H \le G\)</span> 라고 쓴다. <span class="math inline">\(G\)</span> 의 부분군 가운데 항등원 하나만을 포함하는 부분군과 <span class="math inline">\(G\)</span> 자신을 제외한 부분군을 <strong>진부분군(proper subgroup)</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 8.10 (부분군)</strong></span> <span class="math inline">\(H\)</span> 가 <span class="math inline">\(G\)</span> 의 부분집합이며 <span class="math inline">\(H\)</span> 스스로 군일 때 <span class="math inline">\(H\)</span> 를 <span class="math inline">\(G\)</span> 의 <strong>부분군(subgroup)</strong> 이라고 하며 <span class="math inline">\(H \le G\)</span> 라고 쓴다. <span class="math inline">\(G\)</span> 의 부분군 가운데 항등원 하나만을 포함하는 부분군과 <span class="math inline">\(G\)</span> 자신을 제외한 부분군을 <strong>진부분군(proper subgroup)</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>
@@ -772,7 +767,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_subgroup" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.10</strong></span> <span class="math inline">\(H\)</span> 가 군 <span class="math inline">\(G\)</span> 의 부분집합이며 다음을 만족하면 <span class="math inline">\(H\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군이다.</p>
+<p><span class="theorem-title"><strong>명제 8.10</strong></span> <span class="math inline">\(H\)</span> 가 군 <span class="math inline">\(G\)</span> 의 부분집합이며 다음을 만족하면 <span class="math inline">\(H\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군이다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\forall a,\,b\in H,\,  ab\in H\)</span>, (<span class="math inline">\(H\)</span> 는 연산에 닫혀 있다.)</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(1_G \in H\)</span>, (<span class="math inline">\(H\)</span> 는 항등원을 포함한다.)</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\forall a\in H,\, a^{-1}\in H\)</span>. (<span class="math inline">\(H\)</span> 는 자신에 포함되는 원소의 역원을 포함한다.)</p>
@@ -780,12 +775,12 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#def-MA_groups" class="quarto-xref">정의&nbsp;<span>9.7</span></a> 를 생각해보라..</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#def-MA_groups" class="quarto-xref">정의&nbsp;<span>8.7</span></a> 를 생각해보라..</p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_intersection_of_subgroups" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.11</strong></span> <span class="math inline">\(H\)</span> 와 <span class="math inline">\(K\)</span> 가 <span class="math inline">\(G\)</span> 의 부분군일 때 <span class="math inline">\(H \cap K\)</span> 역시 <span class="math inline">\(G\)</span> 의 부분군이다.</p>
+<p><span class="theorem-title"><strong>명제 8.11</strong></span> <span class="math inline">\(H\)</span> 와 <span class="math inline">\(K\)</span> 가 <span class="math inline">\(G\)</span> 의 부분군일 때 <span class="math inline">\(H \cap K\)</span> 역시 <span class="math inline">\(G\)</span> 의 부분군이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -794,8 +789,8 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </div>
 <p><br></p>
 </section>
-<section id="sec_part2_additive_groups_of_integers" class="level3" data-number="9.2.4">
-<h3 data-number="9.2.4" class="anchored" data-anchor-id="sec_part2_additive_groups_of_integers"><span class="header-section-number">9.2.4</span> 정수의 덧셈군</h3>
+<section id="sec_part2_additive_groups_of_integers" class="level3" data-number="8.2.4">
+<h3 data-number="8.2.4" class="anchored" data-anchor-id="sec_part2_additive_groups_of_integers"><span class="header-section-number">8.2.4</span> 정수의 덧셈군</h3>
 <p>여기서는 <a href="#sec-integers">정수의 성질</a> 에서 다뤘던 정수에 대한 내용을 군의 입장에서 다시 다뤄보기로 한다. 우선 영이 아닌 정수 <span class="math inline">\(a\)</span> 의 배수의 집합을 <span class="math inline">\(\mathbb{Z}a\)</span> 라고 쓴다. 즉, <span class="math inline">\(a\in \mathbb{Z}\)</span> 에 대해</p>
 <p><span class="math display">\[
 \mathbb{Z}a=\{na: n \in \mathbb{Z}\}
@@ -804,13 +799,13 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-MA_Za" class="theorem example">
-<p><span class="theorem-title"><strong>보기 9.2</strong></span> <span class="math inline">\(\mathbb{Z}a\)</span> 가 덧셈에 대해 <span class="math inline">\(\mathbb{Z}^+\)</span> 의 부분군이다. 따라서 <span class="math inline">\((\mathbb{Z}a,+)\)</span> 라고 쓸 수 있다.</p>
+<p><span class="theorem-title"><strong>보기 8.2</strong></span> <span class="math inline">\(\mathbb{Z}a\)</span> 가 덧셈에 대해 <span class="math inline">\(\mathbb{Z}^+\)</span> 의 부분군이다. 따라서 <span class="math inline">\((\mathbb{Z}a,+)\)</span> 라고 쓸 수 있다.</p>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_subgroup_of_Zplus" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.12</strong></span> <span class="math inline">\(S\)</span> 가 <span class="math inline">\(\mathbb{Z}^{+}\)</span> 의 부분군이려면 <span class="math inline">\(S=\{0\}\)</span> 이거나 <span class="math inline">\(\mathbb{Z}a\)</span> 형태이며 이 때 <span class="math inline">\(a\)</span> 는 <span class="math inline">\(S\)</span> 에 포함된 가장 작은 양의 정수이다.</p>
+<p><span class="theorem-title"><strong>명제 8.12</strong></span> <span class="math inline">\(S\)</span> 가 <span class="math inline">\(\mathbb{Z}^{+}\)</span> 의 부분군이려면 <span class="math inline">\(S=\{0\}\)</span> 이거나 <span class="math inline">\(\mathbb{Z}a\)</span> 형태이며 이 때 <span class="math inline">\(a\)</span> 는 <span class="math inline">\(S\)</span> 에 포함된 가장 작은 양의 정수이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -820,7 +815,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_additive_groups_generated_by_two_integers" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.13</strong></span> 두 정수 <span class="math inline">\(a,\,b\)</span> 에 대해 다음 집합 <span class="math inline">\(S\)</span> 를 생각하자.</p>
+<p><span class="theorem-title"><strong>명제 8.13</strong></span> 두 정수 <span class="math inline">\(a,\,b\)</span> 에 대해 다음 집합 <span class="math inline">\(S\)</span> 를 생각하자.</p>
 <p><span class="math display">\[
 S = \mathbb{Z}a + \mathbb{Z}b = \{ma+nb : m,\,n \in \mathbb{Z}\}.
 \]</span></p>
@@ -834,33 +829,33 @@ S = \mathbb{Z}a + \mathbb{Z}b = \{ma+nb : m,\,n \in \mathbb{Z}\}.
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="cor-MA_additive_groups_generated_by_two_integers" class="theorem corollary">
-<p><span class="theorem-title"><strong>따름정리 9.2</strong></span> <span class="math inline">\(\mathbb{Z}a+ \mathbb{Z}b\)</span> 가 <span class="math inline">\(\mathbb{Z}^+\)</span> 의 부분군이며 nontrivial 하므로 <a href="#prp-MA_subgroup_of_Zplus" class="quarto-xref">명제&nbsp;<span>9.12</span></a> 에 의해 어떤 양의 정수 <span class="math inline">\(c\)</span> 에 대해 <span class="math inline">\(\mathbb{Z}a+\mathbb{Z}b = \mathbb{Z}c\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>따름정리 8.2</strong></span> <span class="math inline">\(\mathbb{Z}a+ \mathbb{Z}b\)</span> 가 <span class="math inline">\(\mathbb{Z}^+\)</span> 의 부분군이며 nontrivial 하므로 <a href="#prp-MA_subgroup_of_Zplus" class="quarto-xref">명제&nbsp;<span>8.12</span></a> 에 의해 어떤 양의 정수 <span class="math inline">\(c\)</span> 에 대해 <span class="math inline">\(\mathbb{Z}a+\mathbb{Z}b = \mathbb{Z}c\)</span> 이다.</p>
 </div>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_gcd_in_groups" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.14</strong></span> <span class="math inline">\(\mathbb{Z}a + \mathbb{Z}b = \mathbb{Z}c\)</span> 일 때 <span class="math inline">\(c=\gcd (a,\,b)\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>명제 8.14</strong></span> <span class="math inline">\(\mathbb{Z}a + \mathbb{Z}b = \mathbb{Z}c\)</span> 일 때 <span class="math inline">\(c=\gcd (a,\,b)\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-MA_divisor" class="quarto-xref">명제&nbsp;<span>9.1</span></a> 를 보라.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-MA_divisor" class="quarto-xref">명제&nbsp;<span>8.1</span></a> 를 보라.</p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_common_multiplier" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.15</strong></span> <span class="math inline">\(0\)</span> 이 아닌 정수 <span class="math inline">\(a,\,b\)</span> 에 대해 <span class="math inline">\(\mathbb{Z}a \cap \mathbb{Z}b\)</span> 는 어떤 양의 정수 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(\mathbb{Z}a \cap \mathbb{Z}b = \mathbb{Z}m\)</span> 이며 <span class="math inline">\(m = \text{lcm}(a, b)\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>명제 8.15</strong></span> <span class="math inline">\(0\)</span> 이 아닌 정수 <span class="math inline">\(a,\,b\)</span> 에 대해 <span class="math inline">\(\mathbb{Z}a \cap \mathbb{Z}b\)</span> 는 어떤 양의 정수 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(\mathbb{Z}a \cap \mathbb{Z}b = \mathbb{Z}m\)</span> 이며 <span class="math inline">\(m = \text{lcm}(a, b)\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-MA_intersection_of_subgroups" class="quarto-xref">명제&nbsp;<span>9.11</span></a> 에 의해 <span class="math inline">\(\mathbb{Z}a \cap \mathbb{Z}b\)</span> 는 <span class="math inline">\(\mathbb{Z}^+\)</span> 의 부분군이며 <span class="math inline">\(ab \in \mathbb{Z}a \cap \mathbb{Z}b\)</span> 에 포함되므로 어떤 <span class="math inline">\(m\in \mathbb{Z}_+\)</span> 에 대해 <span class="math inline">\(\mathbb{Z}m\)</span> 이다. <span class="math inline">\(\mathbb{Z}m \le \mathbb{Z}a\)</span> 이므로 <span class="math inline">\(a \mid m\)</span> 이며, 같은 이유로 <span class="math inline">\(b\mid m\)</span> 이다. <span class="math inline">\(a \mid n,\, b \mid n\)</span> 인 양의 정수 <span class="math inline">\(n\)</span> 을 생각하면 <span class="math inline">\(n \in \mathbb{Z}m\)</span> 이므로 <span class="math inline">\(m \mid n\)</span> 이다. 따라서 <span class="math inline">\(m=\text{lcm}(a,\,b)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-MA_intersection_of_subgroups" class="quarto-xref">명제&nbsp;<span>8.11</span></a> 에 의해 <span class="math inline">\(\mathbb{Z}a \cap \mathbb{Z}b\)</span> 는 <span class="math inline">\(\mathbb{Z}^+\)</span> 의 부분군이며 <span class="math inline">\(ab \in \mathbb{Z}a \cap \mathbb{Z}b\)</span> 에 포함되므로 어떤 <span class="math inline">\(m\in \mathbb{Z}_+\)</span> 에 대해 <span class="math inline">\(\mathbb{Z}m\)</span> 이다. <span class="math inline">\(\mathbb{Z}m \le \mathbb{Z}a\)</span> 이므로 <span class="math inline">\(a \mid m\)</span> 이며, 같은 이유로 <span class="math inline">\(b\mid m\)</span> 이다. <span class="math inline">\(a \mid n,\, b \mid n\)</span> 인 양의 정수 <span class="math inline">\(n\)</span> 을 생각하면 <span class="math inline">\(n \in \mathbb{Z}m\)</span> 이므로 <span class="math inline">\(m \mid n\)</span> 이다. 따라서 <span class="math inline">\(m=\text{lcm}(a,\,b)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 </section>
-<section id="순환군" class="level3" data-number="9.2.5">
-<h3 data-number="9.2.5" class="anchored" data-anchor-id="순환군"><span class="header-section-number">9.2.5</span> 순환군</h3>
+<section id="순환군" class="level3" data-number="8.2.5">
+<h3 data-number="8.2.5" class="anchored" data-anchor-id="순환군"><span class="header-section-number">8.2.5</span> 순환군</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -868,7 +863,7 @@ S = \mathbb{Z}a + \mathbb{Z}b = \{ma+nb : m,\,n \in \mathbb{Z}\}.
 </div>
 <div class="callout-body-container">
 <div id="def-MA_cyclic_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 9.11 (순환 부분군과 차수)</strong></span> 군 <span class="math inline">\(G\)</span> 의 원소 <span class="math inline">\(g\)</span> 에 대해 <span class="math inline">\(\{g^n: n\in \mathbb{Z}\}\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군이며 <span class="math inline">\(g\)</span> 에 의해 생성되는 <strong>순환 부분군 (cyclic subgroup)</strong> 이라 하고 <span class="math inline">\(\langle g \rangle\)</span> 로 쓴다. <span class="math inline">\(g^n = 1\)</span> 을 만족하는 자연수 <span class="math inline">\(n\)</span> 이 존재한다면 가장 작은 값을 <span class="math inline">\(g\)</span> 의 <strong>차수(order)</strong> 라 하며, <span class="math inline">\(o(g)\)</span> 라 쓴다. 존재하지 않는다면 <span class="math inline">\(o(g)=\infty\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>정의 8.11 (순환 부분군과 차수)</strong></span> 군 <span class="math inline">\(G\)</span> 의 원소 <span class="math inline">\(g\)</span> 에 대해 <span class="math inline">\(\{g^n: n\in \mathbb{Z}\}\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군이며 <span class="math inline">\(g\)</span> 에 의해 생성되는 <strong>순환 부분군 (cyclic subgroup)</strong> 이라 하고 <span class="math inline">\(\langle g \rangle\)</span> 로 쓴다. <span class="math inline">\(g^n = 1\)</span> 을 만족하는 자연수 <span class="math inline">\(n\)</span> 이 존재한다면 가장 작은 값을 <span class="math inline">\(g\)</span> 의 <strong>차수(order)</strong> 라 하며, <span class="math inline">\(o(g)\)</span> 라 쓴다. 존재하지 않는다면 <span class="math inline">\(o(g)=\infty\)</span> 이다.</p>
 </div>
 </div>
 </div>
@@ -876,7 +871,7 @@ S = \mathbb{Z}a + \mathbb{Z}b = \{ma+nb : m,\,n \in \mathbb{Z}\}.
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_order_of_finite_cyclic_group" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 9.16</strong></span> <span class="math inline">\(G=\langle g \rangle\)</span> 일 때 <span class="math inline">\(|G|= o(g)\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>명제 8.16</strong></span> <span class="math inline">\(G=\langle g \rangle\)</span> 일 때 <span class="math inline">\(|G|= o(g)\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -889,7 +884,7 @@ S = \mathbb{Z}a + \mathbb{Z}b = \{ma+nb : m,\,n \in \mathbb{Z}\}.
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_2_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.5 (Artin 2.2.3)</strong></span> <span class="math inline">\(x,\,y,\,z,\,w\)</span> 가 군 <span class="math inline">\(G\)</span> 의 원소일 때 다음을 보이시오.</p>
+<p><span class="theorem-title"><strong>연습문제 8.5 (Artin 2.2.3)</strong></span> <span class="math inline">\(x,\,y,\,z,\,w\)</span> 가 군 <span class="math inline">\(G\)</span> 의 원소일 때 다음을 보이시오.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(xyz^{-1}w=1\)</span> 일 때 <span class="math inline">\(y\)</span> 를 구하라.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(xyz=1\)</span> 일 때 <span class="math inline">\(yzx=1\)</span> 인가? 그렇다면 <span class="math inline">\(yxz=1\)</span> 인가?</p>
 </div>
@@ -902,7 +897,7 @@ S = \mathbb{Z}a + \mathbb{Z}b = \{ma+nb : m,\,n \in \mathbb{Z}\}.
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-herstein_2_3_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.6 (Herstein 2.3.4)</strong></span> <span class="math inline">\(G\)</span> 가 군이며 모든 <span class="math inline">\(a,\,b\in G\)</span> 에 대해 연속적인 세 정수 <span class="math inline">\(i\)</span> 에 대해 <span class="math inline">\((ab)^i = a^ib^i\)</span> 이면 <span class="math inline">\(G\)</span> 가 아벨군임을 보여라</p>
+<p><span class="theorem-title"><strong>연습문제 8.6 (Herstein 2.3.4)</strong></span> <span class="math inline">\(G\)</span> 가 군이며 모든 <span class="math inline">\(a,\,b\in G\)</span> 에 대해 연속적인 세 정수 <span class="math inline">\(i\)</span> 에 대해 <span class="math inline">\((ab)^i = a^ib^i\)</span> 이면 <span class="math inline">\(G\)</span> 가 아벨군임을 보여라</p>
 </div>
 </div>
 <p><br></p>
@@ -923,7 +918,7 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-herstein_2_3_14" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.7 (Herstein 2.3.14)</strong></span> 곱연산이 정의되었고 이 연산에 대해 닫혀있는 유한집합 <span class="math inline">\(G\)</span> 에서 곱연산의 결합법칙과 제거규칙이 성립할 때 <span class="math inline">\(G\)</span> 가 군임을 보이시오.</p>
+<p><span class="theorem-title"><strong>연습문제 8.7 (Herstein 2.3.14)</strong></span> 곱연산이 정의되었고 이 연산에 대해 닫혀있는 유한집합 <span class="math inline">\(G\)</span> 에서 곱연산의 결합법칙과 제거규칙이 성립할 때 <span class="math inline">\(G\)</span> 가 군임을 보이시오.</p>
 </div>
 </div>
 <p><br></p>
@@ -933,20 +928,20 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-herstein_2_3_15" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.8 (Herstein 2.3.15)</strong></span> 다음을 보이시오.</p>
-<p>  (<span class="math inline">\(1\)</span>) <a href="#exr-herstein_2_3_14" class="quarto-xref">연습문제&nbsp;<span>9.7</span></a> 를 이용하여 소수 <span class="math inline">\(p\)</span> 에 대해 congruence modulo <span class="math inline">\(p\)</span> 에 의해 정해지는 equivalence class 의 집합 <span class="math inline">\(J_p\)</span> 가 곱셈에 대한 군임을 보이시오</p>
+<p><span class="theorem-title"><strong>연습문제 8.8 (Herstein 2.3.15)</strong></span> 다음을 보이시오.</p>
+<p>  (<span class="math inline">\(1\)</span>) <a href="#exr-herstein_2_3_14" class="quarto-xref">연습문제&nbsp;<span>8.7</span></a> 를 이용하여 소수 <span class="math inline">\(p\)</span> 에 대해 congruence modulo <span class="math inline">\(p\)</span> 에 의해 정해지는 equivalence class 의 집합 <span class="math inline">\(J_p\)</span> 가 곱셈에 대한 군임을 보이시오</p>
 <p>  (<span class="math inline">\(2\)</span>) 정수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(\{[m]: \gcd(n, m)=1\}\)</span> 이 역시 곱셈에 대한 군임을 보이시오.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(J_p\)</span> 는 유한집함이다. <span class="math inline">\([a][c] = [b][c]\)</span> 라 하자. <span class="math inline">\(p \mid (a-b)c\)</span> 인데 <span class="math inline">\(p \nmid c\)</span> 이므로 <span class="math inline">\(p \mid ab\)</span> 이다. 즉 <span class="math inline">\([a][c]=[b][c] \implies [a]=[b]\)</span> 이므로 <span class="math inline">\(J_p\)</span> 는 군이다.</p>
-<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(K_n = \{[m]: \gcd(n,\,m)=1\}\)</span> 이라 하자. <span class="math inline">\(\gcd(n, 1)=1\)</span> 이므로 <span class="math inline">\([1]\in K_n\)</span> 이다. <span class="math inline">\([a],\, [b]\in K_n\)</span> 일 때 <span class="math inline">\(\gcd(ab,n)=1\)</span> 이며 <span class="math inline">\([a][b]=[ab]\)</span> 이므로 <span class="math inline">\([a][b]\in K_n\)</span> 이다. 곱연산의 결합법칙이 성립함은 자명하메 <span class="math inline">\([a][c]=[b][c]\)</span> 이면 <span class="math inline">\(n \mid (a-b)c\)</span> 인데 <span class="math inline">\(n \nmid c\)</span> 이므로 <span class="math inline">\(n mid (a-b)\)</span> 이다. 따라서 <span class="math inline">\([a]=[b]\)</span> 이므로 제거규칙이 성립한다. 따라서 <a href="#exr-herstein_2_3_14" class="quarto-xref">연습문제&nbsp;<span>9.7</span></a> 에 따라 <span class="math inline">\(K_n\)</span> 은 곱셈에 대한 군이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(K_n = \{[m]: \gcd(n,\,m)=1\}\)</span> 이라 하자. <span class="math inline">\(\gcd(n, 1)=1\)</span> 이므로 <span class="math inline">\([1]\in K_n\)</span> 이다. <span class="math inline">\([a],\, [b]\in K_n\)</span> 일 때 <span class="math inline">\(\gcd(ab,n)=1\)</span> 이며 <span class="math inline">\([a][b]=[ab]\)</span> 이므로 <span class="math inline">\([a][b]\in K_n\)</span> 이다. 곱연산의 결합법칙이 성립함은 자명하메 <span class="math inline">\([a][c]=[b][c]\)</span> 이면 <span class="math inline">\(n \mid (a-b)c\)</span> 인데 <span class="math inline">\(n \nmid c\)</span> 이므로 <span class="math inline">\(n mid (a-b)\)</span> 이다. 따라서 <span class="math inline">\([a]=[b]\)</span> 이므로 제거규칙이 성립한다. 따라서 <a href="#exr-herstein_2_3_14" class="quarto-xref">연습문제&nbsp;<span>8.7</span></a> 에 따라 <span class="math inline">\(K_n\)</span> 은 곱셈에 대한 군이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_2_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.9 (Artin 2.2.5)</strong></span> <span class="math inline">\(H \le G\)</span> 일 때 <span class="math inline">\(H\)</span> 의 항등원은 <span class="math inline">\(G\)</span> 의 항등원과 같아야 한다. 누군가는 <span class="math inline">\(H\)</span> 의 항등원이 <span class="math inline">\(G\)</span> 의 항등원과 다를 것을 원할 수도 있다. 어쨌든 <span class="math inline">\(H\)</span> 가 항등원을 갖는다면 <span class="math inline">\(G\)</span> 와 같아야 함을 보여라. 이것이 역원에 대해서도 성립함을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 8.9 (Artin 2.2.5)</strong></span> <span class="math inline">\(H \le G\)</span> 일 때 <span class="math inline">\(H\)</span> 의 항등원은 <span class="math inline">\(G\)</span> 의 항등원과 같아야 한다. 누군가는 <span class="math inline">\(H\)</span> 의 항등원이 <span class="math inline">\(G\)</span> 의 항등원과 다를 것을 원할 수도 있다. 어쨌든 <span class="math inline">\(H\)</span> 가 항등원을 갖는다면 <span class="math inline">\(G\)</span> 와 같아야 함을 보여라. 이것이 역원에 대해서도 성립함을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -957,7 +952,7 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_2_6" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.10 (Artin 2.2.6)</strong></span> <span class="math inline">\(G\)</span> 가 군일 때 <span class="math inline">\(G\)</span> 에서의 연산 <span class="math inline">\(ab\)</span> 에 대해 <span class="math inline">\(G\)</span> 와 같은 원소를 가지며 연산 <span class="math inline">\(\ast\)</span> 가 <span class="math inline">\(a\ast b = ba\)</span> 로 정의된 집합을 <strong>opposite group</strong> 이라고 하고 <span class="math inline">\(G^\circ\)</span> 라 쓴다. <span class="math inline">\(G^\circ\)</span> 가 군임을 보이시오.</p>
+<p><span class="theorem-title"><strong>연습문제 8.10 (Artin 2.2.6)</strong></span> <span class="math inline">\(G\)</span> 가 군일 때 <span class="math inline">\(G\)</span> 에서의 연산 <span class="math inline">\(ab\)</span> 에 대해 <span class="math inline">\(G\)</span> 와 같은 원소를 가지며 연산 <span class="math inline">\(\ast\)</span> 가 <span class="math inline">\(a\ast b = ba\)</span> 로 정의된 집합을 <strong>opposite group</strong> 이라고 하고 <span class="math inline">\(G^\circ\)</span> 라 쓴다. <span class="math inline">\(G^\circ\)</span> 가 군임을 보이시오.</p>
 </div>
 </div>
 <p><br></p>
@@ -967,7 +962,7 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_3_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.11 (Artin 2.3.2)</strong></span> <span class="math inline">\(a,\,b\)</span> 가 양의 정수이며 그 합이 소수 <span class="math inline">\(p\)</span> 일 때 <span class="math inline">\(a,\,b\)</span> 는 서로소임을 보이시오.</p>
+<p><span class="theorem-title"><strong>연습문제 8.11 (Artin 2.3.2)</strong></span> <span class="math inline">\(a,\,b\)</span> 가 양의 정수이며 그 합이 소수 <span class="math inline">\(p\)</span> 일 때 <span class="math inline">\(a,\,b\)</span> 는 서로소임을 보이시오.</p>
 </div>
 </div>
 <p><br></p>
@@ -977,7 +972,7 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_3_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.12 (Artin 2.3.3)</strong></span> 최대 공약수와 최소공배수를 임의의 갯수의 정수에 대해 확장 할 수 있음을 보이자.</p>
+<p><span class="theorem-title"><strong>연습문제 8.12 (Artin 2.3.3)</strong></span> 최대 공약수와 최소공배수를 임의의 갯수의 정수에 대해 확장 할 수 있음을 보이자.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\{a_1,\ldots,\,a_n\}\)</span> 에 대한 최대공약수를 정의하라. 그것이 존재함을 보이고 그것이 <span class="math inline">\(a_1,\ldots,\,a_n\)</span> 의 선형결합임을 보여라.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\{a_1,\ldots,\,a_n\}\)</span> 의 최대공약수가 <span class="math inline">\(d\)</span> 일 때 <span class="math inline">\(\{a_1/d,\ldots,\,a_n/d\}\)</span> 의 최대공약수가 <span class="math inline">\(1\)</span> 임을 보여라.</p>
 </div>
@@ -991,7 +986,7 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_4_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.13 (Artin 2.4.2)</strong></span> <span class="math inline">\(a,\,b\)</span> 가 군 <span class="math inline">\(G\)</span> 의 원소이며 <span class="math inline">\(o(a)=7\)</span> 이고 <span class="math inline">\(a^3b=ba^3\)</span> 이라면 <span class="math inline">\(ab=ba\)</span> 임을 보이시오.</p>
+<p><span class="theorem-title"><strong>연습문제 8.13 (Artin 2.4.2)</strong></span> <span class="math inline">\(a,\,b\)</span> 가 군 <span class="math inline">\(G\)</span> 의 원소이며 <span class="math inline">\(o(a)=7\)</span> 이고 <span class="math inline">\(a^3b=ba^3\)</span> 이라면 <span class="math inline">\(ab=ba\)</span> 임을 보이시오.</p>
 </div>
 </div>
 <p><br></p>
@@ -1001,7 +996,7 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_4_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.14 (Artin 2.4.3)</strong></span> <span class="math inline">\(a,\,b\)</span> 가 군 <span class="math inline">\(G\)</span> 의 원소라면 <span class="math inline">\(o(ab)=o(ba)\)</span> 임을 보이시오.</p>
+<p><span class="theorem-title"><strong>연습문제 8.14 (Artin 2.4.3)</strong></span> <span class="math inline">\(a,\,b\)</span> 가 군 <span class="math inline">\(G\)</span> 의 원소라면 <span class="math inline">\(o(ab)=o(ba)\)</span> 임을 보이시오.</p>
 </div>
 </div>
 <p><br></p>
@@ -1018,7 +1013,7 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_4_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.15 (Artin 2.4.4)</strong></span> 진 부분군이 존재하지 않는 군 <span class="math inline">\(G\)</span> 를 기술하시오.</p>
+<p><span class="theorem-title"><strong>연습문제 8.15 (Artin 2.4.4)</strong></span> 진 부분군이 존재하지 않는 군 <span class="math inline">\(G\)</span> 를 기술하시오.</p>
 </div>
 </div>
 <p><br></p>
@@ -1030,17 +1025,17 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_4_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.16 (Artin 2.4.5)</strong></span> 순환군의 부분군은 순환군임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 8.16 (Artin 2.4.5)</strong></span> 순환군의 부분군은 순환군임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(G=\langle g \rangle\)</span> 이라 하자. <span class="math inline">\(g^m,\, g^n\in H \le G\)</span> 이면 임의의 정수 <span class="math inline">\(\alpha,\, \beta\)</span> 에 대해 <span class="math inline">\(g^{\alpha m +\beta n}\in H\)</span> 이며 <a href="#prp-MA_gcd_in_groups" class="quarto-xref">명제&nbsp;<span>9.14</span></a> 에서 보았듯이 <span class="math inline">\(d=\gcd (m,\,n)\)</span> 에 대해 <span class="math inline">\(\langle g^d \rangle \le H\)</span> 이므로 순환군의 부분군은 순환군이다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(G=\langle g \rangle\)</span> 이라 하자. <span class="math inline">\(g^m,\, g^n\in H \le G\)</span> 이면 임의의 정수 <span class="math inline">\(\alpha,\, \beta\)</span> 에 대해 <span class="math inline">\(g^{\alpha m +\beta n}\in H\)</span> 이며 <a href="#prp-MA_gcd_in_groups" class="quarto-xref">명제&nbsp;<span>8.14</span></a> 에서 보았듯이 <span class="math inline">\(d=\gcd (m,\,n)\)</span> 에 대해 <span class="math inline">\(\langle g^d \rangle \le H\)</span> 이므로 순환군의 부분군은 순환군이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_4_7" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.17 (Artin 2.4.7)</strong></span> <span class="math inline">\(x,\,y\)</span> 는 군 <span class="math inline">\(G\)</span> 의 원소이며 <span class="math inline">\(o(x)=o(y)=o(xy)=2\)</span> 이다. 이 때 <span class="math inline">\(H=\{1,\,x,\,y,\,xy\}\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군임을 보여라</p>
+<p><span class="theorem-title"><strong>연습문제 8.17 (Artin 2.4.7)</strong></span> <span class="math inline">\(x,\,y\)</span> 는 군 <span class="math inline">\(G\)</span> 의 원소이며 <span class="math inline">\(o(x)=o(y)=o(xy)=2\)</span> 이다. 이 때 <span class="math inline">\(H=\{1,\,x,\,y,\,xy\}\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군임을 보여라</p>
 </div>
 </div>
 <p><br></p>
@@ -1050,7 +1045,7 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_4_8" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.18 (Artin 2.4.8)</strong></span> <a href="../part1/ch1_03_determinant.html#sec-elementary_row_operation" class="quarto-xref"><span> 3.1.1</span></a> 의 기본 행 연산을 참고하여 다음을 보이시오</p>
+<p><span class="theorem-title"><strong>연습문제 8.18 (Artin 2.4.8)</strong></span> <a href="../part1/ch1_03_determinant.html#sec-elementary_row_operation" class="quarto-xref"><span> 3.1.1</span></a> 의 기본 행 연산을 참고하여 다음을 보이시오</p>
 <p>  (<span class="math inline">\(1\)</span>) <a href="../part1/ch1_03_determinant.html#def-LA_elementary_row_operation" class="quarto-xref">정의&nbsp;<span>3.1</span></a> 의 <span class="math inline">\(E^{(2)}\)</span> 와 <span class="math inline">\(E^{(3)}\)</span> 가 <span class="math inline">\(GL_n(\mathbb{R})\)</span> 을 생성함을 보이시오.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(E^{(3  )}\)</span> 가 <span class="math inline">\(SL_n(\mathbb{R})\)</span> 을 생성함을 보이시오. <span class="math inline">\(2\times 2\)</span> 의 경우를 우선 보이시오.</p>
 </div>
@@ -1077,7 +1072,7 @@ E^{(2)}\left(2, \frac{1}{2}\right) E^{(3)}(2,1, -1)E^{(2)}(1, -2)E^{(3)}\left(1,
 <p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_4_10" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.19 (Artin 2.4.10)</strong></span> 군의 유한 차수를 갖는 원소들의 곱은 꼭 유한차수를 갖는 것은 아님을 예를 들어 보여라. 아벨군의 경우에는 어떤가?</p>
+<p><span class="theorem-title"><strong>연습문제 8.19 (Artin 2.4.10)</strong></span> 군의 유한 차수를 갖는 원소들의 곱은 꼭 유한차수를 갖는 것은 아님을 예를 들어 보여라. 아벨군의 경우에는 어떤가?</p>
 </div>
 </div>
 <p><br></p>
@@ -1087,7 +1082,7 @@ E^{(2)}\left(2, \frac{1}{2}\right) E^{(3)}(2,1, -1)E^{(2)}(1, -2)E^{(3)}\left(1,
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_4_11" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 9.20 (Artin 2.4.11)</strong></span> 다음을 보이시오.</p>
+<p><span class="theorem-title"><strong>연습문제 8.20 (Artin 2.4.11)</strong></span> 다음을 보이시오.</p>
 <p>  (<span class="math inline">\(1\)</span>) 호환(transpositon) 으로 대칭군 <span class="math inline">\(S_n\)</span> 을 생성할 수 있음을 보이시오.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(n \ge 3\)</span> 일 때 <span class="math inline">\(3\)</span>-cycles 가 교대군 <span class="math inline">\(A_n\)</span> 을 생성함을 보이시오.</p>
 </div>
@@ -1105,236 +1100,242 @@ E^{(2)}\left(2, \frac{1}{2}\right) E^{(3)}(2,1, -1)E^{(2)}(1, -2)E^{(3)}\left(1,
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "복사완료!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "복사완료!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
       }
+      return false;
     }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
         }
-        return container.innerHTML
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1342,185 +1343,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../src/part2/part2.html" class="pagination-link" aria-label="II. 군 (Groups)">
@@ -1529,7 +1506,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../src/part2/ch2_02_homomorphisms.html" class="pagination-link" aria-label="군에서의 준동형사상과 동형사상">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">군에서의 준동형사상과 동형사상</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군에서의 준동형사상과 동형사상</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

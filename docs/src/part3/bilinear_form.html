@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>15&nbsp; 다중선형 형식 – 대수학</title>
+<title>14&nbsp; 다중선형 형식 – 대수학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,15 +32,16 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../../">
 <link href="../../src/part3/laplacian_form_of_determinant.html" rel="next">
 <link href="../../src/part3/dual_space.html" rel="prev">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b467865d89f01302b3bb45791fa41ab5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -101,7 +102,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -110,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/bilinear_form.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">다중선형 형식</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/bilinear_form.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">다중선형 형식</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -189,13 +190,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part1/ch1_07_spectrum_theorem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">스펙트럼 정리</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/part1/ch1_08_svd.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">특이값 분해</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">스펙트럼 정리와 특이값 분해</span></span></a>
   </div>
 </li>
       </ul>
@@ -212,25 +207,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_01_groups.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군의 기초</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">군의 기초</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_02_homomorphisms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">군에서의 준동형사상과 동형사상</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">군에서의 준동형사상과 동형사상</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_03_normal_subgroup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">정규부분군과 몫군</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">정규부분군과 몫군</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part2/ch2_04_symmetry.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Symmetry</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Symmetry</span></span></a>
   </div>
 </li>
       </ul>
@@ -247,49 +242,49 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/quotient_space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">몫공간과 몫사상</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">몫공간과 몫사상</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/dual_space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">쌍대공간과 쌍대 사상</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">쌍대공간과 쌍대 사상</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/bilinear_form.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/laplacian_form_of_determinant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/generalized_inverse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/characteristic_polynomial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">특성다항식, 최소다항식과 케일리-해밀턴 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">특성다항식, 최소다항식과 케일리-해밀턴 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/generalized_eigenspace.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">일반화된 고유공간과 조르당 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">일반화된 고유공간과 조르당 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/tensor_product.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">텐서곱</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">텐서곱</span></span></a>
   </div>
 </li>
       </ul>
@@ -297,7 +292,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -316,29 +311,29 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#다중선형-형식과-쌍선형-형식" id="toc-다중선형-형식과-쌍선형-형식" class="nav-link active" data-scroll-target="#다중선형-형식과-쌍선형-형식"><span class="header-section-number">15.1</span> 다중선형 형식과 쌍선형 형식</a>
+  <li><a href="#다중선형-형식과-쌍선형-형식" id="toc-다중선형-형식과-쌍선형-형식" class="nav-link active" data-scroll-target="#다중선형-형식과-쌍선형-형식"><span class="header-section-number">14.1</span> 다중선형 형식과 쌍선형 형식</a>
   <ul class="collapse">
-  <li><a href="#sec-ALA_bilinear_form" id="toc-sec-ALA_bilinear_form" class="nav-link" data-scroll-target="#sec-ALA_bilinear_form"><span class="header-section-number">15.1.1</span> 쌍선형 형식의 정의</a></li>
-  <li><a href="#sec-ALA_matrix_representation_of_bilinear_form" id="toc-sec-ALA_matrix_representation_of_bilinear_form" class="nav-link" data-scroll-target="#sec-ALA_matrix_representation_of_bilinear_form"><span class="header-section-number">15.1.2</span> 쌍선형 형식의 행렬 표현</a></li>
+  <li><a href="#sec-ALA_bilinear_form" id="toc-sec-ALA_bilinear_form" class="nav-link" data-scroll-target="#sec-ALA_bilinear_form"><span class="header-section-number">14.1.1</span> 쌍선형 형식의 정의</a></li>
+  <li><a href="#sec-ALA_matrix_representation_of_bilinear_form" id="toc-sec-ALA_matrix_representation_of_bilinear_form" class="nav-link" data-scroll-target="#sec-ALA_matrix_representation_of_bilinear_form"><span class="header-section-number">14.1.2</span> 쌍선형 형식의 행렬 표현</a></li>
   </ul></li>
-  <li><a href="#대칭형식과-교대형식" id="toc-대칭형식과-교대형식" class="nav-link" data-scroll-target="#대칭형식과-교대형식"><span class="header-section-number">15.2</span> 대칭형식과 교대형식</a>
+  <li><a href="#대칭형식과-교대형식" id="toc-대칭형식과-교대형식" class="nav-link" data-scroll-target="#대칭형식과-교대형식"><span class="header-section-number">14.2</span> 대칭형식과 교대형식</a>
   <ul class="collapse">
-  <li><a href="#sec-ALA_def_of_symmetric_form_and_alternating_form" id="toc-sec-ALA_def_of_symmetric_form_and_alternating_form" class="nav-link" data-scroll-target="#sec-ALA_def_of_symmetric_form_and_alternating_form"><span class="header-section-number">15.2.1</span> 대칭형식 과 교대형식의 정의</a></li>
-  <li><a href="#sec-ALA_alternating_form_and_determinant_of_matrix" id="toc-sec-ALA_alternating_form_and_determinant_of_matrix" class="nav-link" data-scroll-target="#sec-ALA_alternating_form_and_determinant_of_matrix"><span class="header-section-number">15.2.2</span> 교대형식과 행렬식</a></li>
+  <li><a href="#sec-ALA_def_of_symmetric_form_and_alternating_form" id="toc-sec-ALA_def_of_symmetric_form_and_alternating_form" class="nav-link" data-scroll-target="#sec-ALA_def_of_symmetric_form_and_alternating_form"><span class="header-section-number">14.2.1</span> 대칭형식 과 교대형식의 정의</a></li>
+  <li><a href="#sec-ALA_alternating_form_and_determinant_of_matrix" id="toc-sec-ALA_alternating_form_and_determinant_of_matrix" class="nav-link" data-scroll-target="#sec-ALA_alternating_form_and_determinant_of_matrix"><span class="header-section-number">14.2.2</span> 교대형식과 행렬식</a></li>
   </ul></li>
-  <li><a href="#이차형식" id="toc-이차형식" class="nav-link" data-scroll-target="#이차형식"><span class="header-section-number">15.3</span> 이차형식</a>
+  <li><a href="#이차형식" id="toc-이차형식" class="nav-link" data-scroll-target="#이차형식"><span class="header-section-number">14.3</span> 이차형식</a>
   <ul class="collapse">
-  <li><a href="#sec-ALA_quadratic_form" id="toc-sec-ALA_quadratic_form" class="nav-link" data-scroll-target="#sec-ALA_quadratic_form"><span class="header-section-number">15.3.1</span> 이차형식</a></li>
-  <li><a href="#sec-ALA_matrix_representation_of_quadratic_form" id="toc-sec-ALA_matrix_representation_of_quadratic_form" class="nav-link" data-scroll-target="#sec-ALA_matrix_representation_of_quadratic_form"><span class="header-section-number">15.3.2</span> 이차형식의 행렬 표현</a></li>
+  <li><a href="#sec-ALA_quadratic_form" id="toc-sec-ALA_quadratic_form" class="nav-link" data-scroll-target="#sec-ALA_quadratic_form"><span class="header-section-number">14.3.1</span> 이차형식</a></li>
+  <li><a href="#sec-ALA_matrix_representation_of_quadratic_form" id="toc-sec-ALA_matrix_representation_of_quadratic_form" class="nav-link" data-scroll-target="#sec-ALA_matrix_representation_of_quadratic_form"><span class="header-section-number">14.3.2</span> 이차형식의 행렬 표현</a></li>
   </ul></li>
-  <li><a href="#직교군과-심플렉틱-군" id="toc-직교군과-심플렉틱-군" class="nav-link" data-scroll-target="#직교군과-심플렉틱-군"><span class="header-section-number">15.4</span> 직교군과 심플렉틱 군</a>
+  <li><a href="#직교군과-심플렉틱-군" id="toc-직교군과-심플렉틱-군" class="nav-link" data-scroll-target="#직교군과-심플렉틱-군"><span class="header-section-number">14.4</span> 직교군과 심플렉틱 군</a>
   <ul class="collapse">
-  <li><a href="#sec-ALA_orthogonal_group" id="toc-sec-ALA_orthogonal_group" class="nav-link" data-scroll-target="#sec-ALA_orthogonal_group"><span class="header-section-number">15.4.1</span> 이차공간과 직교군</a></li>
-  <li><a href="#sec-ALA_symplectic_group" id="toc-sec-ALA_symplectic_group" class="nav-link" data-scroll-target="#sec-ALA_symplectic_group"><span class="header-section-number">15.4.2</span> 심플렉틱 군</a></li>
+  <li><a href="#sec-ALA_orthogonal_group" id="toc-sec-ALA_orthogonal_group" class="nav-link" data-scroll-target="#sec-ALA_orthogonal_group"><span class="header-section-number">14.4.1</span> 이차공간과 직교군</a></li>
+  <li><a href="#sec-ALA_symplectic_group" id="toc-sec-ALA_symplectic_group" class="nav-link" data-scroll-target="#sec-ALA_symplectic_group"><span class="header-section-number">14.4.2</span> 심플렉틱 군</a></li>
   </ul></li>
-  <li><a href="#특별한-직교군" id="toc-특별한-직교군" class="nav-link" data-scroll-target="#특별한-직교군"><span class="header-section-number">15.5</span> 특별한 직교군</a>
+  <li><a href="#특별한-직교군" id="toc-특별한-직교군" class="nav-link" data-scroll-target="#특별한-직교군"><span class="header-section-number">14.5</span> 특별한 직교군</a>
   <ul class="collapse">
-  <li><a href="#o1-1" id="toc-o1-1" class="nav-link" data-scroll-target="#o1-1"><span class="header-section-number">15.5.1</span> <span class="math inline">\(O(1, 1)\)</span></a></li>
+  <li><a href="#o1-1" id="toc-o1-1" class="nav-link" data-scroll-target="#o1-1"><span class="header-section-number">14.5.1</span> <span class="math inline">\(O(1, 1)\)</span></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -346,9 +341,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/bilinear_form.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">다중선형 형식</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/bilinear_form.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">다중선형 형식</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">다중선형 형식</span></h1>
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">다중선형 형식</span></h1>
 </div>
 
 
@@ -365,10 +360,10 @@ window.Quarto = {
 </header>
 
 
-<section id="다중선형-형식과-쌍선형-형식" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="다중선형-형식과-쌍선형-형식"><span class="header-section-number">15.1</span> 다중선형 형식과 쌍선형 형식</h2>
-<section id="sec-ALA_bilinear_form" class="level3" data-number="15.1.1">
-<h3 data-number="15.1.1" class="anchored" data-anchor-id="sec-ALA_bilinear_form"><span class="header-section-number">15.1.1</span> 쌍선형 형식의 정의</h3>
+<section id="다중선형-형식과-쌍선형-형식" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="다중선형-형식과-쌍선형-형식"><span class="header-section-number">14.1</span> 다중선형 형식과 쌍선형 형식</h2>
+<section id="sec-ALA_bilinear_form" class="level3" data-number="14.1.1">
+<h3 data-number="14.1.1" class="anchored" data-anchor-id="sec-ALA_bilinear_form"><span class="header-section-number">14.1.1</span> 쌍선형 형식의 정의</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -376,7 +371,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_k_linear_form" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 15.1 (<span class="math inline">\(k\)</span>-다중선형 형식, 쌍선형 형식, <span class="math inline">\(k\)</span>-텐서)</strong></span> <span class="math inline">\(V_1,\ldots,\,V_k\)</span> 가 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간이라고 하자. 함수 <span class="math inline">\(T : V_1 \times \cdots \times V_k \to \mathbb{F}\)</span> 가 각각의 <span class="math inline">\(V_i\)</span> 에 대해 선형일 때 <span class="math inline">\(T\)</span> 를 <span class="math inline">\(k\)</span>-<strong>다중선형 형식</strong>(<span class="math inline">\(k\)</span><strong>-linear form</strong>) 이라고 한다. 즉 임의의 <span class="math inline">\(i\in \{1,\ldots,\,k\}\)</span> 에 대해 <span class="math inline">\(v_i,\,v_i'\in V_i\)</span>, <span class="math inline">\(c\in \mathbb{F}\)</span> 일 때,</p>
+<p><span class="theorem-title"><strong>정의 14.1 (<span class="math inline">\(k\)</span>-다중선형 형식, 쌍선형 형식, <span class="math inline">\(k\)</span>-텐서)</strong></span> <span class="math inline">\(V_1,\ldots,\,V_k\)</span> 가 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간이라고 하자. 함수 <span class="math inline">\(T : V_1 \times \cdots \times V_k \to \mathbb{F}\)</span> 가 각각의 <span class="math inline">\(V_i\)</span> 에 대해 선형일 때 <span class="math inline">\(T\)</span> 를 <span class="math inline">\(k\)</span>-<strong>다중선형 형식</strong>(<span class="math inline">\(k\)</span><strong>-linear form</strong>) 이라고 한다. 즉 임의의 <span class="math inline">\(i\in \{1,\ldots,\,k\}\)</span> 에 대해 <span class="math inline">\(v_i,\,v_i'\in V_i\)</span>, <span class="math inline">\(c\in \mathbb{F}\)</span> 일 때,</p>
 <p><span class="math display">\[
 T (\cdots, v_i+cv_i', \cdots) = T(\cdots,\, v_i ,\cdots) + c T (\cdots,\, v_i',\,\cdots)
 \]</span></p>
@@ -388,7 +383,7 @@ T (\cdots, v_i+cv_i', \cdots) = T(\cdots,\, v_i ,\cdots) + c T (\cdots,\, v_i',\
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-ALA_k_linear_1" class="theorem example">
-<p><span class="theorem-title"><strong>보기 15.1</strong></span> <span class="math inline">\(T\)</span> 가 벡터공간 <span class="math inline">\(V\)</span> 에 대한 <span class="math inline">\(k\)</span>-다중선형형식 일 때 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>보기 14.1</strong></span> <span class="math inline">\(T\)</span> 가 벡터공간 <span class="math inline">\(V\)</span> 에 대한 <span class="math inline">\(k\)</span>-다중선형형식 일 때 다음이 성립한다.</p>
 <p><span class="math display">\[
 T(\cdots, 0, \cdots ) = 0
 \]</span></p>
@@ -404,7 +399,7 @@ T(\cdots, 0, \cdots ) = 0
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_arithmatics_for_multilinear_form" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 15.2 (다중선형 형식의 합과 스칼라곱)</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V_1,\ldots,\,V_k\)</span> 에서 정의된 <span class="math inline">\(k\)</span>-다중선형형식 <span class="math inline">\(S,\,T\)</span> 와 <span class="math inline">\(c\in \mathbb{F}\)</span> 에 대해 합과 스칼라곱을 아래와 같이 정의한다.</p>
+<p><span class="theorem-title"><strong>정의 14.2 (다중선형 형식의 합과 스칼라곱)</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V_1,\ldots,\,V_k\)</span> 에서 정의된 <span class="math inline">\(k\)</span>-다중선형형식 <span class="math inline">\(S,\,T\)</span> 와 <span class="math inline">\(c\in \mathbb{F}\)</span> 에 대해 합과 스칼라곱을 아래와 같이 정의한다.</p>
 <p><span class="math display">\[
 (S+aT)(v_1,\ldots,\,v_k) :=  S(v_1,\ldots,\,v_k) + c\cdot T(v_1,\ldots,\,v_k)
 \]</span></p>
@@ -415,7 +410,7 @@ T(\cdots, 0, \cdots ) = 0
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_vector_space_of_k_linear_form" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 15.1</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V_1,\ldots,\,V_k\)</span> 에서 정의된 <span class="math inline">\(k\)</span>-다중선형형식의 집합 <span class="math inline">\(\mathfrak{M}_k\)</span> 는 <a href="#def-ALA_arithmatics_for_multilinear_form" class="quarto-xref">정의&nbsp;<span>15.2</span></a> 에 의해 벡터공간이다.</p>
+<p><span class="theorem-title"><strong>명제 14.1</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V_1,\ldots,\,V_k\)</span> 에서 정의된 <span class="math inline">\(k\)</span>-다중선형형식의 집합 <span class="math inline">\(\mathfrak{M}_k\)</span> 는 <a href="#def-ALA_arithmatics_for_multilinear_form" class="quarto-xref">정의&nbsp;<span>14.2</span></a> 에 의해 벡터공간이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -423,27 +418,27 @@ T(\cdots, 0, \cdots ) = 0
 <p><span class="proof-title"><em>(증명)</em>. </span>우선 <span class="math inline">\(0_T: \mathfrak{M}_k \to \mathbb{F}\)</span> 를 다음과 같이 정의한다.</p>
 <p><span id="eq-zero_of_k_linear_form"><span class="math display">\[
 0_M(v_1,\ldots,\,v_k) := 0
-\tag{15.1}\]</span></span></p>
+\tag{14.1}\]</span></span></p>
 <p>이렇게 정의된 <span class="math inline">\(0_M\)</span> 는 <span class="math inline">\(\mathfrak{M}_k\)</span> 에 포함된다. <span class="math inline">\(T_1,\, T_2\in \mathfrak{M}_k,\, c\in \mathbb{F}\)</span> 에 대해 합과 스칼라곱을 다음과 같이 정의한다.</p>
 <p><span id="eq-operation_in_k_linear_form"><span class="math display">\[
 \begin{aligned}
 (T_1 + c T_2)(v_1,\ldots,\,v_k) := T_1 (v_1,\ldots,\,v_k) + cT_2 (v_1,\ldots,\,v_k)
 \end{aligned}
-\tag{15.2}\]</span></span></p>
+\tag{14.2}\]</span></span></p>
 <p>그렇다면 <span class="math inline">\(T_1 + cT_2\in \mathfrak{M}_k\)</span> 이다. 이를 통해 우리는 <span class="math inline">\(\mathfrak{M}_k\)</span> 가 벡터공간임을 알 수 있다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p>여기서는 일반적인 <span class="math inline">\(k\)</span>-다중형식보다는 쌍선형 형식과 <span class="math inline">\(k\)</span>-텐서에 대해 집중해서 다루기로 한다. 보통 쌍선형 형식도 서로 다른 <span class="math inline">\(U,\,V\)</span> 에 대해 정해지는 것보다는 2-텐서를(즉 <span class="math inline">\(U=V\)</span> 인 경우) 더 많이 사용한다. 벡터공간 <span class="math inline">\(V\)</span> 에 대한 쌍선형 형식이라고 할 때는 <span class="math inline">\(V\)</span> 에 대한 <span class="math inline">\(2\)</span>-텐서 를 의미한다. 이제 <a href="#prp-ALA_vector_space_of_k_linear_form" class="quarto-xref">명제&nbsp;<span>15.1</span></a> 로부터 자연스럽게 아래의 결론을 내릴 수 있다.</p>
+<p>여기서는 일반적인 <span class="math inline">\(k\)</span>-다중형식보다는 쌍선형 형식과 <span class="math inline">\(k\)</span>-텐서에 대해 집중해서 다루기로 한다. 보통 쌍선형 형식도 서로 다른 <span class="math inline">\(U,\,V\)</span> 에 대해 정해지는 것보다는 2-텐서를(즉 <span class="math inline">\(U=V\)</span> 인 경우) 더 많이 사용한다. 벡터공간 <span class="math inline">\(V\)</span> 에 대한 쌍선형 형식이라고 할 때는 <span class="math inline">\(V\)</span> 에 대한 <span class="math inline">\(2\)</span>-텐서 를 의미한다. 이제 <a href="#prp-ALA_vector_space_of_k_linear_form" class="quarto-xref">명제&nbsp;<span>14.1</span></a> 로부터 자연스럽게 아래의 결론을 내릴 수 있다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_bilinear_and_k_tensor_are_vector_space" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 15.2</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 쌍선형 형식의 집합은 벡터공간이다. 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(k\)</span>-텐선의 집합 <span class="math inline">\(\mathcal{T}^k(V)\)</span> 는 벡터공간이다.</p>
+<p><span class="theorem-title"><strong>명제 14.2</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 쌍선형 형식의 집합은 벡터공간이다. 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(k\)</span>-텐선의 집합 <span class="math inline">\(\mathcal{T}^k(V)\)</span> 는 벡터공간이다.</p>
 </div>
 </div>
 <p><br></p>
 </section>
-<section id="sec-ALA_matrix_representation_of_bilinear_form" class="level3" data-number="15.1.2">
-<h3 data-number="15.1.2" class="anchored" data-anchor-id="sec-ALA_matrix_representation_of_bilinear_form"><span class="header-section-number">15.1.2</span> 쌍선형 형식의 행렬 표현</h3>
+<section id="sec-ALA_matrix_representation_of_bilinear_form" class="level3" data-number="14.1.2">
+<h3 data-number="14.1.2" class="anchored" data-anchor-id="sec-ALA_matrix_representation_of_bilinear_form"><span class="header-section-number">14.1.2</span> 쌍선형 형식의 행렬 표현</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -451,7 +446,7 @@ T(\cdots, 0, \cdots ) = 0
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_matrix_representation_of_bilinear_form" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 15.3 (쌍선형 형식의 행렬표현)</strong></span> 유한차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서의 쌍선형 형식 <span class="math inline">\(T\in \mathcal{T}^2(V)\)</span> 을 생각하자. <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 이 <span class="math inline">\(V\)</span> 의 기저라고 할 때 <span class="math inline">\(T\)</span> 의 <span class="math inline">\(\mathcal{B}\)</span> 에 대한 행렬표현 <span class="math inline">\([T]_{\mathcal{B}}\)</span> 를 다음과 같이 정의한다.</p>
+<p><span class="theorem-title"><strong>정의 14.3 (쌍선형 형식의 행렬표현)</strong></span> 유한차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서의 쌍선형 형식 <span class="math inline">\(T\in \mathcal{T}^2(V)\)</span> 을 생각하자. <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 이 <span class="math inline">\(V\)</span> 의 기저라고 할 때 <span class="math inline">\(T\)</span> 의 <span class="math inline">\(\mathcal{B}\)</span> 에 대한 행렬표현 <span class="math inline">\([T]_{\mathcal{B}}\)</span> 를 다음과 같이 정의한다.</p>
 <p><span class="math display">\[
 ([T]_{\mathcal{B}})_{i, j} = T(v_i, v_j).
 \]</span></p>
@@ -462,7 +457,7 @@ T(\cdots, 0, \cdots ) = 0
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_matrix_representation_of_blinear_form" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 15.3</strong></span> <a href="#def-ALA_matrix_representation_of_bilinear_form" class="quarto-xref">정의&nbsp;<span>15.3</span></a> 에서 정의된 <span class="math inline">\([T]_{\mathcal{B}}\)</span> 에 대해 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 14.3</strong></span> <a href="#def-ALA_matrix_representation_of_bilinear_form" class="quarto-xref">정의&nbsp;<span>14.3</span></a> 에서 정의된 <span class="math inline">\([T]_{\mathcal{B}}\)</span> 에 대해 다음이 성립한다.</p>
 <p><span class="math display">\[
 T(v, v') = \left([v]_\mathcal{B}\right)^T [T]_\mathcal{B} [v']_\mathcal{B}.
 \]</span></p>
@@ -481,7 +476,7 @@ T(v, v') &amp;= \sum_{i, j} T(a_i v_i, b_j, v_j) = \sum_{i, j} a_i b_j T(v_i, v_
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_bilinear_form_for_column_space" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 15.4</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 아래와 같이 정의된 <span class="math inline">\(B:\mathcal{M}_n(\mathbb{F}) \times \mathcal{M}_n(\mathbb{F}) \to \mathbb{F}\)</span> 는 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})\)</span> 에 대한 쌍선형 형식이다.</p>
+<p><span class="theorem-title"><strong>명제 14.4</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 아래와 같이 정의된 <span class="math inline">\(B:\mathcal{M}_n(\mathbb{F}) \times \mathcal{M}_n(\mathbb{F}) \to \mathbb{F}\)</span> 는 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})\)</span> 에 대한 쌍선형 형식이다.</p>
 <p><span class="math display">\[
 B(\boldsymbol{u}, \boldsymbol{v}) = \boldsymbol{u}^T\boldsymbol{A}\boldsymbol{v}.
 \]</span></p>
@@ -496,7 +491,7 @@ B(\boldsymbol{u}, \boldsymbol{v}) = \boldsymbol{u}^T\boldsymbol{A}\boldsymbol{v}
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-ALA_isomorphism_between_matrix_and_bilinear" class="theorem">
-<p><span class="theorem-title"><strong>정리 15.1</strong></span> <span class="math inline">\(n\)</span> 차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B}_V = (v_1,\ldots,\,v_n)\)</span> 을 생각하자. 아래에 정의된 <span class="math inline">\(\Phi_\mathcal{B} : \mathcal{T}^2(V) \to \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 는 동형사상이다.</p>
+<p><span class="theorem-title"><strong>정리 14.1</strong></span> <span class="math inline">\(n\)</span> 차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B}_V = (v_1,\ldots,\,v_n)\)</span> 을 생각하자. 아래에 정의된 <span class="math inline">\(\Phi_\mathcal{B} : \mathcal{T}^2(V) \to \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 는 동형사상이다.</p>
 <p><span class="math display">\[
 \Phi_\mathcal{B} (T) = [T]_\mathcal{B}.
 \]</span></p>
@@ -509,15 +504,15 @@ B(\boldsymbol{u}, \boldsymbol{v}) = \boldsymbol{u}^T\boldsymbol{A}\boldsymbol{v}
 ([S+aT]_\mathcal{B})_{ij} = (S+aT)(v_i, v_j) = S(v_i, v_j) + aT(v_i, v_j) = ([S]_{\mathcal{B}})_{ij} + a\cdot ([T]_{\mathcal{B}})_{ij}
 \]</span></p>
 <p>이다. 따라서 <span class="math inline">\(\Phi_\mathcal{B}(S+aT) = \Phi_\mathcal{B}(S) + a \Phi_\mathcal{B}(T)\)</span> 이므로 <span class="math inline">\(\Phi_B\)</span> 는 선형사상이다.</p>
-<p>임의의 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 와 <span class="math inline">\(v_1,\,v_2 \in V\)</span> 에 대해 <span class="math inline">\(([v_1]_\mathcal{B})^T \boldsymbol{A} [v_2]_\mathcal{B}\)</span> 는 <span class="math inline">\(V\)</span> 에서의 쌍선형 형식이다. 따라서 <span class="math inline">\(\Phi_\mathcal{B}\)</span> 는 전사이다. 또한 <a href="#prp-ALA_matrix_representation_of_blinear_form" class="quarto-xref">명제&nbsp;<span>15.3</span></a> 에 따라 <span class="math inline">\([T]_\mathcal{B}\)</span> 는 유일하게 정해진다. 따라서 <span class="math inline">\(\Phi_\mathcal{B}\)</span> 는 단사이다. 즉 <span class="math inline">\(\Phi_\mathcal{B}\)</span> 는 동형사상이다.</p>
+<p>임의의 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 와 <span class="math inline">\(v_1,\,v_2 \in V\)</span> 에 대해 <span class="math inline">\(([v_1]_\mathcal{B})^T \boldsymbol{A} [v_2]_\mathcal{B}\)</span> 는 <span class="math inline">\(V\)</span> 에서의 쌍선형 형식이다. 따라서 <span class="math inline">\(\Phi_\mathcal{B}\)</span> 는 전사이다. 또한 <a href="#prp-ALA_matrix_representation_of_blinear_form" class="quarto-xref">명제&nbsp;<span>14.3</span></a> 에 따라 <span class="math inline">\([T]_\mathcal{B}\)</span> 는 유일하게 정해진다. 따라서 <span class="math inline">\(\Phi_\mathcal{B}\)</span> 는 단사이다. 즉 <span class="math inline">\(\Phi_\mathcal{B}\)</span> 는 동형사상이다.</p>
 </div>
 <p><br></p>
 </section>
 </section>
-<section id="대칭형식과-교대형식" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="대칭형식과-교대형식"><span class="header-section-number">15.2</span> 대칭형식과 교대형식</h2>
-<section id="sec-ALA_def_of_symmetric_form_and_alternating_form" class="level3" data-number="15.2.1">
-<h3 data-number="15.2.1" class="anchored" data-anchor-id="sec-ALA_def_of_symmetric_form_and_alternating_form"><span class="header-section-number">15.2.1</span> 대칭형식 과 교대형식의 정의</h3>
+<section id="대칭형식과-교대형식" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="대칭형식과-교대형식"><span class="header-section-number">14.2</span> 대칭형식과 교대형식</h2>
+<section id="sec-ALA_def_of_symmetric_form_and_alternating_form" class="level3" data-number="14.2.1">
+<h3 data-number="14.2.1" class="anchored" data-anchor-id="sec-ALA_def_of_symmetric_form_and_alternating_form"><span class="header-section-number">14.2.1</span> 대칭형식 과 교대형식의 정의</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -525,14 +520,14 @@ B(\boldsymbol{u}, \boldsymbol{v}) = \boldsymbol{u}^T\boldsymbol{A}\boldsymbol{v}
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_alternating_form" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 15.4 (대칭형식 교대형식)</strong></span> <span class="math inline">\(T\in \mathcal{T}^k(V)\)</span> 에 대해 <span class="math inline">\(T\)</span> 에 입력되는 두 벡터의 위치를 바꾸어도 그 값이 바뀌지 않는다면 <span class="math inline">\(T\)</span> 를 <span class="math inline">\(V\)</span> 에 대핸 <span class="math inline">\(k\)</span>-<strong>대칭형식</strong>(<span class="math inline">\(k\)</span>-<strong>symmetric form</strong>) 이라고 한다. 즉 <span class="math inline">\(T\)</span> 가 <span class="math inline">\(k\)</span>-대칭형식이면 임의의 <span class="math inline">\(v,\,v'\in V\)</span> 에 대해 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>정의 14.4 (대칭형식 교대형식)</strong></span> <span class="math inline">\(T\in \mathcal{T}^k(V)\)</span> 에 대해 <span class="math inline">\(T\)</span> 에 입력되는 두 벡터의 위치를 바꾸어도 그 값이 바뀌지 않는다면 <span class="math inline">\(T\)</span> 를 <span class="math inline">\(V\)</span> 에 대핸 <span class="math inline">\(k\)</span>-<strong>대칭형식</strong>(<span class="math inline">\(k\)</span>-<strong>symmetric form</strong>) 이라고 한다. 즉 <span class="math inline">\(T\)</span> 가 <span class="math inline">\(k\)</span>-대칭형식이면 임의의 <span class="math inline">\(v,\,v'\in V\)</span> 에 대해 다음이 성립한다.</p>
 <p><span id="eq-def_symmetric_form"><span class="math display">\[
 T(\cdots, v, \cdots,v', \cdots) = T(\cdots, v',\cdots, v,\cdots)
-\tag{15.3}\]</span></span></p>
+\tag{14.3}\]</span></span></p>
 <p>반대로 <span class="math inline">\(T\in \mathcal{T}^k(V)\)</span> 에 대해 <span class="math inline">\(T\)</span> 입력되는 두 벡터의 위치를 바꾸었을 때 그 값이 항상 <span class="math inline">\(0\)</span> 이 되면 <span class="math inline">\(T\)</span> 를 <span class="math inline">\(V\)</span> 에 대한 <strong><span class="math inline">\(k\)</span>-교대형식</strong>(<strong><span class="math inline">\(k\)</span>-alternating form</strong>) 이라고 한다. 즉 임의의 <span class="math inline">\(v\in V\)</span> 에 대해</p>
 <p><span id="eq-def_alternating_form"><span class="math display">\[
 T(\cdots, v, \cdots,v, \cdots) =0
-\tag{15.4}\]</span></span></p>
+\tag{14.4}\]</span></span></p>
 <p>이면 <span class="math inline">\(T\)</span> 는 <span class="math inline">\(V\)</span> 에 대한 <span class="math inline">\(k\)</span>-교대형식 이다. <span class="math inline">\(V\)</span> 에 대한 <span class="math inline">\(k\)</span>-대칭형식의 집합을 <span class="math inline">\(\mathcal{S}^k(V)\)</span> 라고 쓰고 <span class="math inline">\(k\)</span>-교대형식 의 집합을 <span class="math inline">\(\mathcal{A}^k(V)\)</span> 라고 쓴다.</p>
 </div>
 </div>
@@ -541,12 +536,12 @@ T(\cdots, v, \cdots,v, \cdots) =0
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_k_alternating_form" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 15.5</strong></span> <span class="math inline">\(T\in \mathcal{S}^k(V)\)</span> 에 대해 다음은 동치임을 보여라.</p>
+<p><span class="theorem-title"><strong>명제 14.5</strong></span> <span class="math inline">\(T\in \mathcal{S}^k(V)\)</span> 에 대해 다음은 동치임을 보여라.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(T\)</span> 는 <span class="math inline">\(k\)</span>-교대형식이다. 즉 <span class="math inline">\(T\in \mathcal{A}^k(V)\)</span> 이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(T\)</span> 에 입력되는 벡터들 가운데 두개의 위치를 바꾸면 결과값은 원래값에 <span class="math inline">\(-1\)</span> 을 곱한값이다. 즉</p>
 <p><span id="eq-def_alternating_form_2"><span class="math display">\[
 T( \cdots, v_i, \cdots, v_j ,\cdots) = - T(\cdots, v_j, \cdots, v_i, \cdots)
-\tag{15.5}\]</span></span></p>
+\tag{14.5}\]</span></span></p>
 <p>이다.</p>
 </div>
 </div>
@@ -561,18 +556,18 @@ T( \cdots, v_i, \cdots, v_j ,\cdots) = - T(\cdots, v_j, \cdots, v_i, \cdots)
 <p>(<span class="math inline">\(2 \implies 1\)</span>) <span class="math inline">\(T(v,v)= -T(v,v)\)</span> 이므로 <span class="math inline">\(T(v,v)=0\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p>즉 교대형식의 정의 <a href="#eq-def_alternating_form" class="quarto-xref">식&nbsp;<span>15.4</span></a> 과 <a href="#eq-def_alternating_form_2" class="quarto-xref">식&nbsp;<span>15.5</span></a> 는 동치이다.</p>
+<p>즉 교대형식의 정의 <a href="#eq-def_alternating_form" class="quarto-xref">식&nbsp;<span>14.4</span></a> 과 <a href="#eq-def_alternating_form_2" class="quarto-xref">식&nbsp;<span>14.5</span></a> 는 동치이다.</p>
 <p><br></p>
 <p>우리는 앞서 <span class="math inline">\(\mathcal{T}^k(V)\)</span> 가 벡터공간임을 보였다. <span class="math inline">\(\mathcal{S}^k(V)\)</span> 와 <span class="math inline">\(\mathcal{A}^k(V)\)</span> 는 <span class="math inline">\(\mathcal{T}^k(V)\)</span> 의 부분집합이기 때문에 당연한 질문에 답해야 한다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_symetric_and_alternating_form_are_subspace" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 15.6</strong></span> <span class="math inline">\(\mathcal{S}^k(V)\)</span> 와 <span class="math inline">\(\mathcal{A}^k(V)\)</span> 는 <span class="math inline">\(\mathcal{T}^k(V)\)</span> 의 부분공간이다.</p>
+<p><span class="theorem-title"><strong>명제 14.6</strong></span> <span class="math inline">\(\mathcal{S}^k(V)\)</span> 와 <span class="math inline">\(\mathcal{A}^k(V)\)</span> 는 <span class="math inline">\(\mathcal{T}^k(V)\)</span> 의 부분공간이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#eq-zero_of_k_linear_form" class="quarto-xref">식&nbsp;<span>15.1</span></a> 의 <span class="math inline">\(0_M\)</span> 는</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#eq-zero_of_k_linear_form" class="quarto-xref">식&nbsp;<span>14.1</span></a> 의 <span class="math inline">\(0_M\)</span> 는</p>
 <p><span class="math display">\[
 0_M(\cdots, v_i, \cdots,v_j, \cdots) = 0_M(\cdots, v_j,\cdots, v_i,\cdots)=0
 \]</span></p>
@@ -588,7 +583,7 @@ T( \cdots, v_i, \cdots, v_j ,\cdots) = - T(\cdots, v_j, \cdots, v_i, \cdots)
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_symmmectric_and_skew_symmetric_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 15.5 (대칭행렬, 반대칭 행렬)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 가 모든 <span class="math inline">\(1\le i,\,j\ne n\)</span> 에 대해 <span class="math inline">\(A_{ij}= A_{ji}\)</span> 일 때 <span class="math inline">\(\boldsymbol{A}\)</span> 를 <strong>대칭행렬(symmectric matrix)</strong> 라고 한다. 모든 <span class="math inline">\(1 \le i \le j \le n\)</span> 에 대해 <span class="math inline">\(A_{ij} = -A_{ji}\)</span> 일 때 <span class="math inline">\(\boldsymbol{A}\)</span> 를 <strong>교대행렬(alternaing matrix)</strong> 혹은 <strong>반대칭 행렬(skew-symmetric matrix)</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 14.5 (대칭행렬, 반대칭 행렬)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 가 모든 <span class="math inline">\(1\le i,\,j\ne n\)</span> 에 대해 <span class="math inline">\(A_{ij}= A_{ji}\)</span> 일 때 <span class="math inline">\(\boldsymbol{A}\)</span> 를 <strong>대칭행렬(symmectric matrix)</strong> 라고 한다. 모든 <span class="math inline">\(1 \le i \le j \le n\)</span> 에 대해 <span class="math inline">\(A_{ij} = -A_{ji}\)</span> 일 때 <span class="math inline">\(\boldsymbol{A}\)</span> 를 <strong>교대행렬(alternaing matrix)</strong> 혹은 <strong>반대칭 행렬(skew-symmetric matrix)</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>
@@ -596,7 +591,7 @@ T( \cdots, v_i, \cdots, v_j ,\cdots) = - T(\cdots, v_j, \cdots, v_i, \cdots)
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-ALA_alternating_matrix" class="theorem example">
-<p><span class="theorem-title"><strong>보기 15.2</strong></span> <span class="math inline">\(\boldsymbol{A}\)</span> 가 교대행렬이라면 <span class="math inline">\(A_{ii} = - A_{ii}\)</span> 이므로 모든 대각성분은 <span class="math inline">\(0\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>보기 14.2</strong></span> <span class="math inline">\(\boldsymbol{A}\)</span> 가 교대행렬이라면 <span class="math inline">\(A_{ii} = - A_{ii}\)</span> 이므로 모든 대각성분은 <span class="math inline">\(0\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -604,7 +599,7 @@ T( \cdots, v_i, \cdots, v_j ,\cdots) = - T(\cdots, v_j, \cdots, v_i, \cdots)
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_matrix_form_of_symmetric_form" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 15.7</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 그 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 에 대해 아래 두 명제는 동치이다.</p>
+<p><span class="theorem-title"><strong>명제 14.7</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 그 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 에 대해 아래 두 명제는 동치이다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(T\in \mathcal{S}^2(V)\)</span> 이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\([T]_\mathcal{B}\)</span> 는 대칭행렬이다.</p>
 </div>
@@ -619,7 +614,7 @@ T\in \mathcal{S}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= T(v_2, v_1) \i
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_matrix_form_of_alternating_form" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 15.8</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 그 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 에 대해 아래 두 명제는 동치이다.</p>
+<p><span class="theorem-title"><strong>명제 14.8</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 그 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 에 대해 아래 두 명제는 동치이다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(T\in \mathcal{A}^2(V)\)</span> 이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\([T]_\mathcal{B}\)</span> 는 교대행렬이다.</p>
 </div>
@@ -636,7 +631,7 @@ T\in \mathcal{A}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= -T(v_2, v_1) \
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_symmetric_and_alternating_form_as_subgroups" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 15.9</strong></span> 유한차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에 대해 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 14.9</strong></span> 유한차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에 대해 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\mathcal{S}^2(V)\)</span> 과 <span class="math inline">\(\mathcal{A}^2(V)\)</span> 는 <span class="math inline">\(\mathcal{T}^2(V)\)</span> 의 부분공간이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\dim(V)=n\)</span> 일 때 <span class="math inline">\(\dim(\mathcal{S}^2(V)) = \dfrac{n(n+1)}{2}\)</span> 이며 <span class="math inline">\(\dim(\mathcal{A}^2(V)) = \dfrac{n(n-1)}{2}\)</span> 이다.</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\mathcal{T}^2(V) = \mathcal{S}^2(V) \oplus \mathcal{A}^2(V)\)</span> 이다.</p>
@@ -645,7 +640,7 @@ T\in \mathcal{A}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= -T(v_2, v_1) \
 <p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B} = (v_1,\ldots,\,v_n)\)</span> 을 생각하자.</p>
-<p>(<span class="math inline">\(1\)</span>) <a href="#prp-ALA_symetric_and_alternating_form_are_subspace" class="quarto-xref">명제&nbsp;<span>15.6</span></a></p>
+<p>(<span class="math inline">\(1\)</span>) <a href="#prp-ALA_symetric_and_alternating_form_are_subspace" class="quarto-xref">명제&nbsp;<span>14.6</span></a></p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{E}^{(i, j)} \in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 를 <span class="math inline">\(i\)</span> 행 <span class="math inline">\(j\)</span> 열 성분은 <span class="math inline">\(1\)</span>, 나머지 <span class="math inline">\(n^2-1\)</span> 개의 성분은 <span class="math inline">\(0\)</span> 인 행렬이라고 하자. <span class="math inline">\(\{\boldsymbol{E}^{(i, j)}:  1 \le i,\,j\le n\}\)</span> 은 <span class="math inline">\(\mathcal{M}_{n \times n}(\mathbb{F})\)</span> 의 기저임은 쉽게 알 수 있다. 이 때,</p>
 <p><span class="math display">\[
 \{\boldsymbol{E}^{(i, i)}: 1 \le i \le n \} \cup \{ \boldsymbol{E}^{(i, j)}+ \boldsymbol{E}^{(j, i)} : 1 \le i &lt; j \le n\}
@@ -659,8 +654,8 @@ T\in \mathcal{A}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= -T(v_2, v_1) \
 </div>
 <p><br></p>
 </section>
-<section id="sec-ALA_alternating_form_and_determinant_of_matrix" class="level3" data-number="15.2.2">
-<h3 data-number="15.2.2" class="anchored" data-anchor-id="sec-ALA_alternating_form_and_determinant_of_matrix"><span class="header-section-number">15.2.2</span> 교대형식과 행렬식</h3>
+<section id="sec-ALA_alternating_form_and_determinant_of_matrix" class="level3" data-number="14.2.2">
+<h3 data-number="14.2.2" class="anchored" data-anchor-id="sec-ALA_alternating_form_and_determinant_of_matrix"><span class="header-section-number">14.2.2</span> 교대형식과 행렬식</h3>
 <p>우리가 <a href="../../src/part1/ch1_03_determinant.html#sec-LA_determinant_definition_using_symmetric_group">대칭군을 이용한 행렬식</a> 에서 행렬식을 도입할 때 우선 행렬의 행벡터에 대한 <span class="math inline">\(\det\)</span> 함수로 도입하였다. 행벡터로 도입한것은 우리가 바로 전에 행 기본연산에 대해 논의했기 때문에 그 연속선상에서 그렇게 했다. 우리는 이미 열벡터에 대해서도 정의할 수 있다는 것을 안다. <span class="math inline">\(\boldsymbol{A}_i\)</span> 를 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <span class="math inline">\(i\)</span> 번째 열벡터라고 하자.</p>
 <p><span class="math display">\[
 \phi (\boldsymbol{A}_{1},\ldots,\,\boldsymbol{A}_{k}) := \det (\boldsymbol{A})
@@ -672,7 +667,7 @@ T\in \mathcal{A}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= -T(v_2, v_1) \
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-ALA_dimension_of_k_alternating_form" class="theorem lemma">
-<p><span class="theorem-title"><strong>보조정리 15.1</strong></span> <span class="math inline">\(\mathcal{M}_k(\mathbb{F})\)</span> 에 대해 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>보조정리 14.1</strong></span> <span class="math inline">\(\mathcal{M}_k(\mathbb{F})\)</span> 에 대해 다음이 성립한다.</p>
 <p><span class="math display">\[
 \dim (\mathcal{A}^k (\mathcal{M}_k(\mathbb{F})))=1.
 \]</span></p>
@@ -683,7 +678,7 @@ T\in \mathcal{A}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= -T(v_2, v_1) \
 <p><span class="proof-title"><em>(증명)</em>. </span>우선 <span class="math inline">\(\dim (\mathcal{A}^k (\mathcal{M}_k(\mathbb{F})))\ne 0\)</span> 임을 보이자. 대칭군을 사용하여,</p>
 <p><span id="eq-first_def_of_det"><span class="math display">\[
 \phi(\boldsymbol{A}_1,\ldots,\,\boldsymbol{A}_k) := \sum_{\sigma \in S_k} \text{sgn}(\sigma) \prod_{i=1}^k A_{\sigma(i),i}
-\tag{15.6}\]</span></span></p>
+\tag{14.6}\]</span></span></p>
 <p>라고 정의하자. 우리는 <span class="math inline">\(\phi \in \mathcal{T}^k(\mathcal{M}_k(\mathbb{F}))\)</span> 임을 쉽게 보일 수 있으며 <a href="../part1/ch1_03_determinant.html#exr-determinant_change_of_order" class="quarto-xref">연습문제&nbsp;<span>3.3</span></a> 에서 보인대로 <span class="math inline">\(\phi \in \mathcal{A}^k (\mathcal{M}_k(\mathbb{F}))\)</span> 이다. 이 때 <span class="math inline">\(\phi (\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_k)=1\)</span> 이므로 <span class="math inline">\(\dim (\mathcal{A}^k (\mathcal{M}_k(\mathbb{F}))) &gt; 0\)</span> 이다.</p>
 <p>이제 <span class="math inline">\(\psi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))\)</span> 이며 <span class="math inline">\(\psi (\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_k) = c\)</span> 라고 하자. 여기에 대해 <span class="math inline">\(\chi := c\phi -\psi\)</span> 라고 정의하면 <span class="math inline">\(\chi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))\)</span> 이며 <span class="math inline">\(\chi(\boldsymbol{e}_1,\ldots,\boldsymbol{e}_k)=0\)</span> 이다.</p>
 <p>그런데 모든 <span class="math inline">\(\boldsymbol{v}\in \mathcal{M}_k(\mathbb{F})\)</span> 는 <span class="math inline">\(\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_k\}\)</span> 의 선형결합이다. <span class="math inline">\(i=1,\ldots,\,k\)</span> 에 대해 <span class="math inline">\(\boldsymbol{v}_i = \sum_j A_{ij}\boldsymbol{e}_j\)</span> 라고 하자.</p>
@@ -695,23 +690,23 @@ T\in \mathcal{A}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= -T(v_2, v_1) \
 \end{aligned}
 \]</span></p>
 <p>이다. 그런데 <span class="math inline">\(\chi\)</span> 안의 표준기저의 인덱스 가운데 어떤 두개가 같으면 alternating <span class="math inline">\(k\)</span> form 의 정의에 의해 <span class="math inline">\(\chi\)</span> 함수값이 <span class="math inline">\(0\)</span> 이다. 모두 다르면 <span class="math inline">\(\chi\)</span> 함수의 정의에 의해 <span class="math inline">\(0\)</span> 이다. 따라서 임의의 <span class="math inline">\(\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_n\)</span> 에 대해 <span class="math inline">\(\chi(\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_n)=0\)</span> 이다.</p>
-<p>이것은 <span class="math inline">\(\mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))\)</span> 의 모든 원소는 <a href="#eq-first_def_of_det" class="quarto-xref">식&nbsp;<span>15.6</span></a> 에서 정의된 <span class="math inline">\(\phi\)</span> 의 상수배라는 의미이다. 즉 <span class="math inline">\(\dim (\mathcal{A}^k (\mathcal{M}_k(\mathbb{F}))) = 1\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p>이것은 <span class="math inline">\(\mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))\)</span> 의 모든 원소는 <a href="#eq-first_def_of_det" class="quarto-xref">식&nbsp;<span>14.6</span></a> 에서 정의된 <span class="math inline">\(\phi\)</span> 의 상수배라는 의미이다. 즉 <span class="math inline">\(\dim (\mathcal{A}^k (\mathcal{M}_k(\mathbb{F}))) = 1\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>이로부터 자연스럽게 행렬식의 유일성이 증명된다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-ALA_uniqueness_of_determinant" class="theorem">
-<p><span class="theorem-title"><strong>정리 15.2 (행렬식의 유일성)</strong></span> <span class="math inline">\(\phi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))\)</span> 이며 <span class="math inline">\(\phi (\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_k)=1\)</span> 인 <span class="math inline">\(\phi\)</span> 는 유일하다.</p>
+<p><span class="theorem-title"><strong>정리 14.2 (행렬식의 유일성)</strong></span> <span class="math inline">\(\phi \in \mathcal{A}^k(\mathcal{M}_k(\mathbb{F}))\)</span> 이며 <span class="math inline">\(\phi (\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_k)=1\)</span> 인 <span class="math inline">\(\phi\)</span> 는 유일하다.</p>
 </div>
 </div>
 <p><br></p>
 </section>
 </section>
-<section id="이차형식" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="이차형식"><span class="header-section-number">15.3</span> 이차형식</h2>
-<section id="sec-ALA_quadratic_form" class="level3" data-number="15.3.1">
-<h3 data-number="15.3.1" class="anchored" data-anchor-id="sec-ALA_quadratic_form"><span class="header-section-number">15.3.1</span> 이차형식</h3>
+<section id="이차형식" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="이차형식"><span class="header-section-number">14.3</span> 이차형식</h2>
+<section id="sec-ALA_quadratic_form" class="level3" data-number="14.3.1">
+<h3 data-number="14.3.1" class="anchored" data-anchor-id="sec-ALA_quadratic_form"><span class="header-section-number">14.3.1</span> 이차형식</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -719,7 +714,7 @@ T\in \mathcal{A}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= -T(v_2, v_1) \
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_quadratic_form" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 15.6 (이차형식)</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 함수 <span class="math inline">\(\Psi : V\to \mathbb{F}\)</span> 가 임의의 <span class="math inline">\(c\in \mathbb{F},\, v,\,v'\in V\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>정의 14.6 (이차형식)</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 함수 <span class="math inline">\(\Psi : V\to \mathbb{F}\)</span> 가 임의의 <span class="math inline">\(c\in \mathbb{F},\, v,\,v'\in V\)</span> 에 대해</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(B_\Psi (v, v') = \Psi (v+v') - \Psi (v) - \Psi (v')\)</span> 이 <span class="math inline">\(V\)</span> 에 대한 대칭인 쌍선형 형식 이며,</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\Psi (cv) =  c^2 \Psi (v)\)</span></p>
 <p>를 만족 할 때 <span class="math inline">\(\Psi\)</span> 를 <span class="math inline">\(V\)</span> 에 대한 <strong>이차형식(quandratic form)</strong> 이라고 한다.</p>
@@ -730,7 +725,7 @@ T\in \mathcal{A}^2(V) \iff \forall v_1,\,v_2\in V,\, T(v_1, v_2)= -T(v_2, v_1) \
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_quadratic_and_bilinear_1" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 15.10</strong></span> <span class="math inline">\(T\in \mathcal{S}^2(V)\)</span> 일 때 <span class="math inline">\(\Psi_T(v) = \frac{1}{2}T(v, v)\)</span> 는 이차형식이다.</p>
+<p><span class="theorem-title"><strong>명제 14.10</strong></span> <span class="math inline">\(T\in \mathcal{S}^2(V)\)</span> 일 때 <span class="math inline">\(\Psi_T(v) = \frac{1}{2}T(v, v)\)</span> 는 이차형식이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -748,11 +743,11 @@ B_\Psi(v, v') &amp;= \Psi_T(v+v') - \Psi(v)-\Psi(v') \\
 <p>이므로 (<span class="math inline">\(2\)</span>) 를 만족한다. 따라서 <span class="math inline">\(\Psi_T\)</span> 는 <span class="math inline">\(V\)</span> 에 대한 이차형식이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p><a href="#prp-ALA_quadratic_and_bilinear_1" class="quarto-xref">명제&nbsp;<span>15.10</span></a> 로부터 우리는 대칭 쌍선형형식 대한 이차형식이 존재함을 안다. 이제 좀 더 깊이 알아보자.</p>
+<p><a href="#prp-ALA_quadratic_and_bilinear_1" class="quarto-xref">명제&nbsp;<span>14.10</span></a> 로부터 우리는 대칭 쌍선형형식 대한 이차형식이 존재함을 안다. 이제 좀 더 깊이 알아보자.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_quadratic_and_bilinear_2" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 15.11</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서의 이차형식 전체의 집합을 <span class="math inline">\(\mathcal{Q}_V\)</span> 라고 하자. <span class="math inline">\(0_Q : V \to \mathbb{F}\)</span> 를 다음과 같이 정의한다.</p>
+<p><span class="theorem-title"><strong>명제 14.11</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서의 이차형식 전체의 집합을 <span class="math inline">\(\mathcal{Q}_V\)</span> 라고 하자. <span class="math inline">\(0_Q : V \to \mathbb{F}\)</span> 를 다음과 같이 정의한다.</p>
 <p><span class="math display">\[
 \forall v\in V,\, 0_Q(v) = 0
 \]</span></p>
@@ -780,12 +775,12 @@ B_{\Psi + a\Phi} (v, v') &amp;= (\Psi+a\Phi)(v+v') - (\Psi + a\Phi)(v) - (\Psi +
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-ALA_quadratic_and_bilinear" class="theorem">
-<p><span class="theorem-title"><strong>정리 15.3</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(\mathcal{S}^2(V)\)</span> 와 <span class="math inline">\(\mathcal{Q}_V\)</span> 는 동형이다.</p>
+<p><span class="theorem-title"><strong>정리 14.3</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(\mathcal{S}^2(V)\)</span> 와 <span class="math inline">\(\mathcal{Q}_V\)</span> 는 동형이다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\Gamma : \mathcal{Q}_V \to \mathcal{S}^2(V)\)</span> 를 <a href="#def-ALA_quadratic_form" class="quarto-xref">정의&nbsp;<span>15.6</span></a> 에 따라 <span class="math inline">\(\Gamma (\Psi) = B_\Psi\)</span> 로 정의하자. <a href="#prp-ALA_quadratic_and_bilinear_1" class="quarto-xref">명제&nbsp;<span>15.10</span></a> 에서 <span class="math inline">\(T\in \mathcal{S}^2(V)\)</span> 일 때 <span class="math inline">\(\Psi_T(v) = \dfrac{1}{2}T(v, v)\)</span> 는 quadratic form 이며</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\Gamma : \mathcal{Q}_V \to \mathcal{S}^2(V)\)</span> 를 <a href="#def-ALA_quadratic_form" class="quarto-xref">정의&nbsp;<span>14.6</span></a> 에 따라 <span class="math inline">\(\Gamma (\Psi) = B_\Psi\)</span> 로 정의하자. <a href="#prp-ALA_quadratic_and_bilinear_1" class="quarto-xref">명제&nbsp;<span>14.10</span></a> 에서 <span class="math inline">\(T\in \mathcal{S}^2(V)\)</span> 일 때 <span class="math inline">\(\Psi_T(v) = \dfrac{1}{2}T(v, v)\)</span> 는 quadratic form 이며</p>
 <p><span class="math display">\[
 \begin{aligned}
 B_{\Psi_T}(v, v) = \Gamma (\Psi_T) (v, v') &amp;= \Psi_T(v+v') - \Psi_T(v) - \Psi_T(v') \\
@@ -806,9 +801,9 @@ B_{\Psi_T}(v, v) = \Gamma (\Psi_T) (v, v') &amp;= \Psi_T(v+v') - \Psi_T(v) - \Ps
 </div>
 <p><br></p>
 </section>
-<section id="sec-ALA_matrix_representation_of_quadratic_form" class="level3" data-number="15.3.2">
-<h3 data-number="15.3.2" class="anchored" data-anchor-id="sec-ALA_matrix_representation_of_quadratic_form"><span class="header-section-number">15.3.2</span> 이차형식의 행렬 표현</h3>
-<p>이제 <span class="math inline">\(n\)</span> 차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(\Psi \in \mathcal{Q}_V\)</span> 라고 하자. 우리는 <span class="math inline">\(B_\Psi(v, v) = \dfrac{1}{2} \Psi(v) \in \mathcal{S}^2(V)\)</span> 라는 것을 알며, 따라서 <span class="math inline">\(\Psi_B\)</span> 가 대칭행렬로 표현된다는 것도 안다. 이제 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 을 생각하자. <a href="#prp-ALA_matrix_representation_of_blinear_form" class="quarto-xref">명제&nbsp;<span>15.3</span></a> 에 따라</p>
+<section id="sec-ALA_matrix_representation_of_quadratic_form" class="level3" data-number="14.3.2">
+<h3 data-number="14.3.2" class="anchored" data-anchor-id="sec-ALA_matrix_representation_of_quadratic_form"><span class="header-section-number">14.3.2</span> 이차형식의 행렬 표현</h3>
+<p>이제 <span class="math inline">\(n\)</span> 차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(\Psi \in \mathcal{Q}_V\)</span> 라고 하자. 우리는 <span class="math inline">\(B_\Psi(v, v) = \dfrac{1}{2} \Psi(v) \in \mathcal{S}^2(V)\)</span> 라는 것을 알며, 따라서 <span class="math inline">\(\Psi_B\)</span> 가 대칭행렬로 표현된다는 것도 안다. 이제 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 을 생각하자. <a href="#prp-ALA_matrix_representation_of_blinear_form" class="quarto-xref">명제&nbsp;<span>14.3</span></a> 에 따라</p>
 <p><span class="math display">\[
 \Psi(v) = \dfrac{1}{2}B_\psi(v, v) = \dfrac{1}{2}([v]_\mathcal{B})^T[B_{\Psi}]_\mathcal{B} ([v]_\mathcal{B})
 \]</span></p>
@@ -825,10 +820,10 @@ f(x_1,\ldots,\,x_n) = \sum_{i=1} b_i {x_i}^2 + \sum_{i&lt;j} c_{ij}x_i x_j
 <p><br></p>
 </section>
 </section>
-<section id="직교군과-심플렉틱-군" class="level2" data-number="15.4">
-<h2 data-number="15.4" class="anchored" data-anchor-id="직교군과-심플렉틱-군"><span class="header-section-number">15.4</span> 직교군과 심플렉틱 군</h2>
-<section id="sec-ALA_orthogonal_group" class="level3" data-number="15.4.1">
-<h3 data-number="15.4.1" class="anchored" data-anchor-id="sec-ALA_orthogonal_group"><span class="header-section-number">15.4.1</span> 이차공간과 직교군</h3>
+<section id="직교군과-심플렉틱-군" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="직교군과-심플렉틱-군"><span class="header-section-number">14.4</span> 직교군과 심플렉틱 군</h2>
+<section id="sec-ALA_orthogonal_group" class="level3" data-number="14.4.1">
+<h3 data-number="14.4.1" class="anchored" data-anchor-id="sec-ALA_orthogonal_group"><span class="header-section-number">14.4.1</span> 이차공간과 직교군</h3>
 <p>우리는 앞서 벡터공간 <span class="math inline">\(V\)</span> 에 내적이 부여되면 내적벡터공간이라고 불렀다. 마찬가지로 어떤 이차형식이 부여되었을 경우에도 이름을 붙일 수 있다.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -837,7 +832,7 @@ f(x_1,\ldots,\,x_n) = \sum_{i=1} b_i {x_i}^2 + \sum_{i&lt;j} c_{ij}x_i x_j
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_quadratic_space" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 15.7 (이차공간)</strong></span> 유한차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 어떤 이차형식 <span class="math inline">\(\Psi \in \mathcal{Q}_V\)</span> 이 정해졌다면 이에 따라 대칭 쌍선형 형식 <span class="math inline">\(B_\Psi\)</span> 도 정의된다. 이렇게 벡터공간에 이차형식 <span class="math inline">\(\Psi\)</span> 이 부여되었을 때, 혹은 이와 동등하게 대칭 쌍선형 형식이 부여되었을 때 이 벡터공간 <span class="math inline">\(V\)</span> 를 <strong>이차공간(quadratic space)</strong> 라고 하고 <span class="math inline">\((V,\, \Psi)\)</span>, <span class="math inline">\((V,\, B_\Psi,\, \Psi)\)</span>, 혹은 <span class="math inline">\((V, B_\Psi)\)</span> 라고 쓴다</p>
+<p><span class="theorem-title"><strong>정의 14.7 (이차공간)</strong></span> 유한차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 어떤 이차형식 <span class="math inline">\(\Psi \in \mathcal{Q}_V\)</span> 이 정해졌다면 이에 따라 대칭 쌍선형 형식 <span class="math inline">\(B_\Psi\)</span> 도 정의된다. 이렇게 벡터공간에 이차형식 <span class="math inline">\(\Psi\)</span> 이 부여되었을 때, 혹은 이와 동등하게 대칭 쌍선형 형식이 부여되었을 때 이 벡터공간 <span class="math inline">\(V\)</span> 를 <strong>이차공간(quadratic space)</strong> 라고 하고 <span class="math inline">\((V,\, \Psi)\)</span>, <span class="math inline">\((V,\, B_\Psi,\, \Psi)\)</span>, 혹은 <span class="math inline">\((V, B_\Psi)\)</span> 라고 쓴다</p>
 </div>
 </div>
 </div>
@@ -849,7 +844,7 @@ f(x_1,\ldots,\,x_n) = \sum_{i=1} b_i {x_i}^2 + \sum_{i&lt;j} c_{ij}x_i x_j
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_orthogonal_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 15.8 (직교군)</strong></span> Quadratic space <span class="math inline">\((V, B_\Psi)\)</span> 에 대해 다음과 같이 정의된 <span class="math inline">\(O(V, B_\Psi)\)</span> 를 <span class="math inline">\((V, B_\Psi)\)</span> 에 대한 <strong>직교군 (orthonormal group)</strong> 이라 한다.</p>
+<p><span class="theorem-title"><strong>정의 14.8 (직교군)</strong></span> Quadratic space <span class="math inline">\((V, B_\Psi)\)</span> 에 대해 다음과 같이 정의된 <span class="math inline">\(O(V, B_\Psi)\)</span> 를 <span class="math inline">\((V, B_\Psi)\)</span> 에 대한 <strong>직교군 (orthonormal group)</strong> 이라 한다.</p>
 <p><span class="math display">\[
 O(V,\, B_\Psi) = \{ L \in GL(V) : B_\Psi(Lv, Lv')=B_\Psi(v, v'),\,\forall v,\,v'\in V\}.
 \]</span></p>
@@ -866,7 +861,7 @@ SO(V,\, B_\Psi) = \{ L\in O(V,\, B_\Psi) : \det(L) = 1\}.
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_orthogonal_group_is_a_normal_subgroup" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 15.12</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 14.12</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 다음이 성립한다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(O(V, B_\Psi) \le GL(V)\)</span>.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(SO(V,\, B_\Psi) \trianglelefteq O(V,\, B_\Psi)\)</span>.</p>
 </div>
@@ -883,7 +878,7 @@ B_\Psi (L^{-1}v,\,L^{-1}v') =  B_\Psi (LL^{-1}v, LL^{-1}v') = B_\Psi (v, v')
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-orthogonal_group_is_a_normal_subgroup" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 15.1</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 그 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 에 대해 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>연습문제 14.1</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 그 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 에 대해 다음이 성립한다.</p>
 <p><span class="math display">\[
 \begin{aligned}
 O(V,\,B_\Psi) &amp;= \{L \in GL(V) : \Psi (Lv) =  \Psi (v)\} \\
@@ -915,13 +910,13 @@ B_\Psi (Lv, Lv') =  \sum_{i, j} a_i b_j B_\Psi (Lv_i, Lv_j) = \sum_{i,j}B_\Psi (
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_metix_representation_of_orthogonal_group" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 15.13</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 quadratic form <span class="math inline">\(\Psi\)</span> 에 대한 quadratic space <span class="math inline">\((V, \Psi)\)</span> 를 생각하자. <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B}\)</span> 에 대해 다음은 동치이다.</p>
+<p><span class="theorem-title"><strong>명제 14.13</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 quadratic form <span class="math inline">\(\Psi\)</span> 에 대한 quadratic space <span class="math inline">\((V, \Psi)\)</span> 를 생각하자. <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B}\)</span> 에 대해 다음은 동치이다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(L \in O(V, B_\Psi)\)</span>.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(([L]_\mathcal{B})^T[B_\Psi]_\mathcal{B}([L]_\mathcal{B}) =[B_\Psi]_\mathcal{B}\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(v,\,v'\in V\)</span> 에 대해 <span class="math inline">\([v]_\mathcal{B}=\boldsymbol{v},\, [v']_\mathcal{B}=\boldsymbol{v}'\)</span> 이라 하고 <span class="math inline">\([L]_\mathcal{B}=\boldsymbol{L},\, [B_\Psi]_\mathcal{B}= \boldsymbol{B}\)</span> 라고 하자. 우선 <span class="math inline">\(\Psi,\,\Psi\in \mathcal{Q}_V\)</span> 일 때 <span class="math inline">\(B_\Psi (v, v) = B_\Phi (v, v) \iff \Psi = \Phi\)</span> 임은 당연하다. 따라서 <span class="math inline">\(\boldsymbol{v}^T[B_\Psi]\boldsymbol{v} = \boldsymbol{v}^T[B_\Phi]\boldsymbol{v} \iff [B_\Psi]=[B_\Phi]\)</span> 를 의미한다.</p>
-<p>(<span class="math inline">\(1 \implies 2\)</span>) <a href="#prp-ALA_matrix_representation_of_blinear_form" class="quarto-xref">명제&nbsp;<span>15.3</span></a> 에 따라 <span class="math inline">\(B_{\Psi}(Lv, Lv') = \boldsymbol{v}^T\boldsymbol{L}^T\boldsymbol{BLv}\)</span>, <span class="math inline">\(B_\Psi (v,v) = \boldsymbol{v}^T\boldsymbol{Bv}\)</span> 이다. 따라서 <span class="math inline">\(\boldsymbol{L}^T\boldsymbol{BL}= \boldsymbol{B}\)</span> 이다.</p>
+<p>(<span class="math inline">\(1 \implies 2\)</span>) <a href="#prp-ALA_matrix_representation_of_blinear_form" class="quarto-xref">명제&nbsp;<span>14.3</span></a> 에 따라 <span class="math inline">\(B_{\Psi}(Lv, Lv') = \boldsymbol{v}^T\boldsymbol{L}^T\boldsymbol{BLv}\)</span>, <span class="math inline">\(B_\Psi (v,v) = \boldsymbol{v}^T\boldsymbol{Bv}\)</span> 이다. 따라서 <span class="math inline">\(\boldsymbol{L}^T\boldsymbol{BL}= \boldsymbol{B}\)</span> 이다.</p>
 <p>(<span class="math inline">\(2 \implies 1\)</span>) <span class="math inline">\(\boldsymbol{L}^T\boldsymbol{BL}= \boldsymbol{B}\)</span> 이면 <span class="math inline">\(\boldsymbol{v}^T\boldsymbol{L}^T\boldsymbol{BLv}\)</span>, <span class="math inline">\(B_\Psi (v,v) = \boldsymbol{v}^T\boldsymbol{Bv}\)</span> 이므로 <span class="math inline">\(L\in O(V,B_\Psi)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 </div>
@@ -933,7 +928,7 @@ B_\Psi (Lv, Lv') =  \sum_{i, j} a_i b_j B_\Psi (Lv_i, Lv_j) = \sum_{i,j}B_\Psi (
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_orthogonal_group_on_symmetric_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 15.9 (대칭행렬에 대한 직교군)</strong></span> <span class="math inline">\(\boldsymbol{J}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 가 대칭행렬 일 때</p>
+<p><span class="theorem-title"><strong>정의 14.9 (대칭행렬에 대한 직교군)</strong></span> <span class="math inline">\(\boldsymbol{J}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 가 대칭행렬 일 때</p>
 <p><span class="math display">\[
 O_n^\boldsymbol{J} (\mathbb{F}) = \{ \boldsymbol{A} \in GL_n(\mathbb{F}) : \boldsymbol{A}^T\boldsymbol{JA} = \boldsymbol{J}\}
 \]</span></p>
@@ -945,13 +940,13 @@ O_n^\boldsymbol{J} (\mathbb{F}) = \{ \boldsymbol{A} \in GL_n(\mathbb{F}) : \bold
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-ALA_determinant_of_O_n_J" class="theorem example">
-<p><span class="theorem-title"><strong>보기 15.3</strong></span> 대칭행렬 <span class="math inline">\(\boldsymbol{J}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 가 가역일 때 <span class="math inline">\(\boldsymbol{A}\in O_n^\boldsymbol{J}(\mathbb{F})\)</span> 의 행렬식은 <span class="math inline">\(\det(\boldsymbol{A}^T\boldsymbol{JA}) = \boldsymbol{J}\)</span> 이며 <span class="math inline">\(\det (\boldsymbol{A}^T) = \det (\boldsymbol{A})\)</span> 이므로 <span class="math inline">\(\det (\boldsymbol{A})= \pm 1\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>보기 14.3</strong></span> 대칭행렬 <span class="math inline">\(\boldsymbol{J}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 가 가역일 때 <span class="math inline">\(\boldsymbol{A}\in O_n^\boldsymbol{J}(\mathbb{F})\)</span> 의 행렬식은 <span class="math inline">\(\det(\boldsymbol{A}^T\boldsymbol{JA}) = \boldsymbol{J}\)</span> 이며 <span class="math inline">\(\det (\boldsymbol{A}^T) = \det (\boldsymbol{A})\)</span> 이므로 <span class="math inline">\(\det (\boldsymbol{A})= \pm 1\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
 </section>
-<section id="sec-ALA_symplectic_group" class="level3" data-number="15.4.2">
-<h3 data-number="15.4.2" class="anchored" data-anchor-id="sec-ALA_symplectic_group"><span class="header-section-number">15.4.2</span> 심플렉틱 군</h3>
+<section id="sec-ALA_symplectic_group" class="level3" data-number="14.4.2">
+<h3 data-number="14.4.2" class="anchored" data-anchor-id="sec-ALA_symplectic_group"><span class="header-section-number">14.4.2</span> 심플렉틱 군</h3>
 <p>심플렉틱 군에 대해서는 간단히 소개만 하고 넘어가기로 한다.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -960,7 +955,7 @@ O_n^\boldsymbol{J} (\mathbb{F}) = \{ \boldsymbol{A} \in GL_n(\mathbb{F}) : \bold
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_symplectic_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 15.10 (심플렉틱 군)</strong></span> <span class="math inline">\(n\)</span> 차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(B\in \mathcal{A}^2(V)\)</span> 일 때 다음과 같이 정의된 <span class="math inline">\(Sp(V, B)\)</span> 를 <span class="math inline">\(B\)</span> 로부터 생성된 <strong>심플렉틱 군 (symplectic group)</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 14.10 (심플렉틱 군)</strong></span> <span class="math inline">\(n\)</span> 차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(B\in \mathcal{A}^2(V)\)</span> 일 때 다음과 같이 정의된 <span class="math inline">\(Sp(V, B)\)</span> 를 <span class="math inline">\(B\)</span> 로부터 생성된 <strong>심플렉틱 군 (symplectic group)</strong> 이라고 한다.</p>
 <p><span class="math display">\[
 Sp (V, B)=\{ L\in GL(V) : T(Lv, Lw) = T(v, w)\}.
 \]</span></p>
@@ -971,7 +966,7 @@ Sp (V, B)=\{ L\in GL(V) : T(Lv, Lw) = T(v, w)\}.
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_metix_representation_of_symplectic_group" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 15.14</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 <span class="math inline">\(B\in\mathcal{A}^2(\mathbb{F})\)</span> 를 생각하자. <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B}\)</span> 에 대해 다음은 동치이다.</p>
+<p><span class="theorem-title"><strong>명제 14.14</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 <span class="math inline">\(B\in\mathcal{A}^2(\mathbb{F})\)</span> 를 생각하자. <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B}\)</span> 에 대해 다음은 동치이다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(L \in Sp(V, B)\)</span>.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(([L]_\mathcal{B})^T[B]_\mathcal{B}([L]_\mathcal{B}) =[B]_\mathcal{B}\)</span>.</p>
 </div>
@@ -985,10 +980,10 @@ Sp (V, B)=\{ L\in GL(V) : T(Lv, Lw) = T(v, w)\}.
 <p><br></p>
 </section>
 </section>
-<section id="특별한-직교군" class="level2" data-number="15.5">
-<h2 data-number="15.5" class="anchored" data-anchor-id="특별한-직교군"><span class="header-section-number">15.5</span> 특별한 직교군</h2>
-<section id="o1-1" class="level3" data-number="15.5.1">
-<h3 data-number="15.5.1" class="anchored" data-anchor-id="o1-1"><span class="header-section-number">15.5.1</span> <span class="math inline">\(O(1, 1)\)</span></h3>
+<section id="특별한-직교군" class="level2" data-number="14.5">
+<h2 data-number="14.5" class="anchored" data-anchor-id="특별한-직교군"><span class="header-section-number">14.5</span> 특별한 직교군</h2>
+<section id="o1-1" class="level3" data-number="14.5.1">
+<h3 data-number="14.5.1" class="anchored" data-anchor-id="o1-1"><span class="header-section-number">14.5.1</span> <span class="math inline">\(O(1, 1)\)</span></h3>
 <p><a href="#def-ALA_orthogonal_group_on_symmetric_matrix">대칭행렬에 대한 직교군</a> 을 생각하자.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -997,7 +992,7 @@ Sp (V, B)=\{ L\in GL(V) : T(Lv, Lw) = T(v, w)\}.
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_O_11" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 15.11 (<span class="math inline">\(O(1, 1)\)</span>)</strong></span> <span class="math inline">\(\mathcal{M}_{2 \times 2}(\mathbb{R})\)</span> 에서 정의된 <span class="math inline">\(\boldsymbol{J} = \begin {bmatrix} 1 &amp; 0 \\ 0 &amp; -1\end{bmatrix}\)</span> 에 대한 직교군 <span class="math inline">\(O_2^\boldsymbol{J}\)</span> 을 <span class="math inline">\(O(1, 1)\)</span> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 14.11 (<span class="math inline">\(O(1, 1)\)</span>)</strong></span> <span class="math inline">\(\mathcal{M}_{2 \times 2}(\mathbb{R})\)</span> 에서 정의된 <span class="math inline">\(\boldsymbol{J} = \begin {bmatrix} 1 &amp; 0 \\ 0 &amp; -1\end{bmatrix}\)</span> 에 대한 직교군 <span class="math inline">\(O_2^\boldsymbol{J}\)</span> 을 <span class="math inline">\(O(1, 1)\)</span> 이라고 한다.</p>
 </div>
 </div>
 </div>
@@ -1005,7 +1000,7 @@ Sp (V, B)=\{ L\in GL(V) : T(Lv, Lw) = T(v, w)\}.
 <br>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-ALA_O_11" class="theorem example">
-<p><span class="theorem-title"><strong>보기 15.4</strong></span> 다음은 동치이다.</p>
+<p><span class="theorem-title"><strong>보기 14.4</strong></span> 다음은 동치이다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{A} = \begin{bmatrix} x&amp; z \\ y &amp; w\end{bmatrix} \in O(1, 1)\)</span>.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(x^2-y^2 = w^2-z^2 = 1,\, xz-yw=0\)</span>.</p>
 </div>
@@ -1017,236 +1012,242 @@ Sp (V, B)=\{ L\in GL(V) : T(Lv, Lw) = T(v, w)\}.
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "복사완료!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "복사완료!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
       }
+      return false;
     }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
         }
-        return container.innerHTML
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1254,194 +1255,170 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../src/part3/dual_space.html" class="pagination-link" aria-label="쌍대공간과 쌍대 사상">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">쌍대공간과 쌍대 사상</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">쌍대공간과 쌍대 사상</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../src/part3/laplacian_form_of_determinant.html" class="pagination-link" aria-label="행렬식의 라플라시안 형식">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

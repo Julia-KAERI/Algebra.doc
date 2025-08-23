@@ -461,9 +461,9 @@ $$
 
 ## 그람-슈미트 과정과 정규직교기저 {#sec-LA_gram_schmidt}
 
-### 벡터에 대한 정사영 (Projection) {#sec-LA_projection_on_vector}
+### 벡터에 대한 정사영 {#sec-LA_projection_on_vector}
 
-두 벡터의 내적이 $0$ 일 때 두 벡터는 직교한다(be perpendicular)고 하며, 한 벡터가 다른 벡터의 스칼라곱일 때 두 벡터가 **평행하다(be parallel)** 고 한다. 내적벡터공간 $V$ 의 두 벡터 $u,\,v$ 가 주어졌다고 하자. 이 때 $v$ 의 $v$ 에 대한 Projection $\text{Proj}_u v$ 를 아래와 같이 정의하자.
+두 벡터의 내적이 $0$ 일 때 두 벡터는 직교한다(be perpendicular)고 하며, 한 벡터가 다른 벡터의 스칼라곱일 때 두 벡터가 **평행하다(be parallel)** 고 한다. 내적벡터공간 $V$ 의 두 벡터 $u,\,v$ 가 주어졌다고 하자. 이 때 $v$ 의 $v$ 에 대한 정사영 $\text{Proj}_u v$ 를 아래와 같이 정의하자.
 
 $$
 \text{Proj}_{u}v = \dfrac{\langle v,\, u\rangle}{\langle u,\, u\rangle} u
@@ -864,7 +864,7 @@ $$
 
 </br>
 
-## 직교 여공간 (Orthogonal complement) 과 Orthogonal projection
+## 직교 여공간과 사영연산자
 
 ### 직교 여공간 {#sec-LA_orthogonal_complement}
 
@@ -1020,26 +1020,26 @@ $V$ 가 유한차원 벡터공간일 때 $U\le V$ 에 대해 다음이 성립한
 
 </div></br>
 
-### Orthogonal projection {#sec-LA_orthogonal_projection}
+### 사영연산자 {#sec-LA_orthogonal_projection}
 
 
 ::: {.callout-note appearance="minimal"}
 ::: {#def-LA_projection_operator}
 
-#### Projection
+#### 사영 연산자
 
-연산자 $P\in \mathcal{L}(V)$ 가 $P^2=P$ 일 때 $P$ 를 **projection** 이라 한다.
+연산자 $P\in \mathcal{L}(V)$ 가 $P^2=P$ 일 때 $P$ 를 **사영 연산자(projection or projection operator)** 라고 한다.
 
 :::
 :::
 
-예를 들어 $T\in \mathcal{L}(\mathbb{R}^2)$ 이 $T(x,\,y) = (x, 0)$ 으로 정의되었다고 하자. $T$ 는 선형사상이며 $T^2(x,\,y)$$= (x,\,0)$$= T(x,\,y)$ 이므로 $T$ 는 projection 이다. 이처럼 projectiion 은 우리가 기하학적으로 생각하는 그 projection 을 추상화 한 것이다.
+예를 들어 $T\in \mathcal{L}(\mathbb{R}^2)$ 이 $T(x,\,y) = (x, 0)$ 으로 정의되었다고 하자. $T$ 는 선형사상이며 $T^2(x,\,y)$$= (x,\,0)$$= T(x,\,y)$ 이므로 $T$ 는 사영연산자이다. 이처럼 projectiion 은 우리가 기하학적으로 생각하는 그 사영을 추상화 한 것이다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_range_of_projection}
 
-$\text{im}(P)$ 는 $P$-불변 부분 공간이다.
+$P$ 가 사영연산자이면 $\text{im}(P)$ 는 $P$-불변 부분 공간이다.
 
 :::
 
@@ -1054,7 +1054,7 @@ $u\in \text{im}(P)$ 이면 $P(v)=u$ 인 $v\in V$ 가 존재하며, $P(u)=P^2(v) 
 
 </br>
 
-벡터공간 $V$ 와 projection $P\in \mathcal{L}(V)$ 에 대해 $U = \text{im}(P)$ 라 하자. $U$ 가 유한차원 부분공간이라면 $V=U \oplus U^\perp$ 이라는 것을 안다. 또한 @prp-LA_uniqueness_of_orthogonal_decomposition 에서 보인 것처럼 $V$ 가 유한차원이라면 $v\in V$ 에 대해 $v=u+u',\, u\in U,\, u'\in U^{\perp}$ 가 되도록 하는 $u,\,u'$ 은 유일하다. 이제 반대로 $U \le V$ 에 대해 $v\in V$ 는 어떤 $u\in U$ 와 $u'\in U^\perp$ 의 합으로 유일하게 표현 될 수 있다는 것을 안다. 이렇게 어떤 부분공간 $U$ 를 치역으로 갖는 projection 다음과 같이 따로 정의할 수 있다.
+벡터공간 $V$ 와 사영연산자 $P\in \mathcal{L}(V)$ 에 대해 $U = \text{im}(P)$ 라 하자. $U$ 가 유한차원 부분공간이라면 $V=U \oplus U^\perp$ 이라는 것을 안다. 또한 @prp-LA_uniqueness_of_orthogonal_decomposition 에서 보인 것처럼 $V$ 가 유한차원이라면 $v\in V$ 에 대해 $v=u+u',\, u\in U,\, u'\in U^{\perp}$ 가 되도록 하는 $u,\,u'$ 은 유일하다. 이제 반대로 $U \le V$ 에 대해 $v\in V$ 는 어떤 $u\in U$ 와 $u'\in U^\perp$ 의 합으로 유일하게 표현 될 수 있다는 것을 안다. 이렇게 어떤 부분공간 $U$ 를 치역으로 갖는 사영연산자를 다음과 같이 따로 정의할 수 있다.
 
 
 </br>
@@ -1063,19 +1063,19 @@ $u\in \text{im}(P)$ 이면 $P(v)=u$ 인 $v\in V$ 가 존재하며, $P(u)=P^2(v) 
 ::: {#def-LA_orthogonal_projection}
 #### Orthogonal projection
 
-벡터공간 $V$ 의 유한차원 부분공간 $U$ 를 치역으로 갖는 projeciton 을 $V$ 에 대한 $U$ 로의 **orthogonal projection** 이라고 하며 $P_U$ 라고 쓴다.
+벡터공간 $V$ 의 유한차원 부분공간 $U$ 를 치역으로 갖는 사영 연산자를 $V$ 에 대한 $U$ 로의 **직교 사영 연산자 (orthogonal projection)** 이라고 하며 $P_U$ 라고 쓴다.
 
 :::
 :::
 
 </br>
 
-아래 명제들은 projection 의 성질이며 증명은 쉽다.
+아래 직교 사영 연산자에 대한 명제들은 쉽게 증명 할 수 있다.
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_properties_of_orghogonal_projection}
-$U$ 가 $V$ 의 유한차원 부분벡터공간 일 때 다음이 성립한다. 
+$P_U$ 가 $U$ 로의 직교 사영 연산자이고 $U$ 가 $V$ 의 유한차원 부분벡터공간 일 때 다음이 성립한다. 
 
 &emsp;($1$) $u \in U \implies P_U (u) = u$.
 
@@ -1101,7 +1101,6 @@ $$
 </br>
 
 Reisz 표현 정리(@thm-LA_reisz_representation_theorem_1) 에서는 유한차원 벡터공간 $V$ 에서의 모든 선형 범함수는 각각 유일하게 정해진 어떤 벡터에 대한 내적과 같다는 것을 보였다. 
-
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -1578,7 +1577,7 @@ $V=U\oplus U^\perp$ 이므로 $v=x+y$ 인 $x\in U,\, y\in U^\perp$ 가 유일하
 ::: {#exr-axler4_6_C_9}
 #### Axler4th 6.C.9
 
-유한차원 내적 벡터공간 $V$ 에서 정의된 projection $P$ 가 모든 $v\in V$ 에 대해 $\|Pv\| \le \|v\|$ 라고 하자. $P=P_U$ 인 어떤 $U\le V$ 가 존재함을 보여라.
+유한차원 내적 벡터공간 $V$ 에서 정의된 사영연산자 $P$ 가 모든 $v\in V$ 에 대해 $\|Pv\| \le \|v\|$ 라고 하자. $P=P_U$ 인 어떤 $U\le V$ 가 존재함을 보여라.
 
 :::
 
@@ -1736,14 +1735,14 @@ $$
 
 #### Axler4th 6.C.10
 
-$V$ 는 유한차원 벡터공간이며 $L\in \mathcal{L}(V)$ 는 projection 이면 $L^+=L$ 임을 보여라.
+$V$ 는 유한차원 벡터공간이며 $L\in \mathcal{L}(V)$ 가 사영연산자 이면 $L^+=L$ 임을 보여라.
 
 :::
 
 </div>
 ::: {.solution}
 
-$L$ 이 projection 이므로 $L^2=L$ 이며 $L = P_{\text{im}(L)}$ 이다. 또한 $(\ker (L))^\perp = \text{im}(L)$ 이므로 $L|_{(\ker L)^\perp} = I|_{\text{im}(L)}$ 이다. @def-LA_pseudo_inverse 로 부터 $L^+w = L$ 이다.
+$L$ 이 사영연산자이므로 $L^2=L$ 이며 $L = P_{\text{im}(L)}$ 이다. 또한 $(\ker (L))^\perp = \text{im}(L)$ 이므로 $L|_{(\ker L)^\perp} = I|_{\text{im}(L)}$ 이다. @def-LA_pseudo_inverse 로 부터 $L^+w = L$ 이다.
 
 :::
 

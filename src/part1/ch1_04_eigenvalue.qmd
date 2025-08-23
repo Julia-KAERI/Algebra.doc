@@ -894,44 +894,38 @@ $$
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-LA_diagonalizable_matrix}
 
-#### 대각화 가능 행렬
+#### 대각화 가능
 
-정사각 행렬이 어떤 대각행렬과 닮았다면 그 정사각 행렬을 **대각화 가능 행렬 (Diagonalizable matrix)** 라고 한다.
+연산자 $L$ 이 어떤 기저에서의 행렬표현이 대각행렬일 때 이 연산자를 **대각화 가능하다(be diagonalizable)** 라고 한다.
 
 :::
 :::
+
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-LA_diagonalizability}
 
-정사각 행렬 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이 서로 다른 고유값 $\lambda_1,\ldots,\,\lambda_m$ 을 가질 때 다음은 동치이다.
+유한차원 벡터공간에서의 연산자 $L\in \mathcal{L}(V)$ 이 서로 다른 고유값 $\lambda_1,\ldots,\,\lambda_m$ 을 가질 때 다음은 동치이다.
 
 
-&emsp;($1$) $\bf{A}$ 는 대각화 가능 행렬이다.
+&emsp;($1$) $L$ 는 대각화 가능하다.
 
-&emsp;($2$) $\bf{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n}(\mathbb{F})$ 의 기저가 존재한다.
+&emsp;($2$) $L$ 의 고유벡터로 이루어진 $V$ 의 기저가 존재한다.
 
-&emsp;($3$) $\mathcal{M}_n (\mathbb{F}) = E(\lambda_1, \bf{A}) \oplus \cdots \oplus E(\lambda_m, \bf{A})$
+&emsp;($3$) $V= E(\lambda_1, L) \oplus \cdots \oplus E(\lambda_m, L)$
+
 :::
 
 </div>
 
 ::: {.proof}
-($1 \implies 2$) 대각 행렬 $\bf{D}$ 에 대해 $\bf{D} = \bf{P}^{-1}\bf{AP}$ 라고 하자. $\bf{D}\hat{\bf{e}}_i = D_{ii}\hat{\bf{e}}_i$ 이므로, 
 
-$$
-\bf{APe}_i = \bf{PDe}_i = D_{ii}\bf{Pe}_i
-$$
+($1\implies 2$) $n=\dim (V)$ 일 때 기저 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 에 대해 $[L]_{\mathcal{B}}$ 가 대각행렬이라고하자. $[L]_\mathcal{B}\hat{\bf{e}}_i=\lambda_i \hat{\bf{e}}_i$ 이므로 $\mathcal{B}$ 는 $L$ 의 고유벡터로 이루어진 $V$ 의 기저이다.
 
+($2\implies 3$) trivial.
 
-이며, 따라서 $\bf{Pe}_i$  는 $D_{ii}$ 를 고유값으로 갖는 $\bf{A}$ 의 고유벡터이다. $\bf{P}$ 가 가역행렬이므로 $\{\bf{P}\hat{\bf{e}}_1,\ldots,\bf{P}\hat{\bf{e}}_1\}$ 는 $\mathcal{M}_n(\mathbb{F})$ 의 기저이다.
-
-($2 \implies 3$) $(\bf{u}_1,\ldots,\,\bf{u}_n)$ 이 $\bf{A}$ 의 고유벡터이며 $\mathcal{M}_n(\mathbb{F})$ 의 기저일 때 같은 고유값 $\lambda_j$ 를 갖는 $\bf{u}_i$ 들은 $E(\lambda_j, \bf{A})$ 의 기저이다. 임의의 $\lambda_{j_1}\le \lambda_{j_2}$ 일 때 $E(\lambda_{j_1}, \bf{A})\cap E(\lambda_{j_2})= \{\bf{0}\}$ 이므로, $\mathcal{M}_n (\mathbb{F}) = E(\lambda_1, \bf{A}) \oplus \cdots \oplus E(\lambda_m, \bf{A})$ 이다. 
-
-
-($3 \implies 1$) 각각의 $E(\lambda_i, \bf{A})$ 의 기저벡터를 모아 $(\bf{u}_1,\ldots,\bf{u}_n)$ 을 만들었을 때 $\bf{U} = \begin{bmatrix} \bf{u}_1 & \cdots & \bf{u}_n\end{bmatrix}$ 라 하자. $\bf{U}$ 는 가역이며, $\bf{U}^{-1}\bf{AU}$ 는 대각행렬이다. $\square$
-
+($3\implies 1$) 각각의 $E(\lambda_i,\,L)$ 의 기저를 $\mathcal{B}_i=\left(v^{(i)}_j\right)$ 라고 하자. $\mathcal{B}=\bigcup_{i=1}^m \mathcal{B}_j$ 는 $V$ 의 기저이며 $L(v^{(i)}_j) = \lambda_jv^{(i)}_j$ 이므로 $[L]_\mathcal{B}$ 는 대각행렬이다. $\square$
 
 :::
 
@@ -939,7 +933,7 @@ $$
 
 ::: {#cor-LA_diagoalizability_of_dimV_distinct_eigenvalues_1}
 
-$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 $n$ 개의 서로 다른 고유값을 가지면 $\bf{A}$ 는 대각화 가능 행렬이다.
+$L\in \mathcal{L}(V)$ 이고 $\dim (V) = n$ 일 때 $L$ 에 대해 서로 다른 $n$ 개의 고유값이 존재하면 $L$ 는 대각화 가능하다.
 
 :::
 
@@ -947,14 +941,14 @@ $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 $n$ 개의 서로 다른 �
 
 ::: {.proof}
 
-@prp-LA_eigenvector_linear_independence 에서 보였듯이 서로 다른 고유값을 갖는 고유벡터는 선형독립이므로 이 $n$ 개의 고유벡터는 $\mathcal{M}_n(\mathbb{F})$ 의 기저이다. 따라서 $\bf{A}$ 는 대각화 가능 행렬이다. $\square$
+@prp-LA_eigenvector_linear_independence 에서 보였듯이 서로 다른 고유값을 갖는 고유벡터는 선형독립이므로 $L$ 은 대각화 가능하다. $\square$
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#cor-LA_diagoalizability_of_dimV_distinct_eigenvalues_2}
 
-$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 의 특성다항식 $p_{\bf{A}}$ 가 $n$ 개의 서로 다른 해를 $\mathbb{F}$ 에서 가지면 $\bf{A}$ 는 대각화 가능 행렬이다. 
+$n$ 차원 $\F$-벡터공간에서 $V$ 에서 정의된 $L \in \mathcal{L}(V)$ 의 특성다항식 $p_{L}$ 이 $n$ 개의 서로 다른 해를 $\mathbb{F}$ 에서 가지면 $L$ 는 대각화 가능 행렬이다. 
 :::
 
 </div></br>
@@ -965,7 +959,7 @@ $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 의 특성다항식 $p_{\bf{A}}
 
 ::: {#exr-linearly_independency_and_distict_eigenvalues}
 
-$\{\bf{v}_1,\ldots,\,\bf{v}_m \} \subset \mathcal{M}_n(\mathbb{F})$ 이 선형독립일 필요충분 조건은 위 벡터들이 서로 다른 고유값을 갖는 고유벡터가 되도록 하는 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 존재하는 것임을 보여라.
+$\{v_1,\ldots,\,v_m \} \subset V$ 이 선형독립일 필요충분 조건은 위 벡터들이 서로 다른 고유값을 갖는 고유벡터가 되도록 하는 $L\in \mathcal{L}(V)$ 가 존재하는 것임을 보여라.
 
 :::
 
@@ -973,9 +967,7 @@ $\{\bf{v}_1,\ldots,\,\bf{v}_m \} \subset \mathcal{M}_n(\mathbb{F})$ 이 선형�
 
 ::: {.solution}
 
-서로 다른 고유값을 갖는 고유벡터의 집합은 선형독립이라는 것을 안다(@prp-LA_eigenvector_linear_independence). 따라서 $\{\bf{v}_1,\ldots,\,\bf{v}_m \}$ 가 선형독립이면 이 벡터들이 각각 다른 고유값을 갖는 고유벡터가 되는 행렬 $\bf{A}$ 가 존재함을 보이면 된다. $\bf{v}_1,\ldots,\,\bf{v}_m$ 을 확장하여 기저 $\{\bf{v}_1,\ldots,\,\bf{v}_n\}$ 을 구성하고 $\bf{P}= \begin{bmatrix} \bf{v}_1 & \cdots & \bf{v}_n\end{bmatrix}$ 라 하자. $\bf{P}^{-1}$ 은 $\bf{v}_i$ 를 표준기저 $\hat{\bf{e}}_i$ 로 변환해주는 연산자이다. 
-
-행렬 $\bf{A}$ 를 $1$ 행 $1$ 열 부터 $m$ 행 $m$ 열 까지는 $A_{ij}= j\delta_{ij}$ 가 되도록 하고 $m+1$ 행 $m+1$ 열부터는 임의의 값을 가지는 블럭대각행렬이라 하자. $\bf{e}_1,\ldots,\,\bf{e}_m$ 은 은 각각 $1,\ldots,m$ 의 고유값을 가지므로 $\bf{PAP}^{-1}$ 은 $\bf{v}_1,\ldots,\bf{v}_m$ 이 각각 $1,\ldots,\,m$ 의 고유값을 갖는 행렬이다. 
+서로 다른 고유값을 갖는 고유벡터의 집합은 선형독립이라는 것을 안다(@prp-LA_eigenvector_linear_independence). 따라서 $\{v_1,\ldots,\,v_m \}$ 가 선형독립이면 이 벡터들이 각각 다른 고유값을 갖는 고유벡터가 되는 연산자 $L$ 이 존재함을 보이면 된다. $v_1,\ldots,\,v_m$ 을 확장하여 기저 $\mathcal{B}=\{v_1,\ldots,\,v_n\}$ 을 구성할 수 있다. $Lv_i = iv_i (i=1,\ldots,\,n)$ 인 선형연산자가 그것이다.
 
 :::
 
@@ -984,10 +976,10 @@ $\{\bf{v}_1,\ldots,\,\bf{v}_m \} \subset \mathcal{M}_n(\mathbb{F})$ 이 선형�
 ::: {#exr-axler_5_B_1}
 
 #### Axler 5.B.1
-$\bf{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 어떤 자연수 $n$ 에 대해 $\bf{A}^n=\bf{0}$ 이라고 하자. $\bf{I}_n-\bf{A}$ 는 가역행렬이며 다음이 성립함을 보여라.
+$L\in \mathcal{L}(V)$ 가 어떤 자연수 $n$ 에 대해 $L^n=0$ 이라고 하자. $I-L$ 는 가역행렬이며 다음이 성립함을 보여라.
 
 $$
-(\bf{I}_n-\bf{A})^{-1} = \bf{I}_n+ \bf{A} + \cdots + \bf{A}^{n-1}.
+(I-L)^{-1} = I +  L + \cdots + L^{n-1}.
 $$
 
 :::
@@ -996,7 +988,7 @@ $$
 
 ::: {.solution}
 
-$(\bf{I}_n-\bf{A})(\bf{I}_n + \bf{A} + \cdots + \bf{A}^{n-1}) = \bf{I}_n- \bf{A}^n=\bf{I}_n$ 
+$(I-L)(I + L + \cdots + L^{n-1}) = I- L^n=I$ 
 
 :::
 
@@ -1006,7 +998,7 @@ $(\bf{I}_n-\bf{A})(\bf{I}_n + \bf{A} + \cdots + \bf{A}^{n-1}) = \bf{I}_n- \bf{A}
 
 #### Axler 5.B.4
 
-$\bf{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 $\bf{P}^2=\bf{P}$ 일 때 $\bf{P}$ 를 **projection** 이라고 한다. $\bf{P}$ 가 projection 일 때 $\mathcal{M}_n (\mathbb{F})=(\ker (\bf{P})) \oplus (\text{im}(\bf{P}))$ 임을 보여라.
+$P\in \mathcal{L}(V)$ 가 $P^2=P$ 일 때 $P$ 를 **사영연산자(projection)** 이라고 한다. $P$ 가 projection 일 때 $V=(\ker (P)) \oplus (\text{im}(P))$ 임을 보여라.
 
 :::
 
@@ -1014,7 +1006,7 @@ $\bf{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 가 $\bf{P}^2=\bf{P}$ 일 때 $
 
 ::: {.solution}
 
-$\bf{u}\in \ker (\bf{P})\cap \text{im}(\bf{P})$ 라 하자. $\bf{Pu}=\bf{0}$ 이며 $\bf{Pv}=\bf{u}$ 인 $\bf{u}$ 가 존재해야 한다. 그런데 $\bf{P}^2\bf{v} = \bf{Pu}=\bf{0}$ 이며 $\bf{P}^2\bf{v} = \bf{Pv}$ 이므로 $\bf{u}=\bf{0}$ 이다. 즉 $\ker (\bf{P})\cap \text{im}(\bf{P}) = \{\bf{0}\}$ 이다. @thm-LA_rank_nullity 에 의해 $\mathcal{M}_n (\mathbb{F})=(\ker (\bf{P})) \oplus (\text{im}(\bf{P}))$ 이다.
+$u\in \ker (P)\cap \text{im}(P)$ 라 하자. $P(u)=0_V$ 이며 $P(v)=u$ 인 $u$ 가 존재해야 한다. 그런데 $P^2(v) = P(u)=0_V$ 이며 $P^2(v) = P(v)$ 이므로 $u=0_V$ 이다. 즉 $\ker (P)\cap \text{im}(P) = \{0_V\}$ 이다. @thm-LA_rank_nullity 에 의해 $V=(\ker (P)) \oplus (\text{im}(P))$ 이다.
 
 :::
 
@@ -1024,16 +1016,15 @@ $\bf{u}\in \ker (\bf{P})\cap \text{im}(\bf{P})$ 라 하자. $\bf{Pu}=\bf{0}$ 이
 
 ### Axler 5.C.1
 
-$\bf{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 가 대각화 가능 행렬이면 $\mathcal{M}_n(\mathbb{F})=\ker (\bf{A})\oplus \text{im}(\bf{A})$ 임을 보여라.
+$L\in \mathcal{L}(V)$ 가 대각화 가능하면 $V=\ker (L)\oplus \text{im}(L)$ 임을 보여라.
 
 :::
 
 </div>
 
 ::: {.solution}
-$\ker (\bf{A})$ 와 $\text{im}(\bf{A})$ 모두 $\mathcal{M}_n(\mathbb{F})$ 의 부분공간이다. $\bf{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_n (\mathbb{F})$ 의 기저 $\{\bf{u}_1, \ldots,\, \bf{u}_n\}$ 을 생각 할 수 있다. $\bf{x}\in \ker (\bf{A})\cap \text{im}(\bf{A})$ 이라고 하자. $\bf{x}\in \ker (\bf{A})$ 이므로 $\bf{Ax}=\bf{0}$ 이며 $\bf{x}\in \text{im}(\bf{A})$ 이므로 $\bf{Ay}=\bf{x}$ 를 만족하는 $\bf{y}$ 가 존재해야 한다. $\bf{A}$ 가 대각화 가능 행렬이므로 고유값 $\lambda_i$ 를 갖는 고유벡터 $\bf{u}_i$ 가 기저가 되며 따라서 $\bf{y}=\sum_i c_i \bf{u}_i$ 로 표현 할 수 있다. $\bf{Ay} = \sum_i c_i \lambda_i \bf{u}_i = \bf{x}$, $\bf{A}^2\bf{y} = \sum_i c_i \lambda_i^2 \bf{u}_i = \bf{0}$ 이므로 $\bf{y}$ 는 $\bf{A}$ 에 대해 고유값이 $0$ 인 벡터의 선형결합이다. 따라서 $\bf{y}\in \ker (\bf{A})$ 이며 $\bf{x}=\bf{0}$ 이다. 
 
-@thm-LA_rank_nullity 에 의해 $n=\text{nullity}(\bf{A})+\text{rank}(\bf{A})$ 이며 $\ker (\bf{A}) \cap \text{im}(\bf{A})=\{\bf{0}\}$ 이므로 $\mathcal{M}_n(\mathbb{F})=\ker (\bf{A})\oplus \text{im}(\bf{A})$ 이다.
+@thm-LA_diagonalizability 로부터 $\ker (L) = E(0,\,L)$ 이며 $\text{im}(L)= \bigoplus_{i=1,\, \lambda_i \ne 0}^n E(\lambda_i,\,L)$ 임을 안다.
 
 :::
 
@@ -1043,13 +1034,13 @@ $\ker (\bf{A})$ 와 $\text{im}(\bf{A})$ 모두 $\mathcal{M}_n(\mathbb{F})$ 의 �
 
 #### Axler 5.C.3
 
-$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음 세 명제는 동치임을 보여라.
+유한차원 벡터공간 $V$ 에서 정의된 연산자 $L$ 에 대해 다음 세 명제는 동치임을 보여라.
 
-&emsp;($1$) $\mathcal{M}_{n}(\mathbb{F}) = \ker (\bf{A})\oplus \text{im}(\bf{A})$.
+&emsp;($1$) $V = \ker (L)\oplus \text{im}(L)$.
 
-&emsp;($2$) $\mathcal{M}_{n}(\mathbb{F}) = \ker (\bf{A}) + \text{im}(\bf{A})$.
+&emsp;($2$) $V = \ker (L) + \text{im}(L)$.
 
-&emsp;($3$) $\ker (\bf{A}) \cap \text{im}(\bf{A}) = \{\bf{0}\}$.
+&emsp;($3$) $\ker (L) \cap \text{im}(L) = \{0_V\}$.
 
 :::
 
@@ -1057,11 +1048,11 @@ $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 다음 세 명제는
 
 ::: {.solution}
 
-($1\implies 2$) 가정에 의해 $\ker (\bf{A})\cap \text{im}(\bf{A})= \{\bf{0}\}$ 이다. @prp-LA_condition_for_direct_sum 의해 $\ker (\bf{A}) + \text{im}(\bf{A}) = \ker (\bf{A})\oplus \text{im}(\bf{A}) = \mathcal{M}_{n}(\mathbb{F})$ 이다.
+($1\implies 2$) $\oplus$ 의 정의에 의해 $\ker (L)\cap \text{im}(A)= \{0_V\}$ 이다. @prp-LA_condition_for_direct_sum 의해 $\ker (L) + \text{im}(L) = \ker (L)\oplus \text{im}(L) = V$ 이다.
 
-($2\implies 3$) @thm-LA_rank_nullity 에 의해 $\ker (\bf{A}) \cap \text{im}(\bf{A}) = \{\bf{0}\}$ 이다. 
+($2\implies 3$) @thm-LA_rank_nullity 에 의해 $\ker (L) \cap \text{im}(L) = \{0_V\}$ 이다. 
 
-($3 \implies 1$) $\ker (\bf{A})$ 와 $\text{im}(\bf{A})$ 는 $\mathcal{M}_n(\mathbb{F})$ 의 부분공간이며 가정에 의해 $\ker (\bf{A}) + \text{im}(\bf{A}) = \ker (\bf{A}) \oplus \text{im}(\bf{A})$ 도 부분공간이다. @thm-LA_rank_nullity 에 의해 $\mathcal{M}_{n}(\mathbb{F}) = \ker (\bf{A})\oplus \text{im}(\bf{A})$ 이다.
+($3 \implies 1$) $\ker (L) \le V$ 과 $\text{im}(L) \le V$ 이며 $\ker (L) + \text{im}(L) = \ker (L) \oplus \text{im}(L)$ 도 $V$ 의 부분공간이다. @thm-LA_rank_nullity 에 의해 $V = \ker (L)\oplus \text{im}(L)$ 이다.
 
 :::
 
