@@ -313,9 +313,9 @@ window.Quarto = {
   <ul>
   <li><a href="#스펙트럼-정리" id="toc-스펙트럼-정리" class="nav-link active" data-scroll-target="#스펙트럼-정리"><span class="header-section-number">7.1</span> 스펙트럼 정리</a>
   <ul class="collapse">
-  <li><a href="#sec-LA_spectral_theorem_on_complexe_field" id="toc-sec-LA_spectral_theorem_on_complexe_field" class="nav-link" data-scroll-target="#sec-LA_spectral_theorem_on_complexe_field"><span class="header-section-number">7.1.1</span> 복소수체(<span class="math inline">\(\mathbb{C}\)</span>) 에서 정의된 행렬에 대한 스펙트럼 정리</a></li>
-  <li><a href="#sec-LA_prerequisite_for_spectral_theorem_on_real_field" id="toc-sec-LA_prerequisite_for_spectral_theorem_on_real_field" class="nav-link" data-scroll-target="#sec-LA_prerequisite_for_spectral_theorem_on_real_field"><span class="header-section-number">7.1.2</span> 실수체에서의 스펙트럼 정리를 위해 미리 알아야 할 것들</a></li>
-  <li><a href="#sec-LA_spectral_theorem_on_real_field" id="toc-sec-LA_spectral_theorem_on_real_field" class="nav-link" data-scroll-target="#sec-LA_spectral_theorem_on_real_field"><span class="header-section-number">7.1.3</span> 실수체에서 정의된 행렬에 대한 스펙트럼 정리</a></li>
+  <li><a href="#sec-LA_complex_spectral_theorem" id="toc-sec-LA_complex_spectral_theorem" class="nav-link" data-scroll-target="#sec-LA_complex_spectral_theorem"><span class="header-section-number">7.1.1</span> <span class="math inline">\(\mathbb{C}\)</span>-스펙트럼 정리</a></li>
+  <li><a href="#sec-LA_prerequisite_for_spectral_theorem_on_real_field" id="toc-sec-LA_prerequisite_for_spectral_theorem_on_real_field" class="nav-link" data-scroll-target="#sec-LA_prerequisite_for_spectral_theorem_on_real_field"><span class="header-section-number">7.1.2</span> <span class="math inline">\(\mathbb{R}\)</span>-스펙트럼 정리를 위해 미리 알아야 할 것들</a></li>
+  <li><a href="#sec-LA_real_spectral_theorem" id="toc-sec-LA_real_spectral_theorem" class="nav-link" data-scroll-target="#sec-LA_real_spectral_theorem"><span class="header-section-number">7.1.3</span> <span class="math inline">\(\mathbb{R}\)</span>-스펙트럼 정리</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
   <li><a href="#positive-positive-definite-행렬과-제곱근-행렬" id="toc-positive-positive-definite-행렬과-제곱근-행렬" class="nav-link" data-scroll-target="#positive-positive-definite-행렬과-제곱근-행렬"><span class="header-section-number">7.2</span> Positive, Positive definite 행렬과 제곱근 행렬</a>
@@ -371,11 +371,11 @@ window.Quarto = {
 <p><br></p>
 <section id="스펙트럼-정리" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="스펙트럼-정리"><span class="header-section-number">7.1</span> 스펙트럼 정리</h2>
-<section id="sec-LA_spectral_theorem_on_complexe_field" class="level3" data-number="7.1.1">
-<h3 data-number="7.1.1" class="anchored" data-anchor-id="sec-LA_spectral_theorem_on_complexe_field"><span class="header-section-number">7.1.1</span> 복소수체(<span class="math inline">\(\mathbb{C}\)</span>) 에서 정의된 행렬에 대한 스펙트럼 정리</h3>
+<section id="sec-LA_complex_spectral_theorem" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="sec-LA_complex_spectral_theorem"><span class="header-section-number">7.1.1</span> <span class="math inline">\(\mathbb{C}\)</span>-스펙트럼 정리</h3>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-LA_spectrum_theorem_for_complex_vector_space" class="theorem">
-<p><span class="theorem-title"><strong>정리 7.1 (복소수체에서 정의된 행렬에 대한 스펙트럼 정리)</strong></span> 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(N \in \mathcal{L}(V)\)</span> 에 대해 다음 세 명제는 동치이다.</p>
+<p><span class="theorem-title"><strong>정리 7.1 (<span class="math inline">\(C\)</span>-스펙트럼 정리)</strong></span> 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(N \in \mathcal{L}(V)\)</span> 에 대해 다음 세 명제는 동치이다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(N\)</span> 는 정규연산자이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(N\)</span> 는 어떤 정규직교기저에서 대각행렬로 표현된다.</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(N\)</span> 의 고유벡터로 <span class="math inline">\(V\)</span> 의 정규직교기저를 구성 할 수 있다.</p>
@@ -383,92 +383,59 @@ window.Quarto = {
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) 는 <a href="ch1_06_operators_on_innerproduct_space.html#prp-LA_diagonality_of_norma_matrix" class="quarto-xref">명제&nbsp;<span>6.15</span></a> 에서 보였다.</p>
-<p>(<span class="math inline">\(2\implies 3\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 가 unitary 행렬 <span class="math inline">\(\boldsymbol{P}\)</span> 에 의해 대각행렬로 변환된다고 하자. 즉 <span class="math inline">\(\boldsymbol{P}^{-1}\boldsymbol{AP}=\boldsymbol{D}\)</span> 는 대각행렬이다. 대각행렬이 주어졌을 때, 표준정규직교벡터 <span class="math inline">\(\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}\)</span> 는 <span class="math inline">\(\lambda_i = D_{ii}\)</span> 를 고유값으로 갖는 대각행렬의 고유벡터이다. 여기서</p>
-<p><span class="math display">\[
-\boldsymbol{APe}_i = \boldsymbol{P}\boldsymbol{P}^{-1}\boldsymbol{APe}_i= \boldsymbol{PDe}_i=\lambda_i \boldsymbol{Pe}_i
-\]</span></p>
-<p>이므로 <span class="math inline">\(\boldsymbol{Pe}_i\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터이다. <span class="math inline">\(\boldsymbol{P}\)</span> 가 linear isometry 이므로 <span class="math inline">\(\{\boldsymbol{Pe}_1,\ldots,\,\boldsymbol{Pe}_n\}\)</span> 은 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터로 이루어진 <span class="math inline">\(\mathcal{M}_n(\mathbb{C})\)</span> 의 정규직교기저이다.</p>
-<p>(<span class="math inline">\(3. \implies 1.\)</span>) <span class="math inline">\(\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}\)</span> 이 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터로 이루어진 <span class="math inline">\(\mathcal{M}_{n }(\mathbb{C})\)</span> 의 정규직교기저라 하자. 이 때 <span class="math inline">\(\boldsymbol{u}_i\)</span> 의 고유값은 <span class="math inline">\(\lambda_i\)</span> 라 하자.</p>
-<p><span class="math display">\[
-\langle \boldsymbol{A}^\ast \boldsymbol{e}_i,\,\boldsymbol{e}_j\rangle = \langle \boldsymbol{e}_i,\, \boldsymbol{Ae}_j\rangle = \overline{\lambda_j} \delta_{ij}
-\]</span></p>
-<p>이다. 즉,</p>
-<p><span class="math display">\[
-\boldsymbol{A}^\ast \boldsymbol{e}_i = \overline{\lambda_i} \boldsymbol{e}_i
-\]</span></p>
-<p>이다. <span class="math inline">\(\boldsymbol{u} = \sum_i u_i \boldsymbol{e}_i\)</span> 에 대해,</p>
+<p>(<span class="math inline">\(2\implies 3\)</span>) <span class="math inline">\(\mathcal{B}=(e_1,\ldots,\,e_n)\)</span> 이 <span class="math inline">\(N\)</span> 을 대각행렬로 표현는 정규직교기저라고 하고 이 대각행렬을 <span class="math inline">\(\boldsymbol{N}\)</span> 이라고 하자. <span class="math inline">\(n_i = N_{ii}\)</span> 라고 하면 <span class="math inline">\(N_{ij}= \langle N(e_j),\,e_i\rangle = n_i\delta_{ij}\)</span> 이므로 <span class="math inline">\(N(e_j)= n_j e_j\)</span> 이다. 즉 <span class="math inline">\(\mathcal{B}\)</span> 는 <span class="math inline">\(N\)</span> 의 고유벡터이다.</p>
+<p>(<span class="math inline">\(3 \implies 1\)</span>) <span class="math inline">\(\mathcal{B} = (e_1,\ldots,\,e_n)\)</span> 가 <span class="math inline">\(V\)</span> 의 정규직교벡터이며 <span class="math inline">\(N\)</span> 의 고유벡터의 집합이라고 하자. <span class="math inline">\(N(e_i)= n_i e_i\)</span> 일 때 <span class="math inline">\(\langle N(e_i),\,e_j\rangle = n_i\)</span> 이며 <span class="math inline">\(\langle N^\ast(e_i),\, e_j\rangle = \overline{n_i}\)</span> 이다. <span class="math inline">\(v=\sum_i a_i e_i\)</span> 에 대해</p>
 <p><span class="math display">\[
 \begin{aligned}
-\|\boldsymbol{A}^\ast \boldsymbol{u} \|^2 &amp;=  \left\langle \boldsymbol{A}^\ast \left(\sum_i u_i \boldsymbol{e}_i \right),\, \boldsymbol{A}^\ast \left(\sum_j u_j \boldsymbol{e}_j \right) \right\rangle \\
-&amp;=\sum_{i,\,j} u_i \overline{u_j} \left\langle \boldsymbol{A}^\ast\boldsymbol{e}_i,\, \boldsymbol{A}^\ast \boldsymbol{e}_j\right\rangle \\
-&amp;= \sum_{i} |u_i|^2 |\lambda_i|^2 \\
-&amp;= \|\boldsymbol{A}\boldsymbol{u}\|^2
+\| Nv \|^2 &amp;= \langle Nv,\,Nv\rangle =\sum_{i, j} a_i \overline{a_j} \langle e_i,e_j\rangle = \sum_j |a_i|^2, \\[0.3em]
+\|N^\ast v\|^2 &amp;=  \langle N^\ast v,\, N^\ast v\rangle = \sum_j |a_i|^2 = \|Nv\|^2
 \end{aligned}
 \]</span></p>
-<p>이므로 <span class="math inline">\(\boldsymbol{A}\)</span> 는 정규행렬이다. <span class="math inline">\(\square\)</span></p>
-</div>
-<p><br></p>
-<div class="callout callout-style-simple callout-important no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>정규행렬은 고유벡터로 이루어진 정규직교기저가 존재하며, 따라서 이 기저에서 대각행렬로 변환된다는 좋은 성질을 가진다. 에르미트 행렬은 정규행렬이므로 이 성질을 공유하며 더하여 고유값이 항상 실수이다.</p>
-</div>
-</div>
+<p>이므로 <span class="math inline">\(N\)</span> 은 정규연산자이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-hermitian_normal" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.1</strong></span> 복소 정사각 행렬 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{C})\)</span> 이 정규행렬이며 그 고유값이 모두 실수이면 <span class="math inline">\(\boldsymbol{A}\)</span> 는 에르미트 행렬임을 보여라.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-LA_hermitian_normal_on_C" class="theorem">
+<p><span class="theorem-title"><strong>정리 7.2</strong></span> 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-벡터공간에서 정의된 정규연산자의 고유값이 모두 실수이면 이 정규연산자는 에르미트 연산자이다.</p>
 </div>
 </div>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}\)</span> 이 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터로 이루어진 <span class="math inline">\(\mathcal{M}_{n }(\mathbb{C})\)</span> 의 정규직교기저이고 <span class="math inline">\(\boldsymbol{e}_i\)</span> 의 고유값은 <span class="math inline">\(\lambda_i\)</span> 라 하자. <a href="ch1_06_operators_on_innerproduct_space.html#prp-LA_hermite_tvv" class="quarto-xref">명제&nbsp;<span>6.5</span></a> 에서 보았듯이 임의의 <span class="math inline">\(\boldsymbol{u} \in \mathcal{M}_{n }(\mathbb{C})\)</span> 에 대해 <span class="math inline">\(\langle \boldsymbol{Au},\boldsymbol{u}\rangle\)</span> 이 실수이면 <span class="math inline">\(\boldsymbol{A}\)</span> 는 에르미트 행렬이다. <span class="math inline">\(\boldsymbol{u}= \sum_i^n u_i \boldsymbol{e}_i\)</span> 라 하면,</p>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#thm-LA_spectrum_theorem_for_complex_vector_space" class="quarto-xref">정리&nbsp;<span>7.1</span></a> 로부터 정규연산자 <span class="math inline">\(H\)</span> 의 고유벡터의 집합이며 벡터공간의 기저인 <span class="math inline">\(\mathcal{B}=(e_1,\ldots,e_n)\)</span> 가 존재한다. <span class="math inline">\(H_i e_i = h_i e_i\)</span> 라고 하자. <a href="ch1_06_operators_on_innerproduct_space.html#prp-LA_hermite_tvv" class="quarto-xref">명제&nbsp;<span>6.5</span></a> 를 이용하자. <span class="math inline">\(u=\sum_i a_i e_i\)</span> 라고 하면</p>
 <p><span class="math display">\[
-\begin{aligned}
-\langle \boldsymbol{Au},\, \boldsymbol{u}\rangle = \sum_i \lambda_i |u_i|^2 \in \mathbb{R}
-\end{aligned}
+\langle H(u),\, u \rangle- \overline{\langle H(u),\, u \rangle} = \sum_i (h_i-\overline{h_i}) |a_i|^2 = 0
 \]</span></p>
-<p>이다. 즉 <span class="math inline">\(\boldsymbol{A}\)</span> 는 에르미트 행렬이다. <span class="math inline">\(\square\)</span></p>
+<p>이므로 <span class="math inline">\(H\)</span> 는 에르미트연산이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 </section>
 <section id="sec-LA_prerequisite_for_spectral_theorem_on_real_field" class="level3" data-number="7.1.2">
-<h3 data-number="7.1.2" class="anchored" data-anchor-id="sec-LA_prerequisite_for_spectral_theorem_on_real_field"><span class="header-section-number">7.1.2</span> 실수체에서의 스펙트럼 정리를 위해 미리 알아야 할 것들</h3>
-<p>실수체에서 정의된 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 가 에르미트 행렬이면 대칭행렬이며, 대칭행렬이면 에르미트 행렬이다. 실수체에서 정의된 스펙트럼 정리를 증명하기 위해서는 몇가지 미리 증명해야 할 것이 있다.</p>
-<br>
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="sec-LA_prerequisite_for_spectral_theorem_on_real_field"><span class="header-section-number">7.1.2</span> <span class="math inline">\(\mathbb{R}\)</span>-스펙트럼 정리를 위해 미리 알아야 할 것들</h3>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-LA_invirtible_deformation" class="theorem lemma">
-<p><span class="theorem-title"><strong>보조정리 7.1</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})\)</span> 행렬에 대해 <span class="math inline">\(\boldsymbol{A}\)</span> 가 대칭행렬이고 실수 <span class="math inline">\(b,\,c\)</span> 가 <span class="math inline">\(b^2-4c &lt;0\)</span> 일 때</p>
-<p><span class="math display">\[
-\boldsymbol{A}^2+b\boldsymbol{A}+c\boldsymbol{I}_n
-\]</span></p>
-<p>은 가역행렬이다.</p>
+<p><span class="theorem-title"><strong>보조정리 7.1</strong></span> 에르미트 연산자 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 실수 <span class="math inline">\(b,\,c\)</span> 가 <span class="math inline">\(b^2-4c &lt;0\)</span> 이면 <span class="math inline">\(L^2+bL+cI\)</span> 은 가역이다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>영벡터가 아닌 벡터 <span class="math inline">\(\boldsymbol{v}\in \mathbb{R}^{n}\)</span> 에 대해</p>
+<p><span class="proof-title"><em>(증명)</em>. </span>영벡터가 아닌 벡터 <span class="math inline">\(v\in V\)</span> 에 대해</p>
 <p><span class="math display">\[
 \begin{aligned}
-\langle (\boldsymbol{A}^2+b\boldsymbol{A}+c\boldsymbol{I}_n) \boldsymbol{v},\, \boldsymbol{v} \rangle &amp;= \langle \boldsymbol{Av},\,\boldsymbol{Av} \rangle + b\langle \boldsymbol{Av},\,\boldsymbol{v} \rangle + c\langle \boldsymbol{v},\,\boldsymbol{v} \rangle \\
-&amp;= \|\boldsymbol{Av}\|^2 + b\langle \boldsymbol{Av}, \,\boldsymbol{v}\rangle + c\langle \boldsymbol{v},\,\boldsymbol{v}\rangle
+\langle (L^2+b L+cI) v,\, v \rangle &amp;= \langle Lv,\,Lv \rangle + b\langle Lv,\,v \rangle + c\langle v,\,v \rangle \\[0.3em]
+&amp;= \|Lv\|^2 + b\langle Lv, \,v\rangle + c\langle v,\,v\rangle
 \end{aligned}
 \]</span></p>
 <p>이다. 코시-슈바르츠 부등식으로부터,</p>
 <p><span class="math display">\[
-|b\langle \boldsymbol{Av},\,\boldsymbol{v}\rangle | \le |b| \cdot \|\boldsymbol{Av}\|\|\boldsymbol{v}\|
+|b\langle Lv,\,v\rangle | \le |b| \cdot \|Lv\|\cdot\|v\|
 \]</span></p>
-<p>임을 안다. 즉 <span class="math inline">\(b\langle \boldsymbol{Av},\,\boldsymbol{v}\rangle  \ge -|b| \|\boldsymbol{Av}\|\|\boldsymbol{v}\|\)</span> 이며,</p>
+<p>임을 안다. 즉 <span class="math inline">\(b\langle Lv,\,v\rangle  \ge -|b| \|Lv\|\|v\|\)</span> 이며,</p>
 <p><span class="math display">\[
 \begin{aligned}
-\langle (\boldsymbol{A}^2+b\boldsymbol{A}+c\boldsymbol{I}_n) \boldsymbol{v},\, \boldsymbol{v} \rangle  &amp; = \|\boldsymbol{Av}\|^2 + b\langle \boldsymbol{Av} ,\,\boldsymbol{v}\rangle + c\langle \boldsymbol{v},\,\boldsymbol{v}\rangle \\
-&amp; \ge \|\boldsymbol{Av}\|^2-|b|\|\boldsymbol{Av}\|\|\boldsymbol{v}\| + c\|\boldsymbol{v}\|^2 \\
-&amp;= \left(\|\boldsymbol{Av}\| - \dfrac{|b|\|\boldsymbol{v}\|}{2}\right)^2 + \left(c-\dfrac{b^2}{4}\right)\|\boldsymbol{Av}\|^2 &gt;0
+\langle (L^2+b L+cI) v,\, v \rangle \rangle  &amp; = \|Lv\|^2 + b\langle Lv ,\,v\rangle + c\langle v,\,v\rangle \\[0.3em]
+&amp; \ge \|Lv\|^2-|b|\|Lv\|\|v\| + c\|v\|^2 \\[0.3em]
+&amp;= \left(\|Lv\| - \dfrac{|b|\|v\|}{2}\right)^2 + \left(c-\dfrac{b^2}{4}\right)\|Lv\|^2 &gt;0
 \end{aligned}
 \]</span></p>
-<p>이다. <span class="math inline">\(\ker (\boldsymbol{A}^2+b\boldsymbol{A}+c\boldsymbol{I}_n) =\{0\}\)</span> 이므로 <span class="math inline">\(\boldsymbol{A}^2+b\boldsymbol{A}+c\boldsymbol{I}_n\)</span> 는 가역행렬이다. <span class="math inline">\(\square\)</span></p>
+<p>이다. <span class="math inline">\(\ker (L^2+bL+cI) =\{0\}\)</span> 이므로 <span class="math inline">\(L^2+bL+cI\)</span> 는 가역이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
@@ -493,79 +460,79 @@ p(\lambda) = a_0 + a_1 \lambda + \cdots + a_n \lambda^n = 0
 </div>
 <p><br></p>
 </section>
-<section id="sec-LA_spectral_theorem_on_real_field" class="level3" data-number="7.1.3">
-<h3 data-number="7.1.3" class="anchored" data-anchor-id="sec-LA_spectral_theorem_on_real_field"><span class="header-section-number">7.1.3</span> 실수체에서 정의된 행렬에 대한 스펙트럼 정리</h3>
+<section id="sec-LA_real_spectral_theorem" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="sec-LA_real_spectral_theorem"><span class="header-section-number">7.1.3</span> <span class="math inline">\(\mathbb{R}\)</span>-스펙트럼 정리</h3>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-LA_hermitian_real_matrix_eigenvalue" class="theorem lemma">
-<p><span class="theorem-title"><strong>보조정리 7.3</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})\)</span> 이 대칭행렬이면 고유값을 가진다.</p>
+<p><span class="theorem-title"><strong>보조정리 7.3</strong></span> 유한차원 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서의 에르미트 연산자는 고유값을 가진다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>영벡터가 아닌 <span class="math inline">\(\boldsymbol{v} \in \mathcal{M}_{n }(\mathbb{R})\)</span> 을 생각하자. <span class="math inline">\(\{\boldsymbol{v},\, \boldsymbol{Av},\ldots,\, \boldsymbol{A}^n \boldsymbol{v}\}\)</span> 는 포함된 벡터의 갯수가 <span class="math inline">\(n\)</span> 보다 많으므로 선형종속이며, 따라서</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(n=\dim (V)\)</span> 라고 하자. 영벡터가 아닌 <span class="math inline">\(v \in V\)</span> 을 생각하자. <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 에르미트 연산자라고 하자. <span class="math inline">\(\{v,\, Lv,\ldots,\, L^n v\}\)</span> 는 포함된 벡터의 갯수가 <span class="math inline">\(n\)</span> 보다 많으므로 선형종속이며, 따라서</p>
 <p><span class="math display">\[
-0=c_0 \boldsymbol{v} + c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n \boldsymbol{v}
+0_V=c_0 v + c_1 Lv + \cdots + c_n L^n v
 \]</span></p>
 <p>를 만족하는 nontrivial 한 <span class="math inline">\(\{c_i\}\)</span> 가 존재한다. <a href="#lem-LA_factorization_of_polinomial" class="quarto-xref">보조정리&nbsp;<span>7.2</span></a> 에 의해,</p>
 <p><span class="math display">\[
 \begin{aligned}
-c_0 \boldsymbol{v} + &amp; c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n\boldsymbol{v} \\
-&amp;= c(\boldsymbol{A}-\lambda_1 \boldsymbol{I})\cdots (\boldsymbol{A}-\lambda_m \boldsymbol{I}) (\boldsymbol{A}^2 +b_1 \boldsymbol{A}+c_1\boldsymbol{I})\cdots (\boldsymbol{A}^2 +b_M \boldsymbol{A}+c_M\boldsymbol{I})\boldsymbol{v}
+c_0 v + &amp; c_1 Lv + \cdots + c_n L^nv \\
+&amp;= c(L-\lambda_1 I)\cdots (L-\lambda_m I) (L^2 +b_1 L+c_1 I)\cdots (L^2 +b_M L+c_MI)(v)
 \end{aligned}
 \]</span></p>
-<p>로 분해 할 수 있다. 이 때 <span class="math inline">\(i=1,\ldots,\,M\)</span> 에 대해 <span class="math inline">\(b_i^2&lt;4c_i\)</span> 이다. <a href="#lem-LA_invirtible_deformation" class="quarto-xref">보조정리&nbsp;<span>7.1</span></a> 에 의해 <span class="math inline">\((\boldsymbol{A}^2 +b_i\boldsymbol{A}+c_i\boldsymbol{I})\)</span> 꼴의 행렬은 가역이다. 그렇다면 최소한 하나의 <span class="math inline">\(\boldsymbol{A}-\lambda_j \boldsymbol{I}\)</span> 꼴의 행렬이 가역행렬이 아니며, 이 때의 <span class="math inline">\(\lambda_j\)</span> 가 고유값이다. 즉 <span class="math inline">\(\boldsymbol{A}\)</span> 는 고유값을 가진다.<span class="math inline">\(\square\)</span></p>
+<p>로 분해 할 수 있다. 이 때 <span class="math inline">\(i=1,\ldots,\,M\)</span> 에 대해 <span class="math inline">\(b_i^2&lt;4c_i\)</span> 이다. <a href="#lem-LA_invirtible_deformation" class="quarto-xref">보조정리&nbsp;<span>7.1</span></a> 에 의해 <span class="math inline">\((L^2 +b_iL+c_iI)\)</span> 형태의 연산자는 가역이다. 그렇다면 최소한 하나의 <span class="math inline">\(L-\lambda_j I\)</span> 꼴의 행렬이 가역행렬이 아니며, 이 때의 <span class="math inline">\(\lambda_j\)</span> 가 고유값이다. 즉 <span class="math inline">\(L\)</span> 는 고유값을 가진다.<span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-LA_self_adjoint_matrix_and_invariable_space" class="theorem lemma">
-<p><span class="theorem-title"><strong>보조정리 7.4</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})\)</span> 이 대칭행렬 이고 <span class="math inline">\(U\le \mathcal{M}_n(\mathbb{R})\)</span> 가 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 불변부분공간일 때,</p>
-<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(U^\perp\)</span> 도 <span class="math inline">\(\boldsymbol{A}\)</span>에 대한 불변부분공간이다.</p>
-<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{A}|_U\)</span> 도 대칭행렬 이다.</p>
-<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\boldsymbol{A}|_{U^\perp}\)</span> 도 대칭행렬 이다.</p>
+<p><span class="theorem-title"><strong>보조정리 7.4</strong></span> 유한차원 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 에르미트 연산자 <span class="math inline">\(L\)</span> 에 대해 <span class="math inline">\(U\le V\)</span> 가 <span class="math inline">\(L\)</span> 에 대한 불변부분공간일 때,</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(U^\perp\)</span> 도 <span class="math inline">\(L\)</span>에 대한 불변부분공간이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L|_U\)</span> 도 에르미트 행렬 이다.</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(L|_{U^\perp}\)</span> 도 에르미트 행렬 이다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{u}\in U,\, \boldsymbol{v}\in U^\perp\)</span> 라 하자. <span class="math inline">\(\boldsymbol{Au}\in U\)</span> 이며 <span class="math inline">\(\boldsymbol{A}\)</span> 가 에르미트 행렬이므로,</p>
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(u\in U,\, v\in U^\perp\)</span> 라 하자. <span class="math inline">\(Lu\in U\)</span> 이며 <span class="math inline">\(L\)</span> 이 에르미트 연산자이므로,</p>
 <p><span class="math display">\[
-\langle \boldsymbol{Av},\, \boldsymbol{u}\rangle = \langle \boldsymbol{v},\, \boldsymbol{Au}\rangle =0
+\langle Lv,\, u\rangle = \langle v,\, Lu\rangle =0
 \]</span></p>
-<p>이다. 따라서 <span class="math inline">\(U^\perp\)</span> 도 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 불변부분공간이다.</p>
-<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{u}_1,\,\boldsymbol{u}_2\in U\)</span> 에 대해,</p>
+<p>이다ㅏ. 즉 <span class="math inline">\(Lv\in U^\perp\)</span> 이므로 <span class="math inline">\(U^\perp\)</span> 도 <span class="math inline">\(L\)</span>-부분공간이다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(u_1,\,u_2\in U\)</span> 에 대해,</p>
 <p><span class="math display">\[
-\langle \boldsymbol{A}|_U \boldsymbol{u}_1,\,\boldsymbol{u}_2\rangle = \langle \boldsymbol{Au}_1,\, \boldsymbol{u}_2 \rangle = \langle \boldsymbol{u}_1,\, \boldsymbol{Au}_2\rangle = \langle \boldsymbol{u}_1,\,\boldsymbol{A}|_U\boldsymbol{u}_2\rangle
+\langle L|_U u_1,\,u_2\rangle = \langle Lu_1,\, u_2 \rangle = \langle u_1,\, Lu_2\rangle = \langle u_1,\,L|_Uu_2\rangle
 \]</span></p>
-<p>이므로 <span class="math inline">\(\boldsymbol{A}|_U\)</span> 도 대칭행렬 이다.</p>
+<p>이므로 <span class="math inline">\(L|_U\)</span> 도 대칭행렬 이다.</p>
 <p>(<span class="math inline">\(3\)</span>) (<span class="math inline">\(1\)</span>), (<span class="math inline">\(2\)</span>) 로 부터 자명하다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-LA_matrix_under_two_invariant_subspace" class="theorem lemma">
-<p><span class="theorem-title"><strong>보조정리 7.5</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})\)</span> 가 대칭행렬이고 <span class="math inline">\(U,\,V \le \mathcal{M}_{n}(\mathbb{R})\)</span> 가 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 불변부분공간이며 <span class="math inline">\(\mathcal{M}_{n }(\mathbb{R})= U \oplus V\)</span> 이면 <span class="math inline">\(\boldsymbol{A}\)</span> 는 어떤 직교변환에 의해 블럭대각행렬이 된다.</p>
+<p><span class="theorem-title"><strong>보조정리 7.5</strong></span> 유한차원 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(L\)</span> 이 에르미트 연산자이고 <span class="math inline">\(U,\,W \le V\)</span> 가 <span class="math inline">\(L\)</span> 에 대한 불변부분공간이며 <span class="math inline">\(V= U \oplus W\)</span> 이면 <span class="math inline">\(L\)</span> 은 어떤 기저에서 블럭대각행렬이 된다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{u}\in U\)</span> 이면 <span class="math inline">\(\boldsymbol{Au}\in U\)</span> 이고 <span class="math inline">\(\boldsymbol{v}\in V\)</span> 이면 <span class="math inline">\(\boldsymbol{Av}\in V\)</span> 이다. <span class="math inline">\(\mathcal{M}_{n }(\mathbb{R}) = U \oplus V\)</span> 이므로 <span class="math inline">\(U\)</span> 의 정규직교기저 <span class="math inline">\(\{\boldsymbol{e}_i\}\)</span> 와 <span class="math inline">\(V\)</span> 의 정규직교기저 <span class="math inline">\(\{\boldsymbol{f}_j\}\)</span> 에 대해 <span class="math inline">\(\{\boldsymbol{e}_i\}\cup \{\boldsymbol{f}_j\}\)</span> 는 <span class="math inline">\(\mathcal{M}_{n }(\mathbb{R})\)</span> 의 기저이며 이 기저로의 직교변환에 대해 <span class="math inline">\(\boldsymbol{A}\)</span> 는 블럭대각행렬이 된다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(u\in U\)</span> 이면 <span class="math inline">\(Lu\in U\)</span> 이고 <span class="math inline">\(w\in W\)</span> 이면 <span class="math inline">\(Lw \in W\)</span> 이다. <span class="math inline">\(V = U \oplus W\)</span> 이므로 <span class="math inline">\(U\)</span> 의 정규직교기저 <span class="math inline">\((e_i)\)</span> 와 <span class="math inline">\(W\)</span> 의 정규직교기저 <span class="math inline">\((\boldsymbol{f}_j)\)</span> 에 대해 <span class="math inline">\(\mathcal{B}=\{e_i\}\cup \{f_j\}\)</span> 는 <span class="math inline">\(V\)</span> 의 기저이며 <span class="math inline">\([L]_\mathcal{B}\)</span> 는 블럭대각행렬이 된다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-LA_symmetric_matrix_digoalization" class="theorem lemma">
-<p><span class="theorem-title"><strong>보조정리 7.6</strong></span> <span class="math inline">\(\boldsymbol{A}\)</span> 가 대칭행렬이면 어떤 직교 변환에 의해 대각행렬이 된다.</p>
+<p><span class="theorem-title"><strong>보조정리 7.6</strong></span> 유한차원 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간에서 정의된 에르미트 연산자는 어떤 기저에서 대각행렬이 된다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(n\)</span> 에 대한 수학적 귀납법을 이용한다. <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{R})\)</span> 이 대칭행렬이라고 하자. <span class="math inline">\(n=1\)</span> 일 때는 스스로 대각행렬이다. 이제 <span class="math inline">\(k&lt;n\)</span> 인 대칭행렬은 어떤 직교 변환에 의해 대각행렬이 된다고 가정하자.</p>
-<p><span class="math inline">\(\boldsymbol{A}\)</span> 가 <span class="math inline">\(n \times n\)</span> 대칭 행렬일 때 고유값이 항상 존재하며 고유값에 대한 고유벡터 가운데 하나 <span class="math inline">\(\boldsymbol{u}_1\)</span> 를 이용하여 <span class="math inline">\(U=\text{span}(\boldsymbol{u}_1)\)</span> 를 만들면 <span class="math inline">\(U\)</span> 은 불변부분공간이며 <a href="#lem-LA_self_adjoint_matrix_and_invariable_space" class="quarto-xref">보조정리&nbsp;<span>7.4</span></a> 에서 보였듯이 <span class="math inline">\(U^\perp\)</span> 도 불변부분공간이다. <span class="math inline">\(\mathcal{M}_{n \times n}(\mathbb{R}) = U \otimes U^\perp\)</span> 이므로 <a href="#lem-LA_matrix_under_two_invariant_subspace" class="quarto-xref">보조정리&nbsp;<span>7.5</span></a> 에서 보였듯이 어떤 직교 변환에 의해 <span class="math inline">\(1\)</span> 행렬과 <span class="math inline">\((n-1)\times (n-1)\)</span> 행렬로 블록대각행렬이 된다. <span class="math inline">\((n-1)\times (n-1)\)</span> 행렬은 귀납법의 가정에 의해 대각행렬이 되므로 <span class="math inline">\(\boldsymbol{A}\)</span> 는 대각행렬이 된다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span>유한차원 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 에르미트 연산자 <span class="math inline">\(L\)</span> 을 생각하자. <span class="math inline">\(n =\dim(V)\)</span> 에 대한 수학적 귀납법을 이용한다. <span class="math inline">\(n=1\)</span> 일 때는 자명하므로 <span class="math inline">\(k&lt;n\)</span> 인 에르미트 연산자는 어떤 기저에서 대각행렬로 표현된다고 가정하자.</p>
+<p><span class="math inline">\([L]\)</span> 이 <span class="math inline">\(n \times n\)</span> 에르미트 연산자일 때 고유값이 항상 존재므로(<a href="#lem-LA_hermitian_real_matrix_eigenvalue" class="quarto-xref">보조정리&nbsp;<span>7.3</span></a>) 고유벡터 가운데 하나 <span class="math inline">\(u_1\)</span> 을 선택하여 <span class="math inline">\(U=\text{span}(u_1)\)</span> 를 만들면 <span class="math inline">\(U\)</span> 은 <span class="math inline">\(V\)</span> 에 대한 <span class="math inline">\(L\)</span>-불변부분공간이며 <a href="#lem-LA_self_adjoint_matrix_and_invariable_space" class="quarto-xref">보조정리&nbsp;<span>7.4</span></a> 에서 보였듯이 <span class="math inline">\(U^\perp\)</span> 도 불변부분공간이다. <span class="math inline">\(V = U \otimes U^\perp\)</span> 이므로 <a href="#lem-LA_matrix_under_two_invariant_subspace" class="quarto-xref">보조정리&nbsp;<span>7.5</span></a> 에서 보였듯이 어떤 직교 변환에 의해 <span class="math inline">\(1\)</span> 행렬과 <span class="math inline">\((n-1)\times (n-1)\)</span> 행렬로 블록대각행렬이 된다. <span class="math inline">\((n-1)\times (n-1)\)</span> 행렬은 귀납법의 가정에 의해 대각행렬이 되므로 <span class="math inline">\(\boldsymbol{A}\)</span> 는 대각행렬이 된다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-LA_spectrum_theorem_for_real_vector_space" class="theorem">
-<p><span class="theorem-title"><strong>정리 7.2 (실수체(<span class="math inline">\(\mathbb{R}\)</span>) 에서 정의된 행렬의 스펙트럼 정리)</strong></span> <span class="math inline">\(\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{R})\)</span> 행렬에 대해 다음 세 명제는 동치이다.</p>
-<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 는 대칭행렬이다.</p>
-<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 는 직교변환에 의해 대각행렬로 표현된다.</p>
-<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터로 <span class="math inline">\(\mathcal{M}_{n }(\mathbb{R})\)</span> 의 정규직교기저를 구성 할 수 있다.</p>
+<p><span class="theorem-title"><strong>정리 7.3 (<span class="math inline">\(\mathbb{R}\)</span>-스펙트럼 정리)</strong></span> 유한차원 <span class="math inline">\(R\)</span>-벡터공간에서 정의된 연산자 <span class="math inline">\(L\)</span> 에 대해 아래 세 명제는 동치이다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 는 에르미트 연산자이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 는 직교변환에 의해 대각행렬로 표현된다.</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(L\)</span> 의 고유벡터로 <span class="math inline">\(V\)</span> 의 정규직교기저를 구성 할 수 있다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\implies 2\)</span>) 는 앞에서 보였다.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\implies 2\)</span>) <a href="#lem-LA_symmetric_matrix_digoalization" class="quarto-xref">보조정리&nbsp;<span>7.6</span></a></p>
 <p>(<span class="math inline">\(2 \implies 3\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 가 orthognal 행렬 <span class="math inline">\(\boldsymbol{P}\)</span> 에 의해 대각행렬로 변환된다고 하자. 즉 <span class="math inline">\(\boldsymbol{P}^{-1}\boldsymbol{AP}=\boldsymbol{D}\)</span> 는 대각행렬이다. 대각행렬이 주어졌을 때, 표준정규직교벡터 <span class="math inline">\(\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}\)</span> 는 <span class="math inline">\(\lambda_i = D_{ii}\)</span> 를 고유값으로 갖는 대각행렬의 고유벡터이다. 여기서</p>
 <p><span class="math display">\[
 \boldsymbol{APe}_i = \boldsymbol{P}\boldsymbol{P}^{-1}\boldsymbol{APe}_i= \boldsymbol{PDe}_i=\lambda_i \boldsymbol{Pe}_i
@@ -676,7 +643,7 @@ c_0 \boldsymbol{v} + &amp; c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n\b
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_5_A_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.2 (Axler 5.A.2)</strong></span> <span class="math inline">\(\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 이고 <span class="math inline">\(\boldsymbol{AB}=\boldsymbol{BA}\)</span> 이면 <span class="math inline">\(\ker \boldsymbol{B}\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 불변부분공간이다.</p>
+<p><span class="theorem-title"><strong>연습문제 7.1 (Axler 5.A.2)</strong></span> <span class="math inline">\(\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 이고 <span class="math inline">\(\boldsymbol{AB}=\boldsymbol{BA}\)</span> 이면 <span class="math inline">\(\ker \boldsymbol{B}\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 불변부분공간이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -798,7 +765,7 @@ c_0 \boldsymbol{v} + &amp; c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n\b
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-LA_svd_1" class="theorem">
-<p><span class="theorem-title"><strong>정리 7.3 (1차 특이값 분해)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 가 <span class="math inline">\(M=\text{rank} (\boldsymbol{A}) \ge 1\)</span> 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{B}\in \mathcal{M}_{m \times M}(\mathbb{F})\)</span> 과 대각행렬 <span class="math inline">\(\boldsymbol{D}\in \mathcal{M}_{M \times M}(\mathbb{F})\)</span> 그리고 역시 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{C}=\mathcal{M}_{n \times M}(\mathbb{F})\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>정리 7.4 (1차 특이값 분해)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 가 <span class="math inline">\(M=\text{rank} (\boldsymbol{A}) \ge 1\)</span> 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{B}\in \mathcal{M}_{m \times M}(\mathbb{F})\)</span> 과 대각행렬 <span class="math inline">\(\boldsymbol{D}\in \mathcal{M}_{M \times M}(\mathbb{F})\)</span> 그리고 역시 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{C}=\mathcal{M}_{n \times M}(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
 \boldsymbol{A} = \boldsymbol{BDC}^\ast
 \]</span></p>
@@ -814,11 +781,11 @@ c_0 \boldsymbol{v} + &amp; c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n\b
 <p>이다. 임의의 벡터 <span class="math inline">\(\boldsymbol{v}\)</span> 에 대해 성립하므로 <span class="math inline">\(\boldsymbol{A} = \boldsymbol{BDC}^\ast\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p><a href="#thm-LA_svd_1" class="quarto-xref">정리&nbsp;<span>7.3</span></a> 은 실제 계산에서 잘 사용하지 않으며, 약간 변형된 형태로 많이 사용한다.</p>
+<p><a href="#thm-LA_svd_1" class="quarto-xref">정리&nbsp;<span>7.4</span></a> 은 실제 계산에서 잘 사용하지 않으며, 약간 변형된 형태로 많이 사용한다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-LA_svd_2" class="theorem">
-<p><span class="theorem-title"><strong>정리 7.4 (2차 특이값 분해)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 가 <span class="math inline">\(\text{rank} (\boldsymbol{A}) \ge 1\)</span> 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{U}\in \mathcal{M}_{m \times m}(\mathbb{F})\)</span> 과 대각성분이 1이며 나머지 성분은 0 인 직사각행렬 <span class="math inline">\(\boldsymbol{\Sigma}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 그리고 역시 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{V}=\mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>정리 7.5 (2차 특이값 분해)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 가 <span class="math inline">\(\text{rank} (\boldsymbol{A}) \ge 1\)</span> 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{U}\in \mathcal{M}_{m \times m}(\mathbb{F})\)</span> 과 대각성분이 1이며 나머지 성분은 0 인 직사각행렬 <span class="math inline">\(\boldsymbol{\Sigma}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 그리고 역시 서로 직교하는 열벡터로 구성된 <span class="math inline">\(\boldsymbol{V}=\mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
 \boldsymbol{A} = \boldsymbol{U\Sigma V}^\ast
 \]</span></p>
@@ -827,8 +794,8 @@ c_0 \boldsymbol{v} + &amp; c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n\b
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-LA_for_svd" class="quarto-xref">명제&nbsp;<span>7.7</span></a> 를 생각하자. <span class="math inline">\(\boldsymbol{U} = \begin{bmatrix} \boldsymbol{f}_1 &amp; \cdots &amp; \boldsymbol{f}_m\end{bmatrix}\)</span> 라 하고 <span class="math inline">\(\boldsymbol{V}= \begin{bmatrix} \boldsymbol{e}_1 &amp; \cdots \boldsymbol{e}_n\end{bmatrix}\)</span> 라고 하자. (<a href="#thm-LA_svd_1" class="quarto-xref">정리&nbsp;<span>7.3</span></a> 의 <span class="math inline">\(\boldsymbol{B},\, \boldsymbol{D}\)</span> 보다 큰데, 왼쪽 특이벡터와 오른쪽 특이벡터 전체를 사용한다.)</p>
-<p><a href="#thm-LA_svd_1" class="quarto-xref">정리&nbsp;<span>7.3</span></a> 에서 <span class="math inline">\(\boldsymbol{D}\)</span> 는 <span class="math inline">\(M \times M\)</span> 행렬이며 <span class="math inline">\(M \le \text{min}(m, n)\)</span> 이다. <span class="math inline">\(m \times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{\Sigma}\)</span> 을 1행 1열부터 <span class="math inline">\(M\)</span> 행 <span class="math inline">\(M\)</span> 열 까지를 <span class="math inline">\(\boldsymbol{D}\)</span> 와 같은 값을 가지며 나머지는 <span class="math inline">\(0\)</span> 인 행렬로 정의하자. 그렇다면, 임의의 <span class="math inline">\(\boldsymbol{v}\in \mathcal{M}_{n}(\mathbb{F})\)</span> 에 대해</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-LA_for_svd" class="quarto-xref">명제&nbsp;<span>7.7</span></a> 를 생각하자. <span class="math inline">\(\boldsymbol{U} = \begin{bmatrix} \boldsymbol{f}_1 &amp; \cdots &amp; \boldsymbol{f}_m\end{bmatrix}\)</span> 라 하고 <span class="math inline">\(\boldsymbol{V}= \begin{bmatrix} \boldsymbol{e}_1 &amp; \cdots \boldsymbol{e}_n\end{bmatrix}\)</span> 라고 하자. (<a href="#thm-LA_svd_1" class="quarto-xref">정리&nbsp;<span>7.4</span></a> 의 <span class="math inline">\(\boldsymbol{B},\, \boldsymbol{D}\)</span> 보다 큰데, 왼쪽 특이벡터와 오른쪽 특이벡터 전체를 사용한다.)</p>
+<p><a href="#thm-LA_svd_1" class="quarto-xref">정리&nbsp;<span>7.4</span></a> 에서 <span class="math inline">\(\boldsymbol{D}\)</span> 는 <span class="math inline">\(M \times M\)</span> 행렬이며 <span class="math inline">\(M \le \text{min}(m, n)\)</span> 이다. <span class="math inline">\(m \times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{\Sigma}\)</span> 을 1행 1열부터 <span class="math inline">\(M\)</span> 행 <span class="math inline">\(M\)</span> 열 까지를 <span class="math inline">\(\boldsymbol{D}\)</span> 와 같은 값을 가지며 나머지는 <span class="math inline">\(0\)</span> 인 행렬로 정의하자. 그렇다면, 임의의 <span class="math inline">\(\boldsymbol{v}\in \mathcal{M}_{n}(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
 \begin{aligned}
 \boldsymbol{U\Sigma V}^\ast \boldsymbol{v} =
@@ -838,7 +805,7 @@ c_0 \boldsymbol{v} + &amp; c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n\b
 \]</span></p>
 <p>이다. 즉 <span class="math inline">\(\boldsymbol{A} = \boldsymbol {U\Sigma V}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p>많은 경우 <a href="#thm-LA_svd_2" class="quarto-xref">정리&nbsp;<span>7.4</span></a> 의 형태로 특이값 분해를 사용한다.</p>
+<p>많은 경우 <a href="#thm-LA_svd_2" class="quarto-xref">정리&nbsp;<span>7.5</span></a> 의 형태로 특이값 분해를 사용한다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_adjoint_of_svd" class="theorem proposition">
@@ -884,7 +851,7 @@ c_0 \boldsymbol{v} + &amp; c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n\b
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-2">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.3 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이다. <span class="math inline">\(L=0\)</span> 인 것의 필요충분 조건은 <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 인 것임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.2 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이다. <span class="math inline">\(L=0\)</span> 인 것의 필요충분 조건은 <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 인 것임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -894,7 +861,7 @@ c_0 \boldsymbol{v} + &amp; c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n\b
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.4 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이며 <span class="math inline">\(s&gt;0\)</span> 이다. <span class="math inline">\(s\)</span> 가 <span class="math inline">\(L\)</span> 의 특이값일 필요충분조건은 어떤 nonzero vector <span class="math inline">\(v\in V,\, w\in W\)</span> 에 대해 <span class="math inline">\(Lv=sw\)</span> 이며 <span class="math inline">\(L^\ast w = sv\)</span> 임을 보여라. (이런 조건을 만족하는 <span class="math inline">\(v,\,w\)</span> 를 <strong>슈미트 쌍(Schmidt pair)</strong> 라고 한다.)</p>
+<p><span class="theorem-title"><strong>연습문제 7.3 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이며 <span class="math inline">\(s&gt;0\)</span> 이다. <span class="math inline">\(s\)</span> 가 <span class="math inline">\(L\)</span> 의 특이값일 필요충분조건은 어떤 nonzero vector <span class="math inline">\(v\in V,\, w\in W\)</span> 에 대해 <span class="math inline">\(Lv=sw\)</span> 이며 <span class="math inline">\(L^\ast w = sv\)</span> 임을 보여라. (이런 조건을 만족하는 <span class="math inline">\(v,\,w\)</span> 를 <strong>슈미트 쌍(Schmidt pair)</strong> 라고 한다.)</p>
 </div>
 </div>
 <p><br></p>
@@ -905,7 +872,7 @@ c_0 \boldsymbol{v} + &amp; c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n\b
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.5 (Axler4th 7.E.3)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 이다. <span class="math inline">\(L\)</span> 의 고유값은 <span class="math inline">\(0\)</span> 이며 특이값은 <span class="math inline">\(0,\,5\)</span> 인 예를 들어라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.4 (Axler4th 7.E.3)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 이다. <span class="math inline">\(L\)</span> 의 고유값은 <span class="math inline">\(0\)</span> 이며 특이값은 <span class="math inline">\(0,\,5\)</span> 인 예를 들어라.</p>
 </div>
 </div>
 <p><br></p>
@@ -915,7 +882,7 @@ c_0 \boldsymbol{v} + &amp; c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n\b
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.6 (Axler4th 7.E.4)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1\)</span> 이 <span class="math inline">\(L\)</span> 의 가장 큰 특이값이며 <span class="math inline">\(s_n\)</span> 이 가장 작은 특이값이라고 하자.</p>
+<p><span class="theorem-title"><strong>연습문제 7.5 (Axler4th 7.E.4)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1\)</span> 이 <span class="math inline">\(L\)</span> 의 가장 큰 특이값이며 <span class="math inline">\(s_n\)</span> 이 가장 작은 특이값이라고 하자.</p>
 <p><span class="math display">\[
 \{\|Lv\| : v\in V,\, \|v\|=1\}=[s_n,\,s_1]
 \]</span></p>
@@ -932,7 +899,7 @@ c_0 \boldsymbol{v} + &amp; c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n\b
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.7 (Axler4th 7.E.5)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 가 <span class="math inline">\(T(x,\,y) = (-4y,\,x)\)</span> 로 정의되었다. <span class="math inline">\(L\)</span> 의 특이값을 구하라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.6 (Axler4th 7.E.5)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 가 <span class="math inline">\(T(x,\,y) = (-4y,\,x)\)</span> 로 정의되었다. <span class="math inline">\(L\)</span> 의 특이값을 구하라.</p>
 </div>
 </div>
 <p><br></p>
@@ -942,7 +909,7 @@ c_0 \boldsymbol{v} + &amp; c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n\b
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_7" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.8 (Axler4th 7.E.7)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 에르미트 이거나 <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span> 이고 <span class="math inline">\(L\)</span> 이 정규행렬이라고 하자. <span class="math inline">\(\lambda_1,\ldots,\,\lambda_n\)</span> 이 <span class="math inline">\(L\)</span> 의 고유값이며 고유공간의 차원에 맞추어 중복되어 있다. <span class="math inline">\(L\)</span> 의 특이값은 <span class="math inline">\(|\lambda_1|,\ldots,\,|\lambda_n|\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.7 (Axler4th 7.E.7)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 에르미트 이거나 <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span> 이고 <span class="math inline">\(L\)</span> 이 정규행렬이라고 하자. <span class="math inline">\(\lambda_1,\ldots,\,\lambda_n\)</span> 이 <span class="math inline">\(L\)</span> 의 고유값이며 고유공간의 차원에 맞추어 중복되어 있다. <span class="math inline">\(L\)</span> 의 특이값은 <span class="math inline">\(|\lambda_1|,\ldots,\,|\lambda_n|\)</span> 임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -952,7 +919,7 @@ c_0 \boldsymbol{v} + &amp; c_1 \boldsymbol{Av} + \cdots + c_n \boldsymbol{A}^n\b
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_8" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.9 (Axler4th 7.E.8)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1,\ldots,\,s_m\)</span> 이 <span class="math inline">\(s_1\ge \cdots \ge s_m &gt; 0\)</span> 이며 <span class="math inline">\(e_1,\ldots,\,e_m\)</span> 은 <span class="math inline">\(V\)</span> 의 정규직교벡터이고 <span class="math inline">\(f_1,\ldots,\,f_m\)</span> 은 <span class="math inline">\(W\)</span> 의 정규직교벡터이며 <span class="math inline">\(v\in V\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>연습문제 7.8 (Axler4th 7.E.8)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1,\ldots,\,s_m\)</span> 이 <span class="math inline">\(s_1\ge \cdots \ge s_m &gt; 0\)</span> 이며 <span class="math inline">\(e_1,\ldots,\,e_m\)</span> 은 <span class="math inline">\(V\)</span> 의 정규직교벡터이고 <span class="math inline">\(f_1,\ldots,\,f_m\)</span> 은 <span class="math inline">\(W\)</span> 의 정규직교벡터이며 <span class="math inline">\(v\in V\)</span> 에 대해</p>
 <p><span class="math display">\[
 Lv = s_1 \langle v,\,e_1\rangle f_1 + \cdots + s_n \langle v,\,e_n\rangle f_n
 \]</span></p>
@@ -995,7 +962,7 @@ LL^\ast w = s_1^2 \langle w,\,f_1\rangle f_1 + \cdots + s_m^2 \langle w,\,f_m\ra
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#thm-LA_svd_2" class="quarto-xref">정리&nbsp;<span>7.4</span></a> 의 증명과정에서 <span class="math inline">\(\boldsymbol{Av} = \sum_i s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{f}_i\)</span> 임을 알았다. 이를 이용하면</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#thm-LA_svd_2" class="quarto-xref">정리&nbsp;<span>7.5</span></a> 의 증명과정에서 <span class="math inline">\(\boldsymbol{Av} = \sum_i s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{f}_i\)</span> 임을 알았다. 이를 이용하면</p>
 <p><span class="math display">\[
 \begin{aligned}
 \|\boldsymbol{Av}\|^2 &amp;= \left\| \sum_{i=1}^M s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{f}_i \right\|^2  \le \sum_{i=1}^M  |s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i\rangle|^2 \le {s_M}^2 \sum_{i=1}^M |\langle \boldsymbol{v},\, \boldsymbol{e}_i\rangle|^2 \le {s_M}^2 \|\boldsymbol{v}\|^2
@@ -1095,7 +1062,7 @@ LL^\ast w = s_1^2 \langle w,\,f_1\rangle f_1 + \cdots + s_m^2 \langle w,\,f_m\ra
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#thm-LA_svd_2" class="quarto-xref">정리&nbsp;<span>7.4</span></a> 를 생각하자. <span class="math inline">\(\boldsymbol{v}\in \mathcal{M}_n(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\boldsymbol{A}=\boldsymbol{U\Sigma V}^\ast\)</span> 이다. 이 때 <span class="math inline">\(\boldsymbol{V}_k = \begin{bmatrix} \boldsymbol{e}_1 &amp; \cdots &amp; \boldsymbol{e}_k &amp; 0 &amp; \cdots &amp; 0\end{bmatrix}\)</span> 라고 하고 <span class="math inline">\(\boldsymbol{A}_k = \boldsymbol{U\Sigma V}_k^\ast\)</span> 라고 하자.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#thm-LA_svd_2" class="quarto-xref">정리&nbsp;<span>7.5</span></a> 를 생각하자. <span class="math inline">\(\boldsymbol{v}\in \mathcal{M}_n(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\boldsymbol{A}=\boldsymbol{U\Sigma V}^\ast\)</span> 이다. 이 때 <span class="math inline">\(\boldsymbol{V}_k = \begin{bmatrix} \boldsymbol{e}_1 &amp; \cdots &amp; \boldsymbol{e}_k &amp; 0 &amp; \cdots &amp; 0\end{bmatrix}\)</span> 라고 하고 <span class="math inline">\(\boldsymbol{A}_k = \boldsymbol{U\Sigma V}_k^\ast\)</span> 라고 하자.</p>
 <p><span class="math display">\[
 (\boldsymbol{A}-\boldsymbol{A}_k)\boldsymbol{v} = \boldsymbol{U\Sigma} \begin{bmatrix}  \boldsymbol{0} \\ \langle \boldsymbol{v},\, \boldsymbol{e}_{k+1} \rangle \\ \vdots \\ \langle \boldsymbol{v},\,\boldsymbol{e}_{m} \rangle \\ \boldsymbol{0}\end{bmatrix} =  \sum_{i=k+1}^m s_{i} \langle \boldsymbol{v},\, \boldsymbol{e}_i\rangle \boldsymbol{f}_i
 \]</span></p>
@@ -1141,7 +1108,7 @@ a_1 \boldsymbol{Be}_1 + \cdots + a_{k+1}\boldsymbol{Be}_{k+1} = \boldsymbol{0}
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#thm-LA_svd_2" class="quarto-xref">정리&nbsp;<span>7.4</span></a> 형식의 특이값 분해 <span class="math inline">\(\boldsymbol{A}= \boldsymbol{U\Sigma V}^\ast\)</span> 를 사용한다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 정사각 행렬이므로 <span class="math inline">\(\boldsymbol{U},\,\boldsymbol{\Sigma},\, \boldsymbol{V}\)</span> 모두 정사각 행렬이다. <span class="math inline">\(\boldsymbol{\Sigma}\)</span> 는 실수 성분의 대각행렬이다. <span class="math inline">\(\boldsymbol{A}^\ast\boldsymbol{A} = \boldsymbol{V}\boldsymbol{\Sigma}^2\boldsymbol{V}^\ast\)</span> 이므로, <span class="math inline">\(\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}} = \boldsymbol{V\Sigma V}^\ast\)</span> 이다. 따라서 <span class="math inline">\(\boldsymbol{S}=\boldsymbol{UV}^\ast\)</span> 라고 하면 <span class="math inline">\(\boldsymbol{A} = \boldsymbol{S}\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#thm-LA_svd_2" class="quarto-xref">정리&nbsp;<span>7.5</span></a> 형식의 특이값 분해 <span class="math inline">\(\boldsymbol{A}= \boldsymbol{U\Sigma V}^\ast\)</span> 를 사용한다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 정사각 행렬이므로 <span class="math inline">\(\boldsymbol{U},\,\boldsymbol{\Sigma},\, \boldsymbol{V}\)</span> 모두 정사각 행렬이다. <span class="math inline">\(\boldsymbol{\Sigma}\)</span> 는 실수 성분의 대각행렬이다. <span class="math inline">\(\boldsymbol{A}^\ast\boldsymbol{A} = \boldsymbol{V}\boldsymbol{\Sigma}^2\boldsymbol{V}^\ast\)</span> 이므로, <span class="math inline">\(\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}} = \boldsymbol{V\Sigma V}^\ast\)</span> 이다. 따라서 <span class="math inline">\(\boldsymbol{S}=\boldsymbol{UV}^\ast\)</span> 라고 하면 <span class="math inline">\(\boldsymbol{A} = \boldsymbol{S}\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">

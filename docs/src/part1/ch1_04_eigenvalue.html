@@ -325,7 +325,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#블록행렬과-불변부분공간" id="toc-블록행렬과-불변부분공간" class="nav-link" data-scroll-target="#블록행렬과-불변부분공간"><span class="header-section-number">4.3</span> 블록행렬과 불변부분공간</a>
   <ul class="collapse">
-  <li><a href="#불변-부분공간과-블럭-상삼각행렬" id="toc-불변-부분공간과-블럭-상삼각행렬" class="nav-link" data-scroll-target="#불변-부분공간과-블럭-상삼각행렬"><span class="header-section-number">4.3.1</span> 불변 부분공간과 블럭 상삼각행렬</a></li>
+  <li><a href="#sec-LA_invariant_subspace_and_block_upper_triangular_matrix" id="toc-sec-LA_invariant_subspace_and_block_upper_triangular_matrix" class="nav-link" data-scroll-target="#sec-LA_invariant_subspace_and_block_upper_triangular_matrix"><span class="header-section-number">4.3.1</span> 불변 부분공간과 블럭 상삼각행렬</a></li>
   </ul></li>
   <li><a href="#행렬의-상삼각행렬로의-변환" id="toc-행렬의-상삼각행렬로의-변환" class="nav-link" data-scroll-target="#행렬의-상삼각행렬로의-변환"><span class="header-section-number">4.4</span> 행렬의 상삼각행렬로의 변환</a>
   <ul class="collapse">
@@ -708,16 +708,6 @@ p(L) := a_n L^n + a_{n-1}L^{n-1} + \cdots a_1 L + a_0 I_V.
 </section>
 <section id="sec-LA_characteristic_polynomial" class="level3" data-number="4.2.2">
 <h3 data-number="4.2.2" class="anchored" data-anchor-id="sec-LA_characteristic_polynomial"><span class="header-section-number">4.2.2</span> 특성다항식</h3>
-<div class="callout callout-style-simple callout-caution no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>여기부터 이 장의 마지막까지 유한차원 벡터공간에서 생각하기로 한다. 그리고 유한차원 벡터공간과 그 연산자가 아니라 그 행렬표현으로 전개하도록 하겠다.</p>
-</div>
-</div>
-</div>
 <p><span class="math inline">\(\lambda\)</span> 를 미지수로 간주하면 <span class="math inline">\(n \times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 <span class="math inline">\(\det (\lambda \boldsymbol{I}-\boldsymbol{A})\)</span> 는 <span class="math inline">\(\lambda\)</span> 에 대한 <span class="math inline">\(n\)</span> 차 다항식이다. 이 다항식의 근이 존재한다면, 그 근이 고유값이 되며, 이 고유값에 대한 고유벡터가 항상 존재한다는 의미이다. 이 다항식은 매우 중요하기 때문에 특별한 이름이 붙어 있다.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -726,7 +716,7 @@ p(L) := a_n L^n + a_{n-1}L^{n-1} + \cdots a_1 L + a_0 I_V.
 </div>
 <div class="callout-body-container">
 <div id="def-LA_characteristic_polynomial" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.5 (행렬의 특성다항식)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대한 <span class="math inline">\(p_{\boldsymbol{A}}(\lambda) = \det (\lambda \boldsymbol{I}-\boldsymbol{A})\)</span> 를 <strong>특성 다항식(characteristic polynomial)</strong> 이라 한다.</p>
+<p><span class="theorem-title"><strong>정의 4.5 (행렬의 특성다항식)</strong></span> 정사각행렬 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(p_{\boldsymbol{A}}(\lambda) := \det (\lambda \boldsymbol{I}-\boldsymbol{A})\)</span> 를 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <strong>특성 다항식(characteristic polynomial)</strong> 이라 한다.</p>
 </div>
 </div>
 </div>
@@ -803,7 +793,6 @@ p(L) := a_n L^n + a_{n-1}L^{n-1} + \cdots a_1 L + a_0 I_V.
 </section>
 <section id="연습문제-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
-<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_5_A_33" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 4.15 (Axler4th 5.A.33)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(m\)</span> 이 양의 정수이다. 다음을 보여라.</p>
@@ -858,10 +847,19 @@ p(KLK^{-1}) &amp;= \sum_{m=0}^n c_m (KLK^{-1})^m = \sum_{m=0}^n c_m KL^mK^{-1} \
 </section>
 <section id="블록행렬과-불변부분공간" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="블록행렬과-불변부분공간"><span class="header-section-number">4.3</span> 블록행렬과 불변부분공간</h2>
-<p><a href="../../src/part1/ch1_03_determinant.html#def-LA_block_matrix">블록행렬</a>의 대각 부분 행렬이 정사각행렬이라면, 행렬의 모든 대각성분은 부분행렬의 대각성분이 된다. 이를 대각 부분행렬이라 하자. 대각 부분행렬을 제외한 부분행렬이 모두 <span class="math inline">\(0\)</span> 행렬인 경우 <strong>블록 대각 행렬 (block diagonal matrix)</strong> 라 한다. 상삼각 행렬/하삼각 행렬처럼 <strong>블록 상삼각 행렬(block upper triangular matrix)</strong> 와 <strong>블록 하삼각 행렬(block lower triangular matrix)</strong> 를 정의 할 수 있다.</p>
+<p><a href="../../src/part1/ch1_03_determinant.html#def-LA_block_matrix">블록행렬</a>의 대각 부분 행렬이 정사각행렬이라면, 행렬의 모든 대각성분은 부분행렬의 대각성분이 된다. 이를 대각 부분행렬이라 하자. 대각 부분행렬을 제외한 부분행렬이 모두 <span class="math inline">\(0\)</span> 행렬인 경우 <strong>블록 대각 행렬 (block diagonal matrix)</strong> 라 한다. 상삼각 행렬/하삼각 행렬처럼 <strong>블록 상삼각행렬(block upper triangular matrix)</strong> 와 <strong>블록 하삼각행렬(block lower triangular matrix)</strong> 를 정의 할 수 있다.</p>
+<p>즉 <span class="math inline">\(\boldsymbol{A}=\mathcal{M}_{m \times m}(\mathbb{F}), \boldsymbol{B} = \mathcal{M}_{n\times n}(\mathbb{F}),\, \boldsymbol{C}=\mathcal{M}_{m\times n}(\mathbb{F}),\, \boldsymbol{D}= \mathcal{M}_{n \times m}(\mathbb{F})\)</span> 에 대해</p>
+<p><span class="math display">\[
+\begin{bmatrix} \boldsymbol{A} &amp; \boldsymbol{C} \\ \boldsymbol{0} &amp; \boldsymbol{B}\end{bmatrix}
+\]</span></p>
+<p>형태인 행렬을 블럭 상삼각행렬 이라고 하고</p>
+<p><span class="math display">\[
+\begin{bmatrix} \boldsymbol{A} &amp; \boldsymbol{0} \\ \boldsymbol{D} &amp; \boldsymbol{B}\end{bmatrix}
+\]</span></p>
+<p>형태인 행렬을 블럭 하삼각행렬 이라고 한다.</p>
 <p><br></p>
-<section id="불변-부분공간과-블럭-상삼각행렬" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="불변-부분공간과-블럭-상삼각행렬"><span class="header-section-number">4.3.1</span> 불변 부분공간과 블럭 상삼각행렬</h3>
+<section id="sec-LA_invariant_subspace_and_block_upper_triangular_matrix" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="sec-LA_invariant_subspace_and_block_upper_triangular_matrix"><span class="header-section-number">4.3.1</span> 불변 부분공간과 블럭 상삼각행렬</h3>
 <p>우선 <a href="ch1_02_linear_map.html#sec-LA_matrix_transform_by_basis_transform" class="quarto-xref"><span> 2.4.5</span></a> 에서 본 행렬의 닮음 변환을 다시 한번 상기하자. <span class="math inline">\(\mathcal{M}_{n}(\mathbb{F})\)</span> 공간에서 정의된 선형독립인 벡터 <span class="math inline">\(\{\boldsymbol{u}_1,\ldots,\, \boldsymbol{u}_n\}\)</span> 와 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 을 생각하자. <span class="math inline">\(\boldsymbol{u}_i\)</span> 가 <span class="math inline">\(i\)</span> 번째 열이 된 행렬 <span class="math inline">\(\boldsymbol{P} = \begin{bmatrix} \boldsymbol{u}_1 &amp; \cdots &amp; \boldsymbol{u}_n \end{bmatrix}\)</span> 는 기저를 변환하는 행렬, 즉 닮음변환을 정의하는 행렬이 되며 <span class="math inline">\(\boldsymbol{P}^{-1}\boldsymbol{AP}\)</span> 는 변환된 기저에서의 선형사상이고 변환행렬 <span class="math inline">\(\boldsymbol{P}= \begin{bmatrix} \boldsymbol{u}_1 &amp; \cdots &amp; \boldsymbol{u}_n\end{bmatrix}\)</span> 가 정의되며 아래 표와 같이 변환된다.</p>
 <table class="caption-top table">
 <thead>
@@ -911,7 +909,7 @@ B_{1i}\boldsymbol{u}_i + \cdots + B_{mi}\boldsymbol{u}_m + \cdots + B_{ni}\bolds
 <div id="prp-LA_upper_triangular_matrix" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 4.10</strong></span> 정사각 행렬 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 다음은 동치이다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 가 어떤 상삼각행렬과 닮음이다.</p>
-<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\mathcal{M}_{n}(\mathbb{F})\)</span> 의 어떤 기저 <span class="math inline">\((\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_n)\)</span> 가 존재하여 <span class="math inline">\(i=1,\ldots,\,n\)</span> 에 대해 <span class="math inline">\(\boldsymbol{Av}_i = \text{span}(\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_i)\)</span> 이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\mathcal{M}_{n}(\mathbb{F})\)</span> 의 어떤 기저 <span class="math inline">\((\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_n)\)</span> 가 존재하여 <span class="math inline">\(\boldsymbol{Av}_i = \text{span}(\boldsymbol{v}_1,\ldots,\,\boldsymbol{v}_i)\)</span> 이다.</p>
 </div>
 </div>
 <div class="proof">
@@ -928,15 +926,21 @@ B_{1i}\boldsymbol{u}_i + \cdots + B_{mi}\boldsymbol{u}_m + \cdots + B_{ni}\bolds
 </section>
 <section id="sec-LA_matrix_and_upper_triangula_matrix_over_C" class="level3" data-number="4.4.2">
 <h3 data-number="4.4.2" class="anchored" data-anchor-id="sec-LA_matrix_and_upper_triangula_matrix_over_C"><span class="header-section-number">4.4.2</span> 복소수체에서의 행렬과 상삼각행렬</h3>
-<p>이제 이 장에서 가장 중요한 결론을 낼 수 있다.</p>
-<br>
+<p>이제 중요한 결론을 낼 수 있다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-LA_uppertriangular_matrix_complex_field" class="theorem">
-<p><span class="theorem-title"><strong>정리 4.4</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{C})\)</span> 행렬과 닮은 상삼각 행렬이 존재한다.</p>
+<p><span class="theorem-title"><strong>정리 4.4</strong></span> 복소수체에서 정의된 행렬 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{C})\)</span> 는 닮은 상삼각행렬이 존재한다.</p>
 </div>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{A}_n \in \mathcal{M}_{n \times n}(\mathbb{C})\)</span> 이라 하고 <span class="math inline">\(n\)</span> 에 대한 귀납법으로 증명한다. <span class="math inline">\(n=1\)</span> 일 때는 자명하다. <span class="math inline">\(k&lt;n\)</span> 에 대해 위의 명제가 성립한다고 가정하자. 우리는 <a href="#thm-LA_existance_of_eigenvector_for_complex_field" class="quarto-xref">정리&nbsp;<span>4.3</span></a> 를 통해 행렬 <span class="math inline">\(\boldsymbol{A}_n\)</span> 에 대한 고유값 <span class="math inline">\(\lambda\)</span> 와 고유벡터 <span class="math inline">\(\boldsymbol{v}_1\)</span> 이 존재한다는 것을 안다. <span class="math inline">\(\boldsymbol{v}_1\)</span> 을 확장하여 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})\)</span> 의 기저를 구성 할 수 있으며, 이 기저로 변환된 블럭 상삼각행렬을 이룬다 (<a href="#prp-LA_invariant_subspace_block_upperdiagonal_matrix" class="quarto-xref">명제&nbsp;<span>4.9</span></a>). 이 블럭 상삼각 행렬의 1 행과 1 열을 제거한 <span class="math inline">\((n-1)\times (n-1)\)</span> 행렬은 가정에 의해 어떤 상 삼각 행렬과 닮았다. 따라서 <span class="math inline">\(\boldsymbol{A}_n\)</span> 은 어떤 상 삼각행렬과 닮았다. <span class="math inline">\(\square\)</span></p>
+</div>
+<p><br></p>
+<p>연산자의 행렬표현을 생각하면 아래의 결론을 얻는다</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-LA_uppertriangular_matrix_representation_over_complex_field" class="theorem">
+<p><span class="theorem-title"><strong>정리 4.5</strong></span> 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 는 어떤 기저에서 상삼각행렬 표현을 갖는다.</p>
+</div>
 </div>
 <p><br></p>
 </section>
@@ -977,7 +981,7 @@ E(\lambda_1,L) + \cdots + E(\lambda_m,L) = \bigoplus_{i=1}^m E(\lambda_i,L)
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-LA_diagonalizability" class="theorem">
-<p><span class="theorem-title"><strong>정리 4.5</strong></span> 유한차원 벡터공간에서의 연산자 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이 서로 다른 고유값 <span class="math inline">\(\lambda_1,\ldots,\,\lambda_m\)</span> 을 가질 때 다음은 동치이다.</p>
+<p><span class="theorem-title"><strong>정리 4.6</strong></span> 유한차원 벡터공간에서의 연산자 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이 서로 다른 고유값 <span class="math inline">\(\lambda_1,\ldots,\,\lambda_m\)</span> 을 가질 때 다음은 동치이다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 는 대각화 가능하다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 의 고유벡터로 이루어진 <span class="math inline">\(V\)</span> 의 기저가 존재한다.</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(V= E(\lambda_1, L) \oplus \cdots \oplus E(\lambda_m, L)\)</span></p>
@@ -1044,7 +1048,7 @@ E(\lambda_1,L) + \cdots + E(\lambda_m,L) = \bigoplus_{i=1}^m E(\lambda_i,L)
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#thm-LA_diagonalizability" class="quarto-xref">정리&nbsp;<span>4.5</span></a> 로부터 <span class="math inline">\(\ker (L) = E(0,\,L)\)</span> 이며 <span class="math inline">\(\text{im}(L)= \bigoplus_{i=1,\, \lambda_i \ne 0}^n E(\lambda_i,\,L)\)</span> 임을 안다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#thm-LA_diagonalizability" class="quarto-xref">정리&nbsp;<span>4.6</span></a> 로부터 <span class="math inline">\(\ker (L) = E(0,\,L)\)</span> 이며 <span class="math inline">\(\text{im}(L)= \bigoplus_{i=1,\, \lambda_i \ne 0}^n E(\lambda_i,\,L)\)</span> 임을 안다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
@@ -1086,21 +1090,8 @@ E(\lambda_1,L) + \cdots + E(\lambda_m,L) = \bigoplus_{i=1}^m E(\lambda_i,L)
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_5_c_6" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.25 (Axler 5.C.6)</strong></span> <span class="math inline">\(\boldsymbol{A},\, \boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 이고 <span class="math inline">\(\boldsymbol{A}\)</span> 가 <span class="math inline">\(n\)</span> 개의 서로 다른 고유값을 가지며 <span class="math inline">\(\boldsymbol{B}\)</span> 가 <span class="math inline">\(\boldsymbol{A}\)</span> 와 같은 고유벡터를 가질 때 <span class="math inline">\(\boldsymbol{AB}=\boldsymbol{BA}\)</span> 임을 보여라.</p>
-</div>
-</div>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((\boldsymbol{u}_1,\ldots,\boldsymbol{u}_n)\)</span> 을 각각 <span class="math inline">\(\lambda_i\)</span> 의 고유값을 갖는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터라고 하면 이 벡터는 각각 다른 고유값을 가지므로 선형독립이며, 따라서 기저이다. <span class="math inline">\(\boldsymbol{U} = \begin{bmatrix} \boldsymbol{u}_1 &amp; \cdots &amp; \boldsymbol{u}_n\end{bmatrix}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{U}^{-1}\boldsymbol{AU}\)</span> 와 <span class="math inline">\(\boldsymbol{U}^{-1}\boldsymbol{BU}\)</span> 는 각각 고유값을 대각성분으로 갖는 대각행렬이며, 두 대각행렬의 곱은 순서에 관계 없이 같으므로,</p>
-<p><span class="math display">\[
-(\boldsymbol{U}^{-1}\boldsymbol{AU}) (\boldsymbol{U}^{-1}\boldsymbol{BU})=(\boldsymbol{U}^{-1}\boldsymbol{BU}) (\boldsymbol{U}^{-1}\boldsymbol{AU})
-\]</span></p>
-<p>이다. 이로부터 <span class="math inline">\(\boldsymbol{AB}=\boldsymbol{BA}\)</span> 를 얻는다.</p>
-</div>
-<br>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_5_c_16" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.26 (피보나치 수열)</strong></span> 수열 <span class="math inline">\(\langle f_n \rangle\)</span> 이 다음과 같이 정의되었다. (이 수열을 피보나치 수열 (Fibonacci sequence) 이라고 한다.)</p>
+<p><span class="theorem-title"><strong>연습문제 4.25 (피보나치 수열)</strong></span> 수열 <span class="math inline">\(\langle f_n \rangle\)</span> 이 다음과 같이 정의되었다. (이 수열을 피보나치 수열 (Fibonacci sequence) 이라고 한다.)</p>
 <p><span class="math display">\[
 f_1 = 1,\qquad f_2=1,\qquad f_{n+2} = f_{n+1} +f_n.
 \]</span></p>

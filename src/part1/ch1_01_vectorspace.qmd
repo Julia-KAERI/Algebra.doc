@@ -148,6 +148,7 @@ $$
 
 </br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
 ::: {#prp-LA_zero_one_vector}
 
 벡터공간 $V$ 와 $v\in V$ 그리고 영벡터 $O_V$ 에 대해 다음이 성립한다.

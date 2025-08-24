@@ -13,13 +13,13 @@ crossref:
 
 ## 스펙트럼 정리
 
-### 복소수체($\mathbb{C}$) 에서 정의된 행렬에 대한 스펙트럼 정리 {#sec-LA_spectral_theorem_on_complexe_field}
+### $\C$-스펙트럼 정리 {#sec-LA_complex_spectral_theorem}
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-LA_spectrum_theorem_for_complex_vector_space}
 
-#### 복소수체에서 정의된 행렬에 대한 스펙트럼 정리
+#### $C$-스펙트럼 정리
 
 유한차원 $\C$-벡터공간 $V$ 에서 정의된 $N \in \mathcal{L}(V)$ 에 대해 다음 세 명제는 동치이다.
 
@@ -36,119 +36,83 @@ crossref:
 
 ($1 \implies 2$) 는 @prp-LA_diagonality_of_norma_matrix 에서 보였다.
 
-($2\implies 3$) $\bf{A}$ 가 unitary 행렬 $\bf{P}$ 에 의해 대각행렬로 변환된다고 하자. 즉 $\bf{P}^{-1}\bf{AP}=\bf{D}$ 는 대각행렬이다. 대각행렬이 주어졌을 때, 표준정규직교벡터 $\{\bf{e}_1,\ldots,\,\bf{e}_n\}$ 는 $\lambda_i = D_{ii}$ 를 고유값으로 갖는 대각행렬의 고유벡터이다. 여기서
+($2\implies 3$) $\mathcal{B}=(e_1,\ldots,\,e_n)$ 이 $N$ 을 대각행렬로 표현는 정규직교기저라고 하고 이 대각행렬을 $\bf{N}$ 이라고 하자. $n_i = N_{ii}$ 라고 하면 $N_{ij}= \langle N(e_j),\,e_i\rangle = n_i\delta_{ij}$ 이므로 $N(e_j)= n_j e_j$ 이다. 즉 $\mathcal{B}$ 는 $N$ 의 고유벡터이다.
 
-$$
-\bf{APe}_i = \bf{P}\bf{P}^{-1}\bf{APe}_i= \bf{PDe}_i=\lambda_i \bf{Pe}_i
-$$
-
-이므로 $\bf{Pe}_i$ 는 $\bf{A}$ 의 고유벡터이다. $\bf{P}$ 가 linear isometry 이므로 $\{\bf{Pe}_1,\ldots,\,\bf{Pe}_n\}$ 은 $\bf{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_n(\mathbb{C})$ 의 정규직교기저이다.
-
-($3. \implies 1.$) $\{\bf{e}_1,\ldots,\,\bf{e}_n\}$ 이 $\bf{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저라 하자. 이 때 $\bf{u}_i$ 의 고유값은 $\lambda_i$ 라 하자.  
-
-$$
-\langle \bf{A}^\ast \bf{e}_i,\,\bf{e}_j\rangle = \langle \bf{e}_i,\, \bf{Ae}_j\rangle = \overline{\lambda_j} \delta_{ij}
-$$
-
-이다. 즉,
-
-$$
-\bf{A}^\ast \bf{e}_i = \overline{\lambda_i} \bf{e}_i
-$$
-
-이다. $\bf{u} = \sum_i u_i \bf{e}_i$ 에 대해,
+($3 \implies 1$) $\mathcal{B} = (e_1,\ldots,\,e_n)$ 가 $V$ 의 정규직교벡터이며 $N$ 의 고유벡터의 집합이라고 하자. $N(e_i)= n_i e_i$ 일 때 $\langle N(e_i),\,e_j\rangle = n_i$ 이며 $\langle N^\ast(e_i),\, e_j\rangle = \overline{n_i}$ 이다. $v=\sum_i a_i e_i$ 에 대해
 
 $$
 \begin{aligned}
-\|\bf{A}^\ast \bf{u} \|^2 &=  \left\langle \bf{A}^\ast \left(\sum_i u_i \bf{e}_i \right),\, \bf{A}^\ast \left(\sum_j u_j \bf{e}_j \right) \right\rangle \\
-&=\sum_{i,\,j} u_i \overline{u_j} \left\langle \bf{A}^\ast\bf{e}_i,\, \bf{A}^\ast \bf{e}_j\right\rangle \\
-&= \sum_{i} |u_i|^2 |\lambda_i|^2 \\
-&= \|\bf{A}\bf{u}\|^2
+\| Nv \|^2 &= \langle Nv,\,Nv\rangle =\sum_{i, j} a_i \overline{a_j} \langle e_i,e_j\rangle = \sum_j |a_i|^2, \\[0.3em]
+\|N^\ast v\|^2 &=  \langle N^\ast v,\, N^\ast v\rangle = \sum_j |a_i|^2 = \|Nv\|^2
 \end{aligned}
 $$
 
-이므로 $\bf{A}$ 는 정규행렬이다. $\square$
+이므로 $N$ 은 정규연산자이다. $\square$
 
 :::
-
-</br>
-
-::: {.callout-important appearance="minimal"}
-정규행렬은 고유벡터로 이루어진 정규직교기저가 존재하며, 따라서 이 기저에서 대각행렬로 변환된다는 좋은 성질을 가진다. 에르미트 행렬은 정규행렬이므로 이 성질을 공유하며 더하여 고유값이 항상 실수이다.
-:::
-
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-
-::: {#exr-hermitian_normal}
-
-복소 정사각 행렬 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{C})$ 이 정규행렬이며 그 고유값이 모두 실수이면 $\bf{A}$ 는 에르미트 행렬임을 보여라.
-
-:::
-
-</div>
-
-::: {.solution}
-
-$\{\bf{e}_1,\ldots,\,\bf{e}_n\}$ 이 $\bf{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{C})$ 의 정규직교기저이고 $\bf{e}_i$ 의 고유값은 $\lambda_i$ 라 하자. @prp-LA_hermite_tvv 에서 보았듯이 임의의 $\bf{u} \in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \bf{Au},\bf{u}\rangle$ 이 실수이면 $\bf{A}$ 는 에르미트 행렬이다. $\bf{u}= \sum_i^n u_i \bf{e}_i$ 라 하면,
-
-$$
-\begin{aligned}
-\langle \bf{Au},\, \bf{u}\rangle = \sum_i \lambda_i |u_i|^2 \in \mathbb{R}
-\end{aligned}
-$$
-
-이다. 즉 $\bf{A}$ 는 에르미트 행렬이다. $\square$
-:::
-
-</br>
-
-### 실수체에서의 스펙트럼 정리를 위해 미리 알아야 할 것들 {#sec-LA_prerequisite_for_spectral_theorem_on_real_field}
-
-실수체에서 정의된 행렬 $\bf{A}$ 가 에르미트 행렬이면 대칭행렬이며, 대칭행렬이면 에르미트 행렬이다. 실수체에서 정의된 스펙트럼 정리를 증명하기 위해서는 몇가지 미리 증명해야 할 것이 있다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#lem-LA_invirtible_deformation}
+::: {#thm-LA_hermitian_normal_on_C}
 
-$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 행렬에 대해 $\bf{A}$ 가 대칭행렬이고 실수 $b,\,c$ 가 $b^2-4c <0$ 일 때 
+유한차원 $\C$-벡터공간에서 정의된 정규연산자의 고유값이 모두 실수이면 이 정규연산자는 에르미트 연산자이다.
 
-$$
-\bf{A}^2+b\bf{A}+c\bf{I}_n
-$$
-
-은 가역행렬이다.
 :::
 
 </div>
 
 ::: {.proof}
 
-영벡터가 아닌 벡터 $\bf{v}\in \mathbb{R}^{n}$ 에 대해
+@thm-LA_spectrum_theorem_for_complex_vector_space 로부터 정규연산자 $H$ 의 고유벡터의 집합이며 벡터공간의 기저인 $\mathcal{B}=(e_1,\ldots,e_n)$ 가 존재한다. $H_i e_i = h_i e_i$ 라고 하자. @prp-LA_hermite_tvv 를 이용하자. $u=\sum_i a_i e_i$ 라고 하면
+
+$$
+\langle H(u),\, u \rangle- \overline{\langle H(u),\, u \rangle} = \sum_i (h_i-\overline{h_i}) |a_i|^2 = 0
+$$
+
+이므로 $H$ 는 에르미트연산이다. $\square$
+:::
+
+</br>
+
+### $\R$-스펙트럼 정리를 위해 미리 알아야 할 것들{#sec-LA_prerequisite_for_spectral_theorem_on_real_field}
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#lem-LA_invirtible_deformation}
+
+에르미트 연산자 $L\in \mathcal{L}(V)$ 에 대해  실수 $b,\,c$ 가 $b^2-4c <0$ 이면 $L^2+bL+cI$ 은 가역이다.
+:::
+
+</div>
+
+::: {.proof}
+
+영벡터가 아닌 벡터 $v\in V$ 에 대해
 
 $$
 \begin{aligned}
-\langle (\bf{A}^2+b\bf{A}+c\bf{I}_n) \bf{v},\, \bf{v} \rangle &= \langle \bf{Av},\,\bf{Av} \rangle + b\langle \bf{Av},\,\bf{v} \rangle + c\langle \bf{v},\,\bf{v} \rangle \\
-&= \|\bf{Av}\|^2 + b\langle \bf{Av}, \,\bf{v}\rangle + c\langle \bf{v},\,\bf{v}\rangle
+\langle (L^2+b L+cI) v,\, v \rangle &= \langle Lv,\,Lv \rangle + b\langle Lv,\,v \rangle + c\langle v,\,v \rangle \\[0.3em]
+&= \|Lv\|^2 + b\langle Lv, \,v\rangle + c\langle v,\,v\rangle
 \end{aligned}
 $$
 
 이다. 코시-슈바르츠 부등식으로부터,
 
 $$
-|b\langle \bf{Av},\,\bf{v}\rangle | \le |b| \cdot \|\bf{Av}\|\|\bf{v}\|
+|b\langle Lv,\,v\rangle | \le |b| \cdot \|Lv\|\cdot\|v\|
 $$
 
-임을 안다. 즉 $b\langle \bf{Av},\,\bf{v}\rangle  \ge -|b| \|\bf{Av}\|\|\bf{v}\|$ 이며,
+임을 안다. 즉 $b\langle Lv,\,v\rangle  \ge -|b| \|Lv\|\|v\|$ 이며,
 
 $$
 \begin{aligned}
-\langle (\bf{A}^2+b\bf{A}+c\bf{I}_n) \bf{v},\, \bf{v} \rangle  & = \|\bf{Av}\|^2 + b\langle \bf{Av} ,\,\bf{v}\rangle + c\langle \bf{v},\,\bf{v}\rangle \\
-& \ge \|\bf{Av}\|^2-|b|\|\bf{Av}\|\|\bf{v}\| + c\|\bf{v}\|^2 \\
-&= \left(\|\bf{Av}\| - \dfrac{|b|\|\bf{v}\|}{2}\right)^2 + \left(c-\dfrac{b^2}{4}\right)\|\bf{Av}\|^2 >0
+\langle (L^2+b L+cI) v,\, v \rangle \rangle  & = \|Lv\|^2 + b\langle Lv ,\,v\rangle + c\langle v,\,v\rangle \\[0.3em]
+& \ge \|Lv\|^2-|b|\|Lv\|\|v\| + c\|v\|^2 \\[0.3em]
+&= \left(\|Lv\| - \dfrac{|b|\|v\|}{2}\right)^2 + \left(c-\dfrac{b^2}{4}\right)\|Lv\|^2 >0
 \end{aligned}
 $$
 
-이다. $\ker (\bf{A}^2+b\bf{A}+c\bf{I}_n) =\{0\}$ 이므로 $\bf{A}^2+b\bf{A}+c\bf{I}_n$ 는 가역행렬이다. $\square$
+이다. $\ker (L^2+bL+cI) =\{0\}$ 이므로 $L^2+bL+cI$ 는 가역이다. $\square$
 
 :::
 
@@ -186,34 +150,34 @@ $$
 
 </br>
 
-### 실수체에서 정의된 행렬에 대한 스펙트럼 정리 {#sec-LA_spectral_theorem_on_real_field}
+### $\R$-스펙트럼 정리 {#sec-LA_real_spectral_theorem}
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-LA_hermitian_real_matrix_eigenvalue}
-$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬이면 고유값을 가진다.
+유한차원 $\R$-벡터공간 $V$ 에서의 에르미트 연산자는 고유값을 가진다.
 :::
 
 </div>
 
 ::: {.proof}
 
-영벡터가 아닌 $\bf{v} \in \mathcal{M}_{n }(\mathbb{R})$ 을 생각하자. $\{\bf{v},\, \bf{Av},\ldots,\, \bf{A}^n \bf{v}\}$ 는 포함된 벡터의 갯수가 $n$ 보다 많으므로 선형종속이며, 따라서
+$n=\dim (V)$ 라고 하자. 영벡터가 아닌 $v \in V$ 을 생각하자. $L\in \mathcal{L}(V)$ 가 에르미트 연산자라고 하자. $\{v,\, Lv,\ldots,\, L^n v\}$ 는 포함된 벡터의 갯수가 $n$ 보다 많으므로 선형종속이며, 따라서
 
 $$
-0=c_0 \bf{v} + c_1 \bf{Av} + \cdots + c_n \bf{A}^n \bf{v}
+0_V=c_0 v + c_1 Lv + \cdots + c_n L^n v
 $$
 
 를 만족하는 nontrivial 한 $\{c_i\}$ 가 존재한다. @lem-LA_factorization_of_polinomial 에 의해,
 
 $$
 \begin{aligned}
-c_0 \bf{v} + & c_1 \bf{Av} + \cdots + c_n \bf{A}^n\bf{v} \\
-&= c(\bf{A}-\lambda_1 \bf{I})\cdots (\bf{A}-\lambda_m \bf{I}) (\bf{A}^2 +b_1 \bf{A}+c_1\bf{I})\cdots (\bf{A}^2 +b_M \bf{A}+c_M\bf{I})\bf{v}
+c_0 v + & c_1 Lv + \cdots + c_n L^nv \\
+&= c(L-\lambda_1 I)\cdots (L-\lambda_m I) (L^2 +b_1 L+c_1 I)\cdots (L^2 +b_M L+c_MI)(v)
 \end{aligned}
 $$
 
-로 분해 할 수 있다. 이 때 $i=1,\ldots,\,M$ 에 대해 $b_i^2<4c_i$ 이다. @lem-LA_invirtible_deformation 에 의해 $(\bf{A}^2 +b_i\bf{A}+c_i\bf{I})$ 꼴의 행렬은 가역이다. 그렇다면 최소한 하나의 $\bf{A}-\lambda_j \bf{I}$ 꼴의 행렬이 가역행렬이 아니며, 이 때의 $\lambda_j$ 가 고유값이다. 즉 $\bf{A}$ 는 고유값을 가진다.$\square$
+로 분해 할 수 있다. 이 때 $i=1,\ldots,\,M$ 에 대해 $b_i^2<4c_i$ 이다. @lem-LA_invirtible_deformation 에 의해 $(L^2 +b_iL+c_iI)$ 형태의 연산자는 가역이다. 그렇다면 최소한 하나의 $L-\lambda_j I$ 꼴의 행렬이 가역행렬이 아니며, 이 때의 $\lambda_j$ 가 고유값이다. 즉 $L$ 는 고유값을 가진다.$\square$
 
 :::
 
@@ -221,68 +185,66 @@ $$
 
 ::: {#lem-LA_self_adjoint_matrix_and_invariable_space}
 
-$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬 이고 $U\le \mathcal{M}_n(\mathbb{R})$ 가 $\bf{A}$ 에 대한 불변부분공간일 때,
+유한차원 $\R$-벡터공간 $V$ 에서 정의된 에르미트 연산자 $L$ 에 대해 $U\le V$ 가 $L$ 에 대한 불변부분공간일 때,
 
-&emsp;($1$) $U^\perp$ 도 $\bf{A}$에 대한 불변부분공간이다.
+&emsp;($1$) $U^\perp$ 도 $L$에 대한 불변부분공간이다.
 
-&emsp;($2$) $\bf{A}|_U$ 도 대칭행렬 이다.
+&emsp;($2$) $L|_U$ 도 에르미트 행렬 이다.
 
-&emsp;($3$) $\bf{A}|_{U^\perp}$ 도 대칭행렬 이다.
+&emsp;($3$) $L|_{U^\perp}$ 도 에르미트 행렬 이다.
 
 :::
 
 </div>
 
 ::: {.proof}
-($1$) $\bf{u}\in U,\, \bf{v}\in U^\perp$ 라 하자. $\bf{Au}\in U$ 이며 $\bf{A}$ 가 에르미트 행렬이므로,
+($1$) $u\in U,\, v\in U^\perp$ 라 하자. $Lu\in U$ 이며 $L$ 이 에르미트 연산자이므로,
 
 $$
-\langle \bf{Av},\, \bf{u}\rangle = \langle \bf{v},\, \bf{Au}\rangle =0
+\langle Lv,\, u\rangle = \langle v,\, Lu\rangle =0
 $$
 
-이다. 따라서 $U^\perp$ 도 $\bf{A}$ 에 대한 불변부분공간이다.
+이다ㅏ. 즉 $Lv\in U^\perp$ 이므로 $U^\perp$ 도 $L$-부분공간이다. 
 
-($2$) $\bf{u}_1,\,\bf{u}_2\in U$ 에 대해,
+($2$) $u_1,\,u_2\in U$ 에 대해,
 
 $$
-\langle \bf{A}|_U \bf{u}_1,\,\bf{u}_2\rangle = \langle \bf{Au}_1,\, \bf{u}_2 \rangle = \langle \bf{u}_1,\, \bf{Au}_2\rangle = \langle \bf{u}_1,\,\bf{A}|_U\bf{u}_2\rangle
+\langle L|_U u_1,\,u_2\rangle = \langle Lu_1,\, u_2 \rangle = \langle u_1,\, Lu_2\rangle = \langle u_1,\,L|_Uu_2\rangle
 $$
 
-이므로 $\bf{A}|_U$ 도 대칭행렬 이다.
+이므로 $L|_U$ 도 대칭행렬 이다.
 
 ($3$) ($1$), ($2$) 로 부터 자명하다. $\square$
 
 :::
 
-</br>
-
-<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-LA_matrix_under_two_invariant_subspace}
 
-$\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 가 대칭행렬이고 $U,\,V \le \mathcal{M}_{n}(\mathbb{R})$ 가 $\bf{A}$ 에 대한 불변부분공간이며 $\mathcal{M}_{n }(\mathbb{R})= U \oplus V$ 이면 $\bf{A}$ 는 어떤 직교변환에 의해 블럭대각행렬이 된다.
+유한차원 $\R$-벡터공간 $V$ 에서 정의된 연산자 $L$ 이 에르미트 연산자이고 $U,\,W \le V$ 가 $L$ 에 대한 불변부분공간이며 $V= U \oplus W$ 이면 $L$ 은 어떤 기저에서 블럭대각행렬이 된다.
 :::
 
 </div>
 
 ::: {.proof}
 
-$\bf{u}\in U$ 이면 $\bf{Au}\in U$ 이고 $\bf{v}\in V$ 이면 $\bf{Av}\in V$ 이다. $\mathcal{M}_{n }(\mathbb{R}) = U \oplus V$ 이므로 $U$ 의 정규직교기저 $\{\bf{e}_i\}$ 와 $V$ 의 정규직교기저 $\{\bf{f}_j\}$ 에 대해 $\{\bf{e}_i\}\cup \{\bf{f}_j\}$ 는 $\mathcal{M}_{n }(\mathbb{R})$ 의 기저이며 이 기저로의 직교변환에 대해 $\bf{A}$ 는 블럭대각행렬이 된다. $\square$ 
+$u\in U$ 이면 $Lu\in U$ 이고 $w\in W$ 이면 $Lw \in W$ 이다. $V = U \oplus W$ 이므로 $U$ 의 정규직교기저 $(e_i)$ 와 $W$ 의 정규직교기저 $(\bf{f}_j)$ 에 대해 $\mathcal{B}=\{e_i\}\cup \{f_j\}$ 는 $V$ 의 기저이며 $[L]_\mathcal{B}$ 는 블럭대각행렬이 된다. $\square$ 
 :::
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-LA_symmetric_matrix_digoalization} 
-$\bf{A}$ 가 대칭행렬이면 어떤 직교 변환에 의해 대각행렬이 된다.
+유한차원 $\R$-벡터공간에서 정의된 에르미트 연산자는 어떤 기저에서 대각행렬이 된다.
 :::
 
 </div>
 
 ::: {.proof}
 
-$n$ 에 대한 수학적 귀납법을 이용한다. $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{R})$ 이 대칭행렬이라고 하자. $n=1$ 일 때는 스스로 대각행렬이다. 이제 $k<n$ 인 대칭행렬은 어떤 직교 변환에 의해 대각행렬이 된다고 가정하자.
+유한차원 $\R$-벡터공간 $V$ 에서 정의된 에르미트 연산자 $L$ 을 생각하자. $n =\dim(V)$ 에 대한 수학적 귀납법을 이용한다. $n=1$ 일 때는 자명하므로 $k<n$ 인 에르미트 연산자는 어떤 기저에서 대각행렬로 표현된다고 가정하자.
 
-$\bf{A}$ 가 $n \times n$ 대칭 행렬일 때 고유값이 항상 존재하며 고유값에 대한 고유벡터 가운데 하나 $\bf{u}_1$ 를 이용하여 $U=\text{span}(\bf{u}_1)$ 를 만들면 $U$ 은 불변부분공간이며 @lem-LA_self_adjoint_matrix_and_invariable_space 에서 보였듯이 $U^\perp$ 도 불변부분공간이다. $\mathcal{M}_{n \times n}(\mathbb{R}) = U \otimes U^\perp$ 이므로 @lem-LA_matrix_under_two_invariant_subspace 에서 보였듯이 어떤 직교 변환에 의해 $1$ 행렬과 $(n-1)\times (n-1)$ 행렬로 블록대각행렬이 된다. $(n-1)\times (n-1)$ 행렬은 귀납법의 가정에 의해 대각행렬이 되므로 $\bf{A}$ 는 대각행렬이 된다. $\square$
+$[L]$ 이 $n \times n$ 에르미트 연산자일 때 고유값이 항상 존재므로(@lem-LA_hermitian_real_matrix_eigenvalue) 고유벡터 가운데 하나 $u_1$ 을 선택하여 $U=\text{span}(u_1)$ 를 만들면 $U$ 은 $V$ 에 대한 $L$-불변부분공간이며 @lem-LA_self_adjoint_matrix_and_invariable_space 에서 보였듯이 $U^\perp$ 도 불변부분공간이다. $V = U \otimes U^\perp$ 이므로 @lem-LA_matrix_under_two_invariant_subspace 에서 보였듯이 어떤 직교 변환에 의해 $1$ 행렬과 $(n-1)\times (n-1)$ 행렬로 블록대각행렬이 된다. $(n-1)\times (n-1)$ 행렬은 귀납법의 가정에 의해 대각행렬이 되므로 $\bf{A}$ 는 대각행렬이 된다. $\square$
 
 :::
 
@@ -290,22 +252,22 @@ $\bf{A}$ 가 $n \times n$ 대칭 행렬일 때 고유값이 항상 존재하며 
 
 ::: {#thm-LA_spectrum_theorem_for_real_vector_space}
 
-#### 실수체($\mathbb{R}$) 에서 정의된 행렬의 스펙트럼 정리
+#### $\R$-스펙트럼 정리
 
-$\bf{A} \in \mathcal{M}_{n \times n}(\mathbb{R})$ 행렬에 대해 다음 세 명제는 동치이다.
+유한차원 $R$-벡터공간에서 정의된 연산자 $L$ 에 대해 아래 세 명제는 동치이다.
 
-&emsp;($1$) $\bf{A}$ 는 대칭행렬이다.
+&emsp;($1$) $L$ 는 에르미트 연산자이다.
 
-&emsp;($2$) $\bf{A}$ 는 직교변환에 의해 대각행렬로 표현된다.
+&emsp;($2$) $L$ 는 직교변환에 의해 대각행렬로 표현된다.
 
-&emsp;($3$) $\bf{A}$ 의 고유벡터로 $\mathcal{M}_{n }(\mathbb{R})$ 의 정규직교기저를 구성 할 수 있다.
+&emsp;($3$) $L$ 의 고유벡터로 $V$ 의 정규직교기저를 구성 할 수 있다.
 
 :::
 
 </div>
 
 ::: {.proof}
-($1\implies 2$) 는 앞에서 보였다.
+($1\implies 2$) @lem-LA_symmetric_matrix_digoalization
 
 ($2 \implies 3$) $\bf{A}$ 가 orthognal 행렬 $\bf{P}$ 에 의해 대각행렬로 변환된다고 하자. 즉 $\bf{P}^{-1}\bf{AP}=\bf{D}$ 는 대각행렬이다. 대각행렬이 주어졌을 때, 표준정규직교벡터 $\{\bf{e}_1,\ldots,\,\bf{e}_n\}$ 는 $\lambda_i = D_{ii}$ 를 고유값으로 갖는 대각행렬의 고유벡터이다. 여기서
 
