@@ -54,7 +54,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -79,7 +79,7 @@ $p(t)\in \mathbb{F}_n[t]$ 이면 $p(t)$ 는 많아야 $n$ 개의 영점을 가�
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -101,7 +101,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -152,7 +152,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -176,7 +176,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -196,7 +196,7 @@ $$ {#eq-ALA_factorization_of_real_polynomial}
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -219,7 +219,7 @@ $n\in \mathbb{Z}_+$ 에 대해 $p(t)\in \mathbb{C}_n[t]$ 일 때 서로 다른 $
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -283,7 +283,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -307,7 +307,7 @@ $L\in \mathcal{L}(V)$ 이고 $p(\lambda) \in \mathbb{F}[\lambda]$ 라고 하자.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -331,7 +331,7 @@ $L,\,T\in \mathcal{L}(V)$ 이고 $T$ 가 가역사상일 때 $p(t)\in \mathbb{F}
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -377,7 +377,7 @@ $\mathbb{F}$-벡터 $V$ 에 대해 $L\in \mathcal{L}(V)$ 일 때 다음을 보�
 &emsp;($2$) $g(t)\in \mathbb{F}[t],\, p \in \mathcal{I}_L \implies g(t)p(t) \in \mathcal{I}_L$.
 :::
 
-</div></part3>
+</div>
 
 ::: {.proof}
 
@@ -396,8 +396,7 @@ $S,\, T\in \mathcal{L}(V)$ 에 대해 $S\sim T$ 이면 $\mathcal{I}_S= \mathcal{
 
 :::
 
-</div></br>
-
+</div>
 ::: {.proof}
 
 가역연산자 $U\in \mathcal{L}(V)$ 에 대해 $S=U^{-1}TU$ 라고 하자. $p\in \mathcal{I}_T$ 이면, $p(S) = U^{-1}p(T)U$ 이므로 $p \in \mathcal{I}_S$ 이다. $\square$
@@ -412,7 +411,7 @@ $S,\, T\in \mathcal{L}(V)$ 에 대해 $S\sim T$ 이면 $\mathcal{I}_S= \mathcal{
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -433,7 +432,7 @@ $\boldsymbol{B}_i\in \mathcal{M}_{n \times n}(\mathbb{F})$ 는 상삼각행렬�
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -458,8 +457,7 @@ $$
 
 :::
 
-</div></br>
-
+</div>
 ::: {.proof}
 
 $n=\dim (V)$ 라고 하자. 우선 $\mathbb{F}=\mathbb{C}$ 에 대해 증명한다. @thm-LA_uppertriangular_matrix_complex_field 에서 우리는 복소수체에서 정의된 모든 정사각행렬은 상삼각행렬과 닮았다는 것을 보였다. 따라서 우리는 상삼각행렬에 대한 특성다항식에 대해서만 증명하면 된다. $\boldsymbol{A}$ 가 상삼각행렬이라고 하면, $p_\boldsymbol{A}(t) = \prod_{i=1}^n (t-A_{ii})$ 이다. 이제 
@@ -500,7 +498,7 @@ $L\in \mathcal{L}(V)$ 에 대한 최소다항식은 존재하며, 유일하다.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -556,7 +554,7 @@ $p\in \mathcal{I}_L$ 는 $L$ 에 대한 최소다항식으로 나누어 떨어�
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -572,7 +570,7 @@ $\lambda$ 가 $L$ 의 고유값이라면 최소다항식은 $(t-\lambda )$ 로 �
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -592,7 +590,7 @@ $L\in \mathcal{L}(V)$ 에 대해 다음의 두 명제는 동치이다.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 $L$ 이 가역이 아니면 $0$ 은 $L$ 의 고유값이므로 $p_L$ 의 상수항은 $0$ 이다. 역으로 $p_L$ 의 상수항이 $0$ 이라면 $0$ 이 $p_L$ 의 해이므로 $0$ 은 $L$ 의 고유값이다. 따라서 $L$ 은 가역이 아니다. 
@@ -607,7 +605,7 @@ $L$ 이 가역이 아니면 $0$ 은 $L$ 의 고유값이므로 $p_L$ 의 상수�
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -638,7 +636,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -662,7 +660,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 ($1$) ($\implies$) $a$ 가 $p(L)$ 의 고유값이라면 $p(L)v=av$ 인 $v\in V$ 가 존재한다. $(p(L)-aI_V)v=0$ 이므로 $p(L)-aI_V$ 는 아래와 같은 일차식의 곱으로 분해된다.
@@ -687,7 +685,7 @@ $L=\mathcal{L}(\mathbb{F}^2)$ 는 $L(w,\,z):=(-z,\,w)$ 로 정의되었다. $L$ 
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -705,7 +703,7 @@ $L(e_1)=-e_2$, $L^2(e_1)= e_1$ 이며 $L^2+I=0$ 이다. 따라서 최소다항�
 
 :::
 
-</div></part3>
+</div>
 
 ::: {.solution}
 
@@ -713,7 +711,7 @@ $K=\begin{bmatrix} 1 & 0 \\ 0 & 0\end{bmatrix},\, L=\begin{bmatrix} 0 & -1 \\ 0 
 
 :::
 
-</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">****
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-ALA_axler4_5b_9}
 
@@ -721,7 +719,7 @@ $L\in \mathcal{L}(V)$ 가 어떤 기저에 대해 행렬로 표현했을 때 모
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -741,7 +739,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -762,7 +760,7 @@ $L\in \mathcal{L}(\mathbb{F}^n)$ 은 $L(x_1,\,x_2,\ldots,\,x_n) := (x_1,\,2x_2,\
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -784,7 +782,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -798,7 +796,7 @@ $L\in \mathcal{L}(V)$ 가 가역이면 $L$ 과 $L^{-1}$ 의 최소다항식의 o
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -824,7 +822,7 @@ $V$ 가 유한차원 복소벡터공간이고 $\dim (V)>0$ 이며 $L\in \mathcal
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 $V$ 가 유한차원 복소벡터공간이므로 $L$ 은 반드시 유한개의 고유값을 가진다. $\lambda_0$ 가 고유값이라고 하면 어떤  $\delta>0$ 에 대해 $(\lambda_0 - \delta,\,\lambda_0 + \delta )$ 구간에 다른 $L$ 의 고유값이 존재하지 않는다. 이 경우 $|\lambda -\lambda_0|<\delta \implies f(\lambda) \ne f(\lambda_0)$ 이므로 연속이 아니다. 
@@ -855,7 +853,7 @@ $p(t)$ 가 $C(p)$ 의 최소다항식임을 보여라.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -896,7 +894,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -912,7 +910,7 @@ $K:=L-cI_V$ 라고 하자. 모든 $v\in V$ 에 대해 $m_L(L)v=0_V$ 이므로 $m
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -934,7 +932,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -956,7 +954,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -977,7 +975,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -999,11 +997,11 @@ $$
 
 ::: {#exr-ALA_axler4_5b_23}
 
-유한체원 벡터공간 $V$ 와 $L\in \mathcal{L}(V)$ 를 생각하자. $n=\dim (V)$ 라고 하자. $v\in V$ 에 대해 $\text{span}(v,\, Lv,\ldots,\,L^{n-1}v)$ 는 $L$-invariant 함을 보여라.
+유한체원 벡터공간 $V$ 와 $L\in \mathcal{L}(V)$ 를 생각하자. $n=\dim (V)$ 라고 하자. $v\in V$ 에 대해 $\text{span}(v,\, Lv,\ldots,\,L^{n-1}v)$ 는 $L$-불변부분공간임을 보여라.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.soluiton}
 
@@ -1019,7 +1017,7 @@ $L$ 의 최소다항식 $m_L$ 에 대해 $\deg (m_L)\le n$ 임을 생각하면 �
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1038,7 +1036,7 @@ $K=L^T$ 라고 하고 $L,\, K$ 에 대한 최소다항식을 각각 $m_L,\, m_K$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 

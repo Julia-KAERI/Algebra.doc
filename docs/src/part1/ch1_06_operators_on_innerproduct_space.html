@@ -681,11 +681,13 @@ L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_hermitian_matrix_representation_and_hermitian_operator" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 6.6</strong></span> <span class="math inline">\(H\in \mathcal{L}(V)\)</span> 가 에르미트 연산자일 때 <span class="math inline">\(H\)</span> 의 정규직교기저에 대한 행렬표현은 에르미트 행렬이다.</p>
+<p><span class="theorem-title"><strong>명제 6.6</strong></span> 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(H\)</span> 에 대해 다음 두 명제는 동치임을 보여라.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(H\)</span> 는 에르미트 연산자이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(V\)</span> 의 정규직교기저에 대한 <span class="math inline">\(H\)</span> 의 행렬표현은 에르미트 행렬이다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\mathcal{B}=(e_1,\ldots,\,e_n)\)</span> 이 정규직교기저라고 하자. <span class="math inline">\(H(e_j) = \sum_k H_{kj}e_k\)</span> 일 때</p>
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) <span class="math inline">\(\mathcal{B}=(e_1,\ldots,\,e_n)\)</span> 이 정규직교기저라고 하자. <span class="math inline">\(H(e_j) = \sum_k H_{kj}e_k\)</span> 일 때</p>
 <p><span class="math display">\[
 \langle H(e_j),\, e_i\rangle = \sum_k H_{kj}\langle e_k,\,e_i\rangle = H_{ij}
 \]</span></p>
@@ -693,7 +695,12 @@ L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
 <p><span class="math display">\[
 \langle H(e_j),\,e_i\rangle = \langle e_j,\, H(e_i)\rangle = \sum_k \overline{H_{ki}}\langle e_j,\,e_k\rangle = \overline{H_{ji}}
 \]</span></p>
-<p>이다. 즉 에르미트 연산자의 정규직교기저에 대한 표현은 에르미트 행렬이다. <span class="math inline">\(\square\)</span></p>
+<p>이다. 즉 에르미트 연산자의 정규직교기저에 대한 표현은 에르미트 행렬이다.</p>
+<p>(<span class="math inline">\(2 \implies 1\)</span>) 기저 <span class="math inline">\(\mathcal{B}=(e_1,\ldots,\,e_n)\)</span> 에 대해 <span class="math inline">\([H]_\mathcal{B} = \boldsymbol{A}\)</span> 라고 하자. <span class="math inline">\(\boldsymbol{A}\)</span> 가 에르미트 행렬이므로 <span class="math inline">\(\boldsymbol{A}^\ast = \boldsymbol{A}\)</span> 이다. 임의의 <span class="math inline">\(u \in V\)</span> 에 대해 <span class="math inline">\(\boldsymbol{u}=[u]_\mathcal{B}\)</span> 라고 하면</p>
+<p><span class="math display">\[
+\langle H(u),\, u\rangle = \boldsymbol{u}^\ast\boldsymbol{Au} = \boldsymbol{u}^\ast \boldsymbol{A}^\ast \boldsymbol{u} = (\boldsymbol{Au})^\ast \boldsymbol{u} = \langle u,\, H(u)\rangle
+\]</span></p>
+<p>이며 <a href="#prp-LA_hermite_tvv" class="quarto-xref">명제&nbsp;<span>6.5</span></a> 에 의해 <span class="math inline">\(H\)</span> 는 에르미트 연산자이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 </section>
@@ -701,7 +708,7 @@ L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-LA_axler4th_7_A_9" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 6.8 (Axler4th 7.A.9)</strong></span> <span class="math inline">\(L,\, M \in \mathcal{V}\)</span> 가 에르미트 행렬이라고 하자. <span class="math inline">\(LM\)</span> 이 에르미트 행렬일 필요충분조건은 <span class="math inline">\(LM=ML\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 6.8 (Axler4th 7.A.9)</strong></span> <span class="math inline">\(L,\, M \in \mathcal{L}(V)\)</span> 가 에르미트 행렬이라고 하자. <span class="math inline">\(LM\)</span> 이 에르미트 행렬일 필요충분조건은 <span class="math inline">\(LM=ML\)</span> 임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">

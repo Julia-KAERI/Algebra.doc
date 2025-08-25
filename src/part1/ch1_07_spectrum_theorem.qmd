@@ -34,7 +34,7 @@ crossref:
 
 ::: {.proof}
 
-($1 \implies 2$) 는 @prp-LA_diagonality_of_norma_matrix 에서 보였다.
+($1 \implies 2$) 는 @prp-LA_diagonality_of_norma_matrix 에서 대각행렬로 표현하도록 하는 기저가 존재함을 알며 이 기저는 직교기저 $\mathcal{B}_0=(v_1,\ldots,\,v_n)$. $\mathcal{B} = (u_i=v_i/\|v_i\|)$ 는 정규직교기저이다.
 
 ($2\implies 3$) $\mathcal{B}=(e_1,\ldots,\,e_n)$ 이 $N$ 을 대각행렬로 표현는 정규직교기저라고 하고 이 대각행렬을 $\bf{N}$ 이라고 하자. $n_i = N_{ii}$ 라고 하면 $N_{ij}= \langle N(e_j),\,e_i\rangle = n_i\delta_{ij}$ 이므로 $N(e_j)= n_j e_j$ 이다. 즉 $\mathcal{B}$ 는 $N$ 의 고유벡터이다.
 
@@ -152,6 +152,10 @@ $$
 
 ### $\R$-스펙트럼 정리 {#sec-LA_real_spectral_theorem}
 
+$\C$-벡터공간에서의 스펙트럼 정리는 모든 다항식은 복소근을 갖는다는 대수학의 기본 정리로부터 모든 $\C$-벡터공간의 연산자는 복소수 영역에서 고유값을 가진다는 것을 아는 것으로 부터 시작한다. 그러나 실계수 다항식은 실근을 갖지 않을 수 있기 때문에 이 방법을 사용 할 수 없다. $\R$-벡터공간에서도 스펙트럼 정리가 존재하는데 $\C$-벡터공간의 경우보다 증명이 다소 복잡해지는 것은 이런 이유 때문이다.
+
+</br>
+
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-LA_hermitian_real_matrix_eigenvalue}
@@ -254,36 +258,30 @@ $[L]$ 이 $n \times n$ 에르미트 연산자일 때 고유값이 항상 존재�
 
 #### $\R$-스펙트럼 정리
 
-유한차원 $R$-벡터공간에서 정의된 연산자 $L$ 에 대해 아래 세 명제는 동치이다.
+유한차원 $\R$-벡터공간에서 정의된 연산자 $L$ 에 대해 아래 세 명제는 동치이다.
 
-&emsp;($1$) $L$ 는 에르미트 연산자이다.
+&emsp;($1$) $H$ 는 에르미트 연산자이다.
 
-&emsp;($2$) $L$ 는 직교변환에 의해 대각행렬로 표현된다.
+&emsp;($2$) $H$ 어떤 정규직교기저에서 대각행렬로 표현된다.
 
-&emsp;($3$) $L$ 의 고유벡터로 $V$ 의 정규직교기저를 구성 할 수 있다.
+&emsp;($3$) $H$ 의 고유벡터로 $H$ 의 정규직교기저를 구성 할 수 있다.
 
 :::
 
 </div>
 
 ::: {.proof}
-($1\implies 2$) @lem-LA_symmetric_matrix_digoalization
+($1\implies 2$) @lem-LA_symmetric_matrix_digoalization 로부터 대각행렬로 표현하도록 하는 기저가 존재함을 알며 이 기저는 직교기저 $\mathcal{B}_0=(v_1,\ldots,\,v_n)$. $\mathcal{B} = (e_i=v_i/\|v_i\|)$ 는 정규직교기저이다.
 
-($2 \implies 3$) $\bf{A}$ 가 orthognal 행렬 $\bf{P}$ 에 의해 대각행렬로 변환된다고 하자. 즉 $\bf{P}^{-1}\bf{AP}=\bf{D}$ 는 대각행렬이다. 대각행렬이 주어졌을 때, 표준정규직교벡터 $\{\bf{e}_1,\ldots,\,\bf{e}_n\}$ 는 $\lambda_i = D_{ii}$ 를 고유값으로 갖는 대각행렬의 고유벡터이다. 여기서
+($2 \implies 3$) 위의 $\mathcal{B}$ 의 각각의 $e_i$ 는 $L$ 의 정규직교기저이다.
 
-$$
-\bf{APe}_i = \bf{P}\bf{P}^{-1}\bf{APe}_i= \bf{PDe}_i=\lambda_i \bf{Pe}_i
-$$
-
-이므로 $\bf{Pe}_i$ 는 $\bf{A}$ 의 고유벡터이다. $\bf{P}$ 가 linear isometry 이므로 $\{\bf{Pe}_1,\ldots,\,\bf{Pe}_n\}$ 은 $\bf{A}$ 의 고유벡터로 이루어진 $\mathcal{M}_{n }(\mathbb{R})$ 의 정규직교기저이다.
-
-($3 \implies 1$) $\{\bf{u}_1,\ldots,\,\bf{u}_n\}$ 이 $\bf{A}$ 의 고유벡터로 이루어진 $\mathbb{R}^n$ 의 정규직교기저라 하자. 이 때 $\bf{u}_i$ 의 고유값은 $\lambda_i$ 라 하자.  $\lambda_i$ 는 실수이므로,
+($3 \implies 1$) $\mathcal{B}=(e_1,\ldots,\,e_n)$ 정규직교 기저이며 각각 실수 $c_1,\ldots,\,c_n$ 을 고유값으로 갖는 고유벡터라고 하자. 이 기저에 대한 $H$ 의 행렬 표현 $\bf{H}$ 에 대해 $H_{ij}=\langle H e_j,\,e_i\rangle = c_i\delta_{ij}$, 이며
 
 $$
-\langle \bf{A}^\ast \bf{u}_i,\,\bf{u}_j\rangle = \langle \bf{u}_i,\, \bf{Au}_j\rangle = \lambda_j \delta_{ij} = \lambda_i \delta_{ij} = \langle \bf{Au}_i,\, \bf{u}_j\rangle
+\overline{H_{ji}}=\overline{\langle He_i,\, e_j\rangle} \langle e_j,\,He_i\rangle = \overline{c_i}\delta_{ij}= c_i\delta_{ij} = H_{ij}
 $$
 
-이다. 즉 $\bf{A}=\bf{A}^\ast$ 이며 $\bf{A}$ 가 실행렬이므로 $\bf{A}$ 는 대칭행렬이다. $\square$
+이므로 @prp-LA_hermitian_matrix_representation_and_hermitian_operator 에 의해 $H$ 는 에르미트 연산자이다. $\square$
 
 :::
 
@@ -291,6 +289,96 @@ $$
 
 ### 연습문제 {.unnumbered}
 
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4th_7_B_4}
+
+#### Axler4th 7.B.4
+
+유한차원 복소벡터공간에서의 정규연산자가 반대칭 연산자일 필요충분조건은 모든 고유값이 허수인 것임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+반대칭 연산자의 정의에 대해서는 @exr-axler4_7_A_12 를 보라. $B$ 가 정규연산자이며 반대칭 연산자라고 하자. $v_i$ 가 고유값 $c_i$ 에 대한 $B$ 의 고유벡터라고 하면 $\langle Bv_i,\,v_i\rangle = c_i\|v_i|^2$ 이며 $\langle Bv_i,\,v_i\rangle = -\langle v_i,\,Bv_i\rangle = -\overline{c}_i\|v_i\|^2$ 이다. 즉 $\overline{c_i} = -c_i$ 이므로 $c_i$ 는 복소수이다.
+
+정규연산자 $B$ 의 모든 고유값이 허수라고 하자. $\mathcal{B}=(e_1,\ldots,\,e_n)$ 이 $B$ 의 고유벡터로 이루어진 $V$ 의 정규직교기저라고 하고 $c_i$ 가 $e_i$ 에 대한 고유값이라고 하자. $u=\sum_i a_ie_i,\, v=\sum_j a_j e_j$ 에 대해 
+
+$$
+\langle Bu,\, v\rangle = \sum_{i} c_i a_i\overline{b_i} = - \sum_i\overline{c_i} a_i \overline{b}_i = -\langle u,\, Bv\rangle 
+$$
+
+이므로 $B^\ast = -B$ 이다. 즉 $B$ 는 반대칭 연산자 이다.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4th_7_B_8}
+
+#### Axler4th 7.B.8
+
+유한차원 복소벡터공간에서의 연산자 $N$ 이 정규연산자일 필요충분조건은 $N$ 의 모든 고유벡터가 $N^\ast$ 의 고유벡터인 것임을 보여라. 
+
+:::
+
+</div>
+
+::: {.solution}
+
+$N$ 이 정규연산자임을 가정하자. $N$ 을 대각화하는 정규직교기저를 $\mathcal{B}=(e_1,\ldots,\,e_n)$ 이라고 하고 각각의 고유값을 $c_i$ 라고 하자. $N^\ast e_i = \sum_j a_j e_j$ 라고 하면
+
+$$
+a_k = \left\langle \sum_j a_j e_j,\, e_k\right\rangle = \langle N^\ast e_i ,\,e_k\rangle = \langle e_i,\,Ne_k\rangle = \overline{c_k} \delta_{ik}
+$$
+
+이므로 $N^\ast e_i = \overline{c_i}e_i$ 이다. 즉 $e_i$ 는 $\overline{c_i}$ 의 고유값을 갖는 $N^\ast$ 의 고유벡터이다.
+
+이제 연산자 $N$ 에 대해 $N^\ast$ 의 고유벡터가 $N$ 의 고유벡터라고 하자. $N$ 은 상삼각 행렬로 대각화된다. 이 기저를 $\mathcal{B}=(e_1,\ldots,\,e_n)$ 이라고 하자. 이 기저에서
+
+$$
+N_{ij} = \langle Ne_j,\,e_i\rangle,\, N^\ast_{ij} = \langle N^\ast e_j,\,e_i\rangle = \langle e_j,\, Ne_i\rangle = \overline{N_{ji}}
+$$
+
+이다. $[N]_{\mathcal{B}}$ 가 상삼각행렬이므로 $i>j$ 일 때 $N_{ij}=0$ 이며 따라서 $[N^\ast]_{\mathcal{B}}$ 는 하삼각행렬이다. $Ne_1 = N_{11}e_1$ 이므로 $N$ 의 고유벡터이며 가정에 의해 $N^\ast$ 의 고유벡터이다 따라서 $N^\ast e_1 = \sum_{j}\overline{N_{1j}}e_j = [N^\ast]_{11}e_1$ 이어야 한다. 즉 $j\ge 2$ 에 대해 $N_{1j}=0$ 이어야 한다. 
+
+$Ne_2 = N_{12}e_2+N_{22}e_2=N_{22}e_2$ 이므로 $e_2$ 역시 $N$ 의 고유벡터이며, 따라서 $N^\ast$ 의 고유벡터이다. $N^\ast e_2 = \overline{N_{2j}}e_j$ 이므로 $j\ne 0$ 이면 $N_{2j}=0$ 이다. 이것을 반복하면 $N$ 의 고유벡터가 $N^\ast$ 의 고유벡터라면 $N$ 은 정규행렬임을 알 수 있다.
+
+:::
+
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-axler4th_7_B_9}
+
+#### Axler4th 7.B.9
+
+유한차원 복소벡터공간에서의 연산자 $N$ 이 정규연산자일 필요충분조건은 어떤 다항식 $p(t) \in \C[t]$ 에 대해 $p(N) = N^\ast$ 인 것이다.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$N^\ast = p(N)$ 이면 $N$ 이 정규연산자임은 자명하다. 이제 $N$ 이 정규연산자일 때 어떤 다항식 $p(t)$ 에 대해 $N^\ast =p(N)$ 임을 보이자. $N$ 이 정규연산자이므로 어떤 정규직교기저 $\mathcal{B}=(e_1,\ldots,\,e_n)$ 에서 대각행렬이며 이 기저에서 $N^\ast$ 역시 대각행렬이이며 $N^\ast_{ii}=\overline{N_{ii}}$ 이다. 벡터공간이 $n$ 차원이라고 하고 다항식 $p(t)$ 를 $i=1,\ldots,\,n$ 에서 $p(N_{ii})=\overline{N_{ii}}$ 인 $n$ 차 라그랑쥬 다항식이라고 하자. 
+
+$$
+p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
+$$
+
+이다. 모든 기저에서 성립하므로 $N^\ast = p(N)$ 이다.
+
+
+
+:::
+
+
+</br>
 
 ## Positive, Positive definite 행렬과 제곱근 행렬
 
@@ -299,7 +387,7 @@ $$
 
 #### Positive Definite 행렬 와 제곱근 행렬
 
-에르미트 행렬 $\boldsymbol{A}$ 이 임의의 벡터 $\boldsymbol{v}$ 에 대해 $\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle > 0$ 일 때 $\boldsymbol{A}$ 를 **positve** 혹은 **positive definite** 라 하고 $\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle \ge 0$ 일 때 $\boldsymbol{A}$ 를 **non-negative** 혹은 **positive semidefinite** 라 한다. $\boldsymbol{A}$ 가 positive 이거나 positive definite 일 때  $\boldsymbol{A}=\boldsymbol{R}^2$ 인 행렬 $\boldsymbol{R}$ 이 존재하면 $\boldsymbol{R}$ 을 $\boldsymbol{A}$ 의 **제곱근 행렬** 이라고 하고 $\sqrt{\boldsymbol{A}}$ 라고 쓴다. 행렬 $\boldsymbol{A}$ 의 제곱근 행렬이 존재 할 때 $\boldsymbol{A}$ 가 제곱근 행렬을 가진다라고 한다.
+에르미트 행렬 $\bf{A}$ 이 임의의 벡터 $\bf{v}$ 에 대해 $\langle \bf{Av},\, \bf{v} \rangle > 0$ 일 때 $\bf{A}$ 를 **positve** 혹은 **positive definite** 라 하고 $\langle \bf{Av},\, \bf{v} \rangle \ge 0$ 일 때 $\bf{A}$ 를 **non-negative** 혹은 **positive semidefinite** 라 한다. $\bf{A}$ 가 positive 이거나 positive definite 일 때  $\bf{A}=\bf{R}^2$ 인 행렬 $\bf{R}$ 이 존재하면 $\bf{R}$ 을 $\bf{A}$ 의 **제곱근 행렬** 이라고 하고 $\sqrt{\bf{A}}$ 라고 쓴다. 행렬 $\bf{A}$ 의 제곱근 행렬이 존재 할 때 $\bf{A}$ 가 제곱근 행렬을 가진다라고 한다.
 
 :::
 :::
@@ -311,7 +399,7 @@ $$
 
 #### 용어의 혼란을 막기 위해
 
-예를 들어 S. Axler 의 *Linear Algebra Done Right* 의 경우 $\langle \boldsymbol{Av},\,\boldsymbol{v}\rangle \ge 0$ 일 때 $\boldsymbol{A}$ 를 *positive* 라고 정의한다(3rd Ed. pp 225). 그러나 K. Hoffman, R. Kunze 의 *Linear Algebra* 의 경우에는  $\langle \boldsymbol{Av},\,\boldsymbol{v}\rangle > 0$ 일 때 positive 라고 정의한다(2nd Ed. pp 329). 여기서는 더 직관적인 non-negative, positive 라는 용어를 사용하기로 한다.
+예를 들어 S. Axler 의 *Linear Algebra Done Right* 의 경우 $\langle \bf{Av},\,\bf{v}\rangle \ge 0$ 일 때 $\bf{A}$ 를 *positive* 라고 정의한다(3rd Ed. pp 225). 그러나 K. Hoffman, R. Kunze 의 *Linear Algebra* 의 경우에는  $\langle \bf{Av},\,\bf{v}\rangle > 0$ 일 때 positive 라고 정의한다(2nd Ed. pp 329). 여기서는 더 직관적인 non-negative, positive 라는 용어를 사용하기로 한다.
 
 :::
 
@@ -324,36 +412,36 @@ $$
 
 ::: {#prp-LA_properties_of_posivive_definite_matrix}
 
-$\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 동치이다.
+$\bf{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 동치이다.
 
-&emsp; ($1$) $\boldsymbol{A}$ 는 non-negative 이다.
+&emsp; ($1$) $\bf{A}$ 는 non-negative 이다.
 
-&emsp; ($2$) $\boldsymbol{A}$ 는 에르미트행렬이며 모든 고유값은 non-negative 하다
+&emsp; ($2$) $\bf{A}$ 는 에르미트행렬이며 모든 고유값은 non-negative 하다
 
-&emsp; ($3$) $\boldsymbol{A}$ 는 대각성분이 모두 음수가 아닌 대각행렬과 닮았다.
+&emsp; ($3$) $\bf{A}$ 는 대각성분이 모두 음수가 아닌 대각행렬과 닮았다.
 
-&emsp; ($4$) $\boldsymbol{A}$ 의 non-negative positive 제곱근 행렬이 존재한다.
+&emsp; ($4$) $\bf{A}$ 의 non-negative positive 제곱근 행렬이 존재한다.
 
-&emsp; ($5$) $\boldsymbol{A}$ 의 에르미트 제곱근 행렬이 존재한다.
+&emsp; ($5$) $\bf{A}$ 의 에르미트 제곱근 행렬이 존재한다.
 
-&emsp; ($6$) $\boldsymbol{A} = \boldsymbol{R}^\ast \boldsymbol{R}$ 인 행렬 $\boldsymbol{R}$ 이 존재한다.
+&emsp; ($6$) $\bf{A} = \bf{R}^\ast \bf{R}$ 인 행렬 $\bf{R}$ 이 존재한다.
 
 ::: 
 
 </div></br>
 
 ::: {.proof}
-($1 \implies 2$) $\boldsymbol{A}$ 가 non-negative 이므로 정의에 의해 에르미트 행렬이다. $\lambda$ 가 $\boldsymbol{A}$ 의 고유값이고 $\boldsymbol{v}$ 가 $\lambda$ 에 대한 고유벡터 일 때, $0 \le \langle \boldsymbol{Av},\, \boldsymbol{v}\rangle = \lambda \|\boldsymbol{v}\|^2$ 이므로 $\lambda \ge 0$ 이다.
+($1 \implies 2$) $\bf{A}$ 가 non-negative 이므로 정의에 의해 에르미트 행렬이다. $\lambda$ 가 $\bf{A}$ 의 고유값이고 $\bf{v}$ 가 $\lambda$ 에 대한 고유벡터 일 때, $0 \le \langle \bf{Av},\, \bf{v}\rangle = \lambda \|\bf{v}\|^2$ 이므로 $\lambda \ge 0$ 이다.
 
-($2 \implies 3$) $\boldsymbol{A}$ 가 에르미트 행렬이므로 스펙트럼 정리에 의해 $\boldsymbol{U}^\ast\boldsymbol{AU}$ 를 대각행렬 $\boldsymbol{D}$ 로 하는 유니타리 행렬 $\boldsymbol{U}$ 가 존재한다. 대각성분이 고유값이므로 $\boldsymbol{D}$ 의 모든 대각성분은 실수이며 음수가 아니다.
+($2 \implies 3$) $\bf{A}$ 가 에르미트 행렬이므로 스펙트럼 정리에 의해 $\bf{U}^\ast\bf{AU}$ 를 대각행렬 $\bf{D}$ 로 하는 유니타리 행렬 $\bf{U}$ 가 존재한다. 대각성분이 고유값이므로 $\bf{D}$ 의 모든 대각성분은 실수이며 음수가 아니다.
 
-($3 \implies 4$) $\boldsymbol{A}$ 의 고유값 $\lambda_1,\ldots,\,\lambda_n$ 에 대해 $D_{ij} = \lambda_{i}\delta_{ij}$ 일 때, 행렬 $\boldsymbol{S}$ 를 대각행렬 $S_{ij} = \sqrt{D_{ij}}$ 로 정의하자. $\boldsymbol{R} = \boldsymbol{U}^\ast\boldsymbol{SU}$ 라 하면 $\boldsymbol{R}^2 = \boldsymbol{A}$ 이다.
+($3 \implies 4$) $\bf{A}$ 의 고유값 $\lambda_1,\ldots,\,\lambda_n$ 에 대해 $D_{ij} = \lambda_{i}\delta_{ij}$ 일 때, 행렬 $\bf{S}$ 를 대각행렬 $S_{ij} = \sqrt{D_{ij}}$ 로 정의하자. $\bf{R} = \bf{U}^\ast\bf{SU}$ 라 하면 $\bf{R}^2 = \bf{A}$ 이다.
 
-($4 \implies 5$) 위에서 정의한 $\boldsymbol{R}$ 은 $\boldsymbol{R}^\ast = \boldsymbol{U}^\ast \boldsymbol{SU} = \boldsymbol{R}$ 이므로 에르미트 행렬이다.
+($4 \implies 5$) 위에서 정의한 $\bf{R}$ 은 $\bf{R}^\ast = \bf{U}^\ast \bf{SU} = \bf{R}$ 이므로 에르미트 행렬이다.
 
-($5 \implies 6$) 앞서 정의한 $\boldsymbol{R}$ 이다.
+($5 \implies 6$) 앞서 정의한 $\bf{R}$ 이다.
 
-($6 \implies 1$) $\boldsymbol{A}=\boldsymbol{R}^\ast \boldsymbol{R}$ 이면 $\boldsymbol{A}^\ast = (\boldsymbol{R}^\ast\boldsymbol{R})^\ast = \boldsymbol{R}^\ast \boldsymbol{R}=\boldsymbol{A}$ 이므로 $\boldsymbol{A}$ 는 에르미트 행렬이다. 또한 임의의 $\boldsymbol{v}\in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \boldsymbol{v},\, \boldsymbol{A}\boldsymbol{v}\rangle = \langle \boldsymbol{R}^\ast \boldsymbol{R}\boldsymbol{v},\, \boldsymbol{v} \rangle = \|\boldsymbol{Rv}\|^2\ge 0$ 이므로 $\boldsymbol{A}$ 는 non-negative 이다. $\square$
+($6 \implies 1$) $\bf{A}=\bf{R}^\ast \bf{R}$ 이면 $\bf{A}^\ast = (\bf{R}^\ast\bf{R})^\ast = \bf{R}^\ast \bf{R}=\bf{A}$ 이므로 $\bf{A}$ 는 에르미트 행렬이다. 또한 임의의 $\bf{v}\in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \bf{v},\, \bf{A}\bf{v}\rangle = \langle \bf{R}^\ast \bf{R}\bf{v},\, \bf{v} \rangle = \|\bf{Rv}\|^2\ge 0$ 이므로 $\bf{A}$ 는 non-negative 이다. $\square$
 
 :::
 
@@ -361,29 +449,29 @@ $\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 �
 
 ::: {#prp-LA_uniqueness_of_squareroot_matrix}
 
-non-negative 행렬 $\boldsymbol{A}$ 의 non-nagative 한 제곱근 행렬은 유일하다.
+non-negative 행렬 $\bf{A}$ 의 non-nagative 한 제곱근 행렬은 유일하다.
 
 :::
 
 </div></br>
 
 :::{.proof}
-우리는 앞서 non-negative 행렬 $\boldsymbol{A}$ 에 대한 non-negative 한 제곱근 행렬이 존재함을 보였다. 여기서는 이것이 유일함을 보인다. 행렬 $\boldsymbol{A}$ 에 대한 non-negative 한 제곱근 행렬을 $\boldsymbol{R}$ 이라 하자. 스펙트럼 정리에 의해 $\boldsymbol{R}$ 에 대한 고유값 $\eta_1,\ldots,\,\eta_n$ 과 그에 대한 정규 고유 벡터 $\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n$ 이 존재한다. 이 때 $\eta_i \ge 0$ 이다. 임의의 벡터 $\boldsymbol{v} = \sum_i a_i \boldsymbol{u}_i$ 에 대해,
+우리는 앞서 non-negative 행렬 $\bf{A}$ 에 대한 non-negative 한 제곱근 행렬이 존재함을 보였다. 여기서는 이것이 유일함을 보인다. 행렬 $\bf{A}$ 에 대한 non-negative 한 제곱근 행렬을 $\bf{R}$ 이라 하자. 스펙트럼 정리에 의해 $\bf{R}$ 에 대한 고유값 $\eta_1,\ldots,\,\eta_n$ 과 그에 대한 정규 고유 벡터 $\bf{u}_1,\ldots,\,\bf{u}_n$ 이 존재한다. 이 때 $\eta_i \ge 0$ 이다. 임의의 벡터 $\bf{v} = \sum_i a_i \bf{u}_i$ 에 대해,
 
 $$
 \begin{aligned}
-\boldsymbol{R}\boldsymbol{v} &= \sum_i a_i \eta _i \boldsymbol{u}_i \\
-\boldsymbol{R}^2\boldsymbol{v}&= \sum_i a_i \eta_i^2 \boldsymbol{u}_i
+\bf{R}\bf{v} &= \sum_i a_i \eta _i \bf{u}_i \\
+\bf{R}^2\bf{v}&= \sum_i a_i \eta_i^2 \bf{u}_i
 \end{aligned}
 $$
 
-이다. $\boldsymbol{R}^2 = \boldsymbol{A}$ 이므로, $\boldsymbol{v}$ 가 고유값 $\lambda$ 를 갖는 $\boldsymbol{A}$ 의 고유벡터라면
+이다. $\bf{R}^2 = \bf{A}$ 이므로, $\bf{v}$ 가 고유값 $\lambda$ 를 갖는 $\bf{A}$ 의 고유벡터라면
 
 $$
-\boldsymbol{A}\boldsymbol{v} = \sum_i a_i \lambda \boldsymbol{u}_i
+\bf{A}\bf{v} = \sum_i a_i \lambda \bf{u}_i
 $$
 
-이며, 따라서 $i=1,\ldots,\,n$ 에 대해 $\eta_i = \sqrt{\lambda}$ 이어야 한다. 즉 $\boldsymbol{A}$ 의 고유벡터는 $\boldsymbol{R}$ 의 고유벡터이어야 하며, 따라서 유일하다. $\square$
+이며, 따라서 $i=1,\ldots,\,n$ 에 대해 $\eta_i = \sqrt{\lambda}$ 이어야 한다. 즉 $\bf{A}$ 의 고유벡터는 $\bf{R}$ 의 고유벡터이어야 하며, 따라서 유일하다. $\square$
 
 :::
 
@@ -391,13 +479,13 @@ $$
 
 ::: {#prp-LA_squareroot_matrix}
 
-임의의 $\boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\boldsymbol{B}^\ast \boldsymbol{B}$ 를 생각 할 수 있다. 이 때 $\boldsymbol{B}^\ast \in \mathcal{M}_{n \times m}(\mathbb{F})$ 이다. $\boldsymbol{B}^\ast \boldsymbol{B}$ 는
+임의의 $\bf{B}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\bf{B}^\ast \bf{B}$ 를 생각 할 수 있다. 이 때 $\bf{B}^\ast \in \mathcal{M}_{n \times m}(\mathbb{F})$ 이다. $\bf{B}^\ast \bf{B}$ 는
 
 &emsp; ($1$) 에르미트이다.
 
 &emsp; ($2$) non-negative 이다.
 
-&emsp; ($3$) $\sqrt{\boldsymbol{B}^\ast \boldsymbol{B}}$ 를 생각 할 수 있다.
+&emsp; ($3$) $\sqrt{\bf{B}^\ast \bf{B}}$ 를 생각 할 수 있다.
 
 :::
 
@@ -405,9 +493,9 @@ $$
 
 ::: {.proof}
 
-($1$) $(\boldsymbol{B}^\ast\boldsymbol{B})^\ast = \boldsymbol{B}^\ast\boldsymbol{B}$ 이다.
+($1$) $(\bf{B}^\ast\bf{B})^\ast = \bf{B}^\ast\bf{B}$ 이다.
 
-($2$) $\langle \boldsymbol{B}^\ast\boldsymbol{Bv},\,\boldsymbol{v}\rangle = \|\boldsymbol{Bv}\|^2 \ge 0$.
+($2$) $\langle \bf{B}^\ast\bf{Bv},\,\bf{v}\rangle = \|\bf{Bv}\|^2 \ge 0$.
 
 ($3$) @prp-LA_properties_of_posivive_definite_matrix $\square$
 :::
@@ -422,14 +510,14 @@ $$
 
 #### Axler 5.A.2
 
-$\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이고 $\boldsymbol{AB}=\boldsymbol{BA}$ 이면 $\ker \boldsymbol{B}$ 는 $\boldsymbol{A}$ 의 불변부분공간이다.
+$\bf{A},\,\bf{B}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이고 $\bf{AB}=\bf{BA}$ 이면 $\ker \bf{B}$ 는 $\bf{A}$ 의 불변부분공간이다.
 :::
 
 </div></br>
 
 ::: {.solution}
 
-$\boldsymbol{u}\in \ker \boldsymbol{B}$ 라 하자. $\boldsymbol{BAu} =\boldsymbol{ABu} = \boldsymbol{0}$ 이므로 $\boldsymbol{Au}\in \ker \boldsymbol{B}$ 이다.  
+$\bf{u}\in \ker \bf{B}$ 라 하자. $\bf{BAu} =\bf{ABu} = \bf{0}$ 이므로 $\bf{Au}\in \ker \bf{B}$ 이다.  
 
 :::
 
@@ -446,7 +534,7 @@ $\boldsymbol{u}\in \ker \boldsymbol{B}$ 라 하자. $\boldsymbol{BAu} =\boldsymb
 ::: {#def-LA_singular_value_of_matrix}
 
 #### 특이값
-$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\sqrt{\boldsymbol{A}^\ast \boldsymbol{A}}$ 의 고유값을 **특이값(singular value)** 라 한다. 특이값을 열거할때는 보통 가장 큰 값부터 내림차순으로 열거한다. 따라서 특이값 $s_1,\ldots,\,s_n$ 이라고 하면 $s_1 \ge s_2 \ge \cdots \ge s_n$ 을 의미한다.
+$\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\sqrt{\bf{A}^\ast \bf{A}}$ 의 고유값을 **특이값(singular value)** 라 한다. 특이값을 열거할때는 보통 가장 큰 값부터 내림차순으로 열거한다. 따라서 특이값 $s_1,\ldots,\,s_n$ 이라고 하면 $s_1 \ge s_2 \ge \cdots \ge s_n$ 을 의미한다.
 
 :::
 :::
@@ -511,11 +599,11 @@ $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
 
 ::: {#prp-LA_linear_isometry_and_singular_values}
 
-정사각 행렬 $\boldsymbol{S}$ 에 대해 다음은 동치이다.
+정사각 행렬 $\bf{S}$ 에 대해 다음은 동치이다.
 
-&emsp;($1$) $\boldsymbol{S}$ 는 linear isometry 이다.
+&emsp;($1$) $\bf{S}$ 는 linear isometry 이다.
 
-&emsp;($2$) $\boldsymbol{S}$ 의 특이값이 $1$ 뿐이다.
+&emsp;($2$) $\bf{S}$ 의 특이값이 $1$ 뿐이다.
 
 :::
 
@@ -523,9 +611,9 @@ $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
 
 ::: {.proof}
 
-($1 \implies 2$) $\boldsymbol{S}$ 가 linear isometry 이면 $\boldsymbol{S}^\ast\boldsymbol{S}=\boldsymbol{I}$ 이며 따라서 $\boldsymbol{S}$ 의 특이값은 $1$ 뿐이다.
+($1 \implies 2$) $\bf{S}$ 가 linear isometry 이면 $\bf{S}^\ast\bf{S}=\bf{I}$ 이며 따라서 $\bf{S}$ 의 특이값은 $1$ 뿐이다.
 
-($2\implies 1$) $\boldsymbol{S}$ 의 특이값이 $1$ 뿐이면 $\boldsymbol{S}^\ast\boldsymbol{S}$ 의 고유값이 $1$ 뿐이므로 $\boldsymbol{S}^\ast\boldsymbol{S} = \boldsymbol{I}$ 이다. 따라서 $\boldsymbol{S}$ 는 linear isometry 이다. $\square$
+($2\implies 1$) $\bf{S}$ 의 특이값이 $1$ 뿐이면 $\bf{S}^\ast\bf{S}$ 의 고유값이 $1$ 뿐이므로 $\bf{S}^\ast\bf{S} = \bf{I}$ 이다. 따라서 $\bf{S}$ 는 linear isometry 이다. $\square$
 
 :::
 
@@ -538,10 +626,10 @@ $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
 
 ::: {#prp-LA_for_svd}
 
-영행렬이 아닌 $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 의 $0$ 이 아닌 특이값 $s_1,\ldots,\,s_M$ 에 대해 $\mathcal{M}_{n}(\mathbb{F})$ 에 속하는 정규직교벡터 $\{\boldsymbol{e}_1,\,\ldots,\,\boldsymbol{e}_n\}$ 와 $\mathcal{M}_m(\mathbb{F})$ 에 속하는 정규직교벡터 $\{\boldsymbol{f}_1,\ldots,\,\boldsymbol{f}_m \}$ 가 존재하여 $\boldsymbol{v}\in \mathcal{M}_n(\mathbb{F})$ 에 대해
+영행렬이 아닌 $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 의 $0$ 이 아닌 특이값 $s_1,\ldots,\,s_M$ 에 대해 $\mathcal{M}_{n}(\mathbb{F})$ 에 속하는 정규직교벡터 $\{\bf{e}_1,\,\ldots,\,\bf{e}_n\}$ 와 $\mathcal{M}_m(\mathbb{F})$ 에 속하는 정규직교벡터 $\{\bf{f}_1,\ldots,\,\bf{f}_m \}$ 가 존재하여 $\bf{v}\in \mathcal{M}_n(\mathbb{F})$ 에 대해
 
 $$
-\boldsymbol{Av} = \sum_{j=1}^M s_j \langle \boldsymbol{v},\, \boldsymbol{e}_j\rangle \boldsymbol{f}_j
+\bf{Av} = \sum_{j=1}^M s_j \langle \bf{v},\, \bf{e}_j\rangle \bf{f}_j
 $$
 
 이다. 
@@ -552,30 +640,30 @@ $$
 
 ::: {.proof}
 
-$\boldsymbol{A}$ 의 특이값의 갯수는 $n$ 개이다. 특이값을 $s_1,\ldots,\,s_n$ 이라고 하고 관례를 따라 $s_1 \ge \cdots\ge s_n$ 이라고 하면 $s_1 \ge \cdots \ge s_M >0$ 이며 $s_{M+1}= \cdots = s_{n}=0$ 이다. $\boldsymbol{A}^\ast\boldsymbol{A}$ 의 고유값 ${s_i}^2$ 에 대한 정규화된 $\boldsymbol{A}^\ast\boldsymbol{A}$ 의 고유벡터를 $\{\boldsymbol{e}_i: i=1,\ldots,\,n\}$ 라고 하자. 그리고 $j=1,\ldots,\,M$ 에 대해 
+$\bf{A}$ 의 특이값의 갯수는 $n$ 개이다. 특이값을 $s_1,\ldots,\,s_n$ 이라고 하고 관례를 따라 $s_1 \ge \cdots\ge s_n$ 이라고 하면 $s_1 \ge \cdots \ge s_M >0$ 이며 $s_{M+1}= \cdots = s_{n}=0$ 이다. $\bf{A}^\ast\bf{A}$ 의 고유값 ${s_i}^2$ 에 대한 정규화된 $\bf{A}^\ast\bf{A}$ 의 고유벡터를 $\{\bf{e}_i: i=1,\ldots,\,n\}$ 라고 하자. 그리고 $j=1,\ldots,\,M$ 에 대해 
 
 $$
-\boldsymbol{f}_j = \dfrac{\boldsymbol{Ae}_j}{s_j},\qquad j=1,\ldots,\,M
+\bf{f}_j = \dfrac{\bf{Ae}_j}{s_j},\qquad j=1,\ldots,\,M
 $$
 
 이라고 하자. 그렇다면, 
 
 $$
-\langle \boldsymbol{f}_j,\, \boldsymbol{f}_i\rangle = \dfrac{1}{s_is_j}\langle \boldsymbol{Ae}_j, \boldsymbol{Ae}_i\rangle = \dfrac{1}{s_is_j}\langle \boldsymbol{A}^\ast\boldsymbol{Ae}_j, \boldsymbol{e}_i\rangle = \dfrac{s_j}{s_i}\langle \boldsymbol{e}_j,\, \boldsymbol{e}_i \rangle = \delta_{ij}
+\langle \bf{f}_j,\, \bf{f}_i\rangle = \dfrac{1}{s_is_j}\langle \bf{Ae}_j, \bf{Ae}_i\rangle = \dfrac{1}{s_is_j}\langle \bf{A}^\ast\bf{Ae}_j, \bf{e}_i\rangle = \dfrac{s_j}{s_i}\langle \bf{e}_j,\, \bf{e}_i \rangle = \delta_{ij}
 $$
 
-이다. 즉 $\{\boldsymbol{f}_j : j=1,\ldots,\,M\}$ 은 정규직교벡터의 집합이다. 이제 $\{\boldsymbol{f}_j\}$ 를 확장하여 $\mathcal{M}_m(\mathbb{F}$ 의 정규직교기저 $\{\boldsymbol{f}_1,\ldots,\,\boldsymbol{f}_m\}$ 을 만들 수 있다. 
+이다. 즉 $\{\bf{f}_j : j=1,\ldots,\,M\}$ 은 정규직교벡터의 집합이다. 이제 $\{\bf{f}_j\}$ 를 확장하여 $\mathcal{M}_m(\mathbb{F}$ 의 정규직교기저 $\{\bf{f}_1,\ldots,\,\bf{f}_m\}$ 을 만들 수 있다. 
 
- $\{\boldsymbol{e}_i\}$ 는 $\mathcal{M}_n(\mathbb{F})$ 의 정규직교기저이므로 $\boldsymbol{v}\in \mathcal{M}_n(\mathbb{F})$ 는
+ $\{\bf{e}_i\}$ 는 $\mathcal{M}_n(\mathbb{F})$ 의 정규직교기저이므로 $\bf{v}\in \mathcal{M}_n(\mathbb{F})$ 는
 
 $$
-\boldsymbol{v} = \sum_{i=1}^n \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{e}_i
+\bf{v} = \sum_{i=1}^n \langle \bf{v},\, \bf{e}_i \rangle \bf{e}_i
 $$
 
 이다. 그렇다면, 
 
 $$
-\boldsymbol{Av} =  \sum_{i=1}^n \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{Ae}_i = \sum_{i=1}^M s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{f}_i
+\bf{Av} =  \sum_{i=1}^n \langle \bf{v},\, \bf{e}_i \rangle \bf{Ae}_i = \sum_{i=1}^M s_i \langle \bf{v},\, \bf{e}_i \rangle \bf{f}_i
 $$
 
 이다. $\square$ 
@@ -589,7 +677,7 @@ $$
 
 #### 특이벡터
 
-@prp-LA_for_svd 에서 정의된 $\mathcal{M}_n(\mathbb{F})$ 의 정규직교기저벡터 $\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n$ 를 행렬 $\boldsymbol{A}$ 에 대한 **오른쪽 특이벡터 (right singular vectors)** 라고 한다. 또한 $\mathcal{M}_m(\mathbb{F})$ 의 정규직교기저벡터 $\boldsymbol{f}_1,\ldots,\,\boldsymbol{f}_m$ 을 **왼쪽 특이 벡터(left singular vectors)** 라고 한다.
+@prp-LA_for_svd 에서 정의된 $\mathcal{M}_n(\mathbb{F})$ 의 정규직교기저벡터 $\bf{e}_1,\ldots,\,\bf{e}_n$ 를 행렬 $\bf{A}$ 에 대한 **오른쪽 특이벡터 (right singular vectors)** 라고 한다. 또한 $\mathcal{M}_m(\mathbb{F})$ 의 정규직교기저벡터 $\bf{f}_1,\ldots,\,\bf{f}_m$ 을 **왼쪽 특이 벡터(left singular vectors)** 라고 한다.
 
 :::
 :::
@@ -605,10 +693,10 @@ $$
 
 #### 1차 특이값 분해
 
-$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 $M=\text{rank} (\boldsymbol{A}) \ge 1$ 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 $\boldsymbol{B}\in \mathcal{M}_{m \times M}(\mathbb{F})$ 과 대각행렬 $\boldsymbol{D}\in \mathcal{M}_{M \times M}(\mathbb{F})$ 그리고 역시 서로 직교하는 열벡터로 구성된 $\boldsymbol{C}=\mathcal{M}_{n \times M}(\mathbb{F})$ 에 대해 
+$\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 $M=\text{rank} (\bf{A}) \ge 1$ 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 $\bf{B}\in \mathcal{M}_{m \times M}(\mathbb{F})$ 과 대각행렬 $\bf{D}\in \mathcal{M}_{M \times M}(\mathbb{F})$ 그리고 역시 서로 직교하는 열벡터로 구성된 $\bf{C}=\mathcal{M}_{n \times M}(\mathbb{F})$ 에 대해 
 
 $$
-\boldsymbol{A} = \boldsymbol{BDC}^\ast
+\bf{A} = \bf{BDC}^\ast
 $$
 
 이다.
@@ -618,14 +706,14 @@ $$
 
 ::: {.proof}
 
-@prp-LA_for_svd 을 생각하자. 이제 $\boldsymbol{B} = \begin{bmatrix} \boldsymbol{f}_1 & \cdots & \boldsymbol{f}_M\end{bmatrix}$ 라 하고 $\boldsymbol{D}$ 는 $D_{ij}= s_j\delta_{ij}$ 가 되도록 하며 $\boldsymbol{C} = \begin{bmatrix} \boldsymbol{e}_1 & \cdots \boldsymbol{e}_M \end{bmatrix}$ 라고 하자. 
+@prp-LA_for_svd 을 생각하자. 이제 $\bf{B} = \begin{bmatrix} \bf{f}_1 & \cdots & \bf{f}_M\end{bmatrix}$ 라 하고 $\bf{D}$ 는 $D_{ij}= s_j\delta_{ij}$ 가 되도록 하며 $\bf{C} = \begin{bmatrix} \bf{e}_1 & \cdots \bf{e}_M \end{bmatrix}$ 라고 하자. 
 
 $$
-\boldsymbol{BDC}^\ast\boldsymbol{v}= \boldsymbol{BD}\begin{bmatrix} \langle \boldsymbol{v},\,\boldsymbol{e}_1\rangle \\ \vdots \\ \langle \boldsymbol{v},\, \boldsymbol{e}_M\rangle \end{bmatrix} = \boldsymbol{B}\begin{bmatrix} s_1\langle \boldsymbol{v},\,\boldsymbol{e}_1\rangle \\ \vdots \\ s_M\langle \boldsymbol{v},\, \boldsymbol{e}_M\rangle \end{bmatrix} = \sum_{i=1}^M s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{f}_i = \boldsymbol{Av}
+\bf{BDC}^\ast\bf{v}= \bf{BD}\begin{bmatrix} \langle \bf{v},\,\bf{e}_1\rangle \\ \vdots \\ \langle \bf{v},\, \bf{e}_M\rangle \end{bmatrix} = \bf{B}\begin{bmatrix} s_1\langle \bf{v},\,\bf{e}_1\rangle \\ \vdots \\ s_M\langle \bf{v},\, \bf{e}_M\rangle \end{bmatrix} = \sum_{i=1}^M s_i \langle \bf{v},\, \bf{e}_i \rangle \bf{f}_i = \bf{Av}
 $$
 
 
-이다. 임의의 벡터 $\boldsymbol{v}$ 에 대해 성립하므로 $\boldsymbol{A} = \boldsymbol{BDC}^\ast$ 이다. $\square$
+이다. 임의의 벡터 $\bf{v}$ 에 대해 성립하므로 $\bf{A} = \bf{BDC}^\ast$ 이다. $\square$
 :::
 
 </br>
@@ -638,10 +726,10 @@ $$
 
 #### 2차 특이값 분해
 
-$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 $\text{rank} (\boldsymbol{A}) \ge 1$ 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 $\boldsymbol{U}\in \mathcal{M}_{m \times m}(\mathbb{F})$ 과 대각성분이 1이며 나머지 성분은 0 인 직사각행렬 $\boldsymbol{\Sigma}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 그리고 역시 서로 직교하는 열벡터로 구성된 $\boldsymbol{V}=\mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 
+$\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 $\text{rank} (\bf{A}) \ge 1$ 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 $\bf{U}\in \mathcal{M}_{m \times m}(\mathbb{F})$ 과 대각성분이 1이며 나머지 성분은 0 인 직사각행렬 $\bf{\Sigma}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 그리고 역시 서로 직교하는 열벡터로 구성된 $\bf{V}=\mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 
 
 $$
-\boldsymbol{A} = \boldsymbol{U\Sigma V}^\ast
+\bf{A} = \bf{U\Sigma V}^\ast
 $$
 
 이다.
@@ -652,19 +740,19 @@ $$
 
 ::: {.proof}
 
-@prp-LA_for_svd 를 생각하자. $\boldsymbol{U} = \begin{bmatrix} \boldsymbol{f}_1 & \cdots & \boldsymbol{f}_m\end{bmatrix}$ 라 하고 $\boldsymbol{V}= \begin{bmatrix} \boldsymbol{e}_1 & \cdots \boldsymbol{e}_n\end{bmatrix}$ 라고 하자. (@thm-LA_svd_1 의 $\boldsymbol{B},\, \boldsymbol{D}$ 보다 큰데, 왼쪽 특이벡터와 오른쪽 특이벡터 전체를 사용한다.)
+@prp-LA_for_svd 를 생각하자. $\bf{U} = \begin{bmatrix} \bf{f}_1 & \cdots & \bf{f}_m\end{bmatrix}$ 라 하고 $\bf{V}= \begin{bmatrix} \bf{e}_1 & \cdots \bf{e}_n\end{bmatrix}$ 라고 하자. (@thm-LA_svd_1 의 $\bf{B},\, \bf{D}$ 보다 큰데, 왼쪽 특이벡터와 오른쪽 특이벡터 전체를 사용한다.)
 
-@thm-LA_svd_1 에서 $\boldsymbol{D}$ 는 $M \times M$ 행렬이며 $M \le \text{min}(m, n)$ 이다. $m \times n$ 행렬 $\boldsymbol{\Sigma}$ 을 1행 1열부터 $M$ 행 $M$ 열 까지를 $\boldsymbol{D}$ 와 같은 값을 가지며 나머지는 $0$ 인 행렬로 정의하자. 그렇다면, 임의의 $\boldsymbol{v}\in \mathcal{M}_{n}(\mathbb{F})$ 에 대해 
+@thm-LA_svd_1 에서 $\bf{D}$ 는 $M \times M$ 행렬이며 $M \le \text{min}(m, n)$ 이다. $m \times n$ 행렬 $\bf{\Sigma}$ 을 1행 1열부터 $M$ 행 $M$ 열 까지를 $\bf{D}$ 와 같은 값을 가지며 나머지는 $0$ 인 행렬로 정의하자. 그렇다면, 임의의 $\bf{v}\in \mathcal{M}_{n}(\mathbb{F})$ 에 대해 
 
 $$
 \begin{aligned}
-\boldsymbol{U\Sigma V}^\ast \boldsymbol{v} = 
-\boldsymbol{U\Sigma}\begin{bmatrix} \langle \boldsymbol{v},\,\boldsymbol{e}_1\rangle \\ \vdots \\ \langle \boldsymbol{v},\, \boldsymbol{e}_M\rangle \\ \langle \boldsymbol{v},\, \boldsymbol{e}_{M+1}\rangle \\ \vdots \\ \langle \boldsymbol{v},\,\boldsymbol{e}_n \rangle \end{bmatrix} = 
-\boldsymbol{U} \begin{bmatrix} s_1\langle \boldsymbol{v},\,\boldsymbol{e}_1\rangle \\ \vdots \\ s_M\langle \boldsymbol{v},\, \boldsymbol{e}_M\rangle \\ 0 \cdot \langle \boldsymbol{v},\, \boldsymbol{e}_{M+1}\rangle \\ \vdots \\ 0 \cdot  \langle \boldsymbol{v},\,\boldsymbol{e}_n \rangle \end{bmatrix} = \sum_{i=1}^M s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{f}_i = \boldsymbol{Av}
+\bf{U\Sigma V}^\ast \bf{v} = 
+\bf{U\Sigma}\begin{bmatrix} \langle \bf{v},\,\bf{e}_1\rangle \\ \vdots \\ \langle \bf{v},\, \bf{e}_M\rangle \\ \langle \bf{v},\, \bf{e}_{M+1}\rangle \\ \vdots \\ \langle \bf{v},\,\bf{e}_n \rangle \end{bmatrix} = 
+\bf{U} \begin{bmatrix} s_1\langle \bf{v},\,\bf{e}_1\rangle \\ \vdots \\ s_M\langle \bf{v},\, \bf{e}_M\rangle \\ 0 \cdot \langle \bf{v},\, \bf{e}_{M+1}\rangle \\ \vdots \\ 0 \cdot  \langle \bf{v},\,\bf{e}_n \rangle \end{bmatrix} = \sum_{i=1}^M s_i \langle \bf{v},\, \bf{e}_i \rangle \bf{f}_i = \bf{Av}
 \end{aligned}
 $$
 
-이다. 즉 $\boldsymbol{A} = \boldsymbol {U\Sigma V}$ 이다. $\square$
+이다. 즉 $\bf{A} = \boldsymbol {U\Sigma V}$ 이다. $\square$
 
 :::
 
@@ -675,10 +763,10 @@ $$
 
 ::: {#prp-LA_adjoint_of_svd}
 
-$\boldsymbol{A} \in \mathcal{M}_{m\times n}(\mathbb{F})$ 의 오른쪽 특이벡터와 왼쪽 특이벡터는 각각 $\boldsymbol{A}^\ast$ 의 왼쪽 특이벡터와 오른쪽 특이벡터이다. $\boldsymbol{A}$ 가 $0$ 이 아닌 특이값 $s_1 \ge \cdots \ge s_M>0$ 을 가질 때 $\boldsymbol{u}\in \mathcal{M}_m(\mathbb{F})$ 에 대해
+$\bf{A} \in \mathcal{M}_{m\times n}(\mathbb{F})$ 의 오른쪽 특이벡터와 왼쪽 특이벡터는 각각 $\bf{A}^\ast$ 의 왼쪽 특이벡터와 오른쪽 특이벡터이다. $\bf{A}$ 가 $0$ 이 아닌 특이값 $s_1 \ge \cdots \ge s_M>0$ 을 가질 때 $\bf{u}\in \mathcal{M}_m(\mathbb{F})$ 에 대해
 
 $$
-\boldsymbol{A}^\ast\boldsymbol{u} = \sum_{j=1}^M s_j\langle \boldsymbol{u},\,\boldsymbol{f}_j\rangle \boldsymbol{e}_j
+\bf{A}^\ast\bf{u} = \sum_{j=1}^M s_j\langle \bf{u},\,\bf{f}_j\rangle \bf{e}_j
 $$
 
 이다.
@@ -689,10 +777,10 @@ $$
 
 ::: {.proof}
 
-$\boldsymbol{A}= \boldsymbol{U\Sigma V}^\ast$ 이므로 $\boldsymbol{A}^\ast = \boldsymbol{V\Sigma}^\ast \boldsymbol{U}^\ast$ 이다. 그런데 $\boldsymbol{\Sigma}$ 는 대각성분은 실수이며, 대각성분을 제외한 행렬은 모두 $0$ 이므로  $\boldsymbol{\Sigma}^\ast = \boldsymbol{\Sigma}^T$ 이다. 즉 $\boldsymbol{V\Sigma}^T\boldsymbol{U}^\ast$ 는 $\boldsymbol{A}^\ast$ 의 특이값 분해이다. $\boldsymbol{U} = \begin{bmatrix} \boldsymbol{f}_1 & \cdots & \boldsymbol{f}_m\end{bmatrix}$ 이며 $\{\boldsymbol{f}_j\}$ 는 $\mathcal{M}_m(\mathbb{F})$ 의 정규직교기저이므로 $\boldsymbol{u} = \sum_{j=1}^m \langle \boldsymbol{u},\,\boldsymbol{f}_j\rangle \boldsymbol{f}_j$ 이다. 따라서, 
+$\bf{A}= \bf{U\Sigma V}^\ast$ 이므로 $\bf{A}^\ast = \bf{V\Sigma}^\ast \bf{U}^\ast$ 이다. 그런데 $\bf{\Sigma}$ 는 대각성분은 실수이며, 대각성분을 제외한 행렬은 모두 $0$ 이므로  $\bf{\Sigma}^\ast = \bf{\Sigma}^T$ 이다. 즉 $\bf{V\Sigma}^T\bf{U}^\ast$ 는 $\bf{A}^\ast$ 의 특이값 분해이다. $\bf{U} = \begin{bmatrix} \bf{f}_1 & \cdots & \bf{f}_m\end{bmatrix}$ 이며 $\{\bf{f}_j\}$ 는 $\mathcal{M}_m(\mathbb{F})$ 의 정규직교기저이므로 $\bf{u} = \sum_{j=1}^m \langle \bf{u},\,\bf{f}_j\rangle \bf{f}_j$ 이다. 따라서, 
 
 $$
-\boldsymbol{A}^\ast\boldsymbol{u} = \sum_{j=1}^m \langle \boldsymbol{u},\, \boldsymbol{f}_j\rangle \boldsymbol{V\Sigma}^T\boldsymbol{U}^\ast \boldsymbol{f}_j = \sum_{j=1}^M s_j \langle \boldsymbol{u}_j,\, \boldsymbol{f}_j\rangle \boldsymbol{e}_j
+\bf{A}^\ast\bf{u} = \sum_{j=1}^m \langle \bf{u},\, \bf{f}_j\rangle \bf{V\Sigma}^T\bf{U}^\ast \bf{f}_j = \sum_{j=1}^M s_j \langle \bf{u}_j,\, \bf{f}_j\rangle \bf{e}_j
 $$
 
 이다. $\square$
@@ -704,14 +792,14 @@ $$
 
 ::: {#prp-LA_inverse_matrix_using_svd}
 
-$\boldsymbol{A}$ 가 가역행렬이라고 하자. $\boldsymbol{A}= \boldsymbol{U\Sigma V}^\ast$ 일 때 
+$\bf{A}$ 가 가역행렬이라고 하자. $\bf{A}= \bf{U\Sigma V}^\ast$ 일 때 
 
 $$
-\left(\overline{\boldsymbol{\Sigma}}\right)_{ij} = \left\{\begin{array}{ll} 1/\Sigma_{ii} \qquad &\text{if } i=j,\, s_i \ne 0 \\ 0&\text{otherwise} \end{array} \right.
+\left(\overline{\bf{\Sigma}}\right)_{ij} = \left\{\begin{array}{ll} 1/\Sigma_{ii} \qquad &\text{if } i=j,\, s_i \ne 0 \\ 0&\text{otherwise} \end{array} \right.
 $$
 
 $$
-\boldsymbol{A}^{-1} =  \boldsymbol{V\overline{\Sigma} U}^\ast 
+\bf{A}^{-1} =  \bf{V\overline{\Sigma} U}^\ast 
 $$
 
 이다.
@@ -722,10 +810,10 @@ $$
 
 ::: {.proof}
 
-$\boldsymbol{A}$ 가 가역행렬이면 정사각 행렬이며, @prp-LA_properties_of_singular_value 에 따라 $\boldsymbol{\Sigma}$ 는 대각성분이 모두 $0$ 이 아닌 대각행렬이며 따라서 $\boldsymbol{\Sigma\overline{\Sigma}} = \boldsymbol{I}$ 이다. 이를 이용하면
+$\bf{A}$ 가 가역행렬이면 정사각 행렬이며, @prp-LA_properties_of_singular_value 에 따라 $\bf{\Sigma}$ 는 대각성분이 모두 $0$ 이 아닌 대각행렬이며 따라서 $\bf{\Sigma\overline{\Sigma}} = \bf{I}$ 이다. 이를 이용하면
 
 $$
-\boldsymbol{A}(\boldsymbol{V\overline{\Sigma} U}^\ast)  = (\boldsymbol{U\Sigma V}^\ast)(\boldsymbol{V\overline{\Sigma} U}^\ast)= \boldsymbol{U\Sigma \overline{\Sigma} U}^\ast = \boldsymbol{UU}^\ast = \boldsymbol{I}
+\bf{A}(\bf{V\overline{\Sigma} U}^\ast)  = (\bf{U\Sigma V}^\ast)(\bf{V\overline{\Sigma} U}^\ast)= \bf{U\Sigma \overline{\Sigma} U}^\ast = \bf{UU}^\ast = \bf{I}
 $$
 
 이다. $\square$
@@ -918,10 +1006,10 @@ $$
 
 ::: {#prp-LA_norm_of_matrix}
 
-$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 의 가장 큰 특이값을 $s_M$ 이라고 하면 다음이 성립한다.
+$\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 의 가장 큰 특이값을 $s_M$ 이라고 하면 다음이 성립한다.
 
 $$
-\forall \boldsymbol{v}\in \mathcal{M}_n(\mathbb{F}),\qquad \|\boldsymbol{Av}\| \le s_M \|\boldsymbol{v}\|.
+\forall \bf{v}\in \mathcal{M}_n(\mathbb{F}),\qquad \|\bf{Av}\| \le s_M \|\bf{v}\|.
 $$
 :::
 
@@ -929,27 +1017,27 @@ $$
 
 ::: {.proof}
 
-@thm-LA_svd_2 의 증명과정에서 $\boldsymbol{Av} = \sum_i s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{f}_i$ 임을 알았다. 이를 이용하면
+@thm-LA_svd_2 의 증명과정에서 $\bf{Av} = \sum_i s_i \langle \bf{v},\, \bf{e}_i \rangle \bf{f}_i$ 임을 알았다. 이를 이용하면
 
 $$
 \begin{aligned}
-\|\boldsymbol{Av}\|^2 &= \left\| \sum_{i=1}^M s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{f}_i \right\|^2  \le \sum_{i=1}^M  |s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i\rangle|^2 \le {s_M}^2 \sum_{i=1}^M |\langle \boldsymbol{v},\, \boldsymbol{e}_i\rangle|^2 \le {s_M}^2 \|\boldsymbol{v}\|^2
+\|\bf{Av}\|^2 &= \left\| \sum_{i=1}^M s_i \langle \bf{v},\, \bf{e}_i \rangle \bf{f}_i \right\|^2  \le \sum_{i=1}^M  |s_i \langle \bf{v},\, \bf{e}_i\rangle|^2 \le {s_M}^2 \sum_{i=1}^M |\langle \bf{v},\, \bf{e}_i\rangle|^2 \le {s_M}^2 \|\bf{v}\|^2
 \end{aligned}
 $$
 
-이다. 마지막 부등호는 베셀 부등식(@prp-LA_properties_of_orthonormal_vectors ($3$)) 으로부터 성립한다. 따라서 $\|\boldsymbol{Av}\| \le s_M \|\boldsymbol{v}\|$ 이다. $\square$
+이다. 마지막 부등호는 베셀 부등식(@prp-LA_properties_of_orthonormal_vectors ($3$)) 으로부터 성립한다. 따라서 $\|\bf{Av}\| \le s_M \|\bf{v}\|$ 이다. $\square$
 :::
 
 
 </br>
 
-@prp-LA_norm_of_matrix 의 최대 특이값 $s_M$ 을 갖는 벡터는 ${s_M}^2$ 의 고유값에 대한 $\boldsymbol{A}^\ast\boldsymbol{A}$ 의 고유벡터이므로 항상 존재한다. $\boldsymbol{v}\ne \boldsymbol{0}$ 에 대해 
+@prp-LA_norm_of_matrix 의 최대 특이값 $s_M$ 을 갖는 벡터는 ${s_M}^2$ 의 고유값에 대한 $\bf{A}^\ast\bf{A}$ 의 고유벡터이므로 항상 존재한다. $\bf{v}\ne \bf{0}$ 에 대해 
 
 $$
-\dfrac{\|\boldsymbol{Av}\|}{\|\boldsymbol{v}\|} \le s_M
+\dfrac{\|\bf{Av}\|}{\|\bf{v}\|} \le s_M
 $$
 
-이므로 $s_M$ 은 선형사상에 의해 증가하는 벡터의 크기의 비율의 상한을 정의한다. 만약 $\|\boldsymbol{v}\|=1$ 이라면 $\|\boldsymbol{Av}\| \le s_M$ 이다. 이제 행렬의 노름을 정의하자. 앞서 설명했던과 같이 동등한 값이 여러개 있지만 그중 다루기 편한 것으로 정의하고 이후 동등한 명제에 대해 설명하기로 한다.₩
+이므로 $s_M$ 은 선형사상에 의해 증가하는 벡터의 크기의 비율의 상한을 정의한다. 만약 $\|\bf{v}\|=1$ 이라면 $\|\bf{Av}\| \le s_M$ 이다. 이제 행렬의 노름을 정의하자. 앞서 설명했던과 같이 동등한 값이 여러개 있지만 그중 다루기 편한 것으로 정의하고 이후 동등한 명제에 대해 설명하기로 한다.₩
 
 </br>
 
@@ -959,10 +1047,10 @@ $$
 
 #### 행렬의 노름
 
-$\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 의 노름 $\|\boldsymbol{A}\|$ 는 다음과 같이 정의된다.
+$\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 의 노름 $\|\bf{A}\|$ 는 다음과 같이 정의된다.
 
 $$
-\|\boldsymbol{A}\| := \max \{ \|\boldsymbol{Av}\| : \|\boldsymbol{v}\|=1\} 
+\|\bf{A}\| := \max \{ \|\bf{Av}\| : \|\bf{v}\|=1\} 
 $$
 
 
@@ -975,15 +1063,15 @@ $$
 
 #### 노름의 다양한 정의
 
-행렬 $\boldsymbol{A}$ 에 대해 다음 네 값은 같다. 즉 행렬의 노름에 대해 4가지 동등한 정의가 존재한다.
+행렬 $\bf{A}$ 에 대해 다음 네 값은 같다. 즉 행렬의 노름에 대해 4가지 동등한 정의가 존재한다.
 
-&emsp;($1$) $\max \{ \|\boldsymbol{Av}\| : \|\boldsymbol{v}\|=1 \}$
+&emsp;($1$) $\max \{ \|\bf{Av}\| : \|\bf{v}\|=1 \}$
 
-&emsp;($2$) $\max \{ \|\boldsymbol{Av}\| : \|\boldsymbol{v}\|\le 1 \}$
+&emsp;($2$) $\max \{ \|\bf{Av}\| : \|\bf{v}\|\le 1 \}$
 
-&emsp;($3$) $\boldsymbol{A}$ 의 최대 특이값.
+&emsp;($3$) $\bf{A}$ 의 최대 특이값.
 
-&emsp;($4$) $\max \left\{ \dfrac{\|\boldsymbol{Av}\|}{\|\boldsymbol{v}\|} : \boldsymbol{v} \ne \boldsymbol{0}\right\}$. 
+&emsp;($4$) $\max \left\{ \dfrac{\|\bf{Av}\|}{\|\bf{v}\|} : \bf{v} \ne \bf{0}\right\}$. 
 
 :::
 
@@ -991,9 +1079,9 @@ $$
 
 ::: {.proof}
 
-($3$) 과 ($4$) 가 같다는 것은 앞에서 설명했다. ($2$) 에서 $\|\boldsymbol{Av}\|$ 를 최대로 하는 값이 $|\boldsymbol{v}\|<1$ 이면 $\boldsymbol{u}=\dfrac{\boldsymbol{v}}{\|\boldsymbol{v}\|}$ 에 대해 $\|\boldsymbol{u}\|=1$ 이며 $|\boldsymbol{Au}\| > \|\boldsymbol{Av}|$ 이므로 모순된다. 따라서 ($2$) $\|\boldsymbol{Av}\|$ 를 최대로 하는 $\|\boldsymbol{v}\|$ 는 $\|\boldsymbol{v}\|=1$ 일 때이다. 따라서 ($1$) 의 값과 ($2$) 의 값은 같다.
+($3$) 과 ($4$) 가 같다는 것은 앞에서 설명했다. ($2$) 에서 $\|\bf{Av}\|$ 를 최대로 하는 값이 $|\bf{v}\|<1$ 이면 $\bf{u}=\dfrac{\bf{v}}{\|\bf{v}\|}$ 에 대해 $\|\bf{u}\|=1$ 이며 $|\bf{Au}\| > \|\bf{Av}|$ 이므로 모순된다. 따라서 ($2$) $\|\bf{Av}\|$ 를 최대로 하는 $\|\bf{v}\|$ 는 $\|\bf{v}\|=1$ 일 때이다. 따라서 ($1$) 의 값과 ($2$) 의 값은 같다.
 
-($4$) 의 값에 대해 $\dfrac{\|\boldsymbol{Av}\|}{\|\boldsymbol{v}\|} = \left\|\boldsymbol{A} \left(\dfrac{\boldsymbol{v}}{\|\boldsymbol{v}\|}\right) \right\|$ 이므로 ($1$) 의 값과 같다. 따라서 위의 네 값은 같다.
+($4$) 의 값에 대해 $\dfrac{\|\bf{Av}\|}{\|\bf{v}\|} = \left\|\bf{A} \left(\dfrac{\bf{v}}{\|\bf{v}\|}\right) \right\|$ 이므로 ($1$) 의 값과 같다. 따라서 위의 네 값은 같다.
 
 :::
 
@@ -1003,17 +1091,17 @@ $$
 
 행렬의 노름 $\|\cdot \|$ 에 대해 다음이 성립한다.
 
-&emsp;($1$) $\|\boldsymbol{A}\|\ge 0$. 
+&emsp;($1$) $\|\bf{A}\|\ge 0$. 
 
-&emsp;($2$) $\|\boldsymbol{A}\|=0 \iff \boldsymbol{A} =\boldsymbol{0}$.
+&emsp;($2$) $\|\bf{A}\|=0 \iff \bf{A} =\bf{0}$.
 
-&emsp;($3$) $c\in \mathbb{F}$ 에 대해 $\|c\boldsymbol{A}\| = |c|\|\boldsymbol{A}\|$.
+&emsp;($3$) $c\in \mathbb{F}$ 에 대해 $\|c\bf{A}\| = |c|\|\bf{A}\|$.
 
-&emsp;($4$) $\|\boldsymbol{A} +\boldsymbol{B}\| \le \|\boldsymbol{A} \|+\|\boldsymbol{B}\|$. 
+&emsp;($4$) $\|\bf{A} +\bf{B}\| \le \|\bf{A} \|+\|\bf{B}\|$. 
 
-&emsp;($5$) $\|\boldsymbol{A}\| \|\boldsymbol{v}\| \ge \|\boldsymbol{Av}\|$.
+&emsp;($5$) $\|\bf{A}\| \|\bf{v}\| \ge \|\bf{Av}\|$.
 
-&emsp;($6$) $\|\boldsymbol{A^\ast}\| = \| \boldsymbol{A}\|$. 
+&emsp;($6$) $\|\bf{A^\ast}\| = \| \bf{A}\|$. 
 
 :::
 
@@ -1023,21 +1111,21 @@ $$
 
 ($1$) 노름의 정의에 의해 자명하다.
 
-($2$) $\boldsymbol{A}=0$ 이면 당연히 $\|\boldsymbol{A}\|=0$ 이다. $\|\boldsymbol{A}\|=0$ 이면 모든 $\boldsymbol{v}$ 에 대해 $\boldsymbol{Av}=\boldsymbol{0}$ 이어야 하므로 $\boldsymbol{A}=\boldsymbol{0}$ 이다.
+($2$) $\bf{A}=0$ 이면 당연히 $\|\bf{A}\|=0$ 이다. $\|\bf{A}\|=0$ 이면 모든 $\bf{v}$ 에 대해 $\bf{Av}=\bf{0}$ 이어야 하므로 $\bf{A}=\bf{0}$ 이다.
 
-($3$) $\|c\boldsymbol{Av}\| = |c|\|\boldsymbol{Av}\|$. 
+($3$) $\|c\bf{Av}\| = |c|\|\bf{Av}\|$. 
 
-($4$) $\|(\boldsymbol{A}+\boldsymbol{B})\boldsymbol{v}\| = \|\boldsymbol{Av}+\boldsymbol{Bv}\|  \le \|\boldsymbol{Av}\| +\|\boldsymbol{Bv}\|$.
+($4$) $\|(\bf{A}+\bf{B})\bf{v}\| = \|\bf{Av}+\bf{Bv}\|  \le \|\bf{Av}\| +\|\bf{Bv}\|$.
 
-($5$) @prp-LA_anothor_definitions_of_matrix_norm 의 ($4$) 로 부터 $\|\boldsymbol{A}\| \ge \dfrac{\|\boldsymbol{Av}\|}{\|\boldsymbol{v}\|}$ 이다. 
+($5$) @prp-LA_anothor_definitions_of_matrix_norm 의 ($4$) 로 부터 $\|\bf{A}\| \ge \dfrac{\|\bf{Av}\|}{\|\bf{v}\|}$ 이다. 
 
-($6$) $\|\boldsymbol{A}^\ast\boldsymbol{v}\|^2 = \langle \boldsymbol{AA}^\ast\boldsymbol{v},\, \boldsymbol{v}\rangle \le \boldsymbol{v} \le \|\boldsymbol{AA}^\ast\boldsymbol{v}\|\|\boldsymbol{v}\|$ 이며 ($5$) 로 부터 
+($6$) $\|\bf{A}^\ast\bf{v}\|^2 = \langle \bf{AA}^\ast\bf{v},\, \bf{v}\rangle \le \bf{v} \le \|\bf{AA}^\ast\bf{v}\|\|\bf{v}\|$ 이며 ($5$) 로 부터 
 
 $$
-\|\boldsymbol{AA}^\ast\boldsymbol{v}\| = \|\boldsymbol{A}(\boldsymbol{A}^\ast\boldsymbol{v})\| \le \|\boldsymbol{A}\|\|\boldsymbol{A}^\ast\boldsymbol{v}\|\|\boldsymbol{v}\|
+\|\bf{AA}^\ast\bf{v}\| = \|\bf{A}(\bf{A}^\ast\bf{v})\| \le \|\bf{A}\|\|\bf{A}^\ast\bf{v}\|\|\bf{v}\|
 $$
 
-이므로 $\|\boldsymbol{A}^\ast\boldsymbol{v}\|^2 \le \|\boldsymbol{A}^\ast\boldsymbol{v}\|\|\boldsymbol{A}\|\boldsymbol{v}\|$ 이다. 따라서 $\dfrac{\|\boldsymbol{A}^\ast\boldsymbol{v}\|}{\|\boldsymbol{v}\|} \le \|\boldsymbol{A}\|$ 이므로 매트릭스 노름의 정의에 의해 $\|\boldsymbol{A}^\ast\|\le \|\boldsymbol{A}\|$ 이다. 여기에 $(\boldsymbol{A}^\ast)^\ast =\boldsymbol{A}$ 임을 이용하면 $\|\boldsymbol{A}\|\le \|\boldsymbol{A}^\ast\|$ 를 얻는다. 즉 $\|\boldsymbol{A}^\ast\|=\boldsymbol{A}\|$ 이다. $\square$
+이므로 $\|\bf{A}^\ast\bf{v}\|^2 \le \|\bf{A}^\ast\bf{v}\|\|\bf{A}\|\bf{v}\|$ 이다. 따라서 $\dfrac{\|\bf{A}^\ast\bf{v}\|}{\|\bf{v}\|} \le \|\bf{A}\|$ 이므로 매트릭스 노름의 정의에 의해 $\|\bf{A}^\ast\|\le \|\bf{A}\|$ 이다. 여기에 $(\bf{A}^\ast)^\ast =\bf{A}$ 임을 이용하면 $\|\bf{A}\|\le \|\bf{A}^\ast\|$ 를 얻는다. 즉 $\|\bf{A}^\ast\|=\bf{A}\|$ 이다. $\square$
 
 :::
 
@@ -1060,13 +1148,13 @@ $L\in \mathcal{L}(U,\,V)$ 의 양의 특이값을 $s_1 \ge s_2 \ge \ldots,\ge s_
 
 ::: {#prp-LA_approximation_using_svd}
 
-$\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 양의 특이값 $s_1 \ge s_2 \ge \ldots \ge s_m>0$ 을 갖는다고 하자. $k \le m$ 에 대해 다음이 성립한다.
+$\bf{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 양의 특이값 $s_1 \ge s_2 \ge \ldots \ge s_m>0$ 을 갖는다고 하자. $k \le m$ 에 대해 다음이 성립한다.
 
 $$
-\min \{ \|\boldsymbol{A}-\boldsymbol{B} \| : \boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{F}),\, \text{rank}(\boldsymbol{B})\le k\} = s_{k+1}.
+\min \{ \|\bf{A}-\bf{B} \| : \bf{B}\in \mathcal{M}_{m \times n}(\mathbb{F}),\, \text{rank}(\bf{B})\le k\} = s_{k+1}.
 $$
 
-또한 $\|\boldsymbol{A}-\boldsymbol{B}\| = s_{k+1}$ 을 만족하는 그 $\text{rank}$ 가 $k$ 보다 작은 행렬이 존재한다.
+또한 $\|\bf{A}-\bf{B}\| = s_{k+1}$ 을 만족하는 그 $\text{rank}$ 가 $k$ 보다 작은 행렬이 존재한다.
 
 :::
 
@@ -1074,54 +1162,54 @@ $$
 
 ::: {.proof}
 
-@thm-LA_svd_2 를 생각하자. $\boldsymbol{v}\in \mathcal{M}_n(\mathbb{F})$ 에 대해 $\boldsymbol{A}=\boldsymbol{U\Sigma V}^\ast$ 이다. 이 때 $\boldsymbol{V}_k = \begin{bmatrix} \boldsymbol{e}_1 & \cdots & \boldsymbol{e}_k & 0 & \cdots & 0\end{bmatrix}$ 라고 하고 $\boldsymbol{A}_k = \boldsymbol{U\Sigma V}_k^\ast$ 라고 하자. 
+@thm-LA_svd_2 를 생각하자. $\bf{v}\in \mathcal{M}_n(\mathbb{F})$ 에 대해 $\bf{A}=\bf{U\Sigma V}^\ast$ 이다. 이 때 $\bf{V}_k = \begin{bmatrix} \bf{e}_1 & \cdots & \bf{e}_k & 0 & \cdots & 0\end{bmatrix}$ 라고 하고 $\bf{A}_k = \bf{U\Sigma V}_k^\ast$ 라고 하자. 
 
 $$
-(\boldsymbol{A}-\boldsymbol{A}_k)\boldsymbol{v} = \boldsymbol{U\Sigma} \begin{bmatrix}  \boldsymbol{0} \\ \langle \boldsymbol{v},\, \boldsymbol{e}_{k+1} \rangle \\ \vdots \\ \langle \boldsymbol{v},\,\boldsymbol{e}_{m} \rangle \\ \boldsymbol{0}\end{bmatrix} =  \sum_{i=k+1}^m s_{i} \langle \boldsymbol{v},\, \boldsymbol{e}_i\rangle \boldsymbol{f}_i
+(\bf{A}-\bf{A}_k)\bf{v} = \bf{U\Sigma} \begin{bmatrix}  \bf{0} \\ \langle \bf{v},\, \bf{e}_{k+1} \rangle \\ \vdots \\ \langle \bf{v},\,\bf{e}_{m} \rangle \\ \bf{0}\end{bmatrix} =  \sum_{i=k+1}^m s_{i} \langle \bf{v},\, \bf{e}_i\rangle \bf{f}_i
 $$
 
 
-이며, 따라서 $\|(\boldsymbol{A}-\boldsymbol{A}_k)\boldsymbol{v}\|^2 \le {s_{k+1}}^2 \|\boldsymbol{v}\|^2$ 이며 이로부터 
+이며, 따라서 $\|(\bf{A}-\bf{A}_k)\bf{v}\|^2 \le {s_{k+1}}^2 \|\bf{v}\|^2$ 이며 이로부터 
 
 $$
-\|\boldsymbol{A}-\boldsymbol{A}_k\| \le s_{k+1}
+\|\bf{A}-\bf{A}_k\| \le s_{k+1}
 $$ {#eq-svd_1}
 
 을 얻는다.
 
-이제 임의의 $\boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $\text{rank}(\boldsymbol{B})\le k$ 를 생각하자. $\{\boldsymbol{Be}_1,\ldots,\,\boldsymbol{Be}_{k+1}\}$ 벡터의 갯수가 $\text{rank}(\boldsymbol{B})$ 보다 크기 때문에 선형종속이며, 따라서, 
+이제 임의의 $\bf{B}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $\text{rank}(\bf{B})\le k$ 를 생각하자. $\{\bf{Be}_1,\ldots,\,\bf{Be}_{k+1}\}$ 벡터의 갯수가 $\text{rank}(\bf{B})$ 보다 크기 때문에 선형종속이며, 따라서, 
 
 $$
-a_1 \boldsymbol{Be}_1 + \cdots + a_{k+1}\boldsymbol{Be}_{k+1} = \boldsymbol{0}
+a_1 \bf{Be}_1 + \cdots + a_{k+1}\bf{Be}_{k+1} = \bf{0}
 $$
 
 을 만족하는, nontrivial 한 $a_1,\ldots,\,a_{k+1}$ 이 존재한다. 이제 $a_1,\ldots,\,a_{k+1}$ 을 이용하여 다음의 계산을 수행한다. 
 
 $$
 \begin{aligned}
-(\boldsymbol{A}-\boldsymbol{B})\left(\sum_{j=1}^{k+1}a_j \boldsymbol{e}_j\right) = \boldsymbol{A}\left(\sum_{j=1}^{k+1}a_j \boldsymbol{e}_j\right) = \sum_{j=1}^{k+1} a_j s_j \boldsymbol{f}_j 
+(\bf{A}-\bf{B})\left(\sum_{j=1}^{k+1}a_j \bf{e}_j\right) = \bf{A}\left(\sum_{j=1}^{k+1}a_j \bf{e}_j\right) = \sum_{j=1}^{k+1} a_j s_j \bf{f}_j 
 \end{aligned}
 $$
 
 이로부터 
 $$
 \begin{aligned}
-\left\|(\boldsymbol{A}-\boldsymbol{B})\left(\sum_{j=1}^{k+1}a_j \boldsymbol{e}_j\right)\right\|^2 &= \sum_{j=1}^{k+1} {s_j}^2 |a_j|^2 \\
+\left\|(\bf{A}-\bf{B})\left(\sum_{j=1}^{k+1}a_j \bf{e}_j\right)\right\|^2 &= \sum_{j=1}^{k+1} {s_j}^2 |a_j|^2 \\
 &\ge {s_{k+1}}^2(|a_1|^2 + \cdots + |a_{k+1}|^2) \\
-&= {s_{k+1}}^2 \| a_1\boldsymbol{e}_1 + \cdots + a_{k+1}\boldsymbol{e}_{k+1}\|^2
+&= {s_{k+1}}^2 \| a_1\bf{e}_1 + \cdots + a_{k+1}\bf{e}_{k+1}\|^2
 \end{aligned}
 $$
 
-이다. $a_1\boldsymbol{e}_1+\cdots +a_{k+1}\boldsymbol{e}_{k+1} \ne \boldsymbol{0}$ 이므로, 
+이다. $a_1\bf{e}_1+\cdots +a_{k+1}\bf{e}_{k+1} \ne \bf{0}$ 이므로, 
 
 $$
-\|\boldsymbol{A} -\boldsymbol{B}\| \ge s_{k+1}
+\|\bf{A} -\bf{B}\| \ge s_{k+1}
 $$ {#eq-svd_2}
 
-을 얻는다. @eq-svd_1 의 $\boldsymbol{A}_k$ 는 $\text{rank}(\boldsymbol{A}_k) \le k$ 이므로 @eq-svd_2 를 만족해야 한다. 따라서 
+을 얻는다. @eq-svd_1 의 $\bf{A}_k$ 는 $\text{rank}(\bf{A}_k) \le k$ 이므로 @eq-svd_2 를 만족해야 한다. 따라서 
 
 $$
-\|\boldsymbol{A}-\boldsymbol{A}_k\| = s_{k+1}
+\|\bf{A}-\bf{A}_k\| = s_{k+1}
 $$
 
 이다. 
@@ -1136,7 +1224,7 @@ $$
 
 ::: {#prp-LA_polar_decomposition}
 
-정사각행렬 $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 는 어떤 유니타리 행렬 $\boldsymbol{U}$ 에 대해 $\boldsymbol{A}=\boldsymbol{S}\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}$ 이다.
+정사각행렬 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 는 어떤 유니타리 행렬 $\bf{U}$ 에 대해 $\bf{A}=\bf{S}\sqrt{\bf{A}^\ast\bf{A}}$ 이다.
 
 :::
 
@@ -1144,7 +1232,7 @@ $$
 
 ::: {.proof}
 
-@thm-LA_svd_2 형식의 특이값 분해 $\boldsymbol{A}= \boldsymbol{U\Sigma V}^\ast$ 를 사용한다. $\boldsymbol{A}$ 가 정사각 행렬이므로 $\boldsymbol{U},\,\boldsymbol{\Sigma},\, \boldsymbol{V}$ 모두 정사각 행렬이다. $\boldsymbol{\Sigma}$ 는 실수 성분의 대각행렬이다. $\boldsymbol{A}^\ast\boldsymbol{A} = \boldsymbol{V}\boldsymbol{\Sigma}^2\boldsymbol{V}^\ast$ 이므로, $\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}} = \boldsymbol{V\Sigma V}^\ast$ 이다. 따라서 $\boldsymbol{S}=\boldsymbol{UV}^\ast$ 라고 하면 $\boldsymbol{A} = \boldsymbol{S}\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}$ 이다. $\square$
+@thm-LA_svd_2 형식의 특이값 분해 $\bf{A}= \bf{U\Sigma V}^\ast$ 를 사용한다. $\bf{A}$ 가 정사각 행렬이므로 $\bf{U},\,\bf{\Sigma},\, \bf{V}$ 모두 정사각 행렬이다. $\bf{\Sigma}$ 는 실수 성분의 대각행렬이다. $\bf{A}^\ast\bf{A} = \bf{V}\bf{\Sigma}^2\bf{V}^\ast$ 이므로, $\sqrt{\bf{A}^\ast\bf{A}} = \bf{V\Sigma V}^\ast$ 이다. 따라서 $\bf{S}=\bf{UV}^\ast$ 라고 하면 $\bf{A} = \bf{S}\sqrt{\bf{A}^\ast\bf{A}}$ 이다. $\square$
 
 :::
 

@@ -382,7 +382,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) 는 <a href="ch1_06_operators_on_innerproduct_space.html#prp-LA_diagonality_of_norma_matrix" class="quarto-xref">명제&nbsp;<span>6.15</span></a> 에서 보였다.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) 는 <a href="ch1_06_operators_on_innerproduct_space.html#prp-LA_diagonality_of_norma_matrix" class="quarto-xref">명제&nbsp;<span>6.15</span></a> 에서 대각행렬로 표현하도록 하는 기저가 존재함을 알며 이 기저는 직교기저 <span class="math inline">\(\mathcal{B}_0=(v_1,\ldots,\,v_n)\)</span>. <span class="math inline">\(\mathcal{B} = (u_i=v_i/\|v_i\|)\)</span> 는 정규직교기저이다.</p>
 <p>(<span class="math inline">\(2\implies 3\)</span>) <span class="math inline">\(\mathcal{B}=(e_1,\ldots,\,e_n)\)</span> 이 <span class="math inline">\(N\)</span> 을 대각행렬로 표현는 정규직교기저라고 하고 이 대각행렬을 <span class="math inline">\(\boldsymbol{N}\)</span> 이라고 하자. <span class="math inline">\(n_i = N_{ii}\)</span> 라고 하면 <span class="math inline">\(N_{ij}= \langle N(e_j),\,e_i\rangle = n_i\delta_{ij}\)</span> 이므로 <span class="math inline">\(N(e_j)= n_j e_j\)</span> 이다. 즉 <span class="math inline">\(\mathcal{B}\)</span> 는 <span class="math inline">\(N\)</span> 의 고유벡터이다.</p>
 <p>(<span class="math inline">\(3 \implies 1\)</span>) <span class="math inline">\(\mathcal{B} = (e_1,\ldots,\,e_n)\)</span> 가 <span class="math inline">\(V\)</span> 의 정규직교벡터이며 <span class="math inline">\(N\)</span> 의 고유벡터의 집합이라고 하자. <span class="math inline">\(N(e_i)= n_i e_i\)</span> 일 때 <span class="math inline">\(\langle N(e_i),\,e_j\rangle = n_i\)</span> 이며 <span class="math inline">\(\langle N^\ast(e_i),\, e_j\rangle = \overline{n_i}\)</span> 이다. <span class="math inline">\(v=\sum_i a_i e_i\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -462,6 +462,8 @@ p(\lambda) = a_0 + a_1 \lambda + \cdots + a_n \lambda^n = 0
 </section>
 <section id="sec-LA_real_spectral_theorem" class="level3" data-number="7.1.3">
 <h3 data-number="7.1.3" class="anchored" data-anchor-id="sec-LA_real_spectral_theorem"><span class="header-section-number">7.1.3</span> <span class="math inline">\(\mathbb{R}\)</span>-스펙트럼 정리</h3>
+<p><span class="math inline">\(\mathbb{C}\)</span>-벡터공간에서의 스펙트럼 정리는 모든 다항식은 복소근을 갖는다는 대수학의 기본 정리로부터 모든 <span class="math inline">\(\mathbb{C}\)</span>-벡터공간의 연산자는 복소수 영역에서 고유값을 가진다는 것을 아는 것으로 부터 시작한다. 그러나 실계수 다항식은 실근을 갖지 않을 수 있기 때문에 이 방법을 사용 할 수 없다. <span class="math inline">\(\mathbb{R}\)</span>-벡터공간에서도 스펙트럼 정리가 존재하는데 <span class="math inline">\(\mathbb{C}\)</span>-벡터공간의 경우보다 증명이 다소 복잡해지는 것은 이런 이유 때문이다.</p>
+<p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-LA_hermitian_real_matrix_eigenvalue" class="theorem lemma">
 <p><span class="theorem-title"><strong>보조정리 7.3</strong></span> 유한차원 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서의 에르미트 연산자는 고유값을 가진다.</p>
@@ -525,29 +527,71 @@ c_0 v + &amp; c_1 Lv + \cdots + c_n L^nv \\
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-LA_spectrum_theorem_for_real_vector_space" class="theorem">
-<p><span class="theorem-title"><strong>정리 7.3 (<span class="math inline">\(\mathbb{R}\)</span>-스펙트럼 정리)</strong></span> 유한차원 <span class="math inline">\(R\)</span>-벡터공간에서 정의된 연산자 <span class="math inline">\(L\)</span> 에 대해 아래 세 명제는 동치이다.</p>
-<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 는 에르미트 연산자이다.</p>
-<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 는 직교변환에 의해 대각행렬로 표현된다.</p>
-<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(L\)</span> 의 고유벡터로 <span class="math inline">\(V\)</span> 의 정규직교기저를 구성 할 수 있다.</p>
+<p><span class="theorem-title"><strong>정리 7.3 (<span class="math inline">\(\mathbb{R}\)</span>-스펙트럼 정리)</strong></span> 유한차원 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간에서 정의된 연산자 <span class="math inline">\(L\)</span> 에 대해 아래 세 명제는 동치이다.</p>
+<p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(H\)</span> 는 에르미트 연산자이다.</p>
+<p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(H\)</span> 어떤 정규직교기저에서 대각행렬로 표현된다.</p>
+<p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(H\)</span> 의 고유벡터로 <span class="math inline">\(H\)</span> 의 정규직교기저를 구성 할 수 있다.</p>
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\implies 2\)</span>) <a href="#lem-LA_symmetric_matrix_digoalization" class="quarto-xref">보조정리&nbsp;<span>7.6</span></a></p>
-<p>(<span class="math inline">\(2 \implies 3\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 가 orthognal 행렬 <span class="math inline">\(\boldsymbol{P}\)</span> 에 의해 대각행렬로 변환된다고 하자. 즉 <span class="math inline">\(\boldsymbol{P}^{-1}\boldsymbol{AP}=\boldsymbol{D}\)</span> 는 대각행렬이다. 대각행렬이 주어졌을 때, 표준정규직교벡터 <span class="math inline">\(\{\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\}\)</span> 는 <span class="math inline">\(\lambda_i = D_{ii}\)</span> 를 고유값으로 갖는 대각행렬의 고유벡터이다. 여기서</p>
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\implies 2\)</span>) <a href="#lem-LA_symmetric_matrix_digoalization" class="quarto-xref">보조정리&nbsp;<span>7.6</span></a> 로부터 대각행렬로 표현하도록 하는 기저가 존재함을 알며 이 기저는 직교기저 <span class="math inline">\(\mathcal{B}_0=(v_1,\ldots,\,v_n)\)</span>. <span class="math inline">\(\mathcal{B} = (e_i=v_i/\|v_i\|)\)</span> 는 정규직교기저이다.</p>
+<p>(<span class="math inline">\(2 \implies 3\)</span>) 위의 <span class="math inline">\(\mathcal{B}\)</span> 의 각각의 <span class="math inline">\(e_i\)</span> 는 <span class="math inline">\(L\)</span> 의 정규직교기저이다.</p>
+<p>(<span class="math inline">\(3 \implies 1\)</span>) <span class="math inline">\(\mathcal{B}=(e_1,\ldots,\,e_n)\)</span> 정규직교 기저이며 각각 실수 <span class="math inline">\(c_1,\ldots,\,c_n\)</span> 을 고유값으로 갖는 고유벡터라고 하자. 이 기저에 대한 <span class="math inline">\(H\)</span> 의 행렬 표현 <span class="math inline">\(\boldsymbol{H}\)</span> 에 대해 <span class="math inline">\(H_{ij}=\langle H e_j,\,e_i\rangle = c_i\delta_{ij}\)</span>, 이며</p>
 <p><span class="math display">\[
-\boldsymbol{APe}_i = \boldsymbol{P}\boldsymbol{P}^{-1}\boldsymbol{APe}_i= \boldsymbol{PDe}_i=\lambda_i \boldsymbol{Pe}_i
+\overline{H_{ji}}=\overline{\langle He_i,\, e_j\rangle} \langle e_j,\,He_i\rangle = \overline{c_i}\delta_{ij}= c_i\delta_{ij} = H_{ij}
 \]</span></p>
-<p>이므로 <span class="math inline">\(\boldsymbol{Pe}_i\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터이다. <span class="math inline">\(\boldsymbol{P}\)</span> 가 linear isometry 이므로 <span class="math inline">\(\{\boldsymbol{Pe}_1,\ldots,\,\boldsymbol{Pe}_n\}\)</span> 은 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터로 이루어진 <span class="math inline">\(\mathcal{M}_{n }(\mathbb{R})\)</span> 의 정규직교기저이다.</p>
-<p>(<span class="math inline">\(3 \implies 1\)</span>) <span class="math inline">\(\{\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n\}\)</span> 이 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터로 이루어진 <span class="math inline">\(\mathbb{R}^n\)</span> 의 정규직교기저라 하자. 이 때 <span class="math inline">\(\boldsymbol{u}_i\)</span> 의 고유값은 <span class="math inline">\(\lambda_i\)</span> 라 하자. <span class="math inline">\(\lambda_i\)</span> 는 실수이므로,</p>
-<p><span class="math display">\[
-\langle \boldsymbol{A}^\ast \boldsymbol{u}_i,\,\boldsymbol{u}_j\rangle = \langle \boldsymbol{u}_i,\, \boldsymbol{Au}_j\rangle = \lambda_j \delta_{ij} = \lambda_i \delta_{ij} = \langle \boldsymbol{Au}_i,\, \boldsymbol{u}_j\rangle
-\]</span></p>
-<p>이다. 즉 <span class="math inline">\(\boldsymbol{A}=\boldsymbol{A}^\ast\)</span> 이며 <span class="math inline">\(\boldsymbol{A}\)</span> 가 실행렬이므로 <span class="math inline">\(\boldsymbol{A}\)</span> 는 대칭행렬이다. <span class="math inline">\(\square\)</span></p>
+<p>이므로 <a href="ch1_06_operators_on_innerproduct_space.html#prp-LA_hermitian_matrix_representation_and_hermitian_operator" class="quarto-xref">명제&nbsp;<span>6.6</span></a> 에 의해 <span class="math inline">\(H\)</span> 는 에르미트 연산자이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 </section>
 <section id="연습문제" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler4th_7_B_4" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.1 (Axler4th 7.B.4)</strong></span> 유한차원 복소벡터공간에서의 정규연산자가 반대칭 연산자일 필요충분조건은 모든 고유값이 허수인 것임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>반대칭 연산자의 정의에 대해서는 <a href="ch1_06_operators_on_innerproduct_space.html#exr-axler4_7_A_12" class="quarto-xref">연습문제&nbsp;<span>6.14</span></a> 를 보라. <span class="math inline">\(B\)</span> 가 정규연산자이며 반대칭 연산자라고 하자. <span class="math inline">\(v_i\)</span> 가 고유값 <span class="math inline">\(c_i\)</span> 에 대한 <span class="math inline">\(B\)</span> 의 고유벡터라고 하면 <span class="math inline">\(\langle Bv_i,\,v_i\rangle = c_i\|v_i|^2\)</span> 이며 <span class="math inline">\(\langle Bv_i,\,v_i\rangle = -\langle v_i,\,Bv_i\rangle = -\overline{c}_i\|v_i\|^2\)</span> 이다. 즉 <span class="math inline">\(\overline{c_i} = -c_i\)</span> 이므로 <span class="math inline">\(c_i\)</span> 는 복소수이다.</p>
+<p>정규연산자 <span class="math inline">\(B\)</span> 의 모든 고유값이 허수라고 하자. <span class="math inline">\(\mathcal{B}=(e_1,\ldots,\,e_n)\)</span> 이 <span class="math inline">\(B\)</span> 의 고유벡터로 이루어진 <span class="math inline">\(V\)</span> 의 정규직교기저라고 하고 <span class="math inline">\(c_i\)</span> 가 <span class="math inline">\(e_i\)</span> 에 대한 고유값이라고 하자. <span class="math inline">\(u=\sum_i a_ie_i,\, v=\sum_j a_j e_j\)</span> 에 대해</p>
+<p><span class="math display">\[
+\langle Bu,\, v\rangle = \sum_{i} c_i a_i\overline{b_i} = - \sum_i\overline{c_i} a_i \overline{b}_i = -\langle u,\, Bv\rangle
+\]</span></p>
+<p>이므로 <span class="math inline">\(B^\ast = -B\)</span> 이다. 즉 <span class="math inline">\(B\)</span> 는 반대칭 연산자 이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler4th_7_B_8" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.2 (Axler4th 7.B.8)</strong></span> 유한차원 복소벡터공간에서의 연산자 <span class="math inline">\(N\)</span> 이 정규연산자일 필요충분조건은 <span class="math inline">\(N\)</span> 의 모든 고유벡터가 <span class="math inline">\(N^\ast\)</span> 의 고유벡터인 것임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(N\)</span> 이 정규연산자임을 가정하자. <span class="math inline">\(N\)</span> 을 대각화하는 정규직교기저를 <span class="math inline">\(\mathcal{B}=(e_1,\ldots,\,e_n)\)</span> 이라고 하고 각각의 고유값을 <span class="math inline">\(c_i\)</span> 라고 하자. <span class="math inline">\(N^\ast e_i = \sum_j a_j e_j\)</span> 라고 하면</p>
+<p><span class="math display">\[
+a_k = \left\langle \sum_j a_j e_j,\, e_k\right\rangle = \langle N^\ast e_i ,\,e_k\rangle = \langle e_i,\,Ne_k\rangle = \overline{c_k} \delta_{ik}
+\]</span></p>
+<p>이므로 <span class="math inline">\(N^\ast e_i = \overline{c_i}e_i\)</span> 이다. 즉 <span class="math inline">\(e_i\)</span> 는 <span class="math inline">\(\overline{c_i}\)</span> 의 고유값을 갖는 <span class="math inline">\(N^\ast\)</span> 의 고유벡터이다.</p>
+<p>이제 연산자 <span class="math inline">\(N\)</span> 에 대해 <span class="math inline">\(N^\ast\)</span> 의 고유벡터가 <span class="math inline">\(N\)</span> 의 고유벡터라고 하자. <span class="math inline">\(N\)</span> 은 상삼각 행렬로 대각화된다. 이 기저를 <span class="math inline">\(\mathcal{B}=(e_1,\ldots,\,e_n)\)</span> 이라고 하자. 이 기저에서</p>
+<p><span class="math display">\[
+N_{ij} = \langle Ne_j,\,e_i\rangle,\, N^\ast_{ij} = \langle N^\ast e_j,\,e_i\rangle = \langle e_j,\, Ne_i\rangle = \overline{N_{ji}}
+\]</span></p>
+<p>이다. <span class="math inline">\([N]_{\mathcal{B}}\)</span> 가 상삼각행렬이므로 <span class="math inline">\(i&gt;j\)</span> 일 때 <span class="math inline">\(N_{ij}=0\)</span> 이며 따라서 <span class="math inline">\([N^\ast]_{\mathcal{B}}\)</span> 는 하삼각행렬이다. <span class="math inline">\(Ne_1 = N_{11}e_1\)</span> 이므로 <span class="math inline">\(N\)</span> 의 고유벡터이며 가정에 의해 <span class="math inline">\(N^\ast\)</span> 의 고유벡터이다 따라서 <span class="math inline">\(N^\ast e_1 = \sum_{j}\overline{N_{1j}}e_j = [N^\ast]_{11}e_1\)</span> 이어야 한다. 즉 <span class="math inline">\(j\ge 2\)</span> 에 대해 <span class="math inline">\(N_{1j}=0\)</span> 이어야 한다.</p>
+<p><span class="math inline">\(Ne_2 = N_{12}e_2+N_{22}e_2=N_{22}e_2\)</span> 이므로 <span class="math inline">\(e_2\)</span> 역시 <span class="math inline">\(N\)</span> 의 고유벡터이며, 따라서 <span class="math inline">\(N^\ast\)</span> 의 고유벡터이다. <span class="math inline">\(N^\ast e_2 = \overline{N_{2j}}e_j\)</span> 이므로 <span class="math inline">\(j\ne 0\)</span> 이면 <span class="math inline">\(N_{2j}=0\)</span> 이다. 이것을 반복하면 <span class="math inline">\(N\)</span> 의 고유벡터가 <span class="math inline">\(N^\ast\)</span> 의 고유벡터라면 <span class="math inline">\(N\)</span> 은 정규행렬임을 알 수 있다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-axler4th_7_B_9" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.3 (Axler4th 7.B.9)</strong></span> 유한차원 복소벡터공간에서의 연산자 <span class="math inline">\(N\)</span> 이 정규연산자일 필요충분조건은 어떤 다항식 <span class="math inline">\(p(t) \in \mathbb{C}[t]\)</span> 에 대해 <span class="math inline">\(p(N) = N^\ast\)</span> 인 것이다.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(N^\ast = p(N)\)</span> 이면 <span class="math inline">\(N\)</span> 이 정규연산자임은 자명하다. 이제 <span class="math inline">\(N\)</span> 이 정규연산자일 때 어떤 다항식 <span class="math inline">\(p(t)\)</span> 에 대해 <span class="math inline">\(N^\ast =p(N)\)</span> 임을 보이자. <span class="math inline">\(N\)</span> 이 정규연산자이므로 어떤 정규직교기저 <span class="math inline">\(\mathcal{B}=(e_1,\ldots,\,e_n)\)</span> 에서 대각행렬이며 이 기저에서 <span class="math inline">\(N^\ast\)</span> 역시 대각행렬이이며 <span class="math inline">\(N^\ast_{ii}=\overline{N_{ii}}\)</span> 이다. 벡터공간이 <span class="math inline">\(n\)</span> 차원이라고 하고 다항식 <span class="math inline">\(p(t)\)</span> 를 <span class="math inline">\(i=1,\ldots,\,n\)</span> 에서 <span class="math inline">\(p(N_{ii})=\overline{N_{ii}}\)</span> 인 <span class="math inline">\(n\)</span> 차 라그랑쥬 다항식이라고 하자.</p>
+<p><span class="math display">\[
+p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
+\]</span></p>
+<p>이다. 모든 기저에서 성립하므로 <span class="math inline">\(N^\ast = p(N)\)</span> 이다.</p>
+</div>
+<p><br></p>
 </section>
 </section>
 <section id="positive-positive-definite-행렬과-제곱근-행렬" class="level2" data-number="7.2">
@@ -643,7 +687,7 @@ c_0 v + &amp; c_1 Lv + \cdots + c_n L^nv \\
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_5_A_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.1 (Axler 5.A.2)</strong></span> <span class="math inline">\(\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 이고 <span class="math inline">\(\boldsymbol{AB}=\boldsymbol{BA}\)</span> 이면 <span class="math inline">\(\ker \boldsymbol{B}\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 불변부분공간이다.</p>
+<p><span class="theorem-title"><strong>연습문제 7.4 (Axler 5.A.2)</strong></span> <span class="math inline">\(\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 이고 <span class="math inline">\(\boldsymbol{AB}=\boldsymbol{BA}\)</span> 이면 <span class="math inline">\(\ker \boldsymbol{B}\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 불변부분공간이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -851,7 +895,7 @@ c_0 v + &amp; c_1 Lv + \cdots + c_n L^nv \\
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-2">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.2 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이다. <span class="math inline">\(L=0\)</span> 인 것의 필요충분 조건은 <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 인 것임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.5 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이다. <span class="math inline">\(L=0\)</span> 인 것의 필요충분 조건은 <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 인 것임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -861,7 +905,7 @@ c_0 v + &amp; c_1 Lv + \cdots + c_n L^nv \\
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.3 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이며 <span class="math inline">\(s&gt;0\)</span> 이다. <span class="math inline">\(s\)</span> 가 <span class="math inline">\(L\)</span> 의 특이값일 필요충분조건은 어떤 nonzero vector <span class="math inline">\(v\in V,\, w\in W\)</span> 에 대해 <span class="math inline">\(Lv=sw\)</span> 이며 <span class="math inline">\(L^\ast w = sv\)</span> 임을 보여라. (이런 조건을 만족하는 <span class="math inline">\(v,\,w\)</span> 를 <strong>슈미트 쌍(Schmidt pair)</strong> 라고 한다.)</p>
+<p><span class="theorem-title"><strong>연습문제 7.6 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이며 <span class="math inline">\(s&gt;0\)</span> 이다. <span class="math inline">\(s\)</span> 가 <span class="math inline">\(L\)</span> 의 특이값일 필요충분조건은 어떤 nonzero vector <span class="math inline">\(v\in V,\, w\in W\)</span> 에 대해 <span class="math inline">\(Lv=sw\)</span> 이며 <span class="math inline">\(L^\ast w = sv\)</span> 임을 보여라. (이런 조건을 만족하는 <span class="math inline">\(v,\,w\)</span> 를 <strong>슈미트 쌍(Schmidt pair)</strong> 라고 한다.)</p>
 </div>
 </div>
 <p><br></p>
@@ -872,7 +916,7 @@ c_0 v + &amp; c_1 Lv + \cdots + c_n L^nv \\
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.4 (Axler4th 7.E.3)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 이다. <span class="math inline">\(L\)</span> 의 고유값은 <span class="math inline">\(0\)</span> 이며 특이값은 <span class="math inline">\(0,\,5\)</span> 인 예를 들어라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.7 (Axler4th 7.E.3)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 이다. <span class="math inline">\(L\)</span> 의 고유값은 <span class="math inline">\(0\)</span> 이며 특이값은 <span class="math inline">\(0,\,5\)</span> 인 예를 들어라.</p>
 </div>
 </div>
 <p><br></p>
@@ -882,7 +926,7 @@ c_0 v + &amp; c_1 Lv + \cdots + c_n L^nv \\
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.5 (Axler4th 7.E.4)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1\)</span> 이 <span class="math inline">\(L\)</span> 의 가장 큰 특이값이며 <span class="math inline">\(s_n\)</span> 이 가장 작은 특이값이라고 하자.</p>
+<p><span class="theorem-title"><strong>연습문제 7.8 (Axler4th 7.E.4)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1\)</span> 이 <span class="math inline">\(L\)</span> 의 가장 큰 특이값이며 <span class="math inline">\(s_n\)</span> 이 가장 작은 특이값이라고 하자.</p>
 <p><span class="math display">\[
 \{\|Lv\| : v\in V,\, \|v\|=1\}=[s_n,\,s_1]
 \]</span></p>
@@ -899,7 +943,7 @@ c_0 v + &amp; c_1 Lv + \cdots + c_n L^nv \\
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.6 (Axler4th 7.E.5)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 가 <span class="math inline">\(T(x,\,y) = (-4y,\,x)\)</span> 로 정의되었다. <span class="math inline">\(L\)</span> 의 특이값을 구하라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.9 (Axler4th 7.E.5)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 가 <span class="math inline">\(T(x,\,y) = (-4y,\,x)\)</span> 로 정의되었다. <span class="math inline">\(L\)</span> 의 특이값을 구하라.</p>
 </div>
 </div>
 <p><br></p>
@@ -909,7 +953,7 @@ c_0 v + &amp; c_1 Lv + \cdots + c_n L^nv \\
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_7" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.7 (Axler4th 7.E.7)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 에르미트 이거나 <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span> 이고 <span class="math inline">\(L\)</span> 이 정규행렬이라고 하자. <span class="math inline">\(\lambda_1,\ldots,\,\lambda_n\)</span> 이 <span class="math inline">\(L\)</span> 의 고유값이며 고유공간의 차원에 맞추어 중복되어 있다. <span class="math inline">\(L\)</span> 의 특이값은 <span class="math inline">\(|\lambda_1|,\ldots,\,|\lambda_n|\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.10 (Axler4th 7.E.7)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 에르미트 이거나 <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span> 이고 <span class="math inline">\(L\)</span> 이 정규행렬이라고 하자. <span class="math inline">\(\lambda_1,\ldots,\,\lambda_n\)</span> 이 <span class="math inline">\(L\)</span> 의 고유값이며 고유공간의 차원에 맞추어 중복되어 있다. <span class="math inline">\(L\)</span> 의 특이값은 <span class="math inline">\(|\lambda_1|,\ldots,\,|\lambda_n|\)</span> 임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -919,7 +963,7 @@ c_0 v + &amp; c_1 Lv + \cdots + c_n L^nv \\
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_8" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.8 (Axler4th 7.E.8)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1,\ldots,\,s_m\)</span> 이 <span class="math inline">\(s_1\ge \cdots \ge s_m &gt; 0\)</span> 이며 <span class="math inline">\(e_1,\ldots,\,e_m\)</span> 은 <span class="math inline">\(V\)</span> 의 정규직교벡터이고 <span class="math inline">\(f_1,\ldots,\,f_m\)</span> 은 <span class="math inline">\(W\)</span> 의 정규직교벡터이며 <span class="math inline">\(v\in V\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>연습문제 7.11 (Axler4th 7.E.8)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1,\ldots,\,s_m\)</span> 이 <span class="math inline">\(s_1\ge \cdots \ge s_m &gt; 0\)</span> 이며 <span class="math inline">\(e_1,\ldots,\,e_m\)</span> 은 <span class="math inline">\(V\)</span> 의 정규직교벡터이고 <span class="math inline">\(f_1,\ldots,\,f_m\)</span> 은 <span class="math inline">\(W\)</span> 의 정규직교벡터이며 <span class="math inline">\(v\in V\)</span> 에 대해</p>
 <p><span class="math display">\[
 Lv = s_1 \langle v,\,e_1\rangle f_1 + \cdots + s_n \langle v,\,e_n\rangle f_n
 \]</span></p>
