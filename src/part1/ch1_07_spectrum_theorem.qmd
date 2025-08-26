@@ -573,7 +573,6 @@ Non-negative $L\in \mathcal{L}(V)$ 에 대해 $Lu=v,\, Lv=u$ 이면 $u=v$ 임을
 
 ::: {.solution}
 
-
 $$
 \begin{aligned}
 \|v-u\|^2 &= \|L(u-v)\|^2 = \langle L(u-v),\, L(u-v)\rangle = \langle L(u-v),\, v-u\rangle \\[0.3em]
@@ -584,6 +583,52 @@ $$
 이므로 $L(u-v)=0$ 이며 따라서 $u=v$ 이다.
 
 :::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4th_7_C_13}
+#### Axler4h 7.C.13
+
+유한차원 벡터공간 $V$ 에서 정의된 $L\in \mathcal{L}(V)$ 가 에르미트 연산자이고 $\alpha \in \R$ 이다. 
+
+($a$) $L-\alpha I_V$ 이 non-negative 일 필요충분조건은 $\alpha$ 가 $L$ 의 모든 고유값보다 작거나 같은임을 보여라.
+
+($b$) $\alpha I_V - L$ 이 non-negative 일 필요충분조건은 $\alpha$ 가 $L$ 의 모든 고유값보다 크거ㅏ 같은 것임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+($a$) $L$ 이 에르미트이면 정규직교기저 $(e_1,\ldots,e_n)$ 에 대해 실수인 고유값 $c_1,\ldots,\,c_n$ 이 존재한다. $v\in V$ 에 대해 $v=\sum_i a_i e_i$ 라고 하자. $L-\alpha I_V$ 역시 에르미트 연산자이며 같은 기저에서의 고유값은 $c_i-\alpha$ 이다. @prp-LA_properties_of_posivive_definite_matrix 에 의해 $L$ 이 non-negative 일 필요충분조건은 각각의 $c_i - \alpha \ge 0$ 일 경우이므로 명제가 성립한다.
+
+($b$) ($a$) 와 같은 방법으로 보일 수 있다.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4th_7_C_14}
+#### Axler4h 7.C.14
+
+$L$ 이 $V$ 에서의 non-negative 연산자이고 $v_1,\ldots,\,v_m\in V$ 일 때 다음이 성립함을 보여라.
+
+$$
+\sum_{j=1}^m \sum_{k=1}^m \langle Lv_k,\,v_j\rangle  \ge 0
+$$
+
+:::
+
+</div>
+
+::: {.solution}
+
+
+
+:::
+
 </br>
 
 

@@ -725,6 +725,30 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 \]</span></p>
 <p>이므로 <span class="math inline">\(L(u-v)=0\)</span> 이며 따라서 <span class="math inline">\(u=v\)</span> 이다.</p>
 </div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4th_7_C_13" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.10 (Axler4h 7.C.13)</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 에르미트 연산자이고 <span class="math inline">\(\alpha \in \mathbb{R}\)</span> 이다.</p>
+<p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(L-\alpha I_V\)</span> 이 non-negative 일 필요충분조건은 <span class="math inline">\(\alpha\)</span> 가 <span class="math inline">\(L\)</span> 의 모든 고유값보다 작거나 같은임을 보여라.</p>
+<p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(\alpha I_V - L\)</span> 이 non-negative 일 필요충분조건은 <span class="math inline">\(\alpha\)</span> 가 <span class="math inline">\(L\)</span> 의 모든 고유값보다 크거ㅏ 같은 것임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(a\)</span>) <span class="math inline">\(L\)</span> 이 에르미트이면 정규직교기저 <span class="math inline">\((e_1,\ldots,e_n)\)</span> 에 대해 실수인 고유값 <span class="math inline">\(c_1,\ldots,\,c_n\)</span> 이 존재한다. <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(v=\sum_i a_i e_i\)</span> 라고 하자. <span class="math inline">\(L-\alpha I_V\)</span> 역시 에르미트 연산자이며 같은 기저에서의 고유값은 <span class="math inline">\(c_i-\alpha\)</span> 이다. <a href="#prp-LA_properties_of_posivive_definite_matrix" class="quarto-xref">명제&nbsp;<span>7.1</span></a> 에 의해 <span class="math inline">\(L\)</span> 이 non-negative 일 필요충분조건은 각각의 <span class="math inline">\(c_i - \alpha \ge 0\)</span> 일 경우이므로 명제가 성립한다.</p>
+<p>(<span class="math inline">\(b\)</span>) (<span class="math inline">\(a\)</span>) 와 같은 방법으로 보일 수 있다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4th_7_C_14" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.11 (Axler4h 7.C.14)</strong></span> <span class="math inline">\(L\)</span> 이 <span class="math inline">\(V\)</span> 에서의 non-negative 연산자이고 <span class="math inline">\(v_1,\ldots,\,v_m\in V\)</span> 일 때 다음이 성립함을 보여라.</p>
+<p><span class="math display">\[
+\sum_{j=1}^m \sum_{k=1}^m \langle Lv_k,\,v_j\rangle  \ge 0
+\]</span></p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span></p>
+</div>
 <p><br></p>
 </section>
 </section>
@@ -926,7 +950,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-2">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.10 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이다. <span class="math inline">\(L=0\)</span> 인 것의 필요충분 조건은 <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 인 것임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.12 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이다. <span class="math inline">\(L=0\)</span> 인 것의 필요충분 조건은 <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 인 것임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -936,7 +960,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.11 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이며 <span class="math inline">\(s&gt;0\)</span> 이다. <span class="math inline">\(s\)</span> 가 <span class="math inline">\(L\)</span> 의 특이값일 필요충분조건은 어떤 nonzero vector <span class="math inline">\(v\in V,\, w\in W\)</span> 에 대해 <span class="math inline">\(Lv=sw\)</span> 이며 <span class="math inline">\(L^\ast w = sv\)</span> 임을 보여라. (이런 조건을 만족하는 <span class="math inline">\(v,\,w\)</span> 를 <strong>슈미트 쌍(Schmidt pair)</strong> 라고 한다.)</p>
+<p><span class="theorem-title"><strong>연습문제 7.13 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이며 <span class="math inline">\(s&gt;0\)</span> 이다. <span class="math inline">\(s\)</span> 가 <span class="math inline">\(L\)</span> 의 특이값일 필요충분조건은 어떤 nonzero vector <span class="math inline">\(v\in V,\, w\in W\)</span> 에 대해 <span class="math inline">\(Lv=sw\)</span> 이며 <span class="math inline">\(L^\ast w = sv\)</span> 임을 보여라. (이런 조건을 만족하는 <span class="math inline">\(v,\,w\)</span> 를 <strong>슈미트 쌍(Schmidt pair)</strong> 라고 한다.)</p>
 </div>
 </div>
 <p><br></p>
@@ -947,7 +971,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.12 (Axler4th 7.E.3)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 이다. <span class="math inline">\(L\)</span> 의 고유값은 <span class="math inline">\(0\)</span> 이며 특이값은 <span class="math inline">\(0,\,5\)</span> 인 예를 들어라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.14 (Axler4th 7.E.3)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 이다. <span class="math inline">\(L\)</span> 의 고유값은 <span class="math inline">\(0\)</span> 이며 특이값은 <span class="math inline">\(0,\,5\)</span> 인 예를 들어라.</p>
 </div>
 </div>
 <p><br></p>
@@ -957,7 +981,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.13 (Axler4th 7.E.4)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1\)</span> 이 <span class="math inline">\(L\)</span> 의 가장 큰 특이값이며 <span class="math inline">\(s_n\)</span> 이 가장 작은 특이값이라고 하자.</p>
+<p><span class="theorem-title"><strong>연습문제 7.15 (Axler4th 7.E.4)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1\)</span> 이 <span class="math inline">\(L\)</span> 의 가장 큰 특이값이며 <span class="math inline">\(s_n\)</span> 이 가장 작은 특이값이라고 하자.</p>
 <p><span class="math display">\[
 \{\|Lv\| : v\in V,\, \|v\|=1\}=[s_n,\,s_1]
 \]</span></p>
@@ -974,7 +998,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.14 (Axler4th 7.E.5)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 가 <span class="math inline">\(T(x,\,y) = (-4y,\,x)\)</span> 로 정의되었다. <span class="math inline">\(L\)</span> 의 특이값을 구하라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.16 (Axler4th 7.E.5)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 가 <span class="math inline">\(T(x,\,y) = (-4y,\,x)\)</span> 로 정의되었다. <span class="math inline">\(L\)</span> 의 특이값을 구하라.</p>
 </div>
 </div>
 <p><br></p>
@@ -984,7 +1008,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_7" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.15 (Axler4th 7.E.7)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 에르미트 이거나 <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span> 이고 <span class="math inline">\(L\)</span> 이 정규행렬이라고 하자. <span class="math inline">\(\lambda_1,\ldots,\,\lambda_n\)</span> 이 <span class="math inline">\(L\)</span> 의 고유값이며 고유공간의 차원에 맞추어 중복되어 있다. <span class="math inline">\(L\)</span> 의 특이값은 <span class="math inline">\(|\lambda_1|,\ldots,\,|\lambda_n|\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.17 (Axler4th 7.E.7)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 에르미트 이거나 <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span> 이고 <span class="math inline">\(L\)</span> 이 정규행렬이라고 하자. <span class="math inline">\(\lambda_1,\ldots,\,\lambda_n\)</span> 이 <span class="math inline">\(L\)</span> 의 고유값이며 고유공간의 차원에 맞추어 중복되어 있다. <span class="math inline">\(L\)</span> 의 특이값은 <span class="math inline">\(|\lambda_1|,\ldots,\,|\lambda_n|\)</span> 임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -994,7 +1018,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_8" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.16 (Axler4th 7.E.8)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1,\ldots,\,s_m\)</span> 이 <span class="math inline">\(s_1\ge \cdots \ge s_m &gt; 0\)</span> 이며 <span class="math inline">\(e_1,\ldots,\,e_m\)</span> 은 <span class="math inline">\(V\)</span> 의 정규직교벡터이고 <span class="math inline">\(f_1,\ldots,\,f_m\)</span> 은 <span class="math inline">\(W\)</span> 의 정규직교벡터이며 <span class="math inline">\(v\in V\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>연습문제 7.18 (Axler4th 7.E.8)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1,\ldots,\,s_m\)</span> 이 <span class="math inline">\(s_1\ge \cdots \ge s_m &gt; 0\)</span> 이며 <span class="math inline">\(e_1,\ldots,\,e_m\)</span> 은 <span class="math inline">\(V\)</span> 의 정규직교벡터이고 <span class="math inline">\(f_1,\ldots,\,f_m\)</span> 은 <span class="math inline">\(W\)</span> 의 정규직교벡터이며 <span class="math inline">\(v\in V\)</span> 에 대해</p>
 <p><span class="math display">\[
 Lv = s_1 \langle v,\,e_1\rangle f_1 + \cdots + s_n \langle v,\,e_n\rangle f_n
 \]</span></p>
