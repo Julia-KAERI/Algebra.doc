@@ -272,7 +272,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/characteristic_polynomial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">특성다항식, 최소다항식과 케일리-해밀턴 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">최소다항식과 케일리-해밀턴 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -320,7 +320,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#positive-positive-definite-행렬과-제곱근-행렬" id="toc-positive-positive-definite-행렬과-제곱근-행렬" class="nav-link" data-scroll-target="#positive-positive-definite-행렬과-제곱근-행렬"><span class="header-section-number">7.2</span> Positive, Positive definite 행렬과 제곱근 행렬</a>
   <ul class="collapse">
-  <li><a href="#non-negative-행렬의-성질" id="toc-non-negative-행렬의-성질" class="nav-link" data-scroll-target="#non-negative-행렬의-성질"><span class="header-section-number">7.2.1</span> Non-negative 행렬의 성질</a></li>
+  <li><a href="#non-negative-연산자의-성질" id="toc-non-negative-연산자의-성질" class="nav-link" data-scroll-target="#non-negative-연산자의-성질"><span class="header-section-number">7.2.1</span> Non-negative 연산자의 성질</a></li>
   <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
   </ul></li>
   <li><a href="#특이값-분해" id="toc-특이값-분해" class="nav-link" data-scroll-target="#특이값-분해"><span class="header-section-number">7.3</span> 특이값 분해</a>
@@ -603,7 +603,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 </div>
 <div class="callout-body-container">
 <div id="def-LA_pisitive_definite_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 7.1 (Positive Definite 행렬 와 제곱근 행렬)</strong></span> 에르미트 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 이 임의의 벡터 <span class="math inline">\(\boldsymbol{v}\)</span> 에 대해 <span class="math inline">\(\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle &gt; 0\)</span> 일 때 <span class="math inline">\(\boldsymbol{A}\)</span> 를 <strong>positve</strong> 혹은 <strong>positive definite</strong> 라 하고 <span class="math inline">\(\langle \boldsymbol{Av},\, \boldsymbol{v} \rangle \ge 0\)</span> 일 때 <span class="math inline">\(\boldsymbol{A}\)</span> 를 <strong>non-negative</strong> 혹은 <strong>positive semidefinite</strong> 라 한다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 positive 이거나 positive definite 일 때 <span class="math inline">\(\boldsymbol{A}=\boldsymbol{R}^2\)</span> 인 행렬 <span class="math inline">\(\boldsymbol{R}\)</span> 이 존재하면 <span class="math inline">\(\boldsymbol{R}\)</span> 을 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <strong>제곱근 행렬</strong> 이라고 하고 <span class="math inline">\(\sqrt{\boldsymbol{A}}\)</span> 라고 쓴다. 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 제곱근 행렬이 존재 할 때 <span class="math inline">\(\boldsymbol{A}\)</span> 가 제곱근 행렬을 가진다라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 7.1 (Positive Definite 행렬 와 제곱근 행렬)</strong></span> 에르미트 연산자 <span class="math inline">\(L\)</span> 이 임의의 벡터 <span class="math inline">\(v\)</span> 에 대해 <span class="math inline">\(\langle Lv,\, v \rangle &gt; 0\)</span> 일 때 <span class="math inline">\(L\)</span> 을 <strong>positve</strong> 혹은 <strong>positive definite</strong> 라 하고 <span class="math inline">\(\langle Lv,\, v \rangle \ge 0\)</span> 일 때 <span class="math inline">\(L\)</span> 을 <strong>non-negative</strong> 혹은 <strong>positive semidefinite</strong> 라 한다. <span class="math inline">\(L\)</span> 가 positive 이거나 positive definite 일 때 <span class="math inline">\(L=R^2\)</span> 인 연산자 <span class="math inline">\(R\)</span> 이 존재하면 <span class="math inline">\(R\)</span> 을 <span class="math inline">\(L\)</span> 의 <strong>제곱근 연산자</strong> 라고 하고 <span class="math inline">\(\sqrt{L}\)</span> 라고 쓴다.</p>
 </div>
 </div>
 </div>
@@ -619,80 +619,111 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>예를 들어 S. Axler 의 <em>Linear Algebra Done Right</em> 의 경우 <span class="math inline">\(\langle \boldsymbol{Av},\,\boldsymbol{v}\rangle \ge 0\)</span> 일 때 <span class="math inline">\(\boldsymbol{A}\)</span> 를 <em>positive</em> 라고 정의한다(3rd Ed. pp 225). 그러나 K. Hoffman, R. Kunze 의 <em>Linear Algebra</em> 의 경우에는 <span class="math inline">\(\langle \boldsymbol{Av},\,\boldsymbol{v}\rangle &gt; 0\)</span> 일 때 positive 라고 정의한다(2nd Ed. pp 329). 여기서는 더 직관적인 non-negative, positive 라는 용어를 사용하기로 한다.</p>
+<p>예를 들어 S. Axler 의 <em>Linear Algebra Done Right</em> 의 경우 <span class="math inline">\(\langle Lv,\,v\rangle \ge 0\)</span> 일 때 <span class="math inline">\(L\)</span> 를 <em>positive</em> 라고 정의한다(3rd Ed. pp 225). 그러나 K. Hoffman, R. Kunze 의 <em>Linear Algebra</em> 의 경우에는 <span class="math inline">\(\langle Lv,\,v\rangle &gt; 0\)</span> 일 때 positive 라고 정의한다(2nd Ed. pp 329). 여기서는 더 직관적인 non-negative, positive 라는 용어를 사용하기로 한다.</p>
 </div>
 </div>
 <p><br></p>
-<section id="non-negative-행렬의-성질" class="level3" data-number="7.2.1">
-<h3 data-number="7.2.1" class="anchored" data-anchor-id="non-negative-행렬의-성질"><span class="header-section-number">7.2.1</span> Non-negative 행렬의 성질</h3>
+<section id="non-negative-연산자의-성질" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="non-negative-연산자의-성질"><span class="header-section-number">7.2.1</span> Non-negative 연산자의 성질</h3>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_properties_of_posivive_definite_matrix" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.1</strong></span> <span class="math inline">\(\boldsymbol{A} \in \mathcal{M}_{n \times n}(\mathbb{C})\)</span> 에 대해 다음은 동치이다.</p>
-<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 는 non-negative 이다.</p>
-<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 는 에르미트행렬이며 모든 고유값은 non-negative 하다</p>
-<p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 는 대각성분이 모두 음수가 아닌 대각행렬과 닮았다.</p>
-<p>  (<span class="math inline">\(4\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 의 non-negative positive 제곱근 행렬이 존재한다.</p>
-<p>  (<span class="math inline">\(5\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 의 에르미트 제곱근 행렬이 존재한다.</p>
-<p>  (<span class="math inline">\(6\)</span>) <span class="math inline">\(\boldsymbol{A} = \boldsymbol{R}^\ast \boldsymbol{R}\)</span> 인 행렬 <span class="math inline">\(\boldsymbol{R}\)</span> 이 존재한다.</p>
+<p><span class="theorem-title"><strong>명제 7.1</strong></span> 유한차원 <span class="math inline">\(\mathbb{C}\)</span>-벡터공간에서 정의된 연산자 <span class="math inline">\(L\)</span> 에 대해 다음은 동치이다.</p>
+<p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 은 non-negative 이다.</p>
+<p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 은 에르미트행렬이며 모든 고유값은 non-negative 하다</p>
+<p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(L\)</span> 은 어떤 정규직교기저에서 대각성분이 모두 음수가 아닌 대각행렬로 표현된다.</p>
+<p>  (<span class="math inline">\(4\)</span>) <span class="math inline">\(L\)</span> 의 non-negative 제곱근 연산자가 존재한다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 가 non-negative 이므로 정의에 의해 에르미트 행렬이다. <span class="math inline">\(\lambda\)</span> 가 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유값이고 <span class="math inline">\(\boldsymbol{v}\)</span> 가 <span class="math inline">\(\lambda\)</span> 에 대한 고유벡터 일 때, <span class="math inline">\(0 \le \langle \boldsymbol{Av},\, \boldsymbol{v}\rangle = \lambda \|\boldsymbol{v}\|^2\)</span> 이므로 <span class="math inline">\(\lambda \ge 0\)</span> 이다.</p>
-<p>(<span class="math inline">\(2 \implies 3\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 가 에르미트 행렬이므로 스펙트럼 정리에 의해 <span class="math inline">\(\boldsymbol{U}^\ast\boldsymbol{AU}\)</span> 를 대각행렬 <span class="math inline">\(\boldsymbol{D}\)</span> 로 하는 유니타리 행렬 <span class="math inline">\(\boldsymbol{U}\)</span> 가 존재한다. 대각성분이 고유값이므로 <span class="math inline">\(\boldsymbol{D}\)</span> 의 모든 대각성분은 실수이며 음수가 아니다.</p>
-<p>(<span class="math inline">\(3 \implies 4\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유값 <span class="math inline">\(\lambda_1,\ldots,\,\lambda_n\)</span> 에 대해 <span class="math inline">\(D_{ij} = \lambda_{i}\delta_{ij}\)</span> 일 때, 행렬 <span class="math inline">\(\boldsymbol{S}\)</span> 를 대각행렬 <span class="math inline">\(S_{ij} = \sqrt{D_{ij}}\)</span> 로 정의하자. <span class="math inline">\(\boldsymbol{R} = \boldsymbol{U}^\ast\boldsymbol{SU}\)</span> 라 하면 <span class="math inline">\(\boldsymbol{R}^2 = \boldsymbol{A}\)</span> 이다.</p>
-<p>(<span class="math inline">\(4 \implies 5\)</span>) 위에서 정의한 <span class="math inline">\(\boldsymbol{R}\)</span> 은 <span class="math inline">\(\boldsymbol{R}^\ast = \boldsymbol{U}^\ast \boldsymbol{SU} = \boldsymbol{R}\)</span> 이므로 에르미트 행렬이다.</p>
-<p>(<span class="math inline">\(5 \implies 6\)</span>) 앞서 정의한 <span class="math inline">\(\boldsymbol{R}\)</span> 이다.</p>
-<p>(<span class="math inline">\(6 \implies 1\)</span>) <span class="math inline">\(\boldsymbol{A}=\boldsymbol{R}^\ast \boldsymbol{R}\)</span> 이면 <span class="math inline">\(\boldsymbol{A}^\ast = (\boldsymbol{R}^\ast\boldsymbol{R})^\ast = \boldsymbol{R}^\ast \boldsymbol{R}=\boldsymbol{A}\)</span> 이므로 <span class="math inline">\(\boldsymbol{A}\)</span> 는 에르미트 행렬이다. 또한 임의의 <span class="math inline">\(\boldsymbol{v}\in \mathcal{M}_{n }(\mathbb{C})\)</span> 에 대해 <span class="math inline">\(\langle \boldsymbol{v},\, \boldsymbol{A}\boldsymbol{v}\rangle = \langle \boldsymbol{R}^\ast \boldsymbol{R}\boldsymbol{v},\, \boldsymbol{v} \rangle = \|\boldsymbol{Rv}\|^2\ge 0\)</span> 이므로 <span class="math inline">\(\boldsymbol{A}\)</span> 는 non-negative 이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1 \implies 2\)</span>) <span class="math inline">\(L\)</span> 이 non-negative 이므로 정의에 의해 에르미트 행렬이다. <span class="math inline">\(c\)</span> 가 <span class="math inline">\(L\)</span> 의 고유값이고 <span class="math inline">\(v\)</span> 가 <span class="math inline">\(c\)</span> 에 대한 고유벡터 일 때, <span class="math inline">\(0 \le \langle Lv,\, v\rangle = c \|v\|^2\)</span> 이므로 <span class="math inline">\(c \ge 0\)</span> 이다.</p>
+<p>(<span class="math inline">\(2 \implies 3\)</span>) <span class="math inline">\(L\)</span> 이 에르미트 행렬이므로 스펙트럼 정리에 의해 대각화되며 대각성분이 고유값이다. 따라서 모든 대각성분은 실수이며 음수가 아니다.</p>
+<p>(<span class="math inline">\(3 \implies 4\)</span>) <span class="math inline">\(L\)</span> 을 대각화 하는 정규직교 기저를 <span class="math inline">\(\mathcal{B}=(e_1,\ldots,\,e_n)\)</span> 이라고 하고 그 고유값을 <span class="math inline">\(c_1,\ldots,\,c_n\)</span> 이라고 하자. <span class="math inline">\(R(e_i) = \sqrt{c_i}e_i\)</span> 인 연산자 <span class="math inline">\(R\)</span> 은 에르미트 이며 <span class="math inline">\(L\)</span> 의 제곱근 연산자이다.</p>
+<p>(<span class="math inline">\(4 \implies 1\)</span>) <span class="math inline">\(L\)</span> 의 non-negative 제곱근 연산자를 <span class="math inline">\(R\)</span> 이라고 하자. <span class="math inline">\(R\)</span> 은 에르미트 연산자이며 <span class="math inline">\(L=RR=R^\ast R\)</span> 이므로 <span class="math inline">\(L^\ast=L\)</span> 이다. 즉 <span class="math inline">\(L\)</span> 은 에르미트 연산자이다. 또한 <span class="math inline">\(\langle Lv,\,v\rangle = \langle R^\ast Rv,\,v\rangle = \|Rv\|^2\ge 0\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_uniqueness_of_squareroot_matrix" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.2</strong></span> non-negative 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 non-nagative 한 제곱근 행렬은 유일하다.</p>
+<p><span class="theorem-title"><strong>명제 7.2</strong></span> 유한차원 벡터공간에서 non-negative 연산자의 non-nagative 한 제곱근 연산자는 유일하다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>우리는 앞서 non-negative 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 non-negative 한 제곱근 행렬이 존재함을 보였다. 여기서는 이것이 유일함을 보인다. 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 non-negative 한 제곱근 행렬을 <span class="math inline">\(\boldsymbol{R}\)</span> 이라 하자. 스펙트럼 정리에 의해 <span class="math inline">\(\boldsymbol{R}\)</span> 에 대한 고유값 <span class="math inline">\(\eta_1,\ldots,\,\eta_n\)</span> 과 그에 대한 정규 고유 벡터 <span class="math inline">\(\boldsymbol{u}_1,\ldots,\,\boldsymbol{u}_n\)</span> 이 존재한다. 이 때 <span class="math inline">\(\eta_i \ge 0\)</span> 이다. 임의의 벡터 <span class="math inline">\(\boldsymbol{v} = \sum_i a_i \boldsymbol{u}_i\)</span> 에 대해,</p>
-<p><span class="math display">\[
-\begin{aligned}
-\boldsymbol{R}\boldsymbol{v} &amp;= \sum_i a_i \eta _i \boldsymbol{u}_i \\
-\boldsymbol{R}^2\boldsymbol{v}&amp;= \sum_i a_i \eta_i^2 \boldsymbol{u}_i
-\end{aligned}
-\]</span></p>
-<p>이다. <span class="math inline">\(\boldsymbol{R}^2 = \boldsymbol{A}\)</span> 이므로, <span class="math inline">\(\boldsymbol{v}\)</span> 가 고유값 <span class="math inline">\(\lambda\)</span> 를 갖는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터라면</p>
-<p><span class="math display">\[
-\boldsymbol{A}\boldsymbol{v} = \sum_i a_i \lambda \boldsymbol{u}_i
-\]</span></p>
-<p>이며, 따라서 <span class="math inline">\(i=1,\ldots,\,n\)</span> 에 대해 <span class="math inline">\(\eta_i = \sqrt{\lambda}\)</span> 이어야 한다. 즉 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유벡터는 <span class="math inline">\(\boldsymbol{R}\)</span> 의 고유벡터이어야 하며, 따라서 유일하다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span>non-negative 연산자 <span class="math inline">\(L\)</span> 에 대한 non-negative 제곱근 연산자 <span class="math inline">\(R\)</span> 이 존재함을 안다. <span class="math inline">\(R\)</span> 역시 에르미트 연산자이므로 어떤 정규직교기저 <span class="math inline">\((e_1,\ldots,e_n)\)</span> 에서 <span class="math inline">\(c_i\ge 0\)</span> 에 대해 <span class="math inline">\(Re_i=c_ie_i\)</span> 이며 <span class="math inline">\(Le_i = c_i^2e_i\)</span> 이다. 즉 <span class="math inline">\(R\)</span> 을 대각화하는 정규직교기저는 <span class="math inline">\(L\)</span> 을 대각화하는 정규직교기저이다. 이 정규직교기저에 대해 <span class="math inline">\(Re_i = \sqrt{c_i}e_i\)</span> 로 정해지므로 <span class="math inline">\(R\)</span> 은 유일하다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_squareroot_matrix" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.3</strong></span> 임의의 <span class="math inline">\(\boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\boldsymbol{B}^\ast \boldsymbol{B}\)</span> 를 생각 할 수 있다. 이 때 <span class="math inline">\(\boldsymbol{B}^\ast \in \mathcal{M}_{n \times m}(\mathbb{F})\)</span> 이다. <span class="math inline">\(\boldsymbol{B}^\ast \boldsymbol{B}\)</span> 는</p>
-<p>  (<span class="math inline">\(1\)</span>) 에르미트이다.</p>
-<p>  (<span class="math inline">\(2\)</span>) non-negative 이다.</p>
-<p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\sqrt{\boldsymbol{B}^\ast \boldsymbol{B}}\)</span> 를 생각 할 수 있다.</p>
+<p><span class="theorem-title"><strong>명제 7.3</strong></span> 유한차원 벡터공간에서 정의된 연산자 <span class="math inline">\(M\)</span> 에 대해 <span class="math inline">\(M^\ast M\)</span> 는 non-negative 연산자이다.</p>
 </div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\((M^\ast M)^\ast = M^\ast M\)</span> 이므로 <span class="math inline">\(M^\ast M\)</span> 은 에르미트 연산자이다. <span class="math inline">\(\langle M^\ast Mv,\,v\rangle = \|Mv\|^2 \ge 0\)</span> 이므로 non-negative 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\((\boldsymbol{B}^\ast\boldsymbol{B})^\ast = \boldsymbol{B}^\ast\boldsymbol{B}\)</span> 이다.</p>
-<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\langle \boldsymbol{B}^\ast\boldsymbol{Bv},\,\boldsymbol{v}\rangle = \|\boldsymbol{Bv}\|^2 \ge 0\)</span>.</p>
-<p>(<span class="math inline">\(3\)</span>) <a href="#prp-LA_properties_of_posivive_definite_matrix" class="quarto-xref">명제&nbsp;<span>7.1</span></a> <span class="math inline">\(\square\)</span></p>
-</div>
+<p>위의 명제는 non-negiatve <span class="math inline">\(L\)</span> 에 대해 <span class="math inline">\(\sqrt{L}\)</span> 이 정확하게 정의됨을 의미한다.</p>
 <p><br></p>
 </section>
 <section id="연습문제-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-axler_5_A_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.4 (Axler 5.A.2)</strong></span> <span class="math inline">\(\boldsymbol{A},\,\boldsymbol{B}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 이고 <span class="math inline">\(\boldsymbol{AB}=\boldsymbol{BA}\)</span> 이면 <span class="math inline">\(\ker \boldsymbol{B}\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 불변부분공간이다.</p>
+<div id="exr-LA_zero_of_non_negative_operator" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.4</strong></span> <span class="math inline">\(L \in \mathcal{L}(V)\)</span> 이 non-negative 이고 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\langle Lv,\,v\rangle = 0\)</span> 이면 <span class="math inline">\(Lv=0\)</span> 임을 보여라.</p>
 </div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\langle Lv,\,v\rangle= \langle \sqrt{L}v,\, \sqrt{L}v\rangle =\|\sqrt{L}v\|^2 = 0\)</span> 이므로 <span class="math inline">\(Lv=0\)</span> 이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4th_7_C_6" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.5 (Axler4th 7.C.6)</strong></span> 두 non-negative 연산자의 합도 non-negative 임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(L,\,M\)</span> 이 non-negative 이면 <span class="math inline">\(\langle (L+M)v,\,v\rangle = \langle Lv,\,v\rangle + \langle Mv,\,v\rangle \ge 0\)</span>.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4th_7_C_7" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.6 (Axler4h 7.C.7)</strong></span> <span class="math inline">\(L\)</span> 이 non-negative 이며 가역인 연산자이고 <span class="math inline">\(M\)</span> 이 non-negative 이면 <span class="math inline">\(L+M\)</span> 이 가역임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#exr-LA_axler4th_7_C_6" class="quarto-xref">연습문제&nbsp;<span>7.5</span></a> 에 의해 <span class="math inline">\(L+M\)</span> 은 non-negative 이다. <span class="math inline">\(\langle (L+M)v,\, v\rangle &gt; 0\)</span> 이므로 positive definite 이다. 따라서 <span class="math inline">\(L+M\)</span> 은 대각화 가능하며 모든 대각성분이 양수이므로 가역이다.</p>
 </div>
 <p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4th_7_C_8" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.7 (Axler4h 7.C.8)</strong></span> <span class="math inline">\(L\)</span> 이 non-negative 일 필요충분조건은 <span class="math inline">\(L\)</span> 의 의사역행렬 <span class="math inline">\(L^+\)</span> 가 non-negative 인 것이다.</p>
+</div>
+</div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\boldsymbol{u}\in \ker \boldsymbol{B}\)</span> 라 하자. <span class="math inline">\(\boldsymbol{BAu} =\boldsymbol{ABu} = \boldsymbol{0}\)</span> 이므로 <span class="math inline">\(\boldsymbol{Au}\in \ker \boldsymbol{B}\)</span> 이다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span>to be done</p>
+</div>
+<p><br></p>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4th_7_C_9" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.8 (Axler4h 7.C.9)</strong></span> <span class="math inline">\(L \in \mathcal{L}(V)\)</span> 이 non-negative 이고 <span class="math inline">\(S\in \mathcal{L}(W,\,V)\)</span> 이면 <span class="math inline">\(S^\ast LS\)</span> 는 non-negative 임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\langle S^\ast LSv,\,v\rangle = \langle S^\ast \sqrt{L}\sqrt{L}S v,\,v\rangle = \|\sqrt{L}Sv\|^2 \ge 0\)</span>.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4th_7_C_10" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.9 (Axler4h 7.C.10)</strong></span> Non-negative <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(Lu=v,\, Lv=u\)</span> 이면 <span class="math inline">\(u=v\)</span> 임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math display">\[
+\begin{aligned}
+\|v-u\|^2 &amp;= \|L(u-v)\|^2 = \langle L(u-v),\, L(u-v)\rangle = \langle L(u-v),\, v-u\rangle \\[0.3em]
+&amp;= - \langle L(u-v),\, u-v\rangle \le 0
+\end{aligned}
+\]</span></p>
+<p>이므로 <span class="math inline">\(L(u-v)=0\)</span> 이며 따라서 <span class="math inline">\(u=v\)</span> 이다.</p>
 </div>
 <p><br></p>
 </section>
@@ -895,7 +926,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-2">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.5 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이다. <span class="math inline">\(L=0\)</span> 인 것의 필요충분 조건은 <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 인 것임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.10 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이다. <span class="math inline">\(L=0\)</span> 인 것의 필요충분 조건은 <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 인 것임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -905,7 +936,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.6 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이며 <span class="math inline">\(s&gt;0\)</span> 이다. <span class="math inline">\(s\)</span> 가 <span class="math inline">\(L\)</span> 의 특이값일 필요충분조건은 어떤 nonzero vector <span class="math inline">\(v\in V,\, w\in W\)</span> 에 대해 <span class="math inline">\(Lv=sw\)</span> 이며 <span class="math inline">\(L^\ast w = sv\)</span> 임을 보여라. (이런 조건을 만족하는 <span class="math inline">\(v,\,w\)</span> 를 <strong>슈미트 쌍(Schmidt pair)</strong> 라고 한다.)</p>
+<p><span class="theorem-title"><strong>연습문제 7.11 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이며 <span class="math inline">\(s&gt;0\)</span> 이다. <span class="math inline">\(s\)</span> 가 <span class="math inline">\(L\)</span> 의 특이값일 필요충분조건은 어떤 nonzero vector <span class="math inline">\(v\in V,\, w\in W\)</span> 에 대해 <span class="math inline">\(Lv=sw\)</span> 이며 <span class="math inline">\(L^\ast w = sv\)</span> 임을 보여라. (이런 조건을 만족하는 <span class="math inline">\(v,\,w\)</span> 를 <strong>슈미트 쌍(Schmidt pair)</strong> 라고 한다.)</p>
 </div>
 </div>
 <p><br></p>
@@ -916,7 +947,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.7 (Axler4th 7.E.3)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 이다. <span class="math inline">\(L\)</span> 의 고유값은 <span class="math inline">\(0\)</span> 이며 특이값은 <span class="math inline">\(0,\,5\)</span> 인 예를 들어라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.12 (Axler4th 7.E.3)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 이다. <span class="math inline">\(L\)</span> 의 고유값은 <span class="math inline">\(0\)</span> 이며 특이값은 <span class="math inline">\(0,\,5\)</span> 인 예를 들어라.</p>
 </div>
 </div>
 <p><br></p>
@@ -926,7 +957,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.8 (Axler4th 7.E.4)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1\)</span> 이 <span class="math inline">\(L\)</span> 의 가장 큰 특이값이며 <span class="math inline">\(s_n\)</span> 이 가장 작은 특이값이라고 하자.</p>
+<p><span class="theorem-title"><strong>연습문제 7.13 (Axler4th 7.E.4)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1\)</span> 이 <span class="math inline">\(L\)</span> 의 가장 큰 특이값이며 <span class="math inline">\(s_n\)</span> 이 가장 작은 특이값이라고 하자.</p>
 <p><span class="math display">\[
 \{\|Lv\| : v\in V,\, \|v\|=1\}=[s_n,\,s_1]
 \]</span></p>
@@ -943,7 +974,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.9 (Axler4th 7.E.5)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 가 <span class="math inline">\(T(x,\,y) = (-4y,\,x)\)</span> 로 정의되었다. <span class="math inline">\(L\)</span> 의 특이값을 구하라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.14 (Axler4th 7.E.5)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 가 <span class="math inline">\(T(x,\,y) = (-4y,\,x)\)</span> 로 정의되었다. <span class="math inline">\(L\)</span> 의 특이값을 구하라.</p>
 </div>
 </div>
 <p><br></p>
@@ -953,7 +984,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_7" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.10 (Axler4th 7.E.7)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 에르미트 이거나 <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span> 이고 <span class="math inline">\(L\)</span> 이 정규행렬이라고 하자. <span class="math inline">\(\lambda_1,\ldots,\,\lambda_n\)</span> 이 <span class="math inline">\(L\)</span> 의 고유값이며 고유공간의 차원에 맞추어 중복되어 있다. <span class="math inline">\(L\)</span> 의 특이값은 <span class="math inline">\(|\lambda_1|,\ldots,\,|\lambda_n|\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.15 (Axler4th 7.E.7)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 에르미트 이거나 <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span> 이고 <span class="math inline">\(L\)</span> 이 정규행렬이라고 하자. <span class="math inline">\(\lambda_1,\ldots,\,\lambda_n\)</span> 이 <span class="math inline">\(L\)</span> 의 고유값이며 고유공간의 차원에 맞추어 중복되어 있다. <span class="math inline">\(L\)</span> 의 특이값은 <span class="math inline">\(|\lambda_1|,\ldots,\,|\lambda_n|\)</span> 임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -963,7 +994,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_8" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.11 (Axler4th 7.E.8)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1,\ldots,\,s_m\)</span> 이 <span class="math inline">\(s_1\ge \cdots \ge s_m &gt; 0\)</span> 이며 <span class="math inline">\(e_1,\ldots,\,e_m\)</span> 은 <span class="math inline">\(V\)</span> 의 정규직교벡터이고 <span class="math inline">\(f_1,\ldots,\,f_m\)</span> 은 <span class="math inline">\(W\)</span> 의 정규직교벡터이며 <span class="math inline">\(v\in V\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>연습문제 7.16 (Axler4th 7.E.8)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1,\ldots,\,s_m\)</span> 이 <span class="math inline">\(s_1\ge \cdots \ge s_m &gt; 0\)</span> 이며 <span class="math inline">\(e_1,\ldots,\,e_m\)</span> 은 <span class="math inline">\(V\)</span> 의 정규직교벡터이고 <span class="math inline">\(f_1,\ldots,\,f_m\)</span> 은 <span class="math inline">\(W\)</span> 의 정규직교벡터이며 <span class="math inline">\(v\in V\)</span> 에 대해</p>
 <p><span class="math display">\[
 Lv = s_1 \langle v,\,e_1\rangle f_1 + \cdots + s_n \langle v,\,e_n\rangle f_n
 \]</span></p>

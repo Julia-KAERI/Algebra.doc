@@ -385,7 +385,7 @@ $$
 
 #### Positive Definite 행렬 와 제곱근 행렬
 
-에르미트 행렬 $\bf{A}$ 이 임의의 벡터 $\bf{v}$ 에 대해 $\langle \bf{Av},\, \bf{v} \rangle > 0$ 일 때 $\bf{A}$ 를 **positve** 혹은 **positive definite** 라 하고 $\langle \bf{Av},\, \bf{v} \rangle \ge 0$ 일 때 $\bf{A}$ 를 **non-negative** 혹은 **positive semidefinite** 라 한다. $\bf{A}$ 가 positive 이거나 positive definite 일 때  $\bf{A}=\bf{R}^2$ 인 행렬 $\bf{R}$ 이 존재하면 $\bf{R}$ 을 $\bf{A}$ 의 **제곱근 행렬** 이라고 하고 $\sqrt{\bf{A}}$ 라고 쓴다. 행렬 $\bf{A}$ 의 제곱근 행렬이 존재 할 때 $\bf{A}$ 가 제곱근 행렬을 가진다라고 한다.
+에르미트 연산자 $L$ 이 임의의 벡터 $v$ 에 대해 $\langle Lv,\, v \rangle > 0$ 일 때 $L$ 을 **positve** 혹은 **positive definite** 라 하고 $\langle Lv,\, v \rangle \ge 0$ 일 때 $L$ 을 **non-negative** 혹은 **positive semidefinite** 라 한다. $L$ 가 positive 이거나 positive definite 일 때  $L=R^2$ 인 연산자 $R$ 이 존재하면 $R$ 을 $L$ 의 **제곱근 연산자** 라고 하고 $\sqrt{L}$ 라고 쓴다. 
 
 :::
 :::
@@ -397,49 +397,42 @@ $$
 
 #### 용어의 혼란을 막기 위해
 
-예를 들어 S. Axler 의 *Linear Algebra Done Right* 의 경우 $\langle \bf{Av},\,\bf{v}\rangle \ge 0$ 일 때 $\bf{A}$ 를 *positive* 라고 정의한다(3rd Ed. pp 225). 그러나 K. Hoffman, R. Kunze 의 *Linear Algebra* 의 경우에는  $\langle \bf{Av},\,\bf{v}\rangle > 0$ 일 때 positive 라고 정의한다(2nd Ed. pp 329). 여기서는 더 직관적인 non-negative, positive 라는 용어를 사용하기로 한다.
+예를 들어 S. Axler 의 *Linear Algebra Done Right* 의 경우 $\langle Lv,\,v\rangle \ge 0$ 일 때 $L$ 를 *positive* 라고 정의한다(3rd Ed. pp 225). 그러나 K. Hoffman, R. Kunze 의 *Linear Algebra* 의 경우에는  $\langle Lv,\,v\rangle > 0$ 일 때 positive 라고 정의한다(2nd Ed. pp 329). 여기서는 더 직관적인 non-negative, positive 라는 용어를 사용하기로 한다.
 
 :::
 
 
 </br>
 
-### Non-negative 행렬의 성질
+### Non-negative 연산자의 성질
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_properties_of_posivive_definite_matrix}
 
-$\bf{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 동치이다.
+유한차원 $\C$-벡터공간에서 정의된 연산자 $L$ 에 대해 다음은 동치이다.
 
-&emsp; ($1$) $\bf{A}$ 는 non-negative 이다.
+&emsp; ($1$) $L$ 은 non-negative 이다.
 
-&emsp; ($2$) $\bf{A}$ 는 에르미트행렬이며 모든 고유값은 non-negative 하다
+&emsp; ($2$) $L$ 은 에르미트행렬이며 모든 고유값은 non-negative 하다
 
-&emsp; ($3$) $\bf{A}$ 는 대각성분이 모두 음수가 아닌 대각행렬과 닮았다.
+&emsp; ($3$) $L$ 은 어떤 정규직교기저에서 대각성분이 모두 음수가 아닌 대각행렬로 표현된다.
 
-&emsp; ($4$) $\bf{A}$ 의 non-negative positive 제곱근 행렬이 존재한다.
+&emsp; ($4$) $L$ 의 non-negative 제곱근 연산자가 존재한다.
 
-&emsp; ($5$) $\bf{A}$ 의 에르미트 제곱근 행렬이 존재한다.
-
-&emsp; ($6$) $\bf{A} = \bf{R}^\ast \bf{R}$ 인 행렬 $\bf{R}$ 이 존재한다.
 
 ::: 
 
-</div></br>
+</div>
 
 ::: {.proof}
-($1 \implies 2$) $\bf{A}$ 가 non-negative 이므로 정의에 의해 에르미트 행렬이다. $\lambda$ 가 $\bf{A}$ 의 고유값이고 $\bf{v}$ 가 $\lambda$ 에 대한 고유벡터 일 때, $0 \le \langle \bf{Av},\, \bf{v}\rangle = \lambda \|\bf{v}\|^2$ 이므로 $\lambda \ge 0$ 이다.
+($1 \implies 2$) $L$ 이 non-negative 이므로 정의에 의해 에르미트 행렬이다. $c$ 가 $L$ 의 고유값이고 $v$ 가 $c$ 에 대한 고유벡터 일 때, $0 \le \langle Lv,\, v\rangle = c \|v\|^2$ 이므로 $c \ge 0$ 이다.
 
-($2 \implies 3$) $\bf{A}$ 가 에르미트 행렬이므로 스펙트럼 정리에 의해 $\bf{U}^\ast\bf{AU}$ 를 대각행렬 $\bf{D}$ 로 하는 유니타리 행렬 $\bf{U}$ 가 존재한다. 대각성분이 고유값이므로 $\bf{D}$ 의 모든 대각성분은 실수이며 음수가 아니다.
+($2 \implies 3$) $L$ 이 에르미트 행렬이므로 스펙트럼 정리에 의해 대각화되며 대각성분이 고유값이다. 따라서 모든 대각성분은 실수이며 음수가 아니다.
 
-($3 \implies 4$) $\bf{A}$ 의 고유값 $\lambda_1,\ldots,\,\lambda_n$ 에 대해 $D_{ij} = \lambda_{i}\delta_{ij}$ 일 때, 행렬 $\bf{S}$ 를 대각행렬 $S_{ij} = \sqrt{D_{ij}}$ 로 정의하자. $\bf{R} = \bf{U}^\ast\bf{SU}$ 라 하면 $\bf{R}^2 = \bf{A}$ 이다.
+($3 \implies 4$) $L$ 을 대각화 하는 정규직교 기저를 $\mathcal{B}=(e_1,\ldots,\,e_n)$ 이라고 하고 그 고유값을 $c_1,\ldots,\,c_n$ 이라고 하자. $R(e_i) = \sqrt{c_i}e_i$ 인 연산자 $R$ 은 에르미트 이며 $L$ 의 제곱근 연산자이다.
 
-($4 \implies 5$) 위에서 정의한 $\bf{R}$ 은 $\bf{R}^\ast = \bf{U}^\ast \bf{SU} = \bf{R}$ 이므로 에르미트 행렬이다.
-
-($5 \implies 6$) 앞서 정의한 $\bf{R}$ 이다.
-
-($6 \implies 1$) $\bf{A}=\bf{R}^\ast \bf{R}$ 이면 $\bf{A}^\ast = (\bf{R}^\ast\bf{R})^\ast = \bf{R}^\ast \bf{R}=\bf{A}$ 이므로 $\bf{A}$ 는 에르미트 행렬이다. 또한 임의의 $\bf{v}\in \mathcal{M}_{n }(\mathbb{C})$ 에 대해 $\langle \bf{v},\, \bf{A}\bf{v}\rangle = \langle \bf{R}^\ast \bf{R}\bf{v},\, \bf{v} \rangle = \|\bf{Rv}\|^2\ge 0$ 이므로 $\bf{A}$ 는 non-negative 이다. $\square$
+($4 \implies 1$) $L$ 의 non-negative 제곱근 연산자를 $R$ 이라고 하자. $R$ 은 에르미트 연산자이며 $L=RR=R^\ast R$ 이므로 $L^\ast=L$ 이다. 즉 $L$ 은 에르미트 연산자이다. 또한 $\langle Lv,\,v\rangle = \langle R^\ast Rv,\,v\rangle = \|Rv\|^2\ge 0$ 이다. $\square$
 
 :::
 
@@ -447,29 +440,15 @@ $\bf{A} \in \mathcal{M}_{n \times n}(\mathbb{C})$ 에 대해 다음은 동치이
 
 ::: {#prp-LA_uniqueness_of_squareroot_matrix}
 
-non-negative 행렬 $\bf{A}$ 의 non-nagative 한 제곱근 행렬은 유일하다.
+유한차원 벡터공간에서 non-negative 연산자의 non-nagative 한 제곱근 연산자는 유일하다.
 
 :::
 
-</div></br>
+</div>
 
 :::{.proof}
-우리는 앞서 non-negative 행렬 $\bf{A}$ 에 대한 non-negative 한 제곱근 행렬이 존재함을 보였다. 여기서는 이것이 유일함을 보인다. 행렬 $\bf{A}$ 에 대한 non-negative 한 제곱근 행렬을 $\bf{R}$ 이라 하자. 스펙트럼 정리에 의해 $\bf{R}$ 에 대한 고유값 $\eta_1,\ldots,\,\eta_n$ 과 그에 대한 정규 고유 벡터 $\bf{u}_1,\ldots,\,\bf{u}_n$ 이 존재한다. 이 때 $\eta_i \ge 0$ 이다. 임의의 벡터 $\bf{v} = \sum_i a_i \bf{u}_i$ 에 대해,
 
-$$
-\begin{aligned}
-\bf{R}\bf{v} &= \sum_i a_i \eta _i \bf{u}_i \\
-\bf{R}^2\bf{v}&= \sum_i a_i \eta_i^2 \bf{u}_i
-\end{aligned}
-$$
-
-이다. $\bf{R}^2 = \bf{A}$ 이므로, $\bf{v}$ 가 고유값 $\lambda$ 를 갖는 $\bf{A}$ 의 고유벡터라면
-
-$$
-\bf{A}\bf{v} = \sum_i a_i \lambda \bf{u}_i
-$$
-
-이며, 따라서 $i=1,\ldots,\,n$ 에 대해 $\eta_i = \sqrt{\lambda}$ 이어야 한다. 즉 $\bf{A}$ 의 고유벡터는 $\bf{R}$ 의 고유벡터이어야 하며, 따라서 유일하다. $\square$
+non-negative 연산자 $L$ 에 대한 non-negative 제곱근 연산자 $R$ 이 존재함을 안다. $R$ 역시 에르미트 연산자이므로 어떤 정규직교기저 $(e_1,\ldots,e_n)$ 에서 $c_i\ge 0$ 에 대해 $Re_i=c_ie_i$ 이며 $Le_i = c_i^2e_i$ 이다. 즉 $R$ 을 대각화하는 정규직교기저는 $L$ 을 대각화하는 정규직교기저이다. 이 정규직교기저에 대해 $Re_i = \sqrt{c_i}e_i$ 로 정해지므로 $R$ 은 유일하다. $\square$
 
 :::
 
@@ -477,49 +456,136 @@ $$
 
 ::: {#prp-LA_squareroot_matrix}
 
-임의의 $\bf{B}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\bf{B}^\ast \bf{B}$ 를 생각 할 수 있다. 이 때 $\bf{B}^\ast \in \mathcal{M}_{n \times m}(\mathbb{F})$ 이다. $\bf{B}^\ast \bf{B}$ 는
-
-&emsp; ($1$) 에르미트이다.
-
-&emsp; ($2$) non-negative 이다.
-
-&emsp; ($3$) $\sqrt{\bf{B}^\ast \bf{B}}$ 를 생각 할 수 있다.
+유한차원 벡터공간에서 정의된 연산자 $M$ 에 대해 $M^\ast M$ 는 non-negative 연산자이다.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
-($1$) $(\bf{B}^\ast\bf{B})^\ast = \bf{B}^\ast\bf{B}$ 이다.
-
-($2$) $\langle \bf{B}^\ast\bf{Bv},\,\bf{v}\rangle = \|\bf{Bv}\|^2 \ge 0$.
-
-($3$) @prp-LA_properties_of_posivive_definite_matrix $\square$
+$(M^\ast M)^\ast = M^\ast M$ 이므로 $M^\ast M$ 은 에르미트 연산자이다. $\langle M^\ast Mv,\,v\rangle = \|Mv\|^2 \ge 0$ 이므로 non-negative 이다. $\square$
 :::
 
 </br>
 
+위의 명제는 non-negiatve $L$ 에 대해 $\sqrt{L}$ 이 정확하게 정의됨을 의미한다.
+
+</br>
 
 ### 연습문제 {.unnumbered}
 
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-::: {#exr-axler_5_A_2}
+::: {#exr-LA_zero_of_non_negative_operator}
 
-#### Axler 5.A.2
+$L \in \mathcal{L}(V)$ 이 non-negative 이고 $v\in V$ 에 대해 $\langle Lv,\,v\rangle = 0$ 이면 $Lv=0$ 임을 보여라.
 
-$\bf{A},\,\bf{B}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이고 $\bf{AB}=\bf{BA}$ 이면 $\ker \bf{B}$ 는 $\bf{A}$ 의 불변부분공간이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
-$\bf{u}\in \ker \bf{B}$ 라 하자. $\bf{BAu} =\bf{ABu} = \bf{0}$ 이므로 $\bf{Au}\in \ker \bf{B}$ 이다.  
+$\langle Lv,\,v\rangle= \langle \sqrt{L}v,\, \sqrt{L}v\rangle =\|\sqrt{L}v\|^2 = 0$ 이므로 $Lv=0$ 이다.
 
 :::
 
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4th_7_C_6}
+#### Axler4th 7.C.6
+두 non-negative 연산자의 합도 non-negative 임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$L,\,M$ 이 non-negative 이면 $\langle (L+M)v,\,v\rangle = \langle Lv,\,v\rangle + \langle Mv,\,v\rangle \ge 0$. 
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4th_7_C_7}
+#### Axler4h 7.C.7
+
+$L$ 이 non-negative 이며 가역인 연산자이고 $M$ 이 non-negative 이면 $L+M$ 이 가역임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+@exr-LA_axler4th_7_C_6 에 의해 $L+M$ 은 non-negative 이다. $\langle (L+M)v,\, v\rangle > 0$ 이므로 positive definite 이다. 따라서 $L+M$ 은 대각화 가능하며 모든 대각성분이 양수이므로 가역이다.
+
+:::
 </br>
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4th_7_C_8}
+#### Axler4h 7.C.8
+
+$L$ 이 non-negative 일 필요충분조건은 $L$ 의 의사역행렬 $L^+$ 가 non-negative 인 것이다.
+
+:::
+
+</div>
+
+::: {.solution}
+
+to be done
+
+:::
+</br>
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4th_7_C_9}
+#### Axler4h 7.C.9
+
+$L \in \mathcal{L}(V)$ 이 non-negative 이고 $S\in \mathcal{L}(W,\,V)$ 이면 $S^\ast LS$ 는 non-negative 임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+$\langle S^\ast LSv,\,v\rangle = \langle S^\ast \sqrt{L}\sqrt{L}S v,\,v\rangle = \|\sqrt{L}Sv\|^2 \ge 0$.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4th_7_C_10}
+#### Axler4h 7.C.10
+
+Non-negative $L\in \mathcal{L}(V)$ 에 대해 $Lu=v,\, Lv=u$ 이면 $u=v$ 임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+
+$$
+\begin{aligned}
+\|v-u\|^2 &= \|L(u-v)\|^2 = \langle L(u-v),\, L(u-v)\rangle = \langle L(u-v),\, v-u\rangle \\[0.3em]
+&= - \langle L(u-v),\, u-v\rangle \le 0
+\end{aligned}
+$$
+
+이므로 $L(u-v)=0$ 이며 따라서 $u=v$ 이다.
+
+:::
+</br>
+
 
 ## 특이값 분해
 
