@@ -1,5 +1,5 @@
  ---
-title: "특성다항식, 최소다항식과 케일리-해밀턴 정리"
+title: "최소다항식과 케일리-해밀턴 정리"
 number-sections: true
 number-depth : 3
 crossref:
@@ -226,10 +226,10 @@ $n\in \mathbb{Z}_+$ 에 대해 $p(t)\in \mathbb{C}_n[t]$ 일 때 서로 다른 $
 $p(t) = a_0 + \cdots + a_n t^n$ 일 때 서로 다른 $t_0,\ldots,\,t_n$ 에 대해 $p(t_i)$ 값을 안다면 $p(t)$ 가 유일하게 정해진다는 것을 보이자. 
 
 $$
-\boldsymbol{L} = \begin{bmatrix} 1 & t_0 & t_0^2 & \cdots & t_0^n \\ 1 & t_1 & t_1^2 & \cdots & t_1^n \\ & & \vdots & & \\ 1 & t_n^1 & t_n^2 & \cdots & t_n^n\end{bmatrix},\qquad \boldsymbol{a} = \begin{bmatrix} a_0 \\ a_1 \\ \vdots \\ a_n\end{bmatrix},\qquad \boldsymbol{p}= \begin{bmatrix} p(t_0) \\ p(t_1) \\ \vdots \\ p(t_n)\end{bmatrix}
+\bf{L} = \begin{bmatrix} 1 & t_0 & t_0^2 & \cdots & t_0^n \\ 1 & t_1 & t_1^2 & \cdots & t_1^n \\ & & \vdots & & \\ 1 & t_n^1 & t_n^2 & \cdots & t_n^n\end{bmatrix},\qquad \bf{a} = \begin{bmatrix} a_0 \\ a_1 \\ \vdots \\ a_n\end{bmatrix},\qquad \bf{p}= \begin{bmatrix} p(t_0) \\ p(t_1) \\ \vdots \\ p(t_n)\end{bmatrix}
 $$
 
-를 생각하자. $\boldsymbol{La}$ 의 $i$ 번째 성분은 $p(t_i)$ 와 같으므로 $\boldsymbol{La}=\boldsymbol{p}$ 를 만족하는 $\boldsymbol{a}$ 가 $\mathbb{R}$-벡터로서 존재한다면 우리는 원하는 답을 얻는 것이다. 여기서 $\boldsymbol{L}$ 은 Vandermond 행렬로 @exr-determinant_of_vandermond_matrix 에서 보았듯이 서로 다른 $t_0,\ldots,t_n$ 에 대해 $\det(\boldsymbol{L}) \ne 0$ 이다. 즉 $\boldsymbol{L}$ 은 가역행렬이며 따라서 $\boldsymbol{La}=\boldsymbol{p}$ 에 대한 nontrivial solution $\boldsymbol{a}$ 가 존재한다. $\boldsymbol{L}$ 과 $\boldsymbol{p}$ 가 실수에서의 행렬과 벡터이므로 $\boldsymbol{a}$ 도 모든 성분이 실수이다. 
+를 생각하자. $\bf{La}$ 의 $i$ 번째 성분은 $p(t_i)$ 와 같으므로 $\bf{La}=\bf{p}$ 를 만족하는 $\bf{a}$ 가 $\mathbb{R}$-벡터로서 존재한다면 우리는 원하는 답을 얻는 것이다. 여기서 $\bf{L}$ 은 Vandermond 행렬로 @exr-determinant_of_vandermond_matrix 에서 보았듯이 서로 다른 $t_0,\ldots,t_n$ 에 대해 $\det(\bf{L}) \ne 0$ 이다. 즉 $\bf{L}$ 은 가역행렬이며 따라서 $\bf{La}=\bf{p}$ 에 대한 nontrivial solution $\bf{a}$ 가 존재한다. $\bf{L}$ 과 $\bf{p}$ 가 실수에서의 행렬과 벡터이므로 $\bf{a}$ 도 모든 성분이 실수이다. 
 
 :::
 
@@ -245,30 +245,32 @@ $$
 
 #### 특성다항식
 
-$\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대한 $p_{\boldsymbol{A}}(\lambda) = \det (\lambda \boldsymbol{I}-\boldsymbol{A})$ 를 **특성 다항식(characteristic polynomial)** 이라 한다.
+유한차원 벡터공간 $V$ 에서 정의된 연산자 $L$ 에 대해 $p_{L}(t) = \det (t I_V-L)$ 를 **특성 다항식(characteristic polynomial)** 이라 한다.
 
 :::
 :::
 
 </br>
 
-또한 우리는 다음을 보였다.
-
-- @prp-LA_invariance_of_characteristic_polynomial : 특성 다항식은 닮음 변환에 대해 불변이다. 즉 행렬 $\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})$ 과 가역행렬 $\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $p_{\boldsymbol{A}}(\lambda) = p_{\boldsymbol{P^{-1}AP}}(\lambda)$ 이다.
-
-- @prp-LA_eigenvalue_characteristic_polynomial : $\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 $\lambda\in \mathbb{F}$ 가 $\boldsymbol{A}$ 의 고유값이기 위한 필요충분조건은 $p_{\boldsymbol{A}}(\lambda)=0$ 인 것이다.
+행렬식은 닮음 변환에 대해 불변이므로 어떤 기저 $\mathcal{B}$ 에 대해서도 특성다항식은 불변이다. 또한 우리는 다음을 보였다. 또한 @prp-LA_eigenvalue_characteristic_polynomial 에서 $L\in \mathcal{L}(V)$ 에 대해 $\lambda\in \mathbb{F}$ 가 $L$ 의 고유값이기 위한 필요충분조건은 $p_{L}(\lambda)=0$ 인 것임을 안다.
 
 </br>
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-ALA_trace_of_matrix}
 
-#### 행렬의 trace
+#### 행렬과 연산자의 trace 
 
 $\text{tr} : \mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}$ 는 다음과 같이 정의된다.
 
 $$
-\text{tr}(\boldsymbol{\boldsymbol{A}}) = \sum_{i=1}^n A_{ii}.
+\text{tr}(\bf{\bf{A}}) = \sum_{i=1}^n A_{ii}.
+$$
+
+Trace 역시 닮음 변환에 대해 불변이므로(@prp-ALA_trace_is_invariant_under_similar_transformation) 연산자 $L\in \mathcal{L}(V)$ 에 대해서도 정의 할 수 있다.
+
+$$
+\text{tr}(L) = \sum_{i=1}^{\dim (V)}([L])_{ii}
 $$
 
 :::
@@ -287,12 +289,12 @@ $$
 
 ::: {.proof}
 
-$\boldsymbol{A},\,\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이며 $\boldsymbol{P}$ 가 가역이라고 하자. 
+$\bf{A},\,\bf{P}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 이며 $\bf{P}$ 가 가역이라고 하자. 
 
 $$
 \begin{aligned}
-\text{tr}(\boldsymbol{P}^{-1}\boldsymbol{AP}) &= \sum_{i=1}^n\left(\boldsymbol{P}^{-1}\boldsymbol{AP}\right)_{ii} = \sum_{i, j, k=1}^n (P^{-1})_{ij}A_{jk}P_{ki} = \sum_{j, k=1}^n A_{jk} (\boldsymbol{PP}^{-1})_{kj} = \sum_{j=1}^n A_{jj} \\
-&= \text{tr}(\boldsymbol{A}). \qquad \square
+\text{tr}(\bf{P}^{-1}\bf{AP}) &= \sum_{i=1}^n\left(\bf{P}^{-1}\bf{AP}\right)_{ii} = \sum_{i, j, k=1}^n (P^{-1})_{ij}A_{jk}P_{ki} = \sum_{j, k=1}^n A_{jk} (\bf{PP}^{-1})_{kj} = \sum_{j=1}^n A_{jj} \\
+&= \text{tr}(\bf{A}). \qquad \square
 \end{aligned}
 $$
 
@@ -341,14 +343,14 @@ $L,\,T\in \mathcal{L}(V)$ 이고 $T$ 가 가역사상일 때 $p(t)\in \mathbb{F}
 
 </br>
 
-### 행렬의 대각화와 특성다항식 {#sec-ALA_characteristic_polynomial_and_diagonalization}
+<!-- ### 행렬의 대각화와 특성다항식 {#sec-ALA_characteristic_polynomial_and_diagonalization}
 
 @thm-LA_diagonalizability 에서 우리는 행렬의 대각화에 대해 정리하였다. 이제 행렬의 대각화를 특성다항식의 관점에서 보자.
 
 -- to be done -- 
 
 
-</br>
+</br> -->
 
 ## 케일리 해밀턴 정리
 
@@ -415,7 +417,7 @@ $S,\, T\in \mathcal{L}(V)$ 에 대해 $S\sim T$ 이면 $\mathcal{I}_S= \mathcal{
 
 ::: {.proof}
 
-$\dim (V) = n$ 이라고 하자. $\dim(\mathcal{L}(V)) = n^2$ 이므로, $\{I_V,\, T, \ldots,\, T^{n^2}\}$ 는 선형종속이다. $\square$
+$n=\dim (V)$ 이라고 하자. $\dim(\mathcal{L}(V)) = n^2$ 이므로, $\{I_V,\, L, \ldots,\, L^{n^2}\}$ 는 선형종속이다. $\square$
 
 :::
 
@@ -428,7 +430,7 @@ $\dim (V) = n$ 이라고 하자. $\dim(\mathcal{L}(V)) = n^2$ 이므로, $\{I_V,
 
 ::: {#exr-ALA_before_cayley_hamilton}
 
-$\boldsymbol{B}_i\in \mathcal{M}_{n \times n}(\mathbb{F})$ 는 상삼각행렬이며 $i$ 번째 대각성분이 $0$ 이라고 하자. 이 때 $\prod_{i=1}^n \boldsymbol{B}_i = \boldsymbol{B}_1 \boldsymbol{B}_2 \cdots \boldsymbol{B}_n = \boldsymbol{0}$ 임을 보여라.
+$\bf{B}_i\in \mathcal{M}_{n \times n}(\mathbb{F})$ 는 상삼각행렬이며 $i$ 번째 대각성분이 $0$ 이라고 하자. 이 때 $\bf{B}_1 \bf{B}_2 \cdots \bf{B}_n = \bf{0}$ 임을 보여라.
 
 :::
 
@@ -436,13 +438,13 @@ $\boldsymbol{B}_i\in \mathcal{M}_{n \times n}(\mathbb{F})$ 는 상삼각행렬�
 
 ::: {.solution}
 
-상삼각행렬의 곱은 상삼각행렬이다. $\boldsymbol{B}_1\boldsymbol{B}_2$ 는 첫번째열과 두번째 열이 영벡터이다. 이로부터 즉 $k\le n$ 에 대해 $\prod_{i=1}^k \boldsymbol{B}_i$ 는 1열부터 $k$ 번째 열까지 영벡터임을 가정 할 수 있고, 이를 수학적 귀납법으로 보이자. $k=1$ 일 때는 이미 보였다. $k$ 에 대해 성립함을 가정하자. $\prod_{i=1}^{k+1} \boldsymbol{B}_i  = \left(\prod_{i=1}^k \boldsymbol{B}_i\right)\boldsymbol{B}_{k+1}$ 이며 $\left(\prod_{i=1}^k \boldsymbol{B}_i\right)$ 은 $k$ 열까지 영벡터인 상삼각 행렬이고 $\boldsymbol{B}_{k+1}$ 은 $k+1$ 번째 대각성분이 $0$ 인 상삼각행렬이다. $\boldsymbol{C}=\prod_{i=1}^k \boldsymbol{B}_i$ 라고 하자. 
+$\bf{v}=\begin{bmatrix} v_1 &\ldots & v_n\end{bmatrix}^T$ 라고 하자. $1\le i \le n$ 인 $k$ 에 대해 $v_{i+1} = \cdots =v_{n}=0$ 이면 $\bf{B}_i \bf{v}$ 의 $i$ 번째 성분부터 $n$ 번째 성분까지 $0$ 임을 보이자. 
 
 $$
-(\boldsymbol{C}\boldsymbol{B}_{k+1})_{j, k+1} = \sum_{m = 1}^{n} C_{jm}(\boldsymbol{B}_{k+1})_{m, k+1} 
+(\bf{B}_i\bf{v})_{j\ge i} = \sum_{k=1}^n (\bf{B}_i)_{jk}(v_k) =\sum_{k>j\ge i}^n(\bf{B}_i)_{jk}(\bf{v}_k) = (\bf{B}_i)_{ii}v_i = 0
 $$
 
-이며 $m=1,\ldots,\,k$ 에 대해 $C_{jm}=0$ 이며 $m=k+1, \cdots n$ 에 대해 $(\boldsymbol{B}_{k+1})_{m, k+1}=0$ 이므로 위 식은 $0$ 이 된다. 따라서 $\prod_{i=1}^n \boldsymbol{B}_i = \boldsymbol{B}_1 \boldsymbol{B}_2 \cdots \boldsymbol{B}_n = \boldsymbol{0}$ 이다.
+이다. $\bf{B}_1 \bf{B}_2 \cdots \bf{B}_n \bf{v}$ 를 생각하면 $\bf{B}_n\bf{v}$ 는 마지막 성분이 $0$ 이며 차례로 아래부터 성분이 $0$ 이 되므로 $\bf{B}_1 \bf{B}_2 \cdots \bf{B}_n \bf{v} =\bf{0}$ 이다. 
 
 
 :::
@@ -460,18 +462,17 @@ $$
 </div>
 ::: {.proof}
 
-$n=\dim (V)$ 라고 하자. 우선 $\mathbb{F}=\mathbb{C}$ 에 대해 증명한다. @thm-LA_uppertriangular_matrix_complex_field 에서 우리는 복소수체에서 정의된 모든 정사각행렬은 상삼각행렬과 닮았다는 것을 보였다. 따라서 우리는 상삼각행렬에 대한 특성다항식에 대해서만 증명하면 된다. $\boldsymbol{A}$ 가 상삼각행렬이라고 하면, $p_\boldsymbol{A}(t) = \prod_{i=1}^n (t-A_{ii})$ 이다. 이제 
+$n=\dim (V)$ 라고 하자. 우선 $\mathbb{F}=\mathbb{C}$ 에 대해 증명한다. @thm-LA_uppertriangular_matrix_complex_field 에서 우리는 복소수체에서 정의된 모든 정사각행렬은 상삼각행렬과 닮았다는 것을 보였다. 즉 모든 연산자는 어떤 기저에서 상삼각행렬로 표현된다. 특성다항식은 닮음변환에 대해 불변이므로 우리는 상삼각행렬에 대한 특성다항식에 대해서만 증명하면 된다. $\bf{A}$ 가 $L$ 의 상삼각행렬 표현이라고 하면, $p_\bf{A}(t) = \prod_{i=1}^n (t-A_{ii})$ 이다. 이제 
 
 $$
-p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymbol{I}_n)=0
+p_\bf{A}(\bf{A}) = \prod_{i=1}^n (\bf{A}-A_{ii}\bf{I}_n)=0
 $$ 
 
-임을 보이면 된다. $\boldsymbol{A}$ 가 상삼각행렬이므로 $(\boldsymbol{A}- A_{ii}\boldsymbol{I}_n)_{ii}  = 0$ 이다. 위의 @exr-ALA_before_cayley_hamilton 에서 보였듯이 $p_\boldsymbol{A}(\boldsymbol{A}) =0$ 이므로 $p_T(L) \in \mathcal{I}_L$ 이다.
+임을 보이면 된다. $\bf{A}$ 가 상삼각행렬이므로 $(\bf{A}- A_{ii}\bf{I}_n)_{ii}  = 0$ 이다. 위의 @exr-ALA_before_cayley_hamilton 에서 보였듯이 $p_\bf{A}(\bf{A}) =0$ 이므로 $p_T(L) \in \mathcal{I}_L$ 이다.
 
 이제 $\mathbb{F}=\mathbb{R}$ 인 경우에 대해 생각하자. $\mathbb{R}\subset \mathbb{C}$ 이므로 성립하지 않을 이유가 없다. $\square$ 
 
 :::
-
 
 </br>
 
@@ -485,7 +486,7 @@ $$
 
 #### 최소다항식
 
-$L\in \mathcal{L}(V)$ 에 대한 annihilator ideal $\mathcal{I}_L$ 가운데 1 차 이상의 다항식 중 가장 작은 차수를 갖는 monic 다항식을 $L$ 에 대한 **최소다항식(minimal polynomnial)** 이라고 한다. 
+$L\in \mathcal{L}(V)$ 에 대한 annihilator ideal $\mathcal{I}_L$ 가운데 1 차 이상의 다항식 중 가장 작은 차수를 갖는 monic 다항식을 $L$ 에 대한 **최소다항식(minimal polynomnial)** 이라고 하고 $m_L$ 로 표기한다.
 
 :::
 :::
@@ -562,7 +563,9 @@ $\lambda$ 가 $L$ 의 고유값이라면 최소다항식은 $(t-\lambda )$ 로 �
 
 :::
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-ALA_minimal_polynomial_and_subspace}
 
@@ -578,7 +581,9 @@ $p_L$ 이 $L$ 의 최소다항식이라고 하자. $u\in U$ 이면 $u\in V$ 이�
 
 :::
 
-</br> <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 :::{#prp-ALA_constant_of_minimal_polynomal}
 
@@ -597,7 +602,9 @@ $L$ 이 가역이 아니면 $0$ 은 $L$ 의 고유값이므로 $p_L$ 의 상수�
 
 :::
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-ALA_even_dimensiona_kernel}
 

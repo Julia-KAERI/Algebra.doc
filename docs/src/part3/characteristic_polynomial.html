@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>17&nbsp; 특성다항식, 최소다항식과 케일리-해밀턴 정리 – 대수학</title>
+<title>17&nbsp; 최소다항식과 케일리-해밀턴 정리 – 대수학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/characteristic_polynomial.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">특성다항식, 최소다항식과 케일리-해밀턴 정리</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/characteristic_polynomial.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">최소다항식과 케일리-해밀턴 정리</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -272,7 +272,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/characteristic_polynomial.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">특성다항식, 최소다항식과 케일리-해밀턴 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">최소다항식과 케일리-해밀턴 정리</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -317,10 +317,7 @@ window.Quarto = {
   <li><a href="#sec-ALA_zeros_of_polynomials" id="toc-sec-ALA_zeros_of_polynomials" class="nav-link" data-scroll-target="#sec-ALA_zeros_of_polynomials"><span class="header-section-number">17.1.2</span> 다항식의 영점</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제"><span class="header-section-number">17.1.3</span> 연습문제</a></li>
   </ul></li>
-  <li><a href="#sec-characteristic_polynomial" id="toc-sec-characteristic_polynomial" class="nav-link" data-scroll-target="#sec-characteristic_polynomial"><span class="header-section-number">17.2</span> 특성다항식</a>
-  <ul class="collapse">
-  <li><a href="#sec-ALA_characteristic_polynomial_and_diagonalization" id="toc-sec-ALA_characteristic_polynomial_and_diagonalization" class="nav-link" data-scroll-target="#sec-ALA_characteristic_polynomial_and_diagonalization"><span class="header-section-number">17.2.1</span> 행렬의 대각화와 특성다항식</a></li>
-  </ul></li>
+  <li><a href="#sec-characteristic_polynomial" id="toc-sec-characteristic_polynomial" class="nav-link" data-scroll-target="#sec-characteristic_polynomial"><span class="header-section-number">17.2</span> 특성다항식</a></li>
   <li><a href="#케일리-해밀턴-정리" id="toc-케일리-해밀턴-정리" class="nav-link" data-scroll-target="#케일리-해밀턴-정리"><span class="header-section-number">17.3</span> 케일리 해밀턴 정리</a></li>
   <li><a href="#sec-minimal_polynomial" id="toc-sec-minimal_polynomial" class="nav-link" data-scroll-target="#sec-minimal_polynomial"><span class="header-section-number">17.4</span> 최소다항식</a></li>
   <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
@@ -330,9 +327,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/characteristic_polynomial.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">특성다항식, 최소다항식과 케일리-해밀턴 정리</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/characteristic_polynomial.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">최소다항식과 케일리-해밀턴 정리</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">특성다항식, 최소다항식과 케일리-해밀턴 정리</span></h1>
+<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">최소다항식과 케일리-해밀턴 정리</span></h1>
 </div>
 
 
@@ -510,17 +507,13 @@ p(x) = c(x-c_1)\cdots (x-c_m)(x^2+b_1x + c_1) \cdots (x^2 + b_kx + c_k).
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_characteristic_polynomial_re" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 17.2 (특성다항식)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대한 <span class="math inline">\(p_{\boldsymbol{A}}(\lambda) = \det (\lambda \boldsymbol{I}-\boldsymbol{A})\)</span> 를 <strong>특성 다항식(characteristic polynomial)</strong> 이라 한다.</p>
+<p><span class="theorem-title"><strong>정의 17.2 (특성다항식)</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(L\)</span> 에 대해 <span class="math inline">\(p_{L}(t) = \det (t I_V-L)\)</span> 를 <strong>특성 다항식(characteristic polynomial)</strong> 이라 한다.</p>
 </div>
 </div>
 </div>
 </div>
 <p><br></p>
-<p>또한 우리는 다음을 보였다.</p>
-<ul>
-<li><p><a href="../part1/ch1_04_eigenvalue.html#prp-LA_invariance_of_characteristic_polynomial" class="quarto-xref">명제&nbsp;<span>4.7</span></a> : 특성 다항식은 닮음 변환에 대해 불변이다. 즉 행렬 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 과 가역행렬 <span class="math inline">\(\boldsymbol{P}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(p_{\boldsymbol{A}}(\lambda) = p_{\boldsymbol{P^{-1}AP}}(\lambda)\)</span> 이다.</p></li>
-<li><p><a href="../part1/ch1_04_eigenvalue.html#prp-LA_eigenvalue_characteristic_polynomial" class="quarto-xref">명제&nbsp;<span>4.8</span></a> : <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\lambda\in \mathbb{F}\)</span> 가 <span class="math inline">\(\boldsymbol{A}\)</span> 의 고유값이기 위한 필요충분조건은 <span class="math inline">\(p_{\boldsymbol{A}}(\lambda)=0\)</span> 인 것이다.</p></li>
-</ul>
+<p>행렬식은 닮음 변환에 대해 불변이므로 어떤 기저 <span class="math inline">\(\mathcal{B}\)</span> 에 대해서도 특성다항식은 불변이다. 또한 우리는 다음을 보였다. 또한 <a href="../part1/ch1_04_eigenvalue.html#prp-LA_eigenvalue_characteristic_polynomial" class="quarto-xref">명제&nbsp;<span>4.8</span></a> 에서 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(\lambda\in \mathbb{F}\)</span> 가 <span class="math inline">\(L\)</span> 의 고유값이기 위한 필요충분조건은 <span class="math inline">\(p_{L}(\lambda)=0\)</span> 인 것임을 안다.</p>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -529,9 +522,13 @@ p(x) = c(x-c_1)\cdots (x-c_m)(x^2+b_1x + c_1) \cdots (x^2 + b_kx + c_k).
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_trace_of_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 17.3 (행렬의 trace)</strong></span> <span class="math inline">\(\text{tr} : \mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}\)</span> 는 다음과 같이 정의된다.</p>
+<p><span class="theorem-title"><strong>정의 17.3 (행렬과 연산자의 trace)</strong></span> <span class="math inline">\(\text{tr} : \mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}\)</span> 는 다음과 같이 정의된다.</p>
 <p><span class="math display">\[
 \text{tr}(\boldsymbol{\boldsymbol{A}}) = \sum_{i=1}^n A_{ii}.
+\]</span></p>
+<p>Trace 역시 닮음 변환에 대해 불변이므로(<a href="#prp-ALA_trace_is_invariant_under_similar_transformation" class="quarto-xref">명제&nbsp;<span>17.3</span></a>) 연산자 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해서도 정의 할 수 있다.</p>
+<p><span class="math display">\[
+\text{tr}(L) = \sum_{i=1}^{\dim (V)}([L])_{ii}
 \]</span></p>
 </div>
 </div>
@@ -578,12 +575,14 @@ p(L) -p(\lambda)I_V &amp;=  a_n(L^n -\lambda^n I_V) + \cdots + a_1(L-\lambda I_V
 <p><span class="proof-title"><em>(해답)</em>. </span>임의의 정수 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\((T^{-1}LT)^m = T^{-1}L^mT\)</span> 임을 이용하여 쉽게 보일 수 있다.</p>
 </div>
 <p><br></p>
-<section id="sec-ALA_characteristic_polynomial_and_diagonalization" class="level3" data-number="17.2.1">
-<h3 data-number="17.2.1" class="anchored" data-anchor-id="sec-ALA_characteristic_polynomial_and_diagonalization"><span class="header-section-number">17.2.1</span> 행렬의 대각화와 특성다항식</h3>
-<p><a href="../part1/ch1_04_eigenvalue.html#thm-LA_diagonalizability" class="quarto-xref">정리&nbsp;<span>4.6</span></a> 에서 우리는 행렬의 대각화에 대해 정리하였다. 이제 행렬의 대각화를 특성다항식의 관점에서 보자.</p>
-<p>– to be done –</p>
-<p><br></p>
-</section>
+<!-- ### 행렬의 대각화와 특성다항식 {#sec-ALA_characteristic_polynomial_and_diagonalization}
+
+@thm-LA_diagonalizability 에서 우리는 행렬의 대각화에 대해 정리하였다. 이제 행렬의 대각화를 특성다항식의 관점에서 보자.
+
+-- to be done -- 
+
+
+</br> -->
 </section>
 <section id="케일리-해밀턴-정리" class="level2" data-number="17.3">
 <h2 data-number="17.3" class="anchored" data-anchor-id="케일리-해밀턴-정리"><span class="header-section-number">17.3</span> 케일리 해밀턴 정리</h2>
@@ -630,22 +629,22 @@ p(L) -p(\lambda)I_V &amp;=  a_n(L^n -\lambda^n I_V) + \cdots + a_1(L-\lambda I_V
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\dim (V) = n\)</span> 이라고 하자. <span class="math inline">\(\dim(\mathcal{L}(V)) = n^2\)</span> 이므로, <span class="math inline">\(\{I_V,\, T, \ldots,\, T^{n^2}\}\)</span> 는 선형종속이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(n=\dim (V)\)</span> 이라고 하자. <span class="math inline">\(\dim(\mathcal{L}(V)) = n^2\)</span> 이므로, <span class="math inline">\(\{I_V,\, L, \ldots,\, L^{n^2}\}\)</span> 는 선형종속이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
 <p>이제 여기서 가장 중요한 케일리-해밀턴 정리를 증명할 차례이다. 그러나 그 전에 미리 보일 것이 있다.</p>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-ALA_before_cayley_hamilton" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 17.5</strong></span> <span class="math inline">\(\boldsymbol{B}_i\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 는 상삼각행렬이며 <span class="math inline">\(i\)</span> 번째 대각성분이 <span class="math inline">\(0\)</span> 이라고 하자. 이 때 <span class="math inline">\(\prod_{i=1}^n \boldsymbol{B}_i = \boldsymbol{B}_1 \boldsymbol{B}_2 \cdots \boldsymbol{B}_n = \boldsymbol{0}\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 17.5</strong></span> <span class="math inline">\(\boldsymbol{B}_i\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 는 상삼각행렬이며 <span class="math inline">\(i\)</span> 번째 대각성분이 <span class="math inline">\(0\)</span> 이라고 하자. 이 때 <span class="math inline">\(\boldsymbol{B}_1 \boldsymbol{B}_2 \cdots \boldsymbol{B}_n = \boldsymbol{0}\)</span> 임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>상삼각행렬의 곱은 상삼각행렬이다. <span class="math inline">\(\boldsymbol{B}_1\boldsymbol{B}_2\)</span> 는 첫번째열과 두번째 열이 영벡터이다. 이로부터 즉 <span class="math inline">\(k\le n\)</span> 에 대해 <span class="math inline">\(\prod_{i=1}^k \boldsymbol{B}_i\)</span> 는 1열부터 <span class="math inline">\(k\)</span> 번째 열까지 영벡터임을 가정 할 수 있고, 이를 수학적 귀납법으로 보이자. <span class="math inline">\(k=1\)</span> 일 때는 이미 보였다. <span class="math inline">\(k\)</span> 에 대해 성립함을 가정하자. <span class="math inline">\(\prod_{i=1}^{k+1} \boldsymbol{B}_i  = \left(\prod_{i=1}^k \boldsymbol{B}_i\right)\boldsymbol{B}_{k+1}\)</span> 이며 <span class="math inline">\(\left(\prod_{i=1}^k \boldsymbol{B}_i\right)\)</span> 은 <span class="math inline">\(k\)</span> 열까지 영벡터인 상삼각 행렬이고 <span class="math inline">\(\boldsymbol{B}_{k+1}\)</span> 은 <span class="math inline">\(k+1\)</span> 번째 대각성분이 <span class="math inline">\(0\)</span> 인 상삼각행렬이다. <span class="math inline">\(\boldsymbol{C}=\prod_{i=1}^k \boldsymbol{B}_i\)</span> 라고 하자.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(\boldsymbol{v}=\begin{bmatrix} v_1 &amp;\ldots &amp; v_n\end{bmatrix}^T\)</span> 라고 하자. <span class="math inline">\(1\le i \le n\)</span> 인 <span class="math inline">\(k\)</span> 에 대해 <span class="math inline">\(v_{i+1} = \cdots =v_{n}=0\)</span> 이면 <span class="math inline">\(\boldsymbol{B}_i \boldsymbol{v}\)</span> 의 <span class="math inline">\(i\)</span> 번째 성분부터 <span class="math inline">\(n\)</span> 번째 성분까지 <span class="math inline">\(0\)</span> 임을 보이자.</p>
 <p><span class="math display">\[
-(\boldsymbol{C}\boldsymbol{B}_{k+1})_{j, k+1} = \sum_{m = 1}^{n} C_{jm}(\boldsymbol{B}_{k+1})_{m, k+1}
+(\boldsymbol{B}_i\boldsymbol{v})_{j\ge i} = \sum_{k=1}^n (\boldsymbol{B}_i)_{jk}(v_k) =\sum_{k&gt;j\ge i}^n(\boldsymbol{B}_i)_{jk}(\boldsymbol{v}_k) = (\boldsymbol{B}_i)_{ii}v_i = 0
 \]</span></p>
-<p>이며 <span class="math inline">\(m=1,\ldots,\,k\)</span> 에 대해 <span class="math inline">\(C_{jm}=0\)</span> 이며 <span class="math inline">\(m=k+1, \cdots n\)</span> 에 대해 <span class="math inline">\((\boldsymbol{B}_{k+1})_{m, k+1}=0\)</span> 이므로 위 식은 <span class="math inline">\(0\)</span> 이 된다. 따라서 <span class="math inline">\(\prod_{i=1}^n \boldsymbol{B}_i = \boldsymbol{B}_1 \boldsymbol{B}_2 \cdots \boldsymbol{B}_n = \boldsymbol{0}\)</span> 이다.</p>
+<p>이다. <span class="math inline">\(\boldsymbol{B}_1 \boldsymbol{B}_2 \cdots \boldsymbol{B}_n \boldsymbol{v}\)</span> 를 생각하면 <span class="math inline">\(\boldsymbol{B}_n\boldsymbol{v}\)</span> 는 마지막 성분이 <span class="math inline">\(0\)</span> 이며 차례로 아래부터 성분이 <span class="math inline">\(0\)</span> 이 되므로 <span class="math inline">\(\boldsymbol{B}_1 \boldsymbol{B}_2 \cdots \boldsymbol{B}_n \boldsymbol{v} =\boldsymbol{0}\)</span> 이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
@@ -654,7 +653,7 @@ p(L) -p(\lambda)I_V &amp;=  a_n(L^n -\lambda^n I_V) + \cdots + a_1(L-\lambda I_V
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(n=\dim (V)\)</span> 라고 하자. 우선 <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span> 에 대해 증명한다. <a href="../part1/ch1_04_eigenvalue.html#thm-LA_uppertriangular_matrix_complex_field" class="quarto-xref">정리&nbsp;<span>4.4</span></a> 에서 우리는 복소수체에서 정의된 모든 정사각행렬은 상삼각행렬과 닮았다는 것을 보였다. 따라서 우리는 상삼각행렬에 대한 특성다항식에 대해서만 증명하면 된다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 상삼각행렬이라고 하면, <span class="math inline">\(p_\boldsymbol{A}(t) = \prod_{i=1}^n (t-A_{ii})\)</span> 이다. 이제</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(n=\dim (V)\)</span> 라고 하자. 우선 <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span> 에 대해 증명한다. <a href="../part1/ch1_04_eigenvalue.html#thm-LA_uppertriangular_matrix_complex_field" class="quarto-xref">정리&nbsp;<span>4.4</span></a> 에서 우리는 복소수체에서 정의된 모든 정사각행렬은 상삼각행렬과 닮았다는 것을 보였다. 즉 모든 연산자는 어떤 기저에서 상삼각행렬로 표현된다. 특성다항식은 닮음변환에 대해 불변이므로 우리는 상삼각행렬에 대한 특성다항식에 대해서만 증명하면 된다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 <span class="math inline">\(L\)</span> 의 상삼각행렬 표현이라고 하면, <span class="math inline">\(p_\boldsymbol{A}(t) = \prod_{i=1}^n (t-A_{ii})\)</span> 이다. 이제</p>
 <p><span class="math display">\[
 p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymbol{I}_n)=0
 \]</span></p>
@@ -673,7 +672,7 @@ p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymb
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_minimal_polynomial" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 17.5 (최소다항식)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대한 annihilator ideal <span class="math inline">\(\mathcal{I}_L\)</span> 가운데 1 차 이상의 다항식 중 가장 작은 차수를 갖는 monic 다항식을 <span class="math inline">\(L\)</span> 에 대한 <strong>최소다항식(minimal polynomnial)</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 17.5 (최소다항식)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대한 annihilator ideal <span class="math inline">\(\mathcal{I}_L\)</span> 가운데 1 차 이상의 다항식 중 가장 작은 차수를 갖는 monic 다항식을 <span class="math inline">\(L\)</span> 에 대한 <strong>최소다항식(minimal polynomnial)</strong> 이라고 하고 <span class="math inline">\(m_L\)</span> 로 표기한다.</p>
 </div>
 </div>
 </div>
@@ -722,7 +721,7 @@ p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymb
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\lambda\)</span> 가 <span class="math inline">\(L\)</span> 의 고유값이라면 최소다항식은 <span class="math inline">\((t-\lambda )\)</span> 로 나누어저여 한다. 따라서 최소다항식은 서로 다른 고유값 <span class="math inline">\(\lambda_1,\ldots,\,\lambda_n\)</span> 에 대해 <span class="math inline">\((t-\lambda_1)\cdots (t-\lambda_n)\)</span> 으로 나누어져야 한다. 즉 모든 고유값은 최소다항식의 해이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_minimal_polynomial_and_subspace" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.9</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(U\le V\)</span> 이며 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(L|_U\)</span> 가 <span class="math inline">\(L\)</span> 의 <span class="math inline">\(U\)</span> 에 대한 restriction 일 때 <span class="math inline">\(L\)</span> 의 최소다항식은 <span class="math inline">\(L|_U\)</span> 의 최소다항식으로 나누어진다.</p>
@@ -731,7 +730,7 @@ p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymb
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(p_L\)</span> 이 <span class="math inline">\(L\)</span> 의 최소다항식이라고 하자. <span class="math inline">\(u\in U\)</span> 이면 <span class="math inline">\(u\in V\)</span> 이므로 <span class="math inline">\(p(T)u=0\)</span> 이다. 따라서 <span class="math inline">\(p\)</span> 는 <span class="math inline">\(L|_U\)</span> 에 대한 annihilator ideal 에 포함된다. <span class="math inline">\(\square\)</span></p>
 </div>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_constant_of_minimal_polynomal" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.10</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 다음의 두 명제는 동치이다.</p>
@@ -742,7 +741,7 @@ p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymb
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(L\)</span> 이 가역이 아니면 <span class="math inline">\(0\)</span> 은 <span class="math inline">\(L\)</span> 의 고유값이므로 <span class="math inline">\(p_L\)</span> 의 상수항은 <span class="math inline">\(0\)</span> 이다. 역으로 <span class="math inline">\(p_L\)</span> 의 상수항이 <span class="math inline">\(0\)</span> 이라면 <span class="math inline">\(0\)</span> 이 <span class="math inline">\(p_L\)</span> 의 해이므로 <span class="math inline">\(0\)</span> 은 <span class="math inline">\(L\)</span> 의 고유값이다. 따라서 <span class="math inline">\(L\)</span> 은 가역이 아니다.</p>
 </div>
-<br>
+<p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-ALA_even_dimensiona_kernel" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 17.11</strong></span> 유한차원 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 와 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 를 생각하자. <span class="math inline">\(b,\,c\in \mathbb{R},\, b^2-4c&lt;0\)</span> 일 때 <span class="math inline">\(\text{nullity} (L^2+bL+cI_V)\)</span> 는 짝수이다.</p>

@@ -65,7 +65,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -84,7 +84,7 @@ $$
 유한차원 벡터공간 $V$ 에 대해 $\dim (V^\ast) = \dim (V)$ 이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 @cor-LA_dimension_of_LUV 에 의해 $\dim (V^\ast) = \dim (\mathcal{L}(V,\,\mathbb{F})) = \dim (V)$. $\square$
@@ -104,7 +104,7 @@ $$
 이 때 $\{\varphi_1,\ldots,\,\varphi_n\}$ 은 $V^\ast$ 의 기저이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -112,12 +112,11 @@ $$
 
 $$
 \begin{aligned}
-& c_1 \varphi_1 + \cdots + c_n \varphi_n = 0 \\
-\implies & (c_1\varphi_1 + \cdots + c_n \varphi_n)(v_j) = 0, \qquad \text{for }j=1,\ldots,\,n \\
-\implies &c_1 = \cdots = c_n = 0
+& c_1 \varphi_1 + \cdots + c_n \varphi_n = 0 \\[0.3em]
+\implies & (c_1\varphi_1 + \cdots + c_n \varphi_n)(v_j) = 0, \qquad \text{for }j=1,\ldots,\,n \\[0.3em]
+\implies &c_1 = \cdots = c_n = 0&\square
 \end{aligned}
 $$
-$\square$
 :::
 
 
@@ -150,7 +149,7 @@ $$
 
 :::
 
-</div></br>
+</div
 
 ::: {.proof}
 
@@ -176,15 +175,18 @@ $$
 :::
 ::: 
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+</br>
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-ALA_dual_map}
 @def-ALA_dual_map 에서 정의된 $L^T$ 은 선형사상이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
+
 $\varphi,\,\psi \in V^\ast,\, c \in \mathbb{F}$ 일 때,
 
 $$
@@ -213,7 +215,7 @@ $K,\,L \in \mathcal{L}(U,\,V)$ 일 때 쌍대사상 $K^T ,\,L^T$ 은 다음 성�
 &emsp; ($3$) $(K\circ L)^T = L^T \circ K^T$
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -254,13 +256,15 @@ $$
 
 </br>
 
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-ALA_annihilator}
+
 이 때, $U^0$ 는 $V^\ast$ 의 부분공간이다.
+
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 영함수 $0\in V^\ast$ 은 $U^0$ 에 속함은 자명하다. $\varphi,\,\psi \in U^0$ 이고 $u\in U,\,\lambda \in \mathbb{F}$ 일 때,
@@ -287,7 +291,7 @@ $$
 이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 $U$ 가 $V$ 의 부분공간이므로 $i_U\in \mathcal{L}(U,\,V)$ 를
@@ -337,7 +341,7 @@ $U,\, V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(U,\,V)$ 일 때, 
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -372,7 +376,7 @@ $\square$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -398,7 +402,7 @@ $U,\,V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(U,\,V)$ 일 때 �
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -436,7 +440,7 @@ $U,\,V$ 가 유한차원 벡터공간이고 $L\in \mathcal{L}(U,\,V)$ 일 때 $L
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 $$
@@ -498,7 +502,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -542,7 +546,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -589,7 +593,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -606,7 +610,7 @@ $V$ 가 유한차원 벡터공간이고 $v\in V,\, v \ne 0_V$ 라고 하자. 이
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -623,7 +627,8 @@ $v$ 를 포함하는 기저를 만들고 이 기저에 대한 쌍대기저를 �
 $V$ 가 유한차원 벡터공간이며 $U\le V,\, U  \ne V$ 라고 하자. $0$ 사상이 아니면서 $\forall u\in U,\, \varphi (u)=0$ 을 만족하는 $\varphi \in V^\ast$ 가 존재함을 보여라.
 
 :::
-</div></br>
+
+</div>
 
 ::: {.solution}
 
@@ -647,7 +652,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -665,7 +670,7 @@ $\mathbb{F}$-벡터공간 $V$ 에 대해 $\varphi,\, \beta \in V^\ast$ 라고 �
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 $\Longleftarrow$ 는 자명하므로 $\implies$ 만 보인다. $\beta$ 가 0 사상일 경우에 $c=0$ 이므로 $\beta$ 가 $0$ 사상이 아닌 경우만 생각한다. $\beta$ 가 영사상이 아니면 $\text{rank}(\beta)=1$ 이며, 따라서 어떤 $v_0\in V$ 에 대해 $\beta(v_0) \ne 0$ 이다. $v_0 \notin \ker \beta$ 이므로 $v_0 \not\in \ker \varphi$ 이며 따라서 $\varphi (v_0) \ne 0$ 이다. $c_0 = \beta(v_0)/\varphi(v_0)$ 라고 하고 이 $c_0$ 에 대해 $\psi := \beta - c_0 \varphi$ 라고 하자. $\psi(v_0)=0$ 이다.
@@ -682,7 +687,7 @@ $V_1,\ldots,\,V_m$ 이 벡터공간일 때 $(V_1\times \cdots \times V_m)^\ast$ 
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -715,7 +720,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -748,7 +753,7 @@ $$
 임을 보여라.
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -770,7 +775,7 @@ $\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $\boldsymbol{A}\ne \bo
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -788,7 +793,7 @@ $V$ 에서의 항등사상의 쌍대사상은 $V^\ast$ 에서의 항등사상임
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -804,7 +809,7 @@ $T\in \mathcal{L}(\mathbb{R}^3, \mathbb{R}^2)$ 가 $T(x, y, z) = (4x+5y+6z, 7x+8
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -835,7 +840,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -854,7 +859,7 @@ $V$ 의 기저 $\{v_1,\ldots,\,v_m\}$ 에 대한 쌍대기저 $\{\varphi_1,\ldot
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -882,7 +887,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -898,7 +903,7 @@ $U=\{0_V\}$ 를 가정하자. 모든 $\varphi \in V^\ast$ 에 대해 $\varphi (0
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -914,7 +919,7 @@ trivial. see @exr-ALA_axler_3_F_18
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -932,7 +937,7 @@ $$
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -951,9 +956,9 @@ $U\le V,\, W\le V$ 일 때 $(U+W)^0 = U^0 \cap W^0$ 임을 보여라.
 
 :::
 
-</div></br>
+</div>
 
-::: {.proof}
+::: {.solution}
 
 $\psi \in (U+W)^0$ 이면 모든 $u\in U,\, w\in W$ 에 대해 $\psi(u+w)=0$ 이어야 한다. $0_V\in U,\, 0_V\in W$ 이므로 $\psi (u)= \psi (v)=0$ 이어야 한다. 따라서 $\psi \in U^0 \cap W^0$ 이다. 즉 $(U+W)^0 \subset U^0 \cap W^0$ 이다.
 
@@ -970,7 +975,7 @@ $V$ 가 유한차원 벡터공간이고 $U\le V,\,W\le V$ 일 때 $(U\cap W)^0 =
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1004,7 +1009,7 @@ $$
 $U=U'$ 임을 보여라.
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -1029,7 +1034,7 @@ $\Delta = \Delta'$ 임을 보여라.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
