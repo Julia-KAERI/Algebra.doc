@@ -452,6 +452,24 @@ non-negative 연산자 $L$ 에 대한 non-negative 제곱근 연산자 $R$ 이 �
 
 :::
 
+</br>
+
+위의 명제는 non-negiatve $L$ 에 대해 $\sqrt{L}$ 이 정확하게 정의됨을 의미한다. 또한 위의 증명에서 non-negative $L$ 에 대해 $\sqrt{L}$ 은 $L$ 을 대각화 하는 기저는 $\sqrt{L}$ 도 대각화 한다는 것을 보였는데 이것은 따로 언급할 만 하다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-LA_simultaneous_diagonalization_of_non_negative_operator_and_its_squareroot}
+
+유한차원 벡터공간의 non-negative 연산자 $L$ 과 $\sqrt{L}$ 은 같은 정규직교기저에서 대각화되며 이 정규직교기저를 $(e_1,\ldots,\,e_n)$ 이라고 하면  $\left\langle \sqrt{L}e_i,\,e_j\right\rangle = \sqrt{\langle Le_i,\,e_j\rangle}$ 이다.
+
+:::
+
+</div>
+
+
+
+
+
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_squareroot_matrix}
@@ -466,10 +484,6 @@ non-negative 연산자 $L$ 에 대한 non-negative 제곱근 연산자 $R$ 이 �
 
 $(M^\ast M)^\ast = M^\ast M$ 이므로 $M^\ast M$ 은 에르미트 연산자이다. $\langle M^\ast Mv,\,v\rangle = \|Mv\|^2 \ge 0$ 이므로 non-negative 이다. $\square$
 :::
-
-</br>
-
-위의 명제는 non-negiatve $L$ 에 대해 $\sqrt{L}$ 이 정확하게 정의됨을 의미한다.
 
 </br>
 
@@ -625,12 +639,104 @@ $$
 
 ::: {.solution}
 
+$v=\sum_{i=1}^m v_i$ 라고 하자. $0 \le \langle Lv,\,v\rangle = \sum_j \sum_k \langle v_k,\,v_j \rangle$.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4th_7_C_15}
+#### Axler4h 7.C.15
+
+$L$ 이 에르미트 연산자일 때 아래 관계를 만족하는 어떤 non-negative 연산자 $A,\,B$ 가 존재함을 보여라.
+
+$$
+L = A-B,\qquad \sqrt{L^\ast L} = A+B,\qquad AB=BA.
+$$
 
 
 :::
 
-</br>
+</div>
 
+::: {.solution}
+
+$L^\ast L$ 은 non-negative 이므로 $M=\sqrt{L^\ast L} = \sqrt{L^2}$ 으로 정의할 수 있다. $L$ 의 고유벡터인 정규직교기저를 $\mathcal{B}=(e_1,\ldots,\,e_n)$ 이라고 하고 $Le_i = l_i e_i$ 라고 하면 $\langle L^\ast L e_i,\,e_j \rangle= (l_i)^2\delta_{ij}$ 이므로 $Me_i = |l_i|e_i$ 이며 따라서 $\mathcal{B}$ 는 $M$ 도 대각화한다.
+
+$A=\dfrac{1}{2}(M+L),\, B=\dfrac{1}{2}(M-L)$ 로 정하면 주어진 세 조건을 만족한다.
+
+:::
+
+</br>
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4th_7_C_16}
+#### Axler4h 7.C.16
+
+$L$ 이 non-negative 이면 $\ker (L) = \ker (\sqrt{L})$, $\text{im}(L)= \text{im}(\sqrt{L})$ 임을 보여라.
+
+
+:::
+
+</div>
+
+::: {.solution}
+
+@prp-LA_simultaneous_diagonalization_of_non_negative_operator_and_its_squareroot 로부터 $\ker (L) = \ker (\sqrt{L})$ 임을 안다. $L$ 을 대각화하는 기저를 $(e_1,\ldots,\,e_n)$ 이라고 하자. $v=\sum_i a_i e_i$ 에 대해 
+
+$$
+Lv = a_i c_i e_i = \sqrt{L}(\sum_i a_i \sqrt{c_i}e_i )
+$$
+
+이므로 $\im (L)= \im (\sqrt{L})$ 이다. 
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4th_7_C_17}
+#### Axler4h 7.C.17
+
+$L$ 이 non-negative 연산자일 때 $p(T)=\sqrt{L}$ 을 만족하는 실계수 다항식 $p$ 가 존재한다. 
+
+:::
+
+</div>
+
+::: {.solution}
+
+$L$ 이 에르미트 연산자이므로 $L$ 을 대각화하는 기저 $(e_1,\ldots,\,e_n)$ 에 대해 $Le_i = c_ie_i,\,c_i\ge 0$ 이다. 이제 $i=1,\ldots,\,n$ 에 대해 $p(c_i) = \sqrt{c_i}$ 인 라플라스 방정식 $p(t)$ 를 생각하면
+
+$$
+p(L)e_i = p(c_i)e_i = \sqrt{c_i}e_i
+$$
+
+이므로 $p(L)=\sqrt{L}$ 이다.
+
+:::
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-LA_axler4th_7_C_18}
+#### Axler4h 7.C.18
+
+$L$, $K$ 가 non-negative 연산자일 때 $LK$ 가 non-negative 일 필요충분조건은 
+
+:::
+
+</div>
+
+::: {.solution}
+
+$L$ 이 에르미트 연산자이므로 $L$ 을 대각화하는 기저 $(e_1,\ldots,\,e_n)$ 에 대해 $Le_i = c_ie_i,\,c_i\ge 0$ 이다. 이제 $i=1,\ldots,\,n$ 에 대해 $p(c_i) = \sqrt{c_i}$ 인 라플라스 방정식 $p(t)$ 를 생각하면
+
+$$
+p(L)e_i = p(c_i)e_i = \sqrt{c_i}e_i
+$$
+
+이므로 $p(L)=\sqrt{L}$ 이다.
+
+:::
+</br>
 
 ## 특이값 분해
 

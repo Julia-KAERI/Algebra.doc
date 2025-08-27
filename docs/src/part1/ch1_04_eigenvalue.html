@@ -332,12 +332,13 @@ window.Quarto = {
   <li><a href="#상삼각-행렬로-닮음변환되는-행렬" id="toc-상삼각-행렬로-닮음변환되는-행렬" class="nav-link" data-scroll-target="#상삼각-행렬로-닮음변환되는-행렬"><span class="header-section-number">4.4.1</span> 상삼각 행렬로 닮음변환되는 행렬</a></li>
   <li><a href="#sec-LA_matrix_and_upper_triangula_matrix_over_C" id="toc-sec-LA_matrix_and_upper_triangula_matrix_over_C" class="nav-link" data-scroll-target="#sec-LA_matrix_and_upper_triangula_matrix_over_C"><span class="header-section-number">4.4.2</span> 복소수체에서의 행렬과 상삼각행렬</a></li>
   </ul></li>
-  <li><a href="#행렬의-대각화" id="toc-행렬의-대각화" class="nav-link" data-scroll-target="#행렬의-대각화"><span class="header-section-number">4.5</span> 행렬의 대각화</a>
+  <li><a href="#연산자와-행렬의-대각화" id="toc-연산자와-행렬의-대각화" class="nav-link" data-scroll-target="#연산자와-행렬의-대각화"><span class="header-section-number">4.5</span> 연산자와 행렬의 대각화</a>
   <ul class="collapse">
   <li><a href="#sec-LA_properties_of_eigen_space" id="toc-sec-LA_properties_of_eigen_space" class="nav-link" data-scroll-target="#sec-LA_properties_of_eigen_space"><span class="header-section-number">4.5.1</span> 고유공간의 성질</a></li>
-  <li><a href="#sec-LA_diagonalizable_matrix" id="toc-sec-LA_diagonalizable_matrix" class="nav-link" data-scroll-target="#sec-LA_diagonalizable_matrix"><span class="header-section-number">4.5.2</span> 대각화가능 행렬</a></li>
-  </ul></li>
+  <li><a href="#sec-LA_diagonalizable_matrix" id="toc-sec-LA_diagonalizable_matrix" class="nav-link" data-scroll-target="#sec-LA_diagonalizable_matrix"><span class="header-section-number">4.5.2</span> 대각화 가능한 연산자</a></li>
   <li><a href="#연습문제-2" id="toc-연습문제-2" class="nav-link" data-scroll-target="#연습문제-2">연습문제</a></li>
+  </ul></li>
+  <li><a href="#교환-가능-연산자" id="toc-교환-가능-연산자" class="nav-link" data-scroll-target="#교환-가능-연산자"><span class="header-section-number">4.6</span> 교환 가능 연산자</a></li>
   </ul>
 </nav>
     </div>
@@ -501,8 +502,17 @@ c_1 (\lambda_k -\lambda_1) v_1 + \cdots + c_{k-1}(\lambda_k -\lambda_{k-1}) v_{k
 <section id="연습문제" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="연습문제">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-linearly_independency_and_distict_eigenvalues" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 4.1</strong></span> <span class="math inline">\(\{v_1,\ldots,\,v_m \} \subset V\)</span> 이 선형독립일 필요충분 조건은 위 벡터들이 서로 다른 고유값을 갖는 고유벡터가 되도록 하는 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 존재하는 것임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span>서로 다른 고유값을 갖는 고유벡터의 집합은 선형독립이라는 것을 안다(<a href="#prp-LA_eigenvector_linear_independence" class="quarto-xref">명제&nbsp;<span>4.3</span></a>). 따라서 <span class="math inline">\(\{v_1,\ldots,\,v_m \}\)</span> 가 선형독립이면 이 벡터들이 각각 다른 고유값을 갖는 고유벡터가 되는 연산자 <span class="math inline">\(L\)</span> 이 존재함을 보이면 된다. <span class="math inline">\(v_1,\ldots,\,v_m\)</span> 을 확장하여 기저 <span class="math inline">\(\mathcal{B}=\{v_1,\ldots,\,v_n\}\)</span> 을 구성할 수 있다. <span class="math inline">\(Lv_i = iv_i (i=1,\ldots,\,n)\)</span> 인 선형연산자가 그것이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_5_A_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.1 (Axler4th 5.A.4)</strong></span> 유한차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(U\le V\)</span> 가 <span class="math inline">\(V\)</span> 에 대한 모든 연산자에 대해 불변부분공간이면 <span class="math inline">\(U=\{0_V\}\)</span> 이거나 <span class="math inline">\(U=V\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.2 (Axler4th 5.A.4)</strong></span> 유한차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(U\le V\)</span> 가 <span class="math inline">\(V\)</span> 에 대한 모든 연산자에 대해 불변부분공간이면 <span class="math inline">\(U=\{0_V\}\)</span> 이거나 <span class="math inline">\(U=V\)</span> 임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -511,7 +521,7 @@ c_1 (\lambda_k -\lambda_1) v_1 + \cdots + c_{k-1}(\lambda_k -\lambda_{k-1}) v_{k
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_5_A_8" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.2 (Axler4th 5.A.8)</strong></span> <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(P^2=P\)</span> 라고 하자. <span class="math inline">\(\lambda\)</span> 가 <span class="math inline">\(P\)</span> 의 고유값이라면 <span class="math inline">\(\lambda = 0\)</span> 이거나 <span class="math inline">\(1\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.3 (Axler4th 5.A.8)</strong></span> <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(P^2=P\)</span> 라고 하자. <span class="math inline">\(\lambda\)</span> 가 <span class="math inline">\(P\)</span> 의 고유값이라면 <span class="math inline">\(\lambda = 0\)</span> 이거나 <span class="math inline">\(1\)</span> 임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -520,7 +530,7 @@ c_1 (\lambda_k -\lambda_1) v_1 + \cdots + c_{k-1}(\lambda_k -\lambda_{k-1}) v_{k
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_5_A_9" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.3 (Axler4th 5.A.9)</strong></span> <span class="math inline">\(L:\mathbb{R}[t] \to \mathbb{R}[t]\)</span> 가 <span class="math inline">\(L(p(t))= p'(t)\)</span> 일 때 모든 고유값과 고유벡터를 구하라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.4 (Axler4th 5.A.9)</strong></span> <span class="math inline">\(L:\mathbb{R}[t] \to \mathbb{R}[t]\)</span> 가 <span class="math inline">\(L(p(t))= p'(t)\)</span> 일 때 모든 고유값과 고유벡터를 구하라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -529,7 +539,7 @@ c_1 (\lambda_k -\lambda_1) v_1 + \cdots + c_{k-1}(\lambda_k -\lambda_{k-1}) v_{k
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-LA_axler4_5_A_12" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.4 (Axler4th 5.A.12)</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 가 <span class="math inline">\(V= U \oplus W\)</span> 이며 <span class="math inline">\(U,\,W\)</span> 는 <span class="math inline">\(\{0_V\}\)</span> 이 아니다. <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 가 모든 <span class="math inline">\(u\in U,\, w\in W\)</span> 에 대해 <span class="math inline">\(P(u+w)= u\)</span> 일 때 <span class="math inline">\(P\)</span> 의 모든 고유값과 고유벡터를 구하시오.</p>
+<p><span class="theorem-title"><strong>연습문제 4.5 (Axler4th 5.A.12)</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 가 <span class="math inline">\(V= U \oplus W\)</span> 이며 <span class="math inline">\(U,\,W\)</span> 는 <span class="math inline">\(\{0_V\}\)</span> 이 아니다. <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 가 모든 <span class="math inline">\(u\in U,\, w\in W\)</span> 에 대해 <span class="math inline">\(P(u+w)= u\)</span> 일 때 <span class="math inline">\(P\)</span> 의 모든 고유값과 고유벡터를 구하시오.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -538,7 +548,7 @@ c_1 (\lambda_k -\lambda_1) v_1 + \cdots + c_{k-1}(\lambda_k -\lambda_{k-1}) v_{k
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-LA_axler4_5_A_13" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.5 (Axler4th 5.A.13)</strong></span> <span class="math inline">\(S,\,L\in \mathcal{L}(V)\)</span> 이며 <span class="math inline">\(S\)</span> 가 가역일 때 <span class="math inline">\(S^{-1}LS\)</span> 는 <span class="math inline">\(L\)</span> 과 같은 고유값을 가짐을 보여라. <span class="math inline">\(L\)</span> 과 <span class="math inline">\(S^{-1}LS\)</span> 의 고유벡터의 관계를 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.6 (Axler4th 5.A.13)</strong></span> <span class="math inline">\(S,\,L\in \mathcal{L}(V)\)</span> 이며 <span class="math inline">\(S\)</span> 가 가역일 때 <span class="math inline">\(S^{-1}LS\)</span> 는 <span class="math inline">\(L\)</span> 과 같은 고유값을 가짐을 보여라. <span class="math inline">\(L\)</span> 과 <span class="math inline">\(S^{-1}LS\)</span> 의 고유벡터의 관계를 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -547,7 +557,7 @@ c_1 (\lambda_k -\lambda_1) v_1 + \cdots + c_{k-1}(\lambda_k -\lambda_{k-1}) v_{k
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_5_A_15" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.6 (Axler4th 5.A.15)</strong></span> (<strong>주의</strong> : <a href="../../src/part3/dual_space.html">쌍대사상</a> 을 보라) 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(\lambda\)</span> 가 <span class="math inline">\(L\)</span> 의 고유값이면 <span class="math inline">\(\lambda\)</span> 는 <span class="math inline">\(L\)</span> 의 쌍대연산자의 고유값임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.7 (Axler4th 5.A.15)</strong></span> (<strong>주의</strong> : <a href="../../src/part3/dual_space.html">쌍대사상</a> 을 보라) 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(\lambda\)</span> 가 <span class="math inline">\(L\)</span> 의 고유값이면 <span class="math inline">\(\lambda\)</span> 는 <span class="math inline">\(L\)</span> 의 쌍대연산자의 고유값임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -556,7 +566,7 @@ c_1 (\lambda_k -\lambda_1) v_1 + \cdots + c_{k-1}(\lambda_k -\lambda_{k-1}) v_{k
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_5_A_16" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.7 (Axler4th 5.A.16)</strong></span> <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 이 <span class="math inline">\(V\)</span> 의 기저이며 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\([L]_{\mathcal{B}}=\boldsymbol{L}\)</span> 일 때 <span class="math inline">\(L\)</span> 의 고유값 <span class="math inline">\(\lambda\)</span> 에 대해 다음이 성립함을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.8 (Axler4th 5.A.16)</strong></span> <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 이 <span class="math inline">\(V\)</span> 의 기저이며 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\([L]_{\mathcal{B}}=\boldsymbol{L}\)</span> 일 때 <span class="math inline">\(L\)</span> 의 고유값 <span class="math inline">\(\lambda\)</span> 에 대해 다음이 성립함을 보여라.</p>
 <p><span id="eq-exr-axler4_5_A_16"><span class="math display">\[
 |\lambda | \le n \max\{|L_{ij}| :1 \le i,\,j \le n \}
 \tag{4.1}\]</span></span></p>
@@ -576,7 +586,7 @@ c_1 (\lambda_k -\lambda_1) v_1 + \cdots + c_{k-1}(\lambda_k -\lambda_{k-1}) v_{k
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-LA_axler4_5_A_21" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.8 (Axler4th 5.A.21)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 가역일 때 <span class="math inline">\(\lambda (\ne 0)\)</span> 이 <span class="math inline">\(L\)</span> 의 고유값이면 <span class="math inline">\(L^{-1}\)</span> 은 같은 고유벡터에 대해 <span class="math inline">\(1/\lambda\)</span> 를 고유값으로 갖게 됨을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.9 (Axler4th 5.A.21)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 가역일 때 <span class="math inline">\(\lambda (\ne 0)\)</span> 이 <span class="math inline">\(L\)</span> 의 고유값이면 <span class="math inline">\(L^{-1}\)</span> 은 같은 고유벡터에 대해 <span class="math inline">\(1/\lambda\)</span> 를 고유값으로 갖게 됨을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -585,7 +595,7 @@ c_1 (\lambda_k -\lambda_1) v_1 + \cdots + c_{k-1}(\lambda_k -\lambda_{k-1}) v_{k
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-LA_axler4_5_A_23" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.9 (Axler4th 5.A.23)</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에서 <span class="math inline">\(K,\,L\in \mathcal{L}(V)\)</span> 일 때 <span class="math inline">\(KL\)</span> 과 <span class="math inline">\(LK\)</span> 는 같은 고유값을 가진다는 것을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.10 (Axler4th 5.A.23)</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에서 <span class="math inline">\(K,\,L\in \mathcal{L}(V)\)</span> 일 때 <span class="math inline">\(KL\)</span> 과 <span class="math inline">\(LK\)</span> 는 같은 고유값을 가진다는 것을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -594,7 +604,7 @@ c_1 (\lambda_k -\lambda_1) v_1 + \cdots + c_{k-1}(\lambda_k -\lambda_{k-1}) v_{k
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-LA_axler4_5_A_24" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.10 (Axler4th 5.A.24)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 이고 <span class="math inline">\(T\in \mathcal{L}(\mathcal{M}_n(\mathbb{F}))\)</span> 가 <span class="math inline">\(T(\boldsymbol{x}) = \boldsymbol{Ax}\)</span> 라고 하자.</p>
+<p><span class="theorem-title"><strong>연습문제 4.11 (Axler4th 5.A.24)</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 이고 <span class="math inline">\(T\in \mathcal{L}(\mathcal{M}_n(\mathbb{F}))\)</span> 가 <span class="math inline">\(T(\boldsymbol{x}) = \boldsymbol{Ax}\)</span> 라고 하자.</p>
 <p>(<span class="math inline">\(a\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 의 각 행벡터에 대해 성분의 합이 <span class="math inline">\(1\)</span> 이면 <span class="math inline">\(1\)</span> 은 <span class="math inline">\(T\)</span> 의 고유값임을 보여라.</p>
 <p>(<span class="math inline">\(b\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 의 각 열벡터에 대해 성분의 합이 <span class="math inline">\(1\)</span> 이면 <span class="math inline">\(1\)</span> 은 <span class="math inline">\(T\)</span> 의 고유값임을 보여라.</p>
 </div>
@@ -606,7 +616,7 @@ c_1 (\lambda_k -\lambda_1) v_1 + \cdots + c_{k-1}(\lambda_k -\lambda_{k-1}) v_{k
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-LA_axler4_5_A_25" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.11 (Axler4th 5.A.25)</strong></span> <span class="math inline">\(u,\,v\)</span> 가 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(L\)</span> 의 고유벡터이고 <span class="math inline">\(u+v\)</span> 도 고유벡터이면 <span class="math inline">\(u\)</span> 와 <span class="math inline">\(v\)</span> 는 같은 고유값을 가짐을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.12 (Axler4th 5.A.25)</strong></span> <span class="math inline">\(u,\,v\)</span> 가 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(L\)</span> 의 고유벡터이고 <span class="math inline">\(u+v\)</span> 도 고유벡터이면 <span class="math inline">\(u\)</span> 와 <span class="math inline">\(v\)</span> 는 같은 고유값을 가짐을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -619,25 +629,25 @@ c(u+v) = L(u+v)= Lu+Lv = au+bv
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-LA_axler4_5_A_26" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.12 (Axler4th 5.A.26)</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 를 생각하자. 모든 <span class="math inline">\(V\)</span> 의 벡터가 <span class="math inline">\(L\)</span> 의 고유벡터라면 <span class="math inline">\(L\)</span> 은 항등연산자의 스칼라곱임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.13 (Axler4th 5.A.26)</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 를 생각하자. 모든 <span class="math inline">\(V\)</span> 의 벡터가 <span class="math inline">\(L\)</span> 의 고유벡터라면 <span class="math inline">\(L\)</span> 은 항등연산자의 스칼라곱임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><a href="#exr-LA_axler4_5_A_25" class="quarto-xref">연습문제&nbsp;<span>4.11</span></a> 에 따라 모든 <span class="math inline">\(V\)</span> 의 벡터는 같은 고유값을 가지는 벡터이다. 이 고유값을 <span class="math inline">\(c\)</span> 라고 하자. 모든 기저에 대해 <span class="math inline">\(L\)</span> 의 행렬형식은 <span class="math inline">\(cI_V\)</span> 이므로 <span class="math inline">\(L\)</span> 은 <span class="math inline">\(cI_V\)</span> 이다. .</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#exr-LA_axler4_5_A_25" class="quarto-xref">연습문제&nbsp;<span>4.12</span></a> 에 따라 모든 <span class="math inline">\(V\)</span> 의 벡터는 같은 고유값을 가지는 벡터이다. 이 고유값을 <span class="math inline">\(c\)</span> 라고 하자. 모든 기저에 대해 <span class="math inline">\(L\)</span> 의 행렬형식은 <span class="math inline">\(cI_V\)</span> 이므로 <span class="math inline">\(L\)</span> 은 <span class="math inline">\(cI_V\)</span> 이다. .</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_5_A_27" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.13 (Axler4th_5_A_27)</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(L\)</span> 을 생각하자. 모든 <span class="math inline">\(V\)</span> 의 부분공간이 <span class="math inline">\(L\)</span> 에 대한 불변부분공간이라면 <span class="math inline">\(L\)</span> 은 항등행렬의 스칼라곱임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.14 (Axler4th 5.A.27)</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(L\)</span> 을 생각하자. 모든 <span class="math inline">\(V\)</span> 의 부분공간이 <span class="math inline">\(L\)</span> 에 대한 불변부분공간이라면 <span class="math inline">\(L\)</span> 은 항등행렬의 스칼라곱임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\text{span}\{v_i\}\)</span> 가 <span class="math inline">\(L\)</span> 에 대한 불변부분공간이므로 모든 <span class="math inline">\(v\)</span> 는 <span class="math inline">\(L\)</span> 의 고유벡터이다. <a href="#exr-LA_axler4_5_A_26" class="quarto-xref">연습문제&nbsp;<span>4.12</span></a> 에 따라 <span class="math inline">\(L\)</span> 은 항등연산자의 스칼라곱이다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(\text{span}\{v_i\}\)</span> 가 <span class="math inline">\(L\)</span> 에 대한 불변부분공간이므로 모든 <span class="math inline">\(v\)</span> 는 <span class="math inline">\(L\)</span> 의 고유벡터이다. <a href="#exr-LA_axler4_5_A_26" class="quarto-xref">연습문제&nbsp;<span>4.13</span></a> 에 따라 <span class="math inline">\(L\)</span> 은 항등연산자의 스칼라곱이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_5_A_34" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.14 (Axler4th_5_A_34)</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 <span class="math inline">\(V_0=\{v_1,\ldots,\,v_m: v_i\in V\}\)</span> 에 대해 다음은 동치임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.15 (Axler4th 5.A.34)</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 와 <span class="math inline">\(V_0=\{v_1,\ldots,\,v_m: v_i\in V\}\)</span> 에 대해 다음은 동치임을 보여라.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(V_0\)</span> 는 선형독립이다.</p>
 <p>  (<span class="math inline">\(2\)</span>) 어떤 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 존재하여 <span class="math inline">\(v_1,\ldots,\,v_m\)</span> 은 각각 다른 고유값을 갖는 <span class="math inline">\(L\)</span> 의 고유벡터이다.</p>
 </div>
@@ -795,7 +805,7 @@ p(L) := a_n L^n + a_{n-1}L^{n-1} + \cdots a_1 L + a_0 I_V.
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_5_A_33" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.15 (Axler4th 5.A.33)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(m\)</span> 이 양의 정수이다. 다음을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.16 (Axler4th 5.A.33)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(m\)</span> 이 양의 정수이다. 다음을 보여라.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(L\)</span> 이 단사일 필요충분조건은 <span class="math inline">\(L^m\)</span> 이 단사인 것이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 이 전사일 필요충분조건은 <span class="math inline">\(L^m\)</span> 이 전사인 것이다.</p>
 </div>
@@ -807,7 +817,7 @@ p(L) := a_n L^n + a_{n-1}L^{n-1} + \cdots a_1 L + a_0 I_V.
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_5_A_40" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.16 (Axler4th 5.A.40)</strong></span> <span class="math inline">\(L,\,K\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(K\)</span> 가 가역이다. <span class="math inline">\(p \in \mathbb{F}[t]\)</span> 일 때</p>
+<p><span class="theorem-title"><strong>연습문제 4.17 (Axler4th 5.A.40)</strong></span> <span class="math inline">\(L,\,K\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(K\)</span> 가 가역이다. <span class="math inline">\(p \in \mathbb{F}[t]\)</span> 일 때</p>
 <p><span class="math display">\[
 p(KLK^{-1})= Kp(L)K^{-1}
 \]</span></p>
@@ -827,7 +837,7 @@ p(KLK^{-1}) &amp;= \sum_{m=0}^n c_m (KLK^{-1})^m = \sum_{m=0}^n c_m KL^mK^{-1} \
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_5_A_41" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.17 (Axler4th 5.A.41)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(U\)</span> 가 <span class="math inline">\(L\)</span> 에 대한 <span class="math inline">\(V\)</span> 의 불변부분공간이라고 하자. <span class="math inline">\(p\in \mathbb{F}[t]\)</span> 일 때 <span class="math inline">\(U\)</span> 는 <span class="math inline">\(p(L)\)</span> 에 대한 불변부분공간임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.18 (Axler4th 5.A.41)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(U\)</span> 가 <span class="math inline">\(L\)</span> 에 대한 <span class="math inline">\(V\)</span> 의 불변부분공간이라고 하자. <span class="math inline">\(p\in \mathbb{F}[t]\)</span> 일 때 <span class="math inline">\(U\)</span> 는 <span class="math inline">\(p(L)\)</span> 에 대한 불변부분공간임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -836,7 +846,7 @@ p(KLK^{-1}) &amp;= \sum_{m=0}^n c_m (KLK^{-1})^m = \sum_{m=0}^n c_m KL^mK^{-1} \
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_5_A_43" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.18 (Axler4th 5.A.43)</strong></span> <span class="math inline">\(V\)</span> 는 1보다 큰 차원의 유한차원 벡터공간이며 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이다. <span class="math inline">\(\{p(L): p(t) \in \mathbb{F}[t]\} \ne \mathcal{L}(V)\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 4.19 (Axler4th 5.A.43)</strong></span> <span class="math inline">\(V\)</span> 는 1보다 큰 차원의 유한차원 벡터공간이며 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이다. <span class="math inline">\(\{p(L): p(t) \in \mathbb{F}[t]\} \ne \mathcal{L}(V)\)</span> 임을 보여라.</p>
 </div>
 </div>
 <div class="proof solution">
@@ -945,8 +955,8 @@ B_{1i}\boldsymbol{u}_i + \cdots + B_{mi}\boldsymbol{u}_m + \cdots + B_{ni}\bolds
 <p><br></p>
 </section>
 </section>
-<section id="행렬의-대각화" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="행렬의-대각화"><span class="header-section-number">4.5</span> 행렬의 대각화</h2>
+<section id="연산자와-행렬의-대각화" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="연산자와-행렬의-대각화"><span class="header-section-number">4.5</span> 연산자와 행렬의 대각화</h2>
 <section id="sec-LA_properties_of_eigen_space" class="level3" data-number="4.5.1">
 <h3 data-number="4.5.1" class="anchored" data-anchor-id="sec-LA_properties_of_eigen_space"><span class="header-section-number">4.5.1</span> 고유공간의 성질</h3>
 <p>우리는 연산자 <span class="math inline">\(L\in\mathcal{L}(V)\)</span> 에 대한 고유공간 <span class="math inline">\(E(\lambda, L)\)</span> 을 <a href="#def-LA_eigenvector" class="quarto-xref">정의&nbsp;<span>4.2</span></a> 에서 정의하였다. 또한 서로 다른 고유값을 갖는 벡터의 집합은 선형독립이라는 것도 안다(<a href="#prp-LA_eigenvector_linear_independence" class="quarto-xref">명제&nbsp;<span>4.3</span></a>). 이제 고유공간에 대해 좀 더 알아보자.</p>
@@ -965,7 +975,7 @@ E(\lambda_1,L) + \cdots + E(\lambda_m,L) = \bigoplus_{i=1}^m E(\lambda_i,L)
 <p><br></p>
 </section>
 <section id="sec-LA_diagonalizable_matrix" class="level3" data-number="4.5.2">
-<h3 data-number="4.5.2" class="anchored" data-anchor-id="sec-LA_diagonalizable_matrix"><span class="header-section-number">4.5.2</span> 대각화가능 행렬</h3>
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="sec-LA_diagonalizable_matrix"><span class="header-section-number">4.5.2</span> 대각화 가능한 연산자</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1008,18 +1018,19 @@ E(\lambda_1,L) + \cdots + E(\lambda_m,L) = \bigoplus_{i=1}^m E(\lambda_i,L)
 </div>
 </div>
 <p><br></p>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-LA_diagoalizability_to_invariant_subspace" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 4.12</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(L\)</span> 이 대각화 가능하며 <span class="math inline">\(U\le V\)</span> 가 <span class="math inline">\(L\)</span>-불변 부분공간일 때 <span class="math inline">\(L\)</span> 의 <span class="math inline">\(U\)</span> 에의 제한인 <span class="math inline">\(L|_U\)</span> 는 <span class="math inline">\(U\)</span> 에서 대각화 가능하다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span></p>
+</div>
+<p><br></p>
 </section>
-</section>
-<section id="연습문제-2" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="연습문제-2">연습문제</h2>
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
-<div id="exr-linearly_independency_and_distict_eigenvalues" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 4.19</strong></span> <span class="math inline">\(\{v_1,\ldots,\,v_m \} \subset V\)</span> 이 선형독립일 필요충분 조건은 위 벡터들이 서로 다른 고유값을 갖는 고유벡터가 되도록 하는 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 존재하는 것임을 보여라.</p>
-</div>
-</div>
-<div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span>서로 다른 고유값을 갖는 고유벡터의 집합은 선형독립이라는 것을 안다(<a href="#prp-LA_eigenvector_linear_independence" class="quarto-xref">명제&nbsp;<span>4.3</span></a>). 따라서 <span class="math inline">\(\{v_1,\ldots,\,v_m \}\)</span> 가 선형독립이면 이 벡터들이 각각 다른 고유값을 갖는 고유벡터가 되는 연산자 <span class="math inline">\(L\)</span> 이 존재함을 보이면 된다. <span class="math inline">\(v_1,\ldots,\,v_m\)</span> 을 확장하여 기저 <span class="math inline">\(\mathcal{B}=\{v_1,\ldots,\,v_n\}\)</span> 을 구성할 수 있다. <span class="math inline">\(Lv_i = iv_i (i=1,\ldots,\,n)\)</span> 인 선형연산자가 그것이다.</p>
-</div>
+<section id="연습문제-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="연습문제-2">연습문제</h3>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler_5_B_1" class="theorem exercise">
@@ -1117,6 +1128,51 @@ f_1 = 1,\qquad f_2=1,\qquad f_{n+2} = f_{n+1} +f_n.
 \]</span></p>
 <p>이다. 따라서 <span class="math inline">\(f_n =\dfrac{1}{\sqrt{5}} \left[ \left(\dfrac{1+\sqrt{5}}{2}\right)^n - \left(\dfrac{1-\sqrt{5}}{2}\right)^n\right]\)</span> 이다.</p>
 <p>(<span class="math inline">\(5\)</span>) <span class="math inline">\(f_n\)</span> 은 정의에 의해 항상 자연수이다. 또한 <span class="math inline">\(\left|\dfrac{1}{\sqrt{5}}\left(\dfrac{1-\sqrt{5}}{2}\right)^n\right| &lt; 0.277\)</span> 이다. <span class="math inline">\(a,\,b\in \mathbb{R},\, n\in \mathbb{Z}_+\)</span> 에 대해 <span class="math inline">\(a+b=n\)</span> 이며 <span class="math inline">\(|b|&lt;0.3\)</span> 이라면 <span class="math inline">\(|n-a|&lt;0.3\)</span> 이므로 <span class="math inline">\(n\)</span> 은 <span class="math inline">\(a\)</span> 에 가장 가까운 정수 일 수 밖에 없다. 따라서 <span class="math inline">\(f_n\)</span> 은 <span class="math inline">\(\dfrac{1}{\sqrt{5}}\left(\dfrac{1+\sqrt{5}}{2}\right)^n\)</span> 에 가장 가까운 정수일 수 밖에 없다.</p>
+</div>
+<p><br></p>
+</section>
+</section>
+<section id="교환-가능-연산자" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="교환-가능-연산자"><span class="header-section-number">4.6</span> 교환 가능 연산자</h2>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-LA_commuting_operator" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 4.8 (교환가능한 연산자와 행렬)</strong></span> 두 연산자 <span class="math inline">\(L,\,K\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(LK=KL\)</span> 일 때 <span class="math inline">\(L\)</span> 과 <span class="math inline">\(K\)</span> 는 <strong>교환가능하다(be commutable)</strong> 고 한다. 두 행렬 <span class="math inline">\(\boldsymbol{L},\, \boldsymbol{K} \in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 가 <span class="math inline">\(\boldsymbol{LK}=\boldsymbol{KL}\)</span> 일 때 두 행렬이 교환 가능하다고 한다.</p>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-LA_matrix_representation_of_compatible_matrix" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 4.13</strong></span> 두 연산자 <span class="math inline">\(L,\,K\in \mathcal{L}(V)\)</span> 가 교환가능하면 두 연산자의 행렬 표현도 교환가능하다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(0\)</span> 연산자의 행렬표현은 <span class="math inline">\(\boldsymbol{0}\)</span> 행렬이므로 <span class="math inline">\(LK-KL=0\)</span> 이면 <span class="math inline">\([L][K]-[K][L]=\boldsymbol{0}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-LA_matrix_representation_of_compatible_matrix" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 4.14</strong></span> 교환 가능한 두 연산자 <span class="math inline">\(L,\,K\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(L\)</span> 의 고유공간은 <span class="math inline">\(K\)</span> 에 대한 불변 부분공간이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(v\in E(c,\, L)\)</span> 이라고 하자. <span class="math inline">\(LKv = KLv = cKv\)</span> 이므로 <span class="math inline">\(Kv\in E(c,\, L)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-LA_simultaneous_diagonalizability_and_commutativity" class="theorem">
+<p><span class="theorem-title"><strong>정리 4.7</strong></span> 유한차원 벡터공간에서의 두 연산자에 대해 두 연산자가 같은 기저에서 대각화 가능할 필요충분조건은 두 연산자는 교환가능한 연산자인 것이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span>우선 <span class="math inline">\(L,\,K\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 에서 동시에 대각화 가능하다고 하자. 즉 <span class="math inline">\(Lv_i = l_i v_i,\, Kv_i = k_iv_i\)</span> 라고 하자. <span class="math inline">\((LK-KL)v_i = 0\)</span> 이므로 <span class="math inline">\(LK-KL=0\)</span> 이다.</p>
+<p>두 연산자가 교환가능함을 가정하자. <span class="math inline">\(K\)</span> 가 대각화 가능 연산자이므로 <span class="math inline">\(K\)</span> 에 대한 고유값이 <span class="math inline">\(k_1,\ldots,\,k_m\)</span> 일 때 <span class="math inline">\(V=\bigoplus_{k=1}^m E(k_i,\, K)\)</span> 이다. <a href="#prp-LA_matrix_representation_of_compatible_matrix" class="quarto-xref">명제&nbsp;<span>4.14</span></a> 에 의해 <span class="math inline">\(E(k_i,\,K)\)</span> 는 <span class="math inline">\(L\)</span> 에 대한 불변부분공간이며</p>
 </div>
 
 

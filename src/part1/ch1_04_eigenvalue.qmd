@@ -189,7 +189,25 @@ $$
 
 ### 연습문제 {.unnumbered}
 
+
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+
+::: {#exr-linearly_independency_and_distict_eigenvalues}
+
+$\{v_1,\ldots,\,v_m \} \subset V$ 이 선형독립일 필요충분 조건은 위 벡터들이 서로 다른 고유값을 갖는 고유벡터가 되도록 하는 $L\in \mathcal{L}(V)$ 가 존재하는 것임을 보여라.
+
+:::
+
+</div>
+
+::: {.solution}
+
+서로 다른 고유값을 갖는 고유벡터의 집합은 선형독립이라는 것을 안다(@prp-LA_eigenvector_linear_independence). 따라서 $\{v_1,\ldots,\,v_m \}$ 가 선형독립이면 이 벡터들이 각각 다른 고유값을 갖는 고유벡터가 되는 연산자 $L$ 이 존재함을 보이면 된다. $v_1,\ldots,\,v_m$ 을 확장하여 기저 $\mathcal{B}=\{v_1,\ldots,\,v_n\}$ 을 구성할 수 있다. $Lv_i = iv_i (i=1,\ldots,\,n)$ 인 선형연산자가 그것이다.
+
+:::
+
+
+</br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
 ::: {#exr-axler4_5_A_4}
 
@@ -436,7 +454,7 @@ $$
 
 ::: {#exr-axler4_5_A_27}
 
-#### Axler4th_5_A_27
+#### Axler4th 5.A.27
 
 유한차원 벡터공간 $V$ 에서 정의된 연산자 $L$ 을 생각하자. 모든 $V$ 의 부분공간이 $L$ 에 대한 불변부분공간이라면 $L$ 은 항등행렬의 스칼라곱임을 보여라.
 
@@ -454,7 +472,7 @@ $v\in V$ 에 대해 $\text{span}\{v_i\}$ 가 $L$ 에 대한 불변부분공간�
 
 ::: {#exr-axler4_5_A_34}
 
-#### Axler4th_5_A_34
+#### Axler4th 5.A.34
 
 유한차원 벡터공간 $V$ 와 $V_0=\{v_1,\ldots,\,v_m: v_i\in V\}$ 에 대해 다음은 동치임을 보여라.
 
@@ -876,7 +894,7 @@ $\bf{A}_n \in \mathcal{M}_{n \times n}(\mathbb{C})$ 이라 하고 $n$ 에 대한
 
 </br>
 
-## 행렬의 대각화
+## 연산자와 행렬의 대각화
 
 ### 고유공간의 성질 {#sec-LA_properties_of_eigen_space}
 
@@ -905,7 +923,7 @@ $$
 
 </br>
 
-### 대각화가능 행렬 {#sec-LA_diagonalizable_matrix}
+### 대각화 가능한 연산자 {#sec-LA_diagonalizable_matrix}
 
 ::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-LA_diagonalizable_matrix}
@@ -969,23 +987,26 @@ $n$ 차원 $\F$-벡터공간에서 $V$ 에서 정의된 $L \in \mathcal{L}(V)$ �
 
 </div></br>
 
-## 연습문제 {.unnumbered}
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+::: {#prp-LA_diagoalizability_to_invariant_subspace}
 
-::: {#exr-linearly_independency_and_distict_eigenvalues}
-
-$\{v_1,\ldots,\,v_m \} \subset V$ 이 선형독립일 필요충분 조건은 위 벡터들이 서로 다른 고유값을 갖는 고유벡터가 되도록 하는 $L\in \mathcal{L}(V)$ 가 존재하는 것임을 보여라.
+유한차원 벡터공간 $V$ 에서 정의된 연산자 $L$ 이 대각화 가능하며 $U\le V$ 가 $L$-불변 부분공간일 때 $L$ 의 $U$ 에의 제한인 $L|_U$ 는 $U$ 에서 대각화 가능하다.
 
 :::
 
 </div>
 
-::: {.solution}
+::: {.proof}
 
-서로 다른 고유값을 갖는 고유벡터의 집합은 선형독립이라는 것을 안다(@prp-LA_eigenvector_linear_independence). 따라서 $\{v_1,\ldots,\,v_m \}$ 가 선형독립이면 이 벡터들이 각각 다른 고유값을 갖는 고유벡터가 되는 연산자 $L$ 이 존재함을 보이면 된다. $v_1,\ldots,\,v_m$ 을 확장하여 기저 $\mathcal{B}=\{v_1,\ldots,\,v_n\}$ 을 구성할 수 있다. $Lv_i = iv_i (i=1,\ldots,\,n)$ 인 선형연산자가 그것이다.
+
 
 :::
+
+</br>
+
+### 연습문제 {.unnumbered}
+
 
 </br><div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 
@@ -1165,3 +1186,68 @@ $$
 ($5$) $f_n$ 은 정의에 의해 항상 자연수이다. 또한 $\left|\dfrac{1}{\sqrt{5}}\left(\dfrac{1-\sqrt{5}}{2}\right)^n\right| < 0.277$ 이다. $a,\,b\in \mathbb{R},\, n\in \mathbb{Z}_+$ 에 대해 $a+b=n$ 이며 $|b|<0.3$ 이라면 $|n-a|<0.3$ 이므로 $n$ 은 $a$ 에 가장 가까운 정수 일 수 밖에 없다. 따라서 $f_n$ 은 $\dfrac{1}{\sqrt{5}}\left(\dfrac{1+\sqrt{5}}{2}\right)^n$ 에 가장 가까운 정수일 수 밖에 없다.
 
 ::: 
+
+
+</br>
+
+## 교환 가능 연산자
+
+::: {.callout-note appearance="simple" icon="false"}
+::: {#def-LA_commuting_operator}
+
+#### 교환가능한 연산자와 행렬
+
+두 연산자 $L,\,K\in \mathcal{L}(V)$ 가 $LK=KL$ 일 때 $L$ 과 $K$ 는 **교환가능하다(be commutable)** 고 한다. 두 행렬 $\bf{L},\, \bf{K} \in \mathcal{M}_{n \times n}(\F)$ 가 $\bf{LK}=\bf{KL}$ 일 때 두 행렬이 교환 가능하다고 한다.
+
+:::
+:::
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-LA_matrix_representation_of_compatible_matrix}
+
+두 연산자 $L,\,K\in \mathcal{L}(V)$ 가 교환가능하면 두 연산자의 행렬 표현도 교환가능하다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+$0$ 연산자의 행렬표현은 $\bf{0}$ 행렬이므로 $LK-KL=0$ 이면 $[L][K]-[K][L]=\bf{0}$ 이다. $\square$
+
+:::
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-LA_matrix_representation_of_compatible_matrix}
+
+교환 가능한 두 연산자 $L,\,K\in \mathcal{L}(V)$ 에 대해 $L$ 의 고유공간은 $K$ 에 대한 불변 부분공간이다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+$v\in E(c,\, L)$ 이라고 하자. $LKv = KLv = cKv$ 이므로 $Kv\in E(c,\, L)$ 이다. $\square$
+
+:::
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#thm-LA_simultaneous_diagonalizability_and_commutativity}
+
+유한차원 벡터공간에서의 두 연산자에 대해 두 연산자가 같은 기저에서 대각화 가능할 필요충분조건은 두 연산자는 교환가능한 연산자인 것이다.
+:::
+
+</div>
+
+::: {.proof}
+
+우선 $L,\,K\in \mathcal{L}(V)$ 가 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 에서 동시에 대각화 가능하다고 하자. 즉 $Lv_i = l_i v_i,\, Kv_i = k_iv_i$ 라고 하자. $(LK-KL)v_i = 0$ 이므로 $LK-KL=0$ 이다.
+
+두 연산자가 교환가능함을 가정하자. $K$ 가 대각화 가능 연산자이므로 $K$ 에 대한 고유값이 $k_1,\ldots,\,k_m$ 일 때 $V=\bigoplus_{k=1}^m E(k_i,\, K)$ 이다. @prp-LA_matrix_representation_of_compatible_matrix 에 의해 $E(k_i,\,K)$ 는 $L$ 에 대한 불변부분공간이며 
+
+
+:::

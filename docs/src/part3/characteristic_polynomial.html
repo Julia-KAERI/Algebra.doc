@@ -311,15 +311,22 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#sec-polynomials" id="toc-sec-polynomials" class="nav-link active" data-scroll-target="#sec-polynomials"><span class="header-section-number">17.1</span> 다항식</a>
+  <li><a href="#sec-ALA_polynomials" id="toc-sec-ALA_polynomials" class="nav-link active" data-scroll-target="#sec-ALA_polynomials"><span class="header-section-number">17.1</span> 다항식</a>
   <ul class="collapse">
   <li><a href="#sec-ALA_basic_properties_of_polynomial" id="toc-sec-ALA_basic_properties_of_polynomial" class="nav-link" data-scroll-target="#sec-ALA_basic_properties_of_polynomial"><span class="header-section-number">17.1.1</span> 다항식의 기본적인 성질</a></li>
   <li><a href="#sec-ALA_zeros_of_polynomials" id="toc-sec-ALA_zeros_of_polynomials" class="nav-link" data-scroll-target="#sec-ALA_zeros_of_polynomials"><span class="header-section-number">17.1.2</span> 다항식의 영점</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제"><span class="header-section-number">17.1.3</span> 연습문제</a></li>
   </ul></li>
-  <li><a href="#sec-characteristic_polynomial" id="toc-sec-characteristic_polynomial" class="nav-link" data-scroll-target="#sec-characteristic_polynomial"><span class="header-section-number">17.2</span> 특성다항식</a></li>
-  <li><a href="#케일리-해밀턴-정리" id="toc-케일리-해밀턴-정리" class="nav-link" data-scroll-target="#케일리-해밀턴-정리"><span class="header-section-number">17.3</span> 케일리 해밀턴 정리</a></li>
-  <li><a href="#sec-minimal_polynomial" id="toc-sec-minimal_polynomial" class="nav-link" data-scroll-target="#sec-minimal_polynomial"><span class="header-section-number">17.4</span> 최소다항식</a></li>
+  <li><a href="#특성다항식과-케일리-해밀턴-정리" id="toc-특성다항식과-케일리-해밀턴-정리" class="nav-link" data-scroll-target="#특성다항식과-케일리-해밀턴-정리"><span class="header-section-number">17.2</span> 특성다항식과 케일리-해밀턴 정리</a>
+  <ul class="collapse">
+  <li><a href="#sec-AZA_characteristic_polynomial" id="toc-sec-AZA_characteristic_polynomial" class="nav-link" data-scroll-target="#sec-AZA_characteristic_polynomial"><span class="header-section-number">17.2.1</span> 특성다항식</a></li>
+  <li><a href="#sec-ALA_cayley_hamilton_theorem" id="toc-sec-ALA_cayley_hamilton_theorem" class="nav-link" data-scroll-target="#sec-ALA_cayley_hamilton_theorem"><span class="header-section-number">17.2.2</span> 케일리 해밀턴 정리</a></li>
+  </ul></li>
+  <li><a href="#최소다항식과-대각화" id="toc-최소다항식과-대각화" class="nav-link" data-scroll-target="#최소다항식과-대각화"><span class="header-section-number">17.3</span> 최소다항식과 대각화</a>
+  <ul class="collapse">
+  <li><a href="#sec-ALA_minimal_polynomial" id="toc-sec-ALA_minimal_polynomial" class="nav-link" data-scroll-target="#sec-ALA_minimal_polynomial"><span class="header-section-number">17.3.1</span> 최소다항식</a></li>
+  <li><a href="#sec-ALA_minimal_polynomial_and_diagonalization" id="toc-sec-ALA_minimal_polynomial_and_diagonalization" class="nav-link" data-scroll-target="#sec-ALA_minimal_polynomial_and_diagonalization"><span class="header-section-number">17.3.2</span> 최소다항식과 연산자의 대각화</a></li>
+  </ul></li>
   <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
   </ul>
 </nav>
@@ -355,8 +362,8 @@ window.Quarto = {
 \]</span></p>
 </div>
 <p><br></p>
-<section id="sec-polynomials" class="level2" data-number="17.1">
-<h2 data-number="17.1" class="anchored" data-anchor-id="sec-polynomials"><span class="header-section-number">17.1</span> 다항식</h2>
+<section id="sec-ALA_polynomials" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="sec-ALA_polynomials"><span class="header-section-number">17.1</span> 다항식</h2>
 <p>여기서는 다항식의 여러가지 성질 중 벡터공간 <span class="math inline">\(\mathbb{F}_n[t]\)</span> 로서의 다항식과 앞으로 벡터공간을 다루는 데 사용될 다항식의 여러가지 성질에 대해 알아보기로 한다.</p>
 <p><br></p>
 <section id="sec-ALA_basic_properties_of_polynomial" class="level3" data-number="17.1.1">
@@ -497,8 +504,10 @@ p(x) = c(x-c_1)\cdots (x-c_m)(x^2+b_1x + c_1) \cdots (x^2 + b_kx + c_k).
 <p><br></p>
 </section>
 </section>
-<section id="sec-characteristic_polynomial" class="level2" data-number="17.2">
-<h2 data-number="17.2" class="anchored" data-anchor-id="sec-characteristic_polynomial"><span class="header-section-number">17.2</span> 특성다항식</h2>
+<section id="특성다항식과-케일리-해밀턴-정리" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="특성다항식과-케일리-해밀턴-정리"><span class="header-section-number">17.2</span> 특성다항식과 케일리-해밀턴 정리</h2>
+<section id="sec-AZA_characteristic_polynomial" class="level3" data-number="17.2.1">
+<h3 data-number="17.2.1" class="anchored" data-anchor-id="sec-AZA_characteristic_polynomial"><span class="header-section-number">17.2.1</span> 특성다항식</h3>
 <p>정사각 행렬에 대한 특성다항식은 이미 <a href="../../src/part1/ch1_04_eigenvalue.html#sec-LA_characteristic_polynomial">특성다항식</a> 에서 정의하였지만 환기를 위해 다시 한번 정의한다.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -584,8 +593,8 @@ p(L) -p(\lambda)I_V &amp;=  a_n(L^n -\lambda^n I_V) + \cdots + a_1(L-\lambda I_V
 
 </br> -->
 </section>
-<section id="케일리-해밀턴-정리" class="level2" data-number="17.3">
-<h2 data-number="17.3" class="anchored" data-anchor-id="케일리-해밀턴-정리"><span class="header-section-number">17.3</span> 케일리 해밀턴 정리</h2>
+<section id="sec-ALA_cayley_hamilton_theorem" class="level3" data-number="17.2.2">
+<h3 data-number="17.2.2" class="anchored" data-anchor-id="sec-ALA_cayley_hamilton_theorem"><span class="header-section-number">17.2.2</span> 케일리 해밀턴 정리</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -662,8 +671,11 @@ p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymb
 </div>
 <p><br></p>
 </section>
-<section id="sec-minimal_polynomial" class="level2 page-columns page-full" data-number="17.4">
-<h2 data-number="17.4" class="anchored" data-anchor-id="sec-minimal_polynomial"><span class="header-section-number">17.4</span> 최소다항식</h2>
+</section>
+<section id="최소다항식과-대각화" class="level2 page-columns page-full" data-number="17.3">
+<h2 data-number="17.3" class="anchored" data-anchor-id="최소다항식과-대각화"><span class="header-section-number">17.3</span> 최소다항식과 대각화</h2>
+<section id="sec-ALA_minimal_polynomial" class="level3 page-columns page-full" data-number="17.3.1">
+<h3 data-number="17.3.1" class="anchored" data-anchor-id="sec-ALA_minimal_polynomial"><span class="header-section-number">17.3.1</span> 최소다항식</h3>
 <p>다항식 가운데 최고차 항의 계수가 1인 다항식을 <strong>monic</strong> 이라고 한다.</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -770,6 +782,28 @@ p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymb
 <p>만악 <span class="math inline">\(m(t)\)</span> 가 어떤 <span class="math inline">\(\lambda\in \mathbb{R}\)</span> 에 대해 <span class="math inline">\((t-\lambda)\)</span> 로 나누어진다면 <span class="math inline">\(\lambda\)</span> 는 <span class="math inline">\(L\)</span> 의 고유값이므로 성립한다.</p>
 </div>
 <p><br></p>
+</section>
+<section id="sec-ALA_minimal_polynomial_and_diagonalization" class="level3" data-number="17.3.2">
+<h3 data-number="17.3.2" class="anchored" data-anchor-id="sec-ALA_minimal_polynomial_and_diagonalization"><span class="header-section-number">17.3.2</span> 최소다항식과 연산자의 대각화</h3>
+<br>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="thm-ALA_ALA_minimal_polynomial_and_diagonalization" class="theorem">
+<p><span class="theorem-title"><strong>정리 17.8</strong></span> 유한차원 <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서의 연산자 <span class="math inline">\(L\)</span> 이 대각화 가능할 필요충분조건은 어떤 서로 다른 <span class="math inline">\(c_1,\ldots,\,c_m\in \mathbb{F}\)</span> 에 대해 <span class="math inline">\(p(t)=\prod_{i=1}^m (t-c_i)\)</span> 가 <span class="math inline">\(L\)</span> 의 최소다항식인 것이다.</p>
+</div>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(L\)</span> 이 대각화 가능하면 서로 다른 <span class="math inline">\(L\)</span> 의 고유값 <span class="math inline">\(c_1,\ldots,\,c_m\)</span> 에 대해 <span class="math inline">\(V=\bigoplus_{i=1}^m E(c_i,\,L)\)</span> 이다. 따라서 <span class="math inline">\(p(L)=0\)</span> 이며 <span class="math inline">\(p(t)\)</span> 는 <span class="math inline">\(L\)</span> 의 최소다항식이다.</p>
+<p>이제 서로 다른 <span class="math inline">\(c_1,\ldots,\,c_m\in \mathbb{F}\)</span> 에 대해 <span class="math inline">\(p(t)=\prod_{i=1}^m (t-c_i)\)</span> 가 <span class="math inline">\(L\)</span> 의 최소다항식이면 <span class="math inline">\(L\)</span> 은 대각화 가능함을 보이자. <span class="math inline">\(m\)</span> 에 대한 induction 을 사용한다. <span class="math inline">\(m=1\)</span> 일 때는 자명하다. 이제 <span class="math inline">\(m&gt;1\)</span> 일 때 <span class="math inline">\(1,\ldots,\,m-1\)</span> 까지 성립함을 가정하자. <span class="math inline">\(U=\operatorname{im}(L-c_mI)\)</span> 는 <span class="math inline">\(L\)</span>-불변 부분공간임을 안다(<a href="../part1/ch1_04_eigenvalue.html#prp-LA_kernal_and_images_of_operator_under_polynomial" class="quarto-xref">명제&nbsp;<span>4.5</span></a>). <span class="math inline">\(u\in U\)</span> 이면 어떤 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\((L-c_mI)(v)\)</span> 이며 최소다항식 <span class="math inline">\(p\)</span> 를 생각하면</p>
+<p><span id="eq-thm-ALA_ALA_minimal_polynomial_and_diagonalization_1"><span class="math display">\[
+(L-c_1I)\cdots (L-c_{m-1}I)u = (L-c_1I)\cdots (L-c_m I) v =0
+\tag{17.2}\]</span></span></p>
+<p>이다. 따라서 <span class="math inline">\((L-c_1I)\cdots (L-c_{m-1}I)\)</span> 는 <span class="math inline">\(\operatorname{im}(L-c_{m-1}I)\)</span> 은 <span class="math inline">\(U\)</span> 의 annihilator ideal 에 속하며 induction 의 가정에 의해 <span class="math inline">\(U\)</span> 는 <span class="math inline">\(L\)</span> 의 고유벡터로 이루어진 기저를 가진다. 이제 <span class="math inline">\(\text{im}(I-c_mI)\cap \ker (I-c_mI)=\{0_V\}\)</span> 임을 보이자. <span class="math inline">\(u\in \text{im}(I-c_mI)\cap \ker (I-c_mI)\)</span> 라면 <span class="math inline">\((L-c_m I)u=0_V\)</span> 이며 <span class="math inline">\(u=(I-c_m I)v\)</span> 인 <span class="math inline">\(v\in V\)</span> 가 존재해야 한다. <span class="math inline">\(Lu=c_mu\)</span> 이므로 <a href="#eq-thm-ALA_ALA_minimal_polynomial_and_diagonalization_1" class="quarto-xref">식&nbsp;<span>17.2</span></a> 로 부터</p>
+<p><span class="math display">\[
+0 = (L-c_1I)\cdots (L-c_{m-1} I)u = (c_m -c_1)\cdots (c_m -c_{m-1}) u
+\]</span></p>
+<p>이다. <span class="math inline">\(c_1,\ldots,\,c_m\)</span> 이 모두 다르다는 조건으로 부터 <span class="math inline">\(u=0_V\)</span> 임을 알 수 있다. 따라서 <span class="math inline">\(\text{im}(I-c_mI)\cap \ker (I-c_mI)=\{0_V\}\)</span> 이며 <a href="../part1/ch1_02_linear_map.html#thm-LA_rank_nullity" class="quarto-xref">정리&nbsp;<span>2.1</span></a> 로부터 <span class="math inline">\(V=\text{im}(L-c_m I) \oplus \ker (L-c_m I)\)</span> 임을 안다. <span class="math inline">\(\operatorname{im}(L-c_m I)\)</span> 가 <span class="math inline">\(L\)</span> 의 고유벡터로 이루어진 기저를 가지며 <span class="math inline">\(\ker (L-c_m I)\)</span> 는 고유값 <span class="math inline">\(c_m\)</span> 을 가지는 <span class="math inline">\(L\)</span> 의 고유벡터로 된 기저를 가지므로 <span class="math inline">\(V\)</span> 는 <span class="math inline">\(L\)</span> 의 고유벡터로 이루어진 기저를 가진다. <span class="math inline">\(\square\)</span></p>
+</div>
+</section>
 </section>
 <section id="연습문제-1" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="연습문제-1">연습문제</h2>

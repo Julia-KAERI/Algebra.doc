@@ -649,17 +649,22 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>non-negative 연산자 <span class="math inline">\(L\)</span> 에 대한 non-negative 제곱근 연산자 <span class="math inline">\(R\)</span> 이 존재함을 안다. <span class="math inline">\(R\)</span> 역시 에르미트 연산자이므로 어떤 정규직교기저 <span class="math inline">\((e_1,\ldots,e_n)\)</span> 에서 <span class="math inline">\(c_i\ge 0\)</span> 에 대해 <span class="math inline">\(Re_i=c_ie_i\)</span> 이며 <span class="math inline">\(Le_i = c_i^2e_i\)</span> 이다. 즉 <span class="math inline">\(R\)</span> 을 대각화하는 정규직교기저는 <span class="math inline">\(L\)</span> 을 대각화하는 정규직교기저이다. 이 정규직교기저에 대해 <span class="math inline">\(Re_i = \sqrt{c_i}e_i\)</span> 로 정해지므로 <span class="math inline">\(R\)</span> 은 유일하다. <span class="math inline">\(\square\)</span></p>
 </div>
+<p><br></p>
+<p>위의 명제는 non-negiatve <span class="math inline">\(L\)</span> 에 대해 <span class="math inline">\(\sqrt{L}\)</span> 이 정확하게 정의됨을 의미한다. 또한 위의 증명에서 non-negative <span class="math inline">\(L\)</span> 에 대해 <span class="math inline">\(\sqrt{L}\)</span> 은 <span class="math inline">\(L\)</span> 을 대각화 하는 기저는 <span class="math inline">\(\sqrt{L}\)</span> 도 대각화 한다는 것을 보였는데 이것은 따로 언급할 만 하다.</p>
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div id="prp-LA_simultaneous_diagonalization_of_non_negative_operator_and_its_squareroot" class="theorem proposition">
+<p><span class="theorem-title"><strong>명제 7.3</strong></span> 유한차원 벡터공간의 non-negative 연산자 <span class="math inline">\(L\)</span> 과 <span class="math inline">\(\sqrt{L}\)</span> 은 같은 정규직교기저에서 대각화되며 이 정규직교기저를 <span class="math inline">\((e_1,\ldots,\,e_n)\)</span> 이라고 하면 <span class="math inline">\(\left\langle \sqrt{L}e_i,\,e_j\right\rangle = \sqrt{\langle Le_i,\,e_j\rangle}\)</span> 이다.</p>
+</div>
+</div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_squareroot_matrix" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.3</strong></span> 유한차원 벡터공간에서 정의된 연산자 <span class="math inline">\(M\)</span> 에 대해 <span class="math inline">\(M^\ast M\)</span> 는 non-negative 연산자이다.</p>
+<p><span class="theorem-title"><strong>명제 7.4</strong></span> 유한차원 벡터공간에서 정의된 연산자 <span class="math inline">\(M\)</span> 에 대해 <span class="math inline">\(M^\ast M\)</span> 는 non-negative 연산자이다.</p>
 </div>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\((M^\ast M)^\ast = M^\ast M\)</span> 이므로 <span class="math inline">\(M^\ast M\)</span> 은 에르미트 연산자이다. <span class="math inline">\(\langle M^\ast Mv,\,v\rangle = \|Mv\|^2 \ge 0\)</span> 이므로 non-negative 이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
-<p>위의 명제는 non-negiatve <span class="math inline">\(L\)</span> 에 대해 <span class="math inline">\(\sqrt{L}\)</span> 이 정확하게 정의됨을 의미한다.</p>
 <p><br></p>
 </section>
 <section id="연습문제-1" class="level3 unnumbered">
@@ -747,7 +752,46 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 </div>
 </div>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span></p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(v=\sum_{i=1}^m v_i\)</span> 라고 하자. <span class="math inline">\(0 \le \langle Lv,\,v\rangle = \sum_j \sum_k \langle v_k,\,v_j \rangle\)</span>.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4th_7_C_15" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.12 (Axler4h 7.C.15)</strong></span> <span class="math inline">\(L\)</span> 이 에르미트 연산자일 때 아래 관계를 만족하는 어떤 non-negative 연산자 <span class="math inline">\(A,\,B\)</span> 가 존재함을 보여라.</p>
+<p><span class="math display">\[
+L = A-B,\qquad \sqrt{L^\ast L} = A+B,\qquad AB=BA.
+\]</span></p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(L^\ast L\)</span> 은 non-negative 이므로 <span class="math inline">\(M=\sqrt{L^\ast L} = \sqrt{L^2}\)</span> 으로 정의할 수 있다. <span class="math inline">\(L\)</span> 의 고유벡터인 정규직교기저를 <span class="math inline">\(\mathcal{B}=(e_1,\ldots,\,e_n)\)</span> 이라고 하고 <span class="math inline">\(Le_i = l_i e_i\)</span> 라고 하면 <span class="math inline">\(\langle L^\ast L e_i,\,e_j \rangle= (l_i)^2\delta_{ij}\)</span> 이므로 <span class="math inline">\(Me_i = |l_i|e_i\)</span> 이며 따라서 <span class="math inline">\(\mathcal{B}\)</span> 는 <span class="math inline">\(M\)</span> 도 대각화한다.</p>
+<p><span class="math inline">\(A=\dfrac{1}{2}(M+L),\, B=\dfrac{1}{2}(M-L)\)</span> 로 정하면 주어진 세 조건을 만족한다.</p>
+</div>
+<br> <br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4th_7_C_16" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.13 (Axler4h 7.C.16)</strong></span> <span class="math inline">\(L\)</span> 이 non-negative 이면 <span class="math inline">\(\ker (L) = \ker (\sqrt{L})\)</span>, <span class="math inline">\(\text{im}(L)= \text{im}(\sqrt{L})\)</span> 임을 보여라.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><a href="#prp-LA_simultaneous_diagonalization_of_non_negative_operator_and_its_squareroot" class="quarto-xref">명제&nbsp;<span>7.3</span></a> 로부터 <span class="math inline">\(\ker (L) = \ker (\sqrt{L})\)</span> 임을 안다. <span class="math inline">\(L\)</span> 을 대각화하는 기저를 <span class="math inline">\((e_1,\ldots,\,e_n)\)</span> 이라고 하자. <span class="math inline">\(v=\sum_i a_i e_i\)</span> 에 대해</p>
+<p><span class="math display">\[
+Lv = a_i c_i e_i = \sqrt{L}(\sum_i a_i \sqrt{c_i}e_i )
+\]</span></p>
+<p>이므로 <span class="math inline">\(\operatorname{im}(L)= \operatorname{im}(\sqrt{L})\)</span> 이다.</p>
+</div>
+<br>
+<div class="border" style="background-color:#F0FFFF  ;padding:5px;">
+<div id="exr-LA_axler4th_7_C_17" class="theorem exercise">
+<p><span class="theorem-title"><strong>연습문제 7.14 (Axler4h 7.C.17)</strong></span> <span class="math inline">\(L\)</span> 이 non-negative 연산자일 때 <span class="math inline">\(p(T)=\sqrt{L}\)</span> 을 만족하는 실계수 다항식 <span class="math inline">\(p\)</span> 가 존재한다.</p>
+</div>
+</div>
+<div class="proof solution">
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(L\)</span> 이 에르미트 연산자이므로 <span class="math inline">\(L\)</span> 을 대각화하는 기저 <span class="math inline">\((e_1,\ldots,\,e_n)\)</span> 에 대해 <span class="math inline">\(Le_i = c_ie_i,\,c_i\ge 0\)</span> 이다. 이제 <span class="math inline">\(i=1,\ldots,\,n\)</span> 에 대해 <span class="math inline">\(p(c_i) = \sqrt{c_i}\)</span> 인 라플라스 방정식 <span class="math inline">\(p(t)\)</span> 를 생각하면</p>
+<p><span class="math display">\[
+p(L)e_i = p(c_i)e_i = \sqrt{c_i}e_i
+\]</span></p>
+<p>이므로 <span class="math inline">\(p(L)=\sqrt{L}\)</span> 이다.</p>
 </div>
 <p><br></p>
 </section>
@@ -772,7 +816,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_properties_of_AAast" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.4</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 7.5</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 다음이 성립한다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{A}^\ast \boldsymbol{A}\)</span> 는 positive 행렬이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\ker (\boldsymbol{A}^\ast \boldsymbol{A}) = \ker (\boldsymbol{A})\)</span>.</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\text{im}(\boldsymbol{A}^\ast \boldsymbol{A}) = \text{im}(\boldsymbol{A}^\ast)\)</span>.</p>
@@ -789,7 +833,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_properties_of_singular_value" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.5</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 일 때 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 7.6</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 일 때 다음이 성립한다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 가 단사일 필요충분조건은 <span class="math inline">\(0\)</span> 이 <span class="math inline">\(\boldsymbol{A}\)</span> 의 특이값이 아닌 것이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 의 0 이 아닌 특이값의 갯수는 반복되는 것도 갯수를 합치면 <span class="math inline">\(\text{rank}(\boldsymbol{A})\)</span> 와 같다.</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 가 전사일 필요충분조건은 <span class="math inline">\(\boldsymbol{A}\)</span> 의 특이값의 갯수가 <span class="math inline">\(n\)</span> 인 것이다.</p>
@@ -797,13 +841,13 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 가 단사 <span class="math inline">\(\iff \ker (\boldsymbol{A}) = \{0\} \iff \ker(\boldsymbol{A}^\ast \boldsymbol{A})= \{0\}\)</span></p>
-<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 가 에르미트 이므로 <span class="math inline">\(\dim (\boldsymbol{A})\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <span class="math inline">\(0\)</span> 이 아닌 고유값의 갯수(반복되는 것도 포함하여)와 같다. <a href="#prp-LA_properties_of_AAast" class="quarto-xref">명제&nbsp;<span>7.4</span></a> 의 (<span class="math inline">\(4\)</span>) 에 따라 <span class="math inline">\(\boldsymbol{A}\)</span> 의 특이값의 갯수는 <span class="math inline">\(\text{rank}(\boldsymbol{A})\)</span> 와 같다.</p>
+<p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 가 에르미트 이므로 <span class="math inline">\(\dim (\boldsymbol{A})\)</span> 는 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <span class="math inline">\(0\)</span> 이 아닌 고유값의 갯수(반복되는 것도 포함하여)와 같다. <a href="#prp-LA_properties_of_AAast" class="quarto-xref">명제&nbsp;<span>7.5</span></a> 의 (<span class="math inline">\(4\)</span>) 에 따라 <span class="math inline">\(\boldsymbol{A}\)</span> 의 특이값의 갯수는 <span class="math inline">\(\text{rank}(\boldsymbol{A})\)</span> 와 같다.</p>
 <p>(<span class="math inline">\(3\)</span>) (<span class="math inline">\(2\)</span>) 에 의헤 당연하다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_linear_isometry_and_singular_values" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.6</strong></span> 정사각 행렬 <span class="math inline">\(\boldsymbol{S}\)</span> 에 대해 다음은 동치이다.</p>
+<p><span class="theorem-title"><strong>명제 7.7</strong></span> 정사각 행렬 <span class="math inline">\(\boldsymbol{S}\)</span> 에 대해 다음은 동치이다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\boldsymbol{S}\)</span> 는 linear isometry 이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{S}\)</span> 의 특이값이 <span class="math inline">\(1\)</span> 뿐이다.</p>
 </div>
@@ -818,7 +862,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <h3 data-number="7.3.2" class="anchored" data-anchor-id="sec-LA_SVD"><span class="header-section-number">7.3.2</span> 특이값 분해</h3>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_for_svd" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.7</strong></span> 영행렬이 아닌 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 의 <span class="math inline">\(0\)</span> 이 아닌 특이값 <span class="math inline">\(s_1,\ldots,\,s_M\)</span> 에 대해 <span class="math inline">\(\mathcal{M}_{n}(\mathbb{F})\)</span> 에 속하는 정규직교벡터 <span class="math inline">\(\{\boldsymbol{e}_1,\,\ldots,\,\boldsymbol{e}_n\}\)</span> 와 <span class="math inline">\(\mathcal{M}_m(\mathbb{F})\)</span> 에 속하는 정규직교벡터 <span class="math inline">\(\{\boldsymbol{f}_1,\ldots,\,\boldsymbol{f}_m \}\)</span> 가 존재하여 <span class="math inline">\(\boldsymbol{v}\in \mathcal{M}_n(\mathbb{F})\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>명제 7.8</strong></span> 영행렬이 아닌 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 의 <span class="math inline">\(0\)</span> 이 아닌 특이값 <span class="math inline">\(s_1,\ldots,\,s_M\)</span> 에 대해 <span class="math inline">\(\mathcal{M}_{n}(\mathbb{F})\)</span> 에 속하는 정규직교벡터 <span class="math inline">\(\{\boldsymbol{e}_1,\,\ldots,\,\boldsymbol{e}_n\}\)</span> 와 <span class="math inline">\(\mathcal{M}_m(\mathbb{F})\)</span> 에 속하는 정규직교벡터 <span class="math inline">\(\{\boldsymbol{f}_1,\ldots,\,\boldsymbol{f}_m \}\)</span> 가 존재하여 <span class="math inline">\(\boldsymbol{v}\in \mathcal{M}_n(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
 \boldsymbol{Av} = \sum_{j=1}^M s_j \langle \boldsymbol{v},\, \boldsymbol{e}_j\rangle \boldsymbol{f}_j
 \]</span></p>
@@ -854,7 +898,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 </div>
 <div class="callout-body-container">
 <div id="def-LA_eigenvector_for_signular_value" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 7.3 (특이벡터)</strong></span> <a href="#prp-LA_for_svd" class="quarto-xref">명제&nbsp;<span>7.7</span></a> 에서 정의된 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})\)</span> 의 정규직교기저벡터 <span class="math inline">\(\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\)</span> 를 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 <strong>오른쪽 특이벡터 (right singular vectors)</strong> 라고 한다. 또한 <span class="math inline">\(\mathcal{M}_m(\mathbb{F})\)</span> 의 정규직교기저벡터 <span class="math inline">\(\boldsymbol{f}_1,\ldots,\,\boldsymbol{f}_m\)</span> 을 <strong>왼쪽 특이 벡터(left singular vectors)</strong> 라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 7.3 (특이벡터)</strong></span> <a href="#prp-LA_for_svd" class="quarto-xref">명제&nbsp;<span>7.8</span></a> 에서 정의된 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})\)</span> 의 정규직교기저벡터 <span class="math inline">\(\boldsymbol{e}_1,\ldots,\,\boldsymbol{e}_n\)</span> 를 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 <strong>오른쪽 특이벡터 (right singular vectors)</strong> 라고 한다. 또한 <span class="math inline">\(\mathcal{M}_m(\mathbb{F})\)</span> 의 정규직교기저벡터 <span class="math inline">\(\boldsymbol{f}_1,\ldots,\,\boldsymbol{f}_m\)</span> 을 <strong>왼쪽 특이 벡터(left singular vectors)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
@@ -873,7 +917,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-LA_for_svd" class="quarto-xref">명제&nbsp;<span>7.7</span></a> 을 생각하자. 이제 <span class="math inline">\(\boldsymbol{B} = \begin{bmatrix} \boldsymbol{f}_1 &amp; \cdots &amp; \boldsymbol{f}_M\end{bmatrix}\)</span> 라 하고 <span class="math inline">\(\boldsymbol{D}\)</span> 는 <span class="math inline">\(D_{ij}= s_j\delta_{ij}\)</span> 가 되도록 하며 <span class="math inline">\(\boldsymbol{C} = \begin{bmatrix} \boldsymbol{e}_1 &amp; \cdots \boldsymbol{e}_M \end{bmatrix}\)</span> 라고 하자.</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-LA_for_svd" class="quarto-xref">명제&nbsp;<span>7.8</span></a> 을 생각하자. 이제 <span class="math inline">\(\boldsymbol{B} = \begin{bmatrix} \boldsymbol{f}_1 &amp; \cdots &amp; \boldsymbol{f}_M\end{bmatrix}\)</span> 라 하고 <span class="math inline">\(\boldsymbol{D}\)</span> 는 <span class="math inline">\(D_{ij}= s_j\delta_{ij}\)</span> 가 되도록 하며 <span class="math inline">\(\boldsymbol{C} = \begin{bmatrix} \boldsymbol{e}_1 &amp; \cdots \boldsymbol{e}_M \end{bmatrix}\)</span> 라고 하자.</p>
 <p><span class="math display">\[
 \boldsymbol{BDC}^\ast\boldsymbol{v}= \boldsymbol{BD}\begin{bmatrix} \langle \boldsymbol{v},\,\boldsymbol{e}_1\rangle \\ \vdots \\ \langle \boldsymbol{v},\, \boldsymbol{e}_M\rangle \end{bmatrix} = \boldsymbol{B}\begin{bmatrix} s_1\langle \boldsymbol{v},\,\boldsymbol{e}_1\rangle \\ \vdots \\ s_M\langle \boldsymbol{v},\, \boldsymbol{e}_M\rangle \end{bmatrix} = \sum_{i=1}^M s_i \langle \boldsymbol{v},\, \boldsymbol{e}_i \rangle \boldsymbol{f}_i = \boldsymbol{Av}
 \]</span></p>
@@ -893,7 +937,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-LA_for_svd" class="quarto-xref">명제&nbsp;<span>7.7</span></a> 를 생각하자. <span class="math inline">\(\boldsymbol{U} = \begin{bmatrix} \boldsymbol{f}_1 &amp; \cdots &amp; \boldsymbol{f}_m\end{bmatrix}\)</span> 라 하고 <span class="math inline">\(\boldsymbol{V}= \begin{bmatrix} \boldsymbol{e}_1 &amp; \cdots \boldsymbol{e}_n\end{bmatrix}\)</span> 라고 하자. (<a href="#thm-LA_svd_1" class="quarto-xref">정리&nbsp;<span>7.4</span></a> 의 <span class="math inline">\(\boldsymbol{B},\, \boldsymbol{D}\)</span> 보다 큰데, 왼쪽 특이벡터와 오른쪽 특이벡터 전체를 사용한다.)</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-LA_for_svd" class="quarto-xref">명제&nbsp;<span>7.8</span></a> 를 생각하자. <span class="math inline">\(\boldsymbol{U} = \begin{bmatrix} \boldsymbol{f}_1 &amp; \cdots &amp; \boldsymbol{f}_m\end{bmatrix}\)</span> 라 하고 <span class="math inline">\(\boldsymbol{V}= \begin{bmatrix} \boldsymbol{e}_1 &amp; \cdots \boldsymbol{e}_n\end{bmatrix}\)</span> 라고 하자. (<a href="#thm-LA_svd_1" class="quarto-xref">정리&nbsp;<span>7.4</span></a> 의 <span class="math inline">\(\boldsymbol{B},\, \boldsymbol{D}\)</span> 보다 큰데, 왼쪽 특이벡터와 오른쪽 특이벡터 전체를 사용한다.)</p>
 <p><a href="#thm-LA_svd_1" class="quarto-xref">정리&nbsp;<span>7.4</span></a> 에서 <span class="math inline">\(\boldsymbol{D}\)</span> 는 <span class="math inline">\(M \times M\)</span> 행렬이며 <span class="math inline">\(M \le \text{min}(m, n)\)</span> 이다. <span class="math inline">\(m \times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{\Sigma}\)</span> 을 1행 1열부터 <span class="math inline">\(M\)</span> 행 <span class="math inline">\(M\)</span> 열 까지를 <span class="math inline">\(\boldsymbol{D}\)</span> 와 같은 값을 가지며 나머지는 <span class="math inline">\(0\)</span> 인 행렬로 정의하자. 그렇다면, 임의의 <span class="math inline">\(\boldsymbol{v}\in \mathcal{M}_{n}(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -908,7 +952,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_adjoint_of_svd" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.8</strong></span> <span class="math inline">\(\boldsymbol{A} \in \mathcal{M}_{m\times n}(\mathbb{F})\)</span> 의 오른쪽 특이벡터와 왼쪽 특이벡터는 각각 <span class="math inline">\(\boldsymbol{A}^\ast\)</span> 의 왼쪽 특이벡터와 오른쪽 특이벡터이다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 <span class="math inline">\(0\)</span> 이 아닌 특이값 <span class="math inline">\(s_1 \ge \cdots \ge s_M&gt;0\)</span> 을 가질 때 <span class="math inline">\(\boldsymbol{u}\in \mathcal{M}_m(\mathbb{F})\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>명제 7.9</strong></span> <span class="math inline">\(\boldsymbol{A} \in \mathcal{M}_{m\times n}(\mathbb{F})\)</span> 의 오른쪽 특이벡터와 왼쪽 특이벡터는 각각 <span class="math inline">\(\boldsymbol{A}^\ast\)</span> 의 왼쪽 특이벡터와 오른쪽 특이벡터이다. <span class="math inline">\(\boldsymbol{A}\)</span> 가 <span class="math inline">\(0\)</span> 이 아닌 특이값 <span class="math inline">\(s_1 \ge \cdots \ge s_M&gt;0\)</span> 을 가질 때 <span class="math inline">\(\boldsymbol{u}\in \mathcal{M}_m(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
 \boldsymbol{A}^\ast\boldsymbol{u} = \sum_{j=1}^M s_j\langle \boldsymbol{u},\,\boldsymbol{f}_j\rangle \boldsymbol{e}_j
 \]</span></p>
@@ -926,7 +970,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_inverse_matrix_using_svd" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.9</strong></span> <span class="math inline">\(\boldsymbol{A}\)</span> 가 가역행렬이라고 하자. <span class="math inline">\(\boldsymbol{A}= \boldsymbol{U\Sigma V}^\ast\)</span> 일 때</p>
+<p><span class="theorem-title"><strong>명제 7.10</strong></span> <span class="math inline">\(\boldsymbol{A}\)</span> 가 가역행렬이라고 하자. <span class="math inline">\(\boldsymbol{A}= \boldsymbol{U\Sigma V}^\ast\)</span> 일 때</p>
 <p><span class="math display">\[
 \left(\overline{\boldsymbol{\Sigma}}\right)_{ij} = \left\{\begin{array}{ll} 1/\Sigma_{ii} \qquad &amp;\text{if } i=j,\, s_i \ne 0 \\ 0&amp;\text{otherwise} \end{array} \right.
 \]</span></p>
@@ -938,7 +982,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{A}\)</span> 가 가역행렬이면 정사각 행렬이며, <a href="#prp-LA_properties_of_singular_value" class="quarto-xref">명제&nbsp;<span>7.5</span></a> 에 따라 <span class="math inline">\(\boldsymbol{\Sigma}\)</span> 는 대각성분이 모두 <span class="math inline">\(0\)</span> 이 아닌 대각행렬이며 따라서 <span class="math inline">\(\boldsymbol{\Sigma\overline{\Sigma}} = \boldsymbol{I}\)</span> 이다. 이를 이용하면</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\boldsymbol{A}\)</span> 가 가역행렬이면 정사각 행렬이며, <a href="#prp-LA_properties_of_singular_value" class="quarto-xref">명제&nbsp;<span>7.6</span></a> 에 따라 <span class="math inline">\(\boldsymbol{\Sigma}\)</span> 는 대각성분이 모두 <span class="math inline">\(0\)</span> 이 아닌 대각행렬이며 따라서 <span class="math inline">\(\boldsymbol{\Sigma\overline{\Sigma}} = \boldsymbol{I}\)</span> 이다. 이를 이용하면</p>
 <p><span class="math display">\[
 \boldsymbol{A}(\boldsymbol{V\overline{\Sigma} U}^\ast)  = (\boldsymbol{U\Sigma V}^\ast)(\boldsymbol{V\overline{\Sigma} U}^\ast)= \boldsymbol{U\Sigma \overline{\Sigma} U}^\ast = \boldsymbol{UU}^\ast = \boldsymbol{I}
 \]</span></p>
@@ -950,28 +994,28 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <h3 class="unnumbered anchored" data-anchor-id="연습문제-2">연습문제</h3>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_1" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.12 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이다. <span class="math inline">\(L=0\)</span> 인 것의 필요충분 조건은 <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 인 것임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.15 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이다. <span class="math inline">\(L=0\)</span> 인 것의 필요충분 조건은 <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 인 것임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(L=0\)</span> 이면 <span class="math inline">\(L^\ast L=0\)</span> 이므로 <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 이다. <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 이면 <a href="#prp-LA_properties_of_singular_value" class="quarto-xref">명제&nbsp;<span>7.5</span></a> (<span class="math inline">\(2\)</span>) 에 의해 <span class="math inline">\(\text{rank}(L)=0\)</span> 이므로 <span class="math inline">\(L=0\)</span> 이다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(L=0\)</span> 이면 <span class="math inline">\(L^\ast L=0\)</span> 이므로 <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 이다. <span class="math inline">\(L\)</span> 의 모든 특이값이 <span class="math inline">\(0\)</span> 이면 <a href="#prp-LA_properties_of_singular_value" class="quarto-xref">명제&nbsp;<span>7.6</span></a> (<span class="math inline">\(2\)</span>) 에 의해 <span class="math inline">\(\text{rank}(L)=0\)</span> 이므로 <span class="math inline">\(L=0\)</span> 이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_2" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.13 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이며 <span class="math inline">\(s&gt;0\)</span> 이다. <span class="math inline">\(s\)</span> 가 <span class="math inline">\(L\)</span> 의 특이값일 필요충분조건은 어떤 nonzero vector <span class="math inline">\(v\in V,\, w\in W\)</span> 에 대해 <span class="math inline">\(Lv=sw\)</span> 이며 <span class="math inline">\(L^\ast w = sv\)</span> 임을 보여라. (이런 조건을 만족하는 <span class="math inline">\(v,\,w\)</span> 를 <strong>슈미트 쌍(Schmidt pair)</strong> 라고 한다.)</p>
+<p><span class="theorem-title"><strong>연습문제 7.16 (Axler4th 7.E.1)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이며 <span class="math inline">\(s&gt;0\)</span> 이다. <span class="math inline">\(s\)</span> 가 <span class="math inline">\(L\)</span> 의 특이값일 필요충분조건은 어떤 nonzero vector <span class="math inline">\(v\in V,\, w\in W\)</span> 에 대해 <span class="math inline">\(Lv=sw\)</span> 이며 <span class="math inline">\(L^\ast w = sv\)</span> 임을 보여라. (이런 조건을 만족하는 <span class="math inline">\(v,\,w\)</span> 를 <strong>슈미트 쌍(Schmidt pair)</strong> 라고 한다.)</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof solution">
-<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(s\)</span> 가 <span class="math inline">\(L\)</span> 의 특이값이라고 가정하자. <a href="#prp-LA_for_svd" class="quarto-xref">명제&nbsp;<span>7.7</span></a> 에서 <span class="math inline">\(v=e_j,\, w=f_j\)</span> 라고 잡으면 <span class="math inline">\(Lv = sw\)</span> 이다. 또한 <span class="math inline">\(s^2 v = L^\ast L v = sL^\ast w\)</span> 이므로 <span class="math inline">\(L^\ast w = sv\)</span> 이다.</p>
+<p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(s\)</span> 가 <span class="math inline">\(L\)</span> 의 특이값이라고 가정하자. <a href="#prp-LA_for_svd" class="quarto-xref">명제&nbsp;<span>7.8</span></a> 에서 <span class="math inline">\(v=e_j,\, w=f_j\)</span> 라고 잡으면 <span class="math inline">\(Lv = sw\)</span> 이다. 또한 <span class="math inline">\(s^2 v = L^\ast L v = sL^\ast w\)</span> 이므로 <span class="math inline">\(L^\ast w = sv\)</span> 이다.</p>
 <p><span class="math inline">\(Lv=sw\)</span> 이며 <span class="math inline">\(L^\ast w=sv\)</span> 라면 <span class="math inline">\(L^\ast L v= s^2 v\)</span> 이므로 <span class="math inline">\(s\)</span> 는 <span class="math inline">\(L\)</span> 의 특이값이다.</p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_3" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.14 (Axler4th 7.E.3)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 이다. <span class="math inline">\(L\)</span> 의 고유값은 <span class="math inline">\(0\)</span> 이며 특이값은 <span class="math inline">\(0,\,5\)</span> 인 예를 들어라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.17 (Axler4th 7.E.3)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 이다. <span class="math inline">\(L\)</span> 의 고유값은 <span class="math inline">\(0\)</span> 이며 특이값은 <span class="math inline">\(0,\,5\)</span> 인 예를 들어라.</p>
 </div>
 </div>
 <p><br></p>
@@ -981,7 +1025,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_4" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.15 (Axler4th 7.E.4)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1\)</span> 이 <span class="math inline">\(L\)</span> 의 가장 큰 특이값이며 <span class="math inline">\(s_n\)</span> 이 가장 작은 특이값이라고 하자.</p>
+<p><span class="theorem-title"><strong>연습문제 7.18 (Axler4th 7.E.4)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1\)</span> 이 <span class="math inline">\(L\)</span> 의 가장 큰 특이값이며 <span class="math inline">\(s_n\)</span> 이 가장 작은 특이값이라고 하자.</p>
 <p><span class="math display">\[
 \{\|Lv\| : v\in V,\, \|v\|=1\}=[s_n,\,s_1]
 \]</span></p>
@@ -998,7 +1042,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_5" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.16 (Axler4th 7.E.5)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 가 <span class="math inline">\(T(x,\,y) = (-4y,\,x)\)</span> 로 정의되었다. <span class="math inline">\(L\)</span> 의 특이값을 구하라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.19 (Axler4th 7.E.5)</strong></span> <span class="math inline">\(L\in \mathcal{L}(\mathbb{C}^2)\)</span> 가 <span class="math inline">\(T(x,\,y) = (-4y,\,x)\)</span> 로 정의되었다. <span class="math inline">\(L\)</span> 의 특이값을 구하라.</p>
 </div>
 </div>
 <p><br></p>
@@ -1008,7 +1052,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_7" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.17 (Axler4th 7.E.7)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 에르미트 이거나 <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span> 이고 <span class="math inline">\(L\)</span> 이 정규행렬이라고 하자. <span class="math inline">\(\lambda_1,\ldots,\,\lambda_n\)</span> 이 <span class="math inline">\(L\)</span> 의 고유값이며 고유공간의 차원에 맞추어 중복되어 있다. <span class="math inline">\(L\)</span> 의 특이값은 <span class="math inline">\(|\lambda_1|,\ldots,\,|\lambda_n|\)</span> 임을 보여라.</p>
+<p><span class="theorem-title"><strong>연습문제 7.20 (Axler4th 7.E.7)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 가 에르미트 이거나 <span class="math inline">\(\mathbb{F}=\mathbb{C}\)</span> 이고 <span class="math inline">\(L\)</span> 이 정규행렬이라고 하자. <span class="math inline">\(\lambda_1,\ldots,\,\lambda_n\)</span> 이 <span class="math inline">\(L\)</span> 의 고유값이며 고유공간의 차원에 맞추어 중복되어 있다. <span class="math inline">\(L\)</span> 의 특이값은 <span class="math inline">\(|\lambda_1|,\ldots,\,|\lambda_n|\)</span> 임을 보여라.</p>
 </div>
 </div>
 <p><br></p>
@@ -1018,7 +1062,7 @@ p(N)(e_i) = \overline{N_{ii}}e_i = N^\ast_{ii}e_i = N^\ast (e_i)
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-axler4_7_E_8" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 7.18 (Axler4th 7.E.8)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1,\ldots,\,s_m\)</span> 이 <span class="math inline">\(s_1\ge \cdots \ge s_m &gt; 0\)</span> 이며 <span class="math inline">\(e_1,\ldots,\,e_m\)</span> 은 <span class="math inline">\(V\)</span> 의 정규직교벡터이고 <span class="math inline">\(f_1,\ldots,\,f_m\)</span> 은 <span class="math inline">\(W\)</span> 의 정규직교벡터이며 <span class="math inline">\(v\in V\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>연습문제 7.21 (Axler4th 7.E.8)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 이고 <span class="math inline">\(s_1,\ldots,\,s_m\)</span> 이 <span class="math inline">\(s_1\ge \cdots \ge s_m &gt; 0\)</span> 이며 <span class="math inline">\(e_1,\ldots,\,e_m\)</span> 은 <span class="math inline">\(V\)</span> 의 정규직교벡터이고 <span class="math inline">\(f_1,\ldots,\,f_m\)</span> 은 <span class="math inline">\(W\)</span> 의 정규직교벡터이며 <span class="math inline">\(v\in V\)</span> 에 대해</p>
 <p><span class="math display">\[
 Lv = s_1 \langle v,\,e_1\rangle f_1 + \cdots + s_n \langle v,\,e_n\rangle f_n
 \]</span></p>
@@ -1053,7 +1097,7 @@ LL^\ast w = s_1^2 \langle w,\,f_1\rangle f_1 + \cdots + s_m^2 \langle w,\,f_m\ra
 <h3 data-number="7.4.1" class="anchored" data-anchor-id="sec-LA_norm_of_matrix"><span class="header-section-number">7.4.1</span> 행렬의 노름</h3>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_norm_of_matrix" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.10</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 의 가장 큰 특이값을 <span class="math inline">\(s_M\)</span> 이라고 하면 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 7.11</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 의 가장 큰 특이값을 <span class="math inline">\(s_M\)</span> 이라고 하면 다음이 성립한다.</p>
 <p><span class="math display">\[
 \forall \boldsymbol{v}\in \mathcal{M}_n(\mathbb{F}),\qquad \|\boldsymbol{Av}\| \le s_M \|\boldsymbol{v}\|.
 \]</span></p>
@@ -1070,7 +1114,7 @@ LL^\ast w = s_1^2 \langle w,\,f_1\rangle f_1 + \cdots + s_m^2 \langle w,\,f_m\ra
 <p>이다. 마지막 부등호는 베셀 부등식(<a href="ch1_05_innerproduct.html#prp-LA_properties_of_orthonormal_vectors" class="quarto-xref">명제&nbsp;<span>5.6</span></a> (<span class="math inline">\(3\)</span>)) 으로부터 성립한다. 따라서 <span class="math inline">\(\|\boldsymbol{Av}\| \le s_M \|\boldsymbol{v}\|\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p><a href="#prp-LA_norm_of_matrix" class="quarto-xref">명제&nbsp;<span>7.10</span></a> 의 최대 특이값 <span class="math inline">\(s_M\)</span> 을 갖는 벡터는 <span class="math inline">\({s_M}^2\)</span> 의 고유값에 대한 <span class="math inline">\(\boldsymbol{A}^\ast\boldsymbol{A}\)</span> 의 고유벡터이므로 항상 존재한다. <span class="math inline">\(\boldsymbol{v}\ne \boldsymbol{0}\)</span> 에 대해</p>
+<p><a href="#prp-LA_norm_of_matrix" class="quarto-xref">명제&nbsp;<span>7.11</span></a> 의 최대 특이값 <span class="math inline">\(s_M\)</span> 을 갖는 벡터는 <span class="math inline">\({s_M}^2\)</span> 의 고유값에 대한 <span class="math inline">\(\boldsymbol{A}^\ast\boldsymbol{A}\)</span> 의 고유벡터이므로 항상 존재한다. <span class="math inline">\(\boldsymbol{v}\ne \boldsymbol{0}\)</span> 에 대해</p>
 <p><span class="math display">\[
 \dfrac{\|\boldsymbol{Av}\|}{\|\boldsymbol{v}\|} \le s_M
 \]</span></p>
@@ -1094,7 +1138,7 @@ LL^\ast w = s_1^2 \langle w,\,f_1\rangle f_1 + \cdots + s_m^2 \langle w,\,f_m\ra
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_anothor_definitions_of_matrix_norm" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.11 (노름의 다양한 정의)</strong></span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 다음 네 값은 같다. 즉 행렬의 노름에 대해 4가지 동등한 정의가 존재한다.</p>
+<p><span class="theorem-title"><strong>명제 7.12 (노름의 다양한 정의)</strong></span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 다음 네 값은 같다. 즉 행렬의 노름에 대해 4가지 동등한 정의가 존재한다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\max \{ \|\boldsymbol{Av}\| : \|\boldsymbol{v}\|=1 \}\)</span></p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\max \{ \|\boldsymbol{Av}\| : \|\boldsymbol{v}\|\le 1 \}\)</span></p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\boldsymbol{A}\)</span> 의 최대 특이값.</p>
@@ -1109,7 +1153,7 @@ LL^\ast w = s_1^2 \langle w,\,f_1\rangle f_1 + \cdots + s_m^2 \langle w,\,f_m\ra
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_properties_of_matrix_norm" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.12</strong></span> 행렬의 노름 <span class="math inline">\(\|\cdot \|\)</span> 에 대해 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 7.13</strong></span> 행렬의 노름 <span class="math inline">\(\|\cdot \|\)</span> 에 대해 다음이 성립한다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\|\boldsymbol{A}\|\ge 0\)</span>.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\|\boldsymbol{A}\|=0 \iff \boldsymbol{A} =\boldsymbol{0}\)</span>.</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(c\in \mathbb{F}\)</span> 에 대해 <span class="math inline">\(\|c\boldsymbol{A}\| = |c|\|\boldsymbol{A}\|\)</span>.</p>
@@ -1124,7 +1168,7 @@ LL^\ast w = s_1^2 \langle w,\,f_1\rangle f_1 + \cdots + s_m^2 \langle w,\,f_m\ra
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(\boldsymbol{A}=0\)</span> 이면 당연히 <span class="math inline">\(\|\boldsymbol{A}\|=0\)</span> 이다. <span class="math inline">\(\|\boldsymbol{A}\|=0\)</span> 이면 모든 <span class="math inline">\(\boldsymbol{v}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{Av}=\boldsymbol{0}\)</span> 이어야 하므로 <span class="math inline">\(\boldsymbol{A}=\boldsymbol{0}\)</span> 이다.</p>
 <p>(<span class="math inline">\(3\)</span>) <span class="math inline">\(\|c\boldsymbol{Av}\| = |c|\|\boldsymbol{Av}\|\)</span>.</p>
 <p>(<span class="math inline">\(4\)</span>) <span class="math inline">\(\|(\boldsymbol{A}+\boldsymbol{B})\boldsymbol{v}\| = \|\boldsymbol{Av}+\boldsymbol{Bv}\|  \le \|\boldsymbol{Av}\| +\|\boldsymbol{Bv}\|\)</span>.</p>
-<p>(<span class="math inline">\(5\)</span>) <a href="#prp-LA_anothor_definitions_of_matrix_norm" class="quarto-xref">명제&nbsp;<span>7.11</span></a> 의 (<span class="math inline">\(4\)</span>) 로 부터 <span class="math inline">\(\|\boldsymbol{A}\| \ge \dfrac{\|\boldsymbol{Av}\|}{\|\boldsymbol{v}\|}\)</span> 이다.</p>
+<p>(<span class="math inline">\(5\)</span>) <a href="#prp-LA_anothor_definitions_of_matrix_norm" class="quarto-xref">명제&nbsp;<span>7.12</span></a> 의 (<span class="math inline">\(4\)</span>) 로 부터 <span class="math inline">\(\|\boldsymbol{A}\| \ge \dfrac{\|\boldsymbol{Av}\|}{\|\boldsymbol{v}\|}\)</span> 이다.</p>
 <p>(<span class="math inline">\(6\)</span>) <span class="math inline">\(\|\boldsymbol{A}^\ast\boldsymbol{v}\|^2 = \langle \boldsymbol{AA}^\ast\boldsymbol{v},\, \boldsymbol{v}\rangle \le \boldsymbol{v} \le \|\boldsymbol{AA}^\ast\boldsymbol{v}\|\|\boldsymbol{v}\|\)</span> 이며 (<span class="math inline">\(5\)</span>) 로 부터</p>
 <p><span class="math display">\[
 \|\boldsymbol{AA}^\ast\boldsymbol{v}\| = \|\boldsymbol{A}(\boldsymbol{A}^\ast\boldsymbol{v})\| \le \|\boldsymbol{A}\|\|\boldsymbol{A}^\ast\boldsymbol{v}\|\|\boldsymbol{v}\|
@@ -1152,7 +1196,7 @@ LL^\ast w = s_1^2 \langle w,\,f_1\rangle f_1 + \cdots + s_m^2 \langle w,\,f_m\ra
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_approximation_using_svd" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.13</strong></span> <span class="math inline">\(\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 가 양의 특이값 <span class="math inline">\(s_1 \ge s_2 \ge \ldots \ge s_m&gt;0\)</span> 을 갖는다고 하자. <span class="math inline">\(k \le m\)</span> 에 대해 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>명제 7.14</strong></span> <span class="math inline">\(\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 가 양의 특이값 <span class="math inline">\(s_1 \ge s_2 \ge \ldots \ge s_m&gt;0\)</span> 을 갖는다고 하자. <span class="math inline">\(k \le m\)</span> 에 대해 다음이 성립한다.</p>
 <p><span class="math display">\[
 \min \{ \|\boldsymbol{A}-\boldsymbol{B} \| : \boldsymbol{B}\in \mathcal{M}_{m \times n}(\mathbb{F}),\, \text{rank}(\boldsymbol{B})\le k\} = s_{k+1}.
 \]</span></p>
@@ -1203,7 +1247,7 @@ a_1 \boldsymbol{Be}_1 + \cdots + a_{k+1}\boldsymbol{Be}_{k+1} = \boldsymbol{0}
 <h3 data-number="7.4.3" class="anchored" data-anchor-id="sec-LA_polar_decomposition"><span class="header-section-number">7.4.3</span> 극분해</h3>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_polar_decomposition" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 7.14</strong></span> 정사각행렬 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 는 어떤 유니타리 행렬 <span class="math inline">\(\boldsymbol{U}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{A}=\boldsymbol{S}\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>명제 7.15</strong></span> 정사각행렬 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 는 어떤 유니타리 행렬 <span class="math inline">\(\boldsymbol{U}\)</span> 에 대해 <span class="math inline">\(\boldsymbol{A}=\boldsymbol{S}\sqrt{\boldsymbol{A}^\ast\boldsymbol{A}}\)</span> 이다.</p>
 </div>
 </div>
 <div class="proof">
@@ -1217,7 +1261,7 @@ a_1 \boldsymbol{Be}_1 + \cdots + a_{k+1}\boldsymbol{Be}_{k+1} = \boldsymbol{0}
 </div>
 <div class="callout-body-container">
 <div id="def-polar_decomposition" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 7.5 (행렬의 극분해)</strong></span> <a href="#prp-LA_polar_decomposition" class="quarto-xref">명제&nbsp;<span>7.14</span></a> 에 따라 정사각 행렬을 유니타리 행렬과 non-negative 행렬의 곱으로 표현하는 것을 행렬의 <strong>극분해(polar decomposition)</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 7.5 (행렬의 극분해)</strong></span> <a href="#prp-LA_polar_decomposition" class="quarto-xref">명제&nbsp;<span>7.15</span></a> 에 따라 정사각 행렬을 유니타리 행렬과 non-negative 행렬의 곱으로 표현하는 것을 행렬의 <strong>극분해(polar decomposition)</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>
