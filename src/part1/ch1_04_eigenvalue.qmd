@@ -29,7 +29,7 @@ $$
 L(U) \le U
 $$
 
-이면 $U$ 를 $L$ 에 대한 $V$ 의 **불변부분공간(invariant subspace)** 라고 한다.
+이면 $U$ 를 $L$ 에 대한 $V$ 의 **불변부분공간(invariant subspace)**, 혹은 $L$-**불변부분공간** 이라고 한다.
 :::
 :::
 
@@ -57,6 +57,25 @@ $L\in \mathcal{L}(V)$ 에 대해 다음이 성립한다.
 ($3$) $u\in L(\im (L)) \implies u \in \im L$. $\square$
 
 :::
+
+</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-LA_invariant_subspace_and_eigenvector}
+
+$L\in \mathcal{L}(V)$ 이고 $U$ 가 $L$-불변 부분공간이라고 하자. 서로 다른 고유값을 가지는 $L$ 의 고유벡터 $v_1,\ldots,\,v_k$ 에 대해 $v_1+\cdots + v_k\in U$ 이면 각각의 $v_1,\ldots,\,v_k \in U$ 이다.
+
+:::
+
+</div>
+
+::: {.proof}
+
+$Lv_i = c_iv_i$ 라고 하자. $k$ 에 대한 induction 으로 증명한다. $k=1$ 일 경우는 자명하다. 이제 $k>1$ 에 대해 생각하자. $v=v_1+\cdots + v_k$ 에 대해 $Lv\in U$ 라고 하자. 그렇다면 
+$$
+Lv-c_kv=(c_1−c_k)v_1 + \cdots + (c_{k-1}−c_k)v_{k-1} \in U
+$$
+
+이면 induction 에 대한 가정으로 $v_1,\ldots,\,v_{k-1}\in U$ 이다. 
 
 </br>
 
@@ -586,7 +605,6 @@ $\lambda$ 를 미지수로 간주하면 $n \times n$ 행렬 $\bf{A}$ 에 대해 
 </br>
 
 다음은 행렬식의 성질을 생각하면 너무나도 당연하다.
-
 
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
