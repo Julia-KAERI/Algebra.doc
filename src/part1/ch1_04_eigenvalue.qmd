@@ -12,10 +12,6 @@ crossref:
 
 ## 고유값, 고유벡터, 고유공간
 
-함수 $f:X \to Y$ 와 $A \subset X$ 에 대해 $f(A) := \{f(a):a\in A\}$ 라고 하는 것처럼 선형사상 $L\in \mathcal{L}(V,\,W)$ 와 $U\subset V$ 에 대해 $L(U) = \{Lu:u\in U\}$ 라고 하자.
-
-</br>
-
 ### 고유값, 고유벡터, 고유공간 {#sec-LA_eigens}
 
 ::: {.callout-note appearance="simple" icon="false"}
@@ -1019,10 +1015,9 @@ $n$ 차원 $\F$-벡터공간에서 $V$ 에서 정의된 $L \in \mathcal{L}(V)$ �
 
 ::: {.proof}
 
-$L$ 을 대각화 하는 기저 $\mathcal{B}=(v_1,\ldots,v_n)$ 을 생각하자. 우선 모든 $v_i$ 에 대한 고유값이 다르다면 @prp-LA_invariant_subspace_and_eigenvector 에 의해 $U$ 는 $U$ 에 속하는 $\mathcal{B}$ 의 부분집합을 기저로 가지며 이 기저에서 $L|_U$ 는 대각화된다. $U$ 의 기저 $\mathcal{B}_U =(u_1,\ldots,\,u_m)$ 을 생각하자. $u_i = \sum_i a_{ji}v_j$ 라면 $a_{ji}\ne 0$ 이 아닌 모든 $v_i$ 는
+$L$ 을 대각화 하는 기저 $\mathcal{B}=(v_1,\ldots,v_n)$ 을 생각하자. 우선 모든 $v_i$ 에 대한 고유값이 다르다면 @prp-LA_invariant_subspace_and_eigenvector 에 의해 $U$ 는 $U$ 에 속하는 $\mathcal{B}$ 의 부분집합을 기저로 가지며 이 기저에서 $L|_U$ 는 대각화된다. 
 
-
-
+이제 $\mathcal{B}$ 에 같은 고유값을 갖는 다른 고유벡터가 존재하는 경우를 보자. $U$ 역시 벡터공간이므로 같은 고유값을 같은 $U$ 의 벡터의 집합은 $U$ 의 부분공간이며, 이를 $E_U(c_i,\,L|_U)$ 라고 할 수 있으며 $U=\bigoplus E_U(c_i,L|_U)$ 이다. 즉 $L|_U$ 는 $U$ 에서 대각화 가능하다. $\square$
 :::
 
 </br>
@@ -1242,7 +1237,7 @@ $0$ 연산자의 행렬표현은 $\bf{0}$ 행렬이므로 $LK-KL=0$ 이면 $[L][
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
-::: {#prp-LA_matrix_representation_of_compatible_matrix}
+::: {#prp-LA_compatible_matrices_and_invariant_subspace}
 
 교환 가능한 두 연산자 $L,\,K\in \mathcal{L}(V)$ 에 대해 $L$ 의 고유공간은 $K$ 에 대한 불변 부분공간이다.
 
@@ -1269,7 +1264,26 @@ $v\in E(c,\, L)$ 이라고 하자. $LKv = KLv = cKv$ 이므로 $Kv\in E(c,\, L)$
 
 우선 $L,\,K\in \mathcal{L}(V)$ 가 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 에서 동시에 대각화 가능하다고 하자. 즉 $Lv_i = l_i v_i,\, Kv_i = k_iv_i$ 라고 하자. $(LK-KL)v_i = 0$ 이므로 $LK-KL=0$ 이다.
 
-두 연산자가 교환가능함을 가정하자. $K$ 가 대각화 가능 연산자이므로 $K$ 에 대한 고유값이 $k_1,\ldots,\,k_m$ 일 때 $V=\bigoplus_{k=1}^m E(k_i,\, K)$ 이다. @prp-LA_matrix_representation_of_compatible_matrix 에 의해 $E(k_i,\,K)$ 는 $L$ 에 대한 불변부분공간이며 
-
+두 연산자가 교환가능함을 가정하자. $K$ 가 대각화 가능 연산자이므로 $K$ 에 대한 고유값이 $k_1,\ldots,\,k_m$ 일 때 $V=\bigoplus_{k=1}^m E(k_i,\, K)$ 이다. @prp-LA_compatible_matrices_and_invariant_subspace 에 의해 $E(k_i,\,K)$ 는 $L$ 에 대한 불변부분공간이며 @prp-LA_diagoalizability_to_invariant_subspace 에 따라 각각의 $E(k_i,\, K)$ 에서 $L|_{E(k_i,\,K)}$ 은 대각화 가능하다. 각각의 $E(k_i,\,K)$ 에서 $L|_{E(k_i,\,K)}$ 를 대각화 하는 부분공간의 기저를 모으고 이을 $\mathcal{B}=(v_1,\ldots,\,v_n)$ 이라고 하면 이 이 기저는 $L$ 을 대각화하므로 어떤 $li\in \F$ 에 대해 $Lv_i = l_i v_i$ 이며 $K$ 의 고유벡터이므로 역시 어떤 $k_i\in \F$ 에 대해 $Kv_i = k_i v_i$ 이다. 즉 $[L]_\mathcal{B}$ 와 $[K]_\mathcal{B}$ 는 대각행렬이다. $\square$
 
 :::
+
+</br>
+
+위의 정리는 대각화 가능한 두 연산자가 교환가능한 것과 공통으로 대각화하는 기저가 존재하는 것이 동치임을 보인다. 아래 명제는 대각화 가능하지 않더라도 유한차원 $\C$-벡터공간에서는 두 연산자가 교환가능할 경우 공통의 고유벡터를 가진다는 것을 말한다.
+
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+
+::: {#prp-LA_common_eigenvectors_for_commuting_operators}
+
+유한차원 $\C$-벡터공간에서 정의된 두 연산자 $L,\,K$ 에 대해 $LK=KL$ 이면 두 연산자에 공통인 고유벡터가 존재한다.
+:::
+
+</div>
+
+::: {.proof}
+
+@thm-LA_existance_of_eigenvector_for_complex_field 에 의해 $L$ 과 $K$ 는 각각 고유벡터가 존재하며 따라서 $E(k_i,\,K) \ne \varnothing$ 인 $k_i$ 가 존재한다. 두 연산자가 교환가능하므로 @prp-LA_compatible_matrices_and_invariant_subspace 에 의해 $E(k_i,\,K)$ 는 $L$ 에 대한 불변부분공간이며 @prp-LA_diagoalizability_to_invariant_subspace 에 따라 각각의 $E(k_i,\, K)$ 에서 $L|_{E(k_i,\,K)}$ 은 대각화 가능하다. $\square$
+
+:::
+

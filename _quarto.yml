@@ -31,10 +31,10 @@ book:
       chapters:
         - src/part3/quotient_space.qmd
         - src/part3/dual_space.qmd
+        - src/part3/characteristic_polynomial.qmd
         - src/part3/bilinear_form.qmd
         - src/part3/laplacian_form_of_determinant.qmd
         - src/part3/generalized_inverse.qmd
-        - src/part3/characteristic_polynomial.qmd
         - src/part3/generalized_eigenspace.qmd
 
 

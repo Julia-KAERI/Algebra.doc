@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>15&nbsp; 행렬식의 라플라시안 형식 – 대수학</title>
+<title>16&nbsp; 행렬식의 라플라시안 형식 – 대수학</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/laplacian_form_of_determinant.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/laplacian_form_of_determinant.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -253,26 +253,26 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../src/part3/characteristic_polynomial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">최소다항식과 케일리-해밀턴 정리</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../src/part3/bilinear_form.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/laplacian_form_of_determinant.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/generalized_inverse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/part3/characteristic_polynomial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">최소다항식과 케일리-해밀턴 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -311,16 +311,16 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#라플라스-전개를-이용한-행렬식" id="toc-라플라스-전개를-이용한-행렬식" class="nav-link active" data-scroll-target="#라플라스-전개를-이용한-행렬식"><span class="header-section-number">15.1</span> 라플라스 전개를 이용한 행렬식</a></li>
+  <li><a href="#라플라스-전개를-이용한-행렬식" id="toc-라플라스-전개를-이용한-행렬식" class="nav-link active" data-scroll-target="#라플라스-전개를-이용한-행렬식"><span class="header-section-number">16.1</span> 라플라스 전개를 이용한 행렬식</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/laplacian_form_of_determinant.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/part3/part3.html">III. 심화 선형대수학</a></li><li class="breadcrumb-item"><a href="../../src/part3/laplacian_form_of_determinant.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></h1>
+<h1 class="title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></h1>
 </div>
 
 
@@ -337,8 +337,8 @@ window.Quarto = {
 </header>
 
 
-<section id="라플라스-전개를-이용한-행렬식" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="라플라스-전개를-이용한-행렬식"><span class="header-section-number">15.1</span> 라플라스 전개를 이용한 행렬식</h2>
+<section id="라플라스-전개를-이용한-행렬식" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="라플라스-전개를-이용한-행렬식"><span class="header-section-number">16.1</span> 라플라스 전개를 이용한 행렬식</h2>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -381,7 +381,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_part3_minor_of_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 15.1 (Minor)</strong></span> <span class="math inline">\(n \times n\)</span> 정사각 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 <span class="math inline">\(i\)</span> 번째 행과 <span class="math inline">\(j\)</span> 번째 열을 제거한 <span class="math inline">\((n-1)\times (n-1)\)</span> 행렬의 행렬식을 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 <span class="math inline">\((i,\,j)\)</span>-minor 라고 부르고 <span class="math inline">\(M_{ij}\)</span> 혹은 <span class="math inline">\(M_{ij}(\boldsymbol{A})\)</span> 라고 쓴다.</p>
+<p><span class="theorem-title"><strong>정의 16.1 (Minor)</strong></span> <span class="math inline">\(n \times n\)</span> 정사각 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 <span class="math inline">\(i\)</span> 번째 행과 <span class="math inline">\(j\)</span> 번째 열을 제거한 <span class="math inline">\((n-1)\times (n-1)\)</span> 행렬의 행렬식을 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 <span class="math inline">\((i,\,j)\)</span>-minor 라고 부르고 <span class="math inline">\(M_{ij}\)</span> 혹은 <span class="math inline">\(M_{ij}(\boldsymbol{A})\)</span> 라고 쓴다.</p>
 </div>
 </div>
 </div>
@@ -394,14 +394,14 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-ALA_minor_expansion" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 15.2 (라플라스 전개)</strong></span> <span class="math inline">\(n\times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 <span class="math inline">\((i,\,j)\)</span>-minor 를 <span class="math inline">\(M_{ij}\)</span> 라고 할 때 아래 함수 <span class="math inline">\(D^{j}:\mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}\)</span> 를 <strong><span class="math inline">\(j\)</span>-번째 열에 대한 라플라스 전개</strong>라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 16.2 (라플라스 전개)</strong></span> <span class="math inline">\(n\times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 <span class="math inline">\((i,\,j)\)</span>-minor 를 <span class="math inline">\(M_{ij}\)</span> 라고 할 때 아래 함수 <span class="math inline">\(D^{j}:\mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}\)</span> 를 <strong><span class="math inline">\(j\)</span>-번째 열에 대한 라플라스 전개</strong>라고 한다.</p>
 <p><span id="eq-ALA_laplace_expansion_for_column"><span class="math display">\[
 D^j(\boldsymbol{A}) :=   \sum_{i=1}^n (-1)^{i+j} A_{ij}M_{ij}.
-\tag{15.1}\]</span></span></p>
+\tag{16.1}\]</span></span></p>
 <p>같은 방법으로 <strong><span class="math inline">\(i\)</span>-번째 행에 대해 라플라스 전개</strong> <span class="math inline">\(D_i:\mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}\)</span> 를 아래와 같이 정의한다.</p>
 <p><span id="eq-ALA_laplace_expansion_for_row"><span class="math display">\[
 D_i(\boldsymbol{A}) :=   \sum_{j=1}^n (-1)^{i+j} A_{ij}M_{ij}.
-\tag{15.2}\]</span></span></p>
+\tag{16.2}\]</span></span></p>
 </div>
 </div>
 </div>
@@ -411,7 +411,7 @@ D_i(\boldsymbol{A}) :=   \sum_{j=1}^n (-1)^{i+j} A_{ij}M_{ij}.
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-ALA_laplace_expansion_and_k_laternating_form_0" class="theorem lemma">
-<p><span class="theorem-title"><strong>보조정리 15.1</strong></span> <span class="math inline">\(D_i(\boldsymbol{A}^T) = D^i (\boldsymbol{A})\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>보조정리 16.1</strong></span> <span class="math inline">\(D_i(\boldsymbol{A}^T) = D^i (\boldsymbol{A})\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -425,7 +425,7 @@ D_i(\boldsymbol{A}^T) = \sum_{j=1}^n (-1) (\boldsymbol{A}^T)_{ij} M_{ij}(\boldsy
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-ALA_laplace_expansion_and_k_laternating_form_1" class="theorem lemma">
-<p><span class="theorem-title"><strong>보조정리 15.2</strong></span> <span class="math inline">\(D_i(\boldsymbol{I}_n)=D^j(\boldsymbol{I}_n)=1\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>보조정리 16.2</strong></span> <span class="math inline">\(D_i(\boldsymbol{I}_n)=D^j(\boldsymbol{I}_n)=1\)</span> 이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -441,7 +441,7 @@ D_i(\boldsymbol{I}_n) = (-1)^{2i} M_{ii}
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-ALA_laplace_expansion_and_k_laternating_form_2" class="theorem lemma">
-<p><span class="theorem-title"><strong>보조정리 15.3</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대한 <span class="math inline">\(D_i(\boldsymbol{A})\)</span> 는 <span class="math inline">\(n\)</span>-교대형식이다.</p>
+<p><span class="theorem-title"><strong>보조정리 16.3</strong></span> <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대한 <span class="math inline">\(D_i(\boldsymbol{A})\)</span> 는 <span class="math inline">\(n\)</span>-교대형식이다.</p>
 </div>
 </div>
 <p><br></p>
@@ -474,17 +474,17 @@ D_i(\boldsymbol{A}) = (-1)^{i+k} A_{ik}M_{ik} +(-1)^{i+2m-k-1}A_{ik}M_{ik} = 0
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-ALA_laplacian_expansion_and_determinant" class="theorem">
-<p><span class="theorem-title"><strong>정리 15.1</strong></span> <a href="#def-ALA_minor_expansion" class="quarto-xref">정의&nbsp;<span>15.2</span></a> 의 <a href="#eq-ALA_laplace_expansion_for_row" class="quarto-xref">식&nbsp;<span>15.2</span></a> 와 <a href="#eq-ALA_laplace_expansion_for_column" class="quarto-xref">식&nbsp;<span>15.1</span></a> 은 모두 행렬식의 정의와 같다.</p>
+<p><span class="theorem-title"><strong>정리 16.1</strong></span> <a href="#def-ALA_minor_expansion" class="quarto-xref">정의&nbsp;<span>16.2</span></a> 의 <a href="#eq-ALA_laplace_expansion_for_row" class="quarto-xref">식&nbsp;<span>16.2</span></a> 와 <a href="#eq-ALA_laplace_expansion_for_column" class="quarto-xref">식&nbsp;<span>16.1</span></a> 은 모두 행렬식의 정의와 같다.</p>
 </div>
 </div>
 <p><br></p>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span><a href="#lem-ALA_laplace_expansion_and_k_laternating_form_1" class="quarto-xref">보조정리&nbsp;<span>15.2</span></a> 과 <a href="#lem-ALA_laplace_expansion_and_k_laternating_form_2" class="quarto-xref">보조정리&nbsp;<span>15.3</span></a> 에 의해 <span class="math inline">\(D_i(\boldsymbol{A})\)</span> 는 행렬식이다. 따라서 <span class="math inline">\(D_i(\boldsymbol{A})=D_i(\boldsymbol{A}^T)\)</span> 와 같다. 그런데 <a href="#lem-ALA_laplace_expansion_and_k_laternating_form_0" class="quarto-xref">보조정리&nbsp;<span>15.1</span></a> 에 의해 <span class="math inline">\(D_i(\boldsymbol{A}^T)=D^i(\boldsymbol{A}^T)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><a href="#lem-ALA_laplace_expansion_and_k_laternating_form_1" class="quarto-xref">보조정리&nbsp;<span>16.2</span></a> 과 <a href="#lem-ALA_laplace_expansion_and_k_laternating_form_2" class="quarto-xref">보조정리&nbsp;<span>16.3</span></a> 에 의해 <span class="math inline">\(D_i(\boldsymbol{A})\)</span> 는 행렬식이다. 따라서 <span class="math inline">\(D_i(\boldsymbol{A})=D_i(\boldsymbol{A}^T)\)</span> 와 같다. 그런데 <a href="#lem-ALA_laplace_expansion_and_k_laternating_form_0" class="quarto-xref">보조정리&nbsp;<span>16.1</span></a> 에 의해 <span class="math inline">\(D_i(\boldsymbol{A}^T)=D^i(\boldsymbol{A}^T)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-ALA_determinant_of_cartan_matrix" class="theorem exercise">
-<p><span class="theorem-title"><strong>연습문제 15.1 (카르탕 행렬 (Cartan matrix))</strong></span> <span class="math inline">\(n\ge 1\)</span> 에 대해 <span class="math inline">\(\boldsymbol{A}_n\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span>, <span class="math inline">\(n \ge 2\)</span> 에 대해 <span class="math inline">\(\boldsymbol{B}_n\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span>, <span class="math inline">\(n\ge 4\)</span> 에 대해 <span class="math inline">\(\boldsymbol{D}_n \in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 를 각각 아래와 같이 정의한다.</p>
+<p><span class="theorem-title"><strong>연습문제 16.1 (카르탕 행렬 (Cartan matrix))</strong></span> <span class="math inline">\(n\ge 1\)</span> 에 대해 <span class="math inline">\(\boldsymbol{A}_n\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span>, <span class="math inline">\(n \ge 2\)</span> 에 대해 <span class="math inline">\(\boldsymbol{B}_n\in \mathcal{M}_{n\times n}(\mathbb{F})\)</span>, <span class="math inline">\(n\ge 4\)</span> 에 대해 <span class="math inline">\(\boldsymbol{D}_n \in \mathcal{M}_{n\times n}(\mathbb{F})\)</span> 를 각각 아래와 같이 정의한다.</p>
 <p><span class="math display">\[
 \begin{aligned}
 (\boldsymbol{A}_n)_{ij} &amp;= \left\{\begin{array}{ll} 2 \qquad &amp;;\text{if } i=j\\ -1 &amp;;\text{if } |i-j| =  1 \\ 0 &amp;;\text{otherwise}\end{array}\right. . \\[1em]
@@ -941,12 +941,12 @@ M_{n, n-2} = 2\det(\boldsymbol{A}_{n-3})
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../src/part3/bilinear_form.html" class="pagination-link" aria-label="다중선형 형식">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../src/part3/generalized_inverse.html" class="pagination-link" aria-label="일반화된 역행렬과 유사역행렬">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
