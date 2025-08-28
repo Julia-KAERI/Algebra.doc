@@ -314,7 +314,31 @@ window.Quarto = {
   <li><a href="#고유값-고유벡터-고유공간" id="toc-고유값-고유벡터-고유공간" class="nav-link active" data-scroll-target="#고유값-고유벡터-고유공간"><span class="header-section-number">4.1</span> 고유값, 고유벡터, 고유공간</a>
   <ul class="collapse">
   <li><a href="#sec-LA_eigens" id="toc-sec-LA_eigens" class="nav-link" data-scroll-target="#sec-LA_eigens"><span class="header-section-number">4.1.1</span> 고유값, 고유벡터, 고유공간</a></li>
+  <li><a href="#sec-LA_eigenvalue_and_determinant" id="toc-sec-LA_eigenvalue_and_determinant" class="nav-link" data-scroll-target="#sec-LA_eigenvalue_and_determinant"><span class="header-section-number">4.1.2</span> 고유값과 행렬식</a></li>
+  <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
+  <li><a href="#특성다항식" id="toc-특성다항식" class="nav-link" data-scroll-target="#특성다항식"><span class="header-section-number">4.2</span> 특성다항식</a>
+  <ul class="collapse">
+  <li><a href="#sec-LA_polynomials_and_operators" id="toc-sec-LA_polynomials_and_operators" class="nav-link" data-scroll-target="#sec-LA_polynomials_and_operators"><span class="header-section-number">4.2.1</span> 다항식과 연산자</a></li>
+  <li><a href="#sec-LA_characteristic_polynomial" id="toc-sec-LA_characteristic_polynomial" class="nav-link" data-scroll-target="#sec-LA_characteristic_polynomial"><span class="header-section-number">4.2.2</span> 특성다항식</a></li>
+  <li><a href="#연습문제-1" id="toc-연습문제-1" class="nav-link" data-scroll-target="#연습문제-1">연습문제</a></li>
+  </ul></li>
+  <li><a href="#블록행렬과-불변부분공간" id="toc-블록행렬과-불변부분공간" class="nav-link" data-scroll-target="#블록행렬과-불변부분공간"><span class="header-section-number">4.3</span> 블록행렬과 불변부분공간</a>
+  <ul class="collapse">
+  <li><a href="#sec-LA_invariant_subspace_and_block_upper_triangular_matrix" id="toc-sec-LA_invariant_subspace_and_block_upper_triangular_matrix" class="nav-link" data-scroll-target="#sec-LA_invariant_subspace_and_block_upper_triangular_matrix"><span class="header-section-number">4.3.1</span> 불변 부분공간과 블럭 상삼각행렬</a></li>
+  </ul></li>
+  <li><a href="#행렬의-상삼각행렬로의-변환" id="toc-행렬의-상삼각행렬로의-변환" class="nav-link" data-scroll-target="#행렬의-상삼각행렬로의-변환"><span class="header-section-number">4.4</span> 행렬의 상삼각행렬로의 변환</a>
+  <ul class="collapse">
+  <li><a href="#상삼각-행렬로-닮음변환되는-행렬" id="toc-상삼각-행렬로-닮음변환되는-행렬" class="nav-link" data-scroll-target="#상삼각-행렬로-닮음변환되는-행렬"><span class="header-section-number">4.4.1</span> 상삼각 행렬로 닮음변환되는 행렬</a></li>
+  <li><a href="#sec-LA_matrix_and_upper_triangula_matrix_over_C" id="toc-sec-LA_matrix_and_upper_triangula_matrix_over_C" class="nav-link" data-scroll-target="#sec-LA_matrix_and_upper_triangula_matrix_over_C"><span class="header-section-number">4.4.2</span> 복소수체에서의 행렬과 상삼각행렬</a></li>
+  </ul></li>
+  <li><a href="#연산자와-행렬의-대각화" id="toc-연산자와-행렬의-대각화" class="nav-link" data-scroll-target="#연산자와-행렬의-대각화"><span class="header-section-number">4.5</span> 연산자와 행렬의 대각화</a>
+  <ul class="collapse">
+  <li><a href="#sec-LA_properties_of_eigen_space" id="toc-sec-LA_properties_of_eigen_space" class="nav-link" data-scroll-target="#sec-LA_properties_of_eigen_space"><span class="header-section-number">4.5.1</span> 고유공간의 성질</a></li>
+  <li><a href="#sec-LA_diagonalizable_matrix" id="toc-sec-LA_diagonalizable_matrix" class="nav-link" data-scroll-target="#sec-LA_diagonalizable_matrix"><span class="header-section-number">4.5.2</span> 대각화 가능한 연산자</a></li>
+  <li><a href="#연습문제-2" id="toc-연습문제-2" class="nav-link" data-scroll-target="#연습문제-2">연습문제</a></li>
+  </ul></li>
+  <li><a href="#교환-가능-연산자" id="toc-교환-가능-연산자" class="nav-link" data-scroll-target="#교환-가능-연산자"><span class="header-section-number">4.6</span> 교환 가능 연산자</a></li>
   </ul>
 </nav>
     </div>
@@ -354,7 +378,7 @@ window.Quarto = {
 <p>함수 <span class="math inline">\(f:X \to Y\)</span> 와 <span class="math inline">\(A \subset X\)</span> 에 대해 <span class="math inline">\(f(A) := \{f(a):a\in A\}\)</span> 라고 하는 것처럼 선형사상 <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 와 <span class="math inline">\(U\subset V\)</span> 에 대해 <span class="math inline">\(L(U) = \{Lu:u\in U\}\)</span> 라고 하자.</p>
 <p><br></p>
 <section id="sec-LA_eigens" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored"><span class="header-section-number">4.1.1</span> 고유값, 고유벡터, 고유공간</h3>
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="sec-LA_eigens"><span class="header-section-number">4.1.1</span> 고유값, 고유벡터, 고유공간</h3>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -395,7 +419,8 @@ L(U) \le U
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(Lv_i = c_iv_i\)</span> 라고 하자. <span class="math inline">\(k\)</span> 에 대한 induction 으로 증명한다. <span class="math inline">\(k=1\)</span> 일 경우는 자명하다. 이제 <span class="math inline">\(k&gt;1\)</span> 에 대해 생각하자. <span class="math inline">\(v=v_1+\cdots + v_k\)</span> 에 대해 <span class="math inline">\(Lv\in U\)</span> 라고 하자. 그렇다면 <span class="math display">\[
 Lv-c_kv=(c_1−c_k)v_1 + \cdots + (c_{k-1}−c_k)v_{k-1}
 \]</span></p>
-<p>이다. <span class="math inline">\(v\in U,\, Lv\in U\)</span> 이므로 <span class="math inline">\((c_1−c_k)v_1 + \cdots + (c_{k-1}−c_k)v_{k-1}\in U\)</span> 이nduction 에 대한 가정으로 <span class="math inline">\(v_1,\ldots,\,v_{k-1}\in U\)</span> 이다.</p>
+<p>이다. <span class="math inline">\(v\in U,\, Lv\in U\)</span> 이므로 <span class="math inline">\((c_1−c_k)v_1 + \cdots + (c_{k-1}−c_k)v_{k-1}\in U\)</span> 이 induction 에 대한 가정으로 <span class="math inline">\(v_1,\ldots,\,v_{k-1}\in U\)</span> 이다. <span class="math inline">\(\square\)</span></p>
+</div>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -445,6 +470,7 @@ L(v_1 + cv_2) = \lambda(v_1 + cv_2)
 <p>이므로 <span class="math inline">\(v_1 + cv_2 \in E(\lambda, L)\)</span> 이다. 따라서 <span class="math inline">\(E(\lambda,L)\)</span> 은 부분공간이다. <span class="math inline">\(v\in E(\lambda,L)\)</span> 이면 <span class="math inline">\(L(v)=\lambda v\in E(\lambda, L)\)</span> 이다. 따라서 고유공간은 불변부분공간이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
+</section>
 <section id="sec-LA_eigenvalue_and_determinant" class="level3" data-number="4.1.2">
 <h3 data-number="4.1.2" class="anchored" data-anchor-id="sec-LA_eigenvalue_and_determinant"><span class="header-section-number">4.1.2</span> 고유값과 행렬식</h3>
 <p>이제 선형사상/행렬의 고유값을 찾는 방법을 알아보자. 다음 정리는 선형사상/행렬의 고유값을 찾는 가장 중요한 방법을 알려준다.</p>
@@ -643,6 +669,7 @@ c(u+v) = L(u+v)= Lu+Lv = au+bv
 <p>(<span class="math inline">\(\implies\)</span>) <a href="ch1_02_linear_map.html#prp-LA_linearmap_basis" class="quarto-xref">명제&nbsp;<span>2.1</span></a> 에 따라 <span class="math inline">\(V_0\)</span> 가 선형독립이므로 <span class="math inline">\(Lv_j = j v_j\)</span> 인 선형연산자가 존재한다.</p>
 </div>
 <p><br></p>
+</section>
 </section>
 <section id="특성다항식" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="특성다항식"><span class="header-section-number">4.2</span> 특성다항식</h2>
@@ -1010,7 +1037,7 @@ E(\lambda_1,L) + \cdots + E(\lambda_m,L) = \bigoplus_{i=1}^m E(\lambda_i,L)
 </div>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>(증명)</em>. </span></p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(L\)</span> 을 대각화 하는 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,v_n)\)</span> 을 생각하자. 우선 모든 <span class="math inline">\(v_i\)</span> 에 대한 고유값이 다르다면 <a href="#prp-LA_invariant_subspace_and_eigenvector" class="quarto-xref">명제&nbsp;<span>4.2</span></a> 에 의해 <span class="math inline">\(U\)</span> 는 <span class="math inline">\(U\)</span> 에 속하는 <span class="math inline">\(\mathcal{B}\)</span> 의 부분집합을 기저로 가지며 이 기저에서 <span class="math inline">\(L|_U\)</span> 는 대각화된다. <span class="math inline">\(U\)</span> 의 기저 <span class="math inline">\(\mathcal{B}_U =(u_1,\ldots,\,u_m)\)</span> 을 생각하자. <span class="math inline">\(u_i = \sum_i a_{ji}v_j\)</span> 라면 <span class="math inline">\(a_{ji}\ne 0\)</span> 이 아닌 모든 <span class="math inline">\(v_i\)</span> 는</p>
 </div>
 <p><br></p>
 </section>
@@ -1161,9 +1188,6 @@ f_1 = 1,\qquad f_2=1,\qquad f_{n+2} = f_{n+1} +f_n.
 </div>
 
 
-</section>
-</div>
-</section>
 </section>
 
 </main> <!-- /main -->

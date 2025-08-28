@@ -522,7 +522,7 @@ p(x) = c(x-c_1)\cdots (x-c_m)(x^2+b_1x + c_1) \cdots (x^2 + b_kx + c_k).
 </div>
 </div>
 <p><br></p>
-<p>행렬식은 닮음 변환에 대해 불변이므로 어떤 기저 <span class="math inline">\(\mathcal{B}\)</span> 에 대해서도 특성다항식은 불변이다. 또한 우리는 다음을 보였다. 또한 <a href="../part1/ch1_04_eigenvalue.html#prp-LA_eigenvalue_characteristic_polynomial" class="quarto-xref">명제&nbsp;<span>4.8</span></a> 에서 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(\lambda\in \mathbb{F}\)</span> 가 <span class="math inline">\(L\)</span> 의 고유값이기 위한 필요충분조건은 <span class="math inline">\(p_{L}(\lambda)=0\)</span> 인 것임을 안다.</p>
+<p>행렬식은 닮음 변환에 대해 불변이므로 어떤 기저 <span class="math inline">\(\mathcal{B}\)</span> 에 대해서도 특성다항식은 불변이다. 또한 우리는 다음을 보였다. 또한 <a href="../part1/ch1_04_eigenvalue.html#prp-LA_eigenvalue_characteristic_polynomial" class="quarto-xref">명제&nbsp;<span>4.9</span></a> 에서 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(\lambda\in \mathbb{F}\)</span> 가 <span class="math inline">\(L\)</span> 의 고유값이기 위한 필요충분조건은 <span class="math inline">\(p_{L}(\lambda)=0\)</span> 인 것임을 안다.</p>
 <p><br></p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -723,7 +723,7 @@ p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymb
 </div>
 </div>
 <p><br></p>
-<p>우리는 <a href="../part1/ch1_04_eigenvalue.html#prp-LA_eigenvalue_characteristic_polynomial" class="quarto-xref">명제&nbsp;<span>4.8</span></a> 에서 연산자에 대한 특성다항식의 해가 그 연산자의 고유값임을 보였다. 실제로는 특성다항식이 아니라 최소다항식에 대해서도 성립한다.</p>
+<p>우리는 <a href="../part1/ch1_04_eigenvalue.html#prp-LA_eigenvalue_characteristic_polynomial" class="quarto-xref">명제&nbsp;<span>4.9</span></a> 에서 연산자에 대한 특성다항식의 해가 그 연산자의 고유값임을 보였다. 실제로는 특성다항식이 아니라 최소다항식에 대해서도 성립한다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-ALA_minimal_polynomial_and_eigenvalues" class="theorem">
@@ -760,7 +760,7 @@ p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymb
 </div>
 </div>
 <div class="proof page-columns page-full">
-<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(p(t) = t^2+bt+c,\, U = \ker (L^2+bL+cI_V)= \ker p(L)\)</span> 라고 하자. <a href="../part1/ch1_04_eigenvalue.html#prp-LA_kernal_and_images_of_operator_under_polynomial" class="quarto-xref">명제&nbsp;<span>4.5</span></a> 에 따라 <span class="math inline">\(U\)</span> 는 <span class="math inline">\(L\)</span>-불변부분공간이다. <span class="math inline">\(K=L|_U\)</span> 라고 하면 <span class="math inline">\(p(K)= p(L|_U)\)</span> 이며 <span class="math inline">\(K^2+bK+cI_U=0\)</span> 이다. <span class="math inline">\(u\in U\)</span> 가 <span class="math inline">\(\lambda\)</span> 의 고유값을 갖는 <span class="math inline">\(K\)</span> 의 고유벡터라고 가정하자. 그렇다면</p>
+<p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(p(t) = t^2+bt+c,\, U = \ker (L^2+bL+cI_V)= \ker p(L)\)</span> 라고 하자. <a href="../part1/ch1_04_eigenvalue.html#prp-LA_kernal_and_images_of_operator_under_polynomial" class="quarto-xref">명제&nbsp;<span>4.6</span></a> 에 따라 <span class="math inline">\(U\)</span> 는 <span class="math inline">\(L\)</span>-불변부분공간이다. <span class="math inline">\(K=L|_U\)</span> 라고 하면 <span class="math inline">\(p(K)= p(L|_U)\)</span> 이며 <span class="math inline">\(K^2+bK+cI_U=0\)</span> 이다. <span class="math inline">\(u\in U\)</span> 가 <span class="math inline">\(\lambda\)</span> 의 고유값을 갖는 <span class="math inline">\(K\)</span> 의 고유벡터라고 가정하자. 그렇다면</p>
 <p><span class="math display">\[
 0_U = (K^2+bK+cI_U)u = (\lambda^2+b\lambda + c)u = \left(\left(\lambda + \dfrac{b}{2}\right)^2 + c-\dfrac{b^2}{4} \right) u
 \]</span></p>
@@ -793,7 +793,7 @@ p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymb
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(L\)</span> 이 대각화 가능하면 서로 다른 <span class="math inline">\(L\)</span> 의 고유값 <span class="math inline">\(c_1,\ldots,\,c_m\)</span> 에 대해 <span class="math inline">\(V=\bigoplus_{i=1}^m E(c_i,\,L)\)</span> 이다. 따라서 <span class="math inline">\(p(L)=0\)</span> 이며 <span class="math inline">\(p(t)\)</span> 는 <span class="math inline">\(L\)</span> 의 최소다항식이다.</p>
-<p>이제 서로 다른 <span class="math inline">\(c_1,\ldots,\,c_m\in \mathbb{F}\)</span> 에 대해 <span class="math inline">\(p(t)=\prod_{i=1}^m (t-c_i)\)</span> 가 <span class="math inline">\(L\)</span> 의 최소다항식이면 <span class="math inline">\(L\)</span> 은 대각화 가능함을 보이자. <span class="math inline">\(m\)</span> 에 대한 induction 을 사용한다. <span class="math inline">\(m=1\)</span> 일 때는 자명하다. 이제 <span class="math inline">\(m&gt;1\)</span> 일 때 <span class="math inline">\(1,\ldots,\,m-1\)</span> 까지 성립함을 가정하자. <span class="math inline">\(U=\operatorname{im}(L-c_mI)\)</span> 는 <span class="math inline">\(L\)</span>-불변 부분공간임을 안다(<a href="../part1/ch1_04_eigenvalue.html#prp-LA_kernal_and_images_of_operator_under_polynomial" class="quarto-xref">명제&nbsp;<span>4.5</span></a>). <span class="math inline">\(u\in U\)</span> 이면 어떤 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\((L-c_mI)(v)\)</span> 이며 최소다항식 <span class="math inline">\(p\)</span> 를 생각하면</p>
+<p>이제 서로 다른 <span class="math inline">\(c_1,\ldots,\,c_m\in \mathbb{F}\)</span> 에 대해 <span class="math inline">\(p(t)=\prod_{i=1}^m (t-c_i)\)</span> 가 <span class="math inline">\(L\)</span> 의 최소다항식이면 <span class="math inline">\(L\)</span> 은 대각화 가능함을 보이자. <span class="math inline">\(m\)</span> 에 대한 induction 을 사용한다. <span class="math inline">\(m=1\)</span> 일 때는 자명하다. 이제 <span class="math inline">\(m&gt;1\)</span> 일 때 <span class="math inline">\(1,\ldots,\,m-1\)</span> 까지 성립함을 가정하자. <span class="math inline">\(U=\operatorname{im}(L-c_mI)\)</span> 는 <span class="math inline">\(L\)</span>-불변 부분공간임을 안다(<a href="../part1/ch1_04_eigenvalue.html#prp-LA_kernal_and_images_of_operator_under_polynomial" class="quarto-xref">명제&nbsp;<span>4.6</span></a>). <span class="math inline">\(u\in U\)</span> 이면 어떤 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\((L-c_mI)(v)\)</span> 이며 최소다항식 <span class="math inline">\(p\)</span> 를 생각하면</p>
 <p><span id="eq-thm-ALA_ALA_minimal_polynomial_and_diagonalization_1"><span class="math display">\[
 (L-c_1I)\cdots (L-c_{m-1}I)u = (L-c_1I)\cdots (L-c_m I) v =0
 \tag{17.2}\]</span></span></p>
