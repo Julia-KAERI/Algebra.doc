@@ -10,12 +10,13 @@ crossref:
 
 </br>
 
-## 내적 (Inner product) 과 노름 (norm)
+## 내적과 노름 
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **내적과 내적 공간**
+
 ::: {#def-LA_innerproduct}
-
-#### 내적과 내적 공간
 
 $\mathbb{F}$-벡터공간 $V$ 에서 정의된 $\phi : V \times V \to \mathbb{F}$ 가 모든 $u,\,u',\,v\in V$ 와 $c\in \mathbb{F}$ 에 대해 다음 성질을 만족하면 $\phi$ 를 $V$ 에서 정의된 **내적(Inner product)** 이라 한다.
 
@@ -31,13 +32,12 @@ $\mathbb{F}$-벡터공간 $V$ 에서 정의된 $\phi : V \times V \to \mathbb{F}
 
 [$x,\,y \in \mathbb{R}$ 에 대해 복소수 $z=x+iy$ 의 켤레복소수 $\overline{z}$ 는 $x-iy$ 이다. 즉 $\overline{x+iy}= x-iy$ 이다.]{.aside}
 
-이것을 만족하는 함수는 어떤 것이든 내적이 될 수 있으며, 내적이 정의된 벡터공간을 **내적 벡터 공간(Inner product vector space)** 혹은 **내적 공간(Inner product space)**라 한다. 필드를 명시할 경우 $\mathbb{F}$-**내적 벡터 공간** 이라고 한다.흔히 두 백터의 내적을 $\langle u,\,v\rangle$ 로 쓰며 그 정의는 위의 $\phi$ 함수에 대해 $\langle u,\, v\rangle = \phi (u,\,v)$ 이다.$^\ast$ 
+이것을 만족하는 함수는 어떤 것이든 내적이 될 수 있으며, 내적이 정의된 벡터공간을 **내적 벡터 공간(Inner product vector space)** 혹은 **내적 공간(Inner product space)** 이라 한다. 필드를 명시할 경우 $\mathbb{F}$-**내적 벡터 공간** 이라고 한다.흔히 두 백터의 내적을 $\langle u,\,v\rangle$ 로 쓰며 그 정의는 위의 $\phi$ 함수에 대해 $\langle u,\, v\rangle = \phi (u,\,v)$ 이다.$^\ast$ 
 
 [$^\ast$ 물리학, 특히 양자역학에서는 소위 디렉 브라켓 기호를 사용하여 $\langle u,\, v\rangle$ 을 $\langle v\,|\,u\rangle$ 로 표기한다. $u,\,v$ 의 순서가 바뀌거 중간에 $\mid$ 가 삽입되는 것에 주의하라. ]{.aside}  
 :::
 :::
 
-</br>
 
 대표적인 내적 벡터 공간으로는 다음과 같은 것들이 있다.
 
@@ -113,12 +113,13 @@ $V$ 가 $\mathbb{F}$-내적벡터공간이며 $u,\,v,\,w \in V,\, c \in \mathbb{
 </div></br>
 
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **벡터의 직교와 평행**
+
 ::: {#def-LA_orthogonality_of_vector}
 
-#### 벡터의 직교
-
-두 벡터의 내적이 $0$ 일 때 두 벡터는 서로 **직교한다(be orthogonal, be perpendicular)** 고 한다. $\{v_1,\ldots,\,v_n\}$ 의 서로 다른 두 벡터가 모두 직교한다면 $\{v_1,\ldots,\,v_n\}$ 을 직교하는 벡터의 집합이라고 한다. 
+두 벡터의 내적이 $0$ 일 때 두 벡터는 서로 **직교한다(be orthogonal, be perpendicular)** 고 한다. $\{v_1,\ldots,\,v_n\}$ 의 서로 다른 두 벡터가 모두 직교한다면 $\{v_1,\ldots,\,v_n\}$ 을 직교하는 벡터의 집합이라고 한다. 한 벡터가 다른 벡터의 $0$ 이 아닌스칼라의 곱일 때 두 백텨는 **평행하다(be parallel)** 라고 한다.
 :::
 :::
 
@@ -156,15 +157,19 @@ $$
 
 </div>
 :::{.proof}
-@lem-LA_number_of_basis 를 보라.
-:::
 
+@lem-LA_number_of_basis 를 보라.
+
+:::
 
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **노름 과 거리함수**
+
 ::: {#def-LA_norm}
-#### 노름 과 거리함수
+
 
 $\mathbb{F}$-벡터공간 $V$ 에서 벡터의 **노름(norm)** 은 다음을 만족하는 함수이다.
 
@@ -186,8 +191,6 @@ $$
 
 :::
 :::
-
-</br>
 
 벡터공간에서의 내적과 마찬가지로 노름 역시 공간에 부여된 특정 조건을 만족하는 함수이다. 내적벡터공간은 그 자체로 거리공간인데 이것은 내적에 의해 노름과 거리함수가 자연스럽게 정의되기 때문이다. 참고로 노름공간은 거리함수가 부여된 벡터공간이지만 엄밀한 의미에서의 거리공간은 벡터공간이 아닐 수도 있으며, 단지 적절한 거리함수가 정의된 집합이면 거리공간이다. 여기서는 거리함수가 부여된 벡터공간인 노름공간만을 생각한다.
 
@@ -342,11 +345,11 @@ $$ {#eq-innerproduct}
 
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **정규직교벡터와 정규직교기저**
 
 ::: {#def-LA_orthonormal_Basis}
-
-#### 정규직교벡터와 정규직교기저
 
 내적벡터공간의 벡터의 집합 $\{v_1,\ldots,\,v_n\}$ 의  직교하는 벡터의 집합이며 벡터의 노름이 모두 $1$ 일 때, 즉 $\langle v_i,\,v_j\rangle = \delta_{ij}$ 일 때 **정규직교벡터 (orthonormal vectors)** 라 한다. 정규직교기저벡터가 선형독립임은 @prp-LA_orthogonal_linearity 에서 보았다. 정규직교벡터가 벡터공간의 기저일 때 이 기저를 **정규직교기저 (orthonormal basis)** 라 한다. 
 :::
@@ -483,7 +486,10 @@ $$
 
 그람-슈미트 과정을 통해 유한차원 내적 벡터공간에서 주어진 독립 벡터를 이용하여 같은 갯수의 정규 직교 벡터를 얻을 수 있다. $n$ 차원 내적 벡터 공간 $V$ 에서 $m$ 개의 독립벡터 $\{v_1,\ldots,v_m\}$ 이 주어졌다고 하자. (당연히 $m \le n$ 이다). 정규직교벡터의 집합 $\{e_1,\ldots,\,e_m\}$ 을 그람-슈미트 과정을 수행하여 얻을 수 있다. 그람-슈미트 과정을 귀납적으로 표현하면 다음과 같다.
 
-::: {.callout-tip title="그람-슈미트 과정" appearance="minimal"}
+::: {.callout-tip icon="false"}
+
+#### **그람-슈미트 과정**
+
 $1$. 우선 $u_1 =  v_1$, $e_1 = \dfrac{u_1}{\|u_1\|}$ 라 한다.
 
 $2$. 우리가 $u_1,\ldots,\,u_{k-1}$ 을 얻었을 때 (즉, $e_1,\ldots,e_{k-1}$ 을 얻었을 때) $u_k$ 와 $e_k$ 는 다음과 같이 얻는다.  
@@ -501,7 +507,9 @@ $$
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#lem-LA_gram_schmidt}
-위 과정을 통해 얻은 $\{e_1,\ldots,\,e_m\}$ 은 orthonomal 하다. 즉, $\langle e_i,\, e_j\rangle = \delta_{ij}$ 이다.
+
+그람-슈미트 과정을 통해 얻은 $\{e_1,\ldots,\,e_m\}$ 은 정규직교벡터이다. 즉, $\langle e_i,\, e_j\rangle = \delta_{ij}$ 이다.
+
 :::
 
 </div>
@@ -527,15 +535,14 @@ $$
 \end{aligned}
 $$
 
-이다. 따라서 $\{e_1,\ldots,\,e_m\}$ 은 orthonormal 하다. $\square$
+이다. 따라서 $\{e_1,\ldots,\,e_m\}$ 은 정규직교벡터이다. $\square$
 
 :::
 
 </br>
 
 이제 우리는 다음의 중요한 결론을 얻는다.
-
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#thm-LA_orthonormal_basis}
 $V$ 가 유한차원 내적벡터공간이며 $\mathcal{B}_V= (v_i)$ 가 $V$ 의 기저일 때 $\mathcal{B}_V$ 로부터 정규직교기저를 얻을 수 있다.
@@ -583,7 +590,7 @@ $$
 
 ::: {.callout-important}
 
-내적벡터공간에서 항상 정규직교기저를 구할 수 있으며, 정규직교기저에서 여러 계산이 편해지기 때문에 정규직교기저를 가정하고 문제를 푸는 경우가 많다.
+유한차원 내적벡터공간에서 항상 정규직교기저를 구할 수 있으며, 정규직교기저에서 여러 계산이 편해지기 때문에 정규직교기저를 가정하고 문제를 푸는 경우가 많다.
 
 :::
 
@@ -868,10 +875,11 @@ $$
 
 ### 직교 여공간 {#sec-LA_orthogonal_complement}
 
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-LA_orthogonal_complement}
+::: {.callout-note icon="false"}
 
-#### 직교 여공간
+#### **직교 여공간**
+
+::: {#def-LA_orthogonal_complement}
 
 벡터공간 $V$ 의 부분집합 $U$ 에 대해 $U$ 전체 원소에 대해 수직인 벡터의 집합은 벡터공간을 이루며 이를 $U$ 에 대한 **직교 여공간 (orthogonal complement)** 이라 하고 $U^\perp$ 라 쓴다. 즉,
 
@@ -1023,10 +1031,11 @@ $V$ 가 유한차원 벡터공간일 때 $U\le V$ 에 대해 다음이 성립한
 ### 사영연산자 {#sec-LA_orthogonal_projection}
 
 
-::: {.callout-note appearance="minimal"}
-::: {#def-LA_projection_operator}
+::: {.callout-note icon="false"}
 
-#### 사영 연산자
+#### **사영 연산자**
+
+::: {#def-LA_projection_operator}
 
 연산자 $P\in \mathcal{L}(V)$ 가 $P^2=P$ 일 때 $P$ 를 **사영 연산자(projection or projection operator)** 라고 한다.
 
@@ -1051,24 +1060,19 @@ $u\in \text{im}(P)$ 이면 $P(v)=u$ 인 $v\in V$ 가 존재하며, $P(u)=P^2(v) 
 
 :::
 
-
-</br>
-
 벡터공간 $V$ 와 사영연산자 $P\in \mathcal{L}(V)$ 에 대해 $U = \text{im}(P)$ 라 하자. $U$ 가 유한차원 부분공간이라면 $V=U \oplus U^\perp$ 이라는 것을 안다. 또한 @prp-LA_uniqueness_of_orthogonal_decomposition 에서 보인 것처럼 $V$ 가 유한차원이라면 $v\in V$ 에 대해 $v=u+u',\, u\in U,\, u'\in U^{\perp}$ 가 되도록 하는 $u,\,u'$ 은 유일하다. 이제 반대로 $U \le V$ 에 대해 $v\in V$ 는 어떤 $u\in U$ 와 $u'\in U^\perp$ 의 합으로 유일하게 표현 될 수 있다는 것을 안다. 이렇게 어떤 부분공간 $U$ 를 치역으로 갖는 사영연산자를 다음과 같이 따로 정의할 수 있다.
 
+::: {.callout-note icon="false"}
 
-</br>
+#### **직교사영연산자**
 
-::: {.callout-note appearance="simple" icon="false"}
 ::: {#def-LA_orthogonal_projection}
-#### Orthogonal projection
 
-벡터공간 $V$ 의 유한차원 부분공간 $U$ 를 치역으로 갖는 사영 연산자를 $V$ 에 대한 $U$ 로의 **직교 사영 연산자 (orthogonal projection)** 이라고 하며 $P_U$ 라고 쓴다.
+벡터공간 $V$ 의 유한차원 부분공간 $U$ 를 치역으로 갖는 사영 연산자를 $V$ 에 대한 $U$ 로의 **직교사영연산자 (orthogonal projection)** 이라고 하며 $P_U$ 라고 쓴다.
 
 :::
 :::
 
-</br>
 
 아래 직교 사영 연산자에 대한 명제들은 쉽게 증명 할 수 있다.
 
@@ -1170,11 +1174,11 @@ $\F=\R$ 일 경우는 $\Phi$ 가 선형사상이 되어 쉽게 풀 수 있다. @
 
 ### 최소화 문제 {#sec-LA_minimization_problems}
 
+::: {.callout-note icon="false"}
 
-::: {.callout-note appearance="simple" icon="false"}
+#### **부분공간 까지의 거리**
+
 ::: {#def-LA_distance_to_subspace}
-
-#### 부분공간 까지의 거리
 
 $U$ 가 $V$ 의 부분공간일 때 $v\in V$ 로부터 $U$ 까지의 거리 $\|v-U\|$ 는
 
@@ -1288,17 +1292,17 @@ $$
 
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-LA_pseudo_inverse}
+::: {.callout-note icon="false"}
 
-#### 의사역행렬
+#### **의사역사상**
+
+::: {#def-LA_pseudo_inverse}
 
 $L\in \mathcal{L}(V,\,W)$ 에 대해 다음과 같이 정의된 $L^+\in \mathcal{L}(W,\,V)$ 를 $L$ 의 **무어 펜로즈 역사상 (Moorre-Penrose inverse)** 혹은 **의사역사상 (pseudo inverse map)** 라고 한다.
 
 $$
 L^+ w = \left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1} P_{\text{im}(L)} w.
-$$
-
+$$ {#eq-LA_def_pseudo_inverse_map}
 
 :::
 :::
@@ -1354,7 +1358,7 @@ $$
 
 </br>
 
-이로부터 우리는 다음을 쉽게 보일 수 있다. 그리고 왜 $L^+$ 가 $L$ 의 의사 역행렬인지 알 수 있다.
+이로부터 우리는 다음을 쉽게 보일 수 있다. 그리고 왜 $L^+$ 가 $L$ 의 의사 역사상인지 알 수 있다.
 
 </br>
 
@@ -1415,7 +1419,7 @@ $$
 
 ::: {.callout-important icon="false"}
 
-#### 최소화 문제의 해
+#### **최소화 문제의 해**
 
 원래의 우리는 주어진 $L \in \mathcal{L}(V,\,W)$ 과 $b\in W$ 에 대해 $\|Lx-b\|$ 를 최소화 하는 $x$ 를 찾고자 했다. @thm-LA_pseudoinverse_2 로부터 우리는 $x=L^+b$ 일 때 최소가 됨을 알았다. 
 

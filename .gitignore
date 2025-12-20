@@ -2,3 +2,5 @@ _book/
 /.quarto/
 /deprecated/
 .DS_Store
+
+**/*.quarto_ipynb

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -54,14 +54,15 @@ div.csl-indent {
 <link href="../../src/part1/ch1_04_eigenvalue.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,7 +105,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -273,26 +274,26 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../src/part3/characteristic_polynomial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">최소다항식과 케일리-해밀턴 정리</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../src/part3/bilinear_form.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/laplacian_form_of_determinant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/generalized_inverse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/part3/characteristic_polynomial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">최소다항식과 케일리-해밀턴 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -331,7 +332,7 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#내적-inner-product-과-노름-norm" id="toc-내적-inner-product-과-노름-norm" class="nav-link active" data-scroll-target="#내적-inner-product-과-노름-norm"><span class="header-section-number">5.1</span> 내적 (Inner product) 과 노름 (norm)</a></li>
+  <li><a href="#내적과-노름" id="toc-내적과-노름" class="nav-link active" data-scroll-target="#내적과-노름"><span class="header-section-number">5.1</span> 내적과 노름</a></li>
   <li><a href="#정규직교기저" id="toc-정규직교기저" class="nav-link" data-scroll-target="#정규직교기저"><span class="header-section-number">5.2</span> 정규직교기저</a>
   <ul class="collapse">
   <li><a href="#sec-LA_orthonomal_vectors_and_orthonormal_basis" id="toc-sec-LA_orthonomal_vectors_and_orthonormal_basis" class="nav-link" data-scroll-target="#sec-LA_orthonomal_vectors_and_orthonormal_basis"><span class="header-section-number">5.2.1</span> 정규직교벡터와 정규직교기저</a></li>
@@ -390,29 +391,31 @@ window.Quarto = {
 \]</span></p>
 </div>
 <p><br></p>
-<section id="내적-inner-product-과-노름-norm" class="level2 page-columns page-full" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="내적-inner-product-과-노름-norm"><span class="header-section-number">5.1</span> 내적 (Inner product) 과 노름 (norm)</h2>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<section id="내적과-노름" class="level2 page-columns page-full" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="내적과-노름"><span class="header-section-number">5.1</span> 내적과 노름</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>내적과 내적 공간</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-LA_innerproduct" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.1 (내적과 내적 공간)</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(\phi : V \times V \to \mathbb{F}\)</span> 가 모든 <span class="math inline">\(u,\,u',\,v\in V\)</span> 와 <span class="math inline">\(c\in \mathbb{F}\)</span> 에 대해 다음 성질을 만족하면 <span class="math inline">\(\phi\)</span> 를 <span class="math inline">\(V\)</span> 에서 정의된 <strong>내적(Inner product)</strong> 이라 한다.</p>
+<p><span class="theorem-title"><strong>정의 5.1</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(\phi : V \times V \to \mathbb{F}\)</span> 가 모든 <span class="math inline">\(u,\,u',\,v\in V\)</span> 와 <span class="math inline">\(c\in \mathbb{F}\)</span> 에 대해 다음 성질을 만족하면 <span class="math inline">\(\phi\)</span> 를 <span class="math inline">\(V\)</span> 에서 정의된 <strong>내적(Inner product)</strong> 이라 한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\phi (v,\,v) \ge 0\)</span>;</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\phi (v,\,v) = 0 \iff v = 0\)</span>;</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\phi (u + u', v)  = \phi (u,\, v) + \phi (u',\, v)\)</span>;</p>
 <p>  (<span class="math inline">\(4\)</span>) <span class="math inline">\(\phi (cu,\,v) = c \phi (u,\,v)\)</span>;</p>
 <p>  (<span class="math inline">\(5\)</span>) <span class="math inline">\(\phi (v,\, u) = \overline{\phi (u,\,v)}\)</span>.</p>
 <p></p>
-<p>이것을 만족하는 함수는 어떤 것이든 내적이 될 수 있으며, 내적이 정의된 벡터공간을 <strong>내적 벡터 공간(Inner product vector space)</strong> 혹은 <strong>내적 공간(Inner product space)</strong>라 한다. 필드를 명시할 경우 <span class="math inline">\(\mathbb{F}\)</span>-<strong>내적 벡터 공간</strong> 이라고 한다.흔히 두 백터의 내적을 <span class="math inline">\(\langle u,\,v\rangle\)</span> 로 쓰며 그 정의는 위의 <span class="math inline">\(\phi\)</span> 함수에 대해 <span class="math inline">\(\langle u,\, v\rangle = \phi (u,\,v)\)</span> 이다.<span class="math inline">\(^\ast\)</span></p>
+<p>이것을 만족하는 함수는 어떤 것이든 내적이 될 수 있으며, 내적이 정의된 벡터공간을 <strong>내적 벡터 공간(Inner product vector space)</strong> 혹은 <strong>내적 공간(Inner product space)</strong> 이라 한다. 필드를 명시할 경우 <span class="math inline">\(\mathbb{F}\)</span>-<strong>내적 벡터 공간</strong> 이라고 한다.흔히 두 백터의 내적을 <span class="math inline">\(\langle u,\,v\rangle\)</span> 로 쓰며 그 정의는 위의 <span class="math inline">\(\phi\)</span> 함수에 대해 <span class="math inline">\(\langle u,\, v\rangle = \phi (u,\,v)\)</span> 이다.<span class="math inline">\(^\ast\)</span></p>
 <p></p>
 </div>
 </div>
-</div>
-</div><div class="no-row-height column-margin column-container"><span class="margin-aside callout-margin-content callout-margin-content-simple"><span class="math inline">\(x,\,y \in \mathbb{R}\)</span> 에 대해 복소수 <span class="math inline">\(z=x+iy\)</span> 의 켤레복소수 <span class="math inline">\(\overline{z}\)</span> 는 <span class="math inline">\(x-iy\)</span> 이다. 즉 <span class="math inline">\(\overline{x+iy}= x-iy\)</span> 이다.</span><span class="margin-aside callout-margin-content callout-margin-content-simple"><span class="math inline">\(^\ast\)</span> 물리학, 특히 양자역학에서는 소위 디렉 브라켓 기호를 사용하여 <span class="math inline">\(\langle u,\, v\rangle\)</span> 을 <span class="math inline">\(\langle v\,|\,u\rangle\)</span> 로 표기한다. <span class="math inline">\(u,\,v\)</span> 의 순서가 바뀌거 중간에 <span class="math inline">\(\mid\)</span> 가 삽입되는 것에 주의하라.</span></div>
-<p><br></p>
+</div><div class="no-row-height column-margin column-container"><span class="margin-aside callout-margin-content"><span class="math inline">\(x,\,y \in \mathbb{R}\)</span> 에 대해 복소수 <span class="math inline">\(z=x+iy\)</span> 의 켤레복소수 <span class="math inline">\(\overline{z}\)</span> 는 <span class="math inline">\(x-iy\)</span> 이다. 즉 <span class="math inline">\(\overline{x+iy}= x-iy\)</span> 이다.</span><span class="margin-aside callout-margin-content"><span class="math inline">\(^\ast\)</span> 물리학, 특히 양자역학에서는 소위 디렉 브라켓 기호를 사용하여 <span class="math inline">\(\langle u,\, v\rangle\)</span> 을 <span class="math inline">\(\langle v\,|\,u\rangle\)</span> 로 표기한다. <span class="math inline">\(u,\,v\)</span> 의 순서가 바뀌거 중간에 <span class="math inline">\(\mid\)</span> 가 삽입되는 것에 주의하라.</span></div>
 <p>대표적인 내적 벡터 공간으로는 다음과 같은 것들이 있다.</p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-LA_innerproduct_R1_C1" class="theorem example">
@@ -457,15 +460,18 @@ window.Quarto = {
 </div>
 </div>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-LA_orthogonality_of_vector" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.2 (벡터의 직교)</strong></span> 두 벡터의 내적이 <span class="math inline">\(0\)</span> 일 때 두 벡터는 서로 <strong>직교한다(be orthogonal, be perpendicular)</strong> 고 한다. <span class="math inline">\(\{v_1,\ldots,\,v_n\}\)</span> 의 서로 다른 두 벡터가 모두 직교한다면 <span class="math inline">\(\{v_1,\ldots,\,v_n\}\)</span> 을 직교하는 벡터의 집합이라고 한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>벡터의 직교와 평행</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-LA_orthogonality_of_vector" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 5.2</strong></span> 두 벡터의 내적이 <span class="math inline">\(0\)</span> 일 때 두 벡터는 서로 <strong>직교한다(be orthogonal, be perpendicular)</strong> 고 한다. <span class="math inline">\(\{v_1,\ldots,\,v_n\}\)</span> 의 서로 다른 두 벡터가 모두 직교한다면 <span class="math inline">\(\{v_1,\ldots,\,v_n\}\)</span> 을 직교하는 벡터의 집합이라고 한다. 한 벡터가 다른 벡터의 <span class="math inline">\(0\)</span> 이 아닌스칼라의 곱일 때 두 백텨는 <strong>평행하다(be parallel)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
@@ -494,14 +500,18 @@ window.Quarto = {
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="ch1_01_vectorspace.html#lem-LA_number_of_basis" class="quarto-xref">보조정리&nbsp;<span>1.2</span></a> 를 보라.</p>
 </div>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>노름 과 거리함수</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-LA_norm" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.3 (노름 과 거리함수)</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 벡터의 <strong>노름(norm)</strong> 은 다음을 만족하는 함수이다.</p>
+<p><span class="theorem-title"><strong>정의 5.3</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 벡터의 <strong>노름(norm)</strong> 은 다음을 만족하는 함수이다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\forall v\in V,\, \|v\| \ge 0\)</span>,</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\|v\| = 0 \iff v=0\)</span>,</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\forall c\in \mathbb{F},\, \|cv\|= |c|\|v\|\)</span>,</p>
@@ -514,8 +524,6 @@ d(u, v) = \|u-v\|
 </div>
 </div>
 </div>
-</div>
-<p><br></p>
 <p>벡터공간에서의 내적과 마찬가지로 노름 역시 공간에 부여된 특정 조건을 만족하는 함수이다. 내적벡터공간은 그 자체로 거리공간인데 이것은 내적에 의해 노름과 거리함수가 자연스럽게 정의되기 때문이다. 참고로 노름공간은 거리함수가 부여된 벡터공간이지만 엄밀한 의미에서의 거리공간은 벡터공간이 아닐 수도 있으며, 단지 적절한 거리함수가 정의된 집합이면 거리공간이다. 여기서는 거리함수가 부여된 벡터공간인 노름공간만을 생각한다.</p>
 <p><br></p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
@@ -608,15 +616,18 @@ d(u, v) = \|u-v\|
 \tag{5.1}\]</span></span></p>
 <p>즉 각각의 기저의 쌍에 대한 내적을 알면 벡터의 내적을 계산 할 수 있다. 그런데 만약 서로 다른 두 기저벡터의 내적이 <span class="math inline">\(0\)</span> 이라면, 즉 기저들이 직교한다면 <span class="math inline">\(\|h_i\|^2\)</span> 만을 생각해도 되기 때문에 계산이 쉬워질 것이다. 거기에 더하여 기저벡터의 노름이 모두 1 이라면 더욱 쉬워질 것이다. 이것을 만족하는 기저를 정규직교기저라고 한다.</p>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-LA_orthonormal_Basis" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.4 (정규직교벡터와 정규직교기저)</strong></span> 내적벡터공간의 벡터의 집합 <span class="math inline">\(\{v_1,\ldots,\,v_n\}\)</span> 의 직교하는 벡터의 집합이며 벡터의 노름이 모두 <span class="math inline">\(1\)</span> 일 때, 즉 <span class="math inline">\(\langle v_i,\,v_j\rangle = \delta_{ij}\)</span> 일 때 <strong>정규직교벡터 (orthonormal vectors)</strong> 라 한다. 정규직교기저벡터가 선형독립임은 <a href="#prp-LA_orthogonal_linearity" class="quarto-xref">명제&nbsp;<span>5.2</span></a> 에서 보았다. 정규직교벡터가 벡터공간의 기저일 때 이 기저를 <strong>정규직교기저 (orthonormal basis)</strong> 라 한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>정규직교벡터와 정규직교기저</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-LA_orthonormal_Basis" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 5.4</strong></span> 내적벡터공간의 벡터의 집합 <span class="math inline">\(\{v_1,\ldots,\,v_n\}\)</span> 의 직교하는 벡터의 집합이며 벡터의 노름이 모두 <span class="math inline">\(1\)</span> 일 때, 즉 <span class="math inline">\(\langle v_i,\,v_j\rangle = \delta_{ij}\)</span> 일 때 <strong>정규직교벡터 (orthonormal vectors)</strong> 라 한다. 정규직교기저벡터가 선형독립임은 <a href="#prp-LA_orthogonal_linearity" class="quarto-xref">명제&nbsp;<span>5.2</span></a> 에서 보았다. 정규직교벡터가 벡터공간의 기저일 때 이 기저를 <strong>정규직교기저 (orthonormal basis)</strong> 라 한다.</p>
 </div>
 </div>
 </div>
@@ -701,13 +712,13 @@ A_{ij} = \langle L(e_j),\, e_i \rangle
 <section id="sec-LA_gram-schimidt_process" class="level3" data-number="5.3.2">
 <h3 data-number="5.3.2" class="anchored" data-anchor-id="sec-LA_gram-schimidt_process"><span class="header-section-number">5.3.2</span> 그람-슈미트 과정 (Gram-Schmidt Process)</h3>
 <p>그람-슈미트 과정을 통해 유한차원 내적 벡터공간에서 주어진 독립 벡터를 이용하여 같은 갯수의 정규 직교 벡터를 얻을 수 있다. <span class="math inline">\(n\)</span> 차원 내적 벡터 공간 <span class="math inline">\(V\)</span> 에서 <span class="math inline">\(m\)</span> 개의 독립벡터 <span class="math inline">\(\{v_1,\ldots,v_m\}\)</span> 이 주어졌다고 하자. (당연히 <span class="math inline">\(m \le n\)</span> 이다). 정규직교벡터의 집합 <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 을 그람-슈미트 과정을 수행하여 얻을 수 있다. 그람-슈미트 과정을 귀납적으로 표현하면 다음과 같다.</p>
-<div class="callout callout-style-simple callout-tip no-icon callout-titled" title="그람-슈미트 과정">
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-그람-슈미트 과정
+<span class="screen-reader-only">힌트</span><strong>그람-슈미트 과정</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -723,7 +734,7 @@ u_k = v_{k} - \sum_{j=1}^{k-1} \text{Proj}_{e_j} v_k = v_k-\sum_{j=1}^{k-1} \lef
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="lem-LA_gram_schmidt" class="theorem lemma">
-<p><span class="theorem-title"><strong>보조정리 5.1</strong></span> 위 과정을 통해 얻은 <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 은 orthonomal 하다. 즉, <span class="math inline">\(\langle e_i,\, e_j\rangle = \delta_{ij}\)</span> 이다.</p>
+<p><span class="theorem-title"><strong>보조정리 5.1</strong></span> 그람-슈미트 과정을 통해 얻은 <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 은 정규직교벡터이다. 즉, <span class="math inline">\(\langle e_i,\, e_j\rangle = \delta_{ij}\)</span> 이다.</p>
 </div>
 </div>
 <div class="proof">
@@ -743,11 +754,10 @@ u_k = v_{k} - \sum_{j=1}^{k-1} \text{Proj}_{e_j} v_k = v_k-\sum_{j=1}^{k-1} \lef
 &amp;= \|u_j\| \langle v_{k+1},\,e_j\rangle -\|u_j\| \langle v_{k+1},\,e_j\rangle  = 0.
 \end{aligned}
 \]</span></p>
-<p>이다. 따라서 <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 은 orthonormal 하다. <span class="math inline">\(\square\)</span></p>
+<p>이다. 따라서 <span class="math inline">\(\{e_1,\ldots,\,e_m\}\)</span> 은 정규직교벡터이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p>이제 우리는 다음의 중요한 결론을 얻는다.</p>
-<br>
+이제 우리는 다음의 중요한 결론을 얻는다.
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-LA_orthonormal_basis" class="theorem">
 <p><span class="theorem-title"><strong>정리 5.1</strong></span> <span class="math inline">\(V\)</span> 가 유한차원 내적벡터공간이며 <span class="math inline">\(\mathcal{B}_V= (v_i)\)</span> 가 <span class="math inline">\(V\)</span> 의 기저일 때 <span class="math inline">\(\mathcal{B}_V\)</span> 로부터 정규직교기저를 얻을 수 있다.</p>
@@ -786,7 +796,7 @@ u_k = v_{k} - \sum_{j=1}^{k-1} \text{Proj}_{e_j} v_k = v_k-\sum_{j=1}^{k-1} \lef
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>내적벡터공간에서 항상 정규직교기저를 구할 수 있으며, 정규직교기저에서 여러 계산이 편해지기 때문에 정규직교기저를 가정하고 문제를 푸는 경우가 많다.</p>
+<p>유한차원 내적벡터공간에서 항상 정규직교기저를 구할 수 있으며, 정규직교기저에서 여러 계산이 편해지기 때문에 정규직교기저를 가정하고 문제를 푸는 경우가 많다.</p>
 </div>
 </div>
 <br>
@@ -972,19 +982,22 @@ g(x)-g(x_0) = \phi(xu, v) - \phi (x_0u, v) = \phi((x-x_0)u, v)
 <h2 data-number="5.5" class="anchored" data-anchor-id="직교-여공간과-사영연산자"><span class="header-section-number">5.5</span> 직교 여공간과 사영연산자</h2>
 <section id="sec-LA_orthogonal_complement" class="level3" data-number="5.5.1">
 <h3 data-number="5.5.1" class="anchored" data-anchor-id="sec-LA_orthogonal_complement"><span class="header-section-number">5.5.1</span> 직교 여공간</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>직교 여공간</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-LA_orthogonal_complement" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.5 (직교 여공간)</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 의 부분집합 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\(U\)</span> 전체 원소에 대해 수직인 벡터의 집합은 벡터공간을 이루며 이를 <span class="math inline">\(U\)</span> 에 대한 <strong>직교 여공간 (orthogonal complement)</strong> 이라 하고 <span class="math inline">\(U^\perp\)</span> 라 쓴다. 즉,</p>
+<p><span class="theorem-title"><strong>정의 5.5</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 의 부분집합 <span class="math inline">\(U\)</span> 에 대해 <span class="math inline">\(U\)</span> 전체 원소에 대해 수직인 벡터의 집합은 벡터공간을 이루며 이를 <span class="math inline">\(U\)</span> 에 대한 <strong>직교 여공간 (orthogonal complement)</strong> 이라 하고 <span class="math inline">\(U^\perp\)</span> 라 쓴다. 즉,</p>
 <p><span class="math display">\[
 U^\perp = \{ v\in V : \langle v,\, u\rangle = 0 \text{ for every }u\in U\}
 \]</span></p>
 <p>이다.</p>
-</div>
 </div>
 </div>
 </div>
@@ -1072,15 +1085,18 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 </section>
 <section id="sec-LA_orthogonal_projection" class="level3" data-number="5.5.2">
 <h3 data-number="5.5.2" class="anchored" data-anchor-id="sec-LA_orthogonal_projection"><span class="header-section-number">5.5.2</span> 사영연산자</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-LA_projection_operator" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.6 (사영 연산자)</strong></span> 연산자 <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(P^2=P\)</span> 일 때 <span class="math inline">\(P\)</span> 를 <strong>사영 연산자(projection or projection operator)</strong> 라고 한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>사영 연산자</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-LA_projection_operator" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 5.6</strong></span> 연산자 <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 가 <span class="math inline">\(P^2=P\)</span> 일 때 <span class="math inline">\(P\)</span> 를 <strong>사영 연산자(projection or projection operator)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
@@ -1094,22 +1110,22 @@ f_n(x) = \left\{\begin{array}{ll}  g(x) &amp;; \text{if } |x|&gt; \dfrac{1}{n} \
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(u\in \text{im}(P)\)</span> 이면 <span class="math inline">\(P(v)=u\)</span> 인 <span class="math inline">\(v\in V\)</span> 가 존재하며, <span class="math inline">\(P(u)=P^2(v) = P(v) = u\)</span> 이므로 <span class="math inline">\(\text{im}(P)\)</span> 는 <span class="math inline">\(P\)</span> 불변 부분 공간이다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
 <p>벡터공간 <span class="math inline">\(V\)</span> 와 사영연산자 <span class="math inline">\(P\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(U = \text{im}(P)\)</span> 라 하자. <span class="math inline">\(U\)</span> 가 유한차원 부분공간이라면 <span class="math inline">\(V=U \oplus U^\perp\)</span> 이라는 것을 안다. 또한 <a href="#prp-LA_uniqueness_of_orthogonal_decomposition" class="quarto-xref">명제&nbsp;<span>5.10</span></a> 에서 보인 것처럼 <span class="math inline">\(V\)</span> 가 유한차원이라면 <span class="math inline">\(v\in V\)</span> 에 대해 <span class="math inline">\(v=u+u',\, u\in U,\, u'\in U^{\perp}\)</span> 가 되도록 하는 <span class="math inline">\(u,\,u'\)</span> 은 유일하다. 이제 반대로 <span class="math inline">\(U \le V\)</span> 에 대해 <span class="math inline">\(v\in V\)</span> 는 어떤 <span class="math inline">\(u\in U\)</span> 와 <span class="math inline">\(u'\in U^\perp\)</span> 의 합으로 유일하게 표현 될 수 있다는 것을 안다. 이렇게 어떤 부분공간 <span class="math inline">\(U\)</span> 를 치역으로 갖는 사영연산자를 다음과 같이 따로 정의할 수 있다.</p>
-<p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>직교사영연산자</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-LA_orthogonal_projection" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.7 (Orthogonal projection)</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 의 유한차원 부분공간 <span class="math inline">\(U\)</span> 를 치역으로 갖는 사영 연산자를 <span class="math inline">\(V\)</span> 에 대한 <span class="math inline">\(U\)</span> 로의 <strong>직교 사영 연산자 (orthogonal projection)</strong> 이라고 하며 <span class="math inline">\(P_U\)</span> 라고 쓴다.</p>
+<p><span class="theorem-title"><strong>정의 5.7</strong></span> 벡터공간 <span class="math inline">\(V\)</span> 의 유한차원 부분공간 <span class="math inline">\(U\)</span> 를 치역으로 갖는 사영 연산자를 <span class="math inline">\(V\)</span> 에 대한 <span class="math inline">\(U\)</span> 로의 <strong>직교사영연산자 (orthogonal projection)</strong> 이라고 하며 <span class="math inline">\(P_U\)</span> 라고 쓴다.</p>
 </div>
 </div>
 </div>
-</div>
-<p><br></p>
 <p>아래 직교 사영 연산자에 대한 명제들은 쉽게 증명 할 수 있다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_properties_of_orghogonal_projection" class="theorem proposition">
@@ -1171,19 +1187,22 @@ u = \left( u - \dfrac{\varphi (u)}{\varphi (v)} v \right) + \dfrac{\varphi(u)}{\
 <h2 data-number="5.6" class="anchored" data-anchor-id="최소화문제와-의사역행렬"><span class="header-section-number">5.6</span> 최소화문제와 의사역행렬</h2>
 <section id="sec-LA_minimization_problems" class="level3" data-number="5.6.1">
 <h3 data-number="5.6.1" class="anchored" data-anchor-id="sec-LA_minimization_problems"><span class="header-section-number">5.6.1</span> 최소화 문제</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>부분공간 까지의 거리</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-LA_distance_to_subspace" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.8 (부분공간 까지의 거리)</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 부분공간일 때 <span class="math inline">\(v\in V\)</span> 로부터 <span class="math inline">\(U\)</span> 까지의 거리 <span class="math inline">\(\|v-U\|\)</span> 는</p>
+<p><span class="theorem-title"><strong>정의 5.8</strong></span> <span class="math inline">\(U\)</span> 가 <span class="math inline">\(V\)</span> 의 부분공간일 때 <span class="math inline">\(v\in V\)</span> 로부터 <span class="math inline">\(U\)</span> 까지의 거리 <span class="math inline">\(\|v-U\|\)</span> 는</p>
 <p><span class="math display">\[
 \|v-U\| := \min \{\|v-u\|,\, u\in U\}
 \]</span></p>
 <p>로 정의된다.</p>
-</div>
 </div>
 </div>
 </div>
@@ -1247,18 +1266,21 @@ Lx = b
 \]</span></p>
 <p>이 때 <span class="math inline">\([L]_{\mathcal{B}_{V+}, \mathcal{B}_{W+}}\)</span> 는 <span class="math inline">\(n \times n\)</span> 가역행렬이다.</p>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-LA_pseudo_inverse" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 5.9 (의사역행렬)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 에 대해 다음과 같이 정의된 <span class="math inline">\(L^+\in \mathcal{L}(W,\,V)\)</span> 를 <span class="math inline">\(L\)</span> 의 <strong>무어 펜로즈 역사상 (Moorre-Penrose inverse)</strong> 혹은 <strong>의사역사상 (pseudo inverse map)</strong> 라고 한다.</p>
-<p><span class="math display">\[
-L^+ w = \left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1} P_{\text{im}(L)} w.
-\]</span></p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>의사역사상</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-LA_pseudo_inverse" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 5.9</strong></span> <span class="math inline">\(L\in \mathcal{L}(V,\,W)\)</span> 에 대해 다음과 같이 정의된 <span class="math inline">\(L^+\in \mathcal{L}(W,\,V)\)</span> 를 <span class="math inline">\(L\)</span> 의 <strong>무어 펜로즈 역사상 (Moorre-Penrose inverse)</strong> 혹은 <strong>의사역사상 (pseudo inverse map)</strong> 라고 한다.</p>
+<p><span id="eq-LA_def_pseudo_inverse_map"><span class="math display">\[
+L^+ w = \left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1} P_{\text{im}(L)} w.
+\tag{5.6}\]</span></span></p>
 </div>
 </div>
 </div>
@@ -1289,7 +1311,7 @@ L^+ w = \left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1} P_{\text{im}(L)} w.
 <p>(<span class="math inline">\(3\)</span>) <span class="math inline">\(v\in (\ker L)^\perp\)</span> 라면 <span class="math inline">\(Lv =w\in \text{im}(L)\)</span> 이며 <span class="math inline">\(L^+ Lv = v\)</span> 이다. <span class="math inline">\(v\in \ker L\)</span> 이면 <span class="math inline">\(L^+Lv=0_V\)</span> 이므로 <span class="math inline">\(L^+L = P_{(\ker L)^\perp}\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<p>이로부터 우리는 다음을 쉽게 보일 수 있다. 그리고 왜 <span class="math inline">\(L^+\)</span> 가 <span class="math inline">\(L\)</span> 의 의사 역행렬인지 알 수 있다.</p>
+<p>이로부터 우리는 다음을 쉽게 보일 수 있다. 그리고 왜 <span class="math inline">\(L^+\)</span> 가 <span class="math inline">\(L\)</span> 의 의사 역사상인지 알 수 있다.</p>
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-LA_pseudoinverse" class="theorem">
@@ -1328,7 +1350,7 @@ L^+ w = \left(L|_{\left(\ker (L)\right)^\perp}\right)^{-1} P_{\text{im}(L)} w.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-최소화 문제의 해
+<span class="screen-reader-only">중요</span><strong>최소화 문제의 해</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1977,13 +1999,14 @@ Rudin, W. 1976. <em>Principles of Mathematical Analysis</em>. Third. Internation
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

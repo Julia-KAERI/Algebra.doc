@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../src/part1/ch1_03_determinant.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +85,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -377,19 +378,22 @@ window.Quarto = {
 <h2 data-number="4.1" class="anchored" data-anchor-id="고유값-고유벡터-고유공간"><span class="header-section-number">4.1</span> 고유값, 고유벡터, 고유공간</h2>
 <section id="sec-LA_eigens" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="sec-LA_eigens"><span class="header-section-number">4.1.1</span> 고유값, 고유벡터, 고유공간</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>불변부분공간</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-LA_invariant_subspace" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.1 (불변부분공간)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(U \le V\)</span> 일 때</p>
+<p><span class="theorem-title"><strong>정의 4.1</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(U \le V\)</span> 일 때</p>
 <p><span class="math display">\[
 L(U) \le U
 \]</span></p>
 <p>이면 <span class="math inline">\(U\)</span> 를 <span class="math inline">\(L\)</span> 에 대한 <span class="math inline">\(V\)</span> 의 <strong>불변부분공간(invariant subspace)</strong>, 혹은 <span class="math inline">\(L\)</span>-<strong>불변부분공간</strong> 이라고 한다.</p>
-</div>
 </div>
 </div>
 </div>
@@ -420,14 +424,18 @@ Lv-c_kv=(c_1−c_k)v_1 + \cdots + (c_{k-1}−c_k)v_{k-1}
 <p>이다. <span class="math inline">\(v\in U,\, Lv\in U\)</span> 이므로 <span class="math inline">\((c_1−c_k)v_1 + \cdots + (c_{k-1}−c_k)v_{k-1}\in U\)</span> 이 induction 에 대한 가정으로 <span class="math inline">\(v_1,\ldots,\,v_{k-1}\in U\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>고유값, 고유벡터, 고유공간</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-LA_eigenvector" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.2 (고유값, 고유벡터, 고유공간)</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 어떤 벡터 <span class="math inline">\(v\ne O_V\)</span> 와 스칼라 <span class="math inline">\(\lambda\in \mathbb{F}\)</span> 가 존재하여,</p>
+<p><span class="theorem-title"><strong>정의 4.2</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 어떤 벡터 <span class="math inline">\(v\ne O_V\)</span> 와 스칼라 <span class="math inline">\(\lambda\in \mathbb{F}\)</span> 가 존재하여,</p>
 <p><span class="math display">\[
 L(v) = \lambda v
 \]</span></p>
@@ -435,9 +443,8 @@ L(v) = \lambda v
 </div>
 </div>
 </div>
-</div>
 <p><br></p>
-<p>즉 <span class="math inline">\(v\)</span> 가 <span class="math inline">\(\lambda\)</span> 의 고유값을 갖는 <span class="math inline">\(L\)</span> 의 고유벡터라면 <span class="math inline">\((L-\lambda I)v=0_V\)</span> 이다. <a href="ch1_02_linear_map.html#thm-LA_isomorphic_linear_map" class="quarto-xref">정리&nbsp;<span>2.4</span></a> 로부터 다음과 같은 결론을 얻게 된다.</p>
+<p>즉 <span class="math inline">\(v\)</span> 가 <span class="math inline">\(\lambda\)</span> 의 고유값을 갖는 <span class="math inline">\(L\)</span> 의 고유벡터라면 <span class="math inline">\((L-\lambda I)v=0_V\)</span> 이다. <a href="ch1_02_linear_map.html#thm-LA_isomorphic_linear_map" class="quarto-xref">정리&nbsp;<span>2.5</span></a> 로부터 다음과 같은 결론을 얻게 된다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-LA_finite_dimensional_vector_space_and_eigenvector" class="theorem">
@@ -673,18 +680,21 @@ c(u+v) = L(u+v)= Lu+Lv = au+bv
 <h2 data-number="4.2" class="anchored" data-anchor-id="특성다항식"><span class="header-section-number">4.2</span> 특성다항식</h2>
 <section id="sec-LA_polynomials_and_operators" class="level3" data-number="4.2.1">
 <h3 data-number="4.2.1" class="anchored" data-anchor-id="sec-LA_polynomials_and_operators"><span class="header-section-number">4.2.1</span> 다항식과 연산자</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><span class="math inline">\(L^m\)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-LA_power_of_operator" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.3 (<span class="math inline">\(L^m\)</span>)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(m\)</span> 이 음이 아닌 정수일 때 다음과 같이 정의된다.</p>
+<p><span class="theorem-title"><strong>정의 4.3</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 이고 <span class="math inline">\(m\)</span> 이 음이 아닌 정수일 때 다음과 같이 정의된다.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(L^m := \underbrace{L\cdots L}_{m\,\text{times}}\)</span>.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L^0 :=I_V\)</span>.</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(L\)</span> 이 가역일 때 <span class="math inline">\(L^{-m} := (L^{-1})^m\)</span>.</p>
-</div>
 </div>
 </div>
 </div>
@@ -699,18 +709,21 @@ L^mL^n = L^{m+n},\qquad (L^m)^n = L^{mn}.
 </div>
 </div>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>다항식과 연산자</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-LA_polynomials_on_operator" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.4 (다항식과 연산자)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 라고 하자. 다항식 <span class="math inline">\(p(t) := a_nt^n + a_{n-1}t^{n-1}+ \cdots + a_1 t + a_0\)</span> 에 대해 <span class="math inline">\(p(L)\)</span> 은 다음과 같이 정의된다.</p>
+<p><span class="theorem-title"><strong>정의 4.4</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 라고 하자. 다항식 <span class="math inline">\(p(t) := a_nt^n + a_{n-1}t^{n-1}+ \cdots + a_1 t + a_0\)</span> 에 대해 <span class="math inline">\(p(L)\)</span> 은 다음과 같이 정의된다.</p>
 <p><span class="math display">\[
 p(L) := a_n L^n + a_{n-1}L^{n-1} + \cdots a_1 L + a_0 I_V.
 \]</span></p>
-</div>
 </div>
 </div>
 </div>
@@ -729,19 +742,21 @@ p(L) := a_n L^n + a_{n-1}L^{n-1} + \cdots a_1 L + a_0 I_V.
 <section id="sec-LA_characteristic_polynomial" class="level3" data-number="4.2.2">
 <h3 data-number="4.2.2" class="anchored" data-anchor-id="sec-LA_characteristic_polynomial"><span class="header-section-number">4.2.2</span> 특성다항식</h3>
 <p><span class="math inline">\(\lambda\)</span> 를 미지수로 간주하면 <span class="math inline">\(n \times n\)</span> 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대해 <span class="math inline">\(\det (\lambda \boldsymbol{I}-\boldsymbol{A})\)</span> 는 <span class="math inline">\(\lambda\)</span> 에 대한 <span class="math inline">\(n\)</span> 차 다항식이다. 이 다항식의 근이 존재한다면, 그 근이 고유값이 되며, 이 고유값에 대한 고유벡터가 항상 존재한다는 의미이다. 이 다항식은 매우 중요하기 때문에 특별한 이름이 붙어 있다.</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>행렬의 특성다항식</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-LA_characteristic_polynomial" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.5 (행렬의 특성다항식)</strong></span> 정사각행렬 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(p_{\boldsymbol{A}}(\lambda) := \det (\lambda \boldsymbol{I}-\boldsymbol{A})\)</span> 를 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <strong>특성 다항식(characteristic polynomial)</strong> 이라 한다.</p>
+<p><span class="theorem-title"><strong>정의 4.5</strong></span> 정사각행렬 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(p_{\boldsymbol{A}}(\lambda) := \det (\lambda \boldsymbol{I}-\boldsymbol{A})\)</span> 를 <span class="math inline">\(\boldsymbol{A}\)</span> 의 <strong>특성 다항식(characteristic polynomial)</strong> 이라 한다.</p>
 </div>
 </div>
 </div>
-</div>
-<p><br></p>
 <p>다음은 행렬식의 성질을 생각하면 너무나도 당연하다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_degree_of_characteristic_polynomial" class="theorem proposition">
@@ -765,15 +780,18 @@ p(L) := a_n L^n + a_{n-1}L^{n-1} + \cdots a_1 L + a_0 I_V.
 </div>
 <p><br></p>
 <p><a href="#prp-LA_invariance_of_characteristic_polynomial" class="quarto-xref">명제&nbsp;<span>4.8</span></a> 는 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대한 특성다항식을 정의 할 수 있게 해 준다. 어떤 기저에 대해서도 <span class="math inline">\([L]\)</span> 의 특성다항식은 같기 때문에 이것은 연산자 <span class="math inline">\(L\)</span> 에 대한 특성다항식이라고 할 수 있다. 즉 연산자 <span class="math inline">\(L\)</span> 에 대한 특성다항식 <span class="math inline">\(p_L(\lambda)\)</span> 를 정의 할 수 있다.</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-LA_characteristic_polynomial_of_operator" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.6 (연산자의 특성다항식)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 일 때 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 에 대해 <span class="math inline">\(p_L(\lambda) = \det (\lambda I - [L]_\mathcal{B})\)</span> 를 연산자 <span class="math inline">\(L\)</span> 에 대한 특성다항식이라고 하고 <span class="math inline">\(p_L(\lambda)\)</span> 로 표기한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>연산자의 특성다항식</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-LA_characteristic_polynomial_of_operator" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 4.6</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 일 때 <span class="math inline">\(V\)</span> 의 기저 <span class="math inline">\(\mathcal{B}=(v_1,\ldots,\,v_n)\)</span> 에 대해 <span class="math inline">\(p_L(\lambda) = \det (\lambda I - [L]_\mathcal{B})\)</span> 를 연산자 <span class="math inline">\(L\)</span> 에 대한 특성다항식이라고 하고 <span class="math inline">\(p_L(\lambda)\)</span> 로 표기한다.</p>
 </div>
 </div>
 </div>
@@ -787,13 +805,13 @@ p(L) := a_n L^n + a_{n-1}L^{n-1} + \cdots a_1 L + a_0 I_V.
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(p_{[L]}(\lambda)=0\)</span> 일 때 <span class="math inline">\(\lambda\)</span> 가 <span class="math inline">\([L]\)</span> 의 고유값이 되는것은 <a href="#thm-LA_eigenvalues_determinant" class="quarto-xref">정리&nbsp;<span>4.2</span></a> 에서 보였다. <span class="math inline">\(\lambda\)</span> 가 <span class="math inline">\([L]\)</span> 의 고유값이라면 어떤 벡터 <span class="math inline">\([v] \ne \boldsymbol{0}\)</span> 에 대해 <span class="math inline">\([Av]=\lambda [v]\)</span> 이므로 <span class="math inline">\((\lambda I-L)v=0_V\)</span> 이다. 즉 <span class="math inline">\(\text{nullity}(\lambda I-L) &gt;0\)</span> 이므로 <span class="math inline">\(p_L(\lambda)= 0\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<div class="callout callout-style-simple callout-important no-icon callout-titled">
+<div class="callout callout-style-default callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-대수학의 기본정리
+<span class="screen-reader-only">중요</span><strong>대수학의 기본정리</strong>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -986,15 +1004,18 @@ E(\lambda_1,L) + \cdots + E(\lambda_m,L) = \bigoplus_{i=1}^m E(\lambda_i,L)
 </section>
 <section id="sec-LA_diagonalizable_matrix" class="level3" data-number="4.5.2">
 <h3 data-number="4.5.2" class="anchored" data-anchor-id="sec-LA_diagonalizable_matrix"><span class="header-section-number">4.5.2</span> 대각화 가능한 연산자</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-LA_diagonalizable_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 4.7 (대각화 가능)</strong></span> 연산자 <span class="math inline">\(L\)</span> 이 어떤 기저에서의 행렬표현이 대각행렬일 때 이 연산자를 <strong>대각화 가능하다(be diagonalizable)</strong> 라고 한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>대각화 가능</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-LA_diagonalizable_matrix" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 4.7</strong></span> 연산자 <span class="math inline">\(L\)</span> 이 어떤 기저에서의 행렬표현이 대각행렬일 때 이 연산자를 <strong>대각화 가능하다(be diagonalizable)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
@@ -1251,13 +1272,14 @@ f_1 = 1,\qquad f_2=1,\qquad f_{n+2} = f_{n+1} +f_n.
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

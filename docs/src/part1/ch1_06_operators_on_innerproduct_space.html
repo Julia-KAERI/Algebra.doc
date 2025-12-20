@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -54,14 +54,15 @@ div.csl-indent {
 <link href="../../src/part1/ch1_05_innerproduct.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a6044446bafb874b35005e6d630eb70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e2728906df7980cb53b491a61d13d7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,7 +105,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -273,26 +274,26 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../src/part3/characteristic_polynomial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">최소다항식과 케일리-해밀턴 정리</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../src/part3/bilinear_form.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">다중선형 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/laplacian_form_of_determinant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">행렬식의 라플라시안 형식</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../src/part3/generalized_inverse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../src/part3/characteristic_polynomial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">최소다항식과 케일리-해밀턴 정리</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">일반화된 역행렬과 유사역행렬</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -331,9 +332,9 @@ window.Quarto = {
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#adjoint-연산자" id="toc-adjoint-연산자" class="nav-link active" data-scroll-target="#adjoint-연산자"><span class="header-section-number">6.1</span> Adjoint 연산자</a>
+  <li><a href="#에르미트-수반" id="toc-에르미트-수반" class="nav-link active" data-scroll-target="#에르미트-수반"><span class="header-section-number">6.1</span> 에르미트 수반</a>
   <ul class="collapse">
-  <li><a href="#sec-LA_adjoint_operator" id="toc-sec-LA_adjoint_operator" class="nav-link" data-scroll-target="#sec-LA_adjoint_operator"><span class="header-section-number">6.1.1</span> Adjoint 연산자</a></li>
+  <li><a href="#sec-LA_adjoint_operator" id="toc-sec-LA_adjoint_operator" class="nav-link" data-scroll-target="#sec-LA_adjoint_operator"><span class="header-section-number">6.1.1</span> 에르미트 수반 연산자</a></li>
   <li><a href="#연습문제" id="toc-연습문제" class="nav-link" data-scroll-target="#연습문제">연습문제</a></li>
   </ul></li>
   <li><a href="#에르미트-연산자" id="toc-에르미트-연산자" class="nav-link" data-scroll-target="#에르미트-연산자"><span class="header-section-number">6.2</span> 에르미트 연산자</a>
@@ -386,15 +387,15 @@ window.Quarto = {
 \]</span></p>
 </div>
 <p><br></p>
-<section id="adjoint-연산자" class="level2 page-columns page-full" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="adjoint-연산자"><span class="header-section-number">6.1</span> Adjoint 연산자</h2>
+<section id="에르미트-수반" class="level2 page-columns page-full" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="에르미트-수반"><span class="header-section-number">6.1</span> 에르미트 수반</h2>
 <section id="sec-LA_adjoint_operator" class="level3 page-columns page-full" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="sec-LA_adjoint_operator"><span class="header-section-number">6.1.1</span> Adjoint 연산자</h3>
-<p><span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에 대해 다음의 성질을 만족하는 <span class="math inline">\(L^\ast : V \to U\)</span> 를 <span class="math inline">\(L\)</span> 에 대한 adjoint function 이라고 한다.</p>
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="sec-LA_adjoint_operator"><span class="header-section-number">6.1.1</span> 에르미트 수반 연산자</h3>
+<p><span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에 대해 다음의 성질을 만족하는 <span class="math inline">\(L^\ast : V \to U\)</span> 를 <span class="math inline">\(L\)</span> 에 대한 에르미트 수반(Hermitian adjoint) 이라고 한다.</p>
 <p><span id="eq-adjoint_function"><span class="math display">\[
 \langle L (u),\,v \rangle = \langle u,\, L^\ast (v) \rangle.
 \tag{6.1}\]</span></span></p>
-<p>우선 고정된 <span class="math inline">\(v\)</span> 에 대해 <span class="math inline">\(\phi (u) = \langle Lu,\,v\rangle\)</span> 는 선형 범함수(<a href="#exr-LA_adjoint_operator_1" class="quarto-xref">연습문제&nbsp;<span>6.1</span></a>) 이며 <a href="ch1_05_innerproduct.html#thm-LA_reisz_representation_theorem_1" class="quarto-xref">정리&nbsp;<span>5.3</span></a> 에 의해 <span class="math inline">\(\phi(u) = \langle u, w\rangle\)</span> 인 <span class="math inline">\(w\in U\)</span> 가 유일하게 존재한다. 이제 함수 <span class="math inline">\(L^\ast : V \to U\)</span> 를 <span class="math inline">\(L^\ast( v)= w\)</span> 인 함수로 생각 할 수 있다. (뭔가 이상한가? 이상해야 하는데..) 이 <span class="math inline">\(L^\ast\)</span> 를 <span class="math inline">\(L\)</span> 에 대한 adjoint function 이라고 한다.</p>
+<p>우선 고정된 <span class="math inline">\(v\)</span> 에 대해 <span class="math inline">\(\phi (u) = \langle Lu,\,v\rangle\)</span> 는 선형 범함수(<a href="#exr-LA_adjoint_operator_1" class="quarto-xref">연습문제&nbsp;<span>6.1</span></a>) 이며 리스의 표현정리(<a href="ch1_05_innerproduct.html#thm-LA_reisz_representation_theorem_1" class="quarto-xref">정리&nbsp;<span>5.3</span></a>) 에 의해 <span class="math inline">\(\phi(u) = \langle u, w\rangle\)</span> 인 <span class="math inline">\(w\in U\)</span> 가 유일하게 존재한다. 따라서 함수 <span class="math inline">\(L^\ast : V \to U\)</span> 를 <span class="math inline">\(L^\ast( v)= w\)</span> 인 함수로 생각 할 수 있다.</p>
 <br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-LA_adjoint_operator_1" class="theorem exercise">
@@ -412,7 +413,7 @@ window.Quarto = {
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_adjoint_transformation" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 6.1</strong></span> 위에서 정의된 <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에 대한 adjoint function <span class="math inline">\(L^\ast\)</span> 는 선형사상이다.</p>
+<p><span class="theorem-title"><strong>명제 6.1</strong></span> 위에서 정의된 <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에 대한 <span class="math inline">\(L^\ast\)</span> 는 선형사상이다.</p>
 </div>
 </div>
 <div class="proof">
@@ -424,7 +425,7 @@ window.Quarto = {
 \end{aligned}
 \]</span></p>
 </div>
-<p>즉 <span class="math inline">\(L\in \mathcal{L}(U, V)\)</span> 이면 <span class="math inline">\(L^\ast \in \mathcal{L}(U, V)\)</span> 이다. 이제 <span class="math inline">\(L^\ast\)</span> 를 <span class="math inline">\(L\)</span> 에 대한 adjoint transformation 이라고 한다.</p>
+<p>즉 <span class="math inline">\(L\in \mathcal{L}(U, V)\)</span> 이면 <span class="math inline">\(L^\ast \in \mathcal{L}(U, V)\)</span> 이다.</p>
 <div class="callout callout-style-simple callout-warning no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -435,15 +436,18 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-LA_adjoint" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 6.1 (Adjoint)</strong></span> 내적벡터공간 <span class="math inline">\(U,\,V\)</span> 에서 정의된 <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에 대해 <span class="math inline">\(\langle L(u),\, v\rangle = \langle u,\,L^\ast(v)\rangle\)</span> 을 만족하는 <span class="math inline">\(L^\ast \in \mathcal{L}(V,\,U)\)</span> 가 존재하며 <span class="math inline">\(L^\ast\)</span> 를 <span class="math inline">\(L\)</span> 의 <strong>adjoint</strong> 라고 한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>에르미트 수반연산자</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-LA_hermitiann_adjoint_operator" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 6.1</strong></span> 내적벡터공간 <span class="math inline">\(U,\,V\)</span> 에서 정의된 <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 에 대해 <span class="math inline">\(\langle L(u),\, v\rangle = \langle u,\,L^\ast(v)\rangle\)</span> 을 만족하는 <span class="math inline">\(L^\ast \in \mathcal{L}(V,\,U)\)</span> 가 존재하며 <span class="math inline">\(L^\ast\)</span> 를 <span class="math inline">\(L\)</span> 의 <strong>에르미트 수반연산자 (hermitian adjoint operator)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
@@ -460,16 +464,19 @@ window.Quarto = {
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(A_{ji}=\langle L(e_i),\, f_j\rangle = \langle e_i,\, L^\ast(f_j)\rangle = \overline{\langle L^\ast(f_j),\, e_i\rangle}=\overline{(\boldsymbol{A}^\ast)_{ij}} \qquad \square\)</span></p>
 </div>
 <p><br></p>
-<p>따라서 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 adjoint 를 adjoint matrix 라고 하여 아래와 같이 정의 할 수 있다.</p>
-<p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<p>따라서 행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 에 대한 에르미트 수반 연산자를 <strong>에르미트 수반행렬(hermitian adjoint matrix)</strong> 라고 하여 아래와 같이 정의 할 수 있다.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-LA_adjoint_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 6.2 (Adjoint matrix)</strong></span> 행렬 <span class="math inline">\(\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>에르미트 수반행렬</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-LA_hermitian_adjoint_matrix" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 6.2</strong></span> 행렬 <span class="math inline">\(\boldsymbol{A} \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해</p>
 <p><span class="math display">\[
 (\boldsymbol{A}^\ast)_{ij} = \overline{A_{ji}}
 \]</span></p>
@@ -477,8 +484,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-</div>
-<div class="no-row-height column-margin column-container"><span class="margin-aside callout-margin-content callout-margin-content-simple">행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 adjoint matrix 에 대해서는 <span class="math inline">\(\boldsymbol{A}^\ast\)</span>, <span class="math inline">\(\boldsymbol{A}^\dagger\)</span>, <span class="math inline">\(\boldsymbol{A}^H\)</span> 등의 표기법이 사용된다. 물리학 특히 양자역학에서는 adjoint matrix 에 대해 <span class="math inline">\(\boldsymbol{A}^\ast\)</span> 보다는 <span class="math inline">\(\boldsymbol{A}^\dagger\)</span> 의 표현을 더 많이 사용하기도 한다.</span></div><p><br></p>
+<div class="no-row-height column-margin column-container"><span class="margin-aside callout-margin-content">행렬 <span class="math inline">\(\boldsymbol{A}\)</span> 의 adjoint matrix 에 대해서는 <span class="math inline">\(\boldsymbol{A}^\ast\)</span>, <span class="math inline">\(\boldsymbol{A}^\dagger\)</span>, <span class="math inline">\(\boldsymbol{A}^H\)</span> 등의 표기법이 사용된다. 물리학 특히 양자역학에서는 adjoint matrix 에 대해 <span class="math inline">\(\boldsymbol{A}^\ast\)</span> 보다는 <span class="math inline">\(\boldsymbol{A}^\dagger\)</span> 의 표현을 더 많이 사용하기도 한다.</span></div><p><br></p>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-LA_adjoint_matrix" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 6.2</strong></span> 정규직교기저에서 정의된 <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{m \times n}(\mathbb{F})\)</span>, <span class="math inline">\(\boldsymbol{v}\in\mathcal{M}_{m }(\mathbb{F})\)</span>, <span class="math inline">\(\boldsymbol{u}\in \mathcal{M}_{n }(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\langle \boldsymbol{Au},\, \boldsymbol{v} \rangle = \langle \boldsymbol{u},\, \boldsymbol{A}^\ast \boldsymbol{v} \rangle\)</span> 임을 보여라.</p>
@@ -515,7 +521,7 @@ window.Quarto = {
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="thm-LA_kernel_image_of_adjoint_operator" class="theorem">
-<p><span class="theorem-title"><strong>정리 6.1 (Adjoint 의 kernel 과 치역)</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 일 때 다음이 성립한다.</p>
+<p><span class="theorem-title"><strong>정리 6.1 (에르미트 수반행렬의 kernel 과 image)</strong></span> <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 일 때 다음이 성립한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(\ker (L^\ast) = (\text{im} (L))^\perp\)</span></p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\text{im} (L^\ast) = (\ker (L))^\perp\)</span>,</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(\ker (L) = (\text{im}\, (L^\ast))^\perp\)</span>,</p>
@@ -611,19 +617,21 @@ L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
 <h2 data-number="6.2" class="anchored" data-anchor-id="에르미트-연산자"><span class="header-section-number">6.2</span> 에르미트 연산자</h2>
 <section id="sec-LA_hermitian_operator" class="level3" data-number="6.2.1">
 <h3 data-number="6.2.1" class="anchored" data-anchor-id="sec-LA_hermitian_operator"><span class="header-section-number">6.2.1</span> 에르미트 연산자</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>에르미트 연산자, 에르미트 행렬, 대칭행렬</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-LA_hermitian_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 6.3 (에르미트 연산자, 에르미트 행렬, 대칭행렬)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(L^\ast = L\)</span> 일 때 <span class="math inline">\(L\)</span> 을 <strong>에르미트 연산자(Hermitian operator)</strong> 혹은 <strong>self-adjoint operator</strong> 라고 한다. <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\boldsymbol{A}^\ast = \boldsymbol{A}\)</span> 이면 이 행렬을 <strong>에르미트 행렬(Hermitian matrix)</strong> 혹은 <strong>self-adjoint matrix</strong> 이라 한다. 특별히 <span class="math inline">\(\mathbb{F}=\mathbb{R}\)</span> 일 경우에는 <strong>대칭행렬 (Symmetric matrix)</strong> 이라 한다.</p>
+<p><span class="theorem-title"><strong>정의 6.3</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(L^\ast = L\)</span> 일 때 <span class="math inline">\(L\)</span> 을 <strong>에르미트 연산자(Hermitian operator)</strong> 혹은 <strong>자기 수반 연산자(self-adjoint operator)</strong> 라고 한다. <span class="math inline">\(\boldsymbol{A}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(\boldsymbol{A}^\ast = \boldsymbol{A}\)</span> 이면 이 행렬을 <strong>에르미트 행렬(Hermitian matrix)</strong> 혹은 <strong>자기 수반 행렬(self-adjoint matrix)</strong> 이라 한다. 특별히 <span class="math inline">\(\mathbb{F}=\mathbb{R}\)</span> 일 경우에는 <strong>대칭행렬 (Symmetric matrix)</strong> 이라 한다.</p>
 </div>
 </div>
 </div>
-</div>
-<p><br></p>
 <p><span class="math inline">\(\boldsymbol{A}\)</span> 가 에르미트 행렬일 경우 <span class="math inline">\((\boldsymbol{A}^\ast)_{ij} = \overline{A_{ji}} = A_{ij}\)</span> 를 만족한다. 대칭행렬의 경우에는 <span class="math inline">\(A_{ij} = A_{ji}\)</span> 이다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
@@ -652,7 +660,7 @@ L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
 <p><br></p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_hermite_tvv" class="theorem proposition">
-<p><span class="theorem-title"><strong>명제 6.5</strong></span> 복소내적벡터공간 <span class="math inline">\(U\)</span> 에서 정의된 연산자 <span class="math inline">\(L\in \mathcal{L}(U)\)</span> 에 대해 다음 두 명제는 동치이다.</p>
+<p><span class="theorem-title"><strong>명제 6.5</strong></span> <span class="math inline">\(\mathbb{C}\)</span>-내적벡터공간 <span class="math inline">\(U\)</span> 에서 정의된 <span class="math inline">\(L\in \mathcal{L}(U)\)</span> 에 대해 다음 두 명제는 동치이다.</p>
 <p> (<span class="math inline">\(1\)</span>) 임의의 <span class="math inline">\(u\in U\)</span> 에 대해 <span class="math inline">\(\langle L(u),\, u\rangle\)</span> 은 실수이다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(L\)</span> 는 에르미트 연산자이다.</p>
 </div>
@@ -748,12 +756,16 @@ L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
 <h2 data-number="6.3" class="anchored" data-anchor-id="linear-isometry"><span class="header-section-number">6.3</span> Linear Isometry</h2>
 <section id="sec-LA_linear_isometry" class="level3" data-number="6.3.1">
 <h3 data-number="6.3.1" class="anchored" data-anchor-id="sec-LA_linear_isometry"><span class="header-section-number">6.3.1</span> Linear Isometry</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>Linear isometry</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-LA_linear_isometry" class="theorem definition">
 <p><span class="theorem-title"><strong>정의 6.4</strong></span> 내적벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산지 <span class="math inline">\(S\in \mathcal{L}(V)\)</span> 가 각각의 <span class="math inline">\(v\in V\)</span> 에 대해</p>
 <p><span class="math display">\[
@@ -763,14 +775,13 @@ L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
 </div>
 </div>
 </div>
-</div>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-비선형 isometry
+<span class="screen-reader-only">주의</span>비선형 isometry
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -847,15 +858,18 @@ L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
 \]</span></p>
 </div>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-LA_orthogonal_operator" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 6.5 (유니타리행렬과 직교행렬)</strong></span> <span class="math inline">\(\mathbb{C}\)</span>-벡터공간에서 정의된 linear isometry 를 <strong>유니타리 연산자/행렬 (unitary operator/matrix)</strong> 라 하고 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간에서 정의된 linear isometry 를 <strong>직교 연산자/행렬 (orthogonal operator/matrix)</strong> 라 한다. 유니타리 행렬에 의한 행렬/벡터의 변환을 <strong>유니타리 변환 (unitary transformation)</strong>, 직교행렬에 의핸 행렬/벡터의 변환을 <strong>직교 변환 (orthogonal transformation)</strong>이라고 한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>유니타리행렬과 직교행렬</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-LA_orthogonal_operator" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 6.5</strong></span> <span class="math inline">\(\mathbb{C}\)</span>-벡터공간에서 정의된 linear isometry 를 <strong>유니타리 연산자/행렬 (unitary operator/matrix)</strong> 라 하고 <span class="math inline">\(\mathbb{R}\)</span>-벡터공간에서 정의된 linear isometry 를 <strong>직교 연산자/행렬 (orthogonal operator/matrix)</strong> 라 한다. 유니타리 행렬에 의한 행렬/벡터의 변환을 <strong>유니타리 변환 (unitary transformation)</strong>, 직교행렬에 의핸 행렬/벡터의 변환을 <strong>직교 변환 (orthogonal transformation)</strong>이라고 한다.</p>
 </div>
 </div>
 </div>
@@ -917,19 +931,21 @@ L^\ast f_j = \sum_{i=1}^n \overline{A_{ji}}e_i
 <h2 data-number="6.4" class="anchored" data-anchor-id="정규연산자와-정규행렬"><span class="header-section-number">6.4</span> 정규연산자와 정규행렬</h2>
 <section id="sec-LA_normal_operator" class="level3" data-number="6.4.1">
 <h3 data-number="6.4.1" class="anchored" data-anchor-id="sec-LA_normal_operator"><span class="header-section-number">6.4.1</span> 정규 연산자와 행렬</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>정규 행렬</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-LA_normal_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 6.6 (정규 행렬)</strong></span> 내적벡터공간에서 정의된 <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 가 <span class="math inline">\(LL^\ast = L^\ast L\)</span> 일 때 <span class="math inline">\(L\)</span> 을 <strong>정규연산자(normal operator)</strong> 라고 한다. 마찬가지로 정사각 행렬 <span class="math inline">\(\boldsymbol{L}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 이 <span class="math inline">\(\boldsymbol{LL}^\ast = \boldsymbol{L}^\ast \boldsymbol{L}\)</span> 일 때 <span class="math inline">\(\boldsymbol{L}\)</span> 을 <strong>정규 행렬(normal matrix)</strong> 라 한다.</p>
+<p><span class="theorem-title"><strong>정의 6.6</strong></span> 내적벡터공간에서 정의된 <span class="math inline">\(L\in \mathcal{L}(U,\,V)\)</span> 가 <span class="math inline">\(LL^\ast = L^\ast L\)</span> 일 때 <span class="math inline">\(L\)</span> 을 <strong>정규연산자(normal operator)</strong> 라고 한다. 마찬가지로 정사각 행렬 <span class="math inline">\(\boldsymbol{L}\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 이 <span class="math inline">\(\boldsymbol{LL}^\ast = \boldsymbol{L}^\ast \boldsymbol{L}\)</span> 일 때 <span class="math inline">\(\boldsymbol{L}\)</span> 을 <strong>정규 행렬(normal matrix)</strong> 라 한다.</p>
 </div>
 </div>
 </div>
-</div>
-<p><br></p>
 <p>다음은 자연스럽다.</p>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-LA_hermitian_is_normal" class="theorem proposition">
@@ -1317,13 +1333,14 @@ Hoffman, K., and R. A. Kunze. 1971. <em>Linear Algebra</em>. Prentice-Hall. <a h
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
