@@ -372,19 +372,22 @@ window.Quarto = {
 a=mb + r,\qquad (0 \le r &lt; |b| )
 \]</span></p>
 <p>임이며 <span class="math inline">\(m\)</span> 과 <span class="math inline">\(r\)</span> 이 유일하게 정해짐을 안다. 이 때 <span class="math inline">\(m\)</span> 을 몫, <span class="math inline">\(r\)</span> 을 나머지라 한다.</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>약수와 최대공약수</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-MA_divisor_gcd" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.1 (약수와 최대공약수)</strong></span> 정수 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(0\)</span> 이 아닌 정수 <span class="math inline">\(b\)</span> 가 주어졌을 때 어떤 정수 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(a=mb\)</span> 일 때 <span class="math inline">\(b\)</span> 를 <span class="math inline">\(a\)</span> 의 <strong>약수 (devisor)</strong>라고 하고 <span class="math inline">\(b \mid a\)</span> 라고 쓴다. <span class="math inline">\(b\)</span> 가 <span class="math inline">\(a\)</span> 의 약수가 아닐 때는 <span class="math inline">\(b \nmid a\)</span> 라고 쓴다.</p>
+<p><span class="theorem-title"><strong>정의 8.1</strong></span> 정수 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(0\)</span> 이 아닌 정수 <span class="math inline">\(b\)</span> 가 주어졌을 때 어떤 정수 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(a=mb\)</span> 일 때 <span class="math inline">\(b\)</span> 를 <span class="math inline">\(a\)</span> 의 <strong>약수 (devisor)</strong>라고 하고 <span class="math inline">\(b \mid a\)</span> 라고 쓴다. <span class="math inline">\(b\)</span> 가 <span class="math inline">\(a\)</span> 의 약수가 아닐 때는 <span class="math inline">\(b \nmid a\)</span> 라고 쓴다.</p>
 <p>주어진 정수 <span class="math inline">\(a,\,b\)</span> 에 대해 어떤 양의 정수 <span class="math inline">\(c\)</span> 가</p>
 <p> (<span class="math inline">\(1\)</span>). <span class="math inline">\(c\mid a,\, c\mid b\)</span>,</p>
 <p> (<span class="math inline">\(2\)</span>). <span class="math inline">\(\forall d\in \mathbb{Z},\, (d \mid a) \land (d \mid b) \implies d \mid c\)</span></p>
 <p>일 때 <span class="math inline">\(c\)</span> 를 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 의 <strong>최대공약수(greatest common devisor)</strong> 라고 한다. <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 의 최대공약수는 <span class="math inline">\(\gcd (a,\,b)\)</span> 로 표기한다.</p>
-</div>
 </div>
 </div>
 </div>
@@ -398,7 +401,6 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p>이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(M = \{ma+nb : m,\,n \in \mathbb{Z}\}\)</span> 이라 하자. <span class="math inline">\(a\ne 0,\, b\ne 0\)</span> 이므로 <span class="math inline">\(M\)</span> 은 <span class="math inline">\(0\)</span> 이 아닌 원소를 갖는다. 어떤 <span class="math inline">\(m,\,n \in\mathbb{Z}\)</span> 에 대해 <span class="math inline">\(ma+nb&lt;0\)</span> 이라면 <span class="math inline">\((-m)x + (-n)b\)</span> 역시 <span class="math inline">\(M\)</span> 의 원소이며 양수이므로 <span class="math inline">\(M\)</span> 은 양수인 원소를 포함한다. <span class="math inline">\(M\)</span> 의 양의 원소의 집합은 항상 최소값을 포함하므로 이를 <span class="math inline">\(c\)</span> 라 하자. 이제 <span class="math inline">\(c=\gcd(a,\,b)\)</span> 임을 보이자. <span class="math inline">\(c=m_0a + n_0 b\)</span> 라 하자.</p>
 <p><span class="math inline">\(d\mid a,\, d \mid b\)</span> 이면 <span class="math inline">\(d \mid (m_0 a + n_0 b)\)</span> 이므로 <span class="math inline">\(d\mid c\)</span> 이다. <span class="math inline">\(x\in M\)</span> 에 대해 <span class="math inline">\(x=tc + r,\, 0\le r &lt;|c|\)</span> 라 하자. <span class="math inline">\(x\in M\)</span> 이므로 어떤 <span class="math inline">\(m,\,n\in \mathbb{Z}\)</span> 에 대해 <span class="math inline">\(x=ma+nb\)</span> 이다.</p>
@@ -411,36 +413,40 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </section>
 <section id="sec-MA_prime_number_factorization" class="level3" data-number="8.1.2">
 <h3 data-number="8.1.2" class="anchored" data-anchor-id="sec-MA_prime_number_factorization"><span class="header-section-number">8.1.2</span> 소수와 소인수 분해</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>서로소</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-MA_relatively_prime" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.2 (서로소)</strong></span> <span class="math inline">\(a,\,b\in\mathbb{Z}\)</span> 에 대해 <span class="math inline">\(\gcd (a,\,b)=1\)</span> 일 때 <span class="math inline">\(a,\,b\)</span> 는 <strong>서로소(relatively prime)</strong> 이라 한다.</p>
+<p><span class="theorem-title"><strong>정의 8.2</strong></span> <span class="math inline">\(a,\,b\in\mathbb{Z}\)</span> 에 대해 <span class="math inline">\(\gcd (a,\,b)=1\)</span> 일 때 <span class="math inline">\(a,\,b\)</span> 는 <strong>서로소(relatively prime)</strong> 이라 한다.</p>
 </div>
 </div>
 </div>
-</div>
-<p><br></p>
 <p>다음 명제는 <a href="#prp-MA_divisor" class="quarto-xref">명제&nbsp;<span>8.1</span></a> 에 의해 자명하다.</p>
-<br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 <div id="prp-MA_relatively_prime" class="theorem proposition">
 <p><span class="theorem-title"><strong>명제 8.2</strong></span> <span class="math inline">\(a,\,b\in \mathbb{Z}\)</span> 가 서로소이면 <span class="math inline">\(ma+nb=1\)</span> 을 만족하는 <span class="math inline">\(m,\,n\in \mathbb{Z}\)</span> 가 존재한다.</p>
 </div>
 </div>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-group_prime" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.3 (소수)</strong></span> 어떤 <span class="math inline">\(1\)</span> 보다 큰 양의 정수 <span class="math inline">\(p\)</span> 가 <span class="math inline">\(\pm 1\)</span> 과 <span class="math inline">\(\pm p\)</span> 이외의 약수가 존재하지 않을 때 <span class="math inline">\(p\)</span> 를 <strong>소수(prime number)</strong> 라고 한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>소수</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-group_prime" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 8.3</strong></span> 어떤 <span class="math inline">\(1\)</span> 보다 큰 양의 정수 <span class="math inline">\(p\)</span> 가 <span class="math inline">\(\pm 1\)</span> 과 <span class="math inline">\(\pm p\)</span> 이외의 약수가 존재하지 않을 때 <span class="math inline">\(p\)</span> 를 <strong>소수(prime number)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
@@ -452,7 +458,6 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p> (<span class="math inline">\(2\)</span>) 임의의 정수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(\gcd (p, n)=1\)</span> 이거나 <span class="math inline">\(p \mid n\)</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(p\)</span> 가 소수임을 가정하자. <span class="math inline">\(\gcd(p, n) = d \ne 1\)</span> 이라면 <span class="math inline">\(d\mid p\)</span> 이므로 <span class="math inline">\(d=p\)</span> 이다. 따라서 <span class="math inline">\(p \mid n\)</span> 이다. 즉 <span class="math inline">\(p\)</span> 가 소수이면 <span class="math inline">\(\gcd (p, n)=1\)</span> 이거나 <span class="math inline">\(p \mid n\)</span> 이다.</p>
 <p><span class="math inline">\(p\)</span> 가 소수가 아니라면 <span class="math inline">\(1&lt;d&lt;p,\, d\mid p\)</span> 인 양의정수 <span class="math inline">\(d\)</span> 가 존재한다. <span class="math inline">\(\gcd (p, d)=d\ne 1\)</span> 이며 <span class="math inline">\(p \nmid d\)</span> 이다. <span class="math inline">\(\square\)</span></p>
@@ -463,7 +468,6 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p><span class="theorem-title"><strong>명제 8.4</strong></span> <span class="math inline">\(a\)</span> 와 <span class="math inline">\(b\)</span> 가 서로소이고 <span class="math inline">\(a\mid bc\)</span> 이면 <span class="math inline">\(a\mid c\)</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-MA_relatively_prime" class="quarto-xref">명제&nbsp;<span>8.2</span></a> 에 의해 <span class="math inline">\(ma+nb=1\)</span> 을 만족하는 <span class="math inline">\(m,\,n\in \mathbb{Z}\)</span> 가 존재한다. <span class="math inline">\(mac+nbc=c\)</span> 이며 <span class="math inline">\(a\mid mac\)</span> 이고 가정에 의해 <span class="math inline">\(a\mid mbc\)</span> 이므로 <span class="math inline">\(a \mid c\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -473,7 +477,6 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p><span class="theorem-title"><strong>따름정리 8.1</strong></span> 소수 <span class="math inline">\(p\)</span> 가 어떤 정수의 곱 <span class="math inline">\(a,\,b\)</span> 를 나눈다면 <span class="math inline">\(p \mid a\)</span> 이거나 <span class="math inline">\(p \mid b\)</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(p\)</span> 가 소수이므로 <span class="math inline">\(p \nmid a\)</span> 라면 <a href="#prp-MA_prime_number_equivalence" class="quarto-xref">명제&nbsp;<span>8.3</span></a> 에 의해 <span class="math inline">\(\gcd (p,\,a)=1\)</span> 이다. <span class="math inline">\(mp+na=1\)</span> 을 만족하는 <span class="math inline">\(m,\,n\in \mathbb{Z}\)</span> 가 존재한다. <span class="math inline">\(mpb + nab = b\)</span> 이며 <span class="math inline">\(p \mid nab\)</span> 이므로 <span class="math inline">\(p\mid b\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -483,21 +486,23 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p><span class="theorem-title"><strong>정리 8.1</strong></span> <span class="math inline">\(1\)</span> 보다 큰 양의 정수 <span class="math inline">\(a\)</span> 는 소수의 곱으로 유일하게 표현된다. 즉 <span class="math inline">\(a\in \mathbb{Z}_+\)</span> 은 어떤 소수 <span class="math inline">\(p_1,\ldots,\,p_m\)</span>, (<span class="math inline">\(p_1&lt; \cdots &lt;p_m\)</span>) 에 대해 <span class="math inline">\(a=p_1^{n_1} \cdots p_m^{n_m}\)</span> 이며 <span class="math inline">\(p_1,\ldots,\,p_m\)</span> 과 <span class="math inline">\(n_1,\ldots,\,n_m\)</span> 은 유일하게 정해진다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>우선 <span class="math inline">\(a\)</span> 가 소수의 곱으로 표현된다는 것을 induction 을 통해 증명한다. <span class="math inline">\(a=2\)</span> 는 소수이므로 자명하다. <span class="math inline">\(a&lt;n\)</span> 에 대해 가정하자. <span class="math inline">\(a=n\)</span> 일 때 <span class="math inline">\(a\)</span> 가 소수이면 더 이상 증명할 거이 없다. <span class="math inline">\(a\)</span> 가 소수가 아니라면 어떤 <span class="math inline">\(a\)</span> 보다 작은 두 양수의 곱으로 표현될 수 있으며 가정에 의해 두 양수는 소수의 곱으로 표현되므로 <span class="math inline">\(a\)</span> 도 소수의 곱으로 표현된다.</p>
 <p>이제 소수 <span class="math inline">\(p_1&lt; \cdots &lt;p_m\)</span> 에 대해 <span class="math inline">\(a=p_1^{n_1}\cdots p_m^{n_m}\)</span> 이며, 역시 소수 <span class="math inline">\(q_1&lt; \cdots &lt;q_k\)</span> 에 대해 <span class="math inline">\(a=q_1^{s_1} \cdots q_k ^{s_k}\)</span> 라고 하자. <span class="math inline">\(p_1 \mid a\)</span> 이므로 어떤 <span class="math inline">\(q_i=p_1\)</span> 이어야 한다. 같은 이유로 어떤 <span class="math inline">\(p_j=q_1\)</span> 이어야 한다. <span class="math inline">\(p_1\)</span> 과 <span class="math inline">\(q_1\)</span> 각각 <span class="math inline">\(\{p_i\},\, \{q_j\}\)</span> 중에 가장 작은 수이므로 <span class="math inline">\(p_1=q_1\)</span> 이어야 한다. <span class="math inline">\(p_1^{n_1}\mid a,\, p_1^{s_1}\mid a\)</span> 이므로 <span class="math inline">\(n_1 = s_1\)</span> 이어야 한다. 이것을 계속 반복하면 <span class="math inline">\(m=k\)</span>, <span class="math inline">\(p_i = q_i\)</span>, <span class="math inline">\(n_j = s_j\)</span> 임을 알 수 있다. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-MA_prime" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.4 (소인수 분해)</strong></span> <a href="#thm-MA_prime_number_factorization" class="quarto-xref">정리&nbsp;<span>8.1</span></a> 에서와 같이 <span class="math inline">\(1\)</span> 보다 큰 양의 정수를 소수의 곱으로 표현하는 것을 <strong>소인수 분해 (prime factorization/integer factorization)</strong> 라고 한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>소인수 분해</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-MA_prime" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 8.4</strong></span> <a href="#thm-MA_prime_number_factorization" class="quarto-xref">정리&nbsp;<span>8.1</span></a> 에서와 같이 <span class="math inline">\(1\)</span> 보다 큰 양의 정수를 소수의 곱으로 표현하는 것을 <strong>소인수 분해 (prime factorization/integer factorization)</strong> 라고 한다.</p>
 </div>
 </div>
 </div>
@@ -505,15 +510,18 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </section>
 <section id="sec-MA_modula_arithmetic" class="level3" data-number="8.1.3">
 <h3 data-number="8.1.3" class="anchored" data-anchor-id="sec-MA_modula_arithmetic"><span class="header-section-number">8.1.3</span> 모듈라 산술</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-MA_modula" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.5 (mod)</strong></span> 양의 정수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(n\mid (a-b)\)</span> 이면 <span class="math inline">\(a \equiv b \;(\text{mod}\;n)\)</span> 이라 한다. 정해진 양의 정수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(a\equiv b \;(\text{mod})\;n\)</span> 일 때 관계(relation) <span class="math inline">\(a\sim b\)</span> 를 정의 할 수 있다. 이 관계를 <strong>congruence modulo <span class="math inline">\(n\)</span></strong> 이라 한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>Congruence Modulo</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-MA_modula" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 8.5</strong></span> 양의 정수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(n\mid (a-b)\)</span> 이면 <span class="math inline">\(a \equiv b \;(\text{mod}\;n)\)</span> 이라 한다. 정해진 양의 정수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(a\equiv b \;(\text{mod})\;n\)</span> 일 때 관계(relation) <span class="math inline">\(a\sim b\)</span> 를 정의 할 수 있다. 이 관계를 <strong>congruence modulo <span class="math inline">\(n\)</span></strong> 이라 한다.</p>
 </div>
 </div>
 </div>
@@ -527,7 +535,6 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p>  (<span class="math inline">\(4\)</span>) <span class="math inline">\(ab \equiv ac \;(\text{mod}\; n)\)</span> 이고 <span class="math inline">\(a\)</span> 와 <span class="math inline">\(n\)</span> 이 서로소이면 <span class="math inline">\(b \equiv c \;(\text{mod}\;n)\)</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(n \mid (a-a)\)</span> 와 <span class="math inline">\(n \mid (a-b) \implies n \mid (b-a)\)</span> 임은 자명하다. <span class="math inline">\(n\mid (a-b)\)</span> 이고 <span class="math inline">\(n \mid (b-c)\)</span> 라 하자. <span class="math inline">\(a-b=k_1n,\, b-c = k_2n\)</span> 이라 하면 <span class="math inline">\(a-c = (k_1 + k_2)n\)</span> 이므로 <span class="math inline">\(n \mid (a-c)\)</span> 이다. 따라서 congruence modulo <span class="math inline">\(n\)</span> 관계는 동치관계이다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\([a]=\{m\in \mathbb{Z} : n \mid (a-m)\}\)</span> 라 하자. <span class="math inline">\(x \in [a]\)</span> 일 필요충분조건은 <span class="math inline">\(x\)</span> 와 <span class="math inline">\(a\)</span> 를 <span class="math inline">\(n\)</span> 으로 나누었을 때의 나머지가 같다는 것은 쉽게 보일 수 있다. 또한 나머지는 <span class="math inline">\(0,\ldots,\,n-1\)</span> 중의 하나이며 각각의 나머지를 갖는 수가 존재하므로 congruence modulo <span class="math inline">\(n\)</span> 관계의 equivalence classes 의 갯수는 <span class="math inline">\(n\)</span> 개이다.</p>
@@ -549,7 +556,6 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p><span class="theorem-title"><strong>명제 8.6</strong></span> 위의 덧셈과 곱셈 연산은 잘 정의된다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(a,\,b\in [i],\, c,\,d\in [j]\)</span> 라 하자. <a href="#prp-MA_modula" class="quarto-xref">명제&nbsp;<span>8.5</span></a> 에서 보인 대로 <span class="math inline">\(a+c \equiv b+d \;(\text{mod}\; n)\)</span> 이며 <span class="math inline">\(ac \equiv bd \;(\text{mod}\;n)\)</span> 이므로 잘 정의된다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -566,7 +572,6 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p>  (<span class="math inline">\(7\)</span>) <span class="math inline">\([1][i]=[i]\)</span>.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\([i] + [j] = [i+j]=[j+i]=[j]+[i]\)</span>.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\([i][j] = [ij]=[ji]=[j][i]\)</span>.</p>
@@ -629,17 +634,20 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <section id="sec-binary_operations" class="level3" data-number="8.2.1">
 <h3 data-number="8.2.1" class="anchored" data-anchor-id="sec-binary_operations"><span class="header-section-number">8.2.1</span> 이항연산</h3>
 <p>군에 들어가기에 앞서 이미 알고 있겠지만 이항연산을 정의한다.</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>이항연산</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-binary_operation" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.6 (이항연산 (binary operation))</strong></span> 집합 <span class="math inline">\(S\)</span> 에 대해 <span class="math inline">\(S\times S \mapsto S\)</span> 함수를 <strong>이항연산</strong> 이라고 한다. 관습적으로 이항연산을 <span class="math inline">\(a\cdot b\)</span>, <span class="math inline">\(ab\)</span>, <span class="math inline">\(a\ast b\)</span>, <span class="math inline">\(a \circ b\)</span>, <span class="math inline">\(a+b\)</span> 등으로 쓴다. 임의의 <span class="math inline">\(a,\,b,\,c\in S\)</span> 에 대해</p>
+<p><span class="theorem-title"><strong>정의 8.6</strong></span> 집합 <span class="math inline">\(S\)</span> 에 대해 <span class="math inline">\(S\times S \mapsto S\)</span> 함수를 <strong>이항연산</strong> 이라고 한다. 관습적으로 이항연산을 <span class="math inline">\(a\cdot b\)</span>, <span class="math inline">\(ab\)</span>, <span class="math inline">\(a\ast b\)</span>, <span class="math inline">\(a \circ b\)</span>, <span class="math inline">\(a+b\)</span> 등으로 쓴다. 임의의 <span class="math inline">\(a,\,b,\,c\in S\)</span> 에 대해</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\((ab)c=a(bc)\)</span> 일 때 결합법칙을 만족한다고 한다.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(ab=ba\)</span> 일 때 교환법칙을 만족한다고 한다.</p>
-</div>
 </div>
 </div>
 </div>
@@ -648,23 +656,25 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </section>
 <section id="sec-MA_groups_subgroups" class="level3" data-number="8.2.2">
 <h3 data-number="8.2.2" class="anchored" data-anchor-id="sec-MA_groups_subgroups"><span class="header-section-number">8.2.2</span> 군과 부분군</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>군</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-MA_groups" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.7 (군 (Groups))</strong></span> 집합 <span class="math inline">\(G\)</span> 에 이항연산 <span class="math inline">\(\cdot\)</span> 이 정의되어 있으며,</p>
+<p><span class="theorem-title"><strong>정의 8.7</strong></span> 집합 <span class="math inline">\(G\)</span> 에 이항연산 <span class="math inline">\(\cdot\)</span> 이 정의되어 있으며,</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\forall a,\,b,\,c\in G,\, a\cdot (b \cdot c)=(a\cdot b)\cdot c\)</span>,</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\exists e\in G,\, \forall a\in G,\, a\cdot e=e\cdot a\)</span>,</p>
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\forall a\in G,\, \exists a'\in G,\, a\cdot a' = a'\cdot a = e\)</span></p>
-<p>일 때 집합 <span class="math inline">\(G\)</span> 를 <strong>군</strong> 이라 하고 <span class="math inline">\((G,\cdot)\)</span> 이라고 쓴다. 이 때 2. 의 <span class="math inline">\(e\)</span> 를 <span class="math inline">\(G\)</span> 의 항등원 이라고 한다. 항등원의 표기는 <span class="math inline">\(e\)</span> 혹은 연산이 곱셈이면 <span class="math inline">\(1\)</span> 이라고 쓰거나, 소속된 군을 표현하기 위해 <span class="math inline">\(1_G\)</span> 와 같이 쓰기도 한다. 연산이 덧셈이라면 <span class="math inline">\(0\)</span> 혹은 <span class="math inline">\(0_G\)</span> 로 쓰기도 한다. <span class="math inline">\(a\cdot a'=a'\cdot a=e\)</span> 인 <span class="math inline">\(a'\)</span> 을 <span class="math inline">\(a\)</span> 의 역원 이라고 한다. <span class="math inline">\(a\)</span> 의 역원은 <span class="math inline">\(a^{-1}\)</span> 이라 쓴다.</p>
+<p>일 때 집합 <span class="math inline">\(G\)</span> 를 <strong>군(group)</strong> 이라 하고 <span class="math inline">\((G,\cdot)\)</span> 이라고 쓴다. 이 때 2. 의 <span class="math inline">\(e\)</span> 를 <span class="math inline">\(G\)</span> 의 항등원 이라고 한다. 항등원의 표기는 <span class="math inline">\(e\)</span> 혹은 연산이 곱셈이면 <span class="math inline">\(1\)</span> 이라고 쓰거나, 소속된 군을 표현하기 위해 <span class="math inline">\(1_G\)</span> 와 같이 쓰기도 한다. 연산이 덧셈이라면 <span class="math inline">\(0\)</span> 혹은 <span class="math inline">\(0_G\)</span> 로 쓰기도 한다. <span class="math inline">\(a\cdot a'=a'\cdot a=e\)</span> 인 <span class="math inline">\(a'\)</span> 을 <span class="math inline">\(a\)</span> 의 역원 이라고 한다. <span class="math inline">\(a\)</span> 의 역원은 <span class="math inline">\(a^{-1}\)</span> 이라 쓴다.</p>
 </div>
 </div>
 </div>
-</div>
-<p><br></p>
 <p>군의 연산이 특별히 덧셈의 성질을 갖지 않을 때는 <span class="math inline">\(ab\)</span> 와 같이 쓰기로 하자. 또한 <span class="math inline">\((G,\, \cdot)\)</span> 의 이항연산도 <span class="math inline">\(ab\)</span> 와 같이 쓰기로 하자.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
@@ -675,7 +685,6 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(G\)</span> 의 항등원의 역원은 자기 자신이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(G\)</span> 의 서로 다른 두 항등원을 <span class="math inline">\(e,\, e'\)</span> 이라 할 때 <span class="math inline">\(e=ee' = e'\)</span> 이다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(a\)</span> 의 두 역원을 <span class="math inline">\(x,\,y\)</span> 라 하자. <span class="math inline">\(x=x(ay)=(xa)y = y\)</span> 이다.</p>
@@ -689,20 +698,22 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p><span class="theorem-title"><strong>명제 8.9 (제거 규칙)</strong></span> <span class="math inline">\(a,\,b,\,c\in G\)</span> 일 때 <span class="math inline">\(ac=bc\)</span> 이면 <span class="math inline">\(a=b\)</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(a=acc^{-1}=bcc^{-1}=b\)</span> 이다.</p>
 </div>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-MA_abelian_finite_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.8 (가환군, 유한군)</strong></span> <span class="math inline">\(\forall a,\,b\in G\)</span> 에 대해 <span class="math inline">\(ab=ba\)</span> 일 때 <span class="math inline">\(G\)</span> 를 <strong>가환군</strong> 혹은 <strong>아벨군</strong> 이라 한다. <span class="math inline">\(G\)</span> 가 유한집합일 때 <span class="math inline">\(G\)</span> 를 <strong>유한군</strong> 이라 한다. <span class="math inline">\(G\)</span> 가 유한군일 때 <span class="math inline">\(G\)</span> 의 원소의 갯수를 <span class="math inline">\(G\)</span> 의 <strong>order</strong> 라고 하며 <span class="math inline">\(|G|\)</span> 라고 쓴다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>가환군/아벨군, 유한군</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-MA_abelian_finite_group" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 8.8</strong></span> <span class="math inline">\(\forall a,\,b\in G\)</span> 에 대해 <span class="math inline">\(ab=ba\)</span> 일 때 <span class="math inline">\(G\)</span> 를 <strong>가환군(commitative group)</strong> 혹은 <strong>아벨군(abeilian group)</strong> 이라 한다. <span class="math inline">\(G\)</span> 가 유한집합일 때 <span class="math inline">\(G\)</span> 를 <strong>유한군 (finite group)</strong> 이라 한다. <span class="math inline">\(G\)</span> 가 유한군일 때 <span class="math inline">\(G\)</span> 의 원소의 갯수를 <span class="math inline">\(G\)</span> 의 <strong>order</strong> 라고 하며 <span class="math inline">\(|G|\)</span> 라고 쓴다.</p>
 </div>
 </div>
 </div>
@@ -711,7 +722,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p>군의 일반적인 특징가운데 몇몇을 보였다. 이제 앞으로 자주 사용할 군의 종류가운데 몇개를 알아보도록 하자.</p>
 <p><br></p>
 <section id="수와-관련된-군" class="level4">
-<h4 class="anchored" data-anchor-id="수와-관련된-군">수와 관련된 군</h4>
+<h4 class="anchored" data-anchor-id="수와-관련된-군"><strong>수와 관련된 군</strong></h4>
 <p>다음의 군은 무한군이며 아벨군이다. 앞으로 특별한 설명 없이 사용하기로 하자.</p>
 <p> (<span class="math inline">\(1\)</span>) <span class="math inline">\(\mathbb{Z}^+ = (\mathbb{Z}, +)\)</span> : 더하기 연산이 정의된 정수의 집합.</p>
 <p> (<span class="math inline">\(2\)</span>) <span class="math inline">\(\mathbb{R}^+ = (\mathbb{R}, +)\)</span> : 더하기 연산이 정의된 실수의 집합.</p>
@@ -721,7 +732,7 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p><br></p>
 </section>
 <section id="대칭군과-교대군" class="level4">
-<h4 class="anchored" data-anchor-id="대칭군과-교대군">대칭군과 교대군</h4>
+<h4 class="anchored" data-anchor-id="대칭군과-교대군"><strong>대칭군과 교대군</strong></h4>
 <p>우리는 앞서 <a href="../../src/part1/ch1_03_determinant.html#def-symmetric_group">대칭군</a> <span class="math inline">\(S_n\)</span> 에 대해 알아보았다. 대칭군은 아주 중요한 군이기 때문에 다시 언급할 가치가 있다. <span class="math inline">\(S_n\)</span> 은 유한군이며 가환군이 아니라는 것을 알 수 있을 것이다.</p>
 <div class="border" style="background-color:#F2F4F4  ;padding:5px;">
 <div id="exm-MA_S3" class="theorem example">
@@ -733,16 +744,19 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p><br></p>
 </section>
 <section id="일반선형군과-특수선형군" class="level4">
-<h4 class="anchored" data-anchor-id="일반선형군과-특수선형군">일반선형군과 특수선형군</h4>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<h4 class="anchored" data-anchor-id="일반선형군과-특수선형군"><strong>일반선형군과 특수선형군</strong></h4>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-MA_linear_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.9 (일반선형군, 특수선형군)</strong></span> <span class="math inline">\(\mathcal{M}_{n \times n}(\mathbb{F})\)</span> 에 속하는 가역행렬의 집합은 행렬의 곱셈 연산에 대해 군이며 이를 <strong>일반선형군 (general linear group)</strong> 이라고 하고 <span class="math inline">\(GL_n(\mathbb{F})\)</span> 라고 표기한다. 이 가운데 행렬식이 <span class="math inline">\(1\)</span> 인 행렬의 집합도 군이며 이를 <strong>특수선형군 (special linear group)</strong> 이라고 하며 <span class="math inline">\(SL_n(\mathbb{F})\)</span> 라고 표기한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>일반선형군, 특수선형군</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-MA_linear_group" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 8.9</strong></span> <span class="math inline">\(\mathbb{F}^{n\times n}\)</span> 에 속하는 가역행렬의 집합은 행렬의 곱셈 연산에 대해 군이며 이를 <strong>일반선형군 (general linear group)</strong> 이라고 하고 <span class="math inline">\(GL_n(\mathbb{F})\)</span> 라고 표기한다. 이 가운데 행렬식이 <span class="math inline">\(1\)</span> 인 행렬의 집합도 군이며 이를 <strong>특수선형군 (special linear group)</strong> 이라고 하며 <span class="math inline">\(SL_n(\mathbb{F})\)</span> 라고 표기한다.</p>
 </div>
 </div>
 </div>
@@ -752,16 +766,18 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 </section>
 <section id="부분군" class="level3" data-number="8.2.3">
 <h3 data-number="8.2.3" class="anchored" data-anchor-id="부분군"><span class="header-section-number">8.2.3</span> 부분군</h3>
-<p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-MA_subgroups" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.10 (부분군)</strong></span> <span class="math inline">\(H\)</span> 가 <span class="math inline">\(G\)</span> 의 부분집합이며 <span class="math inline">\(H\)</span> 스스로 군일 때 <span class="math inline">\(H\)</span> 를 <span class="math inline">\(G\)</span> 의 <strong>부분군(subgroup)</strong> 이라고 하며 <span class="math inline">\(H \le G\)</span> 라고 쓴다. <span class="math inline">\(G\)</span> 의 부분군 가운데 항등원 하나만을 포함하는 부분군과 <span class="math inline">\(G\)</span> 자신을 제외한 부분군을 <strong>진부분군(proper subgroup)</strong> 이라고 한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>부분군
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-MA_subgroups" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 8.10</strong></span> <span class="math inline">\(H\)</span> 가 <span class="math inline">\(G\)</span> 의 부분집합이며 <span class="math inline">\(H\)</span> 스스로 군일 때 <span class="math inline">\(H\)</span> 를 <span class="math inline">\(G\)</span> 의 <strong>부분군(subgroup)</strong> 이라고 하며 <span class="math inline">\(H \le G\)</span> 라고 쓴다. <span class="math inline">\(G\)</span> 의 부분군 가운데 항등원 하나만을 포함하는 부분군과 <span class="math inline">\(G\)</span> 자신을 제외한 부분군을 <strong>진부분군(proper subgroup)</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>
@@ -774,7 +790,6 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p> (<span class="math inline">\(3\)</span>) <span class="math inline">\(\forall a\in H,\, a^{-1}\in H\)</span>. (<span class="math inline">\(H\)</span> 는 자신에 포함되는 원소의 역원을 포함한다.)</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="#def-MA_groups" class="quarto-xref">정의&nbsp;<span>8.7</span></a> 를 생각해보라..</p>
 </div>
@@ -784,7 +799,6 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p><span class="theorem-title"><strong>명제 8.11</strong></span> <span class="math inline">\(H\)</span> 와 <span class="math inline">\(K\)</span> 가 <span class="math inline">\(G\)</span> 의 부분군일 때 <span class="math inline">\(H \cap K\)</span> 역시 <span class="math inline">\(G\)</span> 의 부분군이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(x,\,y \in H \cap K\)</span> 라면 <span class="math inline">\(xy\in H \cap K\)</span> 이다. <span class="math inline">\(1\in H\cap K\)</span> 이다. <span class="math inline">\(x\in H\cap K\)</span> 라면 <span class="math inline">\(x^{-1}\in H\cap K\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -809,7 +823,6 @@ a=mb + r,\qquad (0 \le r &lt; |b| )
 <p><span class="theorem-title"><strong>명제 8.12</strong></span> <span class="math inline">\(S\)</span> 가 <span class="math inline">\(\mathbb{Z}^{+}\)</span> 의 부분군이려면 <span class="math inline">\(S=\{0\}\)</span> 이거나 <span class="math inline">\(\mathbb{Z}a\)</span> 형태이며 이 때 <span class="math inline">\(a\)</span> 는 <span class="math inline">\(S\)</span> 에 포함된 가장 작은 양의 정수이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(\{0\}\le \mathbb{Z}^+\)</span> 임은 자명하다. <span class="math inline">\(S\)</span> 가 <span class="math inline">\(0\)</span> 이외의 <span class="math inline">\(x\)</span> 를 포함한다고 하자. <span class="math inline">\(S\)</span> 가 군이므로 <span class="math inline">\(|x|\in S\)</span> 이며 <span class="math inline">\(S\)</span> 는 양의 정수를 포함한다. 따라서 <span class="math inline">\(S\)</span> 에 포함된 가장 작은 양의정수 <span class="math inline">\(a\)</span> 가 존재한다. 군의 연산이 덧셈이므로 <span class="math inline">\(\mathbb{Z}a\subset S\)</span> 이다. 만약 <span class="math inline">\(b&gt;0,\, b\not\in \mathbb{Z}a\)</span> 라고 하자. <span class="math inline">\(b=ma+r\)</span> 인 양의 정수 <span class="math inline">\(m\)</span> 과 <span class="math inline">\(0\le r &lt; a\)</span> 인 양의정수 <span class="math inline">\(r\)</span> 이 존재하며 당연히 <span class="math inline">\(r\in S\)</span> 인데 <span class="math inline">\(a\)</span> 가 <span class="math inline">\(S\)</span> 에 포함된 가장 작은 양의정수라는 가정에 모순된다. 따라서 <span class="math inline">\(S=\mathbb{Z}a\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -823,7 +836,6 @@ S = \mathbb{Z}a + \mathbb{Z}b = \{ma+nb : m,\,n \in \mathbb{Z}\}.
 <p><span class="math inline">\(S\)</span> 는 덧셈 연산에 대해 <span class="math inline">\(\mathbb{Z}^+\)</span> 의 부분군이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\((m_1 a+ n_1 b) + (m_2 a + n_2 b) = (m_1+m_2)a+ (n_1 +n_2)b\in S\)</span> 이므로 <span class="math inline">\(S\)</span> 는 덧셈에 대해 닫혀 있다. <span class="math inline">\(0a + 0b = 0 \in S\)</span> 이므로 <span class="math inline">\(S\)</span> 는 덧셈에 대한 항등원을 포함한다. <span class="math inline">\((ma + nb) + ((-m)a+(-n)b)=0\)</span> 이므로 <span class="math inline">\(S\)</span> 는 모든 원소의 역원을 포함한다. 따라서 <span class="math inline">\(S \le \mathbb{Z}^+\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -839,7 +851,6 @@ S = \mathbb{Z}a + \mathbb{Z}b = \{ma+nb : m,\,n \in \mathbb{Z}\}.
 <p><span class="theorem-title"><strong>명제 8.14</strong></span> <span class="math inline">\(\mathbb{Z}a + \mathbb{Z}b = \mathbb{Z}c\)</span> 일 때 <span class="math inline">\(c=\gcd (a,\,b)\)</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-MA_divisor" class="quarto-xref">명제&nbsp;<span>8.1</span></a> 를 보라.</p>
 </div>
@@ -849,7 +860,6 @@ S = \mathbb{Z}a + \mathbb{Z}b = \{ma+nb : m,\,n \in \mathbb{Z}\}.
 <p><span class="theorem-title"><strong>명제 8.15</strong></span> <span class="math inline">\(0\)</span> 이 아닌 정수 <span class="math inline">\(a,\,b\)</span> 에 대해 <span class="math inline">\(\mathbb{Z}a \cap \mathbb{Z}b\)</span> 는 어떤 양의 정수 <span class="math inline">\(m\)</span> 에 대해 <span class="math inline">\(\mathbb{Z}a \cap \mathbb{Z}b = \mathbb{Z}m\)</span> 이며 <span class="math inline">\(m = \text{lcm}(a, b)\)</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><a href="#prp-MA_intersection_of_subgroups" class="quarto-xref">명제&nbsp;<span>8.11</span></a> 에 의해 <span class="math inline">\(\mathbb{Z}a \cap \mathbb{Z}b\)</span> 는 <span class="math inline">\(\mathbb{Z}^+\)</span> 의 부분군이며 <span class="math inline">\(ab \in \mathbb{Z}a \cap \mathbb{Z}b\)</span> 에 포함되므로 어떤 <span class="math inline">\(m\in \mathbb{Z}_+\)</span> 에 대해 <span class="math inline">\(\mathbb{Z}m\)</span> 이다. <span class="math inline">\(\mathbb{Z}m \le \mathbb{Z}a\)</span> 이므로 <span class="math inline">\(a \mid m\)</span> 이며, 같은 이유로 <span class="math inline">\(b\mid m\)</span> 이다. <span class="math inline">\(a \mid n,\, b \mid n\)</span> 인 양의 정수 <span class="math inline">\(n\)</span> 을 생각하면 <span class="math inline">\(n \in \mathbb{Z}m\)</span> 이므로 <span class="math inline">\(m \mid n\)</span> 이다. 따라서 <span class="math inline">\(m=\text{lcm}(a,\,b)\)</span> 이다. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -857,15 +867,18 @@ S = \mathbb{Z}a + \mathbb{Z}b = \{ma+nb : m,\,n \in \mathbb{Z}\}.
 </section>
 <section id="순환군" class="level3" data-number="8.2.5">
 <h3 data-number="8.2.5" class="anchored" data-anchor-id="순환군"><span class="header-section-number">8.2.5</span> 순환군</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-MA_cyclic_group" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 8.11 (순환 부분군과 차수)</strong></span> 군 <span class="math inline">\(G\)</span> 의 원소 <span class="math inline">\(g\)</span> 에 대해 <span class="math inline">\(\{g^n: n\in \mathbb{Z}\}\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군이며 <span class="math inline">\(g\)</span> 에 의해 생성되는 <strong>순환 부분군 (cyclic subgroup)</strong> 이라 하고 <span class="math inline">\(\langle g \rangle\)</span> 로 쓴다. <span class="math inline">\(g^n = 1\)</span> 을 만족하는 자연수 <span class="math inline">\(n\)</span> 이 존재한다면 가장 작은 값을 <span class="math inline">\(g\)</span> 의 <strong>차수(order)</strong> 라 하며, <span class="math inline">\(o(g)\)</span> 라 쓴다. 존재하지 않는다면 <span class="math inline">\(o(g)=\infty\)</span> 이다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>순환 부분군과 차수</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-MA_cyclic_group" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 8.11</strong></span> 군 <span class="math inline">\(G\)</span> 의 원소 <span class="math inline">\(g\)</span> 에 대해 <span class="math inline">\(\{g^n: n\in \mathbb{Z}\}\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군이며 <span class="math inline">\(g\)</span> 에 의해 생성되는 <strong>순환 부분군 (cyclic subgroup)</strong> 이라 하고 <span class="math inline">\(\langle g \rangle\)</span> 로 쓴다. <span class="math inline">\(g^n = 1\)</span> 을 만족하는 자연수 <span class="math inline">\(n\)</span> 이 존재한다면 가장 작은 값을 <span class="math inline">\(g\)</span> 의 <strong>차수(order)</strong> 라 하며, <span class="math inline">\(o(g)\)</span> 라 쓴다. 존재하지 않는다면 <span class="math inline">\(o(g)=\infty\)</span> 이다.</p>
 </div>
 </div>
 </div>
@@ -875,7 +888,6 @@ S = \mathbb{Z}a + \mathbb{Z}b = \{ma+nb : m,\,n \in \mathbb{Z}\}.
 <p><span class="theorem-title"><strong>명제 8.16</strong></span> <span class="math inline">\(G=\langle g \rangle\)</span> 일 때 <span class="math inline">\(|G|= o(g)\)</span> 이다.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof">
 <p><span class="proof-title"><em>(증명)</em>. </span><span class="math inline">\(G=\langle g\rangle = \{g^0=1_G,\ldots,\,g^{n-1}\}\)</span>. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -890,7 +902,6 @@ S = \mathbb{Z}a + \mathbb{Z}b = \{ma+nb : m,\,n \in \mathbb{Z}\}.
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(xyz=1\)</span> 일 때 <span class="math inline">\(yzx=1\)</span> 인가? 그렇다면 <span class="math inline">\(yxz=1\)</span> 인가?</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(y=x^{-1}w^{-1}z\)</span>.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\((xyz)=1 \implies yz=x^{-1}\implies yzx=1\)</span>. <span class="math inline">\(S_3\)</span> 에서 <span class="math inline">\(z=xy\)</span> 라고 하면 <span class="math inline">\(yxz=yxxy=yx^2y=y^2x=x \ne 1\)</span> 이다.</p>
@@ -901,7 +912,6 @@ S = \mathbb{Z}a + \mathbb{Z}b = \{ma+nb : m,\,n \in \mathbb{Z}\}.
 <p><span class="theorem-title"><strong>연습문제 8.6 (Herstein 2.3.4)</strong></span> <span class="math inline">\(G\)</span> 가 군이며 모든 <span class="math inline">\(a,\,b\in G\)</span> 에 대해 연속적인 세 정수 <span class="math inline">\(i\)</span> 에 대해 <span class="math inline">\((ab)^i = a^ib^i\)</span> 이면 <span class="math inline">\(G\)</span> 가 아벨군임을 보여라</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((ab)^i = a^ib^i\)</span>, <span class="math inline">\((ab)^{i+1} = a^{i+1}b^{i+1}\)</span>, <span class="math inline">\((ab)^{i+2}= a^{i+2}b^{i+2}\)</span> 라 하자.</p>
 <p><span class="math display">\[
@@ -922,7 +932,6 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <p><span class="theorem-title"><strong>연습문제 8.7 (Herstein 2.3.14)</strong></span> 곱연산이 정의되었고 이 연산에 대해 닫혀있는 유한집합 <span class="math inline">\(G\)</span> 에서 곱연산의 결합법칙과 제거규칙이 성립할 때 <span class="math inline">\(G\)</span> 가 군임을 보이시오.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>제거규칙, 즉 <span class="math inline">\(ac=bc\implies a=b\)</span> 가 성립하면 <span class="math inline">\(a\ne b \implies ac \ne bc\)</span> 이다. <span class="math inline">\(G\)</span> 가 유한집합이므로 임의의 정해진 <span class="math inline">\(a\in G\)</span> 에 대해 <span class="math inline">\(aG=\{ay: y\in G\}=G\)</span> 이어야 하며, 따라서 어떤 <span class="math inline">\(x\in G\)</span> 에 대해 <span class="math inline">\(ax=a\)</span> 이다. <span class="math inline">\(axa=a^2\)</span> 이므로 <span class="math inline">\(xa=a\)</span> 이다. 임의의 <span class="math inline">\(b\in G\)</span> 에 대해 <span class="math inline">\(axb=ab\)</span> 이므로 <span class="math inline">\(xb=b\)</span> 이며 <span class="math inline">\(bxb=b^2\)</span> 이므로 <span class="math inline">\(bx=b\)</span> 이다. 즉 이 <span class="math inline">\(x\)</span> 가 <span class="math inline">\(G\)</span> 에서의 항등원이다. 이제 항등원을 <span class="math inline">\(1\)</span> 로 표기하자. <span class="math inline">\(aG=G\)</span> 이므로 <span class="math inline">\(az=1\)</span> 인 <span class="math inline">\(z\)</span> 가 존재하며 <span class="math inline">\(zaz=z\)</span> 이므로 <span class="math inline">\(za=1\)</span> 이다. 즉 <span class="math inline">\(a\)</span> 에 대한 역원이 존재한다. 따라서 <span class="math inline">\(G\)</span> 는 군이다.</p>
 </div>
@@ -934,7 +943,6 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <p>  (<span class="math inline">\(2\)</span>) 정수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(\{[m]: \gcd(n, m)=1\}\)</span> 이 역시 곱셈에 대한 군임을 보이시오.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(J_p\)</span> 는 유한집함이다. <span class="math inline">\([a][c] = [b][c]\)</span> 라 하자. <span class="math inline">\(p \mid (a-b)c\)</span> 인데 <span class="math inline">\(p \nmid c\)</span> 이므로 <span class="math inline">\(p \mid ab\)</span> 이다. 즉 <span class="math inline">\([a][c]=[b][c] \implies [a]=[b]\)</span> 이므로 <span class="math inline">\(J_p\)</span> 는 군이다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\(K_n = \{[m]: \gcd(n,\,m)=1\}\)</span> 이라 하자. <span class="math inline">\(\gcd(n, 1)=1\)</span> 이므로 <span class="math inline">\([1]\in K_n\)</span> 이다. <span class="math inline">\([a],\, [b]\in K_n\)</span> 일 때 <span class="math inline">\(\gcd(ab,n)=1\)</span> 이며 <span class="math inline">\([a][b]=[ab]\)</span> 이므로 <span class="math inline">\([a][b]\in K_n\)</span> 이다. 곱연산의 결합법칙이 성립함은 자명하메 <span class="math inline">\([a][c]=[b][c]\)</span> 이면 <span class="math inline">\(n \mid (a-b)c\)</span> 인데 <span class="math inline">\(n \nmid c\)</span> 이므로 <span class="math inline">\(n mid (a-b)\)</span> 이다. 따라서 <span class="math inline">\([a]=[b]\)</span> 이므로 제거규칙이 성립한다. 따라서 <a href="#exr-herstein_2_3_14" class="quarto-xref">연습문제&nbsp;<span>8.7</span></a> 에 따라 <span class="math inline">\(K_n\)</span> 은 곱셈에 대한 군이다.</p>
@@ -945,7 +953,6 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <p><span class="theorem-title"><strong>연습문제 8.9 (Artin 2.2.5)</strong></span> <span class="math inline">\(H \le G\)</span> 일 때 <span class="math inline">\(H\)</span> 의 항등원은 <span class="math inline">\(G\)</span> 의 항등원과 같아야 한다. 누군가는 <span class="math inline">\(H\)</span> 의 항등원이 <span class="math inline">\(G\)</span> 의 항등원과 다를 것을 원할 수도 있다. 어쨌든 <span class="math inline">\(H\)</span> 가 항등원을 갖는다면 <span class="math inline">\(G\)</span> 와 같아야 함을 보여라. 이것이 역원에 대해서도 성립함을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(H \le G\)</span> 이며 <span class="math inline">\(1_H,\, 1_G\)</span> 를 각각 <span class="math inline">\(H,\,G\)</span> 의 항등원이라고 하자. <span class="math inline">\(1_H = 1_H 1_H\)</span> 이다. 또한 <span class="math inline">\(1_H\in G\)</span> 이므로 <span class="math inline">\(1_H 1_G=1_H\)</span> 이다. 따라서 <span class="math inline">\(1_H 1_H = 1_H 1_G\)</span> 이며 제거규칙에 의해 <span class="math inline">\(1_H=1_G\)</span> 이다.</p>
 <p><span class="math inline">\(a\in H,\, a \ne 1_H\)</span> 라 하자. <span class="math inline">\(G\)</span> 에서 <span class="math inline">\(a^{-1}=x\)</span> 라 하고 <span class="math inline">\(H\)</span> 에서 <span class="math inline">\(a^{-1}=y\)</span> 라 하자. <span class="math inline">\(ax=1_G\)</span> 이며 <span class="math inline">\(ay=1_H\)</span> 인데 <span class="math inline">\(1_G = 1_H\)</span> 이므로 <span class="math inline">\(x=y\)</span> 이다.</p>
@@ -956,7 +963,6 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <p><span class="theorem-title"><strong>연습문제 8.10 (Artin 2.2.6)</strong></span> <span class="math inline">\(G\)</span> 가 군일 때 <span class="math inline">\(G\)</span> 에서의 연산 <span class="math inline">\(ab\)</span> 에 대해 <span class="math inline">\(G\)</span> 와 같은 원소를 가지며 연산 <span class="math inline">\(\ast\)</span> 가 <span class="math inline">\(a\ast b = ba\)</span> 로 정의된 집합을 <strong>opposite group</strong> 이라고 하고 <span class="math inline">\(G^\circ\)</span> 라 쓴다. <span class="math inline">\(G^\circ\)</span> 가 군임을 보이시오.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((a \ast b) \ast c = (ba)\ast c = cba = a \ast (cb) = a \ast (b \ast c)\)</span> 이다. 따라서 연산의 결합법칙이 성립한다. 연산의 닫힘음 쉽게 보일 수 있으며 <span class="math inline">\(1_G\)</span> 가 <span class="math inline">\(G^\circ\)</span> 의 항등원이며, <span class="math inline">\(G\)</span> 에서의 역원이 <span class="math inline">\(G^\circ\)</span> 에서의 역원가 같음은 쉽게 보일 수 있다.</p>
 </div>
@@ -966,7 +972,6 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <p><span class="theorem-title"><strong>연습문제 8.11 (Artin 2.3.2)</strong></span> <span class="math inline">\(a,\,b\)</span> 가 양의 정수이며 그 합이 소수 <span class="math inline">\(p\)</span> 일 때 <span class="math inline">\(a,\,b\)</span> 는 서로소임을 보이시오.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>어떤 양의 정수 <span class="math inline">\(m\)</span> 이 <span class="math inline">\(m \mid a,\, m \mid b\)</span> 이면 <span class="math inline">\(m \mid (a+b)\)</span> 이다.</p>
 </div>
@@ -978,7 +983,6 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(\{a_1,\ldots,\,a_n\}\)</span> 의 최대공약수가 <span class="math inline">\(d\)</span> 일 때 <span class="math inline">\(\{a_1/d,\ldots,\,a_n/d\}\)</span> 의 최대공약수가 <span class="math inline">\(1\)</span> 임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <span class="math inline">\(d \mid a_i,\, i=1,\ldots,\,n\)</span> 이며 <span class="math inline">\(\forall m\in \mathbb{Z},\, m\mid a_i,\, i=1,\ldots,\,m\)</span> 에 대해 <span class="math inline">\(m \mid d\)</span> 인 수를 <span class="math inline">\(\{a_1,\ldots,\,a_n\}\)</span> 의 최대공약수라 하고 <span class="math inline">\(\gcd (a_1,\ldots,\,a_n)\)</span> 이라 쓰기로 하자.</p>
 <p><span class="math inline">\(G= \mathbb{Z}a_1 + \cdots + \mathbb{Z} a_n\)</span> 를 생각 할 수 있다. Induction 을 통해 어떤 양의 정수 <span class="math inline">\(d\)</span> 에 대해 <span class="math inline">\(G=\mathbb{Z}d\)</span> 임을 보일 수 있다. <span class="math inline">\(a_1,\ldots,\,a_n\in G\)</span> 이므로 <span class="math inline">\(d \mid a_1,\ldots, d \mid a_n\)</span> 이다. 또한 어떤 <span class="math inline">\(x\in \mathbb{Z}\)</span> 에 대해 <span class="math inline">\(x \mid a_1,\ldots,\,x \mid a_n\)</span> 이라면 임의의 정수 <span class="math inline">\(m_1,\ldots,\,m_n\)</span> 에 대해 <span class="math inline">\(x\mid (a_1m_1 + \cdots = a_n m_n)\)</span> 이므로 <span class="math inline">\(x \mid d\)</span> 이다. <span class="math inline">\(n=2\)</span> 인 경우를 생각하여 <span class="math inline">\(d=\gcd (a_1,\ldots,\,a_n)\)</span> 이라고 놓을 수 있으며 앞서 보았듯이 <span class="math inline">\(d\)</span> 는 <span class="math inline">\(a_1,\ldots,\,a_n\)</span> 의 선형결합이다.</p>
@@ -990,7 +994,6 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <p><span class="theorem-title"><strong>연습문제 8.13 (Artin 2.4.2)</strong></span> <span class="math inline">\(a,\,b\)</span> 가 군 <span class="math inline">\(G\)</span> 의 원소이며 <span class="math inline">\(o(a)=7\)</span> 이고 <span class="math inline">\(a^3b=ba^3\)</span> 이라면 <span class="math inline">\(ab=ba\)</span> 임을 보이시오.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(b^{-1}a^3b = a^3\)</span> 이다. <span class="math inline">\((b^{-1}a^3b)^5 = b^{-1}a^{15}b = b^{-1}ab\)</span> 이며, <span class="math inline">\((a^3)^5 = a\)</span> 이므로 <span class="math inline">\(b^{-1}ab=a\)</span> 이다.</p>
 </div>
@@ -1000,7 +1003,6 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <p><span class="theorem-title"><strong>연습문제 8.14 (Artin 2.4.3)</strong></span> <span class="math inline">\(a,\,b\)</span> 가 군 <span class="math inline">\(G\)</span> 의 원소라면 <span class="math inline">\(o(ab)=o(ba)\)</span> 임을 보이시오.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\((ab)^n =1\iff (ba)^n=1\)</span> 임을 보이면 된다. <span class="math display">\[
 \begin{aligned}
@@ -1017,7 +1019,6 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <p><span class="theorem-title"><strong>연습문제 8.15 (Artin 2.4.4)</strong></span> 진 부분군이 존재하지 않는 군 <span class="math inline">\(G\)</span> 를 기술하시오.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(a,\,b\in G\)</span>, <span class="math inline">\(a\ne 1,\, b \ne 1\)</span> 에 대해 <span class="math inline">\(b\notin \langle a\rangle\)</span> 이면 <span class="math inline">\(\langle a\rangle\)</span> 은 <span class="math inline">\(G\)</span> 의 진부분군이다. 마찬가지로 <span class="math inline">\(a \notin \langle b \rangle\)</span> 이면 <span class="math inline">\(\langle b \rangle\)</span> 은 <span class="math inline">\(G\)</span> 의 진 부분군이다. 따라서 어떤 <span class="math inline">\(g\in G\)</span> 에 대해 <span class="math inline">\(G=\langle g \rangle\)</span> 이 아니면 <span class="math inline">\(G\)</span> 의 진부분군이 존재한다.</p>
 <p><span class="math inline">\(o(g)=\infty\)</span> 이면 임의의 1보다 큰 양의 정수 <span class="math inline">\(n\)</span> 에 대해 <span class="math inline">\(\langle g^n \rangle\)</span> 은 <span class="math inline">\(G\)</span> 의 진 부분군이다. 따라서 <span class="math inline">\(o(g)&lt;\infty\)</span> 이어야 한다. <span class="math inline">\(o(g) = n\)</span> 이며 <span class="math inline">\(n\)</span> 이 소수가 아닐 때 <span class="math inline">\(m\mid p,\, m \ne 1\)</span> 이면 <span class="math inline">\(\langle g^m \rangle\)</span> 은 <span class="math inline">\(G\)</span> 의 진부분군이다.</p>
@@ -1029,7 +1030,6 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <p><span class="theorem-title"><strong>연습문제 8.16 (Artin 2.4.5)</strong></span> 순환군의 부분군은 순환군임을 보여라.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(G=\langle g \rangle\)</span> 이라 하자. <span class="math inline">\(g^m,\, g^n\in H \le G\)</span> 이면 임의의 정수 <span class="math inline">\(\alpha,\, \beta\)</span> 에 대해 <span class="math inline">\(g^{\alpha m +\beta n}\in H\)</span> 이며 <a href="#prp-MA_gcd_in_groups" class="quarto-xref">명제&nbsp;<span>8.14</span></a> 에서 보았듯이 <span class="math inline">\(d=\gcd (m,\,n)\)</span> 에 대해 <span class="math inline">\(\langle g^d \rangle \le H\)</span> 이므로 순환군의 부분군은 순환군이다.</p>
 </div>
@@ -1039,7 +1039,6 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <p><span class="theorem-title"><strong>연습문제 8.17 (Artin 2.4.7)</strong></span> <span class="math inline">\(x,\,y\)</span> 는 군 <span class="math inline">\(G\)</span> 의 원소이며 <span class="math inline">\(o(x)=o(y)=o(xy)=2\)</span> 이다. 이 때 <span class="math inline">\(H=\{1,\,x,\,y,\,xy\}\)</span> 는 <span class="math inline">\(G\)</span> 의 부분군임을 보여라</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>차수가 <span class="math inline">\(2\)</span> 인 군의 원소는 스스로의 역원이다. <span class="math inline">\(xy=(xy)^{-1}=y^{-1}x^{-1}=yx\)</span> 이므로, <span class="math inline">\(x(xy)=y\)</span>, <span class="math inline">\((xy)x=y\)</span>, <span class="math inline">\(y(xy)=x\)</span>, <span class="math inline">\((xy)y = x\)</span> 이다. 따라서 <span class="math inline">\(H\)</span> 는 군이며, 추가로 아벨군이다.</p>
 </div>
@@ -1051,7 +1050,6 @@ a^{i+1}b= ba^{i+1} =  ba^i a = a^ib a  \implies ab=ba
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(E^{(3  )}\)</span> 가 <span class="math inline">\(SL_n(\mathbb{R})\)</span> 을 생성함을 보이시오. <span class="math inline">\(2\times 2\)</span> 의 경우를 우선 보이시오.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <a href="../part1/ch1_03_determinant.html#def-LA_elementary_row_operation" class="quarto-xref">정의&nbsp;<span>3.1</span></a> 를 보자. <span class="math inline">\(E^{(2)}(i, t)\)</span> 는 <span class="math inline">\(i\)</span> 번째 행에 <span class="math inline">\(0\)</span> 이 아닌 스칼라 <span class="math inline">\(t\)</span> 를 곱하는 연산이며 <span class="math inline">\(E^{(3)}(i, j, r)\)</span> 은 <span class="math inline">\(i\)</span> 번째에 <span class="math inline">\(j\)</span> 번째 행에 <span class="math inline">\(r\)</span> 을 곱하여 더하는 연산이다. <a href="../part1/ch1_03_determinant.html#prp-LA_reduced_echelon_form_of_invertible_matrix" class="quarto-xref">명제&nbsp;<span>3.24</span></a> 에서 보였듯이 모든 가역행렬은 행 기본 연산을 통해 항등행렬이 된다. 즉 <span class="math inline">\(E^{(1)}\)</span> 이 <span class="math inline">\(E^{(2)}\)</span> 와 <span class="math inline">\(E^{(3)}\)</span> 의 곱으로 표현될 수 있다면 명제가 증명된다. <span class="math inline">\(E^{(1)}(i, j)\)</span> 는 <span class="math inline">\(i\)</span> 행과 <span class="math inline">\(j\)</span> 행을 교환하는 연산이다. <span class="math inline">\(E^{(1)}(i, j)\)</span> 의 행렬표현은 <span class="math inline">\(i\)</span> 행, <span class="math inline">\(j\)</span> 행, <span class="math inline">\(i\)</span> 열, <span class="math inline">\(j\)</span> 열 을 제외하면 trivial 하며 <span class="math inline">\(i\)</span> 행과 <span class="math inline">\(j\)</span> 행에 대한 <span class="math inline">\(E^{(2)},\,E^{(3)}\)</span> 연산만으로 표현할 수 있음을 보일것이다. 그렇다면 <span class="math inline">\(i\)</span> 행 <span class="math inline">\(j\)</span> 행, <span class="math inline">\(i\)</span> 열, <span class="math inline">\(j\)</span> 열을 제외한 다른 성분에 변화가 없으므로 표현을 단순화하기 위해 <span class="math inline">\(2 \times 2\)</span> 행렬로 나타 낼 수 있다. <span class="math display">\[
 E^{(2)}\left(2, \frac{1}{2}\right) E^{(3)}(2,1, -1)E^{(2)}(1, -2)E^{(3)}\left(1, 2, -\frac{5}{2}\right)E^{(3)}(1,2, 2)E^{(3)}(2, 1, 2)\begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix} = \boldsymbol{I}_2
@@ -1070,13 +1068,12 @@ E^{(2)}\left(2, \frac{1}{2}\right) E^{(3)}(2,1, -1)E^{(2)}(1, -2)E^{(3)}\left(1,
 <p>이제 <span class="math inline">\(SL_n(\mathbb{R})\)</span> 에 대해 성립함을 가정하고 <span class="math inline">\(SL_{n+1}(\mathbb{R})\)</span> 에 대해 성립함을 보이자. <span class="math inline">\(\boldsymbol{B}\in SL_{n+1}(\mathbb{R})\)</span> 이라 하자. <span class="math inline">\(B_{1,1}=0\)</span> 이면 첫번째 열이 <span class="math inline">\(0\)</span> 이 아닌 행을 찾아 <span class="math inline">\(E^{(3)}\)</span> 연산으로 첫번째 행 첫번째 열이 <span class="math inline">\(0\)</span> 이 되지 않게 만들 수 있기 때문에 <span class="math inline">\(B_{1,1}\ne 0\)</span> 임을 가정 할 수 있다. 첫번째 열에 첫번째 행을 제외하고 <span class="math inline">\(0\)</span> 이 아닌 행이 있다면 (그 행을 <span class="math inline">\(j\)</span> 행이라 하자) <span class="math inline">\(E^{(3)}(1, j, -(B_{11}-1)/B_{j1})\)</span> 연산을 통해 첫번째 행, 첫번째 열을 <span class="math inline">\(1\)</span> 로 만들 수 있다. 첫번째 열에 첫번째 행을 제외하고 <span class="math inline">\(0\)</span> 이 아닌 행이 없다면 <span class="math inline">\(E^{(3)}(2, 1, 1)\)</span> 을 통해 두번째 행의 첫번째 열 성분을 <span class="math inline">\(0\)</span> 이 아니도록 만든 후 <span class="math inline">\(E^{(3)}(1, 2, -(B_{11}-1)/B_{21})\)</span> 연산을 통해 첫번째 행, 첫번째 열 성분을 <span class="math inline">\(1\)</span> 로 만들 수 있다. 즉 우리는 일반성을 잃지 않고 <span class="math inline">\(\boldsymbol{B}\in SL_{n+1}(\mathbb{R})\)</span> 에 대해 <span class="math inline">\(B_{11}=1\)</span> 이라고 할 수 있다.</p>
 <p><span class="math inline">\(\boldsymbol{B}\)</span> 의 첫번째 행에 대해 두번째 열부터 같은 열의 <span class="math inline">\(0\)</span> 이 아닌 행을 찾아(이런 행이 없다면 행렬식이 <span class="math inline">\(0\)</span> 이므로 <span class="math inline">\(SL_{n+1}(\mathbb{R})\)</span> 의 원소가 아니다.) 적절한 <span class="math inline">\(E^{(3)}(1, j, r)\)</span> 연산을 통해 <span class="math inline">\(\boldsymbol{B}\)</span> 의 첫번째 행의 두번째 열부터 <span class="math inline">\(0\)</span> 으로 만들 수 있다. 이렇게 변환된 행렬 <span class="math inline">\(\boldsymbol{B}'\)</span> 을 생각하자. <span class="math inline">\(k=2,\ldots,\,n+1\)</span> 헹에 대해 첫번째 열이 <span class="math inline">\(0\)</span> 이 아닌 경우 $<span class="math inline">\(E^{(3)}(k, 1, -B'_{k,1}/B'_{0,0})\)</span> 연산을 통해 첫번째 열을 <span class="math inline">\(0\)</span> 으로 만들수 있다. 그 결과로 계산된 행렬 <span class="math inline">\(\boldsymbol{B}''\)</span> 은 첫번째 행과 첫번째 열이 1행 1열을 제외하곤 모두 <span class="math inline">\(0\)</span> 이 된다. 지금까지의 연산은 모두 행렬식을 보존하는 변환이므로 <span class="math inline">\(\boldsymbol{B}'' \in SL_{n+1}(\mathbb{R})\)</span> 이다. 이제 <span class="math inline">\(\boldsymbol{B}''\)</span> 의 2행, 2열부터 마지막행 마지막 열까지의 <span class="math inline">\(n \times n\)</span> 행렬을 <span class="math inline">\(\boldsymbol{C}\)</span> 라고 하자. <span class="math inline">\(\boldsymbol{C}\in SL_n (\mathbb{R})\)</span> 이므로 가정에 의해 <span class="math inline">\(E^{(3)}\)</span> 연산의 곱으로 표현할 수 있다. 즉 <span class="math inline">\(SL_n(\mathbb{R})\)</span> 군은 <span class="math inline">\(E^{(3)}\)</span> 행렬들로부터 생성될 수 있다. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><br></p>
+<br>
 <div class="border" style="background-color:#F0FFFF  ;padding:5px;">
 <div id="exr-artin_2_4_10" class="theorem exercise">
 <p><span class="theorem-title"><strong>연습문제 8.19 (Artin 2.4.10)</strong></span> 군의 유한 차수를 갖는 원소들의 곱은 꼭 유한차수를 갖는 것은 아님을 예를 들어 보여라. 아벨군의 경우에는 어떤가?</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span><span class="math inline">\(GR_2(\mathbb{R})\)</span> 에서 <span class="math inline">\(A=\left[\begin{array}{rr} -1 &amp; 1 \\ 0 &amp;1 \end{array}\right],\, B=\left[\begin{array}{rr} -1 &amp; 0 \\ 0 &amp; 1\end{array}\right]\)</span> 의 경우 <span class="math inline">\(A^2=B^2=I_2\)</span> 이지만 <span class="math inline">\(AB=\left[\begin{array}{rr} 1 &amp; 1 \\ 0 &amp; 1\end{array}\right]\)</span> 이며 <span class="math inline">\((AB)^n = \begin{bmatrix} 1 &amp; n \\ 0 &amp; 1 \end{bmatrix}\)</span> 이다. 즉 <span class="math inline">\(o(A)=o(B)=2\)</span> 이지만 <span class="math inline">\(o(AB)=\infty\)</span> 이다.</p>
 </div>
@@ -1088,7 +1085,6 @@ E^{(2)}\left(2, \frac{1}{2}\right) E^{(3)}(2,1, -1)E^{(2)}(1, -2)E^{(3)}\left(1,
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(n \ge 3\)</span> 일 때 <span class="math inline">\(3\)</span>-cycles 가 교대군 <span class="math inline">\(A_n\)</span> 을 생성함을 보이시오.</p>
 </div>
 </div>
-<p><br></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>(해답)</em>. </span>(<span class="math inline">\(1\)</span>) <a href="../part1/ch1_03_determinant.html#prp-LA_decomposition_to_transposition" class="quarto-xref">명제&nbsp;<span>3.5</span></a> 에서 보였다.</p>
 <p>(<span class="math inline">\(2\)</span>) <span class="math inline">\((a,\,b)(b, c) = (a,\,b,\,c)\)</span>, <span class="math inline">\((a,\,b)(c,\,d)=(a,\,b,\,c)(b,\,c,\,d)\)</span> 이므로 임의의 두 호환의 곱은 <span class="math inline">\(3\)</span>-cycles 의 곱으로 표현 할 수 있다. <span class="math inline">\(A_n\)</span> 의 모든 원소는 은 짝수개의 호환의 곱으로 표현 할 수 있으므로 <span class="math inline">\(3\)</span>-cycles 가 <span class="math inline">\(A_n\)</span> 을 생성한다.</p>

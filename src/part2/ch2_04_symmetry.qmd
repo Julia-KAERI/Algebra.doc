@@ -22,9 +22,11 @@ crossref:
 
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **Isometry**
+
 ::: {#def-Ma_isometry}
-#### Isometry
 
 거리공간 $X$ 에 대해 함수 $f:X \to X$ 가 모든 $x,\,y\in X$ 에서
 
@@ -45,7 +47,7 @@ $f,\,g$ 가 $\mathbb{R}^n$ 에서 정의된 isometry 일 때 $f \circ g$ 도 iso
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -58,11 +60,14 @@ $\|f(g(x))-f(g(y))\| = \|g(x)-g(y)\| = \|x-y\|$. $\square$
 거리공간에 대해서는 특히 해석학에서 많이 다루었을 것이다. 여기서는 거리공간중에 유클리드 공간 $\mathbb{R}^n$ 을 중점적으로 다룬다. 유클리드 공간은 $\mathbb{R}$-내적벡터공간이다. 이제 linear isometry 가 아닌 isometry 의 가장 대표적인 예를 들어보자.
 
 
-:::: {.callout-note appearance="simple" icon="false"}
-::: {#def-MA_translation}
-#### Translation
+:::: {.callout-note icon="false"}
 
-유클리드 공간 $\mathbb{R}^n$ 에서 어떤 고정된 $v\in \mathbb{R}^n$ 에 대해 다음과 같이 정의된 함수 $t_v :\mathbb{R}^n \to \mathbb{R}^n$ 를 $v$ 만큼의 **translation** 이라고 한다.
+#### 평행이동
+
+::: {#def-MA_translation}
+
+
+유클리드 공간 $\mathbb{R}^n$ 에서 어떤 고정된 $v\in \mathbb{R}^n$ 에 대해 다음과 같이 정의된 함수 $t_v :\mathbb{R}^n \to \mathbb{R}^n$ 를 $v$ 만큼의 **평행 이동(translation)** 이라고 한다.
 
 $$
 t_v (x) = x+v
@@ -75,7 +80,7 @@ $$
 
 ::: {#exm-MA_translation_1}
 
-$v \in \mathbb{R}^n,\, v\ne 0$ 에 대한 translation $t_v$ 는 isometry 이지만 linear isometry 는 아니다.
+$v \in \mathbb{R}^n,\, v\ne 0$ 에 대한 평행 이동 $t_v$ 는 isometry 이지만 linear isometry 는 아니다.
 :::
 
 </div></br>
@@ -105,7 +110,7 @@ $u,\,v\in \mathbb{R}^n$ 일 때 $\langle u,\, u\rangle = \langle u,\, v\rangle =
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -132,7 +137,7 @@ $\varphi : \mathbb{R}^n \to \mathbb{R}^n$ 에 대해 다음이 성립한다.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -181,15 +186,15 @@ $$
 
 ::: {#prp-MA_factorization_of_isotropy}
 
-$\mathbb{R}^n \mapsto\mathbb{R}^n$ isometry 는  translation 과 linear isometry 의 합성으로 표현 할 수 있다. 
+$\mathbb{R}^n \mapsto\mathbb{R}^n$ isometry 는 평행이동과 linear isometry 의 합성으로 표현 할 수 있다. 
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
-Isometry $f:\mathbb{R}^n \to \mathbb{R}^n$ 를 생각하자. $f(0)=a$ 일 때 $t_{-a}\circ f$ 를 생각하자. @prp-MA_composition_of_isometries 에 의해 $t_{-a}\circ f$ 도 isometry 이며 원점을 보존하므로 $t_{-a}\circ f$ 는 linear isometry 이다. $\varphi = t_{-a}\circ f$ 라 하면 $f = t_{a}\circ \varphi$ 이므로 임의의 isometry 는 translation 과 linear isometry 의 합성이다. $\square$
+Isometry $f:\mathbb{R}^n \to \mathbb{R}^n$ 를 생각하자. $f(0)=a$ 일 때 $t_{-a}\circ f$ 를 생각하자. @prp-MA_composition_of_isometries 에 의해 $t_{-a}\circ f$ 도 isometry 이며 원점을 보존하므로 $t_{-a}\circ f$ 는 linear isometry 이다. $\varphi = t_{-a}\circ f$ 라 하면 $f = t_{a}\circ \varphi$ 이므로 임의의 isometry 는 평행이동과 linear isometry 의 합성이다. $\square$
 
 :::
 
@@ -198,7 +203,7 @@ Isometry $f:\mathbb{R}^n \to \mathbb{R}^n$ 를 생각하자. $f(0)=a$ 일 때 $t
 
 ::: {#exr-composition_of_isometries}
 
-$t_a$ 가 $a$ 만큼의 translation 이고 $\varphi,\, \psi$ 가 linear isometry 일 때 다음이 성립함을 보여라.
+$t_a$ 가 $a$ 만큼의 평행이동 이고 $\varphi,\, \psi$ 가 linear isometry 일 때 다음이 성립함을 보여라.
 
 &emsp;($1$) $\varphi \circ \psi$ 도 linear isometry 이다.
 
@@ -208,7 +213,7 @@ $t_a$ 가 $a$ 만큼의 translation 이고 $\varphi,\, \psi$ 가 linear isometry
 
 :::
 
-</div></br>
+</div>
 
 ::: {.solution}
 
@@ -229,11 +234,11 @@ $\mathbb{R}^n$ 에 대한 모든 isometry 의 집합은 함수 합성 연산에 
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
-$M_n$ 을 $\mathbb{R}^n$ 에서의 isometry 의 집합이라고 하자. $\mathbb{R}^n$ 에서의 translation 과 linear isometry 가 전단사임을 안다. 또한 합성도 isometry 임을 안다. $f=(t_a\circ \varphi)$ 일 때 $f^{-1} = \varphi^{-1}\circ t_{-a} \in M_n$ 이다. $\square$
+$M_n$ 을 $\mathbb{R}^n$ 에서의 isometry 의 집합이라고 하자. $\mathbb{R}^n$ 에서의 평행이동과 linear isometry 가 전단사임을 안다. 또한 합성도 isometry 임을 안다. $f=(t_a\circ \varphi)$ 일 때 $f^{-1} = \varphi^{-1}\circ t_{-a} \in M_n$ 이다. $\square$
 
 :::
 
@@ -242,7 +247,7 @@ $M_n$ 을 $\mathbb{R}^n$ 에서의 isometry 의 집합이라고 하자. $\mathbb
 
 ### $M_n \mapsto O_n$ 준동형사상 {#sec-MA_Mn_to_On_homomorphism}
 
-Isometry $f$ 는 translation $t_a$ 와 linear isomeetry $\varphi$ 의 합성으로 $f=t_a \circ \varphi$ 로 표현 할 수 있다. 이 때 $a=f(0)$ 으로 정해진다. $\mathbb{R}^n$ 에서의 linear isomeetry 의 집합을 $O_n$ 이라 하자. ($O_n$ 은 $n \times n$ 직교행렬의 집합과 동형이라는 것을 안다!!!). 선형대수학에서 배운 지식으로 우리는 이것을 쉽게 보일 수 있다.
+Isometry $f$ 는 평행이동 $t_a$ 와 linear isomeetry $\varphi$ 의 합성으로 $f=t_a \circ \varphi$ 로 표현 할 수 있다. 이 때 $a=f(0)$ 으로 정해진다. $\mathbb{R}^n$ 에서의 linear isomeetry 의 집합을 $O_n$ 이라 하자. ($O_n$ 은 $n \times n$ 직교행렬의 집합과 동형이라는 것을 안다!!!). 선형대수학에서 배운 지식으로 우리는 이것을 쉽게 보일 수 있다.
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -263,7 +268,7 @@ $\pi : M_n \to O_n$ 을 $\pi (f) = t_{-f(0)}\circ f$ 로 정의할 때 다음이
 
 &emsp; ($1$) $\pi \in \text{Hom}(M_n,\, O_n)$.
 
-&emsp; ($2$) $\ker (\pi)$ 는 $\mathbb{R}^n$ 에서의 translation 의 집합 $T_n$이다.
+&emsp; ($2$) $\ker (\pi)$ 는 $\mathbb{R}^n$ 에서의 평행이동의 집합 $T_n$이다.
 
 &emsp; ($3$) $T_n \trianglelefteq M_n$ 이다.
 

@@ -13,9 +13,12 @@ crossref:
 
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **선형 범함수와 쌍대공간**
+
 ::: {#def-ALA_functional_dualspace} 
-#### 선형 범함수와 쌍대공간
+
 
 $\mathbb{F}$-벡터공간 $V$ 에 대해 $\mathcal{L}(V,\,\mathbb{F})$ 에 속하는 함수를 $V$ 에서의 **선형 범함수(linear functional)** 라 한다. $\mathcal{L}(V,\,\mathbb{F})$ 는 벡터공간이며 이를 $V$ 에 대한 **쌍대공간(dual space)** 이라 하고 $V^\ast$ 이라 쓴다.
 :::
@@ -127,10 +130,11 @@ $$
 ## 쌍대 기저와 쌍대 사상
 
 
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-ALA_dual_basis}
+::: {.callout-note icon="false"}
 
-#### 쌍대 기저 (Dual basis)
+#### **쌍대 기저**
+
+::: {#def-ALA_dual_basis}
 
 @prp-ALA_dual_basis 의 $(\varphi_1,\ldots,\,\varphi_n)$ 을 $V$ 의 기저 $(v_1,\ldots,\,v_n)$ 에 대한 **쌍대 기저(dual basis)** 라 한다. 
  
@@ -162,9 +166,11 @@ $v=\sum_i a_iv_i$ 일 $\varphi_j(v) = \sum_i \varphi_j (av_i) = a_j$ 이다. $\s
 
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **쌍대 사상**
+
 ::: {#def-ALA_dual_map}
-#### 쌍대 사상(Dual map)
 
 $L\in \mathcal{L}(U,\, V)$ 와 $\varphi \in V^\ast$ 에 대해 아래와 같이 정의된 $L^T \in \mathcal{L}(V^\ast,\, U^\ast)$ 를 $L$ 의 **쌍대 사상(dual map)** 이라 한다.
 
@@ -242,9 +248,12 @@ $$
 
 ## Annihilator
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **Annihilator**
+
 ::: {#def-ALA_annihilator}
-#### Annihilator
+
 
 $U$ 가 벡터공간 $V$ 의 부분집합 일 때, 아래와 같이 정의되는 집합을 **annihilator** of $U$ 라 하고 $U^0$ 라 쓴다.
 
@@ -517,9 +526,12 @@ $$
 
 우리는 벡터공간 $V$ 에 대해 $V^\ast = \mathcal{L}(V, \mathbb{F})$ 인 벡터공간을 알아보았다. 그렇다면 $\mathcal{L}(V^\ast, \mathbb{F})$ 도 생각 할 수 있을것이다. 그런데 이것은 뜻밖에 매우 중요하다.
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **이중 쌍대 공간**
+
 ::: {#def-ALA_double_dual} 
-#### 이중 쌍대 공간
+
 
 $\mathbb{F}$-벡터공간 $V$ 의 쌍대공간 $V^\ast$ 에 대한 쌍대공간 $\mathcal{L}(V^\ast, \mathbb{F})$ 를 $V$ 에 대한 **이중 쌍대 공간 (double dual space)** 이라 하고 ${V^\ast}{}^\ast$ 라 쓴다.
 

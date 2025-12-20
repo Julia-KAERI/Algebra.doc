@@ -374,19 +374,21 @@ window.Quarto = {
 </section>
 <section id="sec-ALA_zeros_of_polynomials" class="level3" data-number="14.1.2">
 <h3 data-number="14.1.2" class="anchored" data-anchor-id="sec-ALA_zeros_of_polynomials"><span class="header-section-number">14.1.2</span> 다항식의 영점</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>다항식의 영점</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-ALA_zeros_of_polynomials" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 14.1 (다항식의 영점)</strong></span> 다항식 <span class="math inline">\(p(t) \in \mathbb{F}[t]\)</span> 에 대해 <span class="math inline">\(p(c) = 0,\, c\in \mathbb{F}\)</span> 이면 <span class="math inline">\(c\)</span> 를 <span class="math inline">\(p\)</span> 의 <strong>영점(zeros)</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 14.1</strong></span> 다항식 <span class="math inline">\(p(t) \in \mathbb{F}[t]\)</span> 에 대해 <span class="math inline">\(p(c) = 0,\, c\in \mathbb{F}\)</span> 이면 <span class="math inline">\(c\)</span> 를 <span class="math inline">\(p\)</span> 의 <strong>영점(zeros)</strong> 이라고 한다.</p>
 </div>
 </div>
 </div>
-</div>
-<p><br></p>
 <p>다시말하자면 다항식 <span class="math inline">\(p(t)\)</span> 의 영점의 집합은 방정식 <span class="math inline">\(p(t)=0\)</span> 의 해의 집합이다.</p>
 <br>
 <div class="border" style="background-color:#FFF0F5 ;padding:5px;">
@@ -510,29 +512,35 @@ p(x) = c(x-c_1)\cdots (x-c_m)(x^2+b_1x + c_1) \cdots (x^2 + b_kx + c_k).
 <section id="sec-AZA_characteristic_polynomial" class="level3" data-number="14.2.1">
 <h3 data-number="14.2.1" class="anchored" data-anchor-id="sec-AZA_characteristic_polynomial"><span class="header-section-number">14.2.1</span> 특성다항식</h3>
 <p>정사각 행렬에 대한 특성다항식은 이미 <a href="../../src/part1/ch1_04_eigenvalue.html#sec-LA_characteristic_polynomial">특성다항식</a> 에서 정의하였지만 환기를 위해 다시 한번 정의한다.</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>특성다항식</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-ALA_characteristic_polynomial_re" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 14.2 (특성다항식)</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(L\)</span> 에 대해 <span class="math inline">\(p_{L}(t) = \det (t I_V-L)\)</span> 를 <strong>특성 다항식(characteristic polynomial)</strong> 이라 한다.</p>
+<p><span class="theorem-title"><strong>정의 14.2</strong></span> 유한차원 벡터공간 <span class="math inline">\(V\)</span> 에서 정의된 연산자 <span class="math inline">\(L\)</span> 에 대해 <span class="math inline">\(p_{L}(t) = \det (t I_V-L)\)</span> 를 <strong>특성 다항식(characteristic polynomial)</strong> 이라 한다.</p>
 </div>
 </div>
 </div>
-</div>
-<p><br></p>
 <p>행렬식은 닮음 변환에 대해 불변이므로 어떤 기저 <span class="math inline">\(\mathcal{B}\)</span> 에 대해서도 특성다항식은 불변이다. 또한 우리는 다음을 보였다. 또한 <a href="../part1/ch1_04_eigenvalue.html#prp-LA_eigenvalue_characteristic_polynomial" class="quarto-xref">명제&nbsp;<span>4.9</span></a> 에서 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대해 <span class="math inline">\(\lambda\in \mathbb{F}\)</span> 가 <span class="math inline">\(L\)</span> 의 고유값이기 위한 필요충분조건은 <span class="math inline">\(p_{L}(\lambda)=0\)</span> 인 것임을 안다.</p>
 <p><br></p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>행렬과 연산자의 trace</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-ALA_trace_of_matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 14.3 (행렬과 연산자의 trace)</strong></span> <span class="math inline">\(\text{tr} : \mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}\)</span> 는 다음과 같이 정의된다.</p>
+<p><span class="theorem-title"><strong>정의 14.3</strong></span> 행렬의 trace <span class="math inline">\(\text{tr} : \mathbb{F}^{n\times n} \to \mathbb{F}\)</span> 는 다음과 같이 정의된다.</p>
 <p><span class="math display">\[
 \text{tr}(\boldsymbol{\boldsymbol{A}}) = \sum_{i=1}^n A_{ii}.
 \]</span></p>
@@ -540,7 +548,6 @@ p(x) = c(x-c_1)\cdots (x-c_m)(x^2+b_1x + c_1) \cdots (x^2 + b_kx + c_k).
 <p><span class="math display">\[
 \text{tr}(L) = \sum_{i=1}^{\dim (V)}([L])_{ii}
 \]</span></p>
-</div>
 </div>
 </div>
 </div>
@@ -596,18 +603,21 @@ p(L) -p(\lambda)I_V &amp;=  a_n(L^n -\lambda^n I_V) + \cdots + a_1(L-\lambda I_V
 </section>
 <section id="sec-ALA_cayley_hamilton_theorem" class="level3" data-number="14.2.2">
 <h3 data-number="14.2.2" class="anchored" data-anchor-id="sec-ALA_cayley_hamilton_theorem"><span class="header-section-number">14.2.2</span> 케일리 해밀턴 정리</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>Annihilator Ideal</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-ALA_annihilator_ideal" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 14.4 (Annihilator Ideal)</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 일 때 아래와 같이 정의된 <span class="math inline">\(I_L\)</span> 를 <strong>annihilator ideal</strong> 이라고 한다.</p>
+<p><span class="theorem-title"><strong>정의 14.4</strong></span> <span class="math inline">\(\mathbb{F}\)</span>-벡터공간 <span class="math inline">\(V\)</span> 에 대해 <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 일 때 아래와 같이 정의된 <span class="math inline">\(I_L\)</span> 를 <strong>annihilator ideal</strong> 이라고 한다.</p>
 <p><span class="math display">\[
 \mathcal{I}_L = \{ p(t) \in \mathbb{F}[t] : p(L)=0 I_V\}
 \]</span></p>
-</div>
 </div>
 </div>
 </div>
@@ -678,15 +688,18 @@ p_\boldsymbol{A}(\boldsymbol{A}) = \prod_{i=1}^n (\boldsymbol{A}-A_{ii}\boldsymb
 <section id="sec-ALA_minimal_polynomial" class="level3 page-columns page-full" data-number="14.3.1">
 <h3 data-number="14.3.1" class="anchored" data-anchor-id="sec-ALA_minimal_polynomial"><span class="header-section-number">14.3.1</span> 최소다항식</h3>
 <p>다항식 가운데 최고차 항의 계수가 1인 다항식을 <strong>monic</strong> 이라고 한다.</p>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-ALA_minimal_polynomial" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 14.5 (최소다항식)</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대한 annihilator ideal <span class="math inline">\(\mathcal{I}_L\)</span> 가운데 1 차 이상의 다항식 중 가장 작은 차수를 갖는 monic 다항식을 <span class="math inline">\(L\)</span> 에 대한 <strong>최소다항식(minimal polynomnial)</strong> 이라고 하고 <span class="math inline">\(m_L\)</span> 로 표기한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>최소다항식</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-ALA_minimal_polynomial" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 14.5</strong></span> <span class="math inline">\(L\in \mathcal{L}(V)\)</span> 에 대한 annihilator ideal <span class="math inline">\(\mathcal{I}_L\)</span> 가운데 1 차 이상의 다항식 중 가장 작은 차수를 갖는 monic 다항식을 <span class="math inline">\(L\)</span> 에 대한 <strong>최소다항식(minimal polynomnial)</strong> 이라고 하고 <span class="math inline">\(m_L\)</span> 로 표기한다.</p>
 </div>
 </div>
 </div>

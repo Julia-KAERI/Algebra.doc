@@ -380,12 +380,13 @@ $$
 
 ## Positive, Positive definite 행렬과 제곱근 행렬
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **Positive Definite 와 제곱근 연산자**
+
 ::: {#def-LA_pisitive_definite_matrix}
 
-#### Positive Definite 행렬 와 제곱근 행렬
-
-에르미트 연산자 $L$ 이 임의의 벡터 $v$ 에 대해 $\langle Lv,\, v \rangle > 0$ 일 때 $L$ 을 **positve** 혹은 **positive definite** 라 하고 $\langle Lv,\, v \rangle \ge 0$ 일 때 $L$ 을 **non-negative** 혹은 **positive semidefinite** 라 한다. $L$ 가 positive 이거나 positive definite 일 때  $L=R^2$ 인 연산자 $R$ 이 존재하면 $R$ 을 $L$ 의 **제곱근 연산자** 라고 하고 $\sqrt{L}$ 라고 쓴다. 
+에르미트 연산자 $L$ 이 임의의 벡터 $v$ 에 대해 $\langle Lv,\, v \rangle > 0$ 일 때 $L$ 을 **positve** 혹은 **positive definite** 라 하고 $\langle Lv,\, v \rangle \ge 0$ 일 때 $L$ 을 **non-negative** 혹은 **positive semidefinite** 라 한다. $L$ 가 positive 이거나 positive definite 일 때  $L=R^2$ 인 연산자 $R$ 이 존재하면 $R$ 을 $L$ 의 **제곱근 연산자(root operator)** 라고 하고 $\sqrt{L}$ 라고 쓴다. 
 
 :::
 :::
@@ -465,10 +466,6 @@ non-negative 연산자 $L$ 에 대한 non-negative 제곱근 연산자 $R$ 이 �
 :::
 
 </div>
-
-
-
-
 
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
@@ -742,23 +739,11 @@ $$
 
 ### 특이값 {#sec-LA_singular_value}
 
-우리는 앞에서 정사각 행렬에 대한 특이값 분해를 알아보았다. 이제 일반적인 행렬에 대한 특이값 분해를 보기로 하자. 여기서는 행렬을 주로 다룰 것이며 지금까지와는 다르게 굵은 글씨체로 하지 않겠다.
-
-
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-LA_singular_value_of_matrix}
-
-#### 특이값
-$\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $\sqrt{\bf{A}^\ast \bf{A}}$ 의 고유값을 **특이값(singular value)** 라 한다. 특이값을 열거할때는 보통 가장 큰 값부터 내림차순으로 열거한다. 따라서 특이값 $s_1,\ldots,\,s_n$ 이라고 하면 $s_1 \ge s_2 \ge \cdots \ge s_n$ 을 의미한다.
-
-:::
-:::
-
-</br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
+<div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_properties_of_AAast}
 
-$\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한다.
+$\bf{A}\in\mathbb{F}^{m\times n}$ 에 대해 다음이 성립한다.
 
 &emsp;($1$) $\bf{A}^\ast \bf{A}$ 는 positive 행렬이다.
 
@@ -770,13 +755,13 @@ $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한�
  
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
-($1$) $(\bf{A}^\ast \bf{A})^\ast = \bf{A}^\ast \bf{A}$ 이므로 $\bf{A}^\ast \bf{A}$ 는 에르미트 행렬이다. 또한 $\langle \bf{A}^\ast \bf{Au},\, \bf{v}\rangle = \|\bf{Au}\|^2\ge 0$ 이므로 $\bf{A}^\ast \bf{A}$ 는 positive 이다.
+($1$) @prp-LA_squareroot_matrix
 
-($2$) $u\in \ker(\bf{A}^\ast \bf{A}) \implies \langle \bf{A}^\ast \bf{Au},\, \bf{v}\rangle = \|\bf{Au}\|^2=0$ 이므로 $\bf{u}\in \ker (\bf{A})$. 역으로 $\bf{u}\in \ker \bf{A}$ 이면 $\bf{Au}=\bf{0}$ 이므로 $\bf{A}^\ast \bf{A u}=0$ 이며, 따라서 $\bf{u}\in \ker (\bf{A}^\ast \bf{A})$. 따라서 $\ker (\bf{A}^\ast \bf{A}) = \ker (\bf{A})$.
+($2$) $\bf{u}\in \ker(\bf{A}^\ast \bf{A}) \implies \langle \bf{A}^\ast \bf{Au},\, \bf{v}\rangle = \|\bf{Au}\|^2=0$ 이므로 $\bf{u}\in \ker (\bf{A})$. 역으로 $\bf{u}\in \ker \bf{A}$ 이면 $\bf{Au}=\bf{0}$ 이므로 $\bf{A}^\ast \bf{A u}=0$ 이며, 따라서 $\bf{u}\in \ker (\bf{A}^\ast \bf{A})$. 따라서 $\ker (\bf{A}^\ast \bf{A}) = \ker (\bf{A})$.
 
 ($3$) @thm-LA_kernel_image_of_adjoint_operator 과 ($2$) 로부터 $\text{im}(\bf{A}^\ast \bf{A}) = (\ker(\bf{A}^\ast \bf{A}))^\perp = (\ker (\bf{A}))^\perp = \text{im}(\bf{A}^\ast)$ 임을 안다. 
 
@@ -784,11 +769,24 @@ $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 다음이 성립한�
 
 :::
 
+</br>
+
+::: {.callout-note icon="false"}
+
+#### **특이값**
+
+::: {#def-LA_singular_value_of_matrix}
+
+$\bf{A}\in \mathbb{F}^{m\times n}$ 에 대해 $\sqrt{\bf{A}^\ast \bf{A}}$ 의 고유값을 **특이값(singular value)** 라 한다. 특이값을 열거할때는 보통 가장 큰 값부터 내림차순으로 열거한다. 따라서 특이값 $s_1,\ldots,\,s_n$ 이라고 하면 $s_1 \ge s_2 \ge \cdots \ge s_n$ 을 의미한다.
+
+:::
+:::
+
 </br><div class="border" style="background-color:#FFF0F5 ;padding:5px;">
 
 ::: {#prp-LA_properties_of_singular_value}
 
-$\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
+$\bf{A}\in \mathbb{F}^{m\times n}$ 일 때 다음이 성립한다.
 
 &emsp;($1$) $\bf{A}$ 가 단사일 필요충분조건은 $0$ 이 $\bf{A}$ 의 특이값이 아닌 것이다.
 
@@ -841,7 +839,7 @@ $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 일 때 다음이 성립한다.
 
 ::: {#prp-LA_for_svd}
 
-영행렬이 아닌 $\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 의 $0$ 이 아닌 특이값 $s_1,\ldots,\,s_M$ 에 대해 $\mathcal{M}_{n}(\mathbb{F})$ 에 속하는 정규직교벡터 $\{\bf{e}_1,\,\ldots,\,\bf{e}_n\}$ 와 $\mathcal{M}_m(\mathbb{F})$ 에 속하는 정규직교벡터 $\{\bf{f}_1,\ldots,\,\bf{f}_m \}$ 가 존재하여 $\bf{v}\in \mathcal{M}_n(\mathbb{F})$ 에 대해
+영행렬이 아닌 $\bf{A}\in \mathbb{F}^{m\times n}$ 의 $0$ 이 아닌 특이값 $s_1,\ldots,\,s_M$ 에 대해 $\mathbb{F}^n$ 에 속하는 정규직교벡터 $\{\bf{e}_1,\,\ldots,\,\bf{e}_n\}$ 와 $\mathbb{F}^m$ 에 속하는 정규직교벡터 $\{\bf{f}_1,\ldots,\,\bf{f}_m \}$ 가 존재하여 $\bf{v}\in\mathbb{F}^n$ 에 대해
 
 $$
 \bf{Av} = \sum_{j=1}^M s_j \langle \bf{v},\, \bf{e}_j\rangle \bf{f}_j
@@ -867,9 +865,9 @@ $$
 \langle \bf{f}_j,\, \bf{f}_i\rangle = \dfrac{1}{s_is_j}\langle \bf{Ae}_j, \bf{Ae}_i\rangle = \dfrac{1}{s_is_j}\langle \bf{A}^\ast\bf{Ae}_j, \bf{e}_i\rangle = \dfrac{s_j}{s_i}\langle \bf{e}_j,\, \bf{e}_i \rangle = \delta_{ij}
 $$
 
-이다. 즉 $\{\bf{f}_j : j=1,\ldots,\,M\}$ 은 정규직교벡터의 집합이다. 이제 $\{\bf{f}_j\}$ 를 확장하여 $\mathcal{M}_m(\mathbb{F}$ 의 정규직교기저 $\{\bf{f}_1,\ldots,\,\bf{f}_m\}$ 을 만들 수 있다. 
+이다. 즉 $\{\bf{f}_j : j=1,\ldots,\,M\}$ 은 정규직교벡터의 집합이다. 이제 $\{\bf{f}_j\}$ 를 확장하여 $\mathbb{F}^m$ 의 정규직교기저 $\{\bf{f}_1,\ldots,\,\bf{f}_m\}$ 을 만들 수 있다. 
 
- $\{\bf{e}_i\}$ 는 $\mathcal{M}_n(\mathbb{F})$ 의 정규직교기저이므로 $\bf{v}\in \mathcal{M}_n(\mathbb{F})$ 는
+ $\{\bf{e}_i\}$ 는 $\mathbb{F}^n$ 의 정규직교기저이므로 $\bf{v}\in \mathbb{F}^n$ 는
 
 $$
 \bf{v} = \sum_{i=1}^n \langle \bf{v},\, \bf{e}_i \rangle \bf{e}_i
@@ -887,10 +885,13 @@ $$
 
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **특이벡터**
+
 ::: {#def-LA_eigenvector_for_signular_value}
 
-#### 특이벡터
+
 
 @prp-LA_for_svd 에서 정의된 $\mathcal{M}_n(\mathbb{F})$ 의 정규직교기저벡터 $\bf{e}_1,\ldots,\,\bf{e}_n$ 를 행렬 $\bf{A}$ 에 대한 **오른쪽 특이벡터 (right singular vectors)** 라고 한다. 또한 $\mathcal{M}_m(\mathbb{F})$ 의 정규직교기저벡터 $\bf{f}_1,\ldots,\,\bf{f}_m$ 을 **왼쪽 특이 벡터(left singular vectors)** 라고 한다.
 
@@ -908,7 +909,7 @@ $$
 
 #### 1차 특이값 분해
 
-$\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 $M=\text{rank} (\bf{A}) \ge 1$ 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 $\bf{B}\in \mathcal{M}_{m \times M}(\mathbb{F})$ 과 대각행렬 $\bf{D}\in \mathcal{M}_{M \times M}(\mathbb{F})$ 그리고 역시 서로 직교하는 열벡터로 구성된 $\bf{C}=\mathcal{M}_{n \times M}(\mathbb{F})$ 에 대해 
+$\bf{A}\in \mathbb{F}^{m\times n}$ 가 $M=\text{rank} (\bf{A}) \ge 1$ 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 $\bf{B}\in \mathbb{F}^{m \times M}$ 과 대각행렬 $\bf{D}\in \mathbb{F}^{M \times M}$ 그리고 역시 서로 직교하는 열벡터로 구성된 $\bf{C}\in \mathbb{F}^{n \times M}$ 에 대해 
 
 $$
 \bf{A} = \bf{BDC}^\ast
@@ -941,7 +942,7 @@ $$
 
 #### 2차 특이값 분해
 
-$\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 $\text{rank} (\bf{A}) \ge 1$ 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 $\bf{U}\in \mathcal{M}_{m \times m}(\mathbb{F})$ 과 대각성분이 1이며 나머지 성분은 0 인 직사각행렬 $\bf{\Sigma}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 그리고 역시 서로 직교하는 열벡터로 구성된 $\bf{V}=\mathcal{M}_{n \times n}(\mathbb{F})$ 에 대해 
+$\bf{A}\in \mathbb{F}^{m \times n}$ 가 $\text{rank} (\bf{A}) \ge 1$ 이라고 하자. 이 때 서로 직교하는 열벡터로 구성된 $\bf{U}\in \mathbb{F}^{m \times m}$ 과 대각성분이 1이며 나머지 성분은 0 인 직사각행렬 $\bf{\Sigma}\in \mathbb{F}^{m \times n}$ 그리고 역시 서로 직교하는 열벡터로 구성된 $\bf{V}\in \mathbb{F}^{n \times n}$ 에 대해 
 
 $$
 \bf{A} = \bf{U\Sigma V}^\ast
@@ -967,7 +968,7 @@ $$
 \end{aligned}
 $$
 
-이다. 즉 $\bf{A} = \boldsymbol {U\Sigma V}$ 이다. $\square$
+이다. 즉 $\bf{A} = \bf{U\Sigma V}$ 이다. $\square$
 
 :::
 
@@ -978,7 +979,7 @@ $$
 
 ::: {#prp-LA_adjoint_of_svd}
 
-$\bf{A} \in \mathcal{M}_{m\times n}(\mathbb{F})$ 의 오른쪽 특이벡터와 왼쪽 특이벡터는 각각 $\bf{A}^\ast$ 의 왼쪽 특이벡터와 오른쪽 특이벡터이다. $\bf{A}$ 가 $0$ 이 아닌 특이값 $s_1 \ge \cdots \ge s_M>0$ 을 가질 때 $\bf{u}\in \mathcal{M}_m(\mathbb{F})$ 에 대해
+$\bf{A} \in \mathbb{F}^{m\times n}$ 의 오른쪽 특이벡터와 왼쪽 특이벡터는 각각 $\bf{A}^\ast$ 의 왼쪽 특이벡터와 오른쪽 특이벡터이다. $\bf{A}$ 가 $0$ 이 아닌 특이값 $s_1 \ge \cdots \ge s_M>0$ 을 가질 때 $\bf{u}\in \mathbb{F}^m$ 에 대해
 
 $$
 \bf{A}^\ast\bf{u} = \sum_{j=1}^M s_j\langle \bf{u},\,\bf{f}_j\rangle \bf{e}_j
@@ -992,7 +993,7 @@ $$
 
 ::: {.proof}
 
-$\bf{A}= \bf{U\Sigma V}^\ast$ 이므로 $\bf{A}^\ast = \bf{V\Sigma}^\ast \bf{U}^\ast$ 이다. 그런데 $\bf{\Sigma}$ 는 대각성분은 실수이며, 대각성분을 제외한 행렬은 모두 $0$ 이므로  $\bf{\Sigma}^\ast = \bf{\Sigma}^T$ 이다. 즉 $\bf{V\Sigma}^T\bf{U}^\ast$ 는 $\bf{A}^\ast$ 의 특이값 분해이다. $\bf{U} = \begin{bmatrix} \bf{f}_1 & \cdots & \bf{f}_m\end{bmatrix}$ 이며 $\{\bf{f}_j\}$ 는 $\mathcal{M}_m(\mathbb{F})$ 의 정규직교기저이므로 $\bf{u} = \sum_{j=1}^m \langle \bf{u},\,\bf{f}_j\rangle \bf{f}_j$ 이다. 따라서, 
+$\bf{A}= \bf{U\Sigma V}^\ast$ 이므로 $\bf{A}^\ast = \bf{V\Sigma}^\ast \bf{U}^\ast$ 이다. 그런데 $\bf{\Sigma}$ 는 대각성분은 실수이며, 대각성분을 제외한 행렬은 모두 $0$ 이므로  $\bf{\Sigma}^\ast = \bf{\Sigma}^T$ 이다. 즉 $\bf{V\Sigma}^T\bf{U}^\ast$ 는 $\bf{A}^\ast$ 의 특이값 분해이다. $\bf{U} = \begin{bmatrix} \bf{f}_1 & \cdots & \bf{f}_m\end{bmatrix}$ 이며 $\{\bf{f}_j\}$ 는 $\mathbb{F}^m$ 의 정규직교기저이므로 $\bf{u} = \sum_{j=1}^m \langle \bf{u},\,\bf{f}_j\rangle \bf{f}_j$ 이다. 따라서, 
 
 $$
 \bf{A}^\ast\bf{u} = \sum_{j=1}^m \langle \bf{u},\, \bf{f}_j\rangle \bf{V\Sigma}^T\bf{U}^\ast \bf{f}_j = \sum_{j=1}^M s_j \langle \bf{u}_j,\, \bf{f}_j\rangle \bf{e}_j
@@ -1221,10 +1222,10 @@ $$
 
 ::: {#prp-LA_norm_of_matrix}
 
-$\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 의 가장 큰 특이값을 $s_M$ 이라고 하면 다음이 성립한다.
+$\bf{A}\in \mathbb{F}^{m \times n}$ 의 가장 큰 특이값을 $s_M$ 이라고 하면 다음이 성립한다.
 
 $$
-\forall \bf{v}\in \mathcal{M}_n(\mathbb{F}),\qquad \|\bf{Av}\| \le s_M \|\bf{v}\|.
+\forall \bf{v}\in \mathbb{F}^n,\qquad \|\bf{Av}\| \le s_M \|\bf{v}\|.
 $$
 :::
 
@@ -1257,12 +1258,13 @@ $$
 </br>
 
 
-::: {.callout-note appearance="minimal" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **행렬의 노름**
+
 ::: {#def-LA_norm_of_matrix}
 
-#### 행렬의 노름
-
-$\bf{A}\in \mathcal{M}_{m \times n}(\mathbb{F})$ 의 노름 $\|\bf{A}\|$ 는 다음과 같이 정의된다.
+$\bf{A}\in \mathbb{F}^{m \times n}$ 의 노름 $\|\bf{A}\|$ 는 다음과 같이 정의된다.
 
 $$
 \|\bf{A}\| := \max \{ \|\bf{Av}\| : \|\bf{v}\|=1\} 
@@ -1363,7 +1365,7 @@ $L\in \mathcal{L}(U,\,V)$ 의 양의 특이값을 $s_1 \ge s_2 \ge \ldots,\ge s_
 
 ::: {#prp-LA_approximation_using_svd}
 
-$\bf{A} \in \mathcal{M}_{m \times n}(\mathbb{F})$ 가 양의 특이값 $s_1 \ge s_2 \ge \ldots \ge s_m>0$ 을 갖는다고 하자. $k \le m$ 에 대해 다음이 성립한다.
+$\bf{A} \in \mathbb{F}^{m \times n}$ 가 양의 특이값 $s_1 \ge s_2 \ge \ldots \ge s_m>0$ 을 갖는다고 하자. $k \le m$ 에 대해 다음이 성립한다.
 
 $$
 \min \{ \|\bf{A}-\bf{B} \| : \bf{B}\in \mathcal{M}_{m \times n}(\mathbb{F}),\, \text{rank}(\bf{B})\le k\} = s_{k+1}.
@@ -1377,7 +1379,7 @@ $$
 
 ::: {.proof}
 
-@thm-LA_svd_2 를 생각하자. $\bf{v}\in \mathcal{M}_n(\mathbb{F})$ 에 대해 $\bf{A}=\bf{U\Sigma V}^\ast$ 이다. 이 때 $\bf{V}_k = \begin{bmatrix} \bf{e}_1 & \cdots & \bf{e}_k & 0 & \cdots & 0\end{bmatrix}$ 라고 하고 $\bf{A}_k = \bf{U\Sigma V}_k^\ast$ 라고 하자. 
+@thm-LA_svd_2 를 생각하자. $\bf{v}\in \mathbb{F}^n$ 에 대해 $\bf{A}=\bf{U\Sigma V}^\ast$ 이다. 이 때 $\bf{V}_k = \begin{bmatrix} \bf{e}_1 & \cdots & \bf{e}_k & 0 & \cdots & 0\end{bmatrix}$ 라고 하고 $\bf{A}_k = \bf{U\Sigma V}_k^\ast$ 라고 하자. 
 
 $$
 (\bf{A}-\bf{A}_k)\bf{v} = \bf{U\Sigma} \begin{bmatrix}  \bf{0} \\ \langle \bf{v},\, \bf{e}_{k+1} \rangle \\ \vdots \\ \langle \bf{v},\,\bf{e}_{m} \rangle \\ \bf{0}\end{bmatrix} =  \sum_{i=k+1}^m s_{i} \langle \bf{v},\, \bf{e}_i\rangle \bf{f}_i
@@ -1392,7 +1394,7 @@ $$ {#eq-svd_1}
 
 을 얻는다.
 
-이제 임의의 $\bf{B}\in \mathcal{M}_{m \times n}(\mathbb{F})$, $\text{rank}(\bf{B})\le k$ 를 생각하자. $\{\bf{Be}_1,\ldots,\,\bf{Be}_{k+1}\}$ 벡터의 갯수가 $\text{rank}(\bf{B})$ 보다 크기 때문에 선형종속이며, 따라서, 
+이제 임의의 $\bf{B}\in \mathbb{F}^{m \times n}$, $\text{rank}(\bf{B})\le k$ 를 생각하자. $\{\bf{Be}_1,\ldots,\,\bf{Be}_{k+1}\}$ 벡터의 갯수가 $\text{rank}(\bf{B})$ 보다 크기 때문에 선형종속이며, 따라서, 
 
 $$
 a_1 \bf{Be}_1 + \cdots + a_{k+1}\bf{Be}_{k+1} = \bf{0}
@@ -1439,7 +1441,7 @@ $$
 
 ::: {#prp-LA_polar_decomposition}
 
-정사각행렬 $\bf{A}\in \mathcal{M}_{n \times n}(\mathbb{F})$ 는 어떤 유니타리 행렬 $\bf{U}$ 에 대해 $\bf{A}=\bf{S}\sqrt{\bf{A}^\ast\bf{A}}$ 이다.
+정사각행렬 $\bf{A}\in \mathbb{F}^{n \times n}$ 는 어떤 유니타리 행렬 $\bf{U}$ 에 대해 $\bf{A}=\bf{S}\sqrt{\bf{A}^\ast\bf{A}}$ 이다.
 
 :::
 

@@ -25,18 +25,16 @@ crossref:
 
 ### 다항식의 영점 {#sec-ALA_zeros_of_polynomials}
 
-::: {.callout-note appearance="minimal"}
+::: {.callout-note icon="false"}
+
+#### **다항식의 영점**
 
 ::: {#def-ALA_zeros_of_polynomials}
-
-#### 다항식의 영점
 
 다항식 $p(t) \in \mathbb{F}[t]$ 에 대해 $p(c) = 0,\, c\in \mathbb{F}$ 이면 $c$ 를 $p$ 의 **영점(zeros)** 이라고 한다. 
 :::
 
 :::
-
-</br>
 
 다시말하자면 다항식 $p(t)$ 의 영점의 집합은 방정식 $p(t)=0$ 의 해의 집합이다.
 
@@ -242,28 +240,29 @@ $$
 
 정사각 행렬에 대한 특성다항식은 이미 [특성다항식](../part1/ch1_04_eigenvalue.qmd#sec-LA_characteristic_polynomial) 에서 정의하였지만 환기를 위해 다시 한번 정의한다.
 
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-ALA_characteristic_polynomial_re}
+::: {.callout-note icon="false"}
 
-#### 특성다항식
+#### **특성다항식**
+
+::: {#def-ALA_characteristic_polynomial_re}
 
 유한차원 벡터공간 $V$ 에서 정의된 연산자 $L$ 에 대해 $p_{L}(t) = \det (t I_V-L)$ 를 **특성 다항식(characteristic polynomial)** 이라 한다.
 
 :::
 :::
 
-</br>
 
 행렬식은 닮음 변환에 대해 불변이므로 어떤 기저 $\mathcal{B}$ 에 대해서도 특성다항식은 불변이다. 또한 우리는 다음을 보였다. 또한 @prp-LA_eigenvalue_characteristic_polynomial 에서 $L\in \mathcal{L}(V)$ 에 대해 $\lambda\in \mathbb{F}$ 가 $L$ 의 고유값이기 위한 필요충분조건은 $p_{L}(\lambda)=0$ 인 것임을 안다.
 
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **행렬과 연산자의 trace** 
+
 ::: {#def-ALA_trace_of_matrix}
 
-#### 행렬과 연산자의 trace 
-
-$\text{tr} : \mathcal{M}_{n\times n}(\mathbb{F}) \to \mathbb{F}$ 는 다음과 같이 정의된다.
+행렬의 trace $\text{tr} : \F^{n\times n} \to \mathbb{F}$ 는 다음과 같이 정의된다.
 
 $$
 \text{tr}(\bf{\bf{A}}) = \sum_{i=1}^n A_{ii}.
@@ -356,10 +355,11 @@ $L,\,T\in \mathcal{L}(V)$ 이고 $T$ 가 가역사상일 때 $p(t)\in \mathbb{F}
 
 ### 케일리 해밀턴 정리 {#sec-ALA_cayley_hamilton_theorem}
 
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-ALA_annihilator_ideal}
+::: {.callout-note icon="false"}
 
-#### Annihilator Ideal
+#### **Annihilator Ideal**
+
+::: {#def-ALA_annihilator_ideal}
 
 $\mathbb{F}$-벡터공간 $V$ 에 대해 $L\in \mathcal{L}(V)$ 일 때 아래와 같이 정의된 $I_L$ 를 **annihilator ideal** 이라고 한다.
 
@@ -485,10 +485,13 @@ $$
 다항식 가운데 최고차 항의 계수가 1인 다항식을 **monic** 이라고 한다.
 
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **최소다항식**
+
 ::: {#def-ALA_minimal_polynomial}
 
-#### 최소다항식
+
 
 $L\in \mathcal{L}(V)$ 에 대한 annihilator ideal $\mathcal{I}_L$ 가운데 1 차 이상의 다항식 중 가장 작은 차수를 갖는 monic 다항식을 $L$ 에 대한 **최소다항식(minimal polynomnial)** 이라고 하고 $m_L$ 로 표기한다.
 

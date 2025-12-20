@@ -8,10 +8,11 @@ crossref:
 
 ## 아핀 부분집합과 몫공간 {#sec-ALA_affine_space_and_quotient_space}
 
-::: {.callout-note appearance="simple" icon="false"}
-::: {#def-ALA_affine_subset}
+::: {.callout-note icon="false"}
 
-#### 부분공간의 평행이동
+#### **부분공간의 평행이동**
+
+::: {#def-ALA_affine_subset}
 
 벡터공간 $V$ 의 정해진 $v\in V$ 와 $V$ 의 부분공간 $U$ 에 대해 $V$ 의 부분집합 $v+U$ 를 다음과 같이 정의한다.
 
@@ -25,10 +26,13 @@ $$
 
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **몫공간**
+
 ::: {#def-ALA_quotient_space}
 
-#### 몫공간
+
 $U$ 가 $V$ 의 부분공간일 때 **몫공간 (quotient space)** $V/U$ 는 $U$ 가 평행이동한 부분집합의 집합이다. 즉,
 
 $$
@@ -57,7 +61,7 @@ $v_1,\,v_2 \in V$ 와 $U\le V$ 에 대해 다음이 성립한다.
 
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -68,10 +72,13 @@ $v_1 - v_2 = u\in U$ 이면 $v_1+U = v_2+U$ 임은 자명하다. 이제 $v_1-v_2
 
 </br>
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **몫공간에서의 합과 스칼라곱**
+
 ::: {#def-ALA_addition_and_scalar_multiplication_in_quotient_space}
 
-#### 몫공간에서의 합과 스칼라곱
+
 
 $U$ 가 $\mathbb{F}$-벡터공간 $V$ 의 부분공간일 때 $V/U$ 의 원소들간의 합과 스칼라곱을 다음과 같이 정의한다.
 
@@ -92,7 +99,7 @@ $$
  $V/U$ 는 벡터공간이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 우선 $v_1,\,v_2$ 가 $v_1-v _2 \in U$ 이면 $v_1 + U =v_2 + U$ 임은 쉽게 보일 수 있다. 또한 $U \in V/U$  이며 $(v + U) + U = v + U$ 이므로 $U$ 는 $V/U$ 의 항등원이다. 나머지 벡터공간의 성질은 쉽게 보일 수 있다. $\square$
@@ -102,10 +109,12 @@ $$
 
 ## 몫사상 {#sec-ALA_quotient_map}
 
-::: {.callout-note appearance="simple" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **몫사상**
+
 ::: {#def-ALA_quotient_map}
 
-#### 몫사상 (Quotient map)
 
 $U$ 가 $\mathbb{F}$-벡터공간인 $V$ 의 부분공간일 때 다음과 같이 정의되는 함수 $\pi_U : V \to V/U$ 를 **몫사상(quotient map)** 이라 한다.
 
@@ -121,7 +130,7 @@ $$
 몫사상 $\pi_U$ 는 선형사상이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 몫사상임을 보이기 위해서는 $v_1,\,v_2 \in V$, $\lambda \in \mathbb{F}$ 일 때 $\pi_U (v_1+ \lambda v_2)= \pi_U (v_1) + \lambda \pi_U (v_2)$ 임을 보이면 된다.
@@ -148,7 +157,7 @@ $$
 이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 
@@ -177,7 +186,7 @@ $$
  $\tilde{T}$ 는 선형사상이다.
 :::
 
-</div></br>
+</div>
 
 ::: {.proof}
 우선 $\ker (T)$ 가 $V$ 의 부분공간이므로 $V/\ker (T)$ 가 정의된다. $\tilde{T}$ 가 잘 정의된 함수임을 보이려면 $v_1 +\ker (T) = v_2 + \ker (T)$ 인 $v_1,\,v_2$ 에 대해 $T(v_1) = T(v_2)$ 임을 보이면 되는데 이는 쉽게 보일 수 있다. 또한 $\tilde{T}$ 가 선형사상임을 보이는 것도 쉽다. $\square$
