@@ -318,7 +318,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#펜로즈-역행렬" id="toc-펜로즈-역행렬" class="nav-link" data-scroll-target="#펜로즈-역행렬"><span class="header-section-number">17.2</span> 펜로즈 역행렬</a>
   <ul class="collapse">
-  <li><a href="#정의와-기본적인-성질" id="toc-정의와-기본적인-성질" class="nav-link" data-scroll-target="#정의와-기본적인-성질"><span class="header-section-number">17.2.1</span> 정의와 기본적인 성질</a></li>
+  <li><a href="#sec-ALA_penrose_inverse" id="toc-sec-ALA_penrose_inverse" class="nav-link" data-scroll-target="#sec-ALA_penrose_inverse"><span class="header-section-number">17.2.1</span> 펜로즈 역행렬</a></li>
   <li><a href="#펜로즈-역행렬과-특이값-분해" id="toc-펜로즈-역행렬과-특이값-분해" class="nav-link" data-scroll-target="#펜로즈-역행렬과-특이값-분해"><span class="header-section-number">17.2.2</span> 펜로즈 역행렬과 특이값 분해</a></li>
   <li><a href="#펜로즈-역행렬의-항등식" id="toc-펜로즈-역행렬의-항등식" class="nav-link" data-scroll-target="#펜로즈-역행렬의-항등식"><span class="header-section-number">17.2.3</span> 펜로즈 역행렬의 항등식</a></li>
   <li><a href="#행렬곱의-펜로즈-역행렬" id="toc-행렬곱의-펜로즈-역행렬" class="nav-link" data-scroll-target="#행렬곱의-펜로즈-역행렬"><span class="header-section-number">17.2.4</span> 행렬곱의 펜로즈 역행렬</a></li>
@@ -376,15 +376,18 @@ window.Quarto = {
 <p><br></p>
 <section id="일반화된-역행렬" class="level3" data-number="17.1.1">
 <h3 data-number="17.1.1" class="anchored" data-anchor-id="일반화된-역행렬"><span class="header-section-number">17.1.1</span> 일반화된 역행렬</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="def-ALA_generalized_inverse" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 17.1 (일반화된 역행렬)</strong></span> 행렬 <span class="math inline">\(A \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(AGA=A\)</span> 를 만족하는 행렬 <span class="math inline">\(G \in \mathcal{M}_{n \times m}(\mathbb{F})\)</span> 를 <span class="math inline">\(A\)</span> 에 대한 <strong>일반화된 역행렬(generalized inverse matrix)</strong> 라고 한다. <span class="math inline">\(A\)</span> 의 일반화된 역행렬을 <span class="math inline">\(A^{-}\)</span> 로 표기한다.</p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>일반화된 역행렬</strong>
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="def-ALA_generalized_inverse" class="theorem definition">
+<p><span class="theorem-title"><strong>정의 17.1</strong></span> 행렬 <span class="math inline">\(A \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 대해 <span class="math inline">\(AGA=A\)</span> 를 만족하는 행렬 <span class="math inline">\(G \in \mathcal{M}_{n \times m}(\mathbb{F})\)</span> 를 <span class="math inline">\(A\)</span> 에 대한 <strong>일반화된 역행렬(generalized inverse matrix)</strong> 라고 한다. <span class="math inline">\(A\)</span> 의 일반화된 역행렬을 <span class="math inline">\(A^{-}\)</span> 로 표기한다.</p>
 </div>
 </div>
 </div>
@@ -472,21 +475,24 @@ AGA &amp;= \left({P_1}^{-1}\begin{bmatrix}R &amp; B \\ C &amp; CR^{-1}B\end{bmat
 </section>
 <section id="펜로즈-역행렬" class="level2" data-number="17.2">
 <h2 data-number="17.2" class="anchored" data-anchor-id="펜로즈-역행렬"><span class="header-section-number">17.2</span> 펜로즈 역행렬</h2>
-<section id="정의와-기본적인-성질" class="level3" data-number="17.2.1">
-<h3 data-number="17.2.1" class="anchored" data-anchor-id="정의와-기본적인-성질"><span class="header-section-number">17.2.1</span> 정의와 기본적인 성질</h3>
-<div class="callout callout-style-simple callout-note no-icon">
-<div class="callout-body d-flex">
+<section id="sec-ALA_penrose_inverse" class="level3" data-number="17.2.1">
+<h3 data-number="17.2.1" class="anchored" data-anchor-id="sec-ALA_penrose_inverse"><span class="header-section-number">17.2.1</span> 펜로즈 역행렬</h3>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span><strong>펜로즈 역행렬</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <div id="def-ALA_penrose_inverse" class="theorem definition">
-<p><span class="theorem-title"><strong>정의 17.2 (펜로즈 역행렬)</strong></span> 행렬 <span class="math inline">\(A \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 다음의 네 조건을 만족하는 <span class="math inline">\(G\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 를 <span class="math inline">\(A\)</span> 에 대한 <strong>펜로즈 역행렬(Penrose inverse matrix)</strong>, <strong>무어-펜로즈 역행렬(Moore-Penrose inverse matrix)</strong> 혹은 <strong>유사 역행렬(pseudoinverse matrix)</strong> 라고 <span class="math inline">\(A^+\)</span> 로 표기한다.</p>
+<p><span class="theorem-title"><strong>정의 17.2</strong></span> 행렬 <span class="math inline">\(A \in \mathcal{M}_{m \times n}(\mathbb{F})\)</span> 에 다음의 네 조건을 만족하는 <span class="math inline">\(G\in \mathcal{M}_{n \times n}(\mathbb{F})\)</span> 를 <span class="math inline">\(A\)</span> 에 대한 <strong>펜로즈 역행렬(Penrose inverse matrix)</strong>, <strong>무어-펜로즈 역행렬(Moore-Penrose inverse matrix)</strong> 혹은 <strong>유사 역행렬(pseudoinverse matrix)</strong> 라고 <span class="math inline">\(A^+\)</span> 로 표기한다.</p>
 <p>  (<span class="math inline">\(1\)</span>) <span class="math inline">\(AGA = A\)</span>.</p>
 <p>  (<span class="math inline">\(2\)</span>) <span class="math inline">\(GAG = G\)</span>.</p>
 <p>  (<span class="math inline">\(3\)</span>) <span class="math inline">\(AG = (AG)^\ast\)</span> 이며 <span class="math inline">\(\mathcal{M}_m(\mathbb{F})\)</span> 에 대한 projection 이다.</p>
 <p>  (<span class="math inline">\(4\)</span>) <span class="math inline">\(GA = (GA)^\ast\)</span> 이며 <span class="math inline">\(\mathcal{M}_n(\mathbb{F})\)</span> 에 대한 projection 이다.</p>
-</div>
 </div>
 </div>
 </div>

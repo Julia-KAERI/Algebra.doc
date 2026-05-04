@@ -27,11 +27,13 @@ crossref:
 
 ### 일반화된 역행렬
 
-::: {.callout-note appearance="minimal" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **일반화된 역행렬**
 
 ::: {#def-ALA_generalized_inverse}
 
-#### 일반화된 역행렬
+
 
 행렬 $A \in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 대해 $AGA=A$ 를 만족하는 행렬 $G \in \mathcal{M}_{n \times m}(\mathbb{F})$ 를 $A$ 에 대한 **일반화된 역행렬(generalized inverse matrix)** 라고 한다. $A$ 의 일반화된 역행렬을 $A^{-}$ 로 표기한다. 
 
@@ -164,13 +166,15 @@ $$
 
 ## 펜로즈 역행렬
 
-### 정의와 기본적인 성질
+### 펜로즈 역행렬 {#sec-ALA_penrose_inverse}
 
-::: {.callout-note appearance="minimal" icon="false"}
+::: {.callout-note icon="false"}
+
+#### **펜로즈 역행렬**
 
 ::: {#def-ALA_penrose_inverse}
 
-#### 펜로즈 역행렬
+
 
 행렬 $A \in \mathcal{M}_{m \times n}(\mathbb{F})$ 에 다음의 네 조건을 만족하는 $G\in \mathcal{M}_{n \times n}(\mathbb{F})$ 를 $A$ 에 대한 **펜로즈 역행렬(Penrose inverse matrix)**, **무어-펜로즈 역행렬(Moore-Penrose inverse matrix)** 혹은 **유사 역행렬(pseudoinverse matrix)** 라고 $A^+$ 로 표기한다.
 
