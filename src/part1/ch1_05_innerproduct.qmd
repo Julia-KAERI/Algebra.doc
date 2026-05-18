@@ -1274,7 +1274,7 @@ $L\in \mathcal{L}(V,\,W)$ 일 때 $L|_{(\ker (L))^\perp}$ 는 $(\ker L)^\perp \m
 
 $L|_{(\ker (L))^\perp}$ 가 $(\ker (L))^\perp \mapsto \text{im}(L)$ 전단사 임을 보이면 된다. $v\in \ker \left(L|_{(\ker (L))^\perp}\right)$ 이면 $v\in (\ker (L))^\perp \cap \ker (L)$ 이므로 $v=0$ 이다. 즉 $L|_{(\ker (L))^\perp}$ 는 단사이다. 
 
-또한 $\text{im}\left( L|_{(\ker (L))^\perp}\right) \subset \text{im}(L)$ 임은 자명하다. $w\in \text{im}(L)$ 이면 $w = Lv$ 인 $v\in \mathcal{M}_{n}(\mathbb{F})$ 가 존재하며 @prp-LA_generated_subspace_and_orthogonal_compliment 에 따라 어떤 $x\in\ker L,\, (\ker L)^\perp$ 에 대해 $v=x+y$ 이다. 이 때 $L|_{(\ker (L))^\perp} y = w$ 이므로 $w\in \text{im}\left( L|_{(\ker (L))^\perp}\right)$ 이며 따라서  $\text{im}\left( L|_{(\ker (L))^\perp}\right) = \text{im}(L)$ 이다. 즉 $L\in \mathcal{M}_{m\times n}(\mathbb{F})$ 전사이다. $\square$
+또한 $\text{im}\left( L|_{(\ker (L))^\perp}\right) \subset \text{im}(L)$ 임은 자명하다. $w\in \text{im}(L)$ 이면 $w = Lv$ 인 $v\in \mathbb{F}^n$ 가 존재하며 @prp-LA_generated_subspace_and_orthogonal_compliment 에 따라 어떤 $x\in\ker L,\, (\ker L)^\perp$ 에 대해 $v=x+y$ 이다. 이 때 $L|_{(\ker (L))^\perp} y = w$ 이므로 $w\in \text{im}\left( L|_{(\ker (L))^\perp}\right)$ 이며 따라서  $\text{im}\left( L|_{(\ker (L))^\perp}\right) = \text{im}(L)$ 이다. 즉 $L\in \mathbb{F}^{m\times n}$ 전사이다. $\square$
 
 :::
 
