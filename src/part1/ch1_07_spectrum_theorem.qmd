@@ -19,7 +19,7 @@ crossref:
 
 ::: {#thm-LA_spectrum_theorem_for_complex_vector_space}
 
-#### $C$-스펙트럼 정리
+#### $\C$-스펙트럼 정리
 
 유한차원 $\C$-벡터공간 $V$ 에서 정의된 $N \in \mathcal{L}(V)$ 에 대해 다음 세 명제는 동치이다.
 
@@ -208,7 +208,7 @@ $$
 \langle Lv,\, u\rangle = \langle v,\, Lu\rangle =0
 $$
 
-이다ㅏ. 즉 $Lv\in U^\perp$ 이므로 $U^\perp$ 도 $L$-부분공간이다. 
+이다. 즉 $Lv\in U^\perp$ 이므로 $U^\perp$ 도 $L$-부분공간이다. 
 
 ($2$) $u_1,\,u_2\in U$ 에 대해,
 
@@ -260,11 +260,11 @@ $[L]$ 이 $n \times n$ 에르미트 연산자일 때 고유값이 항상 존재�
 
 유한차원 $\R$-벡터공간에서 정의된 연산자 $L$ 에 대해 아래 세 명제는 동치이다.
 
-&emsp;($1$) $H$ 는 에르미트 연산자이다.
+&emsp;($1$) $L$ 는 에르미트 연산자이다.
 
-&emsp;($2$) $H$ 어떤 정규직교기저에서 대각행렬로 표현된다.
+&emsp;($2$) $L$ 어떤 정규직교기저에서 대각행렬로 표현된다.
 
-&emsp;($3$) $H$ 의 고유벡터로 $H$ 의 정규직교기저를 구성 할 수 있다.
+&emsp;($3$) $L$ 의 고유벡터로 $L$ 의 정규직교기저를 구성 할 수 있다.
 
 :::
 
@@ -275,13 +275,13 @@ $[L]$ 이 $n \times n$ 에르미트 연산자일 때 고유값이 항상 존재�
 
 ($2 \implies 3$) 위의 $\mathcal{B}$ 의 각각의 $e_i$ 는 $L$ 의 정규직교기저이다.
 
-($3 \implies 1$) $\mathcal{B}=(e_1,\ldots,\,e_n)$ 정규직교 기저이며 각각 실수 $c_1,\ldots,\,c_n$ 을 고유값으로 갖는 고유벡터라고 하자. 이 기저에 대한 $H$ 의 행렬 표현 $\bf{H}$ 에 대해 $H_{ij}=\langle H e_j,\,e_i\rangle = c_i\delta_{ij}$, 이며
+($3 \implies 1$) $\mathcal{B}=(e_1,\ldots,\,e_n)$ 정규직교 기저이며 각각 실수 $c_1,\ldots,\,c_n$ 을 고유값으로 갖는 고유벡터라고 하자. 이 기저에 대한 $L$ 의 행렬 표현 $\bf{L}$ 에 대해 $L_{ij}=\langle L e_j,\,e_i\rangle = c_i\delta_{ij}$, 이며
 
 $$
-\overline{H_{ji}}=\overline{\langle He_i,\, e_j\rangle} \langle e_j,\,He_i\rangle = \overline{c_i}\delta_{ij}= c_i\delta_{ij} = H_{ij}
+\overline{L_{ji}}=\overline{\langle Le_i,\, e_j\rangle} \langle e_j,\,Le_i\rangle = \overline{c_i}\delta_{ij}= c_i\delta_{ij} = L_{ij}
 $$
 
-이므로 @prp-LA_hermitian_matrix_representation_and_hermitian_operator 에 의해 $H$ 는 에르미트 연산자이다. $\square$
+이므로 @prp-LA_hermitian_matrix_representation_and_hermitian_operator 에 의해 $L$ 는 에르미트 연산자이다. $\square$
 
 :::
 
